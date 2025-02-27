@@ -28,7 +28,6 @@ Each directory contains data in a standardized format (e.g., JSON, CSV). Typical
 - **Metadata:**Information detailing the dataset attributes.
 - **Paper Excerpts:**Relevant extracts from academic publications (when applicable).
 
-Please refer to the documentation within each directory for detailed descriptions of the fields and data formatting.
 
 ## How to Use
 
@@ -57,11 +56,10 @@ mathematica
 
 复制
 
-`@inproceedings{lin2025scirgen,title={ScIRGen:SynthesizeRealisticandLarge-ScaleRAGDatasetforScientificResearch},author={JunyongLinandLuDaiandRuiqianHanandYijieSuiandRuilinWangandXingliangSunandQinglinWuandMinFengandHaoLiuandHuiXiong},booktitle={ProceedingsoftheKDDConference},year={2025}}`
+`@inproceedings{lin2025scirgen,title={ScIRGen:SynthesizeRealisticandLarge-ScaleRAGDatasetforScientificResearch},author={JunyongLinandLuDaiandRuiqianHanandYijieSuiandRuilinWangandXingliangSunandQinglinWuandMinFengandHaoLiuandHuiXiong},year={2025}}`
 
 ## License
 
-Please refer to the LICENSE file in this repository for details regarding the usage and distribution of this dataset. If no LICENSE file is present, please verify the usage terms before proceeding.
 
 ## Acknowledgements
 

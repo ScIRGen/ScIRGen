@@ -19,15 +19,6 @@ The repository is organized into four main directories:
 
     The test split for final evaluation of models.
 
-## Data Format
-
-Each directory contains data in a standardized format (e.g., JSON, CSV). Typically, each record includes:
-
-- **Question:**A task-oriented query reflective of scientific research needs.
-- **Answer:**The corresponding answer generated using the dataset.
-- **Metadata:**Information detailing the dataset attributes.
-- **Paper Excerpts:**Relevant extracts from academic publications (when applicable).
-
 
 ## How to Use
 

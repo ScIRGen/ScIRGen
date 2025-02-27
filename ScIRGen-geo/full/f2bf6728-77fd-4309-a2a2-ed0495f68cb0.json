@@ -1,0 +1,384 @@
+{
+    "id": "f2bf6728-77fd-4309-a2a2-ed0495f68cb0",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "SSTG dataset: A Global Gridded Sea Surface Temperature Data (2002–2019)",
+            "description": "The SSTG dataset is a global sea surface temperature data during the period of 2002-2019, in Celsius, in monthly temporal and 0.041° spatial resolution. \nIt is produced by combing daily in situ SST data and daily satellite SST retrieval data from two infrared (MODIS and AVHRR) and three passive microwave (AMSR-E, AMSR2, Windsat) radiometers after calibration by using a temperature depth and observation time correction model. The accuracy assessments indicate that the reconstructed dataset exhibits significant improvements and can be used for mesoscale ocean phenomenon analyses.",
+            "instructions": "The file consists of 19 parts:\n1) Metadata for SSTG.docx: this file;\n2) XXXX_SSTG.rar: it contains data of SSTG. It contains 18 folders (one for each year). Except for the folder named 2002_SST which has 6 images, each of the remaining folders has 12 images (one scene per month). XXXX is the UTC year. Each phase consists of two files, including *.img (SSTG image) and *.hdr (image coordinate information).\nThe naming convention for SSTG dataset is yyyymmdd_yyyymmdd.img (or hdr), where: yyyy is the UTC year; mm is the UTC month; dd is the UTC day.",
+            "east": 180.0,
+            "west": -180.0,
+            "south": -90.0,
+            "north": 90.0,
+            "startTime": "2002-07-31 00:00:00",
+            "endTime": "2019-12-31 00:00:00",
+            "fileSize": 10249427505.0,
+            "cstr": null,
+            "doi": "10.5281/zenodo.4419804",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "MAO Kebiao",
+                "unitEn": "Institute of Agricultural Resources and Regional Planning, Chinese Academy of Agricultural Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "A new global gridded sea surface temperature data product based on multisource data",
+                "referenceEn": "Cao, M., Mao, K., Yan, Y., Shi, J., Wang, H., Xu, T., Fang, S., & Yuan, Z. (2021). A new global gridded sea surface temperature data product based on multisource data. Earth System Science Data, 13(5), 2111–2134. https://doi.org/10.5194/essd-13-2111-2021"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Solar-Terrestrial Physics and Astronomy"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Surface Water"
+            },
+            {
+                "nameEn": "Sea surface temperature"
+            },
+            {
+                "nameEn": "Galactic System"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2002 to 2019",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Sea surface temperature (SST) is an important geophysical parameter that is essential for studying global climate change. SSTs are widely used in atmospheric and oceanographic studies, such as in atmospheric simulations, climate change monitoring, and studies of marine dynamic environments. A small variation in the ocean temperature exerts strong impacts on regional and even global climate change, energy exchange, and the environment due to the unique physical characteristics of the oceans, including their high heat capacity. It is difficult for traditional SST measurements based on buoys, platforms, and voluntary ships to obtain large-scale and synchronous SST data due to the large gaps present in the data over both space and time. Compared to the traditional in situ SST monitoring approach, remote sensing technology has advantages in terms of large-scale and dynamic monitoring and has been used to acquire global ocean SST observation data. Retrievals from satellite thermal infrared sensors can provide global SSTs at high temporal frequencies and spatial resolutions of typically 1–4 km with low uncertainty. However, the spatial resolutions of passive microwave sensors are very coarse and are greatly affected by land and sea surface wind and waves, which makes it impossible to obtain detailed information about SSTs. Therefore, the SST information obtained by a single satellite remote sensor is often incomplete and limited and cannot fully meet the user’s demand for a dataset with a high resolution, high precision, and full spatiotemporal coverage. Many SST fusion algorithms use multiple satellites and in situ data to take advantage of the strengths of each SST observation and solve the above issues; these algorithms include objective analysis (OA), optimal interpolation (OI), three-dimensional variational (3D-Var), and Kalman filtering (KF)."
+            ],
+            "research objective": [
+                "To overcome these shortcomings, this paper first took MODIS SST products as a reference benchmark and constructed a temperature depth and observation time correction model to correct the influences of the different sampling depths and observation times obtained by different sensors."
+            ],
+            "challenges": [
+                "Although sea surface temperature can currently be obtained through a variety of sensors (MODIS, AVHRR, AMSR-E, AMSR2, WindSat, in situ sensors), the temperature values obtained by different sensors come from different ocean depths and different observation times, so different temperature products lack consistency. In addition, different thermal infrared temperature products have many invalid values due to the influence of clouds, and passive microwave temperature products have very low resolutions. These factors greatly limit the applications of ocean temperature products in practice."
+            ],
+            "methods": [
+                "Then, we built a reconstructed spatial model to overcome the effects of clouds, rainfall, and land interference that makes full use of the complementarities and advantages of SST data from different sensors. We applied these two models to generate a unique global 0.041◦ gridded monthly SST product covering the years 2002–2019."
+            ],
+            "dataset": [
+                "In this dataset, approximately 25 % of the invalid pixels in the original MODIS monthly images were effectively removed, and the accuracies of these reconstructed pixels were improved by more than 0.65 ◦C compared to the accuracies of the original pixels."
+            ],
+            "findings": [
+                "The accuracy assessments indicate that the reconstructed dataset exhibits significant improvements and can be used for mesoscale ocean phenomenon analyses. The product will be of great use in research related to global change, disaster prevention, and mitigation."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Are the current sea surface temperature datasets more improved by using a single satellite sensor, a combination of multiple satellites, or in situ data?",
+                    "Answer": "a combination of multiple satellites and in situ data",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What are the challenges associated with collecting consistent sea surface temperature data from different sensors?",
+                    "Answer": "inconsistencies in temperature values",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Where do the advantages of remote sensing technology in large-scale sea surface temperature monitoring become evident?",
+                    "Answer": "Large-scale, dynamic monitoring",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What methods are used to improve the accuracy of reconstructed sea surface temperature datasets?",
+                    "Answer": "Temperature depth and observation time correction model, reconstructed spatial model",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method that effectively addresses the challenges of obtaining consistent sea surface temperature values from different sensors?",
+                    "Answer": "A data collection method that addresses these challenges involves constructing a temperature depth and observation time correction model. This model corrects the influences of different sampling depths and observation times obtained by various sensors like MODIS, AVHRR, AMSR-E, AMSR2, and WindSat.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a reconstructed spatial model that helps overcome the limitations of SST data due to cloud cover and other interferences?",
+                    "Answer": "An example is a reconstructed spatial model that utilizes the complementarities and advantages of SST data from different sensors, effectively overcoming the effects of clouds, rainfall, and land interference. This model enables the generation of a unique global 0.041° gridded monthly SST product.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the specific challenges faced in ensuring consistency across different sea surface temperature datasets?",
+                    "Answer": "varying ocean depths, observation times, cloud cover, coarse resolution",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the notable attributes of a reconstructed global sea surface temperature dataset that improve its application in mesoscale ocean analyses?",
+                    "Answer": "0.041° gridded spatial resolution, monthly temporal resolution, correction of approximately 25% of invalid pixels, accuracy improvement by over 0.65°C",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "To what extent were the invalid pixels in the original MODIS monthly images removed in the reconstructed dataset?",
+                    "Answer": "25%",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is the significance of 'temperature depth and observation time correction model' in the context of sea surface temperature data collection?",
+                    "Answer": "The 'temperature depth and observation time correction model' is significant as it addresses the inconsistencies in temperature values obtained from different sensors that measure at varying ocean depths and times. This model is used to correct these discrepancies to enhance the consistency and reliability of the sea surface temperature data collected from various sensors.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What does the term 'reconstructed spatial model' mean in the realm of sea surface temperature datasets?",
+                    "Answer": "The term 'reconstructed spatial model' refers to a method designed to mitigate the effects of clouds, rainfall, and land interference in sea surface temperature datasets. This model utilizes the complementary strengths of data from different sensors to generate a more accurate and comprehensive global gridded monthly sea surface temperature product.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How does the data collection method using infrared sensors compare to passive microwave sensors in terms of spatial resolution and accuracy in measuring sea surface temperature?",
+                    "Answer": "Infrared sensors provide global SSTs at high spatial resolutions of typically 1–4 km with low uncertainty, whereas passive microwave sensors have very coarse spatial resolutions and are greatly affected by land and sea surface wind and waves, limiting their ability to obtain detailed SST information.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "In what ways do SST fusion algorithms differ from single satellite sensors in terms of resolving the spatiotemporal coverage and precision challenges in sea surface temperature datasets?",
+                    "Answer": "SST fusion algorithms use multiple satellites and in situ data to leverage the strengths of each SST observation, addressing issues of high resolution, precision, and full spatiotemporal coverage, unlike single satellite sensors which provide incomplete data due to varying observation depths, times, and issues like cloud cover.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How do the challenges of invalid pixel values in thermal infrared temperature products compare to the limitations of passive microwave temperature products when reconstructing sea surface temperature datasets?",
+                    "Answer": "Thermal infrared temperature products have many invalid values due to cloud influence, whereas passive microwave temperature products suffer from very low resolutions. Both factors limit the practical application of ocean temperature products, necessitating reconstruction models to improve dataset accuracy and validity.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What challenges arise from using different SST observation methods, and how can they be addressed to ensure consistent data quality?",
+                    "Answer": "Challenges include inconsistencies in temperature values due to different ocean depths and observation times, as well as invalid data caused by cloud interference and low resolutions of passive microwave sensors. These challenges can be addressed by constructing a temperature depth and observation time correction model and a reconstructed spatial model, which correct the influences of varying depths and times and remove invalid pixels, improving data accuracy and consistency.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways can reconstructed sea surface temperature data be utilized to enhance the understanding of mesoscale ocean phenomena?",
+                    "Answer": "Reconstructed sea surface temperature data, with improved accuracy and reduced invalid values, can significantly enhance the analysis of mesoscale ocean phenomena. These datasets provide a more precise understanding of ocean dynamics, enabling better monitoring of climate change, energy exchange, and marine environments. This can be crucial for research related to global change, disaster prevention, and mitigation, as they allow for detailed study and modeling of oceanographic processes.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "Why do passive microwave sensors struggle to provide detailed sea surface temperature information, and what implications does this have for SST data applications?",
+                    "Answer": "Passive microwave sensors have coarse spatial resolutions and are significantly affected by land and sea surface wind and waves. This limitation means they cannot capture detailed sea surface temperature information, which restricts the practical applications of SST data. Such coarse resolution makes it challenging to obtain precise and comprehensive SST data necessary for detailed analyses and applications.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What causes the presence of invalid pixel values in MODIS monthly images, and how does this issue impact the reconstruction of sea surface temperature datasets?",
+                    "Answer": "The presence of clouds primarily causes invalid pixel values in MODIS monthly images, leading to gaps in data. This issue impacts the reconstruction of sea surface temperature datasets by introducing inaccuracies and inconsistencies. Without correcting these invalid pixels, the datasets would be less reliable for analyses, such as mesoscale ocean phenomenon studies.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the consequences of integrating multiple satellite sensor data with varying observation depths and times on the consistency of sea surface temperature datasets?",
+                    "Answer": "The integration of multiple satellite sensor data with varying observation depths and times can lead to inconsistencies in the temperature values obtained. These differences arise because the data from each sensor are captured at different ocean depths and times, leading to a lack of uniformity across temperature products.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the use of a temperature depth and observation time correction model impact the accuracy of sea surface temperature datasets derived from multiple sensors?",
+                    "Answer": "The use of a temperature depth and observation time correction model improves the accuracy of sea surface temperature datasets by correcting the influences of differing sampling depths and observation times, which enhances the precision of the reconstructed data.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What are the primary goals of employing multiple satellite sensors and in situ data for creating a sea surface temperature dataset?",
+                    "Answer": "The primary goals are to take advantage of the strengths of each SST observation method to overcome the limitations of individual sensors, such as inconsistencies in temperature values due to different ocean depths and observation times, and to create a dataset with high resolution, high precision, and full spatiotemporal coverage.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "Why is it important to use a temperature depth and observation time correction model in sea surface temperature data collection?",
+                    "Answer": "It is important to use a correction model to address the challenges posed by different sampling depths and observation times of various sensors, ensuring consistency across different temperature products and improving the accuracy of the resulting dataset.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the objectives of reconstructing spatial models to mitigate the effects of clouds, rainfall, and land interference in sea surface temperature datasets?",
+                    "Answer": "The objectives are to effectively use the complementary strengths of different SST data sources, remove invalid pixels, and improve the accuracy of reconstructed pixels, which enhances the dataset's utility for mesoscale ocean phenomenon analyses and research related to global change, disaster prevention, and mitigation.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedures are used to correct the influences of different sampling depths and observation times in sea surface temperature datasets?",
+                    "Answer": "A temperature depth and observation time correction model is constructed to correct the influences of the different sampling depths and observation times obtained by different sensors, using MODIS SST products as a reference benchmark.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How can the challenges posed by clouds, rainfall, and land interference be overcome when collecting sea surface temperature data from various sensors?",
+                    "Answer": "A reconstructed spatial model is built to overcome the effects of clouds, rainfall, and land interference by making full use of the complementarities and advantages of SST data from different sensors.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What are the steps involved in generating a global gridded monthly sea surface temperature product with improved pixel accuracy?",
+                    "Answer": "Two models are applied: a temperature depth and observation time correction model, and a reconstructed spatial model. These models are used to generate a unique global 0.041° gridded monthly SST product, effectively removing invalid pixels and improving the accuracies of reconstructed pixels by more than 0.65°C compared to the original pixels.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methodologies enable the integration of multiple satellite sensor data to enhance the accuracy of sea surface temperature datasets?",
+                    "Answer": "Many SST fusion algorithms use multiple satellites and in situ data to take advantage of the strengths of each SST observation. These algorithms include objective analysis (OA), optimal interpolation (OI), three-dimensional variational (3D-Var), and Kalman filtering (KF).",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How do correction models enable the resolution of inconsistencies in temperature measurements from different sensors?",
+                    "Answer": "A temperature depth and observation time correction model is constructed to correct the influences of the different sampling depths and observation times obtained by different sensors.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What conditions enable the use of reconstructed spatial models to mitigate the effects of clouds and land interference in sea surface temperature data?",
+                    "Answer": "A reconstructed spatial model is built to overcome the effects of clouds, rainfall, and land interference by making full use of the complementarities and advantages of SST data from different sensors.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might data collection methods for sea surface temperature be expected to struggle with consistency across different sensors?",
+                    "Answer": "The temperature values obtained by different sensors come from different ocean depths and different observation times, leading to a lack of consistency among different temperature products.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What reasons are there for expecting traditional SST measurement techniques to be insufficient for large-scale data collection?",
+                    "Answer": "Traditional SST measurements based on buoys, platforms, and voluntary ships face difficulties in obtaining large-scale and synchronous data due to large spatial and temporal gaps, making them insufficient for comprehensive data collection.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why might it be expected that single satellite sensors alone cannot meet the demand for high-resolution SST datasets?",
+                    "Answer": "Single satellite remote sensors often provide incomplete and limited information, as infrared sensors, though providing high-resolution data, are affected by clouds, and passive microwave sensors offer very coarse resolutions, making them unable to fulfill the demand for high-resolution, high-precision, and full spatiotemporal coverage SST datasets.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "In what ways do the challenges of sensor inconsistencies and observational gaps impact the development of high-resolution sea surface temperature datasets?",
+                    "Answer": "Sensor inconsistencies and observational gaps impact the development of high-resolution sea surface temperature datasets by causing variability in temperature readings due to differences in ocean depths and observation times. Additionally, clouds render many thermal infrared readings invalid, and passive microwave sensors' low resolution further complicates data accuracy. These factors can limit the practical applications of SST datasets unless addressed through correction models and fusion algorithms that harmonize disparate data sources.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the potential benefits of applying correction models to sea surface temperature datasets in terms of improving their usability for climate change research?",
+                    "Answer": "Applying correction models to sea surface temperature datasets enhances their usability by improving spatial and temporal consistency across different sensor data. This leads to a higher resolution, more accurate datasets that can better capture mesoscale ocean phenomena and support detailed analyses in climate change research, disaster prevention, and mitigation efforts. The improvements in accuracy, as demonstrated by a 0.65°C enhancement in reconstructed pixels, indicate a significant step towards achieving reliable datasets for comprehensive climate studies.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I can't understand how various sensors with different observation times and depths can provide consistent sea surface temperature data.",
+                    "Answer": "To address this issue, a temperature depth and observation time correction model is used to correct the influences of the different sampling depths and observation times obtained by different sensors, ensuring consistency in the sea surface temperature data.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I'm unsure how datasets can maintain high accuracy and resolution despite interference from clouds and land.",
+                    "Answer": "A reconstructed spatial model is applied to overcome the effects of clouds, rainfall, and land interference, making full use of the complementarities and advantages of SST data from different sensors, thus maintaining high accuracy and resolution in the datasets.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I don't understand how invalid pixels in satellite images can be effectively addressed to improve data accuracy.",
+                    "Answer": "Approximately 25% of the invalid pixels in the original MODIS monthly images are effectively removed, and the accuracies of these reconstructed pixels are improved by more than 0.65 °C compared to the accuracies of the original pixels, enhancing overall data accuracy.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the challenges of integrating data from different sensors for sea surface temperature studies and suggest potential solutions to address these challenges.",
+                    "Answer": "Integrating data from different sensors poses challenges due to inconsistencies in temperature values from varying ocean depths and observation times, as well as invalid values in thermal infrared data due to clouds and low resolutions in passive microwave data. A potential solution is the use of fusion algorithms, such as objective analysis, optimal interpolation, three-dimensional variational, and Kalman filtering, which leverage the strengths of multiple data sources to provide a high-resolution, high-precision dataset with full spatiotemporal coverage. Additionally, correction models can help align data from different sensors.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

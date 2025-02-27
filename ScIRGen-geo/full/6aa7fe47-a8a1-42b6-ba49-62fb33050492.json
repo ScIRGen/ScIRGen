@@ -1,0 +1,516 @@
+{
+    "id": "6aa7fe47-a8a1-42b6-ba49-62fb33050492",
+    "relatedPaper": 4,
+    "context": {
+        "metadata": {
+            "titleEn": "China meteorological assimilation driving datasets for the SWAT model Version 1.0 (2008-2016)",
+            "description": "CMADS V1.0(The China Meteorological Assimilation Driving Datasets for the SWAT model Version 1.0)Version of the data set introduces the technology of STMAS assimilation algorithm . It was constructed using multiple technologies and scientific methods, including loop nesting of data, projection of resampling models, and bilinear interpolation. The CMADS series of datasets can be used to drive various hydrological models, such as SWAT, the Variable Infiltration Capacity (VIC) model, and the Storm Water Management model (SWMM). It also allows users to conveniently extract a wide range of meteorological elements for detailed climatic analyses.  Data sources for the CMADS series include nearly 40,000 regional automatic stations under China’s 2,421 national automatic and business assessment centres. This ensures that the CMADS datasets have wide applicability within the country, and that data accuracy was vastly improved.\n    The CMADS series of datasets has undergone finishing and correction to match the specific format of input and driving data of SWAT models. This reduces the volume of complex work that model builders have to deal with. An index table of the various elements encompassing all of East Asia was also established for SWAT models. This allows the models to utilize the datasets directly, thus eliminating the need for any format conversion or calculations using weather generators. Consequently, significant improvements to the modelling speed and output accuracy of SWAT models were achieved.\nMost of the source data in the CMADS datasets are derived from CLDAS in China and other reanalysis data in the world. The integration of air temperature, air pressure, humidity, and wind velocity data was mainly achieved through the LAPS/STMAS system. Precipitation data were stitched using CMORPH’s global precipitation products and the National Meteorological Information Center’s data of China (which is based on CMORPH’s integrated precipitation products). The latter contains daily precipitation records observed at 2,400 national meteorological stations and the CMORPH satellite’s inversion precipitation products.The inversion algorithm for incoming solar radiation at the ground surface makes use of the discrete longitudinal method by Stamnes et al.(1988)to calculate radiation transmission. The resolutions for CMADS V1.0, V1.1, V1.2, and V1.3 were 1/3°, 1/4°, 1/8°, and 1/16°, respectively.\n     In CMADS V1.0 (at a spatial resolution of 1/3°), East Asia was spatially divided into 195 × 300 grid points containing 58,500 stations. Despite being at the same spatial resolution as CMADS V1.0, CMADS V1.1 contains more data, with 260 × 400 grid points containing 104,000 stations. For both versions, the stations’ daily data include average solar radiation, average temperature, average pressure, maximum and minimum  temperature, specific humidity, cumulative precipitation, and average wind velocity.\n     The CMADS comprises other variables for any hydrological model（under 'For-other-model' folder ）: Daily Average Temperature, Daily Maximum Temperature, Daily Minimum Temperature, Daily cumulative precipitation (20-20h), Daily average Relative Humidity, Daily average Specific Humidity, Daily average Solar Radiation, Daily average Wind, and Daily average Atmospheric Pressure.\n\nIntroduction to metadata of CMADS\n\nCMADS storage path description:(CMADS was divided into two datesets)\n1.CMADS-V1.0\\For-swat\\ --specifically driving the SWAT model\n2.CMADS-V1.0\\For-other-model\\ --specifically driving the other hydrological model(VIC,SWMM,etc.)\n\nCMADS--\\For-swat-2009\\ folder contain:(Station\\ and Fork\\)\n\n1).Station\\ \n\nRelative-Humidity-58500\\ Daily average relative humidity(fraction)\n\nPrecipitation-58500\\ Daily accumulated 24-hour precipitation(mm)\n\nSolar radiation-58500\\ Daily average solar radiation(MJ/m2)\n\nTmperature-58500\\ Daily maximum and minimum temperature(℃)\n\nWind-58500\\ Daily average wind speed(m/s)\n\nWhere R, P, S, T, W+ dimensional grid number - the number of longitude grid is the station in the above five \n\nfolders respectively.(Where R,P,S,T,W respective Daily average relative humidity,Daily cumulative \n\nprecipitation(24h),Daily mean solar radiation(MJ/m2),Daily maximum and minimum temperature(℃) and Daily mean \n\nwind speed (m/s)) respectively.Data format is (.dbf)\n\n2).Fork\\ (Station index table over East Asia)\n\nPCPFORK.txt (Precipitation index table)\n\nRHFORK.txt (Relative humidity index table)\n\nSORFORK.txt (Solar radiation index table)\n\nTMPFORK.txt (Temperature index table)\n\nWINDFORK.txt (Wind speed index)\n\nCMADS--\\For-swat-2012\\ folder contain:(Station\\ and Fork\\) Storage structure is consistency with \\For-swat-\n\n2009\\.However, all the data in this directory are only available in TXT format and can be readed by SWAT2012.\n\n3)\\For-other-model\\ (Includes all weather input data required by the any hydrologic model (daily).)\n\nAtmospheric-Pressure-txt\\ Daily average atmospheric pressure(hPa)\n\nAverage-Temperature-txt\\ Daily average temperature(℃)\n\nMaximum-Temperature-txt\\ Daily maximum temperature(℃)\n\nMinimum-Temperature-txt\\ Daily minimum temperature(℃) \n\nPrecipitation-txt\\ Daily accumulated 24-hour precipitation (mm)\n\nRelative-Humidity-txt\\ Daily average relative humidity(fraction)\n\nSolar-Radiation-txt\\ Daily average solar radiation(MJ/m2)\n\nSpecific-Humidity-txt\\  Daily average Specific Humidity(g/kg)\n\nWind-txt\\ Daily average wind speed(m/s)\n\nData storage information: data set storage format is .dbf and .txt\n\nOther data information:\n\nTotal data: 33.6GB\n\n\nOccupied space: 35.2GB\n\n\nTime: From year 2008 to year 2016 \n\n\nTime resolution: Daily\n\n\nGeographical scope description: East Asia\n\n\nLongitude: 60°E\n\n\nThe most east longitude: 160°E\n\n\nNorth latitude: 65°N\n\n\nMost southern latitude: 0°N\n\n\nNumber of stations: 58500 stations\n\n\nSpatial resolution: 1/3 * 1/3 * grid points\n\n\nVertical range: None",
+            "instructions": "Cmads -- file path and name description of each subset of SWAT drive data\nCmads -- SWAT drive data subset path\n1) The Swat sub data drive set of cmads (in the for SWAT folder), which contains the station \\ and fork \\ subdirectories.\nThe station \\ directory is all the input data (day by day) required by SWAT model. The above input data are located in the following directories:\nRelative humidity-58500 \\ daily average relative humidity (fraction)\nPrecipitation-58500 \\ daily accumulated precipitation (mm)\nSolar radiation-58500 \\ daily average solar radiation (MJ / m2)\nTemperature-58500 \\ daily maximum and minimum temperature of 2m (℃)\nWind-58500 \\ daily average 10m wind speed (M / s)\nCmads -- SWAT drive data subset naming format\nName of SWAT subset file of China's air data assimilation SWAT model data set (cmads):\nThe data set code consists of element code: R, P, s, t, W + dimension grid number - longitude grid number (for the extraction of longitude and latitude grid number, please refer to cmads data set user manual. PDF).",
+            "east": 160.0,
+            "west": 60.0,
+            "south": 0.0,
+            "north": 65.0,
+            "startTime": "2008-02-12 08:00:00",
+            "endTime": "2017-02-11 08:00:00",
+            "fileSize": 5589535399.0,
+            "cstr": "18406.11.Meteoro.tpdc.270543",
+            "doi": "10.11888/Meteoro.tpdc.270543",
+            "dataFormat": "Digital Document",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "Meng Xianyong",
+                "unitEn": "College of Resources and Environment Sciences, China Agricultural University"
+            },
+            {
+                "nameEn": "Wang Hao",
+                "unitEn": "China Institute of Water Resources and Hydropower Research"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "The China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) Application in China: A Case Study in Heihe River Basin",
+                "referenceEn": "Meng, X., Wang, H., Cai, S.; Zhang, X. et al. (2017). The China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) Application in China: A Case Study in Heihe River Basin. Preprints. 2016120091 (doi:10.20944/preprints201612.0091.v2)."
+            },
+            {
+                "titleEn": "Research on the Improvement and Application of the SWAT Model Snowmelt Module",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Research on Precipitation Time Scale Based on Geostationary Meteorological Satellite Observations",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Hydrological Modeling in the Manas River Basin Using Soil and Water Assessment Tool Driven by CMADS",
+                "referenceEn": "Meng,X.Y.,Wang,H.,Lei,X.H.,Cai,S.Y.,Wu,H.J.(2017).Hydrological Modeling in the Manas River Basin Using Soil and Water Assessment Tool Driven by CMADS. Tehnicki Vjesnik -Technical Gazette,24,(2),525-534.DOI: 10.17559/TV-20170108133334"
+            },
+            {
+                "titleEn": "CMADS dataset and its driving role in watershed hydrological models - A case study of the Heihe River Basin.",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "FY-2C satellite precipitation estimation product",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Snowmelt runoff analysis under generated climate change scenarios for the Juntanghu River basin in Xinjiang",
+                "referenceEn": "Wang, Y.J. & Meng, X.Y. (2016). Snowmelt runoff analysis under generated climate change scenarios for the Juntanghu River basin in Xinjiang, China. Tecnología y Ciencias del Agua, 7(4), 41-54."
+            },
+            {
+                "titleEn": "China land soil moisture EnKF data assimilation based on satellite remote sensing data",
+                "referenceEn": "Shi C X, Xie Z H, Qian H, et al. China land soil moisture EnKF data assimilation based on satellite remote sensing data. Sci China Earth Sci, 2011, doi: 10.1007/s11430-010-4160-3"
+            },
+            {
+                "titleEn": "Significance of the China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) of East Asia",
+                "referenceEn": "Meng, X., Wang, H. (2017). Significance of the China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) of East Asia. Water. 9, (10),765. doi:10.3390/w9100765."
+            },
+            {
+                "titleEn": "Spring Flood Forecasting Based on the WRF-TSRM mode",
+                "referenceEn": "Meng, X.Y. (2018). Spring Flood Forecasting Based on the WRF-TSRM mode. Teh. Vjesn. 25(1), 27-37."
+            },
+            {
+                "titleEn": "Development of a Level 3 Quality Control Business System for Ground Automatic Station Observation Data",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Research on Multi-source Data Fusion and Application Based on LAPS/STMAS",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Energy Balance-Based SWAT Model to Simulate the Mountain Snowmelt and Runoff – Taking the Application in Juntanghu Watershed (China) as an Example",
+                "referenceEn": "Meng, X.Y., Ji, X.N., Liu, Z.H. (2015). Energy Balance-Based SWAT Model to Simulate the Mountain Snowmelt and Runoff – Taking the Application in Juntanghu Watershed (China) as an Example[J]. Journal of Mountain Sciences, 12(2), 368-381. DOI:10.1007/s11629-014-3081-6."
+            },
+            {
+                "titleEn": "Simulation and validation of soil moisture land surface processes in the Xinjiang region driven by XJLDAS assimilation fields and forced by the CLM3.5 model.",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Investigating spatiotemporal changes of the land surface processes in Xinjiang using high-resolution CLM3.5 and CLDAS: Soil temperature",
+                "referenceEn": "Meng, X.Y., Wang, H., Wu, Y.P., Long, A.H., Wang, J.H., Shi, C.X. et al. (2017). Investigating spatiotemporal changes of the land surface processes in Xinjiang using high-resolution CLM3.5 and CLDAS: Soil temperature. Scientific Reports. 7. doi:10.1038/s41598-017-10665-8."
+            },
+            {
+                "titleEn": "Simulation and validation of soil temperature land surface processes in the Xinjiang region based on CLDAS forcing and CLM3.5 model.",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Simulation, validation, and analysis of hydrological components in the Jingbo River Basin based on CMDAS-driven SWAT model.",
+                "referenceEn": "None"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Pressure"
+            },
+            {
+                "nameEn": "Temperature"
+            },
+            {
+                "nameEn": "Humidity/Dryness"
+            },
+            {
+                "nameEn": "Precipitation"
+            },
+            {
+                "nameEn": "Precipitation amount"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "East & South East Asia"
+            },
+            {
+                "keywordEn": "East Asia"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2008-2016",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Soil moisture plays an important role in land-atmosphere interactions. It is an important geophysical parameter in research on climate, hydrology, agriculture, and forestry. Soil moisture has important climatic effects by influencing ground evapotranspiration, runoff, surface reflectivity, surface emissivity, surface sensible heat, and latent heat flux. At the global scale, the extent of its influence on the atmosphere is second only to that of sea surface temperature. Soil moisture affects matter and energy balances between land and atmosphere through influencing moisture flux, sensible heat, and latent heat flux. Accurate estimates of the spatial and temporal distribution of soil moisture are of vital importance to further understanding the ecological and physical processes of land and land-atmosphere interactions, and are of great importance in the research and application of meteorology in environmental management, ecology, hydrology, and agriculture. Soil moisture information can currently be acquired with the following methods: regular and field observations, satellite remote sensing, and land hydrological modeling and simulation. However, soil moisture observations based on satellite remote sensing are also problematic. Precision of soil moisture inversion is related to soil type, ground surface roughness, and vegetation coverage. The uncertainty in these parameters results in inversion errors and insufficient temporal and spatial resolutions. Soil moisture obtained through land hydrological modeling simulation and calculation has good temporal frequency and spatial distribution. However, its precision is influenced greatly by model structure and input data. Data assimilation methods used currently in atmospheric, marine, and land data assimilation systems include mainly the optimal interpolation method, 3-D variation method, 4-D variation method, Kalman filter, and EnKF. EnKF is an assimilation method used widely in land model assimilation systems, and uses the Monte Carlo method (overall integration method) to calculate predicted error covariance of the state.",
+                "Yang et al. [6] developed an automatic rating system used to estimate moisture and energy balances of soil by assimilating AMSR-E vertical polarization 6.9 and 18.7 GHz luminance temperature data. Tian et al. [7–13], Zhang et al. [14, 15], and Jia et. al. [16] researched the improvement of land data assimilation methods and the rating of microwave luminance temperature assimilation observation operator models.",
+                "The land surface model is the core of the land data assimilation system. The CLM3.0 model is designed mainly for coupling with the atmospheric numerical model and provides the surface albedo (direct and scattered light within the visible and infrared bands), upward long-wave radiation, sensible heat flux, latent heat flux, water vapor flux, and east-to-west and south-to-north surface stress needed by the atmospheric model. One of the difficulties preventing us from improving the land model simulation precision is the lack of long-term, high-resolution, observational atmospheric driving data. The advanced microwave scanning radiometer (AMSR-E) carried by EOS/Aqua is the world's first sensor capable of providing soil moisture service outputs at the global scale."
+            ],
+            "research objective": [
+                "This paper presents a China Land Soil Moisture Data Assimilation System (CLSMDAS) based on EnKF and land process models, and results of the application of this system in the China Land Soil Moisture Data Assimilation tests.",
+                "This paper explains the composition of the China Land Soil Moisture Data Assimilation System (CLSMDAS), processing methods and quality inspection of atmospheric driving data, the performance test of CLSMDAS with single-point observation data, error analysis of observed soil moisture data, and design, and analysis of the CLSMDAS method based on soil water model and station data.",
+                "In this paper, inverted precipitation and ground-incident solar radiation products acquired through high spatial and temporal resolution FY2C satellite data were introduced and combined with the NCEP reanalysis data to establish a set of high-quality atmospheric driving data which covers the Chinese region."
+            ],
+            "challenges": [
+                "One of the difficulties preventing us from improving the land model simulation precision is the lack of long-term, high-resolution, observational atmospheric driving data. Due to insufficient available ground-level observation soil moisture data, the large error in observed soil moisture, and the inherent high variability of the spatial distribution of soil moisture, it is difficult to verify the assimilated soil moisture data."
+            ],
+            "methods": [
+                "The CLSMDAS established in this paper was used to carry out a soil moisture data assimilation sensitivity experiment. We downloaded and processed AMSR-E daily output data between 2004 and 2007 and used regular nationwide soil moisture observation data, detailed soil moisture observation data from Inner Mongolia and Henan Province, and AMSR-E inverted soil moisture data for a comparative analysis. After CLSMDAS was established, first we used single-point observation data acquired from ecological stations for the land soil moisture data assimilation experiment and analyzed the performance of this assimilation system. In this paper, the ground-based observation data provided by newly-built climatic observation stations of China Meteorological Administration was used for a comparative verification of the FY2C ground-incident solar radiation data between July 2005 and June 2009."
+            ],
+            "dataset": [
+                "FY2C/D/E satellite precipitation estimate outputs can be downloaded free of charge from the website of the China Satellite Data Service Center (http://satellite.cma.gov.cn/). The atmospheric driving data include: atmospheric temperature, relative humidity at 2 m altitude, wind speed, atmospheric pressure, and precipitation; surface short-wave radiation and 10 cm soil moisture data observed at ground level. The observation data were AMSR-E inverted soil moisture data downloaded from NASA’s official website (http://nsidc.org/data/amsre/)."
+            ],
+            "findings": [
+                "Both simulation and assimilation results of the land model reflected reasonably the temporal-spatial distribution of soil moisture. The assimilated soil moisture distribution matches very well with severe summer droughts in Chongqing and Sichuan Province in August 2006, the worst since the foundation of the People’s Republic of China in 1949. It also matches drought regions that occurred in eastern Hubei and southern Guangxi in September.",
+                "Analysis of the assimilation experiment between June and September 2006 shows that the CLSMDAS soil moisture distribution is consistent with soil moisture observed on the ground. The CLSMDAS soil moisture distribution on August 18, 2006 showed significantly lower soil moisture values in drought regions of Chongqing and Sichuan than in surrounding regions."
+            ]
+        },
+        {
+            "background": [
+                "The quality of atmospheric forcing data is one of the most important factors in hydrological simulation. However, the output uncertainty of hydrological models is increased by error propagation. Although the terrain of China is vast and complex, meteorological stations are scarce in contrast. The existing observation stations are unable to simulate large-scale hydrological simulations (water, energy balance). The China Meteorological Assimilation Driving Datasets for the SWAT model (CMADS) was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS) in this research. The Heihe River Basin was selected as the research area in this study. The CMADS, Climate Forecast System Reanalysis (CFSR), and the traditional weather station (TWS) were forcing the Soil and Water Assessment Tool (SWAT) model separately. According to the observation results obtained from three hydrological stations (Ying Luoxia, Qilian Mountains, and Zha Mashenke) in the Heihe River Basin, the runoff simulated by the CMADS data overall was better than the simulation results driven by the CFSR and the TWS."
+            ],
+            "research objective": [
+                "This study aims to analyze the application of the CMADS dataset in driving watershed hydrological models, specifically using the Heihe River Basin as a case study. The research seeks to compare the performance of the CMADS dataset with the CFSR and traditional weather station data in driving the SWAT model, to evaluate the advantages of CMADS in simulating hydrological processes in regions lacking meteorological stations."
+            ],
+            "challenges": [
+                "The existing observation stations are unable to simulate large-scale hydrological simulations (water, energy balance). Even though the CFSR dataset is widely applied internationally, its applicability and accuracy in China are questioned due to the lack of observational correction and quality control in the region."
+            ],
+            "methods": [
+                "In this research, the CMADS dataset was used to drive the SWAT model in the Heihe River Basin, and the results were compared with those obtained using the CFSR and traditional weather station data. The study involved calibrating and validating the runoff at three hydrological control stations (Ying Luoxia, Qilian Mountains, and Zha Mashenke) in the Heihe River Basin. The CMADS dataset was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS)."
+            ],
+            "dataset": [
+                "The CMADS dataset was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS) in this research. The CMADS, Climate Forecast System Reanalysis (CFSR), and the traditional weather station (TWS) data were used to force the Soil and Water Assessment Tool (SWAT) model separately."
+            ],
+            "findings": [
+                "The runoff simulated by the CMADS data overall was better than the simulation results driven by the CFSR and the TWS. The CMADS + SWAT mode can reproduce the spatial and temporal response characteristics of all surface components (such as soil moisture, snow melting, etc.) in the Heihe River basin. We conclude that the CMADS data have obvious advantages for large-scale coupling atmospheric and hydrologic, hydrological process simulation."
+            ]
+        },
+        {
+            "background": [
+                "Hydrological simulation in meteorological ungauged areas has always been a difficult problem for the study on atmospheric and hydrological coupling; meanwhile, it is also one of the important factors that restrict model development and basin water resource knowledge. To analyze the mechanism of atmospheric and hydrological coupling, this study quantitatively evaluated water cycle situation in basins covered with glaciers and snow, and chose the Manas River Basin (MRB) in China as the typical research area to verify the adaptability of the China Meteorological Assimilation Driving Datasets for the Soil and Water Assessment Tool model (CMADS). Hydrological models are very important due to their great significance for better utilizing current hydrological theories for improving or creating new management strategies. Although hydrological models have been widely used in regional water resources simulation, there are still several difficulties when applied in practical applications. The restrictions of the simulation process are mainly reflected in two aspects. Firstly, a well performed and widely verified model should greatly reduce the errors and uncertainty of simulations, whereas the uncertainty would increase when the superposition error happens. In the development process from conceptual models to distributed hydrological models, the empirical errors and uncertainty of the models are both decreasing, and SWAT is a popular and widely used distributed hydrological model among these models. Secondly, the uncertainty of the model atmospheric driving input would greatly increase the uncertainty of the output of hydrological models, so that it is necessary to use a higher resolution forcing data (e.g., the China Meteorological Assimilation Driving Datasets for the Soil and Water Assessment Tool model (CMADS)) to drive a mature hydrological model (SWAT) for achieving the reliable results."
+            ],
+            "research objective": [
+                "To analyze the mechanism of atmospheric and hydrological coupling, this study quantitatively evaluated water cycle situation in basins covered with glaciers and snow, and chose the Manas River Basin (MRB) in China as the typical research area to verify the adaptability of the China Meteorological Assimilation Driving Datasets for the Soil and Water Assessment Tool model (CMADS)."
+            ],
+            "challenges": [
+                "Hydrological simulation in meteorological ungauged areas has always been a difficult problem for the study on atmospheric and hydrological coupling; meanwhile, it is also one of the important factors that restrict model development and basin water resource knowledge. Although hydrological models have been widely used in regional water resources simulation, there are still several difficulties when applied in practical applications. For example, the simulation of ice and snow resources which are covered by the alpine mountains is still problematic water resources simulation all over the world. The restrictions of the simulation process are mainly reflected in two aspects. Firstly, a well performed and widely verified model should greatly reduce the errors and uncertainty of simulations, whereas the uncertainty would increase when the superposition error happens. Secondly, the uncertainty of the model atmospheric driving input would greatly increase the uncertainty of the output of hydrological models."
+            ],
+            "methods": [
+                "The SWAT model was firstly built to simulate water resources, then we calibrated the model with CMADS dataset and started localization in the Manas River Basin (MRB), China, and finally calibrated simulated runoff with observed data SWAT-CUP (SWAT Calibration and Uncertainty Programs). In addition, parameter sensitivity analysis, and parameter calibration and validation were also included in the present study."
+            ],
+            "dataset": [
+                "The spatial data were obtained by using the ArcSWAT interface that permits the model input from the grid digital model. The input data included: land use data, soil data, digital elevation model (DEM) data and meteorological data. The soil data were obtained from the Soil Information System (SIS) of China, which were provided by the Institute of Soil Science, Chinese Academy of Sciences. This study used the ASTER GDEM (Edition 1) data with a resolution of 30 × 30 m. CMADS for the SWAT model of Version 1.1 were used to provide meteorological data. SWAT automatically read the data from nearly 40 stations, which included over 200 meteorological elements (e.g., rainfall, temperature, relative humidity, solar radiation and wind speed data)."
+            ],
+            "findings": [
+                "Results showed that the SWAT model could well reproduce the runoff process of two stations (Kenswat and Hongshanzui) in the research area by using data from CMADS. The simulation performed well on a monthly scale in both stations, where R2 = (0.556÷0.999) and NSE = (0.937÷0.998), and also showed satisfactory effects, where R2 = (0.927÷0.993) and NSE = (0.836÷0.997). Our research suggests that the SWAT model can show satisfactory results through parameter calibration in areas with high glacial recharge rate. Moreover, CMADS can provide necessary meteorological data for SWAT simulations, and support parameter calibration and historical surface data analysis."
+            ]
+        },
+        {
+            "background": [
+                "Distributed hydrologic models are being widely used to understand climate changing impacts on hydrological processes and water balance. There is an increasing need of meteorological forcing data with high precision and temporal-spatial resolution for driving hydrological models to provide reliable model simulations to support water and land management practices. Recent studies show that the quality of meteorological data has been a major uncertainty source for determining model performance. In addition, various atmospheric reanalysis data exist and have been widely used in hydrologic modeling studies. Although the weather patterns and assimilation systems used by these reanalysis datasets are different from each other, the common point is that the patterns and assimilation systems are business mature numerical forecasting models. Different reanalysis data has its own advantages and disadvantages, and any kind of data does not have the same performance in different areas and time periods. Because of the coarse resolution, global climate modes (GCMs) are unable to be completely applied in regional climate pattern, which is also stated in the IPCC fourth report. Given the poor performance of regional climate models and reanalysis datasets in China, it is necessary to develop a high resolution dataset covering the whole country and evaluate its performance in large-scale hydrological modeling."
+            ],
+            "research objective": [
+                "This study presents the newly developed CMADS dataset which can be used for large-scale hydrological modeling with SWAT model. This study compared the modeling performance with inputs from CMADS, CFSR and TWS, and then evaluated the added value of the newly developed CMADS dataset in large-scale modeling studies with Heihe River Basin as the study region."
+            ],
+            "challenges": [
+                "The usability and accuracy of CFSR dataset in China are not satisfactory. Due to the low resolution of JRA-25, it is not suitable for mesoscale analysis. Studies show that GCMs cannot be directly applied in the assessment of regional-scale future hydrological changes. Given the poor performance of regional climate models and reanalysis datasets in China, it is necessary to develop a high resolution dataset covering the whole country and evaluate its performance in large-scale hydrological modeling."
+            ],
+            "methods": [
+                "This study used the SWAT model to illustrate the added value of the CMADS data with Heihe River Basin as the study region. Then three simulations were conducted with SWAT model driven by CMADS, CFSR and TWS, respectively. In order to verify the applicability of CMADS in China, we used bilinear interpolation method to compare CMADS dataset with elements from national automatic stations of China Meteorological Administration. The study used SWAT-CUP software developed by EWAGE to analyze and calibrate parameters of three modes. SUFI-2 algorithm was chosen to run SWAT-CUP Software, including model calibration, validation, sensitivity analysis and uncertainty analysis. The study chose the first 14 sensitive parameters for calibration according to significant parameters and simulated conditions between 2009 and 2010 and verified the model performance from 2011 to 2013 driven by different datasets."
+            ],
+            "dataset": [
+                "The CFSR dataset is provided by American National Environmental Forecasting Center, which is a global reanalysis dataset with high resolution. CMADS is a new dataset developed by this study, which is based on CLDAS data assimilation technology. The CMADS dataset consists of two formats (i.e. .dbf and .txt), which can be easily converted for use in other hydrological models. The first version of CMADS dataset covers the whole East Asian (0N~65N, 60E~160E). The spatial resolution of CMADS V1.0, CMADS V1.1, CMADS V1.2 and CMADS V1.3 are 0.333, 0.25, 0.125 and 0.0625 degree, respectively at daily time step from 2008 to 2014. The study used 11 and 15 meteorological stations from CMADS and CFSR dataset respectively, while only 4 TWS (T1-T4) were available in this basin."
+            ],
+            "findings": [
+                "In general, CMADS has higher accuracy than CFRS when evaluated against observations at TWS; CMADS also provides spatially continuous climate field to drive distributed hydrologic models, which is an important advantage over TWS climate data, particular in regions with sparse weather stations. Therefore, SWAT model simulations driven with CMADS and TWS achieved similar performances in terms of monthly and daily stream flow simulations, and both of them outperformed CFRS. The CMADS dataset is available free of charge and is expected to be a valuable addition to the existing climate reanalysis data sets for deriving distributed hydrologic modeling in China and other countries in East Asia."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Which method is more commonly used for soil moisture data acquisition in the field of atmospheric data assimilation: satellite remote sensing, land hydrological modeling, or regular field observations?",
+                    "Answer": "satellite remote sensing",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What data collection methods are utilized for developing atmospheric driving datasets for hydrological models?",
+                    "Answer": "Observational data, satellite remote sensing, assimilation techniques",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What challenges are associated with using satellite remote sensing data for soil moisture observation?",
+                    "Answer": "Precision of soil moisture inversion",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data assimilation method used to enhance soil moisture estimates in land-atmosphere interaction studies?",
+                    "Answer": "Ensemble Kalman Filter (EnKF) is an example of a data assimilation method used in land model assimilation systems. It employs the Monte Carlo method to calculate predicted error covariance of the state, and has been widely utilized to improve soil moisture estimates in land-atmosphere interaction studies.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a dataset that provides high-resolution atmospheric driving data for hydrological models in regions with sparse meteorological stations?",
+                    "Answer": "The China Meteorological Assimilation Driving Datasets (CMADS) for the SWAT model is an example of a dataset that provides high-resolution atmospheric driving data. It is used for hydrological modeling in regions with sparse meteorological stations, covering East Asia with various spatial resolutions and offering daily data from 2008 to 2016.",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Could you give an example of a challenge faced when using satellite remote sensing for soil moisture observations?",
+                    "Answer": "One challenge in using satellite remote sensing for soil moisture observations is the precision of soil moisture inversion, which is affected by factors such as soil type, ground surface roughness, and vegetation coverage. These uncertainties can lead to inversion errors and insufficient temporal and spatial resolutions in the data.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of the CMADS dataset used for driving the SWAT model?",
+                    "Answer": "high spatial resolution, 1/3° to 1/16°, East Asian region (0°N-65°N, 60°E-160°E), 2008 to 2016, daily data, temperature, precipitation, solar radiation, wind speed, .dbf, .txt",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What are the potential challenges in using CMADS data for hydrological simulations in complex terrains?",
+                    "Answer": "error propagation, sparse meteorological stations, inherent uncertainties in atmospheric driving inputs, variability of spatial distribution, precision of model structure and input data",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many meteorological stations are utilized in the data assimilation process for atmospheric driving data collection?",
+                    "Answer": "2421, 39439",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the time span covered by the atmospheric driving datasets for SWAT model simulations?",
+                    "Answer": "2008-2016",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What challenges are associated with collecting soil moisture data using remote sensing methods?",
+                    "Answer": "Collecting soil moisture data using remote sensing methods faces challenges related to the precision of soil moisture inversion. This precision is affected by factors such as soil type, surface roughness, and vegetation cover, which can introduce inversion errors and lead to insufficient temporal and spatial resolutions. Additionally, these methods need to account for the inherent variability in soil moisture distribution and the limitations of satellite sensors in capturing accurate data over diverse landscapes.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the data assimilation methods like EnKF used for soil moisture differ in accuracy and application from traditional observation methods?",
+                    "Answer": "Data assimilation methods such as EnKF are used widely in land model assimilation systems and provide good temporal frequency and spatial distribution. However, their precision is influenced by model structure and input data. Traditional observation methods, such as regular and field observations, can provide more direct measurements but may lack the spatial and temporal coverage offered by assimilation techniques.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the similarities and differences in data resolution and coverage between CMADS and other datasets like CFSR for driving hydrological models?",
+                    "Answer": "CMADS offers higher spatial resolution and is specifically developed for regions like East Asia, covering a detailed grid. It provides localized data, which may offer better performance in regional hydrological simulations compared to CFSR, which is a global reanalysis dataset. CMADS is particularly advantageous in areas with sparse weather stations due to its continuous climate field coverage.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways do satellite remote sensing and land hydrological modeling approaches compare in terms of their effectiveness for estimating soil moisture?",
+                    "Answer": "Satellite remote sensing provides broad spatial coverage and can capture soil moisture over large areas, but the precision is affected by factors such as soil type and vegetation. Land hydrological modeling offers good temporal frequency and spatial distribution but depends heavily on the accuracy of model inputs and structure, potentially introducing errors if data or model parameters are inaccurate.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How can data assimilation techniques improve the temporal and spatial resolution of soil moisture data, and what implications does this have for land-atmosphere interaction studies?",
+                    "Answer": "Data assimilation techniques can improve the temporal and spatial resolution of soil moisture data by integrating observations into models to refine predictions and fill data gaps. This leads to more accurate and detailed datasets, which are crucial for understanding land-atmosphere interactions, as soil moisture significantly influences energy and moisture exchanges. The use of methods like EnKF in soil moisture assimilation enhances the quality of data, enabling better analysis of ecological and physical processes.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges in obtaining high-resolution atmospheric driving data for hydrological models in East Asia?",
+                    "Answer": "The challenges in obtaining high-resolution atmospheric driving data for hydrological models in East Asia are mainly due to the vast and complex terrain of China, the scarcity of meteorological stations, and the poor performance of regional climate models and reanalysis datasets in China, which necessitates the development of a high-resolution dataset covering the whole country.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is the accuracy of soil moisture observations from satellite remote sensing often questioned in hydrological studies?",
+                    "Answer": "The accuracy of soil moisture observations from satellite remote sensing is often questioned due to the precision of soil moisture inversion being affected by factors such as soil type, ground surface roughness, and vegetation coverage, resulting in inversion errors and insufficient temporal and spatial resolutions.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the underlying reasons for the uncertainty in hydrological model outputs when using atmospheric driving data?",
+                    "Answer": "The uncertainty in hydrological model outputs when using atmospheric driving data is primarily caused by the errors and uncertainty in the model atmospheric driving input, which can greatly increase the uncertainty of the output, highlighting the necessity for higher resolution forcing data to drive the models for reliable results.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential effects on hydrological model accuracy when utilizing high-resolution atmospheric driving data from a dataset?",
+                    "Answer": "Utilizing high-resolution atmospheric driving data can significantly improve the accuracy of hydrological models by reducing the uncertainty of model outputs. This is due to the enhanced spatial and temporal resolution, which allows for more precise simulations of hydrological processes, especially in regions lacking dense meteorological station coverage.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the implications of using a data assimilation system that incorporates EnKF and land process models in terms of soil moisture data accuracy?",
+                    "Answer": "Using a data assimilation system that incorporates EnKF and land process models can improve soil moisture data accuracy by effectively merging model predictions with observational data, thus reducing errors and enhancing the representation of temporal-spatial distribution of soil moisture. However, its effectiveness is contingent upon the availability and quality of the input data, and the challenges posed by the high variability of soil moisture spatial distribution.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to develop a high-resolution meteorological dataset for hydrological modeling in regions with complex terrain and sparse weather stations?",
+                    "Answer": "Developing a high-resolution meteorological dataset is crucial for hydrological modeling in regions with complex terrain and sparse weather stations because it addresses the challenges of insufficient observational data, which can lead to inaccuracies in hydrological simulations. High-resolution datasets like CMADS provide the necessary spatial and temporal detail to improve the accuracy of model inputs, particularly in areas where traditional weather stations are sparse, thus enhancing the reliability of hydrological models in simulating water and energy balances.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the intended benefits of using data assimilation methods in generating atmospheric driving datasets for hydrological and land surface models?",
+                    "Answer": "The intended benefits of using data assimilation methods in generating atmospheric driving datasets for hydrological and land surface models include improving the accuracy and precision of the input data by integrating observations from various sources. This process helps in correcting errors and uncertainties associated with model inputs, thus enhancing the performance of hydrological models in simulating physical processes such as soil moisture and runoff. By providing more accurate atmospheric forcing data, data assimilation methods support better decision-making in environmental management and resource planning.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "How can data assimilation methods improve the accuracy of soil moisture predictions in land data modeling systems?",
+                    "Answer": "Data assimilation methods such as the Ensemble Kalman Filter (EnKF) are used to improve soil moisture predictions by integrating satellite remote sensing data, like AMSR-E luminance temperature, with land hydrological models. This process helps estimate soil moisture more accurately by adjusting the model state using observed data, thereby reducing uncertainties associated with model inputs and structure.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What challenges are faced when simulating hydrological processes in meteorologically ungauged areas, and how can high-resolution datasets address these challenges?",
+                    "Answer": "Simulating hydrological processes in ungauged areas is challenging due to the scarcity of meteorological stations, leading to increased uncertainty in model outputs. High-resolution datasets like CMADS address these challenges by providing detailed atmospheric driving data, such as temperature, humidity, and precipitation, derived from data assimilation systems. These datasets enhance model accuracy by supplying spatially continuous climate fields, which are particularly beneficial in regions lacking dense observational networks.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What technological advancements have enabled the seamless integration of satellite data and ground-based observations for generating high-resolution meteorological datasets?",
+                    "Answer": "The use of multiple satellite and ground-based data fusion techniques, such as the STMAS assimilation algorithm, allows for the integration of satellite data (e.g., CMORPH for precipitation) with ground-based observations from numerous stations, enhancing the resolution and accuracy of meteorological datasets.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How do data assimilation techniques like EnKF enhance the reliability of soil moisture data in meteorological and hydrological models?",
+                    "Answer": "Data assimilation techniques like the Ensemble Kalman Filter (EnKF) are utilized to merge various data sources, including satellite and model data, to improve accuracy and reliability in predicting soil moisture distribution by minimizing uncertainties and errors in model inputs and outputs.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways can the challenges of sparse meteorological station data in vast regions be mitigated to improve hydrological model simulations?",
+                    "Answer": "The challenges of sparse meteorological station data can be mitigated by employing high-resolution atmospheric driving datasets like CMADS, which are developed through advanced assimilation techniques and provide comprehensive spatial coverage, thus enhancing the input data quality for hydrological model simulations.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might the integration of satellite remote sensing data with ground-based observations be expected to enhance the accuracy of soil moisture measurements in hydrological models?",
+                    "Answer": "The integration of satellite remote sensing data with ground-based observations is expected to enhance the accuracy of soil moisture measurements because it combines high spatial and temporal resolution data from satellites with precise local data from ground stations. This synergy can improve the precision of soil moisture inversion and help overcome limitations related to soil type, surface roughness, and vegetation coverage, which are common challenges in remote sensing data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the anticipated challenges in using high-resolution atmospheric driving data for improving hydrological model simulations in complex terrains?",
+                    "Answer": "The anticipated challenges include the need for long-term, high-resolution observational atmospheric driving data, which is often lacking in complex terrains. Additionally, the uncertainty in atmospheric driving inputs can significantly increase the uncertainty of hydrological model outputs, making it challenging to accurately simulate processes like snowmelt and runoff in regions with sparse meteorological stations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What is your evaluation of the effectiveness of using data assimilation techniques, like the EnKF, in improving the accuracy and resolution of meteorological datasets for hydrological modeling?",
+                    "Answer": "Data assimilation techniques such as the EnKF are considered effective in improving the accuracy and resolution of meteorological datasets. These methods allow for the integration of various data sources and can reduce errors associated with satellite remote sensing and land hydrological modeling. In the context of meteorological and hydrological data, these techniques help in refining temporal and spatial distribution estimates, making them crucial for accurate climate and hydrology research.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the considerations for selecting a dataset for hydrological modeling in areas with complex terrain, such as those with glaciers and snow-covered basins?",
+                    "Answer": "In areas with complex terrain, selecting a dataset for hydrological modeling requires consideration of several factors including the dataset's spatial resolution, temporal frequency, and the accuracy of its atmospheric driving inputs. High-resolution datasets like CMADS, which incorporate multiple sources and provide detailed meteorological elements, are preferable. These datasets should be able to reproduce spatial and temporal variability accurately and support robust model calibration and validation processes to ensure reliable hydrological simulations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I'm not clear on how the integration of multiple data sources affects the accuracy and reliability of atmospheric driving datasets in hydrological models.",
+                    "Answer": "The integration of multiple data sources, such as satellite remote sensing and station observations, enhances the accuracy and reliability of atmospheric driving datasets by providing comprehensive spatial coverage and temporally rich data. Techniques like data assimilation, including the use of STMAS and EnKF, help merge these diverse data sources to improve model simulations and reduce uncertainty.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "I don't quite understand the challenges involved in using satellite data for soil moisture estimation.",
+                    "Answer": "Challenges in using satellite data for soil moisture estimation include the precision of soil moisture inversion, which is affected by factors such as soil type, ground surface roughness, and vegetation coverage. These uncertainties can lead to inversion errors and insufficient temporal and spatial resolutions, complicating the accurate estimation of soil moisture.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the challenges associated with integrating multiple data collection methods, such as satellite remote sensing and ground-based observations, for improving soil moisture data accuracy in hydrological modeling.",
+                    "Answer": "Challenges include the precision of soil moisture inversion which is affected by factors like soil type, ground surface roughness, and vegetation coverage leading to inversion errors. The integration of land hydrological modeling with satellite data must also overcome issues related to model structure and input data quality, which influence precision significantly. Addressing these challenges requires advanced data assimilation techniques such as the EnKF method to improve the accuracy of soil moisture data used in hydrological modeling.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please evaluate the effectiveness of high-resolution datasets in enhancing the accuracy of hydrological simulations in regions with sparse meteorological stations.",
+                    "Answer": "High-resolution datasets such as CMADS provide significant advantages in regions with sparse weather stations. They offer spatially continuous climate fields that can improve the performance of distributed hydrologic models. CMADS, for example, has demonstrated higher accuracy compared to other datasets like CFRS, particularly in large-scale hydrological modeling. This dataset also supports the coupling of atmospheric and hydrologic simulations by offering detailed spatial and temporal climate data.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Please explore the potential methodologies for expanding the spatial and temporal resolution of atmospheric driving data used in land data assimilation systems.",
+                    "Answer": "Methodologies for expanding the resolution of atmospheric driving data include utilizing advanced microwave scanning radiometers like AMSR-E for global soil moisture service outputs. Developing high-quality atmospheric driving data involves combining satellite data with reanalysis datasets like NCEP, leveraging technologies such as STMAS for data assimilation. Additionally, incorporating products from high-resolution satellites like FY2C can improve precipitation and solar radiation data, which are essential for enhancing land data assimilation systems.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

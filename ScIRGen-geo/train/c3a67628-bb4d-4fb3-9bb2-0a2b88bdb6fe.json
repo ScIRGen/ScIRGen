@@ -1,0 +1,183 @@
+{
+    "id": "c3a67628-bb4d-4fb3-9bb2-0a2b88bdb6fe",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Global gridded near-surface wind speed dataset on a monthly scale (1973-2021)",
+            "description": "Wind speed data is widely used in many sciences, management, and policy fields to assess renewable energy potential, address wind hazards, investigate biological phenomena, and explore climate change/variability, among other applications. The challenge is obtaining complete and accurate wind datasets, as observations are limited in distribution. Global-scale weather stations suffer from spatial and temporal discontinuities that limit their utility. While reanalysis products and climate model simulations achieve data continuity, they often fail to reproduce significant wind speed trends because few of them assimilate in-situ wind observations on land. Data interpolation helps fill gaps, but the high variability of wind speed data, combined with a low distribution of observations worldwide, prevents standard statistical interpolation methods such as kriging or principal component analysis from being accurate for areas with sparse data. As a result, wind speed data has been the bottleneck in related studies.\n\nHere, based on the partial convolutional neural network, we reconstructed the global near-surface wind speed data during 1973-2021 by assimilating simulation outputs from 34 climate models and the HadISD dataset, which the Met Office Hadley Center creates. Our dataset has a spatial resolution of 1.25°×2.5° and containers observed wind speed trends.",
+            "instructions": "The data is stored in a NetCDF file named GGWS-PCNN wind_ speed-yyyymmyyyymm_ vX.nc. With \"GGWS-PCNN wind_ speed-197301202012_ v312202105p. nc\" as an example, \"GGFS-PCNN\" is the English abbreviation of the dataset (from the global gridded monthly wind speed dataset by the partial volatile neural network), \"wind_ speed\" indicates that the dataset stores wind speed variables, \"197301202012\" denotes that the period of the data is from Jan. 1973 to Dec. 2020, and v312202105p represents that the dataset uses HadISD data with the version of v312202105p. The data can be processed by Matlab, ArcGIS and other software.\n\nNotice: Due to the limitations of existing AI algorithms in reconstructing data with many missing values, our product has a small number of outliers (e.g. wind speeds less than zero or very high), most of which are located in the Antarctic region. We recommend you remove these outliers before using this dataset.",
+            "east": 180.0,
+            "west": 180.0,
+            "south": 90.0,
+            "north": 90.0,
+            "startTime": "1973-01-01 00:00:00",
+            "endTime": "2021-12-31 00:00:00",
+            "fileSize": 195119348.0,
+            "cstr": "18406.11.Atmos.tpdc.272893",
+            "doi": "10.11888/Atmos.tpdc.272893",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "ZHOU Lihong ",
+                "unitEn": "Southern University of Science and Technology"
+            },
+            {
+                "nameEn": "ZENG Zhenzhong ",
+                "unitEn": "Southern University of Science and Technology"
+            },
+            {
+                "nameEn": "JIANG Xin ",
+                "unitEn": "Southern University of Science and Technology"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "An artificial intelligence reconstruction of global gridded surface winds",
+                "referenceEn": "Zhou, L.H., Liu., H.F., Jiang, X., Ziegler, A.D., Azorin-Molina, C., Liu, J., & Zeng, Z.Z. (2022). An artificial intelligence reconstruction of global gridded surface winds. Science Bulletin, online."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Winds"
+            },
+            {
+                "nameEn": "wind speed"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "The globe"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "1973-2021",
+                "type": "temporal"
+            },
+            {
+                "keywordEn": "monthly",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a technique used to overcome the limitations of traditional statistical interpolation methods in reconstructing global wind speed data?",
+                    "Answer": "A technique used to overcome the limitations of traditional statistical interpolation methods in reconstructing global wind speed data is the use of a partial convolutional neural network algorithm. This approach integrates 34 climate model data sets with meteorological station observation data from HadISD to reconstruct global 10-meter near-surface wind speed trends over 588 months from 1973 to 2021, with a spatial resolution of 1.25°×2.5° (latitude × longitude).",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of datasets used to reconstruct global 10-meter wind speed from 1973-2021?",
+                    "Answer": "spatial resolution of 1.25°×2.5° (latitude×longitude), covering 588 months, partial convolutional neural network algorithm, 34 climate mode data, HadISD meteorological station observations",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many months of global 10-meter wind speed data were reconstructed using the partial convolutional neural network approach?",
+                    "Answer": "588 months",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How does the use of partial convolutional neural network algorithms for reconstructing global wind speed data compare to traditional statistical interpolation methods like kriging in terms of handling data discontinuities and spatial variability?",
+                    "Answer": "The use of partial convolutional neural network algorithms for reconstructing global wind speed data offers advantages over traditional statistical interpolation methods like kriging by effectively addressing issues of data discontinuities and high spatial variability. Traditional methods often struggle with the high variability and uneven distribution of meteorological data, while the partial convolutional neural network approach integrates multiple climate model data and observational data to reconstruct wind speeds, capturing observed trends more accurately.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes the limitations in existing wind speed products when it comes to spatial and temporal continuity, and how do these limitations affect the assessment of renewable energy potential?",
+                    "Answer": "The limitations in existing wind speed products arise from the discontinuity of meteorological observation data in both space and time. Additionally, while reanalysis products and climate model simulations achieve data continuity, they often fail to reproduce observed wind speed trends. These limitations, along with the high variability of wind speed and uneven and sparse distribution of observation sites, impact the assessment of renewable energy potential by providing an incomplete and potentially inaccurate understanding of wind resources.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential effects on the accuracy and utility of wind speed datasets when using a partial convolutional neural network to integrate multiple climate models and meteorological observations?",
+                    "Answer": "By using a partial convolutional neural network to integrate 34 climate model datasets and meteorological observations from HadISD, the wind speed dataset can potentially offer more accurate reconstructions of global wind speed trends from 1973-2021. This approach helps address the limitations of existing products, such as spatial and temporal discontinuities in meteorological data, and the inability of some reanalysis products and climate models to reproduce observed wind speed trends. The method also aims to overcome the challenges posed by high variability in wind speeds and uneven distribution and scarcity of observation sites, which traditional statistical interpolation methods struggle with.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to use a partial convolutional neural network algorithm to reconstruct global wind speed data over several decades?",
+                    "Answer": "The use of a partial convolutional neural network algorithm for reconstructing global wind speed data is crucial because traditional methods like kriging or principal component analysis perform poorly due to the high variability of wind speed data and the uneven and sparse distribution of observation sites. Additionally, existing meteorological observation data suffer from spatial and temporal discontinuities, while reanalysis products and climate model simulations, despite achieving data continuity, often fail to replicate observed wind speed trends. Therefore, leveraging the partial convolutional neural network allows for the integration of multiple climate model data and meteorological station observations, capturing observed wind speed trends and overcoming the limitations of traditional methods.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in reconstructing global 10-meter wind speed data using partial convolutional neural networks, and how are climate model and meteorological station data integrated in this process?",
+                    "Answer": "The procedural steps involved in reconstructing global 10-meter wind speed data using partial convolutional neural networks include integrating 34 climate model datasets with meteorological station observational data from HadISD provided by the Met Office Hadley Centre. This integration helps to address the discontinuities in spatial and temporal data and incorporates observed wind speed trends. The process leverages the strengths of partial convolutional neural networks to improve upon traditional statistical interpolation methods, which struggle with high variability and uneven station distribution. Detailed reconstruction methodologies can be found in the methods section of the relevant reference literature.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        }
+    ]
+}

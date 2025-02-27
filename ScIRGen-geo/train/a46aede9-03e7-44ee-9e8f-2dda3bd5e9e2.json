@@ -1,0 +1,429 @@
+{
+    "id": "a46aede9-03e7-44ee-9e8f-2dda3bd5e9e2",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Annual albedo data set of glaciers in the High Mountain Asia (2000-2020)",
+            "description": "Glacier surface albedo is a key parameter in the process of glacier mass and energy balance. The data include annual mean glacier surface albedo and annual minimum glacier surface albedo for each year of the 2000-2020 ablation period (June-August) in the  High Mountain Asia. Based on the MODIS 500m resolution daily snow albedo products (including MOD10A1 and MYD10A1), firstly, mean-synthesis was applied to the morning star data MOD10A1 and afternoon star data MYD10A1, followed by interpolation and null-filling using mean-filtering for data within a ±2 day window, and finally based on the minimum and mean methods to obtain the annual mean albedo and annual minimum albedo for glaciers in High Mountain Asia were obtained based on the minimum and mean methods. Compared to the original data, the accuracy and coverage of the data are greatly improved. It can provide ice surface albedo input data for studying the relationship between glacier albedo and matss balance and for glacier models.",
+            "instructions": "File naming: The glacier surface albedo data is stored in TIFF format and the name of the file is \"MODyyyy_ddd.tif\", where MOD stands for MODIS data, yyyy stands for year and ddd stands for synthesis method, e.g. MOD2020_min.tif stands for this tif file describing the minimum albedo during the ablation period in the High Mountain Asia in 2020.\nHow the data is read: All tif files in this dataset can be opened directly in Arcgis and the values displayed are the albedo values (0-100).",
+            "east": 105.0,
+            "west": 65.0,
+            "south": 26.0,
+            "north": 47.0,
+            "startTime": "2000-01-01 00:00:00",
+            "endTime": "2021-12-31 00:00:00",
+            "fileSize": 25370509.0,
+            "cstr": "18406.11.Cryos.tpdc.272751",
+            "doi": "10.11888/Cryos.tpdc.272751",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "XIAO Yao ",
+                "unitEn": "Nanjing University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Estimating glacier mass balance in High Mountain Asia based on MODIS retrieved surface albedo from 2000 to 2020",
+                "referenceEn": "Xiao, Y., Ke, C.Q., Fan, Y.B., Shen,X.Y., & Cai, Y. (2022). Estimating glacier mass balance in High Mountain Asia based on MODIS retrieved surface albedo from 2000 to 2020, International Journal of Climatology, 2022, https://doi.org/10.1002/joc.7873."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Cryosphere"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Glacier(Ice Sheet)"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "High Mountain Asia"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2000-2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Glaciers are sensitive to global climate change and are indicators of climate change (Benn and Lehmkuhl, 2000). During the period from 1961 to 2016, it has been estimated that the magnitude of global glacier mass loss contributed 27 ± 22 mm to sea level rise (Zemp et al., 2019). The High Mountain Asia (HMA) has the largest area and the widest range of mountain glaciers in the middle and high latitudes. The glacier area reaches 97,605 km2 (Hugonnet et al., 2021), HMA includes central Asia, Southwest Asia and Southeast Asia, and studies have shown that these regions have experienced glacier mass loss in recent years (Shean et al., 2020; Hugonnet et al., 2021). The dynamics of mass balance can cause changes in glacier area and regional runoff, which can have a significantly impact on regional hydrological and water resources, particularly in the HMA (Chaturvedi et al., 2014; Lutz et al., 2014). Several methods have been used to measure glacier mass balance, including field measurements, model retrievals, geodetic measurements and ice surface parameter methods (Bamber and Rivera, 2007). Some scholars have combined field measurements and mass balance models (Machguth et al., 2006; Konz and Seibert, 2010) to study mass balance over a long time series (Michlmayr et al., 2008; Huss, 2012; Zemp et al., 2013). However, in some regions with harsh environmental conditions and poor transportation, field measurements are limited. In recent years, remote sensing data have been combined with geodetic methods to calculate the change of glacier surface elevation and mass balance retrieved (Kääb et al., 2012; Brun et al., 2017; Lin et al., 2017; Wu et al., 2018).",
+                "Albedo is directly related to solar radiation, which provides the main source of energy for glacier melting, and the solar radiation absorbed by the glacier surface is determined by a combination of incident solar shortwave radiation and the glacier surface albedo. Therefore, the magnitude of glacier surface albedo is a key parameter of the glacier mass and energy balance process, and it directly affects the annual mass balance. Greuell and Oerlemans (2005) pointed out that the minimum albedo method has good applicability for glaciers with small accumulations. For larger glaciers, the mean albedo method has better applicability than the minimum albedo method, and the mean albedo method is also well correlated with mass balance such as in Svalbard and Greenland. Studies have shown that global glacier surface albedo has decreased since the 21st century, and as the glacier surface albedo decreases, it can accelerate melting and mass loss in glacial regions.",
+                "Annual changes in glacier albedo may be a good proxy for mass balance. The albedo –mass balance relationship was assessed by establishing a statistical relationship between measured annual albedo by satellite observations and in situ measured mass balance at four glaciers. The harmonic model can be applied to interpolate and fill data with obvious seasonal variation characteristics, such as the normalized difference vegetation index and land surface temperature."
+            ],
+            "research objective": [
+                "Based on the DEMs that can retrieve the accumulated mass balance of glaciers in a large area, we try to explore a linear relationship model between albedo changes and DEM changes in large-area glaciers. In order to find a suitable albedo index to estimate the mass balance of HMA, based on the measured mass balance of the four glaciers in the HMA, the annual minimum albedo and the annual mean albedo for the melting season of the four glaciers were calculated from the MODIS snow albedo product and the MCD43A3 shortwave albedo product, respectively, for a total of four albedo indices, and the linear relationships between four albedo indices and mass balance were constructed and evaluated.",
+                "We further explore the relationship between albedo and mass balance in large-area glaciers.",
+                "The minimum and mean albedo during the melt season (June, July, and August) were extracted based on MxD10A1 and MCD43A3 shortwave albedo in HMA. We went further to establish a similar relationship between mass balance of large-scale glaciers estimated from elevation changes and albedo changes during 2000 and 2016, and albedo changes are highly correlated with glacier mass balance."
+            ],
+            "challenges": [
+                "However, in some regions with harsh environmental conditions and poor transportation, field measurements are limited.",
+                "These datasets are easily affected by clouds that cause errors in the magnitude of albedo. However, for large-area glaciers, it is difficult to establish the relationship between the annual mass balance and albedo due to the difficulty in obtaining the measured glacier mass balance. MODIS products suffer from data discontinuities in time and space due to cloud cover. In the Tibetan Plateau, the annual average cloud coverage observed by MODIS exceeds 40%.",
+                "Increasing temperatures, decreasing precipitation, and deposition of light-absorbing impurities such as black carbon or mineral dust could cause the reduction in glacial albedo, and can accelerate glacier melting.",
+                "Glacier mass balance from DEMs and MODIS-retrieved surface albedo has some uncertainties, leading to some uncertainties in the relationship between mass balance and albedo changes. This study found that the linear relationship is not applicable to W Kunlun, E Kunlun, Qilian Shan, Inner Tibet, and W Himalaya, which have no seasonal variations or unique albedo characteristics."
+            ],
+            "methods": [
+                "Based on the DEMs that can retrieve the accumulated mass balance of glaciers in a large area, we try to explore a linear relationship model between albedo changes and DEM changes in large-area glaciers. In order to find a suitable albedo index to estimate the mass balance of HMA, based on the measured mass balance of the four glaciers in the HMA, the annual minimum albedo and the annual mean albedo for the melting season of the four glaciers were calculated from the MODIS snow albedo product and the MCD43A3 shortwave albedo product, respectively, for a total of four albedo indices, and the linear relationships between four albedo indices and mass balance were constructed and evaluated. Then, the glacier-wide albedo changes from 2000 to 2016 were calculated based on the albedo index with the best relationship obtained, and constructing a linear relationship between albedo changes and mass balance retrieved by Brun et al., 2017 using the DEM method. Glacier mass balance in HMA is calculated from 2000 to 2020 from the constructed linear relationship. Finally, the linear relationship is verified, the applicability of albedo in different regions was assessed and the limits of the albedo data and method were discussed."
+            ],
+            "dataset": [
+                "In situ annual mass balance data were used to construct the relationships with annual minimum/mean albedo, four glaciers were applied to this study, of which Tuyuksu glacier, Urumqi glacier No.1, Dongkemadi glacier and Chhota Shigri glacier were located in W Tien Shan, E Tien Shan, Inner Tibetan and W Himalaya, respectively, with areas of 3.14, 1.75, 15.42 and 16.04 km², respectively. These data were collected from the World Glacier Monitoring Service (WGMS), glacier elevation and mass change data from 1850 to present were collected from the Fluctuations of Glaciers Database, and the National Tibetan Plateau Data Center, glacier mass-balance from the glaciological method. To construct a linear relationship between albedo changes and mass balance in a large area over HMA, the mass balance data were acquired from Brun et al. (2017) using DEMs derived from more than 5,000 ASTER L1A stereo images from 2000 to 2016. Additionally, glacier mass balance data derived from ASTER L1A stereo images retrieved DEMs between 2000 and 2018 by Shean et al. (2020) were used to verify the relationship between albedo changes and mass balance.",
+                "The data used in this study (include annual mean glacier surface albedo and annual minimum glacier surface albedo for each year of the 2000–2020 ablation period [June–August] in the High Mountain Asia) can be downloaded at National Tibetan Plateau Data Center."
+            ],
+            "findings": [
+                "The results show that albedo changes and mass balance have a strong linear relationship in some regions that have a significant trend of seasonal variation in albedo. The albedo–mass balance relationship indicates that a decrease in surface albedo of 1‰ results in a loss of mass balance of 0.1 m w.e.a−1. The study shows that except for five regions, W Kunlun, E Kunlun, Qilian Shan, Inner Tibet and W Himalaya, the remaining 11 regions all have negative glacier mass balance, with an average glacier mass change of−0.225 ± 0.040 m w.e.a−1 from 2000 to 2020.",
+                "Based on the constructed albedo–mass balance relationship and albedo changed from 2000 to 2020, the mass balance from 2000 to 2020 is calculated, the result shows that S and E Tibet and Hengduan Shan have larger mass losses reaching −0.534 ± 0.056 and −0.521 ± 0.064 m w.e.a−1, respectively. Glacier mass loss has been exacerbated in recent years due to glacier albedo reduction, and the average mass loss is−0.225 ± 0.040 m w.e.a−1 in HMA."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Can the MODIS snow albedo product be a reliable source for calculating annual mean glacier surface albedo during the ablation period in High Mountain Asia?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Is it possible to use DEMs derived from ASTER L1A stereo images to verify the relationship between albedo changes and glacier mass balance?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Does cloud coverage pose a significant challenge in obtaining continuous MODIS albedo data for large-area glaciers in High Mountain Asia?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "When collecting glacier albedo data, is it more effective to use MODIS products, in situ measurements, or a combination of both?",
+                    "Answer": "MODIS products",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "For evaluating the relationship between albedo and mass balance in glacier studies, is it more effective to use annual minimum albedo, annual mean albedo, or a combination of both?",
+                    "Answer": "a combination of both annual minimum albedo and annual mean albedo",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What data collection methods are used to obtain glacier mass balance measurements in regions with harsh environmental conditions?",
+                    "Answer": "Remote sensing",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Where can datasets related to annual mean glacier surface albedo and annual minimum glacier surface albedo for the 2000-2020 ablation period be accessed?",
+                    "Answer": "National Tibetan Plateau Data Center",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What challenges are associated with using MODIS products for measuring glacier albedo in the Tibetan Plateau?",
+                    "Answer": "Data discontinuities",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method used to estimate glacier mass balance in areas with harsh environmental conditions?",
+                    "Answer": "In regions with harsh environmental conditions and limited field measurements, remote sensing data have been combined with geodetic methods to calculate changes in glacier surface elevation and retrieve mass balance. This approach involves using DEMs derived from satellite images like ASTER L1A stereo images.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a challenge faced when using MODIS products for glacier albedo measurement?",
+                    "Answer": "A significant challenge when using MODIS products is data discontinuities caused by cloud cover, which can lead to errors in albedo magnitude. For instance, the Tibetan Plateau experiences over 40% average annual cloud coverage, affecting data reliability.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Can you provide an example of a dataset that includes annual mean glacier surface albedo and annual minimum glacier surface albedo for High Mountain Asia?",
+                    "Answer": "A dataset containing annual mean glacier surface albedo and annual minimum glacier surface albedo for the High Mountain Asia ablation period (June–August) from 2000 to 2020 is available at the National Tibetan Plateau Data Center.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of the data collection methods used for assessing glacier albedo in high mountain regions?",
+                    "Answer": "500m resolution, daily snow albedo products, mean compositing, mean filtering, ±2 day window for interpolation and gap filling",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What features of remote sensing data pose challenges when measuring glacier surface albedo?",
+                    "Answer": "cloud cover, data discontinuities in time and space, cloud coverage exceeding 40%",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the essential attributes of datasets used to establish the relationship between glacier albedo changes and mass balance?",
+                    "Answer": "in situ annual mass balance data, annual minimum and mean albedo, glacier elevation, mass change data, DEMs derived from ASTER L1A stereo images",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many glaciers were used in constructing the relationship between annual minimum/mean albedo and mass balance in a dataset?",
+                    "Answer": "4",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the average glacier mass change in regions with negative glacier mass balance over the period from 2000 to 2020?",
+                    "Answer": "−0.225 ± 0.040 m w.e.a−1",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is the significance of using MODIS products in collecting glacier surface albedo data?",
+                    "Answer": "MODIS products are significant in collecting glacier surface albedo data because they provide daily snow albedo measurements at a 500m resolution, which are crucial for estimating annual mean and minimum glacier surface albedo. These measurements are used to improve data accuracy and coverage, which are essential for studying glacier mass and energy balance processes.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the challenges faced in using remote sensing data for glacier mass balance estimation?",
+                    "Answer": "The challenges in using remote sensing data for glacier mass balance estimation include limitations due to harsh environmental conditions and poor transportation, which restrict field measurements. Remote sensing data, such as MODIS, can suffer from data discontinuities due to cloud cover, with annual average cloud coverage exceeding 40% in some areas like the Tibetan Plateau. This can lead to errors in albedo measurements and impact the establishment of accurate relationships between albedo and mass balance.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the challenges related to cloud cover in MODIS data collection compare to the limitations of field measurements in harsh environments for glacier mass balance studies?",
+                    "Answer": "Cloud cover in MODIS data can cause data discontinuities affecting albedo accuracy, while field measurements in harsh environments are often limited due to accessibility issues. Both present significant challenges for accurate data collection in glacier mass balance studies.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the similarities and differences between using DEMs and remote sensing data versus traditional field measurements for assessing glacier mass balance?",
+                    "Answer": "DEMs and remote sensing data allow for large-area glacier mass balance assessments and can overcome accessibility issues of field measurements. However, they may introduce uncertainties in the relationship between mass balance and albedo changes, unlike field measurements that are typically considered more accurate but limited in scope and geographical coverage.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What are the implications of using MODIS snow albedo products when deriving glacier surface albedo data, and how might this affect the accuracy and reliability of the inferred mass balance in High Mountain Asia?",
+                    "Answer": "The use of MODIS snow albedo products, such as MOD10A1 and MYD10A1, provides a means to calculate glacier surface albedo, which is crucial for estimating glacier mass balance. However, these products are susceptible to data discontinuities caused by cloud cover, which can lead to errors in albedo values and affect the reliability of the mass balance estimations. Despite these challenges, combining data from multiple sources and using interpolation methods can improve data accuracy and coverage.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "How can the relationship between glacier surface albedo and mass balance be effectively modeled considering the limitations of field measurements in challenging regions?",
+                    "Answer": "Field measurements in harsh regions with poor transportation are limited, making it difficult to obtain accurate measurements of glacier mass balance. To address this, researchers combine field measurements with remote sensing data and geodetic methods to establish a statistical relationship between satellite-observed albedo and in situ mass balance data. This approach allows for modeling the mass balance using linear relationships between albedo indices and mass balance data, even in areas with limited field data.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What strategies could be employed to mitigate the impact of cloud cover on the acquisition of reliable albedo data over large glacier areas in High Mountain Asia?",
+                    "Answer": "To mitigate the impact of cloud cover, strategies such as using a combination of morning and afternoon MODIS data (MOD10A1 and MYD10A1) and applying mean compositing and filtering techniques can be adopted. Additionally, employing a ±2-day data window for interpolation and filling data gaps helps improve the continuity and reliability of the albedo data. These methods enhance data coverage and accuracy, facilitating more reliable estimation of glacier mass balance.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "Why do datasets related to glacier albedo and mass balance face challenges in terms of temporal and spatial continuity?",
+                    "Answer": "Datasets are easily affected by clouds that cause errors in the magnitude of albedo and result in data discontinuities in time and space. For instance, in the Tibetan Plateau, the annual average cloud coverage observed by MODIS exceeds 40%, impacting the continuity and accuracy of data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What causes uncertainties in the relationship between glacier mass balance and albedo changes derived from remote sensing techniques?",
+                    "Answer": "Glacier mass balance from DEMs and MODIS-retrieved surface albedo has some uncertainties, leading to uncertainties in the relationship between mass balance and albedo changes. Moreover, increasing temperatures, decreasing precipitation, and deposition of light-absorbing impurities such as black carbon or mineral dust could also cause reduction in glacial albedo, complicating the relationship.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of using MODIS products for glacier albedo measurements in terms of data reliability and spatial coverage?",
+                    "Answer": "Using MODIS products for glacier albedo measurements can lead to data discontinuities in time and space due to cloud cover, resulting in potential errors in albedo magnitude. In regions like the Tibetan Plateau, where annual average cloud coverage observed by MODIS exceeds 40%, this can impact the reliability and spatial coverage of the data.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "How does the introduction of DEMs impact the accuracy of measuring large-area glacier mass balance compared to traditional field measurements?",
+                    "Answer": "The introduction of DEMs allows for the retrieval of accumulated mass balance of glaciers over large areas, which can improve accuracy in regions where field measurements are limited due to harsh environmental conditions and poor transportation. It facilitates the exploration of linear relationships between albedo changes and DEM changes, providing a broader understanding of mass balance dynamics.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the implications of decreasing glacier surface albedo on glacier mass balance and regional hydrology in High Mountain Asia?",
+                    "Answer": "Decreasing glacier surface albedo can accelerate glacier melting and mass loss, which impacts regional hydrology and water resources, particularly in High Mountain Asia. The strong linear relationship between albedo changes and mass balance suggests that a decrease in surface albedo results in significant mass balance loss, affecting the availability of water resources in the region.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to explore the relationship between glacier albedo changes and mass balance in large-area glaciers?",
+                    "Answer": "Exploring this relationship is crucial as it helps estimate the mass balance of glaciers, which is a key parameter in understanding glacier dynamics and their responses to climate change. This understanding can provide insights into regional hydrological and water resource impacts, particularly in areas like High Mountain Asia where glaciers have experienced significant mass loss.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the primary goals of using remote sensing data and geodetic methods to calculate glacier surface elevation and mass balance changes?",
+                    "Answer": "The primary goals are to overcome the limitations of field measurements in harsh environmental conditions and to provide a broad-scale assessment of glacier mass balance over time. This approach allows for the integration of satellite data to improve the spatial and temporal coverage and accuracy of glacier monitoring.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in calculating the annual mean and minimum glacier surface albedo for the ablation period from 2000 to 2020 in High Mountain Asia using MODIS data?",
+                    "Answer": "The procedural steps involve first using the MODIS snow albedo products (MOD10A1 and MYD10A1) for daily snow albedo data. The data from the morning satellite (MOD10A1) and afternoon satellite (MYD10A1) are averaged. Next, a 2-day window mean filtering is applied for interpolation and filling data gaps. Finally, the annual mean and minimum albedo are derived using the average and minimum value methods.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How are uncertainties in glacier mass balance data from DEMs and MODIS-retrieved surface albedo addressed procedurally in the context of the High Mountain Asia glacier research?",
+                    "Answer": "Uncertainties are addressed by constructing linear relationships between albedo indices and mass balance. The relationship is evaluated and verified with glacier mass balance data from DEMs, specifically using data from Brun et al. (2017) and Shean et al. (2020). The study assesses the applicability of albedo in different regions and discusses the limitations of the data and methods.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methods or technologies have enabled the improvement of data accuracy and coverage for glacier albedo measurements in high mountain regions?",
+                    "Answer": "The use of MODIS 500m resolution daily snow albedo products, alongside data interpolation and void filling techniques using a ±2-day window mean filter, has significantly improved the accuracy and coverage of glacier albedo measurements in high mountain regions.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "How does the integration of remote sensing data with geodetic methods enhance the analysis of glacier mass balance in challenging environments?",
+                    "Answer": "Remote sensing data combined with geodetic methods allow for the calculation of glacier surface elevation changes and mass balance in regions with harsh environmental conditions and limited accessibility, offering an alternative to traditional field measurements.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the enabling factors for constructing a linear relationship model between albedo changes and glacier mass balance in large-area glaciers?",
+                    "Answer": "The construction of a linear relationship model between albedo changes and glacier mass balance is enabled by using Digital Elevation Models (DEMs) and satellite albedo products, such as MODIS and MCD43A3, to derive albedo indices and assess their correlation with mass balance measurements from multiple regions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might albedo datasets be challenging to collect for large-area glaciers in regions with high cloud cover?",
+                    "Answer": "Albedo datasets are challenging to collect for large-area glaciers in regions with high cloud cover because MODIS products suffer from data discontinuities due to cloud cover, and the annual average cloud coverage observed by MODIS in the Tibetan Plateau exceeds 40%, leading to errors in the magnitude of albedo.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the anticipated challenges when using DEMs and remote sensing data to calculate glacier mass balance in areas with extreme environmental conditions?",
+                    "Answer": "The anticipated challenges when using DEMs and remote sensing data to calculate glacier mass balance in areas with extreme environmental conditions include limited field measurements due to harsh environmental conditions and poor transportation, and uncertainties in glacier mass balance from DEMs and MODIS-retrieved surface albedo.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it difficult to establish a direct relationship between annual mass balance and albedo for large-area glaciers?",
+                    "Answer": "It is difficult to establish a direct relationship between annual mass balance and albedo for large-area glaciers because of the difficulty in obtaining measured glacier mass balance, the impact of cloud cover on datasets, and the unique albedo characteristics in certain regions that do not exhibit seasonal variations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "How would you evaluate the effectiveness of using MODIS products for deriving glacier surface albedo in regions with high cloud coverage, such as the Tibetan Plateau?",
+                    "Answer": "The effectiveness of using MODIS products for deriving glacier surface albedo in regions with high cloud coverage is challenging due to data discontinuities in time and space caused by cloud cover. The annual average cloud coverage observed by MODIS in the Tibetan Plateau exceeds 40%, which can lead to errors in the magnitude of albedo. Despite these challenges, MODIS data have been used to calculate albedo indices, but with some uncertainties in the relationship between mass balance and albedo changes.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the potential limitations or challenges in using DEMs derived from ASTER L1A stereo images for calculating glacier mass balance over large regions?",
+                    "Answer": "Using DEMs derived from ASTER L1A stereo images for calculating glacier mass balance over large regions can present challenges, such as uncertainties in the data and the inability to establish linear relationships in certain regions. The study found that a linear relationship model between albedo changes and DEM changes is not applicable in regions like W Kunlun, E Kunlun, Qilian Shan, Inner Tibet, and W Himalaya, which have no seasonal variations or unique albedo characteristics. These uncertainties can influence the accuracy of the mass balance estimations.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "In your opinion, how critical is the role of field measurements in validating remote sensing methods for assessing glacier mass balance in High Mountain Asia?",
+                    "Answer": "Field measurements play a critical role in validating remote sensing methods for assessing glacier mass balance, particularly in High Mountain Asia. They provide essential ground truth data that can be used to construct relationships with remote sensing-derived albedo indices. However, in regions with harsh environmental conditions and poor transportation, field measurements are limited, which can make it difficult to validate remote sensing data and establish reliable models for glacier mass balance.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I'm unsure about the appropriateness of using satellite-derived albedo indices for estimating glacier mass balance in regions with unique albedo characteristics.",
+                    "Answer": "The study found that the linear relationship between albedo changes and mass balance is not applicable to certain regions such as W Kunlun, E Kunlun, Qilian Shan, Inner Tibet, and W Himalaya, which have no seasonal variations or unique albedo characteristics. Therefore, the applicability of albedo indices can vary depending on regional characteristics.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "I don't understand how the challenge of limited field measurements in harsh environments impacts the reliability of glacier mass balance assessments.",
+                    "Answer": "In regions with harsh environmental conditions and poor transportation, field measurements are limited, which affects the direct measurement of glacier mass balance. To address this, remote sensing data have been combined with geodetic methods to calculate glacier surface elevation and mass balance changes, although these approaches may still have uncertainties.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Could you analyze the challenges associated with using MODIS products for glacier albedo measurements in High Mountain Asia, particularly regarding cloud cover and data discontinuities?",
+                    "Answer": "The challenges associated with using MODIS products for glacier albedo measurements in High Mountain Asia include the high annual average cloud coverage observed by MODIS, which exceeds 40% in the Tibetan Plateau, causing data discontinuities in time and space. These discontinuities can lead to errors in the magnitude of albedo, making it difficult to establish a reliable relationship between annual mass balance and albedo.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please explore the potential data collection methods that could be employed to overcome the limitations of field measurements in regions with harsh environmental conditions and poor transportation.",
+                    "Answer": "To overcome the limitations of field measurements in harsh environments, remote sensing data combined with geodetic methods have been used to calculate changes in glacier surface elevation and mass balance. This approach helps in regions where traditional field measurements are limited due to environmental and logistical challenges.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

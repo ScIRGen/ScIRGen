@@ -1,0 +1,398 @@
+{
+    "id": "faae7605-a0f2-4d18-b28f-5cee413766a2",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "1-km monthly precipitation dataset for China (1901-2023)",
+            "description": "This dataset is the monthly precipitation data of China, with a spatial resolution of 0.0083333 ° (about 1km) and a time range of 1901.1-2023.12. The data format is NETCDF, i.e.. Nc format. This dataset is generated in China through the Delta spatial downscaling scheme based on the global 0.5 ° climate dataset released by CRU and the global high-resolution climate dataset released by WorldClim. In addition, 496 independent meteorological observation point data are used for verification, and the verification results are reliable. This data set covers the main land areas in China (including Hong Kong, Macao and Taiwan), excluding islands and reefs in the South China Sea. In order to facilitate storage, the data are all int16 type and stored in nc files, with precipitation units of 0.1mm.\nNC data can be mapped using ArcMAP software; Matlab software can also be used for extraction processing. Matlab has released the function to read and store nc files. The read function is ncread, and switch to the nc file storage folder. The statement is expressed as: ncread ('XXX.nc ',' var ', [i j t], [leni lenj lent]), where XXX.nc is the file name, and is the string required' '; Var is from XXX The variable name read in NC. If it is a string, '' is required; i. J and t are the starting row, column and time of the read data respectively, and leni, lenj and lent i are the length of the read data in the row, column and time dimensions respectively. In this way, this function can be used to read in any region and any time period in the study area. There are many commands about NC data in the help of Matlab, which can be viewed. WGS84 is recommended for data coordinate system.",
+            "instructions": "Stored in NC format, the file name is \"pre_yyyy. nc\", where yyyy is the year. Each NC file contains 12 time points, representing January to December. To reduce storage capacity, all files have been compressed and stored, such as pre_yyyy.rar. The nc format can be opened using the ArcGIS multidimensional data tool, or Matlab, R, and so on. Note: Each NC file has 12 layers. If opened in ArcMap, you can select the time dimension. Selecting 1 represents January, selecting 7 represents July, and so on; If the time dimension is not selected by default, when the data is opened, it defaults to the first layer, which is January. The nc file can be opened in the Make NetCDF Raster Layer tool under the Multidimensional Tools in the ArcMap toolbox. After the dialog box opens, you can select time under Dimension Values (optional), and click on the value to see a list of values 1-12. Select one of the months to complete the process; Alternatively, after opening the nc file by default, the first layer (January) will be displayed. Then, under the layer properties, click on the NETCDF property card and select the value list for the time dimension, which will show 1-12. Choose one of the months to complete the process. If performing grid calculations and other operations in ArcMap, it is recommended to export as a grid data entity and store it on the hard drive after selecting the month, as the loaded nc data is still a temporary data in memory. After exporting as a raster data entity, it is recommended to provide the WGS84 coordinate system before starting the analysis operation. When giving WGS84, find the exported raster data entity in the Catalog, click on its properties, find the Spatial Reference property, click on Edit to open the coordinate system option, find World in Geographic Coordinate Systems (i.e. geodetic coordinate system), and select WGS 1984 under it. Afterwards, the projection system and other operations can be assigned, if necessary.",
+            "east": 136.196045022846,
+            "west": 72.1960450229045,
+            "south": 16.2504610568287,
+            "north": 55.5587943901263,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 28372009579.0,
+            "cstr": null,
+            "doi": "10.5281/zenodo.3114194",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "PENG Shouzhang",
+                "unitEn": "Northwest A&F University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100",
+                "referenceEn": "Peng, S.Z., Ding, Y.X., Wen, Z.M., Chen, Y.M., Cao, Y., & Ren, J.Y. (2017). Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100. Agricultural and Forest Meteorology, 233, 183-194. https://doi.org/10.1016/j.agrformet.2016.11.129"
+            },
+            {
+                "titleEn": "Spatiotemporal trends and attribution of drought across China from 1901–2100",
+                "referenceEn": "Ding, Y.X., & Peng, S.Z. (2020). Spatiotemporal trends and attribution of drought across China from 1901–2100. Sustainability, 12(2), 477."
+            },
+            {
+                "titleEn": "1 km monthly temperature and precipitation dataset for China from 1901 to 2017",
+                "referenceEn": "Peng, S.Z., Ding, Y.X., Liu, W.Z., & Li, Z. (2019). 1 km monthly temperature and precipitation dataset for China from 1901 to 2017. Earth System Science Data, 11, 1931–1946. https://doi.org/10.5194/essd-11-1931-2019"
+            },
+            {
+                "titleEn": "Assessment of climate change trends over the Loess Plateau in China from 1901 to 2100",
+                "referenceEn": "Peng, S., Gang, C., Cao, Y., & Chen, Y. (2017). Assessment of climate change trends over the loess plateau in china from 1901 to 2100. International Journal of Climatology."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Precipitation"
+            },
+            {
+                "nameEn": "Precipitation amount"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "1901-2023",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "the Second Tibetan Plateau Scientific Expedition and Research Program"
+            },
+            {
+                "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program"
+            },
+            {
+                "titleEn": "Ecological hydrological model and flood and drought disaster risk assessment in the middle reaches of the Yellow River under changing environment"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Investigating long-term drought trends is of great importance in coping with the adverse effects of global warming. Several recent studies have suggested that ongoing warming is accelerating evaporation and creating more spatiotemporal heterogeneity in precipitation than in the past. China is home to multiple climate zones that host important agricultural regions and other societally important activities that are likely to be affected by increased drought. Several indexes have been employed to investigate long-term drought, including the standardized precipitation index, the Palmer drought severity index, and the standardized precipitation evapotranspiration index (SPEI). Unlike the standardized precipitation index, the SPEI considers changes in both the precipitation and the potential evapotranspiration induced by temperature. The SPEI also allows for multiple temporal scales, unlike the Palmer drought severity index."
+            ],
+            "research objective": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI). We then developed a simple approach to quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) on SPEI variability, according to the meaning of the differentiating SPEI equation."
+            ],
+            "challenges": [
+                "However, little attention has been focused on studying the detailed spatial variability and attribution of drought variation in China."
+            ],
+            "methods": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI). We then developed a simple approach to quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) on SPEI variability, according to the meaning of the differentiating SPEI equation."
+            ],
+            "dataset": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI)."
+            ],
+            "findings": [
+                "The results indicated that the delta framework could accurately downscale and correct low-spatial-resolution monthly temperatures and precipitation from the Climatic Research Unit and general circulation models (GCMs). Of the 27 GCMs analyzed, the BNU-ESM, CESM1-CAM5, and GFDL-ESM2M were found to be the most accurate in modeling future temperatures and precipitation. We also found that, compared with the past (1901–2017), the climate in the future (2018–2100) will tend toward significant droughts, although both periods showed a high spatial heterogeneity across China. Moreover, the proportion of areas with significantly decreasing SPEI trends was far greater than the proportion of those with increasing trends in most cases, especially for northwestern and northern China. Finally, the proposed approach to quantifying precipitation and PET contributions performed well according to logical evaluations. Overall, our results provide detailed insights for planning flexible adaptation and mitigation strategies to cope with the adverse effects of climate drought across China."
+            ]
+        },
+        {
+            "background": [
+                "Climate change is at the forefront of scientific issues and poses a significant challenge to human survival and development, especially in China (Wang and Chen, 2014). The Loess Plateau (LP) in China is the most developed loess region in the world in terms of extent, thickness, and depositional sequence; it has an area of approximately 0.64×10^6 km² and assumes important service functions in China in terms of ecology and economy (Chen et al., 2015). Over the last 50 years, the annual precipitation has decreased and the air temperature has increased over the LP (Bi et al., 2009; Wang et al., 2012; Sun et al., 2015). These changes can damage the LP by altering its water availability and increasing the instances of soil erosion, droughts, and floods (Miao et al., 2016)."
+            ],
+            "research objective": [
+                "This study presents a detailed assessment of the climate change trends over the LP from 1901 to 2100 based on the 1-km spatial resolution climate data generated through delta downscaling."
+            ],
+            "challenges": [
+                "Despite showing improvements over CMIP3 models, CMIP5 models still show remarkable biases in depicting regional climate information. Spatial resolution continues to limit the capability of GCM data sets to represent complex topography, land surface characteristics, and other processes in the climate system."
+            ],
+            "methods": [
+                "The historical monthly precipitation and mean temperature data used in this study were obtained from the CRU TS3.23 dataset with a 0.5 ∘ spatial resolution (Harris et al., 2014). The GCM monthly precipitation and mean temperature data used in this study were obtained from the downscaled CMIP5 data set with a 0.5∘ resolution. Delta downscaling is used with the data described in the preceding section to produce monthly precipitation and mean temperature grids for the years 1901–2100 with a 1-km resolution. The surface observation data for monthly precipitation and mean temperature were obtained from 113 national weather stations in and around the LP; these data were used to evaluate the downscaled monthly precipitation and mean temperature grids from January 1991 to December 2014 in a time series (period of the available data)."
+            ],
+            "dataset": [
+                "The historical monthly precipitation and mean temperature data used in this study were obtained from the CRU TS3.23 dataset with a 0.5 ∘ spatial resolution (Harris et al., 2014). This data set presents the data for January 1901 to December 2014 in a time series. The GCM monthly precipitation and mean temperature data used in this study were obtained from the downscaled CMIP5 data set with a 0.5 ∘ resolution. This data set was processed from 28 raw GCMs data using the bias correction and delta downscaling methods described by Brekke et al. (2013). The high-resolution reference climatology data used in this study were gridded data on a 1-km (approximately 30 arcseconds) resolution as elaborated by the Chinese National Ecosystem Research Network (CNERN). These climatology data were processed by using spatial interpolation and geographic information systems with 740 national weather stations in China and a 1-km digital elevation model (DEM)."
+            ],
+            "findings": [
+                "Delta downscaling performs well in detecting the monthly precipitation and temperature over the LP based on the mean absolute error between downscaled data and independent surface observations. The annual precipitation over the entire LP shows no significant trends in the historical and future periods. By contrast, the annual temperature shows a significantly increasing trend with 0.097°C/10 year in the historical period (1901–2014) and with 0.113, 0.24, 0.355, and 0.558°C/10 year in the future period (2015–2100) under the RCP2.6, RCP4.5, RCP6.0, and RCP8.5 scenarios, respectively. The significantly increasing trends in precipitation and temperature at each grid of the LP present various spatial distributions in terms of their magnitude. The spatial results calculated by the downscaled data provide more detailed information about the locations and percentages of area, both of which are valuable in assessing the change trends in precipitation and temperature."
+            ]
+        },
+        {
+            "background": [
+                "High-spatial-resolution and long-term climate data are required for accurate investigations of changes in climate and climate-related phenomena that affect hydrology, vegetation cover, and crop production. Although meteorological observation networks are increasingly incorporating data from a greater number of weather stations and contributions from an increasing number of governments and researchers around the world, observation networks still suffer from low station density and spatial resolution, especially in mountainous areas, where the installation and maintenance of weather stations are challenging. Proxy monthly temperature (TMP) and precipitation (PRE) data products are released by several climate research organizations such as the general circulation models (GCMs) of the Intergovernmental Panel on Climate Change, the Climatic Research Unit (CRU) of the University of East Anglia, the Global Precipitation Climatology Centre (GPCC), and Willmott & Matsuura (W&M). Although CRU products offer the advantage of reflecting long-term climate effects, their low spatial resolution (30′, approximately 55 km) limits their ability to reflect the effects of complex topographies, land surface characteristics, and other processes on climate systems. China has a large area with abundant mountainous regions. As a result, even the establishment of additional weather stations has not fully satisfied the requirements for long-term, high-spatial-resolution climate data, especially at finer geographical scales and for mountainous areas. Furthermore, most weather stations in China were established after 1950, and thus long-term observational climate data are lacking."
+            ],
+            "research objective": [
+                "The objective of this study was to generate a long-term climate dataset with high spatial resolution for China by downscaling CRU time series data using a high-spatial-resolution reference climatology dataset."
+            ],
+            "challenges": [
+                "Although the new dataset was not evaluated before 1950 owing to data unavailability, the quality of the new dataset in the period of 1901–2017 depended on the quality of the original CRU and WorldClim datasets."
+            ],
+            "methods": [
+                "First, reference climatology data with different spatial resolutions and the 30′ original CRU time series data were evaluated through observations. Second, the 30′ original CRU time series data were spatially downscaled to four spatial resolutions (10′, 5′, 2.5′, and 0.5′) corresponding to the spatial resolutions of the reference climatology data using the delta downscaling framework. The downscaled data were validated through observations. Finally, the climatology data and annual trends in TMPs and PRE were investigated using the 30′ original CRU, 0.5′ downscaled, and observed data to demonstrate the performance of the 0.5′ downscaled data."
+            ],
+            "dataset": [
+                "The dataset presented in this article has been published in the Network Common Data Form (NetCDF) at https://doi.org/10.5281/zenodo.3114194 for precipitation and https://doi.org/10.5281/zenodo.3185722 for air temperatures at 2 m and includes 156 NetCDF files compressed in zip format and one user guidance text file. The monthly mean, maximum, and minimum air TMPs at 2 m as well as PRE were obtained for January 1901 to December 2017 with a spatial resolution of 30′ from the CRU TS v4.02 dataset. To downscale CRU TMPs and PRE time series data to higher spatial resolutions, we obtained four high-resolution reference datasets at spatial resolutions of 10′, 5′, 2.5′, and 0.5′ from WorldClim v2.0. To evaluate the performance of the downscaling procedure, the observed long-term monthly TMPs (i.e., mean, maximum, minimum air TMPs at 2 m) and PRE variables across China were obtained from the National Meteorological Information Center of China. This dataset included observations from 496 national weather stations during 1951–2016."
+            ],
+            "findings": [
+                "Compared with the evaluations of the 30′original CRU dataset, the mean absolute error of the new dataset (i.e., of the 0.5′dataset downscaled by bilinear interpolation) decreased by 35.4 %–48.7 % for TMPs and by 25.7 % for PRE. The root-mean-square error decreased by 32.4 %–44.9 % for TMPs and by 25.8 % for PRE. The Nash–Sutcliffe efficiency coefficients increased by 9.6 %–13.8 % for TMPs and by 31.6 % for PRE, and correlation coefficients increased by 0.2 %–0.4 % for TMPs and by 5.0 % for PRE. Overall, the downscaled datasets had higher accuracy than the original CRU dataset, especially the 0.5′dataset downscaled using the bilinear interpolation method, which is, therefore, the new dataset proposed by this study."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Is validation against independent surface observation data a common practice to ensure the reliability of downscaled climate datasets?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Which method is more commonly used for spatial downscaling of climate data in China, delta downscaling or bilinear interpolation?",
+                    "Answer": "Delta downscaling",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "When are the temporal scales for the high-resolution climate dataset generated using delta downscaling in China?",
+                    "Answer": "January 1901 to December 2100",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method that improves the spatial resolution of climatic data in China?",
+                    "Answer": "A data collection method that improves the spatial resolution of climatic data in China is the delta spatial downscaling method. It is used to generate a high-resolution (1 km) climate dataset by downscaling from lower resolution datasets like those from the Climatic Research Unit (CRU) and WorldClim.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a challenge faced when generating high-resolution climate datasets in regions with complex topography?",
+                    "Answer": "An example of a challenge in generating high-resolution climate datasets in regions with complex topography is the low station density and spatial resolution of observation networks, especially in mountainous areas where installing and maintaining weather stations is difficult.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Can you provide an example of a dataset that offers detailed insights into climate change trends in China?",
+                    "Answer": "A dataset that offers detailed insights into climate change trends in China is the 1 km resolution monthly climate dataset created using the delta downscaling method, covering the period from 1901 to 2100. This dataset allows for the assessment of the variability of climate indexes like the Standardized Precipitation Evaporation Index (SPEI) and provides information on both past and future climate trends.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What methods are used to ensure the accuracy and reliability of high-resolution climate datasets in China?",
+                    "Answer": "delta spatial downscaling method, validation using independent meteorological observations from multiple weather stations",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many independent weather stations were used to evaluate the accuracy of the downscaled dataset?",
+                    "Answer": "496",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Over what temporal range were the high-resolution climate datasets generated using delta downscaling?",
+                    "Answer": "1901-2100",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What challenges are associated with generating high-spatial-resolution climate datasets in China?",
+                    "Answer": "Challenges include the low density of weather stations, especially in mountainous regions, which affects the spatial resolution of climate data. Additionally, the original datasets (e.g., CRU and WorldClim) have inherent biases that must be corrected. Moreover, the establishment of weather stations in China predominantly occurred after 1950, limiting the availability of long-term observational climate data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What is the role of high-resolution reference climatology datasets in climate research?",
+                    "Answer": "High-resolution reference climatology datasets play a crucial role in downscaling and correcting low-resolution climate data. They provide finer geographical scales that are essential for representing complex topographies and local climate phenomena, enabling more accurate assessments and predictions of climate trends and their impacts on hydrology, vegetation, and agriculture.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "What are the differences between the use of CRU and WorldClim data in the development of high-resolution climate datasets for China?",
+                    "Answer": "CRU data provides long-term climate effects but at a lower spatial resolution, whereas WorldClim data offers high-resolution reference climatology datasets. The combination of CRU's long-term data and WorldClim's high-resolution data through downscaling methods allows for the generation of detailed climatic datasets that reflect complex topographies.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the performance of the delta downscaling framework compare to bilinear interpolation in reducing errors in high-resolution climate data?",
+                    "Answer": "The delta downscaling framework is effective in accurately downscaling and correcting low-spatial-resolution data, while bilinear interpolation in other contexts has been shown to significantly decrease mean absolute error and root-mean-square error, thus improving dataset accuracy. Both methods improve dataset precision but may vary in performance depending on the specific climate variables and resolutions involved.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How can the delta spatial downscaling method be utilized to enhance the resolution and accuracy of climate datasets across diverse geographical regions in China?",
+                    "Answer": "The delta spatial downscaling method is used to create a high-resolution climate dataset by correcting low-spatial-resolution monthly temperatures and precipitation data from sources like the Climatic Research Unit and general circulation models. This method allows for detailed analysis of spatial variability and is particularly effective in modeling climate conditions over various regions in China.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What are the primary challenges in generating high-spatial-resolution climate data for complex topographies, and how might these be addressed in future studies?",
+                    "Answer": "One major challenge is the low density and spatial resolution of meteorological observation networks, especially in mountainous areas. This can be addressed by integrating high-resolution reference climatology data and employing spatial interpolation techniques to downscale coarse-resolution climate data, thus providing more accurate and detailed climate information.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes the need for spatial downscaling methods in generating high-resolution climate datasets for China?",
+                    "Answer": "The need for spatial downscaling methods arises from the limitations of low-spatial-resolution datasets like those from the Climatic Research Unit (CRU), which cannot accurately reflect the effects of complex topographies, land surface characteristics, and other processes on climate systems, especially in mountainous areas.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is there a challenge in evaluating datasets generated before 1950 in the context of China's climate data?",
+                    "Answer": "The challenge in evaluating datasets generated before 1950 is due to the lack of long-term observational climate data, as most weather stations in China were established after 1950. This results in a reliance on the quality of existing datasets like CRU and WorldClim for earlier periods.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the main causes of bias in regional climate information when using CMIP5 models?",
+                    "Answer": "The main causes of bias in regional climate information with CMIP5 models include limitations in spatial resolution, which affect the capability to represent complex topography, land surface characteristics, and other climate system processes accurately.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of employing delta spatial downscaling methods for generating high-resolution climate datasets in terms of accuracy and spatial variability representation?",
+                    "Answer": "Using delta spatial downscaling methods can lead to more accurate downscaling and correction of low-spatial-resolution climate data such as monthly temperatures and precipitation. It is effective in capturing detailed spatial variability, which is especially significant in regions with complex topographies.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What are the goals of employing delta spatial downscaling techniques in the generation of climate datasets for China?",
+                    "Answer": "The goal of employing delta spatial downscaling techniques in the generation of climate datasets for China is to create a high-resolution, long-term climate dataset that can assess the variability of climate indices such as the Standardized Precipitation Evaporation Index (SPEI). This enables analysis of spatial variability and attribution of drought variation across diverse climate zones in China, providing insights for planning adaptation and mitigation strategies against climate change impacts.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it important to derive high-spatial-resolution climate datasets using reference climatology data for regions with complex topographies?",
+                    "Answer": "It is important to derive high-spatial-resolution climate datasets using reference climatology data for regions with complex topographies because low-spatial-resolution datasets, such as those from the Climatic Research Unit, cannot adequately capture the effects of complex topographies and land surface characteristics on climate systems. High-resolution datasets offer more accurate representations of climate variations, which are crucial for understanding changes affecting hydrology, vegetation cover, and crop production, especially in mountainous regions.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What is the intention behind assessing the contributions of water supply and demand in the analysis of climate datasets?",
+                    "Answer": "The intention behind assessing the contributions of water supply and demand in the analysis of climate datasets is to quantify the specific impacts of precipitation and potential evapotranspiration on the variability of climate indices, such as the Standardized Precipitation Evaporation Index (SPEI). This approach helps to better understand the dynamics of drought variability and supports the development of more targeted and effective climate adaptation strategies.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedures are used to quantify the contributions of water supply (precipitation) and demand (potential evapotranspiration) on the variability of the Standardized Precipitation Evaporation Index (SPEI) in climate studies?",
+                    "Answer": "To quantify the contributions of water supply and demand on SPEI variability, a simple approach is developed based on the differentiating SPEI equation. This involves generating a high-resolution monthly climate dataset and assessing SPEI variability across different temporal scales. The procedure includes analyzing the separate impacts of precipitation (water supply) and potential evapotranspiration (water demand) on SPEI, which provides insights into drought variability and attributions.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methodologies enable the generation of long-term climate datasets with high spatial resolution across China?",
+                    "Answer": "The delta spatial downscaling method is employed to generate long-term climate datasets with a 1 km resolution, using global climate data from the Climatic Research Unit and WorldClim, and validating the generated data with independent meteorological observations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "What are the anticipated issues in applying delta downscaling to climate datasets, and how might these issues impact the interpretation of long-term climate trends?",
+                    "Answer": "Anticipated issues in applying delta downscaling to climate datasets include potential biases in the original datasets and the need for high-quality reference climatology data to ensure accurate downscaling. These issues might impact the interpretation of long-term climate trends by introducing errors in temperature and precipitation estimates, which can affect assessments of trends such as drought variability and temperature increases.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how delta spatial downscaling improves the accuracy of climate datasets at a higher resolution.",
+                    "Answer": "Delta spatial downscaling is used to generate a 1 km resolution monthly climate dataset by correcting low-spatial-resolution monthly temperatures and precipitation. This method allows for more detailed spatial variability and attribution of climate phenomena, providing a more accurate representation of complex topographies and land surface characteristics.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I'm unsure about how the quality of high-resolution climate datasets is validated over such a long historical period.",
+                    "Answer": "The quality of high-resolution datasets is validated using independent surface observations from national weather stations. For instance, the dataset is validated through observations with 496 national weather stations, ensuring the accuracy of downscaled data over the historical period.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please explore the potential challenges of downscaling global climate datasets to high spatial resolutions in China, and suggest methods to address these challenges.",
+                    "Answer": "Challenges in downscaling global climate datasets to high spatial resolutions in China include biases in representing regional climate information and the limitations of spatial resolutions to capture complex topography and land surface characteristics. Methods such as delta spatial downscaling and spatial interpolation using high-resolution reference climatology data from sources like WorldClim and national weather stations have been employed to address these challenges.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "Please investigate data collection methods that could improve the quality and resolution of climate datasets in mountainous regions of China.",
+                    "Answer": "Improving the quality and resolution of climate datasets in mountainous regions of China can be achieved through increased meteorological station density and the use of proxy data from general circulation models (GCMs) and high-resolution reference climatology datasets. Incorporating data from the National Meteorological Information Center and using spatial interpolation techniques can also enhance dataset quality.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

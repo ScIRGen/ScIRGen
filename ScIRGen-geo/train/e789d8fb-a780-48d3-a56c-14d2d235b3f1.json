@@ -1,0 +1,426 @@
+{
+    "id": "e789d8fb-a780-48d3-a56c-14d2d235b3f1",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "The Daily  kernel-driven BRDF model  coefficients retrieved from  5-days-composited multi-sensory data coupling topograpic effects over the Tibet Plateau (2016)",
+            "description": "This daily land surface kernel-driven BRDF  model's coeciffients proudct is with a spatl resolution of 0.02 ° x 0.02 ° over the Tibet Plateau in 2016.  Multi-sensory   data is used to retrieve the  the kernel-driven BRDF model and coupled with  topographic effects, and  prior knowledge is introduced for quality control inversion. The high-precision BRDF  of good spatial-temporal continiuty  is retrieved by combining MODIS reflectance data (a polar orbiting satellite) and  himawari-8 AHI  land surface reflectance (a geostationary satellite ). MODIS lans surface reflectance data and AHI TOA reflectance data are downloaded from the official websites. After registration, atmospheric correction and other processing, the daily resolution BRDF is synthesized with a period of 5 days.  Compared with similar products, it has more advantages in capturing rapidly changing surface features, and has better temporal and spatial continuity with the shortest composition period. It can effectively support angular effects correction and  the BRDF-releated parameters' retrieval.",
+            "instructions": "File naming convention: Kernelyddd005.dat (yyyy: year, DDD: Day (Julian day)), such as kernel2016001005.dat, which represents the albedo of the Qinghai Tibet Plateau on the first day of 2016\nData reading mode: stored in bare data format, can be opened by envi, ArcGIS and other software, when the header file is Kernelheadfile.hdr , band 1-21 is the coefficient; when read the band of quality identification, using the header file is QAheadfile.hdr which is band 43.\nData version number: v1\nProjection + proj = longlat + datum = WGS84\nData format: raw, 1250 rows × 750 columns\nFill value: 32767\nScale: nuclear coefficient band / 10000 (divided by 10000, it is the nuclear coefficient);\nBand Description: band 1-21 is the  kernel coefficients of MODIS seven reflectance bands, and every three bands correspond to the  coefficients of MODIS one observation band, such as 1-3 bands are the isotropic-kernel coefficient, volume scattering-kernel coefficient and geometric-optical kernel coefficient of MODIS band 1. See Kernelheadfile.hdr .\nQuality identification Description: 16 bits, 00-01 -- overall quality identification, 0 = good, 1 = acceptable, 2 = poor, 3 = unavailable (fill value); 02-03 -- surface type, 00 = vegetation, 01 = non vegetation, non ice and snow, 10 = ice and snow, 11 = unable to judge; 04 -- surface state change, 0 = rapid change, 1 = non rapid change; 05-07 -- reflectivity observation times for inversion, 0 = 0, 1 = 1-2, 2 = 3-7 times, 3 = 8-14 times, 4 = 15-21 times, 5 = 22-28 times, 6 = 29-35 times, 7 = > 36 times; 08 -- satellite data source, 0 = single sensor, 1 = multi-sensor; / / 09-10 -- terrestrial water body identification, 0 = land, 1 = mixed land and water body, or inland water body, or coastal zone, 2 = offshore and deep sea (NO production), 3 = not within the projection range (NO production). Using QAheadfile.hdr",
+            "east": 105.0,
+            "west": 80.0,
+            "south": 25.0,
+            "north": 40.0,
+            "startTime": "2016-01-01 00:00:00",
+            "endTime": "2016-12-31 11:59:59",
+            "fileSize": 20625000464.0,
+            "cstr": "18406.11.Meteoro.tpdc.271196",
+            "doi": "10.11888/Meteoro.tpdc.271196",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "WEN Jianguang ",
+                "unitEn": "Aerospace Information Research Institute"
+            },
+            {
+                "nameEn": "TANG Yong",
+                "unitEn": "Chinese Academy of Sciences Institute of Aerospace Information Innovation"
+            },
+            {
+                "nameEn": "YOU Dongqin",
+                "unitEn": "Chinese Academy of Sciences Institute of Aerospace Information Innovation"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Forward a Small-Timescale BRDF/Albedo by Multisensor Combined BRDF Inversion Model",
+                "referenceEn": "Wen, J. G., B. C. Dou, D. Q. You, Y. Tang, Q. Xiao, Q. Liu and L. Qinhuo (2017). \"Forward a Small-Timescale BRDF/Albedo by Multisensor Combined BRDF Inversion Model.\" Ieee Transactions on Geoscience and Remote Sensing 55(2): 683-697."
+            },
+            {
+                "titleEn": "Characterizing Land Surface Anisotropic Reflectance over Rugged Terrain: A Review of Concepts and Recent Developments",
+                "referenceEn": "Wen, Jianguang; Liu, Qiang; Xiao, Qing; Liu, Qinhuo; You, Dongqin; Hao, Dalei; Wu, Shengbiao; Lin, Xingwen. 2018. \"Characterizing Land Surface Anisotropic Reflectance over Rugged Terrain: A Review of Concepts and Recent Developments.\" Remote Sens.10, no. 3: DOI: 10.3390/rs10030370."
+            },
+            {
+                "titleEn": "The definition of remotely sensed reflectance quantities suitable for rugged terrain",
+                "referenceEn": "Shengbiao Wu , Jianguang Wen*, Jean-Philippe Gastellu-Etchegorry , Qinhuo Liu, Dongqin You , Qing Xiao , DaLei Hao , Xingwen Lin, Tiangang Yin, 2019. The definition of remotely sensed reflectance quantities suitable for rugged terrain，Remote Sensing of Environment, 225,40"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "BRDF parameters"
+            },
+            {
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Tibet Plateau"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "Daily",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Algorithm development of Tibetan BRDF/Albedo from multi-sensory data coupling topographic effects in cases of snow or snow-free repectitively"
+            },
+            {
+                "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program: Dynamic monitoring and simulation of water cycle in Asian water tower region"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            },
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Rugged terrain covers approximately 24% of the Earth’s land surface, plays an important role in the complex earth system, and forms a unique mountainous climate and ecosystem. Accurately estimating land surface variables over mountainous areas is of great importance for global hydrological and meteorological forecasts, as well as global ecological and environmental monitoring. Remote sensing of anisotropic reflectance relates the land surface scattering behavior to its optics and structure, which is described with the bidirectional reflectance distribution function (BRDF) and can be observed in optical remote sensing. To retrieve BRDF properties of the land surface is the basis for land surface’s physical parameter inversions due to its structural information observed from different angles. However, rugged terrain complicates BRDF modeling by changing the amount of radiation detected by the sensor. Generally, topography alters the illumination and viewing geometry and generates a relief shadow, observation masking, and multiple scattering, this results in the intense topographic dependence on total incident and reflectance radiance, which distorts BRDF characteristics. Without considering the topographic effects on the land surface BRDF, the anisotropic reflectance estimation relative errors could be larger than 58%.",
+                "In the past decades, physical solo slope BRDF models have been proposed to account for the topographic effects on pixel reflectance. These are the BRDF models based on radiative transfer, geometric-optical, and hybrid methods. Since vegetation cover, such as forest and grassland, dominates the complex mountainous land ecosystem, current physical solo slope BRDF models mainly focus on the vegetation. The importance of the topographic effect in the radiative transfer was first proposed by Combal et al. who successfully extended the Ross radiative transfer theory for flat plant canopies to solo slope with a vertical plant stand. The topographic effect on local geometry relationship has been considered in the ROSST model through the transformation between horizontal and slope coordinate systems. The geotropic nature of tree crowns was accounted for by using the leaf structural and the optical characteristics defined in the horizontal coordinate to solving the one-dimensional (1-D) analytical radiative transfer equation. However, only the direct solar radiation was considered, the effect of diffuse skylight, path radiance, and diffuse irradiance from adjacent slopes are neglected. Recently, the topographic effect on the bidirectional gap probability has been regarded as the primarily factor affecting canopy reflectance. A physical solo slope canopy reflectance model based on the path length correction (PLC) was proposed to account for the topographic effect on the canopy photon path length and its BRDF. The geometry correction, geotropic nature of the tree crown, and the diffuse skylight are coupled in this model. However, the diffuse irradiance from neighboring terrains is still neglected.",
+                "The bidirectional reflectance distribution function (BRDF) model over rugged terrain needs to be coupled with terrain information supplied by a digital elevation model (DEM) to accurately describe topographic effects and radiation redistribution. BRDF is a theoretical concept defined as the ratio of two infinitesimal surfaces and cannot be directly measured, so the bidirectional reflectance factor (BRF) is used as a substitute to describe surface anisotropic scattering properties. Many efforts have been devoted to investigating the topographic effects on surface BRDF, which is crucial to understanding the basic theory and scientific problems involved with BRDF over rugged terrain. Solo slope and composite slope surfaces have different topographic effect mechanisms in the BRDF, leading to different core sensitivity factors considered in remote sensing BRDF modeling. The topographic effects on the solo slope BRDF depend on the slope and aspect angle, and the structural and optical properties of the vegetation."
+            ],
+            "research objective": [
+                "In this paper, remote sensing BRDF modeling over rugged terrain according to the presented research chain is comprehensively reviewed, and the aim is to find an operational BRDF product potential solution for rugged terrain. This is important for quantitative remote sensing applications in mountainous areas."
+            ],
+            "challenges": [
+                "However, on rugged terrain, the topography intensely affects the shape and magnitude of the BRDF and creates challenges in modeling the BRDF. However, the operational BRDF product algorithm over rugged terrain is still being researched because it involves a complex process, which includes multi-angular reflectance dataset processing, an operational BRDF algorithm and its inversion method coupled with topography.",
+                "However, the rotational geometric correction leads to crown inclination. This contradicts with the geotropic nature of tree crowns where the trees grow vertically and orient with the gravitational field, regardless of the slope. The crown structural and optical properties over the solo slope remain the same as those on the flat surface. For example, the leaf angle distribution (LAD) and leaf reflectance and transmittance reflectance are not affected by the terrain. However, for the discrete forest stands, the crown shadowing projections on the background are influenced by the geotropic nature of tree crowns. The geometry correction using Equation (9) without negative geotropism consideration will lead to an incorrect crown shadowing, as well as an inappropriate canopy reflectance. However, the tree crowns are virtually inclined after the geometric correction. The importance of the geotropic nature of tree crowns has been stressed in the topographic correction of forested terrain. Another topographic effect on the canopy reflectance is through the redistribution of surface global incident solar radiation, which modifies the upper boundary condition during the radiative transfer process. When compared to the flat terrain, the topography redistributes the direct solar irradiance by changing the surface’s local illumination and viewing geometry. The terrain restricts the diffuse skylight and enhances the diffuse irradiance that is reflected from adjacent slopes. The last two diffuse components can account for 40% of the global radiation of a sunlit slope when the solar zenith angle is high, and this can even approach 100% when the slope is obstructed by adjacent terrains. Moreover, varied elevation will induce rapid changes in concentrations of aerosol, water vapor, and cloud properties, which give rise to significant variations in the amount of direct and diffuse incident irradiance.",
+                "The largest difference between topographic effects for solo slope and composite slope lies in complex heterogeneous incident irradiance and topographic shadowing. The mountain radiation transfer prototype model, based on Lambertian land surface assumptions, often leads to an overcorrected reflectance. Recent literature shows that without considering the surface BRDF effects in atmospheric correction, the result will be errors of up to 10–20% in the worst cases. The topography will introduce difficulty in the vegetation canopy anisotropic reflectance characterization."
+            ],
+            "methods": [],
+            "dataset": [],
+            "findings": []
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Does the BRDF model for rugged terrain require consideration of topographic effects such as slope and aspect angle?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Is the integration of terrain information from a digital elevation model (DEM) necessary for accurately modeling BRDF over rugged terrain?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Which data sources are more commonly used for retrieving BRDF properties in mountainous areas: MODIS reflectance data, AHI surface reflectance data, or other data sources?",
+                    "Answer": "MODIS reflectance data",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "In addressing the topographic effects on BRDF, is it more effective to use physical solo slope BRDF models, composite slope models, or another approach?",
+                    "Answer": "physical solo slope BRDF models",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What are the key components involved in the remote sensing BRDF modeling over rugged terrain?",
+                    "Answer": "multi-angular reflectance dataset processing, operational BRDF algorithm, inversion method coupled with topography",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Where can the topographic effects on surface BRDF be investigated to enhance remote sensing applications?",
+                    "Answer": "rugged terrain",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What challenges are faced when applying the operational BRDF product algorithm over rugged terrain?",
+                    "Answer": "topography",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method that integrates multiple satellite datasets to enhance BRDF modeling accuracy over rugged terrain?",
+                    "Answer": "The integration of MODIS reflectance and Himawari-8 AHI surface reflectance data is used to retrieve high-precision, temporally continuous daily BRDF by considering topographic effects and introducing prior knowledge for quality control.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of a remote sensing BRDF model that makes it suitable for application in mountainous areas?",
+                    "Answer": "accounts for topographic effects, uses terrain information from a digital elevation model (DEM), capable of handling intense topographic dependence on incident and reflectance radiance",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the challenges in creating an operational BRDF product algorithm for rugged terrain?",
+                    "Answer": "multi-angular reflectance dataset processing, operational BRDF algorithm with inversion methods that account for topography, redistribution of surface global incident solar radiation affected by elevation and terrain",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the spatial resolution of a dataset used for quantifying the BRDF kernel coefficients over the Tibetan Plateau?",
+                    "Answer": "0.02° x 0.02°",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How frequently is the BRDF kernel coefficient dataset synthesized for the Tibetan Plateau region?",
+                    "Answer": "5 days",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the estimated relative error in anisotropic reflectance estimation if topographic effects on land surface BRDF are not considered?",
+                    "Answer": "58%",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What challenges are associated with BRDF modeling over rugged terrain?",
+                    "Answer": "Challenges associated with BRDF modeling over rugged terrain include the intense topographic dependence on total incident and reflectance radiance, which distorts BRDF characteristics. The terrain affects the distribution of solar irradiance, generates relief shadows, and alters viewing geometry, complicating the modeling process. Additionally, the operational BRDF product algorithm over rugged terrain involves complex processes, including multi-angular reflectance dataset processing and the need for geometric correction while considering the geotropic nature of tree crowns.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How does the data collection method for BRDF kernel coefficients over rugged terrain compare to traditional flat terrain approaches in terms of addressing topographic effects?",
+                    "Answer": "The data collection method for BRDF kernel coefficients over rugged terrain incorporates terrain information using a digital elevation model (DEM) to account for topographic effects such as relief shadow, observation masking, and multiple scattering. This contrasts with traditional flat terrain approaches where such topographic effects might not be considered, potentially leading to significant errors in anisotropic reflectance estimation.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the differences in dataset composition when using MODIS reflectance versus AHI geostationary satellite data for BRDF modeling in mountainous areas?",
+                    "Answer": "The dataset composition using MODIS reflectance involves polar orbit satellite data, while AHI geostationary satellite data provides continuous observation with static positioning. The integration of these datasets in BRDF modeling for mountainous areas allows for capturing temporal changes with high precision, overcoming challenges such as rapid terrain-induced changes in illumination and viewing geometry.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How can the integration of topographic effects into BRDF modeling influence the accuracy of land surface variable estimation in mountainous regions?",
+                    "Answer": "The integration of topographic effects into BRDF modeling is crucial for accurately estimating land surface variables, as it accounts for changes in radiation detection due to terrain features like illumination and viewing geometry, relief shadows, and multiple scattering. Without considering these effects, errors in anisotropic reflectance estimation could exceed 58%.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the challenges in developing operational BRDF products for rugged terrains, and how do these challenges affect data collection and processing?",
+                    "Answer": "Developing operational BRDF products for rugged terrains involves handling complex processes such as multi-angular reflectance dataset processing and incorporating topography into the BRDF algorithm and its inversion method. Challenges include intense topographic effects that alter BRDF shape and magnitude, and the need for rotational geometric corrections that may contradict natural tree growth patterns.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What role do digital elevation models (DEMs) play in enhancing the accuracy of BRDF models over rugged terrains, and what are the potential limitations of relying on them?",
+                    "Answer": "DEMs provide essential terrain information that helps accurately describe topographic effects and radiation redistribution in BRDF models. However, their limitations may include failure to account for diffuse irradiance from neighboring terrains, which can significantly alter the surface's local illumination and viewing geometry, leading to potential inaccuracies in BRDF modeling.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes the challenges in accurately estimating land surface variables over mountainous areas using remote sensing?",
+                    "Answer": "The challenges in accurately estimating land surface variables over mountainous areas using remote sensing are primarily caused by the rugged terrain, which alters illumination and viewing geometry, generates relief shadows, observation masking, and multiple scattering. This intense topographic dependence on total incident and reflectance radiance distorts the bidirectional reflectance distribution function (BRDF) characteristics.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it difficult to develop an operational BRDF product algorithm for rugged terrain?",
+                    "Answer": "Developing an operational BRDF product algorithm for rugged terrain is difficult because it involves a complex process that includes multi-angular reflectance dataset processing, and an operational BRDF algorithm and its inversion method must be coupled with topography. The topography intensely affects the shape and magnitude of the BRDF, posing significant modeling difficulties.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What factors contribute to errors in anisotropic reflectance estimation over rugged terrain?",
+                    "Answer": "Errors in anisotropic reflectance estimation over rugged terrain are contributed by the failure to consider topographic effects on the land surface BRDF. The rugged terrain alters illumination and viewing geometry, generates relief shadows, and changes the amount of radiation detected, which can lead to relative errors larger than 58%.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the consequences of integrating multiple remote sensing datasets on the accuracy of BRDF models over rugged terrain?",
+                    "Answer": "Integrating multiple remote sensing datasets, such as MODIS and AHI, allows for the creation of a high-precision, temporally continuous BRDF dataset with a short synthesis period. This can enhance the ability to capture rapidly changing surface features and improve spatial and temporal continuity, making it advantageous over similar products. It helps in correcting reflectance angle effects and estimating surface parameters related to BRDF with high precision.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the inclusion of topographic effects in BRDF modeling impact the estimation of land surface variables in mountainous areas?",
+                    "Answer": "Inclusion of topographic effects in BRDF modeling is critical because rugged terrain can significantly alter illumination and viewing geometry, leading to relief shadow, observation masking, and multiple scattering. Without accounting for these factors, anisotropic reflectance estimation errors can exceed 58%. Coupling BRDF models with terrain information helps accurately describe topographic effects and radiation redistribution, essential for quantitative remote sensing applications in mountainous areas.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the potential impacts of neglecting diffuse irradiance from adjacent slopes in BRDF models on rugged terrain?",
+                    "Answer": "Neglecting diffuse irradiance from adjacent slopes in BRDF models can lead to inaccuracies in canopy reflectance estimation. This diffuse irradiance can account for a significant portion of global radiation on a sunlit slope, especially with high solar zenith angles or when the slope is obstructed by neighboring terrain. Omitting this factor may result in errors in the radiative transfer process and incorrect estimation of land surface variables.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to integrate digital elevation models (DEM) with BRDF models for data collection in rugged terrains?",
+                    "Answer": "Integrating DEM with BRDF models is crucial for accurately describing topographic effects and radiation redistribution, which significantly influence the BRDF characteristics. This integration helps in modeling the surface anisotropic scattering properties more precisely, which is essential for reliable remote sensing applications in rugged terrains.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the key research objectives in exploring remote sensing BRDF modeling over rugged terrain?",
+                    "Answer": "The main research objective is to find an operational BRDF product potential solution for rugged terrain, which is essential for quantitative remote sensing applications in mountainous areas. This involves addressing the challenges posed by topography, such as altered illumination and viewing geometry, and developing algorithms that can effectively model these complex processes.",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in integrating MODIS reflectance data and AHI zenith reflectance data to achieve high precision BRDF over rugged terrain?",
+                    "Answer": "The integration of MODIS reflectance data and AHI zenith reflectance data involves downloading the data from official websites, followed by processing steps such as registration and atmospheric correction. The data is then synthesized into a daily resolution BRDF using a 5-day cycle, considering terrain effects to enhance temporal and spatial continuity.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How can prior knowledge be utilized to ensure quality control in BRDF model development for mountainous regions?",
+                    "Answer": "Prior knowledge is used in the BRDF model development by incorporating known terrain effects and reflectance patterns to control quality. This includes adjusting for topographic effects like illumination and viewing geometry changes, shadowing, and scattering, ensuring the model accurately represents the surface reflectance behavior in complex terrains.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What methodological challenges must be addressed when developing a BRDF model to account for the unique topographic effects in rugged terrain?",
+                    "Answer": "Developing a BRDF model for rugged terrain requires addressing challenges such as accurately modeling the effects of terrain on illumination and viewing geometry, accounting for relief shadows and observation masking, and incorporating diffuse skylight and irradiance from adjacent slopes. These factors complicate the BRDF modeling process and must be carefully considered to avoid significant errors in reflectance estimation.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What remote sensing technologies enable the collection of high-resolution BRDF data over rugged terrain?",
+                    "Answer": "The combination of multi-source remote sensing data, such as MODIS reflectance and AHI surface reflectance data, enables the collection of high-resolution BRDF data over rugged terrain by providing spatial and temporal continuity and accounting for topographic effects.",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How does the integration of digital elevation models (DEMs) enable more accurate modeling of topographic effects in BRDF datasets?",
+                    "Answer": "Digital elevation models (DEMs) enable more accurate modeling of topographic effects in BRDF datasets by providing terrain information that allows for the adjustment of illumination and viewing geometry, thus addressing relief shadow, observation masking, and multiple scattering issues.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways does the use of multi-angular reflectance datasets enable the retrieval of BRDF properties in mountainous areas?",
+                    "Answer": "Multi-angular reflectance datasets enable the retrieval of BRDF properties in mountainous areas by capturing the anisotropic reflectance characteristics from different angles, which is essential for accurately estimating land surface variables and considering the structural information of the terrain.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might the inclusion of topographic effects in BRDF models over rugged terrains be expected to alter the accuracy of land surface variable estimation?",
+                    "Answer": "The inclusion of topographic effects in BRDF models is expected to enhance the accuracy of land surface variable estimation because rugged terrain alters illumination and viewing geometry, generating relief shadows and multiple scattering which can significantly distort BRDF characteristics. Without accounting for these topographic effects, anisotropic reflectance estimation errors could exceed 58%.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why are datasets that integrate MODIS and AHI satellite data anticipated to improve temporal and spatial resolution in BRDF modeling?",
+                    "Answer": "Datasets integrating MODIS and AHI satellite data are anticipated to improve temporal and spatial resolution in BRDF modeling because they provide comprehensive coverage and high-frequency observations. The combination of these data sources allows for a shorter synthesis cycle and better captures fast-changing surface characteristics, leading to more temporally and spatially continuous high-precision BRDF outputs.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it challenging to operationalize a BRDF product algorithm for rugged terrain, and what expectations might researchers have for future advancements?",
+                    "Answer": "Operationalizing a BRDF product algorithm for rugged terrain is challenging due to the complex process that includes multi-angular reflectance dataset processing and coupling the algorithm with topography. Researchers expect future advancements to address these challenges by developing methods that accurately adjust for terrain-induced distortions, such as crown inclination and diffuse irradiance, which could significantly improve the accuracy of remote sensing applications in mountainous areas.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "How would you evaluate the effectiveness of using multi-source remote sensing data in accurately modeling BRDF over rugged terrains?",
+                    "Answer": "Using multi-source remote sensing data, such as MODIS and AHI, is effective for modeling BRDF over rugged terrains because it allows for temporal and spatial continuity in high-resolution BRDF data. It also incorporates terrain coupling and quality control through prior knowledge, which helps in capturing fast-changing surface characteristics and improves the overall accuracy of the model.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "In your opinion, what are the main challenges in ensuring data quality and consistency when synthesizing BRDF datasets over complex topographies?",
+                    "Answer": "The main challenges in ensuring data quality and consistency when synthesizing BRDF datasets over complex topographies include accounting for topographic effects like relief shadow and observation masking, handling the complex geometry of illumination and viewing, and incorporating accurate terrain information from digital elevation models to correctly redistribute radiation and address anisotropic reflectance.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What potential advantages could arise from integrating a digital elevation model (DEM) with remote sensing data for BRDF analysis in mountainous regions?",
+                    "Answer": "Integrating a digital elevation model (DEM) with remote sensing data for BRDF analysis in mountainous regions can provide significant advantages. It allows for a more accurate depiction of topographic effects on radiation distribution, improving the estimation of land surface variables. This integration enhances the model's ability to correct the anisotropic reflectance and supports more precise retrieval of surface parameters in rugged terrains.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how topographic effects can complicate BRDF modeling in rugged terrain.",
+                    "Answer": "Rugged terrain alters the illumination and viewing geometry by generating relief shadows, observation masking, and multiple scattering, which distorts the BRDF characteristics and results in intense topographic dependence on total incident and reflectance radiance. This can lead to anisotropic reflectance estimation errors exceeding 58% if topographic effects are not considered.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please explore the challenges and methodologies in accurately collecting and modeling BRDF data over rugged terrains, considering the impact of topography on reflectance characteristics.",
+                    "Answer": "Rugged terrain alters illumination and viewing geometry and introduces relief shadows, observation masking, and multiple scattering, distorting BRDF characteristics. The topographic effects can result in errors greater than 58% if not considered. Solo slope and composite slope surfaces have different sensitivity factors affecting BRDF modeling, with varying impact based on slope, aspect angle, and vegetation properties. Current models have limitations, such as neglecting diffuse irradiance from neighboring terrains, which affects canopy reflectance.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please investigate the role of digital elevation models (DEM) in enhancing BRDF modeling over rugged terrain and discuss any limitations or advancements needed.",
+                    "Answer": "DEM is crucial for coupling with BRDF models to account for topographic effects and radiation redistribution. It helps to describe the complex interactions of solar irradiance and surface geometry in rugged terrains. However, the integration of DEM into BRDF models is challenged by the need to accurately capture the diffuse irradiance from adjacent slopes and other topographic effects on canopy photon path length, which are often neglected in current models.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        }
+    ]
+}

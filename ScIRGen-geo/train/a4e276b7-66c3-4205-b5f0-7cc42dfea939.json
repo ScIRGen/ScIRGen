@@ -1,0 +1,321 @@
+{
+    "id": "a4e276b7-66c3-4205-b5f0-7cc42dfea939",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "GlobalHighPM2.5: Global high-resolution and high-quality ground-level PM2.5 dataset over land (2017-2022)",
+            "description": "GlobalHighPM2.5 is one of the series of long-term, full-coverage, global high-resolution and high-quality datasets of ground-level air pollutants over land (i.e., GlobalHighAirPollutants, GHAP). It is generated from big data (e.g., ground-based measurements, satellite remote sensing products, atmospheric reanalysis, and model simulations) using artificial intelligence by considering the spatiotemporal heterogeneity of air pollution. The coefficient of determination R2 for cross validation with ten fold data is 0.91, and the root mean square error RMSE is 9.2 µ g/m3. The main scope covers the entire global land area, with a spatial resolution of 1 km and a temporal resolution of day, month, and year, measured in µg/m3. Attention: This dataset is recorded in Universal Time (UTC, GMT+0) and is continuously updated. If you need more data, please contact the author by email（ weijing_rs@163.com ; weijing@umd.edu ）. The data file contains four types of codes for converting NC to GeoTiff (Python, Matlab, IDL, and R languages) nc2geotiff codes.",
+            "instructions": "The data is stored in the NetCDF file format, named GHAP-PM2.5-ab_yyyymmdd_V1.nc, where a represents the time resolution (D represents daily data, M represents monthly data, Y represents annual data), b represents spatial resolution (1K represents 1km), yyyy represents year, mm represents month, and dd represents day. Data reading method: Python, Matlab, IDL, and other programming methods can be used to convert files from NC to TIF. The data coordinate system is WGS-1984, with a background value of 65535.",
+            "east": 180.0,
+            "west": -180.0,
+            "south": -90.0,
+            "north": 90.0,
+            "startTime": "2017-01-01 21:26:33",
+            "endTime": "2022-12-31 21:26:33",
+            "fileSize": 232341096280.0,
+            "cstr": null,
+            "doi": "10.5281/zenodo.6449740",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "WEI Jing",
+                "unitEn": "University of Maryland"
+            },
+            {
+                "nameEn": "LI Zhanqing",
+                "unitEn": "University of Maryland"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "First close insight into global daily gapless 1 km PM2.5 pollution, variability, and health impact",
+                "referenceEn": "Wei, J., Li, Z., Lyapustin, A., Wang, J., Dubovik, O., Schwartz, J., Sun, L., Li, C., Liu, S., & Zhu, T. (2023). First close insight into global daily gapless 1 km PM2.5 pollution, variability, and health impact. Nature Communications, 14, 8349. https://doi.org/10.1038/s41467-023-43862-3"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "PM2.5"
+            },
+            {
+                "nameEn": "Atmosphere Remote Sensing"
+            },
+            {
+                "nameEn": "Aerosol"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "globe"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2017-2022",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Ambient air pollution poses a major global environmental concern, ranked as the fourth highest risk factor for human health, causing ~6.7 million global deaths in 2019 according to the Global Burden of Disease study. Exposure to PM2.5 (particulate matter with aerodynamic diameters ≤ 2.5 µm) pollution is associated with a variety of circulatory and respiratory diseases, contributing to 4 million deaths globally in 2020. Despite a steady increase in PM2.5 monitoring capabilities over the last decade, many people still live far from monitors. Regional PM2.5 estimates have been extensively studied from the satellite perspective using retrieved aerosol optical depth (AOD) products, but only a handful of studies have been conducted on the global PM2.5 scale. Global, daily, high-resolution, and high-quality PM2.5 data are particularly in demand for a wide range of studies, from air quality to climate change and public health, but monitoring it from space is extremely challenging. Observing the heterogeneities requires dense in situ monitoring networks, which only exist in a handful of countries for limited periods. Space-borne remote sensing offers global and uniform coverage, but it is only feasible under clear-sky conditions."
+            ],
+            "research objective": [
+                "Following painstaking efforts in choosing/refining ML models and compiling big datasets from a wide range of sources, we generated a long-term (1 January 2017 to 31 December 2022) global (over land), daily, 1 km resolution, gapless PM2.5 dataset for the first time, and used it to address some important questions, such as (1) What are the local, regional, and global PM2.5 concentrations on a given day?; (2) What is the daily risk exposure to PM2.5 pollution and its associated impact on public health?; (3) How big is the impact of wildfires and COVID-19 episodes on local to global scales?"
+            ],
+            "challenges": [
+                "The lack of daily global high-resolution PM2.5 data has been hindering our ability to assess air pollution exposure and health effects in all parts of the world. They are very unevenly distributed, dense in developed and populated regions but sparse or missing in under-developed and rural regions, posing great challenges in spatial extrapolation. The ubiquitous presence of clouds (60–70% globally) would lead to very large data gaps, seriously hindering our ability to observe air pollution routinely, exacerbated by inherent difficulties in separating clouds from severe haze and heavy smoke, both of particular concern to the public."
+            ],
+            "methods": [
+                "Hourly PM2.5 measurements from 2017 and 2022 were collected at approximately ~9500 ground-based monitoring stations around the world. Raw data has undergone further quality control measures, including the removal of outliers, such as negative, repeating (occurring for more than three continuous hours), and extreme (exceeding the 99.9th quantiles) values. Subsequently, days having at least 20% of valid hourly PM2.5 measurements were identified and averaged to obtain daily means at each monitoring site. To ensure consistency with auxiliary variables, all daily PM2.5 measurements were adjusted to the UTC time zone and then used for independent training and validation of ML models. Terra and Aqua MAIAC daily 1 km AOD retrievals at 550 nm with recommended quality assurances from 2017 to 2022 were used. Spatially complete AOD assimilations (550 nm) from the GEOS-FP system every 3 hours at a horizontal resolution of 0.25° × 0.3125° were employed to fill satellite AOD gaps. First, hourly PM2.5 simulations from the GEOS Composition Forecast (GEOS-CF) system at a horizontal resolution of 0.25° × 0.25° were employed. Meteorological variables and their vertical profiles were collected from hourly ERA5-Land (~0.1° × 0.1°) and ERA5 global (~0.25° × 0.25°) reanalysis datasets. In total, 19 independent variables were included in this study. Here, the higher-spatial-resolution variables were aggregated, while the low-spatial-resolution variables were resampled to uniform 0.01° × 0.01° grids using the bilinear interpolation approach and used for subsequent air pollution modeling. For satellite AOD gap-filling, Terra and Aqua MAIAC AOD retrievals were first combined via linear regression conversion models to minimize the biases caused by different observation times and to expand the spatial coverage. Available MAIAC AOD retrievals were then used as true values to train the 4D-STET model together with the main GEOS-FP AOD simulations and potentially influencing factors. Missing satellite retrievals can thus be computed to generate daily gapless AODs. For the surface PM2.5 estimation, their ground measurements were regarded as targets, and satellite gap-filled AODs, GEOS-CF PM2.5 simulations, and CAMS pollutant emissions were regarded as main predictors. The trained model was employed to retrieve daily PM2.5 concentrations for each grid using gapless AOD and other auxiliary variables, relying on the reconstructed relationship. Sample-based, station-based, and day-based ten-fold cross-validation (10-CV) methods were used to validate the model."
+            ],
+            "dataset": [
+                "Following painstaking efforts in choosing/refining ML models and compiling big datasets from a wide range of sources, we generated a long-term (1 January 2017 to 31 December 2022) global (over land), daily, 1 km resolution, gapless PM2.5 dataset for the first time."
+            ],
+            "findings": [
+                "We find that 96%, 82%, and 53% of Earth’s populated areas are exposed to unhealthy air for at least one day, one week, and one month in 2022, respectively. Strong disparities in exposure risks and duration are exhibited between developed and developing countries, urban and rural areas, and different parts of cities. Wave-like dramatic changes in air quality are clearly seen around the world before, during, and after the COVID-19 lockdowns, as is the mortality burden linked to fluctuating air pollution events. Encouragingly, only approximately one-third of all countries return to pre-pandemic pollution levels."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Does the data collection method include using satellite AOD gap-filling techniques to generate daily PM2.5 concentrations?",
+                    "Answer": "Yes",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Is the validation of air pollution models achieved through sample-based, station-based, or day-based ten-fold cross-validation methods?",
+                    "Answer": "sample-based, station-based, and day-based ten-fold cross-validation methods",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What are the methods used to fill spatial gaps in satellite AOD data for PM2.5 estimation?",
+                    "Answer": "Spatially complete AOD assimilations from the GEOS-FP system",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What challenges are faced in collecting global high-resolution PM2.5 data?",
+                    "Answer": "uneven distribution of monitoring networks",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "What is an example of a challenge faced when collecting global high-resolution PM2.5 data using satellite remote sensing?",
+                    "Answer": "A significant challenge is the presence of clouds, which cover 60–70% of the globe, leading to large data gaps that hinder routine air pollution observation. This is further complicated by difficulties in distinguishing clouds from severe haze and heavy smoke.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Can you give an example of a dataset that provides global, daily, high-resolution PM2.5 data, and explain the scope and time period it covers?",
+                    "Answer": "A dataset generated through the use of machine learning models and large datasets from various sources provides global, daily, 1 km resolution PM2.5 data without gaps, covering the period from January 1, 2017, to December 31, 2022. It includes PM2.5 concentrations over land and addresses public health and environmental questions.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the spatial resolution of the PM2.5 data collected globally?",
+                    "Answer": "1 km",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many ground-based monitoring stations were used for PM2.5 measurements between 2017 and 2022?",
+                    "Answer": "9500",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the temporal resolution of the PM2.5 data collected globally?",
+                    "Answer": "Daily, monthly, yearly",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'bilinear interpolation' mean in the context of data resampling for air pollution modeling?",
+                    "Answer": "Bilinear interpolation is a resampling technique used to adjust the spatial resolution of meteorological and other low-resolution datasets by estimating unknown values based on the weighted average of known values from the nearest grid points, ensuring uniformity in grid spacing for subsequent modeling.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "What are the differences in challenges faced when collecting PM2.5 data in developed regions compared to under-developed regions?",
+                    "Answer": "In developed regions, PM2.5 monitoring networks are denser, facilitating easier data collection, whereas in under-developed regions, the networks are sparse or missing, posing challenges in spatial extrapolation and routine observation due to uneven distribution and cloud cover.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the usage of ML models in generating a global PM2.5 dataset compare to traditional data collection methods in terms of addressing data gaps?",
+                    "Answer": "The use of ML models in generating a global PM2.5 dataset allows for the creation of a long-term, high-resolution, gapless dataset by training models on combined satellite AOD retrievals and ground-based measurements, whereas traditional methods may struggle with spatial and temporal data gaps due to limited monitoring networks and cloud interference.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How can the integration of various data sources, like satellite AOD retrievals and ground-based measurements, enhance the accuracy and resolution of global PM2.5 datasets?",
+                    "Answer": "Integrating various data sources can enhance accuracy by filling gaps in satellite AOD data with ground-based measurements, using spatially complete AOD assimilations to address satellite limitations under cloudy conditions, and employing ML models to refine data for a gapless PM2.5 dataset.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What challenges do researchers face in maintaining the consistency and reliability of PM2.5 data across different geographic regions and time zones?",
+                    "Answer": "Researchers face challenges such as unevenly distributed monitoring networks, difficulties in extrapolating data in rural or under-developed regions, and the need to adjust PM2.5 measurements to a uniform time zone (UTC) to ensure consistency and reliability across various regions.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways might machine learning models be employed to address the spatial and temporal gaps in PM2.5 data, and what validation methods ensure their effectiveness?",
+                    "Answer": "Machine learning models are employed to fill spatial and temporal gaps by training on combined AOD retrievals, GEOS-FP simulations, and ground measurements. Validation methods such as sample-based, station-based, and day-based ten-fold cross-validation (10-CV) are used to ensure the model's effectiveness.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What challenges contribute to the difficulty in obtaining daily global high-resolution PM2.5 data?",
+                    "Answer": "The lack of daily global high-resolution PM2.5 data is mainly due to uneven distribution of monitoring networks, which are dense in developed regions but sparse in under-developed areas. Additionally, the presence of clouds complicates satellite observations as they lead to significant data gaps and make it difficult to differentiate between clouds, haze, and smoke.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What factors influence the choice and refinement of machine learning models in developing a global PM2.5 dataset?",
+                    "Answer": "The choice and refinement of machine learning models are influenced by the need to compile large datasets from diverse sources, addressing uneven spatial data distribution, and overcoming data gaps caused by clouds. Ensuring the models are trained with accurate data is crucial, utilizing variables like satellite AOD retrievals and ground-based PM2.5 measurements.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "How does the integration of multiple data sources, such as ground-based observations and satellite AOD retrievals, affect the ability to conduct global PM2.5 exposure assessments?",
+                    "Answer": "The integration of multiple data sources, including ground-based observations and satellite AOD retrievals, allows for the creation of a high-resolution, gapless global PM2.5 dataset. This comprehensive dataset facilitates detailed assessments of global PM2.5 exposure, addressing the previous challenges of sparse monitoring networks and data gaps due to cloud cover.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedures are used to ensure the quality and consistency of hourly PM2.5 measurements from ground-based monitoring stations?",
+                    "Answer": "Hourly PM2.5 measurements undergo quality control measures, including the removal of outliers such as negative, repeating, and extreme values. Days with at least 20% of valid hourly PM2.5 measurements are identified and averaged to obtain daily means at each monitoring site. All daily PM2.5 measurements are adjusted to the UTC time zone for consistency with auxiliary variables before being used for training and validation of ML models.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "How do technological advancements in remote sensing contribute to high-resolution air pollution data collection?",
+                    "Answer": "Technological advancements in remote sensing, such as the use of Terra and Aqua MAIAC AOD products with quality assurances and spatially complete AOD assimilations, facilitate high-resolution air pollution data collection by providing global and uniform coverage under clear-sky conditions and aiding in the gap-filling process for satellite data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What resources or conditions facilitate the validation of machine learning models used for air pollution estimation?",
+                    "Answer": "The validation of machine learning models used for air pollution estimation is facilitated by the collection of hourly PM2.5 measurements from approximately 9500 ground-based monitoring stations globally, as well as the use of sample-based, station-based, and day-based ten-fold cross-validation methods. Consistency with auxiliary variables and adjustment to a common time zone (UTC) also support the model validation process.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might the expected outcomes of using satellite AOD retrievals for PM2.5 monitoring be challenging to achieve on a global scale?",
+                    "Answer": "Using satellite AOD retrievals for PM2.5 monitoring on a global scale is challenging due to the need for spatially complete AOD data, which is often hindered by cloud cover and the inherent difficulties in accurately converting AOD to PM2.5 concentrations, requiring sophisticated models to fill satellite AOD gaps and ensure reliable ground-level PM2.5 estimations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What are the potential challenges associated with the reliance on ground-based monitoring stations for PM2.5 data collection, considering their uneven distribution globally?",
+                    "Answer": "The reliance on ground-based monitoring stations for PM2.5 data collection poses significant challenges due to their uneven distribution, being dense in developed and populated regions but sparse or missing in under-developed and rural areas. This disparity makes it difficult to extrapolate data accurately across regions and hampers the ability to assess air pollution exposure and health effects comprehensively. Additionally, the presence of clouds and the difficulty in separating clouds from haze further complicate data collection from these stations.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In your opinion, what implications do the findings of global PM2.5 exposure disparities have for future air quality monitoring strategies and public health policies?",
+                    "Answer": "The findings of global PM2.5 exposure disparities highlight the need for enhanced air quality monitoring strategies and more equitable public health policies. There are significant disparities in exposure risks between developed and developing countries, urban and rural areas, and within different parts of cities. These disparities suggest that monitoring networks need to be expanded and adapted to address these variations effectively. Public health policies should also be tailored to mitigate the health impacts of air pollution, especially in regions with higher exposure levels.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I'm unsure about the methods used to ensure data quality and consistency across different monitoring stations and satellite sources.",
+                    "Answer": "Data quality is maintained by undergoing quality control measures, such as removing negative, repeating, and extreme values from hourly PM2.5 measurements. Consistency across data sources is ensured by adjusting daily measurements to the UTC time zone and employing linear regression conversion models to combine different satellite AOD retrievals.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please explore the data collection methods used for gathering global PM2.5 concentrations and identify key technological or methodological advancements that have been employed.",
+                    "Answer": "Hourly PM2.5 measurements from 2017 to 2022 were collected at approximately 9500 ground-based monitoring stations worldwide. The raw data underwent quality control measures, including the removal of outliers, and days with at least 20% valid hourly measurements were averaged to obtain daily means. These measurements were adjusted to UTC and used for training and validating machine learning models. Terra and Aqua MAIAC daily AOD retrievals were used, with spatially complete AOD assimilations from the GEOS-FP system filling gaps. Meteorological variables were collected from ERA5-Land and ERA5 global reanalysis datasets, and variables were resampled to uniform grids for pollution modeling. The 4D-STET model was employed for satellite AOD gap-filling, and the trained model was used to retrieve daily PM2.5 concentrations using gapless AOD and auxiliary variables.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        }
+    ]
+}

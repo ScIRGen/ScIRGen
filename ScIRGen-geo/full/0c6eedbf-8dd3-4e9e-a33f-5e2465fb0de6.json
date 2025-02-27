@@ -1,0 +1,166 @@
+{
+    "id": "0c6eedbf-8dd3-4e9e-a33f-5e2465fb0de6",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "MODIS Terra surface reflectance products over the Tibetan Plateau (2020)",
+            "description": "The dataset is the MODIS Terra surface reflectance products of 2020 over the Tibetan Plateau,each period of data contains 13 files: 7 surface reflectence files, 3 observation angle files, 2 quality control files and 1 time description file. The dataset is download from USGS and its format is converted from .hdf to .tif by GDAL.The sur_refl_qc_500m and sur_refl_state_500m layers are the quality identification documents,which are stored in an efficient bit-encoded manner.The MODIS surface reflectance play an important role in forest, water resources, climate change.",
+            "instructions": "1)File name rules:the data of land surface reflectance is stored in units of years in a folder named surface_reflectance, and the subfolder's name is presented as \"date\",for example, 2020; the name rule of each file of land surface reflectance result is \"MOD09A1_date_sur_refl_bxx.tif\",for example, MOD09A1_2020017_sur_refl_b02.tif; the name rule of quality identification data is \"MOD09A1_date_sur_refl_qc_500m.tif\" and \"MOD09A1_date_sur_refl_state_500m.tif\"; the name rule of angle data is \"MOD09A1_date_sur_refl_szen.tif\", \"MOD09A1_date_sur_refl_szen.tif\" and \"MOD09A1_date_sur_refl_raz.tif\", which represent the file of solar zenith angle, view zenith angle and relative azimuth angle; and the name rule of date description is \"MOD09A1_date_sur_refl_day_of_year.tif\". 2)How to use the dataset: the dataset can be opened by ArcGIS, envi, QGIS and so on, the surface reflectance data are multiplied 0.0001 when used, and the background filling value is -28672; the background filling value of band specific quality data (sur_refl_qc_500m) is 4294967295; the background filling value of surface reflectance state(sur_refl_state_500m) is 65535; and the angle data are multiplied 0.01, and the background filling value is 0.",
+            "east": 106.7,
+            "west": 73.4,
+            "south": 24.6,
+            "north": 40.4,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 11079289303.0,
+            "cstr": null,
+            "doi": "",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "GONG Chengjuan",
+                "unitEn": "Chinese Academy of Sciences Institute of Aerospace Information Innovation"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "MOD09A1",
+                "referenceEn": "Vermote, E. (2015). MOD09A1 MODIS/Terra Surface Reflectance 8-Day L3 Global 500m SIN Grid V006. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MOD09A1.006"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "surface reflectance"
+            },
+            {
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Qinghai-Tibet Plateau"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method used for obtaining long-term surface reflectance data in the Tibetan Plateau?",
+                    "Answer": "One data collection method involves using the sixth version of the MODIS Terra MOD09A1 product set, where surface reflectance data for the Tibetan Plateau is downloaded from the USGS website and processed using the GDAL plugin for mosaicking and re-projection.",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the specific characteristics of MODIS Terra surface reflectance datasets collected for the Qinghai-Tibet Plateau in terms of their composition and data quality?",
+                    "Answer": "13 files per data period, 7 surface reflectance files, 3 observation angle files, 2 quality control files, 1 time description file, sur_refl_qc_500m, sur_refl_state_500m, valid bit encoding",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many files are included in each period of the MODIS Terra surface reflectance dataset for the Tibetan Plateau in 2020?",
+                    "Answer": "13 files",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does '地表反射率产品' mean in the context of data collection methods for remote sensing on the Qinghai-Tibet Plateau?",
+                    "Answer": "In the context of data collection methods for remote sensing on the Qinghai-Tibet Plateau, '地表反射率产品' refers to surface reflectance products derived from MODIS Terra data. This involves data processing techniques such as downloading from the USGS website and using GDAL plugins for mosaicking and reprojection to obtain long-term series surface reflectance products specific to the region.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of using MODIS Terra surface reflectance products for long-term environmental analysis in regions like the Tibetan Plateau?",
+                    "Answer": "The use of MODIS Terra surface reflectance products can lead to significant advancements in long-term environmental analysis, particularly in understanding forest dynamics, water resource management, and climate change impacts. The data's long-term consistency and quality control measures facilitate reliable trend analysis and support decision-making processes in these fields. Additionally, the ability to handle and interpret large volumes of data through advanced processing techniques can enhance the accuracy and resolution of environmental models, potentially leading to more informed conservation and resource management strategies.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the primary objective behind creating a dataset of long-term MODIS Terra surface reflectance products for the Qinghai-Tibet Plateau in 2020?",
+                    "Answer": "The primary objective is to provide valuable long-term information for analysis in various fields such as forestry, water resources, and climate change, by using the MODIS Terra surface reflectance products for the Qinghai-Tibet Plateau.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What process is used to collect and prepare MODIS Terra surface reflectance data for analysis in regions like the Qinghai-Tibet Plateau, considering the challenges of data quality and projection?",
+                    "Answer": "MODIS Terra surface reflectance data for regions like the Qinghai-Tibet Plateau is collected from the USGS website, specifically from the MODIS Terra MOD09A1 product set. The data is prepared for analysis by using GDAL plugins for mosaicking and reprojecting the data. Quality control is ensured through the use of sur_refl_qc_500m and sur_refl_state_500m files, which are stored using valid bit encoding to maintain data integrity.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        }
+    ]
+}

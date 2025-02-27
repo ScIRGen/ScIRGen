@@ -1,0 +1,478 @@
+{
+    "id": "26e82258-5963-4de9-b488-03cfd08278c1",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "HiWATER: Dataset of hydrometeorological observation network (cosmic-ray soil moisture of Daman Superstation, 2016)",
+            "description": "The data set contains cosmic ray instrument (CRS) observations from January 1, 2016 to December 31, 2016.The station is located in gansu province zhangye city da man irrigated area farmland, under the surface is corn field.The longitude and latitude of the observation point are 100.3722e, 38.8555n, and 1556m above sea level. The bottom of the instrument probe is 0.5m from the ground, and the sampling frequency is 1 hour.\nOriginal observations of cosmic ray instruments include: voltage Batt (V), temperature T (c), relative humidity RH (%), pressure P (hPa), fast neutron number N1C (hr), thermal neutron number N2C (hr), fast neutron sampling time N1ET (s) and thermal neutron sampling time N2ET (s).The data published are processed and calculated. The data headers include Date Time, P (pressure hPa), N1C (fast neutron number/hour), N1C_cor (fast neutron number/hour with revised pressure) and VWC (soil volume moisture content %). The main processing steps include:\n1) data filtering\nThere are four criteria for data screening :(1) data with voltage less than and equal to 11.8 volts are excluded;(2) remove the data of air relative humidity greater than and equal to 80%;(3) data whose sampling interval is not within 60±1 minute are excluded;(4) the number of fast neutrons removed changed by more than 200 in one hour compared with that before and after.In addition, the missing data was supplemented by -6999.\n2) air pressure correction\nAccording to the fast neutron pressure correction formula mentioned in the instrument instruction manual, the original data were revised to obtain the revised fast neutron number N1C_cor.\n3) instrument calibration\nIn the process of calculating soil moisture, N0 in the calculation formula should be calibrated.N0 is the number of fast neutrons under the condition of soil drying. The measured soil moisture (or through relatively dense soil moisture wireless sensor) m (Zreda et al.\nHere, according to Soilnet soil water data in the source area of the instrument, the instrument was calibrated to establish the relationship between soil volumetric water content v and fast neutrons.Selection of dry and wet conditions are the obvious difference of June 26, 2012-27 and July 16-17, four days of data, including June 26-27 rate data showed that soil moisture is small, so the selection of 4 cm, 10 and 20 cm as the rate of the three values of average data, its range is 22% 30%, and July 16-17 rate data showed that soil moisture is bigger, so select 4 cm and 10 cm as two value average rate data, the range of 28% - 39%, final N0 an average of 3597.\n4) soil moisture calculation\nAccording to the formula, the hourly soil water content data were calculated.\nPlease refer to Liu et al. (2018) for information of hydrometeorological network or site, and Zhu et al. (2015) for observation data processing.",
+            "instructions": "",
+            "east": 100.3723,
+            "west": 100.3723,
+            "south": 38.8556,
+            "north": 38.8556,
+            "startTime": "2016-01-22 00:00:00",
+            "endTime": "2017-01-21 00:00:00",
+            "fileSize": 395264.0,
+            "cstr": "18406.11.hiwater.440.2016.db",
+            "doi": "10.3972/hiwater.440.2016.db",
+            "dataFormat": "CSV",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "LIU Shaomin",
+                "unitEn": "Beijing Normal University"
+            },
+            {
+                "nameEn": "ZHU Zhongli",
+                "unitEn": "Beijing Normal University"
+            },
+            {
+                "nameEn": "XU Ziwei",
+                "unitEn": "Beijing Normal University"
+            },
+            {
+                "nameEn": "LI Xin",
+                "unitEn": "Institute of Tibetan Plateau Research, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "CHE Tao",
+                "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "TAN Junlei",
+                "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "REN Zhiguo",
+                "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "The Heihe Integrated Observatory Network: A Basin-Scale Land Surface Processes Observatory in China",
+                "referenceEn": "Liu, S.M., Li, X., Xu, Z.W., Che, T., Xiao, Q., Ma, M.G., Liu, Q.H., Jin, R., Guo, J.W., Wang, L.X., Wang, W.Z., Qi, Y., Li, H.Y., Xu, T.R., Ran, Y.H., Hu, X.L., Shi, S.J., Zhu, Z.L., Tan, J.L., Zhang, Y., & Ren, Z.G. (2018). The Heihe Integrated Observatory Network: A Basin-Scale Land Surface Processes Observatory in China. Vadose Zone Journal, 17(1), 180072. doi:10.2136/vzj2018.04.0072."
+            },
+            {
+                "titleEn": "A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in a typical endorheic basin",
+                "referenceEn": "Liu, S.M., Xu, Z.W., Che, T., Li, X.,  Xu, T.R.,  Ren, Z.G., Zhang, Y., Tan, J.L., Song, L.S., Zhou, J., Zhu, Z.L., Yang, X.F., Liu, R., & Ma, Y.F. (2023). A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in\na typical endorheic basin. Earth System Science Data, 15, 4959-4981."
+            },
+            {
+                "titleEn": "Research and Application of Cosmic Ray Fast Neutron Method in Soil Moisture Measurement in Agricultural Fields",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system",
+                "referenceEn": "Li, X., Liu, S.M., Xiao, Q., Ma, M.G., Jin, R., Che, T., Wang, W.Z., Hu, X.L., Xu, Z.W., Wen, J.G., Wang, L.X. (2017). A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system. Scientific Data, 4, 170083. doi:10.1038/sdata.2017.83."
+            },
+            {
+                "titleEn": "Comprehensive Remote Sensing Observation Joint Experiment Overall Design for the Ecological-Hydrological Processes of the Heilong River Basin",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
+                "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
+            },
+            {
+                "titleEn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design",
+                "referenceEn": "Li X, Cheng GD, Liu SM, Xiao Q, Ma MG, Jin R, Che T, Liu QH, Wang WZ, Qi Y, Wen JG, Li HY, Zhu GF, Guo JW, Ran YH, Wang SG, Zhu ZL, Zhou J, Hu XL, Xu ZW. Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design. Bulletin of the American Meteorological Society, 2013, 94(8): 1145-1160, 10.1175/BAMS-D-12-00154.1."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Soil"
+            },
+            {
+                "nameEn": "Soil moisture/Water content"
+            },
+            {
+                "nameEn": "Cosmic-ray soil moisture observing system"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "the artificial oasis experimental area in the middle reaches"
+            },
+            {
+                "keywordEn": "Daman Superstation"
+            },
+            {
+                "keywordEn": "Heihe River Basin"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2016",
+                "type": "temporal"
+            },
+            {
+                "keywordEn": "2016-01-01 to 2016-12-31",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Key Program of the National Natural Science Foundation of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleEn": "Digital heihe"
+            },
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Upscaling of eco-hydrological processes on a heterogeneous surface is a grand challenge. Progress in this field is hindered by the poor availability of multiscale observations. HiWATER is an experiment designed to address this challenge through instrumentation on hierarchically nested scales to obtain multiscale and multidisciplinary data."
+            ],
+            "research objective": [],
+            "challenges": [
+                "Progress in this field is hindered by the poor availability of multiscale observations."
+            ],
+            "methods": [
+                "Several intensive observation periods (IOPs) and continuous hydrometeorological observations were carried out during HiWATER. Only data collected during the IOP in 2012 are presented in this paper. Instruments for the oasis-desert system were arranged in hierarchically nested scales to capture multi-scale eco-hydrological processes. We established a sparse network to investigate the oasis-desert interaction. One superstation was constructed within the oasis, and four EC towers and four two-layer automatic meteorological stations (AMSs) were installed in different landscapes surrounding the oasis, including sandy desert, desert pavement, desert steppe, and wetland. Intensive observations were implemented at the irrigation district scale. A total of 12 airborne remote sensing missions were conducted to cover the FEA using LiDAR, an imaging spectrometer, a multi-angle thermal imager, and an L-band microwave radiometer."
+            ],
+            "dataset": [
+                "We introduce a multiscale dataset obtained from Heihe Watershed Allied Telemetry Experimental Research (HiWATER) in an oasis-desert area in 2012. The HiWATER observation system consists of a flux observation matrix of eddy covariance towers, large aperture scintillometers, and automatic meteorological stations; an eco-hydrological sensor network of soil moisture and leaf area index; hyper-resolution airborne remote sensing using LiDAR, imaging spectrometer, multi-angle thermal imager, and L-band microwave radiometer; and synchronical ground measurements of vegetation dynamics and photosynthesis processes. All observational data were carefully quality controlled throughout sensor calibration, data collection, data processing, and datasets generation. The data are freely available at figshare and the Cold and Arid Regions Science Data Centre."
+            ],
+            "findings": []
+        },
+        {
+            "background": [
+                "Arid and semiarid regions represent approximately 30 % of the global terrestrial surface area (Dregne, 1991; Scanlon et al., 2006), and dryland expansion occurs under climate change, especially in developing countries (Huang et al., 2016). An oasis is a unique ecological landscape in arid and semi-arid areas that is not only the core of regions’ ecological environment but also the foundation of their economic development, especially in western China, which has been an important part of the “Silk Road” since ancient times. Oases comprising less than 10 % of the total area of arid regions support more than 90 % of the population in these regions of China (Chu et al., 2005; Li et al., 2016; Zhou et al., 2022). The oasis–desert system plays a crucial role in maintaining a stable ecological environment and agricultural productivity (Zhang and Zhao, 2015). Extensive studies have investigated energy, water vapor, and carbon exchange in oasis–desert areas based on field and remote-sensing observations (Taha et al., 1991; Potchter et al., 2008; Xue et al., 2019; Wang et al., 2019; Zhou et al., 2022) and numerical simulations (Chu et al., 2005; Meng et al., 2009; Georgescu et al., 2011; Liu et al., 2020). In addition, oasis–desert areas located in semiarid regions have been found to be carbon sinks by previous researchers (Tagesson et al., 2016; Wang et al., 2019); thus, they can significantly affect the carbon balance of arid regions and play an increasingly important role within the global carbon cycle."
+            ],
+            "research objective": [
+                "Therefore, it is critical to maintain the balance between oasis and desert systems in order to achieve the goal of sustainable oasis development. Understanding the basic characteristics of energy, water vapor, and carbon exchange in oasis–desert ecosystems is important to achieve the goals of carbon peaking and carbon neutrality in the oasis–desert area and support the ecological security and sustainable development of the oasis. A quantitative understanding of the energy, water vapor, and carbon exchange in oasis–desert areas is crucial to recognize the oasis–desert interactions and is significant to protect the ecological stability and socioeconomic development of oases; moreover, long-term observations are indispensable."
+            ],
+            "challenges": [
+                "Inland river basins in arid and semiarid areas are facing the crisis of ecological environment degradation, such as the drying up of rivers and lakes, the degradation of natural vegetation, the intensification of land desertification, and the frequent occurrence of dust storms, especially in many inland river basins westward along the Silk Road, such as the Tarim River basin (Zhao et al., 2013), the Aral Sea basin (Stanev et al., 2004; Crétaux et al., 2009), and the Lake Urmia basin (Stone, 2015)."
+            ],
+            "methods": [
+                "In this study, we present a suite of observational datasets from artificial and natural oasis–desert systems that consist of long-term energy, water vapor, carbon and methane fluxes as well as auxiliary data involving hydrometeorology, vegetation, and soil parameters from 2012 to 2021. Half-hourly turbulent flux data were acquired by an eddy covariance system and scintillometer. The hydrometeorological data (including radiation, soil heat flux, and soil temperature profiles; gradients of air temperature and humidity and of wind speed and direction; and air pressure, precipitation, and soil moisture profiles) were observed from automatic weather stations with a 10 min average period as well as the groundwater table data. Moreover, vegetation and soil parameters were also supplemented in the datasets. The data processing and quality control procedure can be divided into data collection, data processing, and data archiving and sharing."
+            ],
+            "dataset": [
+                "The study area comprises the middle and lower reaches of the HRB, located in the arid regions of western China, that receive water from the typical cryosphere of the upper reaches. A total of 11 land surface flux and meteorological stations have been established in these regions since 2012 – 2 superstations and 9 ordinary stations. The dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas reported in this study (including energy, water vapor, and carbon fluxes; hydrometeorological data; and vegetation and soil parameters) is freely available from the National Tibetan Plateau Data Center."
+            ],
+            "findings": []
+        },
+        {
+            "background": [
+                "The acquisition of regional surface soil moisture has long been a research challenge. In recent years, the use of cosmic ray fast neutron methods to measure regional surface soil moisture has made significant progress. As a novel non-destructive measurement method for medium-scale soil moisture, the cosmic ray fast neutron method can obtain soil moisture within a source area of approximately 300 meters in radius. The large measurement area fills the gap between traditional point observations and remote sensing large-area observations. Traditional measurement methods include: gravimetric method (oven-drying method), neutron gauge method, capacitance method, tensiometer method, time-domain reflectometry (TDR), and frequency-domain reflectometry (FDR). These measurement methods are all destructive and point-based, with measurement scales mostly at small scales, poor spatial representativeness, and difficulty in obtaining information on the regional distribution of soil moisture. Feasibility studies on remote sensing monitoring of soil moisture began in the 1960s, with applied research starting in the mid-1970s. Remote sensing technology allows for rapid and large-area monitoring of soil moisture, but the soil moisture obtained through remote sensing is an average value at the pixel scale, with spatial resolutions generally ranging from tens of meters (aerial remote sensing) to tens of kilometers (satellite remote sensing). Moreover, it only provides instantaneous values at the time of aircraft or satellite overpass, making it impossible to obtain continuous data, which limits the application of large-scale remote sensing measurements in actual soil moisture monitoring. There is a gap between traditional point measurements and large-scale remote sensing monitoring, which is the inability to obtain regional soil moisture information at the scale of farmland or small watersheds. Similarly, during the validation of remotely sensed soil moisture inversion, it is not possible to obtain the required pixel-scale soil moisture data. In recent years, research on measuring surface soil moisture using cosmic ray fast neutrons has gradually attracted attention. The intensity of cosmic ray fast neutrons above the surface is inversely related to soil moisture content. By setting up neutron probes above the ground to measure the intensity of cosmic ray fast neutrons, surface soil moisture content can be inverted. The cosmic ray fast neutron method is a passive, non-invasive medium-scale soil moisture measurement method, with a measurement radius of about 300 meters and an effective measurement depth of 12 to 76 cm."
+            ],
+            "research objective": [
+                "This article utilizes cosmic ray instruments to conduct long-term continuous monitoring of soil moisture in the Zhangye area of the middle reaches of the Heihe River, and compares the results with data from Wireless Sensor Networks (WSN) to analyze the reliability of cosmic ray observations. The article analyzes the experimental results of regional soil moisture observations conducted in the Zhangye oasis farmland, indicating that the cosmic ray soil moisture observation system can effectively obtain regional soil moisture content. It not only accurately captures long-term time series soil moisture at the farmland scale but also provides meaningful surface validation data for remote sensing inversion of soil moisture."
+            ],
+            "challenges": [
+                "There is a gap between traditional point measurements and large-scale monitoring through remote sensing, which makes it difficult to obtain regional soil moisture information at the scale of farmland or small watersheds. Similarly, during the validation of soil moisture retrieved from remote sensing, it is challenging to acquire the required pixel-scale soil moisture data. Hydrogen atoms in the cosmic ray source region are not only present in soil moisture but also in lattice water, soil organic matter, vegetation, and water vapor. The presence of these hydrogen atom sources inevitably affects the propagation of fast neutrons. Zreda et al. pointed out that the presence of lattice water reduces the detection depth of cosmic rays; however, under the assumption that lattice water and soil organic matter remain constant, these effects can be eliminated through a one-time field soil moisture calibration in the source area. In sparsely vegetated areas, the influence of vegetation can also be eliminated based on field soil moisture calibration, but under rapidly growing vegetation, the moisture content of the vegetation has a certain impact on observations, and there is currently no comprehensive method to correct for this. The presence of water vapor affects the measurement source area of cosmic rays, and MCNPX simulations indicate that the detection radius under saturated water vapor is about 10% lower than that under dry air."
+            ],
+            "methods": [
+                "The dataset used in this article comes from the 2012 \"Heihe River Basin Eco-Hydrological Comprehensive Remote Sensing Observation Experiment,\" which mainly includes cosmic ray soil moisture datasets, wireless sensor network datasets (Soil-NET part), and rainfall datasets (Daman Station). During soil moisture observation, only a fast neutron probe needs to be installed; at the beginning of this experiment, only one fast neutron probe was installed for soil moisture observation. This article utilizes cosmic ray instruments to conduct long-term continuous monitoring of soil moisture in the farmland of the Zhangye area in the middle reaches of the Heihe River and compares it with soil moisture wireless sensor network data (Wireless Sensor Network, WSN) to analyze the reliability of the cosmic ray observation results."
+            ],
+            "dataset": [
+                "The cosmic ray soil moisture dataset mainly includes raw fast neutron data, raw atmospheric pressure data, etc., with a sampling frequency of 1 hour. Fast neutron data can be used to infer soil moisture information in the study area. SoilNET mainly contains observational data from 50 SoilNET soil moisture/temperature nodes located within the MODIS pixel of the Daman Super Station. Each node can connect to four SISOMOP (Simple Soil Moisture Probe) soil moisture/temperature probes, measuring soil moisture and temperature at depths of 4, 10, 20, and 40 cm, with 19 of them distributed within the cosmic ray source area. The sampling frequency of SoilNET nodes is 10 minutes. This paper primarily uses SoilNET node soil moisture data to validate cosmic ray observation results, requiring the aggregation of the original 10-minute data into 1-hour data for synchronization with cosmic ray data. The rainfall dataset (Daman Super Station) mainly includes raw rainfall data, with a sampling frequency of 10 minutes. During use, the original data needs to be aggregated into 1-hour data to analyze the relationship between cosmic ray soil moisture changes and rainfall."
+            ],
+            "findings": [
+                "The cosmic ray soil moisture observation system can effectively obtain regional soil moisture content, not only accurately capturing long-term time series of soil moisture at the farmland scale but also providing genuinely meaningful surface validation data for remote sensing inversion of soil moisture. Comparisons show that cosmic rays reflect a surface-level change in soil moisture, which can effectively indicate the trend of soil moisture changes beneath the farmland surface. After excluding data from the irrigation period, the correlation coefficient significantly increased to 0.86, and the RMSE decreased to 0.028 m³/m³."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Are the primary data collection methods for soil moisture in this domain based on cosmic-ray neutron probes, wireless sensor networks, or traditional remote sensing?",
+                    "Answer": "cosmic-ray neutron probes, wireless sensor networks",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Which datasets are more relevant for studying oasis-desert interactions: flux observation matrices, remote sensing data, or hydrometeorological datasets?",
+                    "Answer": "flux observation matrices, remote sensing data, hydrometeorological datasets",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What challenges are associated with using cosmic-ray neutron sensors for soil moisture observation in agricultural and arid regions?",
+                    "Answer": "Hydrogen atoms",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a method used to correct pressure in cosmic ray neutron data for soil moisture estimation?",
+                    "Answer": "An example of a method used to correct pressure in cosmic ray neutron data involves using the pressure correction formula mentioned in the instrument manual to adjust the raw fast neutron count data, resulting in corrected fast neutron counts (N1C_cor).",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a challenge faced when using cosmic ray neutron methods for soil moisture measurement in arid regions?",
+                    "Answer": "An example of a challenge faced when using cosmic ray neutron methods for soil moisture measurement is the potential interference from hydrogen atoms present in lattice water, soil organic matter, vegetation, and water vapor, which can affect the propagation of fast neutrons and complicate the measurement of soil moisture content.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What challenges are associated with using cosmic-ray neutron sensors for soil moisture measurement in terms of data accuracy and environmental factors?",
+                    "Answer": "hydrogen atoms in lattice water, soil organic matter, vegetation, water vapor, vegetation growth, atmospheric water vapor, measurement radius, measurement depth, presence of irrigation",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What types of datasets are generated through the use of cosmic-ray neutron sensors in eco-hydrological experiments, and what supplementary data might be needed for comprehensive analysis?",
+                    "Answer": "raw neutron counts, corrected neutron data for pressure, calculated soil moisture percentages, soil moisture and temperature profiles, precipitation data, meteorological data",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the sampling frequency of the cosmic ray instrument data collection?",
+                    "Answer": "1 hour",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many criteria are there for data screening in the data processing steps?",
+                    "Answer": "4",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'cosmic-ray neutron method' mean in the context of soil moisture measurement?",
+                    "Answer": "The 'cosmic-ray neutron method' is a non-invasive, mid-scale soil moisture measurement technique that measures the intensity of cosmic-ray fast neutrons above the surface to infer soil moisture content. This method covers a measurement radius of approximately 300 meters and an effective depth of 12 to 76 cm, filling the gap between traditional point measurements and large-scale remote sensing.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the main challenges in using cosmic-ray neutron probes for soil moisture observation?",
+                    "Answer": "The main challenges include the influence of hydrogen atoms not only from soil moisture but also from lattice water, soil organic matter, vegetation, and water vapor, which can affect neutron propagation. Additionally, rapidly growing vegetation can impact observations, and there's no perfected method for correcting this influence. Water vapor can also reduce the detection radius by about 10% under saturated conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "What are the differences in the challenges faced when measuring soil moisture in oasis-desert systems using remote sensing versus cosmic-ray neutron sensors?",
+                    "Answer": "Remote sensing provides large-scale, instantaneous data but lacks continuous monitoring capability and has spatial resolution limitations. In contrast, cosmic-ray neutron sensors provide continuous monitoring and better spatial representation at a mid-scale but are influenced by local hydrogen sources such as vegetation and atmospheric water vapor, which can affect neutron counts. Remote sensing also faces challenges related to obtaining consistent ground-truth data for validation.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How do the data collection and validation processes differ between soil moisture measurements using cosmic-ray neutron sensors and wireless sensor networks?",
+                    "Answer": "Cosmic-ray neutron sensors measure soil moisture by detecting neutron intensity changes, requiring periodic calibration with in-situ soil samples for validation. Their data is often aggregated hourly. Wireless sensor networks, such as SoilNET, use multiple probes at different depths to provide frequent (10-minute intervals) point-based soil moisture and temperature data, requiring aggregation for comparison. While cosmic-ray neutron sensing provides area-averaged data, wireless networks offer finer temporal resolution and depth-specific information.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What underlying factors could influence the accuracy of soil moisture measurements collected via cosmic-ray neutron methods, and how might these factors be accounted for in data interpretation?",
+                    "Answer": "Cosmic-ray neutron methods measure soil moisture by detecting the intensity of neutrons above the soil, which is inversely related to soil moisture content. Factors such as hydrogen atoms present in crystal water, soil organic matter, vegetation, and water vapor can affect neutron propagation and measurement accuracy. These influences can be accounted for by soil moisture calibration of the survey area. In sparsely vegetated areas, the impact of vegetation can be mitigated through field calibration, while rapid growth of vegetation poses challenges for accurate correction.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the challenges and potential solutions in bridging the gap between traditional point measurements and large-scale remote sensing for soil moisture data collection?",
+                    "Answer": "One challenge is obtaining soil moisture information at the farm or small watershed scale, which is a gap between traditional point measurements and large-scale remote sensing. Cosmic-ray neutron methods offer a solution by providing non-invasive measurements over a radius of approximately 300 meters, thus filling the gap between point and pixel-scale measurements. However, challenges remain in accounting for variables such as vegetation water content, which can affect measurements, especially in areas with rapidly growing vegetation. Further research and method development are needed to refine these solutions for specific environmental conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges in obtaining multiscale observations for eco-hydrological processes in heterogeneous surfaces?",
+                    "Answer": "The challenges in obtaining multiscale observations for eco-hydrological processes are primarily due to the poor availability of multiscale data, which hinders progress in understanding these processes. Additionally, the complexity of arranging instruments in hierarchically nested scales to capture various eco-hydrological dynamics adds to the difficulty.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it critical to address the gap between traditional point measurements and large-scale remote sensing in soil moisture monitoring?",
+                    "Answer": "Addressing the gap between traditional point measurements and large-scale remote sensing is critical because traditional methods often lack spatial representativeness and cannot provide regional distribution information, while remote sensing offers large-scale observations but lacks continuous data. This gap makes it challenging to capture soil moisture at farm or small watershed scales, which is crucial for accurate monitoring and validation of remote sensing data.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What causes the complexity in calibrating cosmic-ray instruments for soil moisture measurement in agricultural areas?",
+                    "Answer": "The complexity in calibrating cosmic-ray instruments for soil moisture measurement arises from the presence of hydrogen atoms not only in soil moisture but also in lattice water, soil organic matter, vegetation, and water vapor. These additional hydrogen sources can affect fast neutron propagation, complicating the calibration process. Moreover, the rapid growth of vegetation can influence measurements, and currently, there are no perfected methods for correcting these effects.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "How might the utilization of cosmic-ray neutron sensors impact the accuracy and scale of soil moisture data collection methods in agricultural regions?",
+                    "Answer": "The use of cosmic-ray neutron sensors allows for the measurement of soil moisture over a larger area (around a 300 m radius) compared to traditional point measurement methods. This can bridge the gap between small-scale point measurements and larger-scale remote sensing, providing more accurate and representative data for regional soil moisture distribution.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the potential consequences of integrating remote sensing data with ground-based soil moisture observations on the understanding of eco-hydrological processes in arid regions?",
+                    "Answer": "Integrating remote sensing data with ground-based observations can enhance the understanding of eco-hydrological processes by providing comprehensive, multi-scale data. This integration allows for more accurate modeling and monitoring of water, energy, and carbon exchange, which is crucial for sustainable oasis development and managing the ecological balance in arid regions.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What outcomes can arise from implementing a correction for atmospheric pressure in cosmic-ray neutron measurements on soil moisture datasets?",
+                    "Answer": "Correcting for atmospheric pressure in cosmic-ray neutron measurements can improve the accuracy of soil moisture data by accounting for variations in neutron counts caused by changes in air pressure. This correction leads to more reliable data, which is essential for long-term monitoring and validation of remote sensing soil moisture estimates.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the objective behind using cosmic ray neutron sensors to measure soil moisture in agricultural fields?",
+                    "Answer": "The objective is to provide a non-invasive, mid-scale measurement method that can effectively capture soil moisture over a large area, filling the gap between traditional point measurements and large-scale remote sensing, thus offering a reliable validation dataset for remote sensing soil moisture retrievals.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is the importance of comparing cosmic ray soil moisture observations with wireless sensor network data in the context of regional soil moisture monitoring?",
+                    "Answer": "Comparing these observations is important to assess the reliability of cosmic ray observations for capturing regional soil moisture variations. This comparison helps validate the system's effectiveness in providing accurate long-term soil moisture data, which is crucial for large-scale remote sensing validation and understanding soil moisture dynamics over time.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedures are utilized to ensure the accuracy and reliability of soil moisture data collected using cosmic-ray neutron sensor instruments?",
+                    "Answer": "The procedures include data screening with criteria such as excluding voltage below 11.8 volts, relative humidity above 80%, sampling intervals not within 60±1 minutes, and cosmic-ray neutron counts with significant hour-to-hour variation. Pressure correction is applied using the cosmic-ray instrument manual's formula, and instrument calibration is performed by comparing soil moisture data from Soilnet sensors with corrected neutron data to establish a relationship between volumetric water content and neutron counts.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What are the steps taken to process and transform raw cosmic-ray neutron data into usable soil moisture datasets for eco-hydrological studies?",
+                    "Answer": "Processing involves screening the raw data to exclude unreliable measurements, applying pressure correction to the neutron data using outlined formulas, calibrating the instrument using local Soilnet data to establish the soil moisture relationship, and finally calculating hourly soil moisture values using the corrected neutron counts and established relationships.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methodologies enable the reliable calibration of cosmic-ray neutron sensors for soil moisture measurements in agricultural areas?",
+                    "Answer": "Calibration of cosmic-ray neutron sensors for soil moisture measurements is achieved by determining the N0 value, which is the count of fast neutrons under dry soil conditions. This involves collecting soil samples from the measurement area to obtain actual soil moisture content, or using dense wireless soil moisture sensors, and comparing these measurements with the corrected neutron data. The process helps establish a relationship between volumetric soil water content and neutron counts, as demonstrated by the selection of dates with distinct soil moisture conditions and averaging measurements from different depths.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How does the integration of multiple observation scales enhance the understanding of eco-hydrological processes in heterogeneous landscapes?",
+                    "Answer": "Integrating multiple observation scales enhances understanding by allowing researchers to capture eco-hydrological processes at different levels of detail and spatial coverage. This is achieved through the use of hierarchically nested instrumentation, such as eddy covariance towers, automatic meteorological stations, and remote sensing technologies like LiDAR and imaging spectrometers, as seen in the HiWATER experiment. This approach provides a comprehensive dataset that spans from localized measurements to broader landscape interactions, addressing challenges in observing multiscale processes.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the conditions necessary to effectively use cosmic-ray neutron sensing for large-scale soil moisture monitoring in arid regions?",
+                    "Answer": "Effective use of cosmic-ray neutron sensing for large-scale soil moisture monitoring in arid regions requires conditions such as minimal vegetation cover to reduce interference, consistent calibration with on-ground soil moisture measurements, and the correction of neutron data for environmental factors like atmospheric pressure. Additionally, ensuring the sensor is appropriately positioned above the soil surface and maintaining a clear measurement radius can enhance reliability, as demonstrated by its application in capturing soil moisture dynamics in the Heihe River Basin.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might researchers expect cosmic-ray neutron soil moisture measurements to effectively fill the gap between traditional point measurements and large-scale remote sensing methods?",
+                    "Answer": "Cosmic-ray neutron soil moisture measurements offer a non-intrusive, medium-scale approach that can cover a significant area with a measurement radius of approximately 300 meters, providing spatial information that bridges the scale gap between point-based methods and broad remote sensing. This approach captures regional soil moisture dynamics, offering better spatial representation than traditional methods, which are typically limited to smaller scales with poor spatial representation.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What challenges are anticipated in ensuring the reliability of soil moisture data collected via cosmic-ray neutron instruments, especially in diverse environmental conditions?",
+                    "Answer": "Challenges include the influence of hydrogen atoms found not only in soil moisture but also in lattice water, soil organic matter, vegetation, and water vapor, which can affect neutron propagation. While some influences can be mitigated by field soil moisture calibration, rapidly growing vegetation poses a correction challenge, and water vapor presence can alter detection radius, necessitating careful calibration and validation against other datasets.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Why might the continuous monitoring of soil moisture using a cosmic-ray neutron method be seen as essential for validating remote sensing soil moisture retrievals?",
+                    "Answer": "The cosmic-ray neutron method provides reliable, continuous soil moisture data over time, offering a surface validation dataset for remote sensing retrievals. This method captures soil moisture changes across the landscape, providing temporal and spatial data consistency that supports the validation of remote sensing data, which typically provides instantaneous values with limitations in temporal continuity.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What are the challenges faced in accurately measuring soil moisture using cosmic-ray neutron instruments, and how are these challenges being addressed?",
+                    "Answer": "Challenges in measuring soil moisture using cosmic-ray neutron instruments include the influence of hydrogen atoms not only in soil moisture but also in lattice water, soil organic matter, vegetation, and water vapor, which can affect the propagation of fast neutrons. These challenges are addressed by calibrating the instruments with soil moisture data, considering the effects of vegetation and lattice water, and correcting for atmospheric pressure. However, rapidly growing vegetation and water vapor still pose challenges that need further method development for correction.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I can't figure out why there are challenges in obtaining multiscale observations in eco-hydrological research.",
+                    "Answer": "Challenges in obtaining multiscale observations in eco-hydrological research are due to the lack of availability of multiscale data, which is necessary to understand processes across varying spatial and temporal scales. The HiWATER experiment aims to address these challenges by deploying a range of instruments at hierarchically nested scales, allowing for the capture of multi-scale eco-hydrological processes.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "I’m unsure about the methods used to ensure the reliability and accuracy of soil moisture data collected in arid regions.",
+                    "Answer": "To ensure the reliability and accuracy of soil moisture data in arid regions, the cosmic ray neutron method is used alongside wireless sensor networks for continuous monitoring. Calibration of the instruments is conducted using local soil moisture data, and the data processing involves correcting for atmospheric pressure and other environmental factors to derive accurate soil moisture measurements.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please explore the methodologies employed for correcting atmospheric effects on cosmic-ray soil moisture measurements and discuss their implications for data accuracy.",
+                    "Answer": "The dataset utilizes a specific atmospheric pressure correction for cosmic-ray soil moisture measurements. The correction is performed based on a formula provided in the instrument manual, which adjusts the raw fast neutron counts for atmospheric pressure variations. This process results in corrected fast neutron counts (N1C_cor), crucial for accurate soil moisture estimation.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Please investigate the challenges associated with traditional soil moisture measurement techniques and how they compare with cosmic-ray neutron methods in terms of scale and representativeness.",
+                    "Answer": "Traditional soil moisture measurement techniques, such as gravimetric, neutron probe, and capacitive methods, are often point-based and invasive, offering limited spatial representativeness. In contrast, cosmic-ray neutron methods provide a non-invasive means to measure soil moisture over a larger area (approximately a 300-meter radius), thus bridging the gap between point measurements and remote sensing scales.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please identify potential datasets that could complement cosmic-ray soil moisture observations for comprehensive hydrological studies in arid regions and describe their integration challenges.",
+                    "Answer": "Potential complementary datasets include wireless sensor network (WSN) data, which offer soil moisture and temperature readings at various depths, and meteorological data, including precipitation and air pressure. Integration challenges include synchronizing different temporal resolutions (e.g., 10-minute WSN data aggregated to hourly for consistency with cosmic-ray data) and ensuring spatial alignment with the cosmic-ray measurement footprint.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

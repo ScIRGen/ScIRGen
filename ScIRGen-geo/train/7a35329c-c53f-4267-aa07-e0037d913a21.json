@@ -1,0 +1,604 @@
+{
+    "id": "7a35329c-c53f-4267-aa07-e0037d913a21",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "China meteorological forcing dataset (1979-2015)",
+            "description": "The Chinese regional surface meteorological element data set is a set of near-surface meteorological and environmental element reanalysis data set developed by the Qinghai-Tibet Plateau Research Institute of the Chinese Academy of Sciences.  The data set is based on the existing Princeton reanalysis data, GLDAS data, GEWEX-SRB radiation data and TRMM precipitation data in the world, and is made by combining the conventional meteorological observation data of China Meteorological Administration.  The temporal resolution is 3 hours and the horizontal spatial resolution is 0.1, including 7 factors (variables) including near-surface air temperature, near-surface air pressure, near-surface air specific humidity, near-surface full wind speed, ground downward short wave radiation, ground downward long wave radiation and ground precipitation rate.\n\nThe physical meaning of each variable:\n| Meteorological Element || Variable Name || Unit || Physical Meaning\n| near-surface temperature ||temp|| K || instantaneous near-surface (2m) temperature\n| surface pressure || pres|| Pa || instantaneous surface pressure\n| specific humidity of near-surface air || shum || kg/ kg || instantaneous specific humidity of near-surface air\n| near ground full wind speed || wind || m /s || instantaneous near ground (anemometer height) full wind speed\n| downward short wave radiation || srad || W/m2 || 3-hour average (-1.5 HR ~+1.5 HR) downward short wave radiation\n| Downward Long Wave Radiation ||lrad ||W/m2 ||3-hour Average (-1.5 hr ~+1.5 hr) Downward Long Wave Radiation\n| precipitation rate ||prec||mm/hr ||3-hour average (-3.0 HR ~ 0.0 HR) precipitation rate\nFor more information, please refer to the \"User's Guide for China Meteorological Al Forcing Dataset\" published with the data.\n\nThe main changes in the latest version (01.06.0014) are:\n1. Extend the data to December 2015 (except for short-wave and long-wave data, only until October 2015; the data from November to December 2015 are interpolated based on GLDAS data, and the error may be too large);\n2. Set the minimum wind speed at 0.05 m/s;\n3. Fixed a bug in the previous radiation algorithm to make our short wave and long wave data more reasonable in the morning and evening periods.\n4. bug of precipitation data has been corrected, and the period involved in the change is 2011-2015.",
+            "instructions": "Data is stored in grid NC format, data files are stored in variable elements, and can be opened and read by programs or remote sensing software such as ArcGIS and QGIS",
+            "east": 135.0,
+            "west": 73.4,
+            "south": 18.2,
+            "north": 53.6,
+            "startTime": "1979-02-27 00:00:00",
+            "endTime": "2016-02-26 00:00:00",
+            "fileSize": 118711327937.0,
+            "cstr": "18406.11.westdc.002.2014.db",
+            "doi": "10.3972/westdc.002.2014.db",
+            "dataFormat": "NetCDF",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "YANG Kun",
+                "unitEn": "Institute of Tibetan Plateau Research, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "HE Jie",
+                "unitEn": "Institute of Tibetan Plateau Research, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Improving land surface temperature modeling for dry land of China",
+                "referenceEn": "Chen, Y.Y., Yang, K., He, J., Qin, J., Shi, J.C., Du, J.Y., &He, Q. (2011). Improving land surface temperature modeling for dry land of China. Journal of Geophysical Research, 116(15), D20104."
+            },
+            {
+                "titleEn": "Quantitative assessment of climate and human impacts on surface water resources in a typical semi-arid watershed in the middle reaches of the Yellow River from 1985 to 2006",
+                "referenceEn": "Hu, Zhidan, Wang, Lei, Wang, Zhongjing, Hong, Yang, Zheng, Hang. Quantitative assessment of climate and human impacts on surface water resources in a typical semi-arid watershed in the middle reaches of the Yellow River from 1985 to 2006. International Journal of Climatology, 2015, 35(1):97-113. doi:10.1002/joc.3965"
+            },
+            {
+                "titleEn": "Mass balance of a maritime glacier on the southeast Tibetan Plateau and its climatic sensitivity",
+                "referenceEn": "Yang, Wei, Yao, Tandong, Guo, Xiaofeng, Zhu, Meilin, Li, Shenghai, Kattel, Dambaru B.. Mass balance of a maritime glacier on the southeast Tibetan Plateau and its climatic sensitivity. Journal of Geophysical Research: Atmospheres, 2013, 118(17):9579-9594. doi:10.1002/jgrd.50760"
+            },
+            {
+                "titleEn": "Effects of anthropogenic water regulation and groundwater lateral flow on land processes",
+                "referenceEn": "Zeng, Yujin, Xie, Zhenghui, Yu, Yan, Liu, Shuang, Wang, Linying, Zou, Jing, Qin, Peihua, Jia, Binghao. Effects of anthropogenic water regulation and groundwater lateral flow on land processes. Journal of Advances in Modeling Earth Systems, 2016, :n/a-n/a. doi:10.1002/2016MS000646"
+            },
+            {
+                "titleEn": "Precipitation impacts on vegetation spring phenology on the Tibetan Plateau",
+                "referenceEn": "Shen, Miaogen, Piao, Shilong, Cong, Nan, Zhang, Gengxin, Jassens, Ivan A. Precipitation impacts on vegetation spring phenology on the Tibetan Plateau. Global Change Biology, 2015, 21(10):3647-3656. doi:10.1111/gcb.12961"
+            },
+            {
+                "titleEn": "Pediastrum sensu lato (Chlorophyceae) assemblages from surface sediments of lakes and ponds on the Tibetan Plateau",
+                "referenceEn": "Turner, Falko, Zhu, Liping, Lü, Xinmiao, Peng, Ping, Ma, Qingfeng, Wang, Junbo, Hou, Juzhi, Lin, Qiuqi, Yang, Ruimin, Frenzel, Peter. Pediastrum sensu lato (Chlorophyceae) assemblages from surface sediments of lakes and ponds on the Tibetan Plateau. Hydrobiologia, 2016, 771(1):101-118. doi:10.1007/s10750-015-2620-7"
+            },
+            {
+                "titleEn": "Climatological features and trends of extreme precipitation during 1979-2012 in Beijing, China",
+                "referenceEn": "Xu, Z. X., Chu, Q.. Climatological features and trends of extreme precipitation during 1979-2012 in Beijing, China. Proceedings of the International Association of Hydrological Sciences, 2015, 369:97-102. doi:10.5194/piahs-369-97-2015"
+            },
+            {
+                "titleEn": "Land surface model calibration through microwave data assimilation for improving soil moisture simulations",
+                "referenceEn": "Yang, Kun, Zhu, La, Chen, Yingying, Zhao, Long, Qin, Jun, Lu, Hui, Tang, Wenjun, Han, Menglei, Ding, Baohong, Fang, Nan. Land surface model calibration through microwave data assimilation for improving soil moisture simulations. Journal of Hydrology, 2016, 533:266-276. doi:10.1016/j.jhydrol.2015.12.018"
+            },
+            {
+                "titleEn": "Modeling the carbon dynamics of the dryland ecosystems in Xinjiang, China from 1981 to 2007—The spatiotemporal patterns and climate controls",
+                "referenceEn": "Li C, Zhang C, Luo G, et al. Modeling the carbon dynamics of the dryland ecosystems in Xinjiang, China from 1981 to 2007: The spatiotemporal patterns and climate controls[J]. Ecological Modelling. 2013."
+            },
+            {
+                "titleEn": "Modeling the grazing effect on dry grassland carbon cycling with Biome-BGC model",
+                "referenceEn": "Han, Qifei, Luo, Geping, Li, Chaofan, Xu, WenQiang. Modeling the grazing effect on dry grassland carbon cycling with Biome-BGC model. Ecological Complexity, 2014, 17:149-157. doi:10.1016/j.ecocom.2013.12.002"
+            },
+            {
+                "titleEn": "Melt season hydrological characteristics of the Parlung No. 4 Glacier, in Gangrigabu Mountains, south-east Tibetan Plateau",
+                "referenceEn": "Li, Shenghai, Yao, Tandong, Yang, Wei, Yu, Wusheng, Zhu, Meilin. Melt season hydrological characteristics of the Parlung No. 4 Glacier, in Gangrigabu Mountains, south-east Tibetan Plateau. Hydrological Processes, 2016, 30(8):1171-1191. doi:10.1002/hyp.10696"
+            },
+            {
+                "titleEn": "Land degradation dynamic in the first decade of twenty-first century in the Beijing–Tianjin dust and sandstorm source region",
+                "referenceEn": "Li, Xiaosong, Wang, Hongyan, Wang, Jinying, Gao, Zhihai. Land degradation dynamic in the first decade of twenty-first century in the Beijing–Tianjin dust and sandstorm source region. Environmental Earth Sciences, 2015, 74(5):4317-4325. doi:10.1007/s12665-015-4507-3"
+            },
+            {
+                "titleEn": "Temperature, precipitation, and insolation effects on autumn vegetation phenology in temperate China",
+                "referenceEn": "Liu, Qiang, Fu, Yongshuo H., Zeng, Zhenzhong, Huang, Mengtian, Li, Xiran, Piao, Shilong. Temperature, precipitation, and insolation effects on autumn vegetation phenology in temperate China. Global Change Biology, 2016, 22(2):644-655. doi:10.1111/gcb.13081"
+            },
+            {
+                "titleEn": "Analysis of the Temporal and Spatial Variation Characteristics of Potential Evapotranspiration in the Heihe River Basin",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Noah Modelling of the Permafrost Distribution and Characteristics in the West Kunlun Area, Qinghai-Tibet Plateau, China",
+                "referenceEn": "Chen, Hao, Nan, Zhuotong, Zhao, Lin, Ding, Yongjian, Chen, Ji, Pang, Qiangqiang. Noah Modelling of the Permafrost Distribution and Characteristics in the West Kunlun Area, Qinghai-Tibet Plateau, China. Permafrost and Periglacial Processes, 2015, 26(2):160-174. doi:10.1002/ppp.1841"
+            },
+            {
+                "titleEn": "Impacts of Deforestation and Climate Variability on Terrestrial Evapotranspiration in Subarctic China",
+                "referenceEn": "Yao, Yunjun, Liang, Shunlin, Cheng, Jie, Lin, Yi, Jia, Kun, Liu, Meng. Impacts of Deforestation and Climate Variability on Terrestrial Evapotranspiration in Subarctic China. Forests, 2014, 5(10):2542-2560. doi:10.3390/f5102542"
+            },
+            {
+                "titleEn": "Exploring the water storage changes in the largest lake (Selin Co) over the Tibetan Plateau during 2003–2012 from a basin-wide hydrological modeling",
+                "referenceEn": "Zhou, Jing, Wang, Lei, Zhang, Yinsheng, Guo, Yanhong, Li, Xiuping, Liu, Wenbin. Exploring the water storage changes in the largest lake (Selin Co) over the Tibetan Plateau during 2003–2012 from a basin-wide hydrological modeling. Water Resources Research, 2015, 51(10):8060-8086. doi:10.1002/2014WR015846"
+            },
+            {
+                "titleEn": "Quantifying nitrogen leaching response to fertilizer additions in China's cropland",
+                "referenceEn": "Gao, Shuoshuo, Xu, Peng, Zhou, Feng, Yang, Hui, Zheng, Chunmiao, Cao, Wei, Tao, Shu, Piao, Shilong, Zhao, Yue, Ji, Xiaoyan, Shang, Ziyin, Chen, Minpeng. Quantifying nitrogen leaching response to fertilizer additions in China's cropland. Environmental Pollution, 2016, 211:241-251. doi:10.1016/j.envpol.2016.01.010"
+            },
+            {
+                "titleEn": "Centennial-scale climate variability during the past 2000 years on the central Tibetan Plateau",
+                "referenceEn": "Li, Xiumei, Liang, Jie, Hou, Juzhi, Zhang, Wenjing. Centennial-scale climate variability during the past 2000 years on the central Tibetan Plateau. The Holocene, 2015, :0959683615572852. doi:10.1177/0959683615572852"
+            },
+            {
+                "titleEn": "Modeling the land surface water and energy cycles of a mesoscale watershed in the central Tibetan Plateau during summer with a distributed hydrological model",
+                "referenceEn": "Xue B, Wang L, Yang K, et al. Modeling the land surface water and energy cycles of a mesoscale watershed in the central Tibetan Plateau during summer with a distributed hydrological model[J]. Journal of Geophysical Research: Atmospheres. 2013."
+            },
+            {
+                "titleEn": "Simulated change in the near-surface soil freeze/thaw cycle on the Tibetan Plateau from 1981 to 2010",
+                "referenceEn": "Guo, Donglin, Wang, Huijun. Simulated change in the near-surface soil freeze/thaw cycle on the Tibetan Plateau from 1981 to 2010. Chinese Science Bulletin, 2014, 59(20):2439-2448. doi:10.1007/s11434-014-0347-x"
+            },
+            {
+                "titleEn": "Improving soil organic carbon parameterization of land surface model for cold regions in the Northeastern Tibetan Plateau, China",
+                "referenceEn": "Sun, Shaobo, Chen, Baozhang, Ge, Mengyu, Qu, Junfeng, Che, Tao, Zhang, Huifang, Lin, Xiaofeng, Che, Mingliang, Zhou, Ziyuan, Guo, Lifeng, Wang, Bingyang. Improving soil organic carbon parameterization of land surface model for cold regions in the Northeastern Tibetan Plateau, China. Ecological Modelling, 2016, 330:1-15. doi:10.1016/j.ecolmodel.2016.03.014"
+            },
+            {
+                "titleEn": "Effects of Roughness Length Parameterizations on Regional-Scale Land Surface Modeling of Alpine Grasslands in the Yangtze River Basin",
+                "referenceEn": "Huang, Ying, Salama, M. Suhyb, Su, Zhongbo, van der Velde, Rogier, Zheng, Donghai, Krol, Maarten S., Hoekstra, Arjen Y., Zhou, Yunxuan. Effects of Roughness Length Parameterizations on Regional-Scale Land Surface Modeling of Alpine Grasslands in the Yangtze River Basin. Journal of Hydrometeorology, 2016, 17(4):1069-1085. doi:10.1175/JHM-D-15-0049.1"
+            },
+            {
+                "titleEn": "Dynamic and dry/wet variation of climate in the potential extent of desertification in China during 1981–2010",
+                "referenceEn": "Sun, Bin, Gao, Zhihai, Li, Zengyuan, Wang, Hongyan, Li, Xiaosong, Wang, Bengyu, Wu, Junjun. Dynamic and dry/wet variation of climate in the potential extent of desertification in China during 1981–2010. Environmental Earth Sciences, 2014, 73(7):3717-3729. doi:10.1007/s12665-014-3659-x"
+            },
+            {
+                "titleEn": "Evaporation variability of Nam Co Lake in the Tibetan Plateau and its role in recent rapid lake expansion",
+                "referenceEn": "Ma, N., Jozsef, S., Niu, G.Y., Zhang, Y.S., Zhang, T., Wang, B.B., & Wu, Y.H. (2016). Evaporation variability of Nam Co Lake in the Tibetan Plateau and its role in recent rapid lake expansion. Journal of Hydrology, 537, 27-35. doi:10.1016/j.jhydrol.2016.03.030"
+            },
+            {
+                "titleEn": "Evidence for a recent warming and wetting in the source area of the Yellow River (SAYR) and its hydrological impacts",
+                "referenceEn": "Tian, Hui, Lan, Yongchao, Wen, Jun, Jin, Huijun, Wang, Chenghai, Wang, Xin, Kang, Yue. Evidence for a recent warming and wetting in the source area of the Yellow River (SAYR) and its hydrological impacts. Journal of Geographical Sciences, 2015, 25(6):643-668. doi:10.1007/s11442-015-1194-7"
+            },
+            {
+                "titleEn": "Trends of surface humidity and temperature during 1951-2012 in Beijing, China",
+                "referenceEn": "Chu, Q., Xu, Z., Peng, D., Yang, X., Yang, G.. Trends of surface humidity and temperature during 1951-2012 in Beijing, China. Proceedings of the International Association of Hydrological Sciences, 2015, 368:126-131. doi:10.5194/piahs-368-126-2015"
+            },
+            {
+                "titleEn": "A Long-Term Land Surface Hydrologic Fluxes and States Dataset for China",
+                "referenceEn": "Zhang, Xue-Jun, Tang, Qiuhong, Pan, Ming, Tang, Yin. A Long-Term Land Surface Hydrologic Fluxes and States Dataset for China. Journal of Hydrometeorology, 2014, 15(5):2067-2084. doi:10.1175/JHM-D-13-0170.1"
+            },
+            {
+                "titleEn": "Effects of surface wind speed decline on modeled hydrological conditions in China",
+                "referenceEn": "Liu, X., Zhang, X.-J., Tang, Q., Zhang, X.-Z.. Effects of surface wind speed decline on modeled hydrological conditions in China. Hydrol. Earth Syst. Sci., 2014, 18(8):2803-2813. doi:10.5194/hess-18-2803-2014"
+            },
+            {
+                "titleEn": "Spatial and Decadal Variations in Potential Evapotranspiration of China Based on Reanalysis Datasets during 1982–2010",
+                "referenceEn": "Yao, Yunjun, Zhao, Shaohua, Zhang, Yuhu, Jia, Kun, Liu, Meng. Spatial and Decadal Variations in Potential Evapotranspiration of China Based on Reanalysis Datasets during 1982–2010. Atmosphere, 2014, 5(4):737-754. doi:10.3390/atmos5040737"
+            },
+            {
+                "titleEn": "On downward shortwave and longwave radiations over high altitude regions: Observation and modeling in the Tibetan Plateau",
+                "referenceEn": "Yang, K., He, J., Tang, W.J., Qin, J., & Cheng, C. (2010). On downward shortwave and longwave radiations over high altitude regions: Observation and modeling in the Tibetan Plateau. Agric. Forest. Meteorol, 150, 38-46."
+            },
+            {
+                "titleEn": "Impact of climatic factors on permafrost of the Qinghai–Xizang Plateau in the time-frequency domain",
+                "referenceEn": "Gao, Siru, Wu, Qingbai, Zhang, Zhongqiong, Xu, Xiaoming. Impact of climatic factors on permafrost of the Qinghai–Xizang Plateau in the time-frequency domain. Quaternary International, 2015, 374:110-117. doi:10.1016/j.quaint.2015.02.036"
+            },
+            {
+                "titleEn": "Recent accelerating mass loss of southeast Tibetan glaciers and the relationship with changes in macroscale atmospheric circulations",
+                "referenceEn": "Yang, Wei, Guo, Xiaofeng, Yao, Tandong, Zhu, Meilin, Wang, Yongjie. Recent accelerating mass loss of southeast Tibetan glaciers and the relationship with changes in macroscale atmospheric circulations. Climate Dynamics, 2015, :1-11. doi:10.1007/s00382-015-2872-y"
+            },
+            {
+                "titleEn": "The impact of lake effects on the temporal and spatial distribution of precipitation in the Nam Co basin, Tibetan Plateau",
+                "referenceEn": "Dai, Yufeng, Yao, Tandong, Li, Xiangyu, Ping, Fan. The impact of lake effects on the temporal and spatial distribution of precipitation in the Nam Co basin, Tibetan Plateau. Quaternary International, 2016, . doi:10.1016/j.quaint.2016.01.075"
+            },
+            {
+                "titleEn": "Simulation of permafrost and seasonally frozen ground conditions on the Tibetan Plateau, 1981–2010",
+                "referenceEn": "Guo, Donglin, Wang, Huijun. Simulation of permafrost and seasonally frozen ground conditions on the Tibetan Plateau, 1981–2010. Journal of Geophysical Research: Atmospheres, 2013, 118(11):5216-5230. doi:10.1002/jgrd.50457"
+            },
+            {
+                "titleEn": "Strong impacts of daily minimum temperature on the green-up date and summer greenness of the Tibetan Plateau",
+                "referenceEn": "Shen, Miaogen, Piao, Shilong, Chen, Xiaoqiu, An, Shuai, Fu, Yongshuo H., Wang, Shiping, Cong, Nan, Janssens, Ivan A.. Strong impacts of daily minimum temperature on the green-up date and summer greenness of the Tibetan Plateau. Global Change Biology, 2016, :n/a-n/a. doi:10.1111/gcb.13301"
+            },
+            {
+                "titleEn": "Ensemble simulation of land evapotranspiration in China based on a multi-forcing and multi-model approach",
+                "referenceEn": "Liu, Jianguo, Jia, Binghao, Xie, Zhenghui, Shi, Chunxiang. Ensemble simulation of land evapotranspiration in China based on a multi-forcing and multi-model approach. Advances in Atmospheric Sciences, 2016, 33(6):673-684. doi:10.1007/s00376-016-5213-0"
+            },
+            {
+                "titleEn": "Vegetation and soil responses to livestock grazing in Central Asian grasslands: a review of Chinese literature",
+                "referenceEn": "Wang, Yun, Wesche, Karsten. Vegetation and soil responses to livestock grazing in Central Asian grasslands: a review of Chinese literature. Biodiversity and Conservation, 2016, :1-20. doi:10.1007/s10531-015-1034-1"
+            },
+            {
+                "titleEn": "Energy- and mass-balance comparison between Zhadang and Parlung No. 4 glaciers on the Tibetan Plateau",
+                "referenceEn": "Zhu, Meilin, Yao, Tandong, Yang, Wei, Maussion, Fabien, Huintjes, Eva, Li, Shenghai. Energy- and mass-balance comparison between Zhadang and Parlung No. 4 glaciers on the Tibetan Plateau. Journal of Glaciology, 2015, 61(227):595-607. doi:10.3189/2015JoG14J206"
+            },
+            {
+                "titleEn": "Did ecological engineering projects have a significant effect on large-scale vegetation restoration in Beijing-Tianjin Sand Source Region, China? A remote sensing approach",
+                "referenceEn": "Li, Xiaosong, Wang, Hongyan, Zhou, Shufang, Sun, Bin, Gao, Zhihai. Did ecological engineering projects have a significant effect on large-scale vegetation restoration in Beijing-Tianjin Sand Source Region, China? A remote sensing approach. Chinese Geographical Science, 2016, 26(2):216-228. doi:10.1007/s11769-016-0801-6"
+            },
+            {
+                "titleEn": "Timing of rice maturity in China is affected more by transplanting date than by climate change",
+                "referenceEn": "Zhao, Hongfang, Fu, Yongshuo H., Wang, Xuhui, Zhao, Chuang, Zeng, Zhenzhong, Piao, Shilong. Timing of rice maturity in China is affected more by transplanting date than by climate change. Agricultural and Forest Meteorology, 2016, 216:215-220. doi:10.1016/j.agrformet.2015.11.001"
+            },
+            {
+                "titleEn": "A comparative analysis of the Global Land Cover 2000 and MODIS land cover data sets",
+                "referenceEn": "Giri C, Zhu Z, Reed B. A comparative analysis of the Global Land Cover 2000 and MODIS land cover data sets. Remote sensing of environment, 2005, 94(1): 123-132."
+            },
+            {
+                "titleEn": "Cytochrome b gene selection of subterranean rodent Gansu zokor Eospalax cansus (Rodentia, Spalacidae)",
+                "referenceEn": "Zhang, Tongzuo, Lin, Gonghua, Nevo, Eviatar, Yang, Chuanhua, Su, Jianping. Cytochrome b gene selection of subterranean rodent Gansu zokor Eospalax cansus (Rodentia, Spalacidae). Zoologischer Anzeiger - A Journal of Comparative Zoology, 2013, 252(1):118-122. doi:10.1016/j.jcz.2012.04.002"
+            },
+            {
+                "titleEn": "Water level changes of inland lakes in the central-southern Tibetan Plateau from 1972 to 2012.",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Analysis of the applicability of four sets of precipitation data in the upper reaches of the Yarkand River in the Karakoram Mountains.",
+                "referenceEn": "None"
+            },
+            {
+                "titleEn": "Sediment dynamics and hydrologic events affecting small lacustrine systems on the southern-central Tibetan Plateau – the example of TT Lake",
+                "referenceEn": "Ahlborn, Marieke, Haberzettl, Torsten, Wang, Junbo, Alivernini, Mauro, Schlütz, Frank, Schwarz, Anja, Su, Youliang, Frenzel, Peter, Daut, Gerhard, Zhu, Liping, Mäusbacher, Roland. Sediment dynamics and hydrologic events affecting small lacustrine systems on the southern-central Tibetan Plateau – the example of TT Lake. The Holocene, 2014, :0959683614561885. doi:10.1177/0959683614561885"
+            },
+            {
+                "titleEn": "Improving simulation of soil moisture in China using a multiple meteorological forcing ensemble approach",
+                "referenceEn": "Liu, J.-G., Xie, Z.-H.. Improving simulation of soil moisture in China using a multiple meteorological forcing ensemble approach. Hydrol. Earth Syst. Sci., 2013, 17(9):3355-3369. doi:10.5194/hess-17-3355-2013"
+            },
+            {
+                "titleEn": "Impacts of Noah model physics on catchment-scale runoff simulations",
+                "referenceEn": "Zheng, Donghai, Van der Velde, Rogier, Su, Zhongbo, Wen, Jun, Wang, Xin, Booij, Martijn J., Hoekstra, Arjen Y., Lv, Shihua, Zhang, Yu, Ek, Michael B.. Impacts of Noah model physics on catchment-scale runoff simulations. Journal of Geophysical Research: Atmospheres, 2016, 121(2):2015JD023695. doi:10.1002/2015JD023695"
+            },
+            {
+                "titleEn": "No evidence of facilitation collapse in the Tibetan plateau",
+                "referenceEn": "Pugnaire, Francisco I., Zhang, Lin, Li, Ruicheng, Luo, Tianxiang. No evidence of facilitation collapse in the Tibetan plateau. Journal of Vegetation Science, 2015, 26(2):233-242. doi:10.1111/jvs.12233"
+            },
+            {
+                "titleEn": "Comparison of Downscaled Precipitation Data over a Mountainous Watershed: A Case Study in the Heihe River Basin",
+                "referenceEn": "Pan, Xiaoduo, Li, Xin, Yang, Kun, He, Jie, Zhang, Yanlin, Han, Xujun. Comparison of Downscaled Precipitation Data over a Mountainous Watershed: A Case Study in the Heihe River Basin. Journal of Hydrometeorology, 2014, 15(4):1560-1574. doi:10.1175/JHM-D-13-0202.1"
+            },
+            {
+                "titleEn": "Development of a 10-year (2001–2010) 0.1° data set of land-surface energy balance for mainland China",
+                "referenceEn": "Chen, X., Su, Z., Ma, Y., Liu, S., Yu, Q., Xu, Z.. Development of a 10-year (2001–2010) 0.1° data set of land-surface energy balance for mainland China. Atmos. Chem. Phys., 2014, 14(23):13097-13117. doi:10.5194/acp-14-13097-2014"
+            },
+            {
+                "titleEn": "Observation and simulation of lake-air heat and water transfer processes in a high-altitude shallow lake on the Tibetan Plateau",
+                "referenceEn": "Wang, Binbin, Ma, Yaoming, Chen, Xuelong, Ma, Weiqiang, Su, Zhongbo, Menenti, Massimo. Observation and simulation of lake-air heat and water transfer processes in a high-altitude shallow lake on the Tibetan Plateau. Journal of Geophysical Research: Atmospheres, 2015, 120(24):2015JD023863. doi:10.1002/2015JD023863"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Pressure"
+            },
+            {
+                "nameEn": "Humidity/Dryness"
+            },
+            {
+                "nameEn": "Radiation"
+            },
+            {
+                "nameEn": "Winds"
+            },
+            {
+                "nameEn": "wind speed"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "1979-2015",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Accurate and up-to-date global land cover data sets are necessary for various global change research studies including climate change, biodiversity conservation, ecosystem assessment, and environmental modeling. In recent years, substantial advancement has been achieved in generating such data products. Two new global land cover data sets, Global Land Cover 2000 (GLC-2000) and MODerate resolution Imaging Spectrometer (MODIS) global land cover (MODIS land cover) have recently became available. The Joint Research Center (JRC) of the European Commission (EC) implemented the GLC-2000 project in partnership with more than 30 partner institutions around the world, using Satellite Pour l’Observation de la Terre (SPOT) VEGETATION 1-km satellite data (Fritz et al., 2003). Boston University prepared the MODIS land cover data using MODIS 1-km satellite data on board the Terra satellite (Friedl et al., 2002). Both data sets were prepared with the same fundamental goal: to improve our understanding of the extent and distribution of the major land cover types of the world. The information generated can be used for various applications including ecosystem and biodiversity assessments, climate change studies, and environmental modeling (Brown, Loveland, Ohlen, & Zhu, 1999; Giri, Defourny, & Shrestha, 2003; Loveland & Belward, 1997; Loveland, Estes, & Scepan, 1999; Reed, 1997)."
+            ],
+            "research objective": [
+                "We compared the recently available Global Land Cover 2000 (GLC-2000) and MODerate resolution Imaging Spectrometer (MODIS) global land cover data to evaluate the similarities and differences in methodologies and results, and to identify areas of spatial agreement and disagreement. Learning from past experience and building on the existing infrastructure (e.g., regional networks), further research is necessary to (1) reduce ambiguity in land cover definitions, (2) increase availability of improved spatial, spectral, radiometric, and geometric resolution satellite data, and (3) develop advanced classification algorithms."
+            ],
+            "challenges": [
+                "Yet, we are far from producing geospatially consistent high-quality data at an operational level."
+            ],
+            "methods": [
+                "We assume that the time difference of approximately 10 months between these two data sets is negligible in our comparative analysis. The GLC-2000 v1.1 data were downloaded from the worldwide web at URL http://www.gvm.sai.jrc.it/glc2000/ (last accessed 24 February 2004). We acquired the data in the Geographic Coordinate projection system, and reprojected it to Interrupted Goode Homolosine projection system. The MODIS land cover data were acquired from the Earth Observing System (EOS) Data Gateway, http://edcimswww.cr.usgs.gov/pub/imswelcome/ (last accessed 12 February 2004). The data, which are available in Hierarchical Data Format (HDF), were downloaded as tiles in Interrupted Goode Homolosine projection system. The individual tiles were mosaicked together for global coverage using MODIS Reprojection Tool 3.0 (available at URL http://lpdaac2.usgs.gov/landdaac/tools/modis/index.asp ). We used the IGBP layer of the MODIS land cover which contains 17 land cover classes. The latter was aggregated into 17 classes to make it consistent with the MODIS land cover classification system. Global area totals were computed for aggregated land cover classes and also for the IGBP classes. Pixel-by-pixel comparisons also were performed between the generalized (with eight classes) GLC-2000 and MODIS land cover data. The percent agreement and disagreement were calculated using the following equations: Overall percent agreement = (Σr i=1 Xi Yi / C18/C19) × 100 and Overall percent disagreement = 1 - (Σr i=1 Xi Yi / C18/C19) × 100."
+            ],
+            "dataset": [
+                "These two global land cover data sets were prepared using different data sources, classification systems, and methodologies, but using the same spatial resolution (i.e., 1 km) satellite data."
+            ],
+            "findings": [
+                "Our analysis shows a general agreement at the class aggregate level except for savannas/shrublands, and wetlands. The disagreement, however, increases when comparing detailed land cover classes. Similarly, percent agreement between the two data sets was found to be highly variable among biomes. The identified areas of spatial agreement and disagreement will be useful for both data producers and users."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Concept Completion": [
+                {
+                    "Question": "Who are the key institutions involved in developing datasets related to high temporal and spatial resolution meteorological elements in China?",
+                    "Answer": "Institute of Tibetan Plateau Research Chinese Academy of Sciences",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What are the primary data sources used for creating high-resolution meteorological datasets in China?",
+                    "Answer": "Princeton reanalysis data, GLDAS data, GEWEX-SRB radiation data, TRMM precipitation data, conventional meteorological observation data from the China Meteorological Administration",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "When were the latest updates or extensions made to the high-resolution meteorological dataset for China, and what changes were introduced?",
+                    "Answer": "December 2015",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method that integrates multiple international reanalysis datasets and local meteorological observations for generating high-resolution climate data?",
+                    "Answer": "An example of such a method is the development of the China Meteorological Forcing Dataset, which integrates international reanalysis datasets like Princeton, GLDAS, GEWEX-SRB, and TRMM precipitation data with Chinese meteorological agency observations to create a high-resolution dataset with a three-hour temporal resolution and 0.1° spatial resolution.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What is an example of a challenge faced when creating consistent high-quality global land cover datasets using different satellite data sources and methodologies?",
+                    "Answer": "A challenge is illustrated by the comparison of Global Land Cover 2000 and MODIS land cover data, which were prepared using different data sources, classification systems, and methodologies. Despite using the same spatial resolution, there were disagreements in detailed land cover classes, highlighting the difficulty in achieving geospatial consistency.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Could you provide an example of how errors in a meteorological dataset were identified and corrected during its development?",
+                    "Answer": "An example of error correction is the revision made to the China Meteorological Forcing Dataset, where a bug in the radiation algorithm was corrected to make shortwave and longwave radiation data more reasonable during dawn and dusk. Additionally, precipitation data errors were corrected for the period between 2011 and 2015.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics that define the spatial and temporal resolution of a meteorological dataset in this domain?",
+                    "Answer": "3 hours, 0.1°, near-surface air temperature, surface pressure, near-surface specific humidity, near-surface wind speed, downward shortwave radiation, downward longwave radiation, precipitation rate",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What specific attributes or variables are typically included in a meteorological dataset to assess climate change impacts?",
+                    "Answer": "near-surface air temperature, surface pressure, near-surface specific humidity, near-surface wind speed, downward shortwave radiation, downward longwave radiation, precipitation rate",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the temporal resolution of the meteorological dataset for the China region?",
+                    "Answer": "3 hours",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many meteorological variables are included in the China regional dataset?",
+                    "Answer": "7",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the spatial resolution of the ground meteorological elements dataset for the China region?",
+                    "Answer": "0.1°",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is meant by 'high temporal and spatial resolution' in the context of meteorological datasets?",
+                    "Answer": "In the context of meteorological datasets, 'high temporal and spatial resolution' refers to data that is collected at frequent time intervals and at a fine spatial granularity. For example, in the dataset mentioned, the temporal resolution is 3 hours, and the spatial resolution is 0.1 degrees, which allows for detailed tracking of weather patterns over time and across small geographical areas.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is the significance of using 'reanalysis data' in meteorological studies?",
+                    "Answer": "Reanalysis data is significant in meteorological studies as it integrates past observational data from various sources into a consistent and comprehensive dataset. This approach allows for the creation of a complete picture of historical weather conditions, which can be used for climate research, weather prediction, and environmental monitoring. In the field mentioned, reanalysis data is used to create a meteorological dataset by combining international datasets and national observational data.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What does the term 'physical meaning' of a meteorological variable imply in data collection?",
+                    "Answer": "The 'physical meaning' of a meteorological variable refers to the real-world atmospheric or environmental condition that the variable represents. In data collection, this involves defining the specific aspect of the weather or environment being measured, such as temperature, pressure, humidity, wind speed, radiation, or precipitation rate. Each variable in the dataset mentioned has a defined physical meaning which explains the atmospheric condition it measures, such as 'instantaneous near-surface temperature' or '3-hour average downward shortwave radiation'.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the data collection methods for the China Meteorological Forcing Dataset compare to those employed for global land cover datasets like GLC-2000 and MODIS?",
+                    "Answer": "The China Meteorological Forcing Dataset uses a combination of international reanalysis datasets and local meteorological observation data to achieve high temporal and spatial resolution, focusing on meteorological and environmental elements. In contrast, global land cover datasets like GLC-2000 and MODIS utilize satellite data processed with different classification systems and methodologies to capture land cover types, both applying a 1 km spatial resolution.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What insights can be drawn from the use of multiple international datasets like Princeton reanalysis, GLDAS, GEWEX-SRB, and TRMM in creating a comprehensive meteorological dataset for a specific region?",
+                    "Answer": "The integration of multiple international datasets allows for a more robust and comprehensive representation of meteorological conditions by leveraging diverse data sources. This can enhance the spatial and temporal resolution and accuracy of the dataset, provide a more nuanced understanding of regional climate patterns, and improve the reliability of the data used for environmental modeling and climate change studies.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges in creating a high temporal and spatial resolution meteorological dataset for the China region?",
+                    "Answer": "Challenges in creating a high temporal and spatial resolution meteorological dataset for the China region can arise from several factors, including the need to integrate various international reanalysis data sources like Princeton, GLDAS, GEWEX-SRB, and TRMM with local observations from the China Meteorological Administration. Ensuring consistency and accuracy across these diverse datasets, particularly in terms of spatial resolution (0.1°) and temporal resolution (3 hours), can be complex. Additionally, correcting errors such as those found in the radiation algorithm and precipitation data further complicates the creation of a reliable dataset.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What underlying causes might lead to variability in the spatial agreement of land cover classifications between different global datasets?",
+                    "Answer": "Variability in spatial agreement of land cover classifications between different global datasets, such as GLC-2000 and MODIS, can be attributed to differences in data sources, classification systems, and methodologies. Although both datasets use a 1 km spatial resolution, discrepancies can occur due to differing satellite data inputs, such as SPOT VEGETATION for GLC-2000 and MODIS for the MODIS dataset. Furthermore, the aggregation of land cover classes to achieve consistency and the inherent differences in classification algorithms contribute to variability, particularly in biomes such as savannas/shrublands and wetlands.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why might errors in meteorological data collection and analysis be more pronounced during certain time periods?",
+                    "Answer": "Errors in meteorological data collection and analysis can be more pronounced during certain time periods due to issues such as algorithm bugs or data interpolation. For example, in the dataset discussed, a bug in the radiation algorithm affected data accuracy during dawn and dusk, leading to less reliable shortwave and longwave radiation data during these periods. Additionally, the reliance on interpolated GLDAS data for the months of November and December 2015, due to missing data, could introduce larger errors in those periods compared to others with complete datasets.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential outcomes of integrating multiple international reanalysis datasets with national meteorological observation data on the precision of meteorological variables in regional datasets?",
+                    "Answer": "The integration of multiple international reanalysis datasets with national meteorological observation data can lead to improved precision of meteorological variables, allowing for more accurate assessments of near-surface temperature, pressure, humidity, wind speed, shortwave and longwave radiation, and precipitation rates. This methodology enhances spatial and temporal resolution, providing more detailed insights into regional climate patterns and aiding various environmental applications.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the possible consequences of addressing bugs and algorithm improvements in the generation of meteorological datasets on the usability and reliability of these datasets?",
+                    "Answer": "Addressing bugs and implementing algorithm improvements in the generation of meteorological datasets can significantly enhance their usability and reliability. It can result in more accurate representation of meteorological phenomena, especially during critical periods such as dawn and dusk, and reduce errors in precipitation data over specific time frames. These efforts ensure that the datasets remain a valuable tool for climate research and environmental modeling.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the primary objective of integrating international reanalysis data with local meteorological observations in the development of a dataset related to meteorological elements in China?",
+                    "Answer": "The primary objective is to create a comprehensive and accurate reanalysis dataset that provides high temporal and spatial resolution data for various meteorological elements in China, enhancing the understanding of regional climate and environmental conditions.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it important to extend the temporal coverage of a meteorological dataset to include data up to 2015, despite potential discrepancies in radiation data?",
+                    "Answer": "Extending the temporal coverage ensures that the dataset remains relevant and useful for long-term climate and environmental studies, while addressing potential discrepancies by integrating data through interpolation methods to maintain continuity.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the intended benefits of comparing different global land cover datasets to identify areas of spatial agreement and disagreement?",
+                    "Answer": "The intended benefits include improving the understanding of land cover distribution, enhancing data accuracy, and providing valuable insights for data producers and users to refine classification algorithms and methodologies for better environmental modeling and assessment.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What are the steps involved in integrating different meteorological data sources to create a high-resolution dataset for regional climate analysis?",
+                    "Answer": "The integration involves using international reanalysis datasets such as Princeton, GLDAS, GEWEX-SRB, and TRMM precipitation datasets as background fields. These are then merged with conventional meteorological observation data from the China Meteorological Administration to produce the dataset, ensuring a temporal resolution of 3 hours and a spatial resolution of 0.1°.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "How can potential errors be minimized when extending the temporal coverage of meteorological datasets?",
+                    "Answer": "To minimize potential errors, especially when extending data coverage, interpolation techniques based on existing datasets like GLDAS can be employed. However, it is crucial to acknowledge the potential for increased error margins, as was the case for shortwave and longwave data extended for November to December 2015. Additionally, algorithm improvements, such as correcting radiation data bugs, can enhance data reliability.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What procedural steps are taken to ensure consistency and accuracy in the wind speed measurements within a meteorological dataset?",
+                    "Answer": "To ensure consistency and accuracy in wind speed measurements, a minimum wind speed value is set, such as 0.05 m/s, to avoid underestimations. Regular updates and corrections, such as fixing bugs related to data from 2011-2015, help maintain the accuracy and consistency of the data.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methodologies enable the integration of diverse meteorological data sources to create a high-resolution dataset for regional climate analysis?",
+                    "Answer": "The integration of diverse meteorological data sources, such as Princeton reanalysis data, GLDAS data, GEWEX-SRB radiation data, and TRMM precipitation data, with conventional meteorological observation data from the China Meteorological Administration, enables the creation of a high-resolution dataset for regional climate analysis.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "How do advancements in satellite data processing and classification systems facilitate the generation of consistent global land cover datasets?",
+                    "Answer": "Advancements in satellite data processing, such as the use of MODIS 1-km satellite data and improved classification algorithms, facilitate the generation of consistent global land cover datasets by allowing for better spatial, spectral, radiometric, and geometric resolution, as demonstrated in the creation of the MODIS land cover data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways can fixing computational bugs enhance the accuracy of meteorological data, particularly in radiation and precipitation variables?",
+                    "Answer": "Fixing computational bugs can enhance the accuracy of meteorological data by making radiation data more reasonable during dawn and dusk periods and correcting precipitation data, as evidenced by improvements in the dataset for the period 2011-2015.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might there be discrepancies in the data collected from various meteorological observation stations when integrating them into a regional dataset?",
+                    "Answer": "Discrepancies in data collection from meteorological observation stations can arise due to differences in measurement methodologies, instrument calibration, and data recording practices, which may affect the integration and consistency of the regional dataset.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What could be some reasons for the difficulty in achieving geospatially consistent high-quality data in operational settings?",
+                    "Answer": "Achieving geospatially consistent high-quality data can be challenging due to factors such as variations in data sources, classification systems, and methodologies, as well as the need for improved spatial, spectral, radiometric, and geometric resolution satellite data.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "How would you evaluate the effectiveness of using international reanalysis data as a background field for creating a dataset with high temporal and spatial resolution in the field of meteorological research?",
+                    "Answer": "Using international reanalysis data as a background field can be considered effective for creating high-resolution datasets, as it allows the integration of globally recognized and validated data sources with local observational data, enhancing the spatial and temporal detail and reliability of the dataset.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the potential challenges you foresee in maintaining the accuracy of a meteorological dataset extended to more recent years, given the changes and updates in data collection methodologies?",
+                    "Answer": "Maintaining accuracy in an extended meteorological dataset could be challenging due to potential discrepancies introduced by methodological updates, data interpolation for missing periods, and the integration of diverse data sources, which may lead to increased errors or biases.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "In your opinion, what are the key considerations for ensuring high-quality data when merging remote sensing data with ground-based meteorological observations?",
+                    "Answer": "Key considerations for ensuring high-quality data include careful calibration of remote sensing data with ground observations, managing discrepancies in temporal and spatial resolution, and addressing potential biases introduced during the merging process through rigorous validation and quality control procedures.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how different data sources and methodologies impact the consistency and quality of high-resolution meteorological datasets.",
+                    "Answer": "The 中国区域高时空分辨率地面气象要素驱动数据集 integrates various international reanalysis datasets and Chinese meteorological observation data, which may affect consistency and quality due to differences in data sources, classification systems, and methodologies.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I'm unsure about the significance of correcting bugs in radiation algorithms and precipitation data for the accuracy of meteorological datasets.",
+                    "Answer": "Correcting bugs in radiation algorithms and precipitation data, as seen in the latest version of the dataset, is crucial for improving the accuracy of meteorological datasets, especially during critical periods like dawn and dusk.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "I can't make sense of how spatial and temporal resolutions influence the effectiveness of meteorological and environmental models using these datasets.",
+                    "Answer": "The dataset's high temporal resolution of 3 hours and spatial resolution of 0.1° enhance its effectiveness for meteorological and environmental modeling by providing detailed and timely data inputs for analysis.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please summarize the data collection techniques and methodologies used for generating high temporal and spatial resolution meteorological datasets in China.",
+                    "Answer": "The meteorological dataset for China was developed using reanalysis of existing international data sets such as Princeton reanalysis, GLDAS, GEWEX-SRB radiation data, and TRMM precipitation data. These were combined with conventional meteorological observations from the China Meteorological Administration. The dataset was created with a temporal resolution of 3 hours and a spatial resolution of 0.1°, capturing seven key meteorological and environmental variables.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Please discuss potential datasets that could be used in conjunction with meteorological data to enhance research in climate change, biodiversity conservation, or ecosystem assessment.",
+                    "Answer": "Global land cover datasets like Global Land Cover 2000 (GLC-2000) and MODIS land cover data can complement meteorological datasets by providing detailed land cover information necessary for climate change studies, biodiversity conservation, and ecosystem assessment. Despite differences in data sources and classification systems, these datasets offer valuable information about land cover types that can be integrated with meteorological data for comprehensive environmental modeling.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

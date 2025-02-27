@@ -1,0 +1,172 @@
+{
+    "id": "e6f2b5f7-28e8-45d7-bd8a-0721aaf29958",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Global urban area 60 meter resolution land cover data (1978-1985 )",
+            "description": "The data includes tif data and shp documents of urban land cover based on MSS from 1978 to 1985. The classification system includes 10 types of surface cover: cultivated land (10), forest (20), grassland (30), shrubland (40), wetland (50), water body (60), tundra (70), artificial surface (80), bare land (90), glacier and permanent snow (100) (corresponding raster data values in parentheses). Data production includes four steps: satellite image data preprocessing, sample collection, classification, and post-processing. The first three steps are performed on Google Earth Engine, while the fourth step is performed offline. The preprocessing of data includes determining the T1 level images available in MSS Collection 2 within the classification range, removing cloud pollution data and saturated pixels, and generating annual composite data using the median band values of available pixels. The preparation of training samples is mainly achieved through visual interpretation and sample migration based on Euclidean distance (ED) and spectral angular distance (SAD) methods for training samples from 85 years ago. In classification, the first step is to extract sample feature values, including remote sensing indices such as NDVI, NDWI, MBSI, and the median of band values as inputs. A random forest model is trained on every 3 degree grid, and the trained random forest model is used to classify images. The classification results are processed for quality offline. Use an independent validation sample set to test the classification accuracy. Due to severe data loss, the classification results of the Landsat Global Land Survey 1975 dataset, mainly based on the 1972-1983 and a small amount based on the 1982-1987 MSS data integration, were used to supplement the 78-83 years, and the classification results of the Landsat TM 84 and 85 years were filled in. To maintain consistency, the TM classification results were resampled to 60m. Afterwards, the results were merged into the second level based on the Global Administrative Region Dataset (GADM4.1), which corresponds to the prefecture level administrative regions in China. If there is no second level administrative division, it will be merged at the national level, and then urban boundaries will be generated based on impermeable surfaces. The classification results will be cropped using urban boundaries to generate urban land cover within the administrative region. Test the classification accuracy of the final result based on an independent validation sample set. Data format: raster data.tif. Data projection: WGS1984.",
+            "instructions": "File Name: The global city wide 60 meter resolution data contains two datasets, namely the city wide shp document and the city wide land cover tif document. The file name in shp format is \"xxxx. shp\" and the accompanying cpg, dbf, prj, shx documents. The file name in raster format is \"xxxx. tif\", where xxxx represents the administrative division name. The second level administrative division using GADM data is globally unified. If a country does not have a second level administrative division, it is directly named after the country's name. For example, Beijing. tif represents this file that describes the land cover situation in urban areas of Beijing. Beijing. shp represents the determined spatial range. Data reading method: All shp files in this dataset can be opened using programs such as ArcGIS that can read. shp files. Raster files can be opened using ArcGIS and various remote sensing processing software. The mainstream data processing tools Python and R can both read the above files.",
+            "east": 180.0,
+            "west": -180.0,
+            "south": -90.0,
+            "north": 90.0,
+            "startTime": "1978-01-01 15:58:25",
+            "endTime": "1985-12-31 15:58:25",
+            "fileSize": 214944221.0,
+            "cstr": "18406.11.Terre.tpdc.300988",
+            "doi": "10.11888/Terre.tpdc.300988",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "FENG Zemin",
+                "unitEn": "Tsinghua University"
+            },
+            {
+                "nameEn": "WEI Hong",
+                "unitEn": "Tsinghua University"
+            },
+            {
+                "nameEn": "YANG Jun",
+                "unitEn": "Tsinghua University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Tracking the historical urban development by classifying Landsat MSS data with training samples migrated across time and space",
+                "referenceEn": "Feng, Z., Liu, Y., Shi, Y., & Yang, J. (2023). Tracking the historical urban development by classifying Landsat MSS data with training samples migrated across time and space. International Journal of Digital Earth, 16(1), 2487-2502. doi:10.1080/17538947.2023.2230951"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Visible remote sensing"
+            },
+            {
+                "nameEn": "Land cover"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Temporal dynamic"
+            },
+            {
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "1978",
+                "type": "temporal"
+            },
+            {
+                "keywordEn": "1985",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Global spatial-temporal pattern of urbanization "
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the spatial resolution of the urban land cover dataset created from MSS data between 1978 and 1985?",
+                    "Answer": "60 meters",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How can the observed patterns in urban land cover data from 1978 to 1985, derived from satellite imagery, inform our understanding of the challenges in accurately capturing changes in land cover over time?",
+                    "Answer": "The urban land cover data from 1978 to 1985 involves several steps to accurately capture changes over time, including satellite image preprocessing, sample collection, classification, and post-processing. Preprocessing involves selecting usable images, removing cloud-contaminated data, and generating annual composite data. Challenges in accurately capturing these changes include dealing with data gaps by supplementing with datasets from other years, ensuring consistency in classification by resampling to a standard resolution, and validating classification accuracy with independent samples. These processes highlight the complexity and the need for rigorous data handling and methodology to reliably interpret land cover changes over time.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges in ensuring the accuracy and consistency of global urban land cover datasets from 1978 to 1985?",
+                    "Answer": "The challenges in ensuring accuracy and consistency in global urban land cover datasets from 1978 to 1985 arise from several factors, including data gaps due to missing data and the need to integrate data from different periods. The use of MSS Collection 2 and Landsat Global Land Survey 1975 data to supplement missing data for 1978-1983, and Landsat TM data for 1984 and 1985, pose challenges in maintaining temporal consistency. Additionally, the process involves complex steps such as satellite image data preprocessing, sample collection, classification, and post-processing. The need to resample TM classification results to 60m and merge results based on global administrative boundaries further adds to these challenges.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to develop a dataset with 60-meter resolution land cover data for global urban areas between 1978 and 1985, and what are the specific objectives behind the chosen data collection techniques?",
+                    "Answer": "The development of a 60-meter resolution land cover dataset for global urban areas between 1978 and 1985 aims to provide high-quality historical land cover information, which is crucial for understanding urban expansion and land use changes over time. The specific objectives behind the chosen data collection techniques, including the use of MSS satellite imagery and the integration of classification systems, are to ensure a consistent and accurate representation of various land cover types. These techniques involve preprocessing satellite images, collecting samples, and classifying land cover using indices like NDVI and NDWI with a random forest model. The goal is to create a reliable dataset that can be used for urban planning, environmental monitoring, and policy-making by offering insights into historical land cover dynamics.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in preparing and classifying satellite imagery data for urban land cover analysis with a resolution of 60 meters from 1978 to 1985?",
+                    "Answer": "The procedural steps for preparing and classifying satellite imagery data involve four key stages: satellite image data preprocessing, sample collection, classification, and post-processing. Preprocessing includes selecting available MSS Collection 2 T1 level images within the classification range, removing cloud-contaminated data and saturated pixels, and generating annual composite data using the median of available pixel band values. Sample preparation is achieved through visual interpretation and transferring samples from 85-year-old training samples using Euclidean Distance (ED) and Spectral Angle Distance (SAD) methods. Classification entails extracting sample feature values, such as NDVI, NDWI, and MBSI remote sensing indices, combined with median band values, to train a Random Forest model on a 3-degree grid. This model is then used to classify the images. The classification results undergo offline quality processing, and classification accuracy is assessed using an independent validation sample set. Due to significant data gaps, classification results from MSS data primarily based on 1972-1983 and some from 1982-1987 are supplemented by Landsat Global Land Survey 1975 data for 78-83, and Landsat TM84 and 85 results for 84 and 85 are resampled to 60m for consistency. Finally, results are merged at the second administrative level using the Global Administrative Areas dataset (GADM4.1), or at the national scale if no second-level division exists. Urban boundaries are generated based on impervious surfaces and used to clip classification results, producing urban land cover within administrative boundaries. Classification accuracy of the final results is validated using an independent validation sample set.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        }
+    ]
+}

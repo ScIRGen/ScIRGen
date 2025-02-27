@@ -1,0 +1,180 @@
+{
+    "id": "18c24715-5ac0-47bc-a058-c6552fa6541b",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Highly accurate global surface soil moisture products retrieved by bright temperature (2015-2020)",
+            "description": "The dataset is a global surface soil moisture product with a spatial and temporal resolution of 0.25°×0.25°/day, independently developed by Hai-Shen Lǚ's team at Hohai University. The raw data sources are SMOS bright temperature product and SMAP level 4 soil moisture product. The SMOS bright temperature records from 2015-2020 were firstly reconstructed with missing data using the DEINOF method, and then LSTM models were constructed to capture the relationship between bright temperature and SMAP IV products under different bioclimatic partitions (GEnS), and then these network models were driven according to the SMOS bright temperature products under different partitions from 2010-2015 to obtain the SMOS bright temperature products based on the LSTM surface soil moisture products, followed by least squares fusion of SMAP level IV products with ASCAT active microwave soil moisture products for 2015-2020, and finally the final study-level surface soil moisture dataset.",
+            "instructions": "File naming: The soil moisture data are stored in NetCDF4 format, and the file name is \"Global_HHU_LSTM-SSM_CLF31A-source_yyyy-mm-dd\", where \"Global_HHU_LSTM-SSM\" represents the file prefix, \"CLF31A-source\" represents the bright temperature source taken, and yyyy/mm/dd represents the corresponding year/month/day, respectively. -SSM\" represents the file prefix, \"CLF31A-source\" represents the bright temperature source taken, and yyyyy/mm/dd represents the corresponding year/month/day respectively.\nData reading mode: The files in the dataset can be read directly using the current mainstream programming software, such as Python, MATLAB, or Panoply for visualization.",
+            "east": 179.875,
+            "west": -179.875,
+            "south": -89.875,
+            "north": 89.875,
+            "startTime": "2015-03-31 00:00:00",
+            "endTime": "2020-08-28 00:00:00",
+            "fileSize": 8533246410.0,
+            "cstr": "18406.11.Terre.tpdc.300611",
+            "doi": "10.11888/Terre.tpdc.300611",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "WANG Xiaoyi",
+                "unitEn": "Hohai University"
+            },
+            {
+                "nameEn": "XIONG Yuyang",
+                "unitEn": "Hohai University"
+            },
+            {
+                "nameEn": "LV Haishen",
+                "unitEn": "Hohai University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "A reduced latency regional gap-filling method for SMAP using random forest regression",
+                "referenceEn": "Wang, X., Lü, H., Crow, W. T., Corzo, G., Zhu, Y., Su, J., & Gou, Q., et al. (2023). A reduced latency regional gap-filling method for SMAP using random forest regression. Iscience, 26(1)."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "soil moisture"
+            },
+            {
+                "nameEn": "Hydrology"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2015-2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "National Key Research and Development Program of China"
+            },
+            {
+                "titleEn": "National Key Research and Development Program of China"
+            },
+            {
+                "titleEn": "National Key Research and Development Program of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method for generating high-precision global surface soil moisture products using satellite-based brightness temperature inversion?",
+                    "Answer": "A data collection method for generating high-precision global surface soil moisture products involves using SMOS brightness temperature products and SMAP level-four soil moisture data. The process includes reconstructing missing SMOS brightness temperature records using the DEINOF method, building LSTM models to capture relationships between brightness temperatures and SMAP products across different bioclimatic zones (GEnS), and driving these models with SMOS brightness temperature data from 2010-2015. The resulting LSTM-based surface soil moisture products are then fused with 2015-2020 SMAP level-four products and ASCAT active microwave soil moisture data using least squares, leading to the final research-grade surface soil moisture dataset.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of a dataset that uses LSTM models to infer relationships between brightness temperature and soil moisture products in different bioclimatic zones?",
+                    "Answer": "temporal and spatial resolution of 0.25°×0.25°/day, DEINOF data reconstruction methods, integration of multiple data sources, least squares fusion techniques",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the temporal resolution of a dataset developed for global surface soil moisture products based on LSTM models and SMOS brightness temperature records?",
+                    "Answer": "1 day",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the data reconstruction methods using the DEINOF approach compare to other data reconstruction techniques in terms of accuracy and reliability when processing brightness temperature records for soil moisture estimation?",
+                    "Answer": "The DEINOF method is used to reconstruct missing brightness temperature data from SMOS records, which is a critical step in developing a high-resolution global surface soil moisture product. This approach allows for the handling of data gaps effectively before applying LSTM models, ensuring a more continuous and reliable dataset. In comparison to other data reconstruction techniques, DEINOF is specifically tailored for datasets with spatio-temporal properties, which might offer advantages in maintaining data integrity and reducing potential biases in soil moisture estimation.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors lead to the development of high-precision global surface soil moisture products based on brightness temperature inversion?",
+                    "Answer": "The development of high-precision global surface soil moisture products is driven by the need to enhance spatial and temporal resolution data derived from original sources like SMOS brightness temperature products and SMAP Level 4 soil moisture products. Utilizing methods such as DEINOF for reconstructing missing data and LSTM models for capturing relationships between brightness temperature and soil moisture across different bioclimatic zones, researchers aim to improve accuracy and reliability in soil moisture datasets. Additionally, integrating various data sources like SMAP and ASCAT through least squares fusion contributes to refining the final dataset.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What are the objectives behind developing a high-precision global surface soil moisture product using brightness temperature inversion techniques?",
+                    "Answer": "The objective is to create a global surface soil moisture product with high temporal and spatial resolution by leveraging the SMOS brightness temperature data and SMAP level 4 soil moisture products. This involves reconstructing missing data, capturing the relationship between brightness temperature and soil moisture using LSTM models across different bioclimatic zones, and ultimately achieving a refined dataset through the fusion of SMAP and ASCAT microwave soil moisture products.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in creating a high-precision global surface soil moisture product using brightness temperature inversion and LSTM models?",
+                    "Answer": "The process involves reconstructing missing data in the SMOS brightness temperature records from 2015-2020 using the DEINOF method. Next, an LSTM model is developed to capture the relationship between brightness temperature and the SMAP Level 4 soil moisture product across different bioclimatic zones (GEnS). These models are then used to drive the SMOS brightness temperature product from 2010-2015. The results are combined with the SMAP Level 4 and ASCAT active microwave soil moisture products using a least squares fusion method to produce the final research-grade surface soil moisture dataset.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        }
+    ]
+}

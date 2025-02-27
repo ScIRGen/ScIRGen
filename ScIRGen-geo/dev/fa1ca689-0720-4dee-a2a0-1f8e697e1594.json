@@ -1,0 +1,434 @@
+{
+    "id": "fa1ca689-0720-4dee-a2a0-1f8e697e1594",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Dataset of building outlines in typical regions and the aspect ratio of buildings in the Guangdong-Hong Kong-Macao Greater Bay Area",
+            "description": "This dataset contains TIFF format building outlines for ten cities: Guangzhou, Zhuhai, Shantou, Bangalore, Penang, Cape Town, Rio de Janeiro, Barcelona, Istanbul, and Tehran; and a Shapefile format dataset of the building aspect ratio for the Guangdong-Hong Kong-Macao Greater Bay Area. The buildingoutline dataset is obtained by a semantic segmentation network composed of U-Net and domain adaptive modules, trained based on the INRIA dataset. The intersection over union (IoU) of the building outline dataset exceeds 70%. The building outline dataset can be used in fields such as solar photovoltaic modeling, architectural design, and urban function analysis. The height-to-width ratio dataset can be used for urban climate simulation.",
+            "instructions": "Naming method for building contour dataset: city name.tif The dataset can be read with GIS softwares such as ArcGIS.\n",
+            "east": 180.0,
+            "west": -180.0,
+            "south": -90.0,
+            "north": 90.0,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 628998183.0,
+            "cstr": "18406.11.Terre.tpdc.300945",
+            "doi": "10.11888/Terre.tpdc.300945",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "CHEN Yimin",
+                "unitEn": "Sun Yat-sen University"
+            },
+            {
+                "nameEn": "CAI Jihong",
+                "unitEn": "Sun Yat-sen University"
+            },
+            {
+                "nameEn": "ZHOU Zihao",
+                "unitEn": "Sun Yat-sen University"
+            },
+            {
+                "nameEn": "FENG Mingwei",
+                "unitEn": "Sun Yat-sen University"
+            },
+            {
+                "nameEn": "LIU Xiaoping",
+                "unitEn": "Sun Yat-sen University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "MHA-Net: Multipath Hybrid Attention Network for Building Footprint Extraction From High-Resolution Remote Sensing Imagery",
+                "referenceEn": "Cai, J., Chen, Y. (2021). MHA-Net: Multipath Hybrid Attention Network for Building Footprint Extraction From High-Resolution Remote Sensing Imagery. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 14, 5807-5817, doi: 10.1109/JSTARS.2021.3084805."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Human-nature Relationship"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Land Cover"
+            },
+            {
+                "nameEn": "Human-nature Remote Sensing"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "None"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2021",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Global spatial-temporal pattern of urbanization "
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Deep learning approaches have been widely applied to building footprint extraction using high-resolution imagery. However, the traditional fully convolution network still has problems in recovering spatial details and discriminating buildings with varying sizes and styles. Precise building footprint data is essential to the researches of the urban environment, energy consumption, urban planning, urban function, building change detection, and urban morphology. Remote sensing data have become the primary sources for building footprint extraction. Due to the diversity of buildings’ type and scale, it is still challenging to extract buildings accurately from remote sensing imagery. Early studies of building extraction relied on the fusion of LIDAR points and multispectral imagery. More recent studies, however, aim at extracting building footprints directly from high-resolution imagery. The methods mentioned above consistently require image transformation to obtain the complex features of building objects. However, the effectiveness of using these features varies substantially from one case to another because of the varying sensors, building types, and ground conditions."
+            ],
+            "research objective": [
+                "We propose a novel multipath hybrid attention network (MHA-Net) to address these challenges."
+            ],
+            "challenges": [
+                "Due to the diversity of buildings’ type and scale, it is still challenging to extract buildings accurately from remote sensing imagery. However, the effectiveness of using these features varies substantially from one case to another because of the varying sensors, building types, and ground conditions."
+            ],
+            "methods": [
+                "First, we apply the separable depthwise convolutions and the channel attention modules in our network. Second, a multipath hybrid dilated convolution (HDC) framework is adopted to aggregate multiscale contexts with large receptive fields, which is capable of capturing building features with varying sizes and styles. Finally, instead of using a conventional encoder-decoder structure, we recover the spatial information by a DUC structure that can maintain the spatial details of building boundaries."
+            ],
+            "dataset": [
+                "We evaluate our network on two public datasets: the WHU aerial building dataset and the Massachusetts building dataset."
+            ],
+            "findings": [
+                "According to the experimental results, MHA-Net outperforms other classical semantic segmentation models and several recent building extraction models. In particular, MHA-Net can improve the extraction accuracy of small buildings and is robust to complicated building roofs."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Is it possible to calculate building height-to-width ratios using POSTGIS from vector data containing height information?",
+                    "Answer": "Yes",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "Can a network trained on the INRIA dataset be used to extract building footprints accurately?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Are datasets for building footprint extraction typically derived from high-resolution aerial imagery, satellite imagery, or ground-level photographs?",
+                    "Answer": "high-resolution aerial imagery",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Is the challenge in building footprint extraction more related to the variation in building sizes and styles, sensor diversity, or ground conditions?",
+                    "Answer": "variation in building sizes and styles",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What data collection methods are used for extracting building footprints from remote sensing imagery?",
+                    "Answer": "Deep learning approaches",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Where can building footprint data be applied in urban studies?",
+                    "Answer": "solar photovoltaic modeling, building design, urban function analysis, urban climate simulation",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What challenges are associated with extracting building data from high-resolution imagery?",
+                    "Answer": "recovering spatial details",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method used to obtain precise building footprint data in urban environments?",
+                    "Answer": "A data collection method used is the network segmentation approach based on U-Net and domain adaptation modules, which is trained on the INRIA dataset to extract building footprints.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Could you give an example of a challenge faced when extracting building footprints from remote sensing imagery?",
+                    "Answer": "A challenge faced is the diversity of building types and scales, which makes it difficult to extract buildings accurately from remote sensing imagery.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a dataset that might be used to evaluate the effectiveness of building footprint extraction models?",
+                    "Answer": "An example of a dataset used to evaluate the effectiveness of building footprint extraction models includes the WHU aerial building dataset and the Massachusetts building dataset.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the features and advantages of using deep learning approaches for building footprint extraction from remote sensing imagery?",
+                    "Answer": "high intersection over union (IoU) score exceeding 70%, effective in recovering spatial details, discriminating buildings with varying sizes and styles",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the specific characteristics of the multipath hybrid attention network (MHA-Net) used in building extraction?",
+                    "Answer": "separable depthwise convolutions, channel attention modules, hybrid dilated convolution framework, DUC structure, maintains spatial details of building boundaries, enhances extraction accuracy of small buildings, robustness to complex roof structures",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What are the defining attributes of datasets suitable for evaluating building extraction models?",
+                    "Answer": "high-resolution imagery, diverse building types, varied remote sensing conditions, different sensors, different ground conditions",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the intersection over union (IoU) ratio achieved by a dataset used for building footprint extraction?",
+                    "Answer": "70%",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many cities were included in the building footprint and height-width ratio datasets?",
+                    "Answer": "10",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many public datasets were used to evaluate a network for building extraction from imagery?",
+                    "Answer": "2",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'building footprint extraction' mean in the context of urban environment research?",
+                    "Answer": "Building footprint extraction refers to the process of identifying and delineating the outlines of buildings from remote sensing imagery, which is crucial for urban environment research, energy consumption analysis, urban planning, and other applications. It involves using deep learning approaches to accurately extract building shapes from high-resolution imagery.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the data collection methods for building footprint extraction using deep learning approaches compare to traditional methods that rely on LIDAR points and multispectral imagery fusion?",
+                    "Answer": "Deep learning approaches, such as U-Net, are trained on datasets like the INRIA dataset and focus on extracting building footprints directly from high-resolution imagery. This contrasts with traditional methods that rely on the fusion of LIDAR points and multispectral imagery. While deep learning can potentially improve accuracy and handle varying building sizes and styles, traditional methods may struggle with these aspects but provide comprehensive spatial data through LIDAR and multispectral fusion.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the similarities and differences in challenges faced by remote sensing data and high-resolution imagery in accurately extracting building footprints?",
+                    "Answer": "Both remote sensing data and high-resolution imagery face challenges due to the diversity of building types, scales, and sensor variations. Remote sensing data is a primary source but struggles with the accuracy of extraction due to varying ground conditions. High-resolution imagery also has difficulties, particularly in maintaining spatial details and distinguishing between buildings of different styles and sizes. The use of advanced networks like the multipath hybrid attention network (MHA-Net) aims to mitigate these challenges by improving extraction accuracy and robustness.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How do deep learning approaches adapt to the challenges of extracting building footprints from remote sensing imagery, considering the diversity in building types and scales?",
+                    "Answer": "Deep learning approaches, such as a multipath hybrid attention network (MHA-Net), address these challenges by incorporating separable depthwise convolutions and channel attention modules. These methods help capture building features with varying sizes and styles. The network also uses a hybrid dilated convolution framework to aggregate multiscale contexts with large receptive fields and maintains spatial details of building boundaries through a DUC structure.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What data patterns can be inferred from the use of neural networks trained with datasets like INRIA for building footprint extraction?",
+                    "Answer": "Neural networks trained with datasets like INRIA for building footprint extraction exhibit patterns of high accuracy in segmentation, as indicated by the intersection over union (IoU) metric exceeding 70%. This suggests that the networks are effective at distinguishing spatial details and varying building styles from high-resolution imagery, which is crucial for urban environment research and urban morphology analysis.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What insights can be drawn about urban climate modeling from the use of building height-to-width ratio datasets?",
+                    "Answer": "Building height-to-width ratio datasets provide essential insights for urban climate modeling by allowing researchers to simulate how building dimensions influence climate factors such as wind patterns and solar exposure in urban areas. These datasets enable a more detailed analysis of urban climate dynamics, facilitating improved urban planning and environmental impact assessments.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges of accurately extracting building footprints from remote sensing imagery?",
+                    "Answer": "The diversity of buildings' type and scale makes it challenging to extract buildings accurately from remote sensing imagery. Additionally, the effectiveness of using complex features varies substantially due to different sensors, building types, and ground conditions.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it necessary to use sophisticated network structures in the extraction of building footprints from high-resolution imagery?",
+                    "Answer": "Sophisticated network structures, such as a multipath hybrid attention network, are necessary to address challenges in building footprint extraction due to the varying sizes and styles of buildings. These structures help in recovering spatial details and discriminating buildings more effectively.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential outcomes of using deep learning approaches, like U-Net, for building footprint extraction in terms of urban planning and energy modeling?",
+                    "Answer": "Deep learning approaches such as U-Net can significantly improve the accuracy of building footprint extraction, which is crucial for urban planning and energy modeling. Accurate building contours can enhance solar photovoltaic modeling, building design, and urban function analysis, thereby leading to more efficient urban environments and energy consumption strategies.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "How does the integration of height information in building vector data influence urban climate simulations?",
+                    "Answer": "Incorporating height information in building vector data allows for the calculation of building height-to-width ratios, which can be critical for urban climate simulations. This detailed geometric data helps model interactions between buildings and their environment, such as airflow and heat distribution, thus improving the fidelity of urban climate models.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the consequences of varying building types and scales on the effectiveness of remote sensing data for building footprint extraction?",
+                    "Answer": "The diversity in building types and scales can challenge the effectiveness of remote sensing data for building footprint extraction. Variability in sensor types, building styles, and ground conditions can lead to inconsistencies in feature extraction, impacting the accuracy of the resulting building footprint data. Addressing these challenges requires the application of advanced techniques, such as multipath hybrid attention networks, to improve extraction accuracy and robustness across different building conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the primary purpose of developing a data collection method that combines U-Net and domain adaptation modules for building footprint extraction?",
+                    "Answer": "The primary purpose of developing a data collection method that combines U-Net and domain adaptation modules is to achieve precise building footprint extraction from high-resolution imagery, which is essential for urban environment research, energy consumption analysis, urban planning, and urban morphology studies.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it important to use building height-to-width ratio data in urban climate simulations?",
+                    "Answer": "It is important to use building height-to-width ratio data in urban climate simulations because this data can provide critical insights into the urban structure, impacting the climate modeling by accurately representing the urban heat island effect, air flow, and temperature distribution within urban areas.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What motivates the use of a multipath hybrid attention network (MHA-Net) in addressing challenges in building footprint extraction from remote sensing imagery?",
+                    "Answer": "The motivation for using a multipath hybrid attention network (MHA-Net) in addressing building footprint extraction challenges lies in its ability to handle the diversity of building types and scales by capturing multiscale contexts and maintaining spatial details, thereby improving extraction accuracy and robustness to complex building roofs.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "How is building height-to-width ratio data collected and calculated for urban climate simulation purposes?",
+                    "Answer": "Building height-to-width ratio data is collected and calculated using building vector data with height information, processed within a POSTGIS environment. This data is presented in Shapefile format and can be used for simulations related to urban climate.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the procedural steps involved in developing a network model to address challenges in building footprint extraction from diverse urban environments?",
+                    "Answer": "The procedural steps involve first applying separable depthwise convolutions and channel attention modules in the network. Then, a multipath hybrid dilated convolution framework is adopted to aggregate multiscale contexts, capturing building features of varying sizes and styles. Finally, a DUC structure is used instead of a traditional encoder-decoder to maintain the spatial details of building boundaries.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methods enable the precise extraction of building footprints from high-resolution remote sensing imagery?",
+                    "Answer": "Deep learning approaches, such as networks incorporating U-Net and domain adaptation modules, are used to precisely extract building footprints from high-resolution imagery. These methods are trained on datasets like the INRIA dataset and utilize image transformation to obtain complex features of building objects.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What factors contribute to the challenges of accurately extracting building footprints from remote sensing imagery?",
+                    "Answer": "Challenges in accurately extracting building footprints arise from the diversity in building types and scales, varying sensors, building styles, and ground conditions. These factors affect the effectiveness of feature extraction from remote sensing imagery.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might extracting building footprints from remote sensing imagery present challenges despite advancements in deep learning techniques?",
+                    "Answer": "Due to the diversity of buildings’ type and scale, it is still challenging to extract buildings accurately from remote sensing imagery. Moreover, the effectiveness of using these features varies substantially from one case to another because of the varying sensors, building types, and ground conditions.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What reasons could there be for the anticipated success of a multipath hybrid attention network in improving building footprint extraction?",
+                    "Answer": "The proposed multipath hybrid attention network (MHA-Net) applies separable depthwise convolutions and channel attention modules, along with a multipath hybrid dilated convolution (HDC) framework to aggregate multiscale contexts with large receptive fields. This approach is capable of capturing building features with varying sizes and styles, and it recovers spatial information using a DUC structure that maintains the spatial details of building boundaries.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Why might traditional methods of building footprint extraction struggle to maintain spatial details and accurately differentiate buildings of varying sizes and styles?",
+                    "Answer": "Traditional fully convolution networks encounter problems in recovering spatial details and discriminating buildings with varying sizes and styles. This is compounded by the need for image transformation to obtain complex features of building objects, whose effectiveness varies due to differences in sensors, building types, and ground conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "How do you evaluate the effectiveness of remote sensing data as a primary source for building footprint extraction in terms of accuracy and detail?",
+                    "Answer": "Remote sensing data have become the primary sources for building footprint extraction due to their ability to capture high-resolution imagery. However, the effectiveness varies substantially due to different sensors, building types, and ground conditions, presenting challenges in accurately extracting building details.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "In what ways might the diversity of building types and scales influence the choice of deep learning models for building footprint extraction?",
+                    "Answer": "The diversity of building types and scales presents significant challenges in extracting buildings accurately from imagery, as traditional models may struggle with spatial detail recovery and discriminating between varying building styles. Multipath hybrid attention networks, like MHA-Net, aim to address these issues by capturing multiscale contexts and maintaining spatial details of building boundaries.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I'm unsure about how deep learning approaches can effectively recover spatial details and discriminate between buildings with varying sizes and styles using high-resolution imagery.",
+                    "Answer": "Deep learning approaches have been widely applied to building footprint extraction, but traditional fully convolution networks face challenges in recovering spatial details and discriminating buildings with varying sizes and styles. Methods like separable depthwise convolutions and channel attention modules, along with the multipath hybrid dilated convolution framework, address these challenges by aggregating multiscale contexts and maintaining spatial details of building boundaries.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "I don't understand how building footprints can be accurately extracted from remote sensing imagery given the diversity in building types and scales.",
+                    "Answer": "The diversity of building types and scales poses a challenge in accurately extracting building footprints from remote sensing imagery. Multipath hybrid attention networks like MHA-Net use large receptive fields to capture multiscale building features, which helps improve extraction accuracy for buildings of varying sizes and styles and makes the process robust to complex building roofs.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the effectiveness of using deep learning models compared to traditional methods in building footprint extraction.",
+                    "Answer": "Deep learning approaches, like the proposed MHA-Net, outperform traditional methods and several recent models in building footprint extraction. These models address issues such as recovering spatial details and discriminating buildings with varying sizes and styles. They improve the extraction accuracy of small buildings and are robust to complicated building roofs, showing superior performance compared to classical semantic segmentation models.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,395 @@
+{
+    "id": "60dac98d-eec4-41df-9ad5-b1563e5c532c",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Vectorized rooftop area data for 90 cities in China (2020)",
+            "description": "The data set contains vectorized rooftop area data for 90 cities in China (comprehensively selected according to city administrative level and regional distribution. See Annex 1 for the list of cities). It is mainly based on deep learning semantic segmentation model and multi-source remote sensing images. Firstly, the original image is preprocessed, stratified sampling and visual interpretation are carried out according to the city level and its regional distribution, and the training and test data are made. Then the training data is input into the deep learning semantic segmentation model for training to make it suitable for the building roof extraction task. Based on the test data, the performance of the building roof extraction model is evaluated by using the general index of the result evaluation in the field of deep learning. Finally, this model is applied to the task of building roof extraction in 90 cities in China, and the building roof is automatically extracted and vectorized. The data set can provide important data support for relevant research based on building roofs (such as roof solar potential assessment, urban planning, etc.) in cities and even in the whole country.",
+            "instructions": "China_ 90Cities_ Rooftop_ Data / Tiers X / YYY / YYY.shp\nThe data set file format is ESRI ShapeFile format, which can be directly opened by ArcGIS and other professional software",
+            "east": 135.05,
+            "west": 73.66,
+            "south": 3.86,
+            "north": 53.55,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 26526734743.0,
+            "cstr": "18406.11.Geogra.tpdc.271702",
+            "doi": "10.11888/Geogra.tpdc.271702",
+            "dataFormat": null,
+            "license": "Attribution 4.0 International (CC BY 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "NANJING NORMAL UNIVERSITY Lab of smart city sensing and simulation",
+                "unitEn": "Nanjing Normal University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Vectorized rooftop area data for 90 cities in China",
+                "referenceEn": "Zhang, Z., Qian, Z., Zhong, T., et al. (2022). Vectorized rooftop area data for 90 cities in China. Scientific Data, 9, 66. https://doi.org/10.1038/s41597-022-01168-x."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Others"
+            }
+        ],
+        "themeList": [],
+        "placeKeywordList": [
+            {
+                "keywordEn": "90 cities in China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Land Surface Temperature (LST) Monthly/Day Dataset (V1.0) based on AVHRR brightness temperature (BT) (0.05°×0.05°) and MYD21A1 LST products (0.01°×0.01°) in Qilian Mountain Area"
+            },
+            {
+                "titleEn": "Landsat multi-spectral remote sensing images dataset of pan-third pole key points  region (2000-2016)"
+            },
+            {
+                "titleEn": "Daily maximum temperature, daily average relative humidity dataset of Pan-Third Pole key points region (2000-2016)"
+            },
+            {
+                "titleEn": "Ｈistorical heat wave disaster dataset of pan-third pole key points  region (2010-2018)"
+            },
+            {
+                "titleEn": "High resolution remote sensing data set in Dhaka City, Bangladesh"
+            },
+            {
+                "titleEn": "Monitoring data of meteorological stations in Dhaka City, Bangladesh (2016-2019)"
+            },
+            {
+                "titleEn": "Heat wave vulnerability data set of 34 key nodes in 2015"
+            },
+            {
+                "titleEn": "Soil salinization observation data in the Syr Dayra River Basin on May and Sep, 2017"
+            },
+            {
+                "titleEn": "Geomorphological data of Qilian Shan (2020)"
+            },
+            {
+                "titleEn": "Long time series ecological background map of Qinghai Tibet Plateau (1990-2015)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Reliable information on building rooftops is crucial for utilizing limited urban space effectively. In recent decades, the demand for accurate and up-to-date data on the areas of rooftops on a large scale is increasing. However, obtaining these data is challenging due to the limited capability of conventional computer vision methods and the high cost of 3D modeling involving aerial photogrammetry."
+            ],
+            "research objective": [
+                "In this study, a geospatial artificial intelligence framework is presented to obtain data for rooftops using high-resolution open-access remote sensing imagery."
+            ],
+            "challenges": [
+                "However, based on empirical evidence from previous studies in unbuilt areas, we find farmlands, bare lands, and intersections of different land cover types can be misclassified by the rooftop extraction model."
+            ],
+            "methods": [
+                "In the present study, open-access GES imagery served as the primary data source (Table 1). These images were downloaded in October 2020 using Python scripts in the open map service application program interface (Google Earth API) provided by Google. In the present study, we selected 90 cities in China (Table 2), and these were partitioned into four tiers based on the city administration hierarchy established by the government in China. Therefore, standardization procedure for GES imagery is necessary, and in the present study, the Gamma Correction algorithm34 and Contrast Limited Adaptive Histogram Equalization algorithm35 were used to resolve brightness and sharpness issues. Therefore, to obtain representative and balanced positive and negative samples, spatial stratified sampling was employed in the sample acquisition. In the present study, sample images were correspondingly labeled positive and negative manually. During the rooftop extraction model training task, the built-up area covered by the image samples and their corresponding masks was 200 km2, while the confusing area was 160 km2, and thus, the total training samples covering 360 km2. Data augmentation operations used in the present study included the following: random cropping, image rotation, image flipping, image blurring, and noise addition. In the present study, the cross-entropy40 and dice loss functions 41 were integrated to generate a composite loss function that can simultaneously handle the imbalance categories of samples problem and accelerate the convergence of training. Steps implemented in the expansion prediction (Fig. 4) include the following: (1) An n × n sliding window characterized by a step size of n was created. During movement, this window expanded to m × m, and the original remote sensing image was then cropped into small patches. (2) The cropped images were concatenated into a tensor. (3) The ensemble rooftop extraction model was then used to predict the tensor obtained in step 2. (4) The central portion of each n x n tensor element was extracted and split into patches. (5) Patches obtained in step 4 were stitched to produce a large predicted image, which was then cropped based on the original GES image. Four Tesla V100 GPUs were used to train the model using the mixed accuracy method, and the development was based on the Pytorch framework47."
+            ],
+            "dataset": [
+                "This framework is used to generate vectorized data for rooftops in 90 cities in China. The data was validated on test samples of 180 km2 across different regions with spatial resolution, overall accuracy, and F1 score of 1 m, 97.95%, and 83.11%, respectively."
+            ],
+            "findings": [
+                "These results demonstrate that the generated dataset can be used for data support and decision-making that can facilitate sustainable urban development effectively."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Is spatial stratified sampling necessary to obtain balanced samples for rooftop extraction models?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Are the challenges in rooftop data collection more related to misclassification of land cover types or the cost of data acquisition?",
+                    "Answer": "misclassification of land cover types",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What are the primary data sources used for collecting rooftop data in large-scale urban areas?",
+                    "Answer": "High-resolution open-access remote sensing imagery",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What challenges are encountered in rooftop data extraction using geospatial artificial intelligence frameworks?",
+                    "Answer": "misclassification",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "What is an example of a challenge faced during the extraction of rooftop data and how is it addressed in this domain?",
+                    "Answer": "A challenge in rooftop data extraction is the misclassification of farmlands, bare lands, and intersections of different land cover types. This is addressed by employing a composite loss function, integrating cross-entropy and dice loss functions, to handle the imbalance of sample categories and accelerate the convergence of training.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Could you provide an example of a dataset that illustrates the application of deep learning models in extracting rooftop data across multiple cities?",
+                    "Answer": "A dataset generated using a deep learning model trained on 360 km2 of built-up and confusing area image samples, validated on 180 km2 of test samples across 90 cities in China, achieves a spatial resolution of 1 m, overall accuracy of 97.95%, and an F1 score of 83.11%, demonstrating its utility for urban development research.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the essential characteristics of the training dataset used for building rooftop extraction in urban areas?",
+                    "Answer": "positive and negative samples, spatial stratified sampling, total area of 360 km², 200 km² built-up areas, 160 km² confusing areas, data augmentation, random cropping, image rotation, flipping, blurring, noise addition",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the specific methodological challenges encountered in using remote sensing imagery for rooftop extraction?",
+                    "Answer": "misclassification of farmlands, misclassification of bare lands, misclassification of intersections of different land cover types, brightness issues, sharpness issues",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the key performance metrics used to evaluate the effectiveness of rooftop extraction models?",
+                    "Answer": "1 m resolution, 97.95% overall accuracy, F1 score of 83.11%",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the total area covered by the training samples used in a rooftop extraction model for 90 cities in China?",
+                    "Answer": "360 km²",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many cities in China are selected for the data collection in a geospatial analysis framework?",
+                    "Answer": "90",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the overall accuracy achieved by a rooftop extraction model when validated on test samples across different regions?",
+                    "Answer": "97.95%",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is a geospatial artificial intelligence framework in the context of rooftop data collection?",
+                    "Answer": "A geospatial artificial intelligence framework refers to a research approach that utilizes high-resolution open-access remote sensing imagery to obtain data for rooftops. This framework involves processing and analyzing geospatial data to extract relevant information about building rooftops.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What does spatial stratified sampling mean in the context of data collection for rooftop datasets?",
+                    "Answer": "Spatial stratified sampling refers to a data collection method used to obtain representative and balanced positive and negative samples by dividing the geographical area into distinct strata based on certain characteristics, ensuring that samples are collected from each stratum to improve the accuracy and reliability of the dataset.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is the significance of using composite loss functions in training rooftop extraction models?",
+                    "Answer": "Composite loss functions, which integrate different loss functions such as cross-entropy and dice loss, are significant in training rooftop extraction models as they help to simultaneously address the problem of imbalanced categories of samples and accelerate the convergence of the training process, leading to better model performance.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the data collection methods using high-resolution open-access remote sensing imagery compare to conventional computer vision methods in terms of cost and accuracy for extracting building rooftops?",
+                    "Answer": "The data collection method using high-resolution open-access remote sensing imagery is designed to overcome the limitations of conventional computer vision methods, which often struggle with accuracy and are costly due to the need for 3D modeling. The remote sensing approach provides a more cost-effective and accurate solution for large-scale rooftop data acquisition.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the differences in handling classification errors in rooftop extraction models when comparing urban environments to less built-up areas?",
+                    "Answer": "The rooftop extraction models face challenges in less built-up areas, such as farmlands and bare lands, which can be misclassified. In contrast, urban environments might present fewer classification errors due to the higher density of buildings, but the models must still address the intersections of different land cover types.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What challenges might arise when distinguishing between rooftop areas and similar land cover types using remote sensing imagery?",
+                    "Answer": "Challenges can arise due to the misclassification of farmlands, bare lands, and intersections of different land cover types, which can be confused with rooftop areas by the extraction model.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the use of data augmentation techniques enhance the accuracy of rooftop extraction models?",
+                    "Answer": "Data augmentation techniques such as random cropping, image rotation, flipping, blurring, and noise addition are used to create a diverse set of training samples, which helps in improving the model's ability to generalize and accurately predict rooftop areas.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What data preprocessing steps are necessary to improve the quality of open-access remote sensing imagery for rooftop extraction?",
+                    "Answer": "Standardization procedures such as Gamma Correction and Contrast Limited Adaptive Histogram Equalization are used to address brightness and sharpness issues in remote sensing imagery, ensuring that the extracted data is of high quality for analysis.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes difficulties in accurately extracting rooftops using conventional computer vision methods?",
+                    "Answer": "The challenges stem from the limited capability of conventional computer vision methods, which struggle with the complexity of high-resolution data and the cost-intensive nature of aerial photogrammetry for accurate 3D modeling.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is there a need for standardization procedures in processing GES imagery for building rooftop extraction?",
+                    "Answer": "Standardization procedures, such as Gamma Correction and Contrast Limited Adaptive Histogram Equalization algorithms, are necessary to resolve brightness and sharpness issues, ensuring consistent and reliable data quality for accurate rooftop extraction.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What factors contribute to misclassification in rooftop extraction models when dealing with different land cover types?",
+                    "Answer": "Misclassification can occur due to the presence of farmlands, bare lands, and intersections of different land cover types, which can confuse the rooftop extraction model, leading to errors in distinguishing between rooftops and other features.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of employing a geospatial artificial intelligence framework for rooftop data extraction using high-resolution remote sensing imagery?",
+                    "Answer": "The potential consequences include generating vectorized data for rooftops with a high overall accuracy and F1 score, which can effectively support data-driven decision-making for sustainable urban development.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the misclassification of farmlands, bare lands, and intersections of different land cover types impact the accuracy of rooftop extraction models?",
+                    "Answer": "The misclassification of these areas presents challenges for the rooftop extraction model, potentially reducing its accuracy. However, addressing these challenges is crucial as it directly affects the model's performance in accurately extracting building rooftops.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the effects of using data augmentation operations such as random cropping, image rotation, and noise addition on the training efficiency and accuracy of a deep learning model for rooftop extraction?",
+                    "Answer": "Data augmentation operations help in handling the imbalance of sample categories and accelerate the convergence of training, ultimately enhancing the efficiency and accuracy of the deep learning model for rooftop extraction.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to develop a geospatial artificial intelligence framework for rooftop data extraction using remote sensing imagery?",
+                    "Answer": "The development of a geospatial artificial intelligence framework for rooftop data extraction is important because it provides reliable information on building rooftops, which is crucial for effectively utilizing limited urban space. This is especially relevant given the increasing demand for accurate and up-to-date rooftop data on a large scale, as conventional methods face limitations in capability and cost.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What challenges does the rooftop extraction model aim to address when using remote sensing imagery for data collection in urban environments?",
+                    "Answer": "The rooftop extraction model aims to address challenges such as the misclassification of farmlands, bare lands, and intersections of different land cover types, which have been identified as problematic in previous studies. Additionally, it seeks to overcome the limitations of conventional computer vision methods and the high cost of 3D modeling using aerial photogrammetry.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the objectives of using advanced data augmentation techniques during the training of a rooftop extraction model?",
+                    "Answer": "The objectives of using advanced data augmentation techniques, such as random cropping, image rotation, image flipping, image blurring, and noise addition, during the training of a rooftop extraction model include handling the imbalance of sample categories and accelerating the convergence of training, ultimately improving the model's efficiency and accuracy.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "How can the challenges of misclassification in rooftop extraction models be addressed during data collection and processing?",
+                    "Answer": "Challenges of misclassification, such as those involving farmlands, bare lands, and intersections of different land cover types, can be addressed by using spatial stratified sampling to ensure representative samples, applying specific data preprocessing techniques to enhance image quality, and integrating cross-entropy and dice loss functions in the model training process to handle imbalance categories of samples and accelerate convergence.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What methods are employed to evaluate the performance of models used in extracting building rooftops from remote sensing data?",
+                    "Answer": "The performance of models is evaluated using general indicators from the deep learning domain, such as spatial resolution, overall accuracy, and F1 score. The testing phase involves validating the model on test samples across different regions, with specific attention to metrics like spatial resolution of 1 m, overall accuracy of 97.95%, and an F1 score of 83.11%.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What advancements in deep learning enable the extraction and vectorization of building rooftops from remote sensing imagery on a large scale?",
+                    "Answer": "Deep learning semantic segmentation models enable the extraction and vectorization of building rooftops. The process involves training these models using preprocessed and sampled remote sensing imagery, which is stratified by city tier and regional distribution. The models are trained to perform semantic segmentation tasks specific to rooftop extraction, allowing for automatic extraction and vectorization across 90 cities in China.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways does data augmentation enhance the training of models for rooftop extraction tasks?",
+                    "Answer": "Data augmentation operations, such as random cropping, image rotation, image flipping, image blurring, and noise addition, are employed to enhance the training of rooftop extraction models. These techniques help generate more representative samples and address issues of sample imbalance, leading to improved model performance and accuracy in rooftop extraction tasks.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might rooftop extraction models misclassify farmlands, bare lands, and intersections of different land cover types in a dataset?",
+                    "Answer": "Misclassification of farmlands, bare lands, and intersections of different land cover types by rooftop extraction models could be due to the empirical evidence from previous studies indicating that these areas can present similar spectral characteristics to rooftops in remote sensing imagery, leading to errors in classification.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What could be the reasons for needing to standardize GES imagery when collecting data for rooftop analysis?",
+                    "Answer": "Standardization of GES imagery is necessary to resolve issues related to brightness and sharpness, which can affect the accuracy of data collection. Techniques such as Gamma Correction and Contrast Limited Adaptive Histogram Equalization are employed to address these challenges and ensure consistent image quality for accurate analysis.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why might a composite loss function be beneficial in training rooftop extraction models?",
+                    "Answer": "A composite loss function, which integrates cross-entropy and dice loss functions, is beneficial for rooftop extraction models as it can handle the problem of imbalanced categories of samples and accelerate the convergence of training. This approach improves model performance by ensuring that both precision and recall are optimized during training.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "How might the integration of different loss functions, like cross-entropy and dice loss, enhance the training process for rooftop extraction models in remote sensing applications?",
+                    "Answer": "The integration of cross-entropy and dice loss functions creates a composite loss function that can handle the imbalance in sample categories and accelerate the convergence of training, which is crucial for effective rooftop extraction in remote sensing applications.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What is your evaluation of the potential challenges in achieving high accuracy in rooftop extraction models, considering the use of open-access remote sensing imagery?",
+                    "Answer": "Challenges in achieving high accuracy in rooftop extraction models include the potential misclassification of farmlands, bare lands, and intersections of different land cover types, which are common issues when using open-access remote sensing imagery.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand the challenges faced when using semantic segmentation models for extracting rooftop data.",
+                    "Answer": "One of the challenges faced in using semantic segmentation models for rooftop data extraction is the misclassification of farmlands, bare lands, and intersections of different land cover types. These areas can be incorrectly identified as rooftops, leading to inaccuracies in the model's predictions.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I'm unsure about the data augmentation techniques that can be applied to improve the training of rooftop extraction models.",
+                    "Answer": "Data augmentation techniques used to improve the training of rooftop extraction models include random cropping, image rotation, image flipping, image blurring, and noise addition. These techniques help generate diverse training samples, addressing the imbalance categories of samples and accelerating the convergence of model training.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the data augmentation strategies used in the geospatial artificial intelligence framework for rooftop extraction and their impact on model performance.",
+                    "Answer": "Data augmentation strategies included random cropping, image rotation, image flipping, image blurring, and noise addition. These techniques aim to enhance the model's ability to generalize by diversifying the training data. Together with the integration of cross-entropy and dice loss functions, these strategies help handle the imbalance in sample categories and accelerate the convergence of training, ultimately improving the model's performance.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please evaluate the potential of using open-access remote sensing imagery for generating datasets in urban planning and sustainable development applications.",
+                    "Answer": "Open-access remote sensing imagery, such as GES imagery, allows for high-resolution data collection that is crucial for urban planning and sustainable development. With an ensemble rooftop extraction model, vectorized data for rooftops can be efficiently generated, achieving high overall accuracy and F1 scores. This capability supports data-driven decision-making processes and facilitates sustainable urban development by providing reliable and up-to-date spatial information.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,374 @@
+{
+    "id": "74979e00-c8ca-4b1c-bbf9-dd079bf9da3e",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "1-km gridded datasets for gross domestic product of five key nodes  along One Belt One Road (2015)",
+            "description": "Gross domestic product (GDP) is a monetary measure of the market value of all the final goods and services produced in a period of time, which has been used to determine the economic performance of a whole country or region. We have collected the published GDP data, then obtained the 1-km gridded datasets for GDP of 2015 in five key nodes over Bengal and Myanmar, including Dacca, Chittagong, Kyaukpyu, Rangoon and Mandalay. To solve the problem of missing data existing in the current datasets, we will apply kriging and function interpolation methods to fill gaps. We will also develop the multi-source data fusion method based on geostatistics to achieve the GDP predictions of time continuously and high spatial resolution.",
+            "instructions": "In .tif format, can be opened and analysed in ARCGIS and ENVI softwares.",
+            "east": 110.9,
+            "west": -3.31,
+            "south": -1.09,
+            "north": 58.68,
+            "startTime": "2016-01-05 16:00:00",
+            "endTime": "2016-01-05 16:00:00",
+            "fileSize": 11219874.0,
+            "cstr": null,
+            "doi": "",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "GE Yong",
+                "unitEn": "Institute of Geographic Sciences and Natural Resources Research, CAS"
+            },
+            {
+                "nameEn": "LING Feng",
+                "unitEn": "Institute of Measurement and Geophysics, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Gridded global datasets for Gross Domestic Product and Human Development Index over 1990–201",
+                "referenceEn": "Kummu, M., Taka, M., & Guillaume, J.H.A. (2018). Gridded global datasets for Gross Domestic Product and Human Development Index over 1990–2015. Scientific Data, 5(1), 180004. https://doi.org/10.1038/sdata.2018.4."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Human-nature Relationship"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Social and Economic"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Bengal"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2015",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Administrative boundaries data at 1:1000 000 scale over the Tibetan Plateau (2017)"
+            },
+            {
+                "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
+            },
+            {
+                "titleEn": "Three-pole population &GDP dataset (1970-2006)"
+            },
+            {
+                "titleEn": "Human activity parameters at Qilian Mountain Area (V1.0) (2018)"
+            },
+            {
+                "titleEn": "The 30-minute flux data in three pole region (2000-2016)"
+            },
+            {
+                "titleEn": "Landsat-based continuous monthly 30m×30m land surface NDVI dataset in Qilian Mountain area (1986-2017)"
+            },
+            {
+                "titleEn": "Basic dataset of soil over the Great Lakes in Central Asia - Soil (2015)"
+            },
+            {
+                "titleEn": "Human activity parameters at Qilian Mountain Area (V1.0) (1985-2017)"
+            },
+            {
+                "titleEn": "Global vegetation productivity monthly data obtained by CNRM-CM6-1 mode of CMIP6 (1850-2014)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "An increasing amount of high-resolution global spatial data are available, and used for various assessments. However, key economic and human development indicators are still mainly provided only at national level, and downscaled by users for gridded spatial analyses. To provide a consistent product over time and space, the sub-national data were only used indirectly, scaling the reported national value and thus, remaining representative of the official statistics."
+            ],
+            "research objective": [
+                "To this end, we present gap-filled multiannual datasets in gridded form for Gross Domestic Product (GDP) and Human Development Index (HDI)."
+            ],
+            "challenges": [],
+            "methods": [
+                "To ensure that our gridded end-products cover the entire land area included in the input datasets, we created a seamless administrative raster file using national (and in some cases also autonomous areas such as Greenland) and sub-national boundaries, and two population datasets (see Table 2). We first expanded the rasterized national and sub-national boundaries to cover NoData areas (such as sea areas and other water bodies) with a 2 arc-degree buffer, using the Euclidean Allocation tool in ArcMap 9.2. Next, we created a land mask by combining cells from both population datasets used, and national boundary data. This land mask was then used to set non-land cells to NoData. To compile the GDP per capita (PPP) dataset (Data Citation 1), we first put together a full national GDP dataset, drawn from the most recent World Bank Development Indicators database 32. For missing countries (see Supplementary Information), we used data from the CIA’s World Factbook 33, except for one administrative unit, namely French Southern Territories, for which no data was found and regional average data was used (see below). The constant 2015 international US dollars of CIA fact sheets were converted to constant 2011 international US dollars, the unit in which national GDP from World Bank was given. For that we used the standard method documented by the World Bank39. Temporal interpolation followed the same method as for national values. The data were extrapolated over time by scaling the last available value to reflect subsequent national changes, and similarly scaling the first value with preceding changes. After deriving both national and sub-national tabulated data, we first created a raster dataset of these two spatial scales for each time step, and then combined the two raster datasets, which resulted in the final GDP per capita (PPP) raster dataset provided here. To estimate the total GDP (PPP) of each grid cell, we multiplied the GDP per capita (PPP) by grid specific population data using two different spatial resolutions: 5 arc-min (10 km at equator) (Data Citation 1) and 30 arc-sec (1 km at equator) (Data Citation 1). To compile the HDI dataset (Data Citation 1), we first produced a full national HDI dataset, based on the data from the Human Development Reports by UNDP 30 (Table 3). After deriving both national and sub-national tabulated data, we first created raster datasets of these two scales for each time step, and then combined the two rasters, resulting in the final HDI raster dataset provided here. To estimate the error originating from the interpolation and extrapolation to fill the missing data entries, we performed an error analysis separately for national and sub-national level data."
+            ],
+            "dataset": [
+                "This resulted in annual gridded datasets for GDP per capita (PPP), total GDP (PPP), and HDI, for the whole world at 5 arc-min resolution for the 25-year period of 1990–2015. Additionally, total GDP (PPP) is provided with 30 arc-sec resolution for three time steps (1990, 2000, 2015)."
+            ],
+            "findings": []
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Does the methodology include the use of population datasets to estimate GDP per grid cell?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Is the compilation of GDP per capita (PPP) datasets more reliant on World Bank Development Indicators or CIA's World Factbook data?",
+                    "Answer": "World Bank Development Indicators",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What methods are proposed to address existing data gaps for GDP in the key areas of Bangladesh and Myanmar in 2015?",
+                    "Answer": "Kriging interpolation",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Who is responsible for compiling the full national GDP dataset used in the gridded GDP per capita (PPP) dataset?",
+                    "Answer": "World Bank Development Indicators database",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method that addresses missing data issues in GDP datasets for key regions along the Belt and Road Initiative?",
+                    "Answer": "An example of a data collection method to address missing data issues in GDP datasets involves using Kriging interpolation, function interpolation, and multi-source data fusion based on geostatistics. These techniques help in filling data gaps and producing high-resolution, time-continuous GDP prediction data.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a challenge when creating gridded GDP datasets and how can it be addressed?",
+                    "Answer": "An example of a challenge when creating gridded GDP datasets is dealing with temporal discontinuity and low spatial resolution. This can be addressed by developing multi-source data fusion methods based on geostatistics, which integrate various datasets to produce seamless high-resolution GDP data over time.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "Could you give an example of a dataset creation process that involves combining national and sub-national data for GDP analysis?",
+                    "Answer": "An example of a dataset creation process that involves combining national and sub-national data for GDP analysis includes using a seamless administrative raster file, population datasets, and national boundaries. This process involves expanding boundaries to cover NoData areas, creating a land mask, and multiplying GDP per capita by grid-specific population data to estimate total GDP per grid cell.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What characteristics and challenges are associated with data interpolation methods used in GDP data collection?",
+                    "Answer": "Kriging, function interpolation, filling missing data entries, ensuring spatial and temporal continuity, achieving high-resolution outputs, error analysis for national and sub-national level data, interpolation and extrapolation errors",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the main attributes and components of a multi-source data fusion approach for GDP datasets?",
+                    "Answer": "integrating different data sources, high-resolution GDP data, temporal discontinuity, low spatial resolution, geostatistical methods, consistent products over time and space, indirectly scaling reported national values, land mask for non-land cells, compiling national and sub-national data into raster datasets, multiplying GDP per capita (PPP) by grid-specific population data",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the spatial resolution of the GDP per capita (PPP) and total GDP (PPP) datasets?",
+                    "Answer": "5 arc-min, 30 arc-sec",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many years does the gridded GDP per capita (PPP) dataset cover?",
+                    "Answer": "25 years",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the spatial resolution of the total GDP (PPP) dataset provided for three specific time steps?",
+                    "Answer": "30 arc-sec",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'multi-source data fusion' mean in the context of generating high-resolution GDP prediction data?",
+                    "Answer": "Multi-source data fusion refers to the process of integrating various datasets and statistical methods to create a more detailed and continuous dataset, particularly to address issues of temporal discontinuity and low spatial resolution in GDP data.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is meant by 'seamless administrative raster file' in the context of creating gridded GDP and HDI datasets?",
+                    "Answer": "A seamless administrative raster file is a type of dataset that combines national and sub-national boundaries, along with population data, to ensure complete coverage of the land area involved, eliminating NoData areas and creating a continuous and comprehensive dataset.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "What are the differences between using population datasets to estimate total GDP in grid cells and using administrative raster files to ensure data coverage for GDP projections?",
+                    "Answer": "Using population datasets to estimate total GDP involves multiplying GDP per capita by population data to derive GDP values for grid cells, emphasizing demographic influence on economic metrics. Administrative raster files, however, ensure comprehensive spatial coverage by using boundary data to fill NoData areas, focusing on geographical inclusion rather than demographic detail.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What underlying methods might be used to address the challenges of missing data and low spatial resolution in GDP datasets for specific regions, and how do these methods impact data accuracy?",
+                    "Answer": "To address the challenges of missing data and low spatial resolution, methods like Kriging interpolation and function interpolation are proposed. These methods can help fill data gaps and improve spatial resolution, impacting data accuracy by providing a more complete and detailed dataset, although they may introduce some level of estimation error.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How can the integration of national and sub-national data be optimized to produce a consistent and representative GDP dataset across different scales, and what inference can be made about the accuracy of such integration?",
+                    "Answer": "By using a seamless administrative raster file and combining national and sub-national boundaries, integration can be optimized. This approach ensures that gridded end-products cover the entire land area, maintaining consistency and representativeness of official statistics. The accuracy of such integration can be inferred from error analysis performed on national and sub-national data.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes the need for data interpolation and extrapolation methods in the creation of GDP gridded datasets for the '一带一路' regions?",
+                    "Answer": "The need for data interpolation and extrapolation methods arises due to missing data entries and gaps in the existing datasets, as well as the non-continuous nature of time series data and low spatial resolution. These methods help in filling the missing data and producing a time-continuous high-resolution GDP dataset.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What factors necessitate the use of multi-source data fusion methods in improving GDP dataset resolution for the '一带一路' regions?",
+                    "Answer": "The use of multi-source data fusion methods is necessitated by the challenges of non-continuous data over time and the need for higher spatial resolution. These methods aim to integrate various data sources to produce more accurate and detailed GDP predictions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of using interpolation methods like Kriging to fill gaps in GDP grid data for regions with initially sparse data?",
+                    "Answer": "Using interpolation methods such as Kriging to fill gaps in GDP grid data can address the issue of data scarcity by providing estimates where data is missing. This can lead to more complete datasets that allow for comprehensive spatial analyses. However, the accuracy of the interpolated values depends on the underlying assumptions and the quality of available data, which might introduce errors or biases in regions with initially sparse data.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What impact does the creation of a seamless administrative raster file have on the coverage and representativeness of gridded GDP datasets?",
+                    "Answer": "Creating a seamless administrative raster file ensures that gridded GDP datasets consistently cover the entire land area, including challenging regions like autonomous areas and water bodies, by expanding boundaries with a buffer. This improves the representativeness of the data, aligning it with official statistics and ensuring comprehensive spatial coverage, which is crucial for accurate economic assessments at both national and sub-national levels.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the primary objective of developing high-resolution GDP grid data for key nodes in regions like Bangladesh and Myanmar?",
+                    "Answer": "The primary objective is to provide a detailed spatial representation of economic activity by creating kilometer-scale GDP grid data for specific key nodes, which offers a more granular view than national-level statistics and addresses issues like data gaps and low spatial resolution.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it essential to apply methods like kriging interpolation and function interpolation in the creation of GDP datasets?",
+                    "Answer": "These methods are essential to address missing data issues and enhance the continuity and spatial resolution of GDP datasets, allowing for more accurate and complete economic assessments over time and space.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is the intention behind using a multi-source data fusion approach based on geostatistics in GDP data production?",
+                    "Answer": "The intention is to overcome challenges related to the temporal discontinuity and low spatial resolution of existing data by integrating multiple data sources, thereby producing high-resolution and time-continuous GDP prediction data.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedures are necessary to address data gaps when compiling GDP datasets for key regions along the 'Belt and Road' initiative?",
+                    "Answer": "To address data gaps, methods such as Kriging interpolation and function interpolation are proposed to fill missing data. Additionally, developing multi-source data fusion techniques based on geostatistics is considered to overcome issues of temporal discontinuity and low spatial resolution in the existing data.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How can spatial and temporal resolutions be enhanced when creating high-resolution GDP datasets for specific regions?",
+                    "Answer": "The enhancement of spatial and temporal resolutions can be achieved by using a geostatistics-based multi-source data fusion method. This approach allows for the production of time-continuous, high-resolution GDP prediction data by integrating various data sources and addressing existing limitations in the data.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What steps are involved in creating gridded datasets for GDP and HDI from global spatial data?",
+                    "Answer": "The process involves creating a seamless administrative raster file using national and sub-national boundaries, filling NoData areas with a buffer, and using a land mask to set non-land cells to NoData. GDP per capita (PPP) is calculated by combining national GDP data with grid-specific population data. Interpolation and extrapolation methods are used to fill missing data entries, and the datasets are provided at different spatial resolutions for specific time periods.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What data processing techniques enable the creation of high-resolution GDP gridded datasets, especially in regions with incomplete data?",
+                    "Answer": "Kriging interpolation, function interpolation, and multi-source data fusion based on geostatistics are used to address data incompleteness and produce high-resolution GDP gridded datasets.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What methodological approaches enable the extrapolation and interpolation of GDP data over time to address temporal discontinuities?",
+                    "Answer": "Temporal interpolation and extrapolation methods are used to scale GDP values over time, adjusting for national changes and ensuring consistent temporal coverage in the datasets.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might data interpolation methods like Kriging or function interpolation be necessary in generating high-resolution GDP datasets?",
+                    "Answer": "Data interpolation methods such as Kriging or function interpolation are necessary to address challenges of missing data and to create continuous, high-resolution spatial datasets. These methods help in filling data gaps and ensure that the resulting dataset is more representative and reliable for spatial analyses, especially when official statistics are not available for certain areas.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What reasons could lead to the necessity for developing multi-source data fusion methods based on geostatistics in GDP data collection?",
+                    "Answer": "The development of multi-source data fusion methods based on geostatistics is essential to overcome issues related to non-continuous temporal data and low spatial resolution. By integrating various data sources, researchers aim to produce time-continuous and high-resolution GDP prediction data, which is crucial for more accurate and detailed economic analyses at smaller spatial scales.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why might there be variations in spatial resolution for GDP datasets, and what implications could this have for their use?",
+                    "Answer": "Variations in spatial resolution for GDP datasets, such as the difference between 5 arc-min and 30 arc-sec, are often due to the availability of input data and the intended use of the datasets. Higher resolution data provides more detailed spatial information, which is beneficial for localized analyses, but it also requires more precise and comprehensive input data. These variations can impact the applicability of the datasets for different research purposes, influencing the level of detail and accuracy in spatial analyses.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don’t understand how a dataset for GDP at such a granular kilometer scale can be accurately generated for regions with missing data.",
+                    "Answer": "To address missing data, methods such as Kriging interpolation and functional interpolation are proposed for data gap filling. These techniques are used to estimate missing values by leveraging statistical correlations and known data points in the spatial dataset.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I'm unsure how multi-source data fusion is applied to improve the temporal continuity and spatial resolution of GDP datasets.",
+                    "Answer": "The approach involves developing a method based on geostatistics that merges multiple data sources to create a temporally continuous and high-resolution GDP dataset. This method addresses challenges of data discontinuity over time and low spatial resolution.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "I can't make sense of how administrative boundaries and population datasets are used to ensure complete spatial coverage for GDP data.",
+                    "Answer": "A seamless administrative raster file is created using national and sub-national boundaries along with population datasets. This ensures that the gridded end-products cover the entire land area by expanding boundaries to eliminate NoData areas and using a land mask to filter non-land cells.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please explore and summarize the data collection techniques that can be used to address the challenges of temporal discontinuity and low spatial resolution in GDP data collection across key regions.",
+                    "Answer": "To address temporal discontinuity and low spatial resolution in GDP data collection, the field proposes the development of multi-source data fusion methods based on geostatistics. Techniques such as Kriging interpolation and functional interpolation are suggested for gap-filling and enhancing the resolution and continuity of GDP datasets over time.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Please discuss potential data integration methods that could be employed to create a seamless GDP dataset at multiple spatial resolutions for key economic regions.",
+                    "Answer": "Potential data integration methods include creating a seamless administrative raster file using national and sub-national boundaries, and employing population datasets. This approach involves expanding raster boundaries to cover non-data areas using tools like the Euclidean Allocation tool, and combining cells from population datasets with boundary data to create a land mask, thus setting non-land cells to NoData for precise GDP calculations.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

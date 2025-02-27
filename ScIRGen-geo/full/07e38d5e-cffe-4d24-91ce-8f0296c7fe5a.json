@@ -1,0 +1,391 @@
+{
+    "id": "07e38d5e-cffe-4d24-91ce-8f0296c7fe5a",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Landsat-based continuous monthly 30m×30m land surface LAI dataset in Qilian mountain area (1986-2017)",
+            "description": "This data set includes the monthly synthesis of 30m*30m surface LAI products in Qilian mountain area in 1986, 1990, 1995, 2000, 2005, 2010, 2015, and 2017. Max value composition (MVC) method was used to synthesize monthly LAI products on the surface using the reflectivity data of Landsat 5, Landsat 8 and sentinel 2 channels from Red and NIR channels. The data are synthesized monthly through Google Earth Engine cloud platform, and the missing pixels are interpolated by calculating the index of the model. The quality of the data is good, and it can be used in environmental change monitoring and other fields.",
+            "instructions": "File Naming Convention: LAI_YYYYMM-N.tif (YYYY: year, MM: month, N: division number)\nData Version：V1.0\nProjection：+proj=longlat +datum=WGS84 +no_defs\nData Format: GeoTIFF\nNDVI Unit:None\nScale Factor:0.001\nValid Range：0 - 10000\nFilled Value：0",
+            "east": 107.0,
+            "west": 89.0,
+            "south": 34.0,
+            "north": 45.0,
+            "startTime": "1986-01-07 08:00:00",
+            "endTime": "2018-01-06 08:00:00",
+            "fileSize": 246182991310.0,
+            "cstr": "18406.11.Geogra.tpdc.270135",
+            "doi": "10.11888/Geogra.tpdc.270135",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "ZHONG Bo",
+                "unitEn": "State Key Laboratory of Remote Sensing Science, Aerospace Information Research Institute, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "WU Junjun",
+                "unitEn": "Chinese Academy of Sciences Institute of Aerospace Information Innovation"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Estimating fractional vegetation cover from leaf area index and clumping index based on the gap probability theory",
+                "referenceEn": "Zhao J., et al. Estimating fractional vegetation cover from leaf area index and clumping index based on the gap probability theory. International Journal of Applied Earth Observation and Geoinformation 90, 102-112 (2020)."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Leaf area index(LAI)"
+            },
+            {
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Qilian moutain"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "1986-2017",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Gap probability theory provides a theoretical equation to calculate fractional vegetation cover (FVC). Fractional vegetation cover (FVC), defined as the vertical projection areal proportion of the landscape occupied by green vegetation (Gitelson et al., 2002), is an important ecosystem indicator as it mediates interactions between land surface, atmosphere and hydrological processes (Jiapaer et al., 2011). Remote sensing provides the most effective way to estimate FVC at regional or global scale (Delamater et al., 2012; Guo et al., 2015). At present, there are several global FVC products, i.e. POLDAR, CYCLOPES, GEOV1, ENVISAT and Multi-source data Synergized Quantitative remote sensing production system (MuSyQ) (Bacour et al., 2006; Baret et al., 2007, 2013; Jia et al., 2015; Mu et al., 2017b), and a regional FVC product, i.e. Satellite Application Facility (SAF) on Land Surface Analysis (LSA) (Garcia-Haro and Camacho, 2016)."
+            ],
+            "research objective": [
+                "With the improvement of the LAI and CI products, it is necessary to assess whether the algorithm based on gap probability theory using the present products can improve the accuracy of FVC products."
+            ],
+            "challenges": [
+                "The reason to limit the gap probability theory applied in the product algorithm is the availability and accuracy of leaf area index (LAI) and clumping index (CI) products."
+            ],
+            "methods": [
+                "In this study, we generated the FVC estimates based on the gap probability theory (FVCgap) with a resolution of 500 m every 8 days for Europe. FVCgap estimates were validated with field FVC measurements of ImagineS from 2013 to 2015 for crop types. Two existing FVC products, Geoland2 Version1 (GEOV1) and Multisource data Synergized Quantitative remote sensing production system (MuSyQ), were used to inter-compare with the FVCgap estimates."
+            ],
+            "dataset": [
+                "FVCgap estimates were validated with field FVC measurements of ImagineS from 2013 to 2015 for crop types."
+            ],
+            "findings": [
+                "FVCgap estimates showed a better agreement with field FVC measurements, with lowest root mean square error (RMSE) (0.1211) and bias (0.0224), than GEOV1 and MuSyQ FVC products. The inter-annual and seasonal variations of FVCgap estimates were also showed the most consistent with field measurements."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Are existing remote sensing methods effective in estimating fractional vegetation cover (FVC) at a regional level?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Is there a challenge related to the availability and accuracy of leaf area index (LAI) and clumping index (CI) products when applying gap probability theory?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Which method is more reliable for generating LAI products: maximum value composition (MVC) or another remote sensing technique?",
+                    "Answer": "maximum value composition (MVC)",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "For validating FVC estimates, are field measurements or remote sensing products like GEOV1 more effective?",
+                    "Answer": "Field measurements",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What methods are used to synthesize monthly NDVI products from Landsat and Sentinel 2 data?",
+                    "Answer": "maximum value composition (MVC) technique",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "Where can one process reflectance data for calculating indices in the context of environmental monitoring?",
+                    "Answer": "Google Earth Engine",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What challenges limit the application of gap probability theory in enhancing FVC product algorithms?",
+                    "Answer": "leaf area index (LAI) and clumping index (CI) products",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method that effectively synthesizes monthly NDVI products using remote sensing technologies?",
+                    "Answer": "An example of a data collection method is the maximum value composition (MVC) technique, which utilizes reflectance data from Landsat5, Landsat8, and Sentinel-2's red and near-infrared channels to synthesize monthly NDVI products.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a research approach that validates fractional vegetation cover (FVC) estimates using field measurements?",
+                    "Answer": "An example of a research approach is validating FVC estimates based on gap probability theory with field FVC measurements from ImagineS for crop types, conducted from 2013 to 2015, to assess accuracy against existing FVC products.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Could you give an example of a challenge in applying gap probability theory to improve FVC product algorithms?",
+                    "Answer": "An example of a challenge is the limitation posed by the availability and accuracy of leaf area index (LAI) and clumping index (CI) products, which affects the application of gap probability theory in improving FVC product algorithms.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of the maximum value composition (MVC) method used in generating leaf area index (LAI) products?",
+                    "Answer": "highest reflectance values, red and near-infrared channels, monthly NDVI products",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What challenges are associated with using gap probability theory in the development of fractional vegetation cover (FVC) products?",
+                    "Answer": "availability and accuracy of leaf area index (LAI) and clumping index (CI) products",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the key features of remote sensing data that enable effective monitoring of environmental changes?",
+                    "Answer": "high-resolution, temporally consistent, ability to fill missing pixels",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the resolution of the FVC estimates generated based on the gap probability theory for Europe?",
+                    "Answer": "500 meters every 8 days",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many existing FVC products were used to inter-compare with the FVCgap estimates?",
+                    "Answer": "2",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "What are the differences in challenges faced when using gap probability theory for FVC estimation compared to using reflectance data for LAI calculation in the Qilian Mountains region?",
+                    "Answer": "The challenges in using gap probability theory for FVC estimation primarily revolve around the availability and accuracy of LAI and clumping index products, which are crucial for improving FVC accuracy. On the other hand, using reflectance data for LAI calculation faces challenges such as dealing with missing pixels and ensuring data quality through interpolation. Both methods must address data quality and availability, but they focus on different aspects of the data processing pipeline.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How do the findings regarding the accuracy of FVCgap estimates compare to the accuracy of leaf area index calculations using Landsat and Sentinel 2 data in terms of consistency with field measurements?",
+                    "Answer": "The findings indicate that FVCgap estimates showed a better agreement with field FVC measurements, with a lower root mean square error and bias compared to existing FVC products like GEOV1 and MuSyQ. They also demonstrated consistent inter-annual and seasonal variations with field measurements. In contrast, the LAI calculations using Landsat and Sentinel 2 data rely on monthly NDVI composites, which are processed to ensure high quality and may not have the same frequency of validation against field data. Both approaches aim for accurate environmental monitoring, but they differ in their validation practices and frequency.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What underlying principles might guide the synthesis of monthly NDVI products using reflectance data from different satellite sources?",
+                    "Answer": "The synthesis of monthly NDVI products using reflectance data from satellites like Landsat and Sentinel involves using the maximum value composition (MVC) method. This approach leverages the red and near-infrared reflectance data to generate a consistent NDVI product, which can then be used to calculate the leaf area index (LAI). The process involves integrating data across different time points and handling missing data through interpolation to maintain quality.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "How might the challenges associated with the availability and accuracy of LAI and CI products impact the development of fractional vegetation cover (FVC) products?",
+                    "Answer": "The challenges related to the availability and accuracy of LAI and CI products can significantly impact FVC product development because these indices are crucial inputs for algorithms based on gap probability theory. Limitations in these products may affect the accuracy and reliability of FVC estimates, necessitating improvements in data acquisition and processing methods to enhance the fidelity of the FVC products.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways could validation with field measurements improve the confidence in remote sensing estimates of vegetation indices?",
+                    "Answer": "Validation with field measurements can enhance confidence in remote sensing estimates by providing empirical data to compare against model outputs. For example, FVC estimates validated with field measurements showed improved agreement, as indicated by lower root mean square error (RMSE) and bias, compared to existing remote sensing products. This validation helps verify the accuracy and consistency of the estimates across different temporal and spatial scales.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes challenges in accurately applying gap probability theory for improving FVC products?",
+                    "Answer": "The challenges in accurately applying gap probability theory for improving FVC products are caused by the availability and accuracy of leaf area index (LAI) and clumping index (CI) products.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is it necessary to assess the algorithm based on gap probability theory using current LAI and CI products?",
+                    "Answer": "It is necessary to assess the algorithm based on gap probability theory using current LAI and CI products to determine if these improvements can enhance the accuracy of FVC products.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What factors contribute to the better agreement of FVCgap estimates with field FVC measurements compared to other existing FVC products?",
+                    "Answer": "The factors contributing to the better agreement of FVCgap estimates with field FVC measurements include the lower root mean square error (RMSE) and bias, as well as the consistency in inter-annual and seasonal variations with field measurements.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential effects of using the maximum value composition (MVC) method on the quality and applicability of 30m×30m surface LAI datasets in environmental monitoring?",
+                    "Answer": "Using the MVC method for 30m×30m surface LAI datasets can enhance data quality by synthesizing Landsat and Sentinel reflectance data into monthly NDVI products, which helps in accurately calculating LAI. This improves applicability in monitoring environmental changes by providing consistent and reliable data.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the primary objective behind the use of Landsat reflectance data and the MVC method in generating monthly 30m×30m surface LAI products for the Qilian Mountains region?",
+                    "Answer": "The primary objective is to create high-quality monthly surface LAI products that can be used for environmental change monitoring, utilizing a combination of Landsat5, Landsat8, and Sentinel 2 data processed through Google Earth Engine for monthly synthesis and model-based calculations.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it important to assess the accuracy of FVC products using the algorithm based on gap probability theory with improved LAI and CI products?",
+                    "Answer": "It is important to assess the accuracy to determine whether these algorithms can enhance the quality of FVC products, given the challenges posed by the availability and accuracy of leaf area index (LAI) and clumping index (CI) products.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the motivations for validating FVCgap estimates with field FVC measurements between 2013 to 2015 for crop types in Europe?",
+                    "Answer": "The motivation lies in validating the effectiveness of FVCgap estimates, which were developed using gap probability theory, by comparing them against field measurements to ensure their accuracy and consistency over time and across different crop types.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural methods can be employed to synthesize monthly NDVI products using Landsat and Sentinel data for environmental monitoring?",
+                    "Answer": "The maximum value composition (MVC) method can be used to synthesize monthly NDVI products by utilizing red and near-infrared channel reflectance data from Landsat5, Landsat8, and Sentinel 2. The synthesis process can be conducted through platforms like Google Earth Engine, which allows for monthly reflectance synthesis and model-based index calculations.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "How can missing pixel data be interpolated effectively during the creation of a 30m×30m surface LAI dataset?",
+                    "Answer": "Interpolation of missing pixel data can be performed during the creation of a 30m×30m surface LAI dataset by using model calculations on reflectance data processed through cloud platforms such as Google Earth Engine, ensuring high-quality data suitable for environmental change monitoring.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What steps are involved in validating fractional vegetation cover (FVC) estimates using field measurements, and how can they be compared with existing FVC products?",
+                    "Answer": "FVC estimates can be validated using field measurements by generating estimates based on gap probability theory and comparing them with field measurements for specific crop types. This involves using existing FVC products like Geoland2 Version1 (GEOV1) and Multisource data Synergized Quantitative remote sensing production system (MuSyQ) to inter-compare the estimates, ensuring better agreement and consistency with field measurements.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What technological advancements enable the collection and synthesis of monthly 30m x 30m LAI data using satellite reflectance data for environmental monitoring?",
+                    "Answer": "The use of Google Earth Engine cloud platform allows for the monthly synthesis of reflectance data, while the combination of Landsat and Sentinel 2 satellite data channels (red and near-infrared) enables the generation of NDVI products, which are subsequently used to calculate LAI through the maximum value composition method.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What conditions or factors are necessary for effectively validating FVC estimates with field measurements in remote sensing studies?",
+                    "Answer": "Effective validation of FVC estimates requires the availability of accurate field measurements, such as those provided by ImagineS from 2013 to 2015 for crop types, and the use of inter-comparison with existing FVC products like GEOV1 and MuSyQ to assess the accuracy and consistency of the estimates.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might the anticipated improvements in Leaf Area Index (LAI) estimation not be realized using the current remote sensing data collection methods?",
+                    "Answer": "The availability and accuracy of LAI and clumping index (CI) products limit the application of gap probability theory in product algorithms, which can hinder improvements in LAI estimation.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What challenges could arise in achieving expected accuracy for Fractional Vegetation Cover (FVC) products using remote sensing data?",
+                    "Answer": "The challenges include the availability and accuracy of LAI and clumping index (CI) products, which are crucial for improving FVC product accuracy based on gap probability theory.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What is your evaluation of the effectiveness of using the Maximum Value Composition (MVC) method for synthesizing monthly NDVI products from Landsat and Sentinel data in this field?",
+                    "Answer": "The use of the Maximum Value Composition (MVC) method is an effective approach for synthesizing monthly NDVI products, as it helps to maximize the NDVI values by selecting the highest value within a given period, thus reducing cloud cover effects and enhancing the data quality for calculating the Leaf Area Index (LAI).",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What is your perspective on the significance of validating FVC estimates with field measurements in improving the accuracy of remote sensing products?",
+                    "Answer": "Validating FVC estimates with field measurements is crucial, as it enhances the accuracy and credibility of remote sensing products by providing empirical evidence to support model predictions, reducing bias and errors, and ensuring that the estimated fractional vegetation cover aligns closely with actual ground conditions.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I’m unsure about the challenges that limit the use of gap probability theory in FVC product algorithms.",
+                    "Answer": "The challenges include the availability and accuracy of leaf area index (LAI) and clumping index (CI) products, which are critical for the application of gap probability theory in fractional vegetation cover (FVC) product algorithms.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "I can't make sense of how the FVCgap estimates offer improved accuracy over existing FVC products.",
+                    "Answer": "FVCgap estimates, based on gap probability theory, showed better agreement with field FVC measurements, demonstrating lower root mean square error (RMSE) and bias compared to existing products like GEOV1 and MuSyQ, and exhibited consistent inter-annual and seasonal variations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the methods used to validate gap probability theory-based fractional vegetation cover (FVC) estimates and discuss the factors influencing the accuracy and reliability of such estimates.",
+                    "Answer": "Gap probability theory-based FVC estimates, referred to as FVCgap, are validated using field FVC measurements from the ImagineS project for crop types between 2013 and 2015. The accuracy is influenced by the availability and precision of LAI and clumping index (CI) products. FVCgap estimates are compared with existing FVC products like GEOV1 and MuSyQ, showing better agreement with field measurements through a lower root mean square error (RMSE) and bias.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        }
+    ]
+}

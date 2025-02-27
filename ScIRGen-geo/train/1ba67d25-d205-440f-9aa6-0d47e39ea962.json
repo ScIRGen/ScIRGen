@@ -1,0 +1,342 @@
+{
+    "id": "1ba67d25-d205-440f-9aa6-0d47e39ea962",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "100m Gridded datasets for Gross Domestic Product of 34 key nodes (2015)",
+            "description": "Gross domestic product (GDP) is a monetary measure of the market value of all the final goods and services produced in a period of time, which has been used to determine the economic performance of a whole country or region. According to the collected the published global GDP data of 2015, a downscaling model, named support vector machine regression kriging was established for predicting 100-m GDP in thirty-four key nodes along the Belt and Road. The remote sensed night light data, land cover, vegetation and terrain indices were employed as ancillary variables in downscaling process. To solve the problem of missing data existing in the ancillary datasets, we will apply kriging and function interpolation methods to fill gaps. The aggregation and resampling were used to obtain 1-km and 500-m all ancillary variables, as well as 100-m terrain indices including elevation, slope and aspect. The adopted downscaling model contains trend and residual predictions. The support vector machine regression is used to model the relationship among GDP and its ancillary variables for obtaining GDP trends at fine scale based on scale invariant of the relationship. And then, the kriging interpolation is used to estimate GDP residuals at fine scale. In the downscaling process, the mentioned downscaling model was firstly employed in 1-km and 500-m data for obtaining 500-m GDP predictions; and it was again used in 500-m and 100-m data for achieving 100-m GDP predictions. The 100-m GDP predictions in constant 2011 international US dollars would provide high spatial resolution data for risk assessments.",
+            "instructions": "In TIFF format, can be opened and analysed in Arcgis software.",
+            "east": 97.0,
+            "west": 89.0,
+            "south": 16.0,
+            "north": 24.5,
+            "startTime": "2015-01-14 00:00:00",
+            "endTime": "2016-01-13 00:00:00",
+            "fileSize": 1807941263.0,
+            "cstr": "18406.11.Socioeco.tpdc.270451",
+            "doi": "10.11888/Socioeco.tpdc.270451",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "GE Yong",
+                "unitEn": "Institute of Geographic Sciences and Natural Resources Research, CAS"
+            },
+            {
+                "nameEn": "LING Feng",
+                "unitEn": "Institute of Measurement and Geophysics, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Gridded global datasets for Gross Domestic Product and Human Development Index over 1990–201",
+                "referenceEn": "Kummu, M., Taka, M., & Guillaume, J.H.A. (2018). Gridded global datasets for Gross Domestic Product and Human Development Index over 1990–2015. Scientific Data, 5(1), 180004. https://doi.org/10.1038/sdata.2018.4."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Human-nature Relationship"
+            },
+            {
+                "nameEn": "Solar-Terrestrial Physics and Astronomy"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Gross domestic product"
+            },
+            {
+                "nameEn": "Social and Economic"
+            },
+            {
+                "nameEn": "Galactic System"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Bengal"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2015",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Administrative boundaries data at 1:1000 000 scale over the Tibetan Plateau (2017)"
+            },
+            {
+                "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
+            },
+            {
+                "titleEn": "Three-pole population &GDP dataset (1970-2006)"
+            },
+            {
+                "titleEn": "Human activity parameters at Qilian Mountain Area (V1.0) (2018)"
+            },
+            {
+                "titleEn": "The 30-minute flux data in three pole region (2000-2016)"
+            },
+            {
+                "titleEn": "Human activity parameters at Qilian Mountain Area (V1.0) (1985-2017)"
+            },
+            {
+                "titleEn": "The global AVHRR remote sensing vegetation phenology at peturning green stage in spring (1981-2003)"
+            },
+            {
+                "titleEn": "Global vegetation productivity monthly data obtained by CNRM-CM6-1 mode of CMIP6 (1850-2014)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "An increasing amount of high-resolution global spatial data are available, and used for various assessments. However, key economic and human development indicators are still mainly provided only at national level, and downscaled by users for gridded spatial analyses. To provide a consistent product over time and space, the sub-national data were only used indirectly, scaling the reported national value and thus, remaining representative of the official statistics."
+            ],
+            "research objective": [
+                "To this end, we present gap-filled multiannual datasets in gridded form for Gross Domestic Product (GDP) and Human Development Index (HDI)."
+            ],
+            "challenges": [],
+            "methods": [
+                "To ensure that our gridded end-products cover the entire land area included in the input datasets, we created a seamless administrative raster file using national (and in some cases also autonomous areas such as Greenland) and sub-national boundaries, and two population datasets (see Table 2). We first expanded the rasterized national and sub-national boundaries to cover NoData areas (such as sea areas and other water bodies) with a 2 arc-degree buffer, using the Euclidean Allocation tool in ArcMap 9.2. Next, we created a land mask by combining cells from both population datasets used, and national boundary data. This land mask was then used to set non-land cells to NoData. To compile the GDP per capita (PPP) dataset (Data Citation 1), we first put together a full national GDP dataset, drawn from the most recent World Bank Development Indicators database 32. For missing countries (see Supplementary Information), we used data from the CIA’s World Factbook 33, except for one administrative unit, namely French Southern Territories, for which no data was found and regional average data was used (see below). The constant 2015 international US dollars of CIA fact sheets were converted to constant 2011 international US dollars, the unit in which national GDP from World Bank was given. For that we used the standard method documented by the World Bank39. Temporal interpolation followed the same method as for national values. The data were extrapolated over time by scaling the last available value to reflect subsequent national changes, and similarly scaling the first value with preceding changes. After deriving both national and sub-national tabulated data, we first created a raster dataset of these two spatial scales for each time step, and then combined the two raster datasets, which resulted in the final GDP per capita (PPP) raster dataset provided here. To estimate the total GDP (PPP) of each grid cell, we multiplied the GDP per capita (PPP) by grid specific population data using two different spatial resolutions: 5 arc-min (10 km at equator) (Data Citation 1) and 30 arc-sec (1 km at equator) (Data Citation 1). To compile the HDI dataset (Data Citation 1), we first produced a full national HDI dataset, based on the data from the Human Development Reports by UNDP 30 (Table 3). After deriving both national and sub-national tabulated data, we first created raster datasets of these two scales for each time step, and then combined the two rasters, resulting in the final HDI raster dataset provided here. To estimate the error originating from the interpolation and extrapolation to fill the missing data entries, we performed an error analysis separately for national and sub-national level data."
+            ],
+            "dataset": [
+                "This resulted in annual gridded datasets for GDP per capita (PPP), total GDP (PPP), and HDI, for the whole world at 5 arc-min resolution for the 25-year period of 1990–2015. Additionally, total GDP (PPP) is provided with 30 arc-sec resolution for three time steps (1990, 2000, 2015)."
+            ],
+            "findings": []
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Is it possible to address data gaps in auxiliary variables using interpolation techniques for predicting GDP at fine spatial scales?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Can seamless administrative raster files be utilized to ensure complete land area coverage in gridded datasets for GDP?",
+                    "Answer": "Yes",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "Is a combination of rasterized national and sub-national boundaries used to produce a GDP per capita dataset?",
+                    "Answer": "Yes",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What is a method used to address data gaps in auxiliary variables for GDP prediction?",
+                    "Answer": "Kriging interpolation",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Where are the seamless administrative raster files used in data collection created?",
+                    "Answer": "National and sub-national boundaries",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What are the spatial resolutions used for estimating total GDP (PPP) in data collection?",
+                    "Answer": "5 arc-min and 30 arc-sec",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What characteristics define the methodologies used for filling gaps in spatial datasets related to GDP and HDI?",
+                    "Answer": "seamless administrative raster file, national and sub-national boundaries, population datasets, expanding boundaries with a buffer, land mask, temporal interpolation, extrapolation methods",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the features of the data sources utilized in constructing high-resolution GDP grid datasets?",
+                    "Answer": "night-time light remote sensing data, land cover types, vegetation coverage, terrain indices",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the spatial resolution achieved for GDP prediction in the modeled dataset?",
+                    "Answer": "100 meters",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many key node regions are included in the GDP prediction data collection?",
+                    "Answer": "34",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'downscaling' mean in the context of GDP data collection and analysis?",
+                    "Answer": "In the context of GDP data collection and analysis, 'downscaling' refers to the process of using models and auxiliary data, such as night-time light remote sensing data, land cover types, and vegetation cover, to predict GDP at a finer spatial resolution than what is originally available, such as converting national or coarse grid data to a finer grid scale.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is 'Kriging' and how is it utilized in the prediction of GDP data?",
+                    "Answer": "'Kriging' is a statistical interpolation technique used to fill in missing data points by predicting values at unobserved locations based on observed data points. In GDP data prediction, it is used to address missing auxiliary variable data and to predict GDP residuals at a finer scale, contributing to the downscaling process.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "How is 'support vector machine regression' applied in modeling GDP data?",
+                    "Answer": "'Support vector machine regression' is applied in modeling GDP data by establishing a nonlinear relationship between GDP and auxiliary variables like night-time lights and land cover, to predict GDP trends at a finer spatial resolution, based on the assumption of scale invariance of variable relationships.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How might the integration of night-time light remote sensing data, land cover types, vegetation coverage, and terrain indices contribute to the accuracy of GDP predictions at a finer spatial resolution?",
+                    "Answer": "The integration of night-time light remote sensing data, land cover types, vegetation coverage, and terrain indices helps to construct a downscaling model that predicts GDP with greater spatial resolution. These auxiliary variables provide additional context and detail that enhance the model's ability to capture and predict economic activities at fine scales, such as 100-meter resolution, by establishing nonlinear relationships between GDP and these variables.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes challenges in achieving high-resolution GDP predictions across diverse geographical regions?",
+                    "Answer": "Challenges in achieving high-resolution GDP predictions arise from data missing in auxiliary variables such as night-time light data, land cover types, vegetation coverage, and terrain indices, which are crucial for constructing the prediction model.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What leads to the use of interpolation techniques in filling data gaps when constructing GDP datasets?",
+                    "Answer": "The use of interpolation techniques, like Kriging, is prompted by the need to fill data gaps in auxiliary variables, ensuring the completeness and accuracy of the input data required for the GDP prediction model.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the purpose of constructing a support vector machine regression kriging downscaling model for GDP prediction in key nodal regions?",
+                    "Answer": "The goal is to predict GDP at a high spatial resolution of 100 meters for 34 key nodal regions along the 'Belt and Road' initiative using auxiliary information like night-time light data, land cover type, vegetation cover, and terrain indices. This model addresses data gaps by employing kriging interpolation for missing values, thus providing high-resolution GDP predictions that can assist in regional risk assessments.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it important to create a seamless administrative raster file using national and sub-national boundaries for gridded GDP and HDI datasets?",
+                    "Answer": "The seamless administrative raster file ensures that the gridded end-products cover the entire land area in the input datasets, allowing for consistent spatial assessments over time. This approach maintains the representativeness of official statistics at a finer spatial resolution without directly relying on sub-national data.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What is the rationale behind using night-time light data and terrain indices as auxiliary variables in GDP prediction models?",
+                    "Answer": "Night-time light data and terrain indices are utilized as auxiliary variables because they provide valuable information about human activity and geographical features that correlate with economic activities. These variables help refine the spatial resolution of GDP predictions, enabling more accurate assessments of economic conditions in specific regions.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "How can the integration of various auxiliary data sources like nighttime light remote sensing, land cover types, vegetation coverage, and terrain indices be effectively utilized to enhance GDP prediction accuracy at a high spatial resolution?",
+                    "Answer": "To enhance GDP prediction accuracy at a high spatial resolution, various auxiliary data sources such as nighttime light remote sensing, land cover types, vegetation coverage, and terrain indices are integrated into a support vector machine regression kriging downscaling model. The integration involves handling missing data with kriging interpolation and using aggregation and resampling methods to refine the auxiliary data to required resolutions. The model is designed to capture nonlinear relationships between GDP and auxiliary variables, ensuring consistent predictions over different spatial scales.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "What procedural steps are involved in constructing a seamless administrative raster file to ensure the comprehensive coverage of land areas in gridded GDP and HDI datasets?",
+                    "Answer": "The procedural steps involved in constructing a seamless administrative raster file include using national and sub-national boundaries along with population datasets to create a consistent framework. The process involves expanding rasterized boundaries to cover NoData areas with a buffer, using tools like the Euclidean Allocation in ArcMap. A land mask is created by combining cells from population datasets and boundary data, which is then used to set non-land cells to NoData, ensuring that the gridded datasets comprehensively cover the intended land areas.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What methodological approach is applied to estimate GDP at the grid cell level, and how is population data incorporated into this estimation?",
+                    "Answer": "The methodological approach to estimate GDP at the grid cell level involves calculating total GDP (PPP) by multiplying GDP per capita (PPP) with grid-specific population data. Two different spatial resolutions are used for this estimation: 5 arc-min (10 km at the equator) and 30 arc-sec (1 km at the equator). This approach ensures that GDP estimates are spatially detailed and reflect population distribution across the grid cells.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methods enable the creation of a seamless administrative raster file for GDP data collection?",
+                    "Answer": "The creation of a seamless administrative raster file is enabled by using national and sub-national boundaries along with population datasets. The process involves expanding rasterized boundaries to cover NoData areas, using tools like the Euclidean Allocation tool in ArcMap, and combining cells from different datasets to create a land mask that sets non-land cells to NoData.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "How does the integration of multi-source auxiliary data enable high-resolution GDP predictions?",
+                    "Answer": "The integration of multi-source auxiliary data, such as night-time light remote sensing data, land cover types, vegetation cover, and terrain indices, enables high-resolution GDP predictions by providing essential inputs for constructing support vector machine regression kriging downscaling models. These models establish nonlinear relationships between GDP and auxiliary variables, facilitating fine-scale GDP predictions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might a dataset using night-time light remote sensing data not achieve the expected precision in GDP predictions at a fine spatial resolution?",
+                    "Answer": "One reason might be the data gaps in the auxiliary variables such as night-time lights, land cover, vegetation index, and terrain index, which are addressed through interpolation methods like Kriging. The absence of complete data can affect the precision of GDP predictions at a fine spatial resolution.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why might the process of creating a seamless administrative raster file for GDP data collection not yield the anticipated comprehensive coverage?",
+                    "Answer": "The process might not yield comprehensive coverage due to the need to fill NoData areas, such as sea and water bodies, using a Euclidean Allocation tool and buffers, which might not perfectly align with actual land use and boundaries, potentially leaving gaps or inaccuracies in coverage.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What are your thoughts on the effectiveness of using night-time light remote sensing data combined with land cover and vegetation indices for GDP prediction at fine spatial resolutions?",
+                    "Answer": "The use of night-time light remote sensing data, coupled with land cover and vegetation indices, appears to be an effective approach for predicting GDP at fine spatial resolutions. These auxiliary variables provide crucial insights into human activities and environmental conditions, which can enhance the accuracy of GDP predictions when used in a sophisticated model like the support vector machine regression kriging downscaling model. The integration of these diverse data sources helps address data gaps and improve the granularity of economic assessments, making it a promising method for high-resolution spatial GDP estimations.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What is your evaluation of the potential for using machine learning models, like support vector machines, in enhancing the precision of economic datasets in regional risk assessments?",
+                    "Answer": "Machine learning models, such as support vector machines, offer substantial potential in enhancing the precision of economic datasets for regional risk assessments. These models can capture complex, non-linear relationships between GDP and various auxiliary data, providing more accurate and nuanced predictions. By leveraging fine-scale input variables, machine learning approaches can refine the spatial resolution of economic data, which is vital for detailed risk evaluations. However, the success of these models depends on the availability of high-quality training data and the appropriateness of the model parameters for the specific economic context being analyzed.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how auxiliary variables like night-time light data and vegetation indices are integrated into the GDP prediction model for high-resolution outputs.",
+                    "Answer": "Auxiliary variables such as night-time light data, vegetation indices, land cover, and terrain indices are integrated into a support vector machine regression kriging downscaling model. This model establishes a nonlinear relationship between kilometer-scale GDP and these variables, predicting GDP trends at finer scales by assuming the scale-invariance of variable relationships. Kriging interpolation is then used to predict GDP residuals at fine scales.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I can't make sense of how different spatial resolutions (1-km, 500-m, and 100-m) are utilized to achieve the final GDP grid output.",
+                    "Answer": "The process begins by using 1-km and 500-m data to predict GDP at 500-m resolution via the downscaling model. Subsequently, 500-m and 100-m data are used to refine the prediction and achieve the final 100-m resolution GDP grid for the specified key regions. This staged approach leverages data aggregation and resampling methods to enhance spatial resolution incrementally.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please summarize the key methodologies utilized in generating high-resolution GDP grid data, focusing on the integration of auxiliary variables like night-time light data and vegetation indices.",
+                    "Answer": "The methodologies used for generating high-resolution GDP grid data involve the utilization of night-time light remote sensing data, land cover types, vegetation coverage, and terrain indices. A support vector machine regression kriging downscaling model is constructed to achieve GDP prediction at 100-meter spatial resolution for key node regions. This model includes both trend and residual predictions, where the trend prediction relies on the non-linear relationship between kilometer-scale GDP and auxiliary variables. The residual prediction is obtained using kriging interpolation. Auxiliary data gaps are filled using kriging interpolation, and data aggregation and resampling methods are employed to derive necessary data at various resolutions, such as 1-km and 500-m night-time light, vegetation index, land cover data, and terrain indices.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Please conduct a search for potential strategies to enhance the spatial resolution of GDP datasets through innovative data interpolation and extrapolation techniques.",
+                    "Answer": "To enhance the spatial resolution of GDP datasets, innovative data interpolation and extrapolation techniques include the use of kriging interpolation to fill data gaps, and the integration of auxiliary variables such as night-time light data and vegetation indices. The methodology involves creating a seamless administrative raster file using national and sub-national boundaries, combined with population datasets. Temporal interpolation and extrapolation are employed to scale data to reflect national changes, ensuring comprehensive coverage. This approach allows for the creation of gridded datasets with varying resolutions, such as 5 arc-min and 30 arc-sec, by multiplying GDP per capita by grid-specific population data.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,205 @@
+{
+    "id": "3046e1e6-d712-4a36-95d4-d71c81d336b2",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "A dataset of multiscale topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole",
+            "description": "Shortwave downward radiation (SWDR) is an important component of the Earth's system for material and energy balance. However, existing SWDR estimates are typically developed under the assumption of a flat surface, neglecting the effects of topography. This leads to significant errors in SWDR estimates in mountainous regions and smooths out the spatial distribution of SWDR. The Pan-Third Pole region, with the Tibetan Plateau at its core, is one of the most complex surface areas in the world. The dramatic changes in topography have a severe impact on surface shortwave downward radiation.\nBased on SRTM data, this study developed a multi-spatial scale topographic correction parameterization product for the Pan-Third Pole region, with spatial resolutions of 3 seconds, 15 seconds, 30 seconds, 1 minute, and 2.5 minutes. This topographic correction parameterization product fully considers the effects of changes in solar position and topographic conditions on surface shortwave downward radiation, direct radiation, and diffuse sky radiation. It effectively converts SWDR estimates based on flat surface assumptions to the actual SWDR received by the mountainous surface.\nAt the common spatial resolution of many existing SWDR products (2.5 arc-minutes), the correction accuracy for direct solar radiation is characterized by a coefficient of determination (R²) of 0.998, a relative root mean square error (rRMSE) of 2.4%, and a relative bias (rbias) of 0.8%. The correction accuracy for diffused radiation is represented by an R² of 0.965, an rRMSE of 1.2%, and an rbias of -0.8%. Under clear sky conditions, the terrain correction results for SWDR using TCCs show an rbias of 5.1%, an rRMSE of 7.8%, and an R² of 0.989 for low surface albedo (grass, albedo=0.2). For high surface albedo (snow, albedo=0.8), the rbias is 4.9%, the rRMSE is 8.3%, and the R² is 0.979. The terrain correction results under cloudy sky conditions show an rbias of -1.8%, an rRMSE of 2.2%, and an R² of 0.991.\nIt is worth noting that compared to traditional topographic correction methods, this product can directly correct flat surface SWDR across different spatial scales with more reliable accuracy. This dataset is a topographic correction coefficient product within the Long-term Earth System Spatiotemporally Seamless Radiation Budget dataset (LessRad).",
+            "instructions": "Filename: the terrain correction parameter data is stored in .tif format with file names following the pattern \"TCCSDR_lon_lat_LON_LAT_SZA_SAA_rr.tif\", \"TCCDIF_lon_lat_LON_LAT_rr.tif\", and \"TCCREF_lon_lat_LON_LAT_rr.tif\". Among them, TCCSDR: Terrain Correction Coefficient of Shortwave Direct Radiation; TCCDIF: Terrain Correction Coefficient of Shortwave Diffused Radiation; TCCREF: Terrain Correction Coefficient of Reflection; lon: minimum longitude value of image range (°); lat: minimum latitude value of image range (°); LON: maximum longitude value of image range (°); LAT: maximum latitude value of image range (°); SZA: Solar Zenith Angle (°); SAA: Solar Azimuth Angle (°); rr: spatial resolution (3s, 15s, 30s, 1min, and 2.5min); tif: geotiff format.\nFor example, a file named \"TCCSDR_60_20_65_25_10_100.tif\" represents the geotiff file that describes the terrain correction coefficient of shortwave direct radiation in the longitude range of 60-65°E and latitude range of 20-25°N when the solar zenith angle is 10° and the solar azimuth angle is 100°.\nUsage: you can use ArcGIS, python, IDL and other programming languages to read. The terrain correction coefficient (TCC) can be calculated as TCC = 0.001 * DN, where TCC is the terrain correction coefficient (including TCCSDR, TCCDIF and TCCREF) and DN is the digital quantized value. the real terrain correction coefficient needs to be multiplied by the quantized value in the file by a coefficient of 0.001.\nTherefore, the shortwave direct radiation received on the real rugged surface can be calculated as SDR = TCCSDR * SDR_Flat (equivalent plane shortwave direct radiation). Similarly, the shortwave diffused radiation can be calculated as DIF = TCCDIF * DIF_Flat (equivalent plane shortwave diffused radiation). The shortwave downward radiation (SWDR) can be calculated as SWDR = SDR + DIF + (SDR + DIF) * TCCREF * surface albedo.",
+            "east": 110.0,
+            "west": 60.0,
+            "south": 20.0,
+            "north": 50.0,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 3836180994004.0,
+            "cstr": "18406.11.Atmos.tpdc.300784",
+            "doi": "10.11888/Atmos.tpdc.300784",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "XIAN Yuyang",
+                "unitEn": "Sun Yat-sen University"
+            },
+            {
+                "nameEn": "WANG Tianxing",
+                "unitEn": "Sun Yat-sen University"
+            },
+            {
+                "nameEn": "LI Dahui",
+                "unitEn": "Sun Yat-sen University"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "A Uniform Model for Correcting Shortwave Downward Radiation Over Rugged Terrain at Various Scales",
+                "referenceEn": "Xian, Y.Y., Wang, T.X., Cheng, W.J., Letu, H., Du, Y.H., & Leng, W.C. (2023). A Uniform Model for Correcting Shortwave Downward Radiation Over Rugged Terrain at Various Scales. IEEE Transactions on Geoscience and Remote Sensing, 61, 1–12. DOI: 10.1109/TGRS.2023.3278081."
+            },
+            {
+                "titleEn": "A dataset of topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole",
+                "referenceEn": "Xian, Y., Wang, T., Du, Y., Letu, H., Qi, J., & Li, D. (2024). A dataset of topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole. Scientific Data, 11, 779. https://doi.org/10.1038/s41597-024-03616-2"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Topography"
+            },
+            {
+                "nameEn": "Land Surface Parameter"
+            },
+            {
+                "nameEn": "Shortwave radiation"
+            },
+            {
+                "nameEn": "Radiation"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Pan-Third Pole"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "none",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "The Innovation Group Project of Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)"
+            },
+            {
+                "titleEn": "National Natural Science Foundation of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of terrain correction coefficients used in the estimation of shortwave downward radiation in mountainous regions?",
+                    "Answer": "parameterized products, impacts of solar position, impacts of terrain conditions, R² of 0.998, relative RMSE of 2.4%, relative bias of 0.8%, R² of 0.965, relative RMSE of 1.2%, relative bias of -0.8%, rbias of 5.1%, rRMSE of 7.8%, R² of 0.989, rbias of 4.9%, rRMSE of 8.3%, R² of 0.979, rbias of -1.8%, rRMSE of 2.2%, R² of 0.991, reliable accuracy across different spatial scales",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What are the spatial resolutions provided for the terrain correction parameterization products in data collection for shortwave downward radiation (SWDR) in the Pan-Third Pole region?",
+                    "Answer": "3 seconds, 15 seconds, 30 seconds, 1 minute, 2.5 minutes",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is the significance of terrain correction coefficients in the context of shortwave downward radiation (SWDR) estimation?",
+                    "Answer": "Terrain correction coefficients are crucial in estimating shortwave downward radiation (SWDR) as they account for the effects of solar position and terrain variations on surface radiation, which are often ignored under the assumption of a flat surface. This is particularly important in complex terrains like the pan-Third Pole region, where significant errors can arise if terrain effects are not considered. By using these coefficients, SWDR estimates can be corrected for direct and diffuse solar radiation, improving the accuracy of radiation budget assessments across different spatial resolutions.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How does the accuracy of terrain correction coefficients in the estimation of shortwave downward radiation compare when using SRTM data at different spatial resolutions (e.g., 3s, 15s, 30s) versus a traditional planar surface assumption in complex terrains like the Pan-Third Pole region?",
+                    "Answer": "The terrain correction coefficients developed using SRTM data for the Pan-Third Pole region show significantly higher accuracy in estimating shortwave downward radiation compared to the traditional planar surface assumption. At a common spatial resolution of 2.5 arc-minutes, the corrected solar direct radiation achieves a coefficient of determination (R²) of 0.998 and a relative root mean square error (rRMSE) of 2.4%. In contrast, traditional planar assumptions do not account for the complex terrain effects, leading to greater estimation errors. The correction parameters account for variations in solar position and terrain conditions, providing more reliable results across different spatial resolutions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What underlying factors might explain the high accuracy of terrain correction parameters in converting planar shortwave downward radiation to actual surface-received radiation in mountainous regions?",
+                    "Answer": "The high accuracy of terrain correction parameters can be attributed to the consideration of solar position and terrain condition variations, which significantly impact surface shortwave downward radiation, direct radiation, and sky-scattered radiation. These parameters enable effective conversion from planar assumptions to actual surface-received shortwave downward radiation, especially in complex terrains like the Pan-Third Pole region.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the inaccuracies in estimating shortwave downwelling radiation (SWDR) in mountainous regions, and how does terrain correction help mitigate these errors?",
+                    "Answer": "Inaccuracies in estimating SWDR in mountainous regions arise from the assumption of flat surfaces in existing SWDR models, which do not account for the complex terrain effects. The rapid changes in terrain, especially in regions like the Tibetan Plateau, significantly affect the distribution of SWDR. Terrain correction, as developed using SRTM data, addresses these inaccuracies by considering the impact of solar position and terrain conditions on SWDR, direct radiation, and sky-scattered radiation. This correction effectively transforms SWDR estimates from flat assumptions to more accurate representations of what is received on the mountainous surface.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential outcomes of applying terrain correction coefficients to shortwave downward radiation data in mountainous regions with varying spatial scales?",
+                    "Answer": "Applying terrain correction coefficients to shortwave downward radiation data in mountainous regions can significantly enhance the accuracy of radiation estimates by accounting for the effects of solar position and terrain conditions. This adjustment can effectively transform the estimated radiation under flat surface assumptions to reflect the actual radiation received by the mountainous surface. The results indicate high precision in the correction of solar direct radiation and sky scattering radiation, with accuracy metrics such as a high coefficient of determination (R²) and low relative root mean square error (rRMSE) and relative bias (rbias). For instance, in areas with low surface albedo like grassland, the relative bias is 5.1% and the rRMSE is 7.8%, whereas in high albedo areas like snow, the relative bias is 4.9% and the rRMSE is 8.3%. Under cloudy conditions, the overall terrain correction results show a relative bias of -1.8%, an rRMSE of 2.2%, and an R² of 0.991. This approach offers more reliable accuracy compared to traditional terrain correction methods and can be applied directly to shortwave downward radiation across different spatial scales.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What are the primary objectives of developing a dataset that considers terrain effects on shortwave downward radiation in complex geographical areas like the Pan-Third Pole region?",
+                    "Answer": "The primary objectives are to address the inaccuracies in estimating shortwave downward radiation (SWDR) in mountainous areas caused by the assumption of a flat surface, to enhance the precision of SWDR spatial distribution by incorporating terrain effects, and to provide a more reliable terrain correction parameterization product that accounts for variations in solar position and terrain conditions, thereby improving the accuracy of SWDR estimations in complex terrains.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        }
+    ]
+}

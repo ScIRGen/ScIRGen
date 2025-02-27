@@ -1,0 +1,182 @@
+{
+    "id": "85bb3c1c-ba68-4d1e-ba4f-bce21b2468ca",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Global rainfall and snowfall dataset of FY-3E satellite (2022-2024)",
+            "description": "Passive microwave radiometers onboard satellites rely on the received upwelling radiation to retrieve precipitation, which is a mixed signal from the surface, atmosphere and precipitation hydrometeors. Liquid precipitation droplets increase the upwelling radiation from the surface at lower frequencies, while ice particles cause a decrease in upwelling radiation at higher frequencies. The task of the retrieval algorithm is to identify the precipitation phase and to isolate the signal of precipitation from that of the surface. This dataset based on a machine learning method to retrieve rainfall and snowfall rates based on observations from the Microwave Hydrometer Sounder and Microwave Temperature Sounder onboard FY-3E. The machine learning method included two parts, Self-organized mapping (SOM) is used to classify the precipitation and underlying surface types, and an artificial neural network (ANN) is subsequently used to relate the brightness temperature to the precipitation rate for the clusters derived from the SOM. The half-hour product of the Integrated Multi-Satellite Retrieval for Global Precipitation Measurement (IMERG) is used to train the ANN. To address the issue that number of heavy precipitation samples are not enough for training, the simulation of radiative transfer for TOVS is used as a supplement to heavy rain samples. The dataset based on SOM-ANN algorithm outperforms the IMERG and Goddard profiling algorithm (GPROF) retrieval products in both rainfall and snowfall retrieval. Compared with the hourly observations at 4400 stations during a two-year period, the root mean square errors of SOM-ANN proposed here are 1.06 mm/hr and 0.34 mm/hr for the rainfall and snowfall rates, which are better than those of IMERG (1.23 mm/hr and 0.42 mm/hr) and GPROF (1.22 mm/hr and 0.44 mm/hr). The research article about SOM-ANN algorithm and evaluation result are published at  https://doi.org/10.1029/2024JD040731",
+            "instructions": "The file name is yyyymmdd-HHMM. mat, where yyyy represents the year, mm represents the month, dd represents the date, HH represents the hour, and MM represents the minute.\nThe dataset contains longitude and latitude (\"lon\" and \"lat\"), precipitation intensity (\"output_m\", unit: mm/h), precipitation detection (\"output_detect\"), and snowfall probability(\"output_ice\")",
+            "east": 180.0,
+            "west": 180.0,
+            "south": 90.0,
+            "north": 90.0,
+            "startTime": "2022-04-01 00:00:00",
+            "endTime": "2024-04-01 00:00:00",
+            "fileSize": 72927085046.0,
+            "cstr": "18406.11.Atmos.tpdc.301245",
+            "doi": "10.11888/Atmos.tpdc.301245",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "ZHAO Runze",
+                "unitEn": "National Satellite Meteorological Center (National Space Weather Monitoring and Warning Center)"
+            },
+            {
+                "nameEn": "WANG Kaicun ",
+                "unitEn": "Peking University"
+            },
+            {
+                "nameEn": "XU Xiangde",
+                "unitEn": "China Meteorological Administration"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "A Machine Learning Method to Retrieve Global Rainfall and Snowfall Rates From the Passive Microwave Observations of FY-3E",
+                "referenceEn": "Zhao, R., Wang, K., & Xu, X. (2024b). A Machine Learning Method to Retrieve Global Rainfall and Snowfall Rates From the Passive Microwave Observations of FY-3E. Journal of Geophysical Research: Atmospheres, 129(14), e2024JD040731. https://doi.org/10.1029/2024JD040731"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Others"
+            },
+            {
+                "nameEn": "Satellite Weather"
+            },
+            {
+                "nameEn": "Precipitation"
+            },
+            {
+                "nameEn": "microphysical characteristics of precipitation"
+            },
+            {
+                "nameEn": "rainfall"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2022-2024",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of the data collection methods used by passive microwave radiometers in detecting global precipitation and snowfall?",
+                    "Answer": "upward radiation signals, mixed signals from the surface, atmosphere, and hydrometeors, liquid precipitation particles increase upward radiation at lower frequencies, ice particles reduce upward radiation at higher frequencies",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the root mean square error for the rainfall retrieval rate using the machine learning algorithm in a dataset focused on global precipitation and snowfall?",
+                    "Answer": "1.06 millimeters per hour",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is the role of self-organizing maps (SOM) in classifying precipitation and surface types within satellite data collection methods?",
+                    "Answer": "Self-organizing maps (SOM) are used to classify precipitation and underlying surface types by clustering data based on similarities. In satellite data collection methods, SOM helps in distinguishing different precipitation and surface types to improve the accuracy of precipitation retrieval.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges in accurately retrieving precipitation phases from satellite data using passive microwave radiometers?",
+                    "Answer": "Challenges in accurately retrieving precipitation phases arise from the complexity of the mixed signals received by the passive microwave radiometers, which include contributions from the surface, atmosphere, and hydrometeors. The retrieval algorithms must accurately identify the precipitation phase and separate the precipitation signal from the surface signal. Liquid precipitation particles increase the upward radiation at lower frequencies, while ice particles decrease it at higher frequencies. The dataset utilizes machine learning methods, specifically a combination of self-organizing maps (SOM) for classifying precipitation and surface types, and artificial neural networks (ANN) to link brightness temperatures with precipitation rates. These methods are developed to improve retrieval accuracy, as demonstrated by superior performance in comparison to other inversion products.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences on the accuracy of precipitation retrieval when leveraging machine learning algorithms in satellite data collection methods?",
+                    "Answer": "Utilizing machine learning algorithms, such as SOM and ANN, in satellite data collection methods can lead to improved accuracy in precipitation retrieval. The approach effectively separates precipitation signals from surface signals and outperforms traditional methods like IMERG and GPROF in terms of root mean square error, particularly in detecting rainfall and snowfall rates.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to employ machine learning methods, such as self-organizing map (SOM) and artificial neural networks (ANN), in the development of a dataset for global precipitation and snowfall detection using satellite data?",
+                    "Answer": "The goal of employing machine learning methods like SOM and ANN is to effectively classify precipitation types and separate precipitation signals from surface signals, thereby improving the accuracy of precipitation retrieval. These methods enable the analysis of complex mixed signals from the Earth's surface, atmosphere, and hydrometeors. By using machine learning, the dataset aims to achieve better performance in precipitation and snowfall retrieval compared to existing products, as evidenced by the reduced root mean square error when compared with ground-based measurements.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What are the procedural steps involved in using machine learning algorithms to separate precipitation signals from surface signals in satellite data collection?",
+                    "Answer": "The data collection method involves using passive microwave radiometers on the FY-3E satellite to receive upward radiation, which contains mixed signals from the surface, atmosphere, and hydrometeors. The separation process uses machine learning algorithms consisting of two parts: self-organizing maps (SOM) for classifying precipitation and underlying surface types, followed by artificial neural networks (ANN) to relate brightness temperatures to precipitation rates from SOM-derived clusters. The ANN is trained using the IMERG multi-source precipitation product, with RTTOV radiative transfer simulations supplementing samples for heavy precipitation.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        }
+    ]
+}

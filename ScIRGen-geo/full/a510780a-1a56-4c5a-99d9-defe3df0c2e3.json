@@ -1,0 +1,173 @@
+{
+    "id": "a510780a-1a56-4c5a-99d9-defe3df0c2e3",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Passive microwave SSM/I brightness temperature dataset for China (1987-2007)",
+            "description": "This data set includes the microwave brightness temperatures obtained by the spaceborne microwave radiometer SSM/I carried by the US Defense Meteorological Satellite Program (DMSP) satellite. It contains the twice daily (ascending and descending) brightness temperatures of seven channels, which are 19H, 19V, 22V, 37H, 37V, 85H, and 85V.\nThe Specialized Microwave Imager (SSM/I) was developed by the Hughes Corporation of the United States. In 1987, it was first carried into the space on the Block 5D-/F8 satellite of the US Defense Meteorological Satellite Program (DMSP) to perform a detection mission. In the 10 years from when the DMSP soared to orbit in 1987 to when the TRMM soared to orbit in 1997, the SSM/I was the world's most advanced spaceborne passive microwave remote sensing detection instrument, having the highest spatial resolution in the world. The DMSP satellite is in a near-polar circular solar synchronous orbit; the elevation is approximately 833 km, the inclination is 98.8 degrees, and the orbital period is 102.2 minutes. It passes through the equator at approximately 6:00 local time and covers the whole world once every 24 hours. The SSM/I consists of seven channels set at four frequencies, and the center frequencies are 19.35, 22.24, 37.05, and 85.50 GHz. The instrument actually comprises seven independent, total-power, balanced-mixing, superheterodyne passive microwave radiometer systems, and it can simultaneously measure microwave radiation from Earth and the atmospheric systems. Except for the 22.24 GHz frequency, all the frequencies have both horizontal and vertical polarization states.\nSome Eigenvalues of SSM/I\nChannel Frequency\n(GHz) Polarization Mode (V/H) Spatial Resolution\n(km * km) Footprint Size\n(km)\n19V 19.35 V 25×25 56\n19H 19.35 H 25×25 56\n22V 22.24 V 25×25 45\n37V 37.05 V 25×25 33\n37H 37.05 H 25×25 33\n85V 85.50 V 12.5×12.5 14\n85H 85.50 H 12.5×12.5 14\n1. File Format and Naming:\nEach group of data consists of remote sensing data files, .JPG image files and .met auxiliary information files as well as .TIM time information files and the corresponding .met time information auxiliary files.\nThe data file names and naming rules for each group in the SSMI_Grid_China directory are as follows:\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V (remote sensing data);\nChina-EASE-Fnn -ML/HaaaabbbA/D.ccH/V.jpg (image file);\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V.met (auxiliary information document);\nChina-EASE-Fnn-ML/HaaaabbbA/D.TIM (time information file); and\nChina-EASE- Fnn -ML/HaaaabbbA/D.TIM.met (time information auxiliary file).\nAmong them, EASE stands for EASE-Grid projection mode; Fnn represents carrier satellite number (F08, F11, and F13); ML/H represents multichannel low resolution and multichannel high resolution; A/D stands for ascending (A) and descending (D); aaaa represents the year; bbb represents the Julian day of the year; cc represents the channel number (19H, 19V, 22V, 37H, 37V, 85H, and 85V); and H/V represents horizontal polarization (H) and vertical polarization (V).\n2. Coordinate System and Projection:\nThe projection method is an equal-area secant cylindrical projection, and the double standard latitude is 30 degrees north and south. For more information on EASE-GRID, please refer to http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/. If you need to convert the EASE-Grid projection method into a geographic projection method, please refer to the ease2geo.prj file, which reads as follows.\nInput\nProjection cylindrical\nUnits meters\nParameters 6371228 6371228\n1 /* Enter projection type (1, 2, or 3)\n0 00 00 /* Longitude of central meridian\n30 00 00 /* Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nParameters\nEnd\n3. Data Format:\nStored as binary integers, Row number: 308 *166,each datum occupies 2 bytes. The data that are actually stored in this data set are the brightness temperatures *10, and after reading the data, they need to be divided by 10 to obtain true brightness temperature.\n4. Data Resolution:\nSpatial resolution: 25 km, 12.5 km (SSM/I 85 GHz);\nTime resolution: day by day, from 1978 to 2007.\n5. The Spatial Coverage:\nLongitude: 60°-140° east longitude;\nLatitude: 15°-55° north latitude.\n6. Data Reading:\nEach group of data includes remote sensing image data files, .JPG image files and .met auxiliary information files. The JPG files can be opened with Windows image and fax viewers. The .met auxiliary information files can be opened with notepad, and the remote sensing image data files can be opened in ENVI and ERDAS software.",
+            "instructions": "",
+            "east": 135.5,
+            "west": 73.2,
+            "south": 17.8,
+            "north": 53.9,
+            "startTime": "1987-01-08 16:00:00",
+            "endTime": "2008-01-07 16:00:00",
+            "fileSize": 11176630331.0,
+            "cstr": null,
+            "doi": "",
+            "dataFormat": "Grid",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "National Snow and Ice Data Center（NSIDC）",
+                "unitEn": "National Snow and Ice Data Center"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Bootstrap Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS, Version 3",
+                "referenceEn": "Comiso, J. C. (2017). Bootstrap Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS, Version 3. [Indicate subset used]. Boulder, Colorado USA. NASA National Snow and Ice Data Center Distributed Active Archive Center."
+            },
+            {
+                "titleEn": "Long Term Analyses on Spatial and Temporal Evaluation of Snow Covers in Northern China by Using RS and Meteorological data",
+                "referenceEn": "Xuemei B, Wanchang Z. Long Term Analyses on Spatial and Temporal Evaluation of Snow Covers in Northern China by Using RS and Meteorological data[C]//International Workshop on Education Technology and Training, 2008. and 2008 International Workshop on Geoscience and Remote Sensing. ETT and GRS 2008. 2008, 2: 368–371. doi:10.1109/ETTandGRS.2008.123"
+            },
+            {
+                "titleEn": "Remote Sensing Inversion and Change Characteristic Analysis of Snow Storage in the Junggar Basin",
+                "referenceEn": "None"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Cryosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+            },
+            {
+                "nameEn": "Microwave remote sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "1987-2007",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            },
+            {
+                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+            },
+            {
+                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+            },
+            {
+                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [],
+    "query": [
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the properties of passive microwave brightness temperature data collected over China between 1987 and 2007?",
+                    "Answer": "19.35 GHz, 22.24 GHz, 37.05 GHz, 85.50 GHz, vertical polarization, horizontal polarization, spatial resolutions 25×25 km, spatial resolutions 12.5×12.5 km, twice daily, ascending orbits, descending orbits, geographic range 60° to 140°E longitude, geographic range 15° to 55°N latitude, binary format, grid size 308x166, brightness temperature multiplied by 10",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is the role of the Special Sensor Microwave/Image (SSM/I) in passive microwave remote sensing?",
+                    "Answer": "The Special Sensor Microwave/Image (SSM/I) is a starborne passive microwave radiometer developed by the United States Hughes Company, first used in 1987 by the Defense Meteorological Satellite Program (DMSP). It was the most advanced and highest spatial resolution passive microwave remote sensing instrument globally from 1987 until 1997. The SSM/I measures microwave radiation from the Earth and atmospheric systems using seven channels at four frequency centers (19.35, 22.24, 37.05, and 85.50 GHz), with horizontal and vertical polarization, except at 22.24 GHz. It operates on a near-polar, sun-synchronous orbit at an altitude of approximately 833 km, providing global coverage every 24 hours.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the spatial resolution and polarization modes of passive microwave radiometers compare across different frequency channels in a dataset derived from the DMSP satellites?",
+                    "Answer": "The spatial resolution and polarization modes of the passive microwave radiometers in a dataset derived from DMSP satellites vary across frequency channels. For example, at 19.35 GHz and 22.24 GHz, the spatial resolution is 25 km x 25 km, whereas at 85.50 GHz, it is 12.5 km x 12.5 km. Additionally, channels at 19.35 GHz and 37.05 GHz have both horizontal (H) and vertical (V) polarization modes, while the channel at 22.24 GHz only has a vertical (V) polarization mode.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors have contributed to the challenges in collecting and processing passive microwave brightness temperature data from the SSM/I sensor over China's region between 1987 and 2007?",
+                    "Answer": "The challenges in collecting and processing passive microwave brightness temperature data from the SSM/I sensor over China's region between 1987 and 2007 could include the complexity of operating advanced spaceborne passive microwave radiometers like the SSM/I, which was among the most advanced of its time, requiring precise calibration and handling. The data involves multiple frequency channels and polarizations (19H, 19V, 22V, 37H, 37V, 85H, 85V), which necessitates intricate data processing techniques to ensure accuracy. Additionally, the need to manage various data formats (remote sensing data files, JPG image files, and .met auxiliary information files) and convert projections from EASE-Grid to Geographic could also pose significant challenges. The spatial and temporal resolutions, alongside the wide spatial coverage required, further complicate data collection and processing efforts.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential effects on data accuracy and completeness when utilizing multiple channels and polarizations for passive microwave remote sensing data collection over China from 1987 to 2007?",
+                    "Answer": "Utilizing multiple channels and polarizations in passive microwave remote sensing data collection can enhance the accuracy and completeness of the dataset by providing varied perspectives on brightness temperatures, which can improve the characterization of surface and atmospheric conditions. Each channel and polarization offers unique data that can be combined to give a more comprehensive understanding of the observed area. However, this complexity can also introduce challenges in data processing and interpretation, requiring advanced algorithms to effectively integrate and analyze the diverse data points.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to collect passive microwave brightness temperature data for the region using multiple channels and polarizations over a long period?",
+                    "Answer": "Collecting passive microwave brightness temperature data using multiple channels and polarizations over a long period is crucial for monitoring and understanding changes in the Earth's atmospheric and surface conditions. The data provides insights into various environmental and climatic processes by capturing different frequency responses and polarizations, allowing for comprehensive analysis of phenomena such as precipitation, snow cover, and sea ice extent. The long-term data also supports trend analysis and the assessment of temporal changes, which are vital for climate modeling and prediction efforts.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedures are followed to collect and process passive microwave brightness temperature data using spaceborne microwave radiometers like SSM/I for regions in China from 1987 to 2007?",
+                    "Answer": "The data collection involves using spaceborne microwave radiometers, specifically the Special Sensor Microwave/Imager (SSM/I), mounted on DMSP satellites. These satellites orbit in a near-polar, sun-synchronous orbit at approximately 833 km altitude with a 98.8° inclination. The instrument collects data across seven channels at four frequencies (19.35, 22.24, 37.05, and 85.50 GHz) with both horizontal and vertical polarization, resulting in daily coverage of the globe. The data is stored in integer binary format with a spatial resolution of 25 km and 12.5 km for the 85 GHz channel, and a temporal resolution of daily measurements. The brightness temperatures are stored as 10 times the actual value and need to be divided by 10 to obtain the real brightness temperature. Data files are organized in a specific naming convention based on satellite number, resolution, orbital pass, year, Julian day, channel, and polarization. The EASE-Grid projection is used, which can be converted to Geographic projection using specified parameters.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        }
+    ]
+}

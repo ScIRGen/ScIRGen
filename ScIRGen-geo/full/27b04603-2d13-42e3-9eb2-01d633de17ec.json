@@ -1,0 +1,443 @@
+{
+    "id": "27b04603-2d13-42e3-9eb2-01d633de17ec",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Crevasse dataset over typical glaciers in Greenland ice sheet（2018-2020）",
+            "description": "We propose an algorithm for ice fissure identification and detection using u-net network, which can realize the automatic detection of ice fissures of Typical Glaciers in Greenland ice sheet. Based on the data of sentinel-1 IW from July  and August every year, in order to suppress the speckle noise of SAR image, the probabilistic patch based weights (ppb) algorithm is selected for filtering, and then the representative samples are selected and input into the u-net network for model training, and the ice cracks are predicted according to the trained model. Taking two typical glaciers in Greenland (Jakobshavn and Kangerdlussuaq) as examples, the average accuracy of classification results can reach 94.5%, of which the local accuracy of fissure area can reach 78.6%, and the recall rate is 89.4%.",
+            "instructions": "Crevasses data is stored in shpfile format, and the file is named ice shelf name + year.Shp. All shpfile files in the dataset can be opened directly with arcgis/qgis and other software.",
+            "east": -60.0,
+            "west": -15.0,
+            "south": 58.0,
+            "north": 84.0,
+            "startTime": "2018-07-01 00:00:00",
+            "endTime": "2020-08-31 00:00:00",
+            "fileSize": 612188.0,
+            "cstr": "18406.11.Cryos.tpdc.272746",
+            "doi": "10.11888/Cryos.tpdc.272746",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "LI Xinwu ",
+                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "LIANG Shuang ",
+                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "YANG Bojin ",
+                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "ZHAO Jingjing ",
+                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Detection of Surface Crevasses over Antarctic Ice Shelves Using SAR Imagery and Deep Learning Method",
+                "referenceEn": "Zhao, J., Liang, S., & Li, X., et al. (2022). Detection of Surface Crevasses over Antarctic Ice Shelves Using SAR Imagery and Deep Learning Method. Remote Sensing, 14(3), 487."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Others"
+            },
+            {
+                "nameEn": "Cryosphere"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Unet"
+            },
+            {
+                "nameEn": "Others"
+            },
+            {
+                "nameEn": "Glaciers"
+            },
+            {
+                "nameEn": "Glacier remote sensing"
+            },
+            {
+                "nameEn": "Glacier(Ice Sheet)"
+            },
+            {
+                "nameEn": "Greenland Ice Sheet"
+            },
+            {
+                "nameEn": "deep learning"
+            },
+            {
+                "nameEn": "detection"
+            },
+            {
+                "nameEn": "semantic segmentation"
+            },
+            {
+                "nameEn": "Remote Sensing Product"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "radiation sensor"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Greenland"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2018-2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "CASEarth:Big Earth Data for Three Poles"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
+            },
+            {
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Crevasses have developed on almost all glaciers and ice shelves and are the direct result of glacier movement, reflecting the characteristics of glacier development and stresses. The crevasses contribute to the glacier mass balance through impacting the processes of meltwater transportation on the ice surface. Additionally, when sufficient surface meltwater infuses into crevasses, hydrofracturing may be induced, resulting in ice shelf instability; thus, crevasses are essential factors for assessing the stability of glaciers and ice shelves. Antarctic scientific research expeditions are also closely associated with crevasses because the rapid appearance of crevasses may herald the disintegration of the ice shelf and pose a serious safety hazard to field researchers. The orientation and distribution of crevasses can be used to distinguish the ice flow regimes and provide qualitative insight into trends in ice flow. Therefore, crevasses are critical not only for investigating the ice shelves’ stability as well as glacier dynamics but also for providing important safety guidance for glaciological field campaigns."
+            ],
+            "research objective": [
+                "In this study, we propose an automated crevasse extraction framework based on Sentinel-1 SAR imagery and an improved U-Net network. This study provides a helpful reference and guidance for automated crevasse extraction. In the future, more Sentinel-1 SAR imagery will be applied and the effect of temporal and spatial variations in crevasses on the stability of ice shelves will be investigated, which will contribute to project the ice shelf stability and explore the sea level rise implications of recent and future cryosphere changes."
+            ],
+            "challenges": [
+                "However, in some scenes, the recall rate was relatively lower due to the quality of the SAR image, terrain surrounding the crevasses, and observation geometry."
+            ],
+            "methods": [
+                "A modified U-Net network was implemented in this study for pixel-level crevasse identification. The model was compiled using the “binary cross-entropy” loss function, Adaptive Moment Estimation (Adam) optimizer, and an initial learning rate of 0.001. Finally, the model converged after 75 epochs."
+            ],
+            "dataset": [
+                "The spatial distribution of crevasses on Antarctic ice shelves in 2020 was mapped with a spatial resolution of ~40 m, and the characteristics of crevasses on the Nickerson Ice Shelf, Jelbart Ice Shelf, Amery Ice Shelf, Thwaites Glacier, and Shackleton Ice Shelf were analyzed."
+            ],
+            "findings": [
+                "The results indicated the extraction accuracy of our method was 84.2% and the F1 score was 72.5%. The crevasses on different ice shelves had different characteristics in terms of length, density, type, and spatial pattern, implying the different stress structures of ice shelves. The Thwaites Glacier and the Nickerson Ice Shelf in the West Antarctica Ice Sheet (WAIS) had shorter ice crevasses, whereas the lengths of ice crevasses on the Jelbart Ice Shelf and the Amery Ice Shelf in the East Antarctica Ice Sheet (EAIS) were relatively long. Nevertheless, there are more closely spaced crevasses on the ice shelf in WAIS compared to that in the EAIS. For the distribution of crevasse types, the Nickerson Ice Shelf and the Shackleton Ice Shelf had various forms of crevasses. There were mainly transverse crevasses developed on the Jelbart Ice Shelf and the Amery Ice Shelf."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Can the spatial distribution of crevasses be mapped with a resolution of approximately 40 meters?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Is the primary data collection method for crevasse detection based on optical imagery, SAR imagery, or a combination of both?",
+                    "Answer": "SAR imagery",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Are challenges in crevasse detection mainly associated with SAR image quality, terrain complexity, or observation geometry?",
+                    "Answer": "SAR image quality",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What data collection method is used to identify crevasses on Greenland ice sheets?",
+                    "Answer": "Sentinel-1 IW data",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Where do crevasses typically form on glaciers and ice shelves, and what significance do they hold?",
+                    "Answer": "Glacier movement",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the challenges associated with using SAR imagery for crevasse detection?",
+                    "Answer": "lower recall rates",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you provide an example of a data collection method used for identifying crevasses on glaciers and ice shelves?",
+                    "Answer": "A data collection method used for identifying crevasses on glaciers and ice shelves involves using Sentinel-1 SAR imagery. The process includes applying the Probabilistic Patch-Based Weights (PPB) algorithm to filter the SAR images to suppress coherent speckle noise, followed by using a modified U-Net network for pixel-level crevasse identification.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a challenge faced when using SAR imagery for crevasse detection?",
+                    "Answer": "An example of a challenge faced when using SAR imagery for crevasse detection is the relatively lower recall rate in some scenes. This is attributed to the quality of the SAR image, the terrain surrounding the crevasses, and the observation geometry.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Can you provide an example of a dataset that details the spatial distribution of crevasses on ice shelves?",
+                    "Answer": "An example of a dataset that details the spatial distribution of crevasses on ice shelves includes mapping the crevasses on Antarctic ice shelves in 2020 with a spatial resolution of approximately 40 meters. This dataset analyzes the characteristics of crevasses on ice shelves such as the Nickerson Ice Shelf, Jelbart Ice Shelf, Amery Ice Shelf, Thwaites Glacier, and Shackleton Ice Shelf.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What factors influence the accuracy and recall rate of crevasse detection in SAR imagery?",
+                    "Answer": "quality of the SAR image, terrain surrounding the crevasses, observation geometry",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the spatial characteristics considered in datasets for mapping crevasses on ice shelves?",
+                    "Answer": "resolution 40 m, crevasse length, crevasse density, crevasse type, spatial pattern",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the average accuracy percentage achieved in the classification results of crevasse detection on Greenland's typical glaciers?",
+                    "Answer": "94.5%",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How many epochs were required for the modified U-Net model to converge during training for crevasse identification?",
+                    "Answer": "75 epochs",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the spatial resolution, in meters, used for mapping the spatial distribution of crevasses on Antarctic ice shelves?",
+                    "Answer": "40 meters",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'Probabilistic Patch-Based Weights (PPB) algorithm' mean in the context of SAR image processing for glacier crevasse detection?",
+                    "Answer": "In the context of SAR image processing for glacier crevasse detection, the 'Probabilistic Patch-Based Weights (PPB) algorithm' refers to a filtering technique used to suppress speckle noise in SAR images. This helps in improving the quality and clarity of the images, which is crucial for accurately detecting and analyzing crevasses on glacier surfaces.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What does 'pixel-level crevasse identification' entail in the context of using modified U-Net networks for glacier studies?",
+                    "Answer": "In the context of using modified U-Net networks for glacier studies, 'pixel-level crevasse identification' entails the process of classifying each pixel in a satellite image as part of a crevasse or not. This precise level of identification allows for detailed mapping and analysis of crevasse structures and distributions, contributing to the understanding of glacier dynamics and stability.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What might the use of the U-Net network in crevasse detection suggest about the potential for automated analysis in glacial studies, and how can this influence data collection strategies?",
+                    "Answer": "The use of the U-Net network for crevasse detection suggests a significant potential for automated analysis in glacial studies by enabling the efficient processing of large volumes of satellite imagery to identify crevasse patterns. This can influence data collection strategies by encouraging the adoption of automated techniques that reduce human error and increase the speed of data processing, allowing for more frequent and comprehensive monitoring of glaciers.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "How might the challenges encountered with SAR image quality and terrain affect the development of data collection methodologies for glacier crevasse analysis?",
+                    "Answer": "Challenges with SAR image quality and terrain can significantly affect the development of data collection methodologies by necessitating the incorporation of advanced image processing techniques, such as noise suppression algorithms. These challenges highlight the importance of selecting appropriate imaging times and conditions to improve data accuracy and reliability, prompting researchers to refine their methodologies to mitigate these issues.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What factors contribute to the challenges in accurately identifying crevasses using SAR imagery?",
+                    "Answer": "The challenges in accurately identifying crevasses using SAR imagery are due to factors such as the quality of the SAR image, the terrain surrounding the crevasses, and the observation geometry, which can affect the recall rate in some scenes.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why might the automated extraction of crevasses be essential for assessing glacier and ice shelf stability?",
+                    "Answer": "Automated extraction of crevasses is essential for assessing glacier and ice shelf stability because crevasses reflect glacier dynamics and stresses, contribute to the glacier mass balance, and their development can indicate potential hydrofracturing and ice shelf instability, thus providing insights into ice shelf stability and glacier dynamics.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the reasons for employing a modified U-Net network in crevasse identification?",
+                    "Answer": "A modified U-Net network is employed in crevasse identification to enable pixel-level accuracy in detecting crevasses, using techniques like binary cross-entropy loss function and the Adam optimizer, which results in a converged model that effectively predicts crevasses in SAR imagery.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the likely consequences on crevasse detection accuracy when employing an automated extraction framework using Sentinel-1 SAR imagery with a modified U-Net network?",
+                    "Answer": "The implementation of an automated extraction framework using Sentinel-1 SAR imagery with a modified U-Net network can lead to an extraction accuracy of around 84.2% with an F1 score of 72.5%, although the recall rate may be affected by the quality of the SAR image, terrain, and observation geometry.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "How does the use of Probabilistic Patch-Based Weights (PPB) filtering impact the effectiveness of SAR imagery in detecting ice crevasses on glaciers?",
+                    "Answer": "The use of Probabilistic Patch-Based Weights (PPB) filtering on SAR imagery helps to suppress coherent speckle noise in the images, which in turn enhances the detection effectiveness of ice crevasses, contributing to a high average accuracy of 94.5% for crevasse detection in typical Greenland glaciers.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What potential outcomes might arise from utilizing a greater quantity of Sentinel-1 SAR imagery in future studies on crevasse detection and ice shelf stability?",
+                    "Answer": "Utilizing a greater quantity of Sentinel-1 SAR imagery in future studies could improve the understanding of temporal and spatial variations in crevasses, contributing to better projections of ice shelf stability and implications for sea level rise, as well as providing improved guidance for glaciological field campaigns.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the intended purpose of utilizing a modified U-Net network for crevasse identification on glaciers and ice shelves?",
+                    "Answer": "The intended purpose is to provide an automated crevasse extraction framework which helps in assessing the stability of glaciers and ice shelves, projecting ice shelf stability, and exploring the implications of cryosphere changes on sea level rise.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it important to employ Sentinel-1 SAR imagery for the detection and analysis of crevasses in glacier research?",
+                    "Answer": "Sentinel-1 SAR imagery is important because it enables the mapping of crevasse spatial distribution with a high resolution, which facilitates the analysis of crevasse characteristics and contributes to understanding glacier dynamics and ice shelf stability.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the goals of assessing crevasse characteristics like length, density, type, and spatial pattern on different ice shelves?",
+                    "Answer": "The goals are to gain insights into the stress structures of ice shelves, to distinguish ice flow regimes, and to provide qualitative understanding of trends in ice flow, which are critical for studying glacier dynamics and ensuring safety in glaciological field campaigns.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in filtering SAR images to reduce noise before using them for crevasse detection in glacier studies?",
+                    "Answer": "SAR images are filtered using the Probabilistic Patch-Based Weights (PPB) algorithm to suppress speckle noise, facilitating clearer identification of crevasses when input into models like the U-Net network.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How is the U-Net network model trained for the automated detection of crevasses on glaciers using Sentinel-1 imagery?",
+                    "Answer": "The U-Net network model is trained by selecting representative samples from filtered SAR images, using a binary cross-entropy loss function, an Adaptive Moment Estimation (Adam) optimizer, and an initial learning rate of 0.001. The model is trained over 75 epochs to ensure convergence.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the challenges encountered in using SAR imagery for crevasse detection, and how are these addressed in data processing?",
+                    "Answer": "Challenges include lower recall rates due to SAR image quality, surrounding terrain, and observation geometry. These are addressed by improving image quality through filtering and optimizing the model to adapt to variable image conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What conditions enabled the successful implementation of U-Net networks for automated crevasse extraction on Greenland's ice sheet?",
+                    "Answer": "The use of Sentinel-1 SAR imagery and the application of the Probabilistic Patch-Based Weights (PPB) algorithm to filter SAR image noise were crucial. These techniques enabled the model to accurately predict crevasses as they provided clear inputs with reduced noise for the U-Net network.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the application of the Probabilistic Patch-Based Weights algorithm enhance the quality of data used for crevasse detection?",
+                    "Answer": "The Probabilistic Patch-Based Weights (PPB) algorithm is used to filter out the speckle noise inherent in SAR images, thus providing clearer and more reliable data, which is essential for the accurate detection of crevasses using machine learning models like U-Net.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "In what ways do variations in SAR image quality impact the recall rate of crevasse detection models?",
+                    "Answer": "Variations in SAR image quality can affect the recall rate due to issues such as terrain interference, observation geometry, and inherent noise in the images. These factors can lead to lower recall rates as the model may struggle to accurately identify crevasses in less than optimal conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might automated extraction methods struggle with accurately identifying crevasse regions in certain scenes?",
+                    "Answer": "Automated extraction methods might struggle due to the quality of the SAR image, terrain surrounding the crevasses, and observation geometry, which can affect recall rates.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What is your evaluation of the effectiveness of using the U-net network for automated crevasse detection in ice sheets based on the given data collection approach?",
+                    "Answer": "The use of the U-net network for automated crevasse detection is highly effective, achieving an average accuracy of 94.5% for classifying typical glaciers in Greenland. However, the local accuracy for crevasse regions is somewhat lower at 78.6%, indicating room for improvement in specific identification scenarios.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how automated crevasse extraction can be efficiently implemented using satellite imagery.",
+                    "Answer": "An automated crevasse extraction framework can be implemented using Sentinel-1 SAR imagery combined with a modified U-Net network for pixel-level crevasse identification. The model uses a 'binary cross-entropy' loss function, Adaptive Moment Estimation (Adam) optimizer, and an initial learning rate of 0.001, converging after 75 epochs.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "I’m unsure about the challenges faced in achieving high recall rates for crevasse detection using SAR images.",
+                    "Answer": "Challenges in achieving high recall rates for crevasse detection include the quality of the SAR image, the terrain surrounding the crevasses, and the observation geometry. These factors can affect the accuracy and recall rate of the detection process.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I can't make sense of how spatial resolution impacts the analysis of ice crevasses in datasets.",
+                    "Answer": "The analysis of crevasses on Antarctic ice shelves was conducted with a spatial resolution of ~40 m, which allowed for mapping the spatial distribution and analyzing the characteristics of crevasses in terms of length, density, type, and spatial pattern. This resolution provides insights into the different stress structures of various ice shelves.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the challenges faced in the crevasse extraction process using U-Net networks with SAR imagery and propose potential solutions to enhance recall rates.",
+                    "Answer": "The challenges in crevasse extraction using U-Net networks with SAR imagery include the quality of SAR images, the terrain surrounding crevasses, and the observation geometry, which can lead to lower recall rates. Potential solutions may involve enhancing image preprocessing techniques, improving the training dataset's representativeness, or refining the network architecture to better handle varying image qualities and environmental conditions.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "Please investigate the characteristics of crevasses on different ice shelves and how these differences can inform glacier dynamics and stability assessments.",
+                    "Answer": "Crevasses on different ice shelves exhibit distinct characteristics in terms of length, density, type, and spatial pattern, which reflect the stress structures of the ice shelves. For instance, the Thwaites Glacier and the Nickerson Ice Shelf in the WAIS have shorter crevasses, whereas the Jelbart and Amery Ice Shelves in the EAIS have longer ones. There are more closely spaced crevasses in WAIS compared to EAIS. These variations in crevasse characteristics can provide insights into the dynamics and stability of glaciers and ice shelves, aiding in the assessment of ice shelf stability and potential sea-level rise implications.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,452 @@
+{
+    "id": "d09ebfe3-a8c9-49b5-aa22-1fd484751d70",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "Daily 1-km all-weather land surface temperature dataset for Western China (TRIMS LST-TP; 2000-2022) V2",
+            "description": "The Qinghai Tibet Plateau is a sensitive region of global climate change. Land surface temperature (LST), as the main parameter of land surface energy balance, characterizes the degree of energy and water exchange between land and atmosphere, and is widely used in the research of meteorology, climate, hydrology, ecology and other fields. In order to study the land atmosphere interaction over the Qinghai Tibet Plateau, it is urgent to develop an all-weather land surface temperature data set with long time series and high spatial-temporal resolution. However, due to the frequent cloud coverage in this region, the use of existing satellite thermal infrared remote sensing land surface temperature data sets is greatly limited.\nCompared with the previous version released in 2019, Western China Daily 1km spatial resolution all-weather land surface temperature data set (2003-2018) V1, this data set (V2) adopts a new preparation method, namely satellite thermal infrared remote sensing reanalysis data integration method based on new land surface temperature time decomposition model. The main input data of the method are Aqua MODIS LST products and GLDAS data, and the auxiliary data include vegetation index and surface albedo provided by satellite remote sensing. This method makes full use of the high frequency and low frequency components of land surface temperature and the spatial correlation of land surface temperature provided by satellite thermal infrared remote sensing and reanalysis data.\nThe evaluation results show that this data set has good image quality and accuracy, which is not only seamless in space, but also highly consistent with the amplitude and spatial distribution of 1 km daily Aqua MODIS LST products widely used in current academic circles. When MODIS LST was used as the reference value, the mean deviation (MBE) of the data set in daytime and nighttime was -0.28 K and -0.29 K respectively, and the standard deviation (STD) of the deviation was 1.25 K and 1.36 K respectively. The test results based on the measured data of six stations in the Qinghai Tibet Plateau and Heihe River Basin show that under clear sky conditions, the data set is highly consistent with the measured LST in daytime / night, and its MBE is -0.42-0.25 K / - 0.35-0.19 K; The root mean square error (RMSE) was 1.03 ~ 2.28 K / 1.05 ~ 2.05 K; Under the condition of non clear sky, the MBE of this data set in daytime / night is -0.55 ~ 1.42 K / - 0.46 ~ 1.27 K; The RMSE was 2.24-3.87 K / 2.03-3.62 K. Compared with the V1 version of the data, the two kinds of all-weather land surface temperature show the characteristics of seamless (i.e. no missing value) in the spatial dimension, and in most areas, the spatial distribution and amplitude of the two kinds of all-weather land surface temperature are highly consistent with MODIS land surface temperature. However, in the region where the brightness temperature of AMSR-E orbital gap is missing, the V1 version of land surface temperature has a significant systematic underestimation. The mass of trims land surface temperature is close to that of V1 version outside AMSR-E orbital gap, while the mass of trims is more reliable inside the orbital gap. Therefore, it is recommended that users use V2 version.\nThe time span of this data set is from 2000 to 2022 and will be updated continuously; The time resolution is twice a day (corresponding to the two transit times of aqua MODIS in the daytime and at night); The spatial resolution is 1 km. In order to facilitate the majority of colleagues to carry out targeted research around the Qinghai Tibet Plateau and its adjacent areas, and reduce the workload of data download and processing, the coverage of this data set is limited to Western China and its surrounding areas (72 ° E-104 ° E，20 ° N-45 ° N）。 Therefore, this dataset is abbreviated as trims lst-tp (thermal and reality integrating modem resolution spatial seamless LST – Tibetan Plateau) for user's convenience.",
+            "instructions": "File naming: LST data are in GEOTIFF and NETCDF formats, each file is about 14MB, and the data of different years are stored in folders named \"year\", which are stored in two folders, one for daytime and the other for nighttime. The specific file naming method is \"TRIMS_Aqua/TRIMS_Terra+year+DOY+D/N.tif\", in which DOY stands for Day of the Year, D/N stands for Day/Night, such as TRIMS_Aqua2020001D.tif.\nData format: Integer\nUsage: It can be read and subsequently processed directly by GIS software or matlab, etc. The image value/100=surface temperature value (two decimal places are retained);\nData resolution: 4 times per day, 1 km.\nData time: corresponds to the instantaneous transit time of MODIS pixels, see the data description document for details of the processing.\nKey parameters of the dataset:\n(1) Projection mode: Albers equal area\n(2) Missing values: Uniformly labelled with 0.",
+            "east": 104.0,
+            "west": 72.0,
+            "south": 20.0,
+            "north": 45.0,
+            "startTime": "2000-01-01 00:00:00",
+            "endTime": "2021-12-31 23:59:59",
+            "fileSize": 336332287571.0,
+            "cstr": "18406.11.Meteoro.tpdc.270953",
+            "doi": "10.11888/Meteoro.tpdc.270953",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "ZHOU Ji",
+                "unitEn": "University of Electronic Science and Technology of China"
+            },
+            {
+                "nameEn": "ZHANG Xiaodong",
+                "unitEn": "University of Electronic Science and Technology of China, School of Resources and Environment"
+            },
+            {
+                "nameEn": "TANG Wenbin",
+                "unitEn": "University of Electronic Science and Technology of China, School of Resources and Environment"
+            },
+            {
+                "nameEn": "DING Lirong",
+                "unitEn": "University of Electronic Science and Technology of China"
+            },
+            {
+                "nameEn": "MA Jin ",
+                "unitEn": "University of Electronic Science and Technology of China"
+            },
+            {
+                "nameEn": "ZHANG Xu",
+                "unitEn": "电子科技大学资源与环境学院"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "TRIMS LST: A daily 1-km all-weather land surface temperature dataset for the Chinese landmass and surrounding areas (2000–2022)",
+                "referenceEn": "Tang, W., Zhou, J., Ma, J., Wang, Z., Ding, L., Zhang, X., and Zhang, X. (2024). TRIMS LST: a daily 1 km all-weather land surface temperature dataset for China's landmass and surrounding areas (2000–2022). Earth Syst. Sci. Data, 16, 387–419, https://doi.org/10.5194/essd-16-387-2024."
+            },
+            {
+                "titleEn": "A practical reanalysis data and thermal infrared remote sensing data merging (RTM) method for reconstruction of a 1-km all-weather land surface temperature",
+                "referenceEn": "Zhang, X., Zhou, J., Liang, S., Wang, D. (2021). A practical reanalysis data and thermal infrared remote sensing data merging (RTM) method for reconstruction of a 1-km all-weather land surface temperature. Remote Sensing of Environment, 260, 112437. https://doi.org/10.1016/j.rse.2021.112437."
+            },
+            {
+                "titleEn": "A method based on temporal component decomposition for estimating 1-km all-weather land surface temperature by merging satellite thermal infrared and passive microwave observations",
+                "referenceEn": "Zhang, X., Zhou, J., Göttsche, F., Zhan, W., Liu, S., & Cao, R. (2019). A Method Based on Temporal Component Decomposition for Estimating 1-km All-Weather Land Surface Temperature by Merging Satellite Thermal Infrared and Passive Microwave Observations. IEEE Transactions on Geoscience and Remote Sensing, 57, 4670–4691. https://doi.org/10.1109/TGRS.2019.2892417"
+            },
+            {
+                "titleEn": "A thermal sampling depth correction method for land surface temperature estimation from satellite passive microwave observation over barren land",
+                "referenceEn": "Zhou, J., Zhang, X., Zhan, W., Göttsche, F.-M., Liu, S., Olesen, F.-S., Hu, W., & Dai, F. (2017). A thermal sampling depth correction method for land surface temperature estimation from satellite passive microwave observation over barren land. IEEE Transactions on Geoscience and Remote Sensing, 55, 4743–4756. https://doi.org/10.1109/TGRS.2017.2698828"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Others"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "All-weather"
+            },
+            {
+                "nameEn": "land surface temperature"
+            },
+            {
+                "nameEn": "Atmosphere Remote Sensing"
+            },
+            {
+                "nameEn": "Thermal infrared remote sensing"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Western China"
+            },
+            {
+                "keywordEn": "Tibetan Plateau"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2000-2021",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "A method to estimate all-weather LST based on the integration of multi-source remote sensing observations"
+            },
+            {
+                "titleEn": "Integration and Demonstration of Monitoring and Early Warning Technology and Equipment for Debris Flow in Complex Mountainous Areas"
+            },
+            {
+                "titleEn": "All-Weather Land Surface Temperature at High Spatial Resolution: Validation and Applications"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
+            },
+            {
+                "titleEn": "Landsat-based continuous monthly 30m×30m Land Surface NPP dataset in Qilian mountainous area (2018)"
+            },
+            {
+                "titleEn": "Landsat-based continuous monthly 30m×30m land surface LAI dataset in Qilian mountain area (2018)"
+            },
+            {
+                "titleEn": "Landsat-based continuous monthly 30m×30m land surface LAI dataset in Qilian mountain area (1986-2017)"
+            },
+            {
+                "titleEn": "Landsat-based continuous monthly 30m×30m land surface FVC dataset in Qilian mountain area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Land surface temperature (LST) is a key variable related to the energy exchange at the interface between the land surface and the atmosphere. It is a necessary input parameter required by numerous land–atmosphere models. LST has been widely used in a variety of studies, such as surface evapotranspiration (ET) estimation, urban heat island (UHI) modeling, drought monitoring, and ecological assessment. In situ observations based on spatial “point measurement” are not able to obtain spatially continuous LST, and the current model simulation suffers from the coarse spatial resolution. In contrast, satellite remote sensing, which has the advantages of better spatial continuity, larger coverage, good ability for repeating observations, and much higher spatial resolution, has become an important way of obtaining LST for large areas. Satellite thermal infrared (TIR) remote sensing can directly obtain the regional and global LST efficiently. The Moderate-resolution Imaging Spectroradiometer (MODIS) LST products are the most widely used because of their global coverage, long time series, high quality, and good accuracy. However, they generally have significant spatial absences due to cloud contamination, especially at low and middle latitudes in China, increasing high uncertainties for their spatially continuous applications. Meanwhile, there is a temporal discontinuity (hereafter termed the temporal gap) in Terra/Aqua MODIS during 2000–2002, further limiting their long-time applications."
+            ],
+            "research objective": [
+                "To investigate the spatial and temporal variations in LST in China, long-term, high-quality, and spatiotemporally continuous LST datasets (i.e., all-weather LST) are urgently needed. In this study, we generated a daily (four observations per day) 1 km all-weather LST dataset for China’s landmass and surrounding areas, the Thermal and Reanalysis Integrating Moderate-resolution Spatial-seamless (TRIMS) LST, which begins on the first day of the new millennium (1 January 2000)."
+            ],
+            "challenges": [
+                "Nevertheless, the results using the spatiotemporal interpolation methods may contain some uncertainties under cloudy-sky conditions. However, there are limitations to obtaining all-weather LST from PMW observations. First, the spatial resolution of PMW data differs significantly from TIR, such as the Advanced Microwave Scanning Radiometer 2 (AMSR2) with ∼10 km spatial resolution. Second, the spatial coverage of the PMW data is incomplete because there are orbital gaps. Third, the temperature retrieved from PMW observations contains information from the subsurface, which differs from the TIR LST that exclusively represents skin temperature."
+            ],
+            "methods": [
+                "We used the enhanced reanalysis and thermal infrared remote sensing merging (E-RTM) method to generate the TRIMS LST dataset with the temporal gaps being filled, which had not been achieved by the original RTM method. Specifically, we developed two novel approaches, i.e., the random-forest-based spatiotemporal merging (RFSTM) approach and the time-sequential LST-based reconstruction (TSETR) approach, respectively, to produce Terra/MODIS-based and Aqua/MODIS-based TRIMS LSTs during the temporal gaps. We also conducted a thorough evaluation of the TRIMS LST."
+            ],
+            "dataset": [
+                "In this study, the main satellite data we used were the 1 km daily MODIS LST and emissivity product (MOD11A1: February 2000 to December 2022; MYD11A1: July 2002 to December 2022) in version 6.1, which was produced based on the generalized split-window algorithm and has good accuracy for homogeneous surfaces (Wan, 2014). The main reanalysis data we used in this study were the GLDAS data provided by the Goddard Earth Sciences Data and Information Services Center (GES DISC) (Rodell et al., 2004)."
+            ],
+            "findings": [
+                "A comparison with the Global Land Data Assimilation System (GLDAS) and ERA5-Land LST demonstrates that the TRIMS LST has similar spatial patterns but a higher image quality, more spatial details, and no evident spatial discontinuities. The results outside the temporal gap show consistent comparisons of the TRIMS LST with the MODIS LST and the Advanced Along-Track Scanning Radiometer (AATSR) LST, with a mean bias deviation (MBD) of 0.09/0.37 K and a standard deviation of bias (SD) of 1.45/1.55 K. Validation based on the in situ LST at 19 ground sites indicates that the TRIMS LST has a mean bias error (MBE) ranging from −2.26 to 1.73 K and a root mean square error (RMSE) ranging from 0.80 to 3.68 K. There is no significant difference between the clear-sky and cloudy conditions. For the temporal gap, it is observed that RFSTM and TSETR perform similarly to the original RTM method. Additionally, the differences between Aqua and Terra remain stable throughout the temporal gap."
+            ]
+        },
+        {
+            "background": [
+                "Land surface temperature (LST) plays an important role in the processes controlling energy and water exchanges at the surface–atmosphere boundary. Satellite remote sensing makes it possible to retrieve LST at relatively dense and regular spatial sampling intervals over large areas. Over the past three decades, satellite thermal infrared (TIR) remote sensing has become one of the most important approaches to estimate LST. Some satellite TIR LST products available for public use are capable of estimating LST with an accuracy of 1–2 K, e.g., the MODIS product and the SEVIRI product. However, a major shortcoming of satellite TIR remote sensing for LST estimation is its extremely low tolerance to clouds, leading to cloud contamination in the actual retrieved TIR LST product."
+            ],
+            "research objective": [
+                "In this context, we propose a new practical method to merge TIR and MW observations from a perspective of decomposition of LST in temporal dimension."
+            ],
+            "challenges": [
+                "In current merging methods, models adopted for downscaling MW LST fail to quantify the effect of temporal variation of LST. Thus, accuracy of the merged LST can be deteriorated and therefore remain a major impediment for these methods to be generalized over large areas."
+            ],
+            "methods": [
+                "The method was applied to MODIS and AMSR-E/AMSR2 data to generate an 11-year record of 1-km all-weather LST over Northeast China."
+            ],
+            "dataset": [
+                "The TIR remote sensing temperature data used in this paper are the MODIS daily LST/emissivity level 3 product (MYD11A1) in version 6 with a 1-km resolution based on the generalized split-window algorithm. The MW remote sensing temperature data were obtained from AMSR-E and AMSR2. The selected AMSR-E data are from 2003 to 2010, and the AMSR2 data are from 2013 to 2015. The ancillary data used in this paper include the 4-day 1-km Leaf Area Index (LAI) product (MCD15A3), the 16-day 1-km normalized different vegetation index (NDVI) product (MOD13A2), the yearly 500-m land cover product (MCD12Q1), and the 250-m digital elevation model (DEM) product. The LST from China Meteorological Administration Land Data Assimilation System (CLDAS) was used as input parameters of the proposed model in this paper. The 3-hourly 0.25° GLDAS LST from 2003 to 2007 and the hourly 0.0625° CLDAS LST from 2008 to 2010 and 2013 to 2015 were selected."
+            ],
+            "findings": [
+                "The resulting merged LST has an accuracy of 1.29–1.71 K when validated against in situ LST; besides, no obvious differences in accuracy of the merged LST were found between clear-sky and unclear-sky conditions. Furthermore, the proposed method outperforms the previous method in both accuracy and image quality, indicating its good capability to generate daily 1-km all-weather LST, which will benefit continuous monitoring of earth’s surface temperature."
+            ]
+        },
+        {
+            "background": [
+                "Satellite passive microwave (MW) remote sensing has a better ability to observe land surface temperature (LST) in cloudy conditions than thermal infrared (TIR) remote sensing. Due to the much greater thermal sampling depth (TSD) of MW, currently available MW LST do not represent the thermodynamic temperature of the land surface and, therefore, yield systematic differences from TIR LST. LST plays an important role in driving processes of radiation, energy, hydrology, ecology, environment, meteorology, and climatology at the land surface-atmosphere interface. By contrast, passive microwave (MW) remote sensing is less affected by the atmosphere and clouds and it thus has better applicability to observe LST in cloudy conditions. Although the MW estimate of ground temperature is also termed as LST, it physically differs from TIR LST due to different thermal sampling depth (TSD). TSD is defined as the total thickness of the surface layer that contributes most to the measured radiation. The lower accuracy and systematic bias are in part due to lack of TSD correction (TSDC)."
+            ],
+            "research objective": [
+                "Here, we present a novel TSD correction (TSDC) method to estimate the MW LST over barren land. This study provides implications for developing practical and accurate methods to estimate MW LST over other land surface types and at the global scale. In this context, we present a novel method for estimating LST from satellite MW observations here. The method is tested over barren land for which the difference between MW and TIR LSTs is more significant than for other land surface types."
+            ],
+            "challenges": [
+                "The TSD effect is particularly prominent over barren land and sparsely vegetated surfaces. The lower accuracy and systematic bias are in part due to lack of TSD correction (TSDC)."
+            ],
+            "methods": [
+                "The TSDC method is applied to the 6.9-GHz channel of AMSR-E in northwestern China-western Mongolia and western Namibia (WN). The TSDC method is applied to AMSR-E data over two study areas and the results are presented and discussed."
+            ],
+            "dataset": [
+                "In situ LSTs were measured at Gobabeb site (23° 33′ S, 15° 03′ E, 408 m a.s.l.), which is located in a homogeneous and large gravel plain in WN. The remote sensing data used here are from AMSR-E and MODIS which are both onboard of the Aqua satellite launched in May 2002. The MODIS surface product used here was the daily LST/emissivity level 3 product (MYD11B1) in version 4 (V4)."
+            ],
+            "findings": [
+                "Evaluation shows that LST estimated by the TSDC method agrees well with the MODIS LST. Validation based on in situ LSTs measured at the Gobabeb site in WN demonstrates the high accuracy of the TSDC method: it yields a root mean squared error of about 2–3 K and slight systematic error. In contrast, other methods without TSDC yield lower accuracies and significantly underestimate LST. Therefore, the TSDC method has the potential to generate MW LST with the same physical meaning and similar accuracy as TIR LST."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Does the enhanced reanalysis and thermal infrared remote sensing merging (E-RTM) method effectively fill temporal gaps in land surface temperature datasets?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Can satellite passive microwave remote sensing provide more accurate land surface temperature observations in cloudy conditions compared to thermal infrared remote sensing?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Is the random-forest-based spatiotemporal merging approach used to produce all-weather land surface temperature datasets?",
+                    "Answer": "Yes",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "For generating high-resolution LST datasets, is the use of MODIS data, AMSR-E/AMSR2 data, or GLDAS data more advantageous?",
+                    "Answer": "MODIS data",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What methods are used to generate a spatially continuous LST dataset in regions with frequent cloud coverage?",
+                    "Answer": "E-RTM method",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "Where are the main data sources obtained for creating an all-weather LST dataset?",
+                    "Answer": "1 km daily MODIS LST and emissivity products, GLDAS, vegetation indices, surface albedo",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Could you provide an example of a dataset used to estimate land surface temperature, including its spatial resolution and time span?",
+                    "Answer": "An example of a dataset used to estimate land surface temperature is the MODIS daily LST and emissivity product (MOD11A1 and MYD11A1) with a 1 km spatial resolution, covering the time span from February 2000 to December 2022.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics that define the integration of thermal infrared remote sensing and reanalysis data for land surface temperature estimation?",
+                    "Answer": "high-frequency and low-frequency components, spatial correlations, spatially seamless, temporally continuous, high accuracy",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the characteristic challenges faced in merging thermal infrared and microwave observations for land surface temperature retrieval?",
+                    "Answer": "differences in spatial resolution, incomplete spatial coverage, need to correct for thermal sampling depth differences",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the spatial resolution of the land surface temperature dataset used for the Tibetan Plateau?",
+                    "Answer": "1 km",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the temporal span of the data collection for the all-weather land surface temperature dataset covering the Tibetan Plateau and surrounding areas?",
+                    "Answer": "2000-2022",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What does 'spatiotemporal interpolation' mean in the context of land surface temperature datasets?",
+                    "Answer": "In the context of land surface temperature datasets, 'spatiotemporal interpolation' refers to methods used to estimate missing temperature data across both spatial and temporal dimensions, especially under conditions such as cloud cover that can obscure direct observations. These methods aim to create a continuous and comprehensive dataset by filling gaps using available data from different times and locations.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is the 'Thermal Sampling Depth (TSD)' in satellite remote sensing?",
+                    "Answer": "The 'Thermal Sampling Depth (TSD)' in satellite remote sensing refers to the total thickness of the surface layer that contributes most to the measured radiation. It impacts the accuracy of land surface temperature estimates, particularly for microwave remote sensing, as it represents the depth from which the temperature information is derived, which can differ between microwave and thermal infrared sensors.",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What does 'all-weather land surface temperature dataset' refer to?",
+                    "Answer": "An 'all-weather land surface temperature dataset' refers to a dataset that provides land surface temperature measurements irrespective of weather conditions, such as cloud cover. This is achieved by integrating data from different sources, such as thermal infrared and microwave remote sensing, to overcome the limitations of each method and ensure continuous temperature monitoring.",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How do the challenges of obtaining all-weather land surface temperature (LST) data using spatiotemporal interpolation methods compare to those encountered when using passive microwave (MW) observations?",
+                    "Answer": "Spatiotemporal interpolation methods face challenges such as uncertainties under cloudy conditions due to their reliance on clear-sky data. In contrast, MW observations are less affected by clouds but have limitations like lower spatial resolution, incomplete coverage due to orbital gaps, and differences in thermal sampling depth which can lead to systematic biases if uncorrected. Each method presents distinct technical hurdles in achieving accurate all-weather LST data collection.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How might the differences in thermal sampling depth between microwave and thermal infrared remote sensing impact the interpretation of land surface temperature data, and what strategies could be employed to reconcile these differences?",
+                    "Answer": "The differences in thermal sampling depth between microwave and thermal infrared remote sensing can lead to systematic biases, as microwave observations often penetrate deeper into the surface. This disparity impacts the accuracy and interpretation of land surface temperature data. Strategies like the thermal sampling depth correction method can be employed to reconcile these differences, aligning microwave-derived temperatures with the thermal infrared measurements. This approach could improve the consistency and applicability of land surface temperature datasets across different land surface types and climatic conditions.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What underlying factors contribute to the limitations of satellite thermal infrared remote sensing in estimating land surface temperature (LST) under cloudy conditions?",
+                    "Answer": "Satellite thermal infrared (TIR) remote sensing faces significant limitations in cloudy conditions due to its low tolerance to clouds, which leads to cloud contamination in the retrieved TIR LST product. This results in spatial absences and high uncertainties in the spatial continuity of the data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What causes the systematic differences between microwave and thermal infrared LST estimations, particularly over barren or sparsely vegetated land surfaces?",
+                    "Answer": "The systematic differences between microwave and TIR LST estimations arise due to the different thermal sampling depths (TSD) of these methods. Microwave remote sensing has a greater TSD, which means it measures temperatures from below the surface in addition to the surface itself. This discrepancy is especially pronounced over barren or sparsely vegetated surfaces, where the lack of a TSD correction can lead to lower accuracy and systematic bias in the LST estimations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential effects on data accuracy and image quality when integrating reanalysis data with satellite thermal infrared remote sensing for land surface temperature estimation?",
+                    "Answer": "Integrating reanalysis data with satellite thermal infrared remote sensing could enhance data accuracy and image quality by filling temporal gaps and reducing spatial discontinuities. The enhanced reanalysis and thermal infrared remote sensing merging method can provide higher image quality with more spatial details compared to using only satellite thermal infrared data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the consequences of using a random-forest-based spatiotemporal merging approach for generating land surface temperature datasets?",
+                    "Answer": "Using a random-forest-based spatiotemporal merging approach can effectively fill temporal gaps that were previously unaddressed, leading to the creation of a spatiotemporally continuous land surface temperature dataset. This method ensures that the dataset maintains consistency in quality and spatial distribution, even during periods where data might be missing.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it necessary to explore novel methods for estimating microwave-based land surface temperature in barren regions?",
+                    "Answer": "Exploring novel methods for estimating microwave-based land surface temperature (LST) in barren regions is necessary due to the significant differences between microwave and thermal infrared LSTs, particularly in these areas. The thermal sampling depth of microwave observations leads to systematic biases, making it crucial to develop methods like thermal sampling depth correction (TSDC) to improve accuracy. These advancements enable the generation of microwave LSTs with physical meanings similar to thermal infrared LSTs, facilitating more reliable temperature monitoring in challenging environments.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What procedural steps are involved in generating a spatiotemporally continuous land surface temperature dataset over a large area using remote sensing and reanalysis data?",
+                    "Answer": "To generate a spatiotemporally continuous land surface temperature (LST) dataset, the process involves integrating satellite thermal infrared (TIR) remote sensing data with reanalysis data. The procedure includes using enhanced reanalysis and thermal infrared remote sensing merging methods, like the random-forest-based spatiotemporal merging (RFSTM) approach and the time-sequential LST-based reconstruction (TSETR) approach. These methods help fill temporal gaps and produce datasets with consistent spatial patterns and high image quality.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What methodological approach is adopted to correct thermal sampling depth differences when estimating microwave land surface temperature over barren terrains?",
+                    "Answer": "A novel thermal sampling depth correction (TSDC) method is used to estimate microwave land surface temperature (MW LST) over barren terrains. This involves applying the TSDC method to the 6.9-GHz channel of AMSR-E data, which addresses the significant differences in thermal sampling depth between MW and TIR LST. Evaluation of this method shows high accuracy and a reduction in systematic biases, making it comparable to TIR LST in terms of physical meaning and accuracy.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What methodologies enable the integration of satellite thermal infrared and reanalysis data to create high-resolution, spatiotemporally continuous land surface temperature datasets?",
+                    "Answer": "The integration of satellite thermal infrared and reanalysis data is enabled by methods such as the enhanced reanalysis and thermal infrared remote sensing merging (E-RTM) method. This method includes innovative approaches like the random-forest-based spatiotemporal merging (RFSTM) approach and the time-sequential LST-based reconstruction (TSETR) approach to fill temporal gaps and create a continuous land surface temperature dataset.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "How do advancements in remote sensing technology contribute to the accurate estimation of land surface temperature under various sky conditions?",
+                    "Answer": "Advancements in remote sensing technology, such as the use of satellite thermal infrared (TIR) and microwave (MW) observations, contribute to the accurate estimation of land surface temperature by overcoming limitations like cloud contamination. The development of methods like the TSD correction (TSDC) method for MW observations enables accurate LST estimation under cloudy conditions, providing an all-weather capability.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might the integration of thermal infrared remote sensing and reanalysis data be expected to improve the quality and spatial continuity of land surface temperature datasets?",
+                    "Answer": "Integrating thermal infrared remote sensing and reanalysis data allows for the combination of high-frequency thermal observations with the spatial and temporal coverage of reanalysis data. This method leverages the strengths of both data types to fill spatial and temporal gaps, especially under cloudy conditions, thus enhancing the dataset's quality and continuity.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What challenges are anticipated in achieving high accuracy for land surface temperature datasets, especially under cloudy conditions?",
+                    "Answer": "Under cloudy conditions, traditional thermal infrared observations often suffer from cloud contamination, leading to significant spatial data absences. Additionally, passive microwave remote sensing, although less affected by clouds, presents challenges due to its different thermal sampling depth, which requires correction to align with thermal infrared measurements accurately.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "In what ways could future data collection methods be improved to enhance the accuracy and reliability of land surface temperature datasets in regions with high cloud cover?",
+                    "Answer": "Future data collection methods could benefit from improved spatiotemporal interpolation techniques and enhanced merging algorithms that better handle cloud cover. Integrating higher resolution passive microwave data or developing more sophisticated correction methods for thermal sampling depth could also improve accuracy. Additionally, expanding ground validation sites in regions with high cloud cover can provide more robust datasets.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how cloud cover affects the accuracy of land surface temperature data collection.",
+                    "Answer": "Cloud cover significantly impacts the accuracy of land surface temperature (LST) data collected via satellite thermal infrared (TIR) remote sensing. Cloud contamination leads to spatial absences and increases uncertainties in the retrieved LST products, making it challenging to achieve spatially continuous applications, especially at low and middle latitudes.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I can't make sense of how specific datasets are validated against in situ measurements for accuracy.",
+                    "Answer": "Specific datasets are validated against in situ measurements to ensure accuracy by comparing the satellite-derived LST data with ground-based observations. This validation helps in assessing the mean bias error (MBE) and root mean square error (RMSE) of the datasets. Such comparisons demonstrate the level of agreement between the remote sensing data and actual land surface temperatures measured at various ground sites, ensuring the reliability of the datasets under different conditions.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please describe the methodologies used to generate spatiotemporally continuous all-weather LST datasets and discuss the challenges faced in cloud-covered regions.",
+                    "Answer": "The methodologies include the enhanced reanalysis and thermal infrared remote sensing merging (E-RTM) method, incorporating random-forest-based spatiotemporal merging (RFSTM) and time-sequential LST-based reconstruction (TSETR) approaches. These methods aim to fill temporal gaps and provide continuous LST datasets. However, challenges remain under cloudy-sky conditions, as spatiotemporal interpolation can introduce uncertainties, and traditional merging methods may not effectively handle the temporal variation in LST.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please explore potential datasets that could be integrated with existing satellite data to improve the accuracy and spatial continuity of LST measurements across cloud-prone areas.",
+                    "Answer": "Potential datasets for integration include MODIS and AMSR-E/AMSR2 data, which provide daily LST measurements, and reanalysis data from sources like GLDAS for supplementary high-frequency and low-frequency components. Additional datasets such as vegetation indices, surface albedo, and in situ LST measurements can aid in calibrating and validating satellite data, enhancing the dataset's spatial continuity and accuracy in cloud-prone areas.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

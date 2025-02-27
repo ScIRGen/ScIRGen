@@ -1,0 +1,479 @@
+{
+    "id": "25eb0ec3-29ab-4292-850b-0fd3b5324bbd",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "A global daily soil moisture dataset derived from Chinese FengYun-3B Microwave Radiation Imager (MWRI) (2010-2019)",
+            "description": "This dataset contains 10 years (2010-2019) global daily surface soil moisture . The resolution is 36 km , the projection is EASE-Grid2, and the data unit is m3 / m3. This dataset adopts the soil moisture neural network retrieval algorithm developed by Yao et al. (2017，2021). This study transfers the merits of SMAP to FY-3B/MWRI through using an Artificial Neural Network (ANN) in which SMAP standard SSM products serve as training targets with FY-3B/MWRI brightness temperature (TB) as input. Finally, long term soil moisture data are output. The accuracy is about 5% volumetric water content，which is comparable with that of SMAP. (evaluation accuracy of 14 dense ground network globally.)",
+            "instructions": "File name: The soil moisture data is stored in netcdf format, and the file name is“ NNsm-FY-yyyyddd.nc ”, where yyyy stands for year and ddd stands for Julian date. For example, NNsm-FY-2013001.nc represents this document describe the global soil moisture distribution on the first day of 2013.\n    How to read data: The data is EASE-grid equal-area projection data (with varying latitude and longitude intervals)， rather than usual equal-latitude-longitude data. (for more information about EASE-grid projection, please see https://nsidc.org/data/ease). The NC file of data stores three variables: latitude matrix, longitude matrix and soil moisture matrix, which are latitude (406*1), longitude（964*1） and soil_moisture (406*964) respectively. Projection information is not stored.\n    A. NC file can be directly read using software such as Matlab. For more information about netcdf, please see http://www.unidata.ucar.edu/software/netcdf.\n    B. If you want to convert NC file to TIF format, you need a .tif template data with EASE-grid 36km. We provide this data named EASEGrid2_36km.tif, please see the data folder. Here is a tutorial transferring EASE_grid file to TIF, written by a student in our group: https://blog.csdn.net/weixin_38953602/article/details/101158084",
+            "east": 179.82,
+            "west": 179.82,
+            "south": 83.64,
+            "north": 83.64,
+            "startTime": "2010-11-12 00:00:00",
+            "endTime": "2019-07-03 11:59:59",
+            "fileSize": 9917427024.0,
+            "cstr": "18406.11.Terre.tpdc.271954",
+            "doi": "10.11888/Terre.tpdc.271954",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameEn": "YAO Panpan",
+                "unitEn": "Chinese Academy of Sciences Institute of Aerospace Information Innovation"
+            },
+            {
+                "nameEn": "LU Hui",
+                "unitEn": "Tsinghua University"
+            },
+            {
+                "nameEn": "ZHAO Tianjie",
+                "unitEn": "Chinese Academy of Sciences Institute of Aerospace Information Innovation"
+            },
+            {
+                "nameEn": "WU Shengli ",
+                "unitEn": "National Satellite Meteorological Center"
+            },
+            {
+                "nameEn": "SHI Jiancheng",
+                "unitEn": "Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "A global daily soil moisture dataset derived from Chinese FengYun-3B Microwave Radiation Imager (MWRI) (2010-2019)",
+                "referenceEn": "Yao, P.P., Lu, H., Zhao, T.J., Wu, S.L., Peng Z.Q., Cosh, M.H., Jia L., Yang K., Zhang, P., Shi, J.C. (2023). A global daily soil moisture dataset derived from Chinese FengYun-3B Microwave Radiation Imager (MWRI) (2010-2019). Scientific Data. 2023. https://www.nature.com/articles/s41597-023-02007-3."
+            },
+            {
+                "titleEn": "A long term spatially and temporally consistent global daily soil moisture dataset derived from AMSR-E/2",
+                "referenceEn": "Yao, P.P., Lu, H., Shi, J.C., Zhao, T.J., Yang K., Cosh, M.H., Gianotti, D.J.S., & Entekhabi, D. (2021). A long term global daily soil moisture dataset derived from AMSR-E and AMSR2 (2002-2019). Scientific Data, 8, 143 (2021). https://doi.org/10.1038/s41597-021-00925-8"
+            },
+            {
+                "titleEn": "Rebuilding Long Time Series Global Soil Moisture Products Using the Neural Network Adopting the Microwave Vegetation Index",
+                "referenceEn": "Yao, P.P., Shi, J.C., Zhao, T.J., Lu, H. & Al-Yaari, A. (2017). Rebuilding Long Time Series Global Soil Moisture Products Using the Neural Network Adopting the Microwave Vegetation Index. Remote Sensing 9(1), 35."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Soil"
+            },
+            {
+                "nameEn": "Soil moisture"
+            },
+            {
+                "nameEn": "Soil Water Content"
+            },
+            {
+                "nameEn": "Microwave radiometer"
+            },
+            {
+                "nameEn": "Microwave Remote Sensing"
+            },
+            {
+                "nameEn": "Hydrology"
+            },
+            {
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2010-2019",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "National Key Research and Development Program of China"
+            },
+            {
+                "titleEn": "Major Research plan of the National Natural Science Foundation of China"
+            },
+            {
+                "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program: Dynamic monitoring and simulation of water cycle in Asian water tower region"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Land surface soil moisture (SM), which is the water stored in the upper soil layer, is a key variable to improve our understanding of the energy and water cycles in the Earth system; thus, it is an important parameter in climate, hydrology, and environment. SM plays a crucial role in a large number of applications, including numerical weather prediction, disaster monitoring, crop yield prediction, flood and drought damage estimation, water resources management, greenhouse gas accounting, civil protection, and epidemiological modeling of water borne diseases. SM, as a key parameter in the water cycle process, has been endorsed by the Global Climate Observing System (GCOS) as one of 50 Essential Climate Variables (ECVs), which are required to support the work of the United Nations Framework Convention on Climate Change (UNFCCC) and the Intergovernmental Panel on Climate Change (IPCC). Both the active and passive microwave remote sensing systems can estimate SM through the observation of backscatter signals and brightness temperatures (TBs), especially passive microwaves at low frequencies. The theoretical basis of microwave remote sensing of soil moisture is that very large differences between the dielectric constants of dry soil and liquid water lead to a very large contrast between wet soil and dry soil. However, these radiometers are easily affected by vegetation attenuation, are insensitive to soil moisture under conditions of moderate vegetation (water content greater than ~3 kg/m2), and measurements can only represent information about the top of 1 cm of soil. L-band has more advantages in the retrieval of soil moisture, because it can penetrate the atmosphere and vegetation coverage (up to ~5 kg/m2 water content), and TB represents information on the upper 5 cm of soil. The NNs method is an effective nonlinear method to establish a model. It has been widely applied in remote sensing fields, including soil moisture retrieval. The general idea is to build relationships between input data (TB/backscatter, SM) and target SMs (in situ SM, model SM, or satellite SM) through NNs training, and then retrieve SM using the trained NNs."
+            ],
+            "research objective": [
+                "The main target of this study was to develop a reconstruction approach to obtain long time series global soil moisture datasets, on the basis of previous studies. The initial purpose of this study is to find a way to refine the former observations from the future WCOM soil moisture products, which mainly rely on L-S-C band observations. In our study, for comprehensive consideration, we adopted the second solution to rebuild long time series SM products, using a BPNN method with SMOSL3sm products as a reference."
+            ],
+            "challenges": [
+                "In Figure 3, we can note that there is such a gap in the data such as in southern Asia. As we know, in southern Asia and the northeastern Africa, the RFI is serious. The NNs training are affected by RFI. In those areas, the NNs cannot be trained effectively or the NNs training result have a poor relationship between the input and the output, so the soil moisture cannot be retrieved correctly."
+            ],
+            "methods": [
+                "The data used in our study include Soil Moisture and Ocean Salinity (SMOS) Level 3 soil moisture (SMOSL3sm) data, the Advanced Microwave Scanning Radiometer-Earth Observing System (AMSR-E), and Advanced Microwave Scanning Radiometer 2 (AMSR2) Level 3 brightness temperature (TB) data and L3 SM products. The BPNNs on each grid were trained over July 2010–June 2011, and the entire year of 2013, with SMOSL3sm as a training target, and taking the reflectivities (Rs) of the C/X/Ku/Ka/Q bands, and the MVI from AMSR-E/AMSR2 TB data, as input, in which the MVI is used to correct for vegetation effects. With these trained networks over each pixel, a global and long-term soil moisture time series, i.e., 2003–2015, was built using AMSR-E TB from 2003 to 2011 and AMSR2 TB from 2012 to 2015."
+            ],
+            "dataset": [
+                "The data used in our study include Soil Moisture and Ocean Salinity (SMOS) Level 3 soil moisture (SMOSL3sm) data, the Advanced Microwave Scanning Radiometer-Earth Observing System (AMSR-E), and Advanced Microwave Scanning Radiometer 2 (AMSR2) Level 3 brightness temperature (TB) data and L3 SM products."
+            ],
+            "findings": [
+                "Good global results were obtained with CC = 0.67, RMSE = 0.055 m3/m3 and Bias = −0.0005 m3/m3, particularly over Australia, Central USA, and Central Asia. The results show that NNsm has a good agreement with in situ data, and can capture the temporal dynamics of in situ SM, with CC = 0.52, RMSE = 0.084 m3/m3 and Bias = −0.002 m3/m3. As a conclusion, this study provides a promising BPNN method adopting MVI to rebuild a long-term SM time series, and this could provide useful insights for the future Water Cycle Observation Mission (WCOM)."
+            ]
+        },
+        {
+            "background": [
+                "Surface soil moisture (SSM) is an important variable in drought monitoring, floods predicting, weather forecasting, etc. and plays a critical role in water and heat exchanges between land and atmosphere. SSM products from L-band observations, such as the Soil Moisture Active Passive (SMAP) Mission, have proven to be optimal global estimations. Although X-band has a lower sensitivity to soil moisture than that of L-band, Chinese FengYun-3 series satellites (FY-3A/B/C/D) have provided sustainable and daily multiple SSM products from X-band since 2008."
+            ],
+            "research objective": [
+                "This research developed a new global SSM product (NNsm-FY) from FY-3B MWRI from 2010 to 2019, transferred high accuracy of SMAP L-band to FY-3B X-band."
+            ],
+            "challenges": [
+                "Unfortunately, NNsm-AMSR has a temporal gap of 9 months due to data gaps between AMSR-E and AMSR2 sensors, which limits its applications."
+            ],
+            "methods": [
+                "In our research, we used two kinds of data. A soil moisture retrieval model was developed based on artificial neural network (ANN), which is a modified version of method developed by Y ao37,39. As shown in Fig. 1, the NNsm-FY dataset was generated with three steps:(1) data pre-processing and data matching, (2) training of soil moisture ANN model, (3) retrieval and validation of NNsm-FY dataset. Data Pre-processing. To match FY-3B TBs with SMAPL3sm, FY-3B TBs are firstly resampled to 36 km. We use the “drop in the bucket” method to resample FY-3B L1 swath data to 36 km EASE-Grid format. All swath data that fall within a 36 km grid cell are averaged together. Training of soil moisture ANN model. The training is implemented in Matlab R2018b version. Cascade-forward neural network is selected as the training model, with “hiddenSizes” being 10, “Training function” being “trainlm (Levenberg-Marquardt)” . Mean squared error (mse) is used to evaluate the performance of the neural network. The ANN model is trained to learn the relationship between the input TBs related variables and the target SMAPL3sm. The model is trained separately for each grid cell in Matlab R2018b version. Matlab randomly divide the training dataset into 3 kinds of samples: 70% training samples, 15% validation samples and 15% testing samples. Retrieval of NNsm-FY for each grid cell. After establishing the ANN relationship model between the input and the target for each grid cell, the model is applied with inputting pre-processed FY-3B TBs and MVI at the corresponding 36 km grid cell from 2010 to 2019. The retrieval is implemented using one year’s daily data over one grid cell, and the global daily soil moisture from 2010 to 2019 are obtained finally."
+            ],
+            "dataset": [
+                "Validation against in situ data from representative networks demonstrate that the NNsm-FY matches well with in situ SSM, with similar accuracy to SMAP (~0.04 m3/m3). Data Source Time Period Spatio-temporal resolution FY-3B MWRI L1 TB provided by NSMC Training: 2015–2017 Swath SMAP L3 soil moisture https://nsidc.org/data/smap Training: 2015–2017 36 km, Daily FY-3B MWRI L1 TB provided by NSMC Retrieval: 2010–2019 Swath"
+            ],
+            "findings": [
+                "The NNsm-FY shows good agreement with in-situ observations and SMAP product and has a higher accuracy than that of official FY-3B product. With this new dataset, Chinese FY-3 satellites may play a larger role and provide opportunities of sustainable and longer-term soil moisture data record for hydrological study."
+            ]
+        },
+        {
+            "background": [
+                "Long term surface soil moisture (SSM) data with stable and consistent quality are critical for global environment and climate change monitoring. L band radiometers onboard the recently launched Soil Moisture Active Passive (SMAP) Mission can provide the state-of-the-art accuracy SSM, while Advanced Microwave Scanning Radiometer for EOS (AMSR-E) and AMSR2 series provide long term observational records of multi-frequency radiometers (C, X, and K bands)."
+            ],
+            "research objective": [
+                "This study transfers the merits of SMAP to AMSR-E/2, and develops a global daily SSM dataset (named as NNsm) with stable and consistent quality at a 36 km resolution (2002–2019)."
+            ],
+            "challenges": [
+                "The common approaches for inter-calibration 23 are inappropriate for AMSR-E and AMSR2 data due to a temporal gap of 9 months between them. In the equatorial zone and around the land-sea interface we find some pixels with regression R less than 0.85. We deem this calibration approach for these grid cells to be uncertain."
+            ],
+            "methods": [
+                "Currently, we have created a long-term daily SSM product (named as 'NNsm') at 36 km resolution from 2002 to 2019. Validation against in situ data from the USDA, the Tibetan Plateau, OZNET, REMEDHUS, and AMMA sites demonstrate that the NNsm matches well with SMAP and in situ SSM, with similar accuracy to SMAP (~0.04 m3/m3)."
+            ],
+            "dataset": [
+                "This global observation-driven dataset spans nearly two decades at present, and is extendable through the ongoing AMSR2 and upcoming AMSR3 missions for long-term studies of climate extremes, trends, and decadal variability."
+            ],
+            "findings": [
+                "The NNsm can reproduce the SMAP SSM accurately, with a global Root Mean Square Error (RMSE) of 0.029 m3/m3. NNsm also compares well with in situ SSM observations, and outperforms AMSR-E/2 standard SSM products from JAXA and LPRM."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Are neural networks used as a data collection method for global soil moisture datasets in this field?",
+                    "Answer": "Yes",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Does the data collection method in this domain face challenges due to Radio Frequency Interference (RFI), particularly in certain regions?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Is it possible to use X-band data from the FY-3 series satellites to create soil moisture datasets with similar accuracy to L-band data from SMAP?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Which data sources are primarily used for soil moisture retrieval: SMOSL3sm, AMSR-E, AMSR2, or other sources?",
+                    "Answer": "SMOSL3sm, AMSR-E, AMSR2",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What methods are used to collect and process global soil moisture data using microwave remote sensing systems?",
+                    "Answer": "Active and passive microwave remote sensing systems",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "Where can data collection face significant challenges affecting the retrieval of soil moisture data?",
+                    "Answer": "southern Asia and northeastern Africa",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "When is the training of neural networks for soil moisture retrieval typically conducted, and what are the sources of data used for model training?",
+                    "Answer": "July 2010–June 2011, 2013, SMOS Level 3 soil moisture data, AMSR-E and AMSR2 Level 3 brightness temperature data, SMAP L3 soil moisture datasets",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "What is an example of a challenge faced in soil moisture data collection using satellite remote sensing techniques?",
+                    "Answer": "An example of a challenge in soil moisture data collection is the presence of radio frequency interference (RFI), which affects the training of neural networks in areas like southern Asia and northeastern Africa, leading to poor retrieval accuracy of soil moisture data.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the characteristics of the artificial neural network models used for soil moisture data retrieval?",
+                    "Answer": "cascade-forward neural network, hidden sizes typically set to 10, training function 'trainlm (Levenberg-Marquardt)', mean squared error (mse) used to evaluate performance",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the essential features of the global soil moisture datasets derived from microwave radiometers?",
+                    "Answer": "36 km spatial resolution, daily measurements, EASE-Grid2 coordinate system, soil moisture in m3/m3, 5% error precision",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many distinct microwave bands are used in the data collection methods for soil moisture retrieval?",
+                    "Answer": "7",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is a neural network inversion algorithm in the context of soil moisture data retrieval?",
+                    "Answer": "A neural network inversion algorithm is a method used to retrieve soil moisture data by utilizing artificial neural networks to build relationships between input data such as brightness temperatures and target soil moisture values. This approach leverages the advantages of existing high-accuracy soil moisture products to enhance the retrieval from other datasets.",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How does the neural network method for soil moisture retrieval using FY-3B MWRI data compare to the method using AMSR-E/AMSR2 data in terms of data collection challenges and accuracy?",
+                    "Answer": "The neural network method using FY-3B MWRI data faces challenges such as radio frequency interference (RFI) in regions like southern Asia and northeastern Africa, which affect the accuracy of the neural networks. In contrast, the AMSR-E/AMSR2 approach also deals with challenges, notably a temporal gap of 9 months between sensor data, affecting calibration. Both methods aim for high accuracy, with the FY-3B MWRI method achieving a precision similar to SMAP (~0.04 m3/m3), while the AMSR-E/AMSR2 method achieves a global RMSE of 0.029 m3/m3.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How do the methods for correcting vegetation effects differ between the soil moisture datasets derived from FY-3B MWRI data and those using AMSR-E/AMSR2 data?",
+                    "Answer": "For FY-3B MWRI data, the method involves using the Microwave Vegetation Index (MVI) to correct for vegetation effects during the data pre-processing stage. In contrast, the AMSR-E/AMSR2 dataset does not explicitly mention a distinct method for correcting vegetation effects, focusing instead on neural network modeling and calibration against SMAP data to achieve accurate soil moisture retrieval.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How do the challenges in data gaps and regional radio-frequency interference affect the development and accuracy of long-term soil moisture datasets?",
+                    "Answer": "Challenges such as data gaps, like the 9-month gap between AMSR-E and AMSR2 sensors, limit the applicability of continuous soil moisture datasets. Additionally, regional RFI in areas like southern Asia and northeastern Africa hinders the effective training of neural networks, resulting in poor input-output relationships and inaccuracies in soil moisture retrieval. These factors necessitate innovative data processing and validation techniques to ensure dataset continuity and accuracy.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes challenges in developing a reconstruction approach for long time series global soil moisture datasets?",
+                    "Answer": "Challenges in developing a reconstruction approach for long time series global soil moisture datasets arise due to radio frequency interference (RFI), which affects neural network training in certain regions like southern Asia and northeastern Africa. This interference leads to poor relationships between input and output data, making accurate soil moisture retrieval difficult.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is there a temporal gap issue in creating soil moisture datasets using AMSR-E and AMSR2 sensors?",
+                    "Answer": "The temporal gap issue in creating soil moisture datasets using AMSR-E and AMSR2 sensors is caused by the 9-month gap between the end of AMSR-E and the start of AMSR2 data collection. This gap limits the continuity and applications of the datasets, making inter-calibration challenging and uncertain for some grid cells, particularly in areas like the equatorial zone and around the land-sea interface.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What factors contribute to the ability of L-band radiometers to accurately estimate surface soil moisture compared to other bands?",
+                    "Answer": "L-band radiometers can estimate surface soil moisture more accurately compared to other bands because they can penetrate the atmosphere and moderate vegetation coverage better. This results in measurements that represent information on the upper 5 cm of soil, which makes them less sensitive to vegetation attenuation and more effective in capturing soil moisture under varying conditions.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of utilizing artificial neural networks (ANN) for soil moisture retrieval in regions with radio frequency interference (RFI)?",
+                    "Answer": "In regions with serious RFI, such as southern Asia and northeastern Africa, the training of artificial neural networks (ANN) can be adversely affected. This can result in poor relationships between the input and output data, leading to incorrect retrieval of soil moisture.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the effects of transferring high accuracy soil moisture data from L-band observations to other frequency bands, such as X-band, on the quality of soil moisture datasets?",
+                    "Answer": "By transferring the high accuracy of L-band observations to X-band, a new global soil moisture product can achieve accuracy similar to that of the SMAP product (~0.04 m3/m3), potentially enhancing the quality and sustainability of soil moisture data records, especially for satellites like the Chinese FY-3 series.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "How does the use of a backpropagation neural network (BPNN) method influence the accuracy and consistency of long-term soil moisture datasets?",
+                    "Answer": "The application of a backpropagation neural network (BPNN) method allows for the reconstruction of long-term soil moisture datasets with good global results, achieving accuracy comparable to in situ data, with a Root Mean Square Error (RMSE) of about 0.055 m3/m3, thus offering a promising approach for building stable and consistent quality datasets.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "Why is it important to develop a reconstruction approach for obtaining long-term global soil moisture datasets using neural networks?",
+                    "Answer": "The main target is to develop a reconstruction approach to obtain long time series global soil moisture datasets to refine former observations from future soil moisture products, mainly relying on L-S-C band observations. This approach aims to improve the understanding of the energy and water cycles in the Earth system, critical for applications like climate monitoring, hydrology, and disaster prediction.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are the goals of transferring the high accuracy of the SMAP L-band to other satellite bands like the FY-3B X-band in developing soil moisture products?",
+                    "Answer": "The research aims to develop a new global soil moisture product by transferring the high accuracy of SMAP L-band observations to the FY-3B X-band. This transfer allows for the creation of sustainable and daily multiple soil moisture products, enhancing the accuracy and utility of soil moisture data for hydrological studies and environmental monitoring.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it necessary to create a long-term daily soil moisture product with stable and consistent quality at a specific resolution?",
+                    "Answer": "Creating a long-term daily soil moisture product with stable and consistent quality is crucial for monitoring global environment and climate change. It allows for the analysis of climate extremes, trends, and decadal variability. Such datasets support long-term studies and provide insights critical for applications like drought monitoring, weather forecasting, and water resource management.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "How can artificial neural networks be utilized to enhance the accuracy of soil moisture datasets derived from satellite observations?",
+                    "Answer": "Artificial neural networks can be leveraged to enhance soil moisture datasets by building relationships between input data such as brightness temperatures and target soil moisture values. The networks are trained using datasets like SMAP as a reference, and the trained model is then applied to input variables to retrieve long-term soil moisture data with improved accuracy.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What are the procedural steps involved in resampling satellite brightness temperature data to a specific grid format for soil moisture retrieval?",
+                    "Answer": "The procedural steps involve pre-processing satellite swath data using methods such as 'drop in the bucket' to resample data to a specific grid format like the 36 km EASE-Grid. All swath data within a grid cell are averaged together to align with the desired grid resolution, enabling subsequent soil moisture retrieval.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What challenges are associated with using neural networks for soil moisture retrieval in regions affected by radio frequency interference, and how are these challenges typically addressed?",
+                    "Answer": "Challenges in regions affected by radio frequency interference (RFI) include the inability to effectively train neural networks due to poor relationships between input and output variables. These challenges are typically addressed by identifying and mitigating RFI impacts, possibly incorporating additional correction factors or data sources to improve retrieval accuracy in affected areas.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What machine learning techniques enable the development of long-term global soil moisture datasets from satellite data?",
+                    "Answer": "Artificial neural networks (ANNs), specifically Back Propagation Neural Networks (BPNNs) and cascade-forward neural networks, are used to train models on satellite brightness temperature data, enabling the development of long-term global soil moisture datasets with high accuracy.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How does the integration of data from different satellite missions enable a more comprehensive understanding of soil moisture across varied geographical regions?",
+                    "Answer": "By integrating data from multiple satellite missions like FY-3B, SMAP, AMSR-E, and AMSR2, researchers can overcome limitations such as temporal gaps and regional discrepancies, thus enhancing the accuracy and comprehensiveness of soil moisture data across diverse geographical areas.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What challenges do radiometric signals face in vegetation-rich areas, and how are these challenges addressed in soil moisture retrieval?",
+                    "Answer": "Radiometric signals are often attenuated by vegetation, reducing their sensitivity to soil moisture. This challenge is addressed by using the Microwave Vegetation Index (MVI) to correct for vegetation effects in the soil moisture retrieval process, allowing for more accurate data outputs.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might neural networks be used as a preferred method for reconstructing long-term global soil moisture datasets?",
+                    "Answer": "Neural networks are effective nonlinear methods for establishing models that can capture complex relationships between input data, such as brightness temperatures, and target soil moisture values. They have been widely applied in remote sensing fields, including soil moisture retrieval, due to their ability to build relationships through training and then retrieve soil moisture using the trained networks.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Why might there be challenges in retrieving soil moisture data accurately in regions like southern Asia or northeastern Africa?",
+                    "Answer": "In regions like southern Asia and northeastern Africa, the presence of Radio Frequency Interference (RFI) can seriously affect neural network training. This interference can lead to poor relationships between input and output data, making it difficult to retrieve accurate soil moisture information in those areas.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why could gaps in data collection between different sensors pose a challenge for creating continuous soil moisture datasets?",
+                    "Answer": "Gaps in data collection between different sensors, such as the 9-month gap between AMSR-E and AMSR2 sensors, can limit the ability to create continuous soil moisture datasets. These temporal gaps make it difficult to apply common inter-calibration approaches, particularly in regions like the equatorial zone and around land-sea interfaces, where calibration approaches may be uncertain.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "How would you assess the challenges associated with radio frequency interference (RFI) in the training of neural networks for soil moisture retrieval?",
+                    "Answer": "RFI poses significant challenges in certain regions, such as southern Asia and northeastern Africa, where it affects the training of neural networks by introducing noise and reducing the quality of the input data. This interference can lead to a poor relationship between input and output variables, resulting in inaccurate soil moisture retrieval.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What are your thoughts on the potential for extending soil moisture datasets using multi-frequency radiometer data, considering the temporal gaps between sensors like AMSR-E and AMSR2?",
+                    "Answer": "While multi-frequency radiometer data can be valuable for extending soil moisture datasets, temporal gaps between sensors like AMSR-E and AMSR2 present calibration challenges. These gaps may lead to uncertainties in the calibration approach, particularly in regions with complex conditions such as the equatorial zone and land-sea interfaces. Nonetheless, strategies like neural network-based reconstructions can help mitigate these challenges and provide consistent long-term datasets.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand how neural networks can be effectively trained in regions with high radio frequency interference (RFI).",
+                    "Answer": "In regions like southern Asia and northeastern Africa, radio frequency interference (RFI) can significantly affect the neural network (NN) training, resulting in poor relationships between input and output, which hampers accurate soil moisture retrieval.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I'm not sure why L-band observations are preferred over other bands for soil moisture retrieval.",
+                    "Answer": "L-band observations are preferred for soil moisture retrieval because they can penetrate both the atmosphere and moderate vegetation cover, providing information on the upper 5 cm of soil and offering advantages over other bands that are more affected by vegetation and atmospheric conditions.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "I can't figure out how datasets spanning multiple satellite missions can maintain consistent quality over time.",
+                    "Answer": "To maintain consistent quality over time, datasets spanning multiple satellite missions use inter-calibration techniques, despite challenges such as temporal gaps between sensors, and rely on validation against in situ data from various networks to ensure accuracy and stability.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the challenges associated with retrieving soil moisture data using neural network models in regions with radio frequency interference.",
+                    "Answer": "Retrieving soil moisture data in regions with radio frequency interference (RFI), such as southern Asia and northeastern Africa, presents challenges because the neural network training is affected by RFI, leading to poor relationships between input and output data. This results in incorrect retrieval of soil moisture data in such areas.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        }
+    ]
+}

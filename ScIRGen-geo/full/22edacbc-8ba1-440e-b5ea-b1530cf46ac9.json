@@ -1,0 +1,380 @@
+{
+    "id": "22edacbc-8ba1-440e-b5ea-b1530cf46ac9",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "High-resolution projection dataset of agroclimatic indicators over Central Asia (1986-2005 and 2031-2050)",
+            "description": "To understand the potential impact of projected climate changes on the vulnerable agriculture in Central Asia (CA) in the future, six agroclimatic indicators are calculated based on the 9km-resolution dynamical downscaled results of three different global climate models and a high-resolution projection dataset of agroclimatic indicators over CA is produced. These indicators are growing season length (GSL, days), biologically effective degree days (BEDD, ℃), frost days (FD, days), summer days (SU, days), warm spell duration index (WSDI, days), and tropical nights (TR, days). The periods are 1986-2005 and 2031-2050. The spatial resolution is 0.1°. As all the indicators except WSDI are defined with absolute temperature thresholds and particularly sensitive to the systematics biases in the model data, the quantile mapping (QM) method is applied to correct the simulated temperature. Results show the QM method largely reduces the biases in all the indicators. GSL, SU, WSDI, and TR will significantly increase over CA and FD will decrease. However, changes in BEDD are spatially heterogeneous, with the increases in northern CA and the mountainous areas and decreases in the southern and middle part of the plain areas. This dataset can be applied for assessing the future risks in the local agriculture for climate changes and will be beneficial to adaption and mitigation actions for food security in this region.",
+            "instructions": "The names of the files follow the order: [experiment_name].[variable_name].[period].nc. For example, the file name, WRF_CCSM_COR.WSDI.2031-2050.nc, represents the WSDI of the future period calculated based on the model data from the experiment WRF_CCSM_COR.\nThe Climate Data Operators (CDO, https://code.mpimet.mpg.de/projects/cdo), Python modules (like netCDF4, Xarray, and Numpy), and NCAR Command Languages (NCL, https://www.ncl.ucar.edu/) are recommended to do operations on the netCDF files.",
+            "east": 94.0,
+            "west": 36.0,
+            "south": 30.0,
+            "north": 58.0,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 138449674.0,
+            "cstr": "18406.11.Atmos.tpdc.271934",
+            "doi": "10.11888/Atmos.tpdc.271934",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameEn": "QIU Yuan ",
+                "unitEn": "Institute of Atmospheric Physics, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "High-resolution projection dataset of agroclimatic indicators over Central Asia",
+                "referenceEn": "Qiu, Y., Feng, J.M., Yan, Z.W., & Wang, J. (2022). High-resolution projection dataset of agroclimatic indicators over Central Asia. Adv. Atmos. Sci.,  https://doi.org/10.1007/s00376-022-2008-3"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Other"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "Central Asia"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "near-term future",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "National Natural Science Foundation of China"
+            },
+            {
+                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            },
+            {
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Central Asia (referred to as CA, Fig. 1), which consists of five countries (Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan), is highly agrarian, with 60% of its population living in rural areas and agriculture accounting for over 45% of total employment and nearly 25% of the Gross Domestic Production (Babu and Djalalov, 2006). Semi-arid to arid climates prevail in the lowland areas of CA. Thus, in the central and western parts of CA, agriculture is only possible with irrigation. As one of the hot spots of climate change (Giorgi, 2006), CA has experienced a significant warming (0.16°C (10 yr)−1) during the past century (1901–2003, Chen et al., 2009), with an accelerating warming rate (0.36°C–0.42°C per decade) in the past ~30 years (1979–2011, Hu et al., 2014). Meanwhile, its annual precipitation has increased (Chen et al., 2011; Hu et al., 2017). Climate change may pose challenges to the vulnerable agriculture in CA. Due to the lack of high-resolution climate data and less attention from the community relative to its surrounding areas, like East Asia, South Asia, and the Mediterranean (Wang et al., 2009; Piao et al., 2010; Iglesias et al., 2011; Bandara and Cai, 2014; Cramer et al., 2018; Aryal et al., 2020; Huang et al., 2020), studies on the impacts of climate change on agriculture in CA are lacking, especially on the potential impacts of projected climate change under warming scenarios in the near-term future."
+            ],
+            "research objective": [
+                "The aim of this paper is to describe the high-resolution projection dataset of AIs over CA and investigate projected changes in these indicators in the near-term future. This study can serve as a scientific basis for assessing the future risks to the local agriculture from climate change and will be beneficial in planning adaption and mitigation actions for food security in this region."
+            ],
+            "challenges": [
+                "We found that it is difficult for the regional model to accurately simulate the spatial distribution of WSDI in CA, with the SCCs in the range of 0.3–0.4."
+            ],
+            "methods": [
+                "Recently, we carried out a study that involves the dynamical downscaling of multiple global climate models (GCMs) for the CA region with an unprecedented horizontal resolution of 9 km (Qiu et al., 2022). In this study, the model data from the downscaled results is applied to calculate some key agroclimatic indicators (referred to as AIs), which are proxies for the effect of weather and climate on specific agricultural activities (Arnell and Freeman, 2021) and both practical and understandable to farmers and policy makers (Trnka et al., 2011). Here, the quantile mapping method (Themeßl et al., 2011) is applied to correct the simulated temperature before calculating the AIs relating to absolute temperature thresholds."
+            ],
+            "dataset": [
+                "The AIs assessed in this study are calculated based on daily mean/maximum/minimum temperature (TG/TX/TN) from the 9-km-resolution dynamical downscaling of three different GCMs in CA with a regional climate model (RCM), the Weather Research and Forecasting (WRF) model (Skamarock et al., 2008). The reference-period simulations are from 1986 to 2005, and the future runs are between 2031 and 2050 under the moderate emission scenario RCP 4.5."
+            ],
+            "findings": [
+                "Figures 4 and 5 show that GSL, SU, WSDI, and TR are projected to significantly increase over CA in the near-term future, while FD is very likely to decrease over the entire region, especially in the high-elevation areas (e.g., the Tien Shan and Pamirs). In particular, projected changes in the Cor-AIs over main producing areas of wheat and cotton are assessed. The ensemble mean of the results of the simulations shows that GSL, BEDD, SU, WSDI, and TR over the main producing area of wheat will increase by 8.7%, 15.6%, 49.8%, 112.1%, and 219.6%, respectively, and FD over this area will decrease by 40.7%. Over the main producing area of cotton, GSL, SU, WSDI, and TR will increase by 3.9%, 6.5%, 91.0%, and 32.0%, respectively, and BEDD will decrease by 10.4%."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Is the quantile mapping method used for correcting simulated temperatures in agroclimatic studies in Central Asia?",
+                    "Answer": "Yes",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Are the agroclimatic indicators calculated based on daily mean, maximum, and minimum temperatures?",
+                    "Answer": "Yes",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "In assessing the future changes in agroclimatic indicators, are the simulations based on a high-emission scenario, a moderate emission scenario, or a low-emission scenario?",
+                    "Answer": "moderate emission scenario RCP 4.5",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "What data collection method is used to obtain high-resolution climate projections for Central Asia?",
+                    "Answer": "Dynamical downscaling",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Where are the significant projected changes in agroclimatic indicators expected to occur in Central Asia?",
+                    "Answer": "Tien Shan and Pamirs",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What challenges are associated with simulating the spatial distribution of warm spell duration index (WSDI) in Central Asia?",
+                    "Answer": "spatial correlation coefficients (SCCs) in the range of 0.3–0.4",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "Can you give an example of a data collection method that addresses the challenges in simulating the spatial distribution of agroclimatic indicators in Central Asia?",
+                    "Answer": "The study employs the quantile mapping method to correct simulated temperatures before calculating agroclimatic indicators that rely on absolute temperature thresholds. This approach helps to reduce the system biases in simulated temperature data.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is an example of a dataset used for projecting changes in agroclimatic indicators in Central Asia?",
+                    "Answer": "The dataset consists of daily mean, maximum, and minimum temperatures derived from a 9-km-resolution dynamical downscaling of three different global climate models over Central Asia using a regional climate model, specifically the Weather Research and Forecasting (WRF) model. The dataset covers the reference period from 1986 to 2005 and future projections from 2031 to 2050 under the RCP 4.5 scenario.",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Could you provide an example of how projected changes in agroclimatic indicators are assessed for specific agricultural areas in Central Asia?",
+                    "Answer": "Projected changes in agroclimatic indicators are assessed for main producing areas of wheat and cotton. For the wheat-producing area, indicators such as growing season length, biologically effective degree days, summer days, warm spell duration index, and tropical nights are projected to increase, while frost days are expected to decrease significantly. Similar assessments are made for the cotton-producing area, showing various increases and decreases in these indicators.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the properties of high-resolution agroclimatic indicator datasets used for assessing climate change impacts on agriculture?",
+                    "Answer": "growing season length, biologically effective degree days, frost days, summer days, warm spell duration index, tropical nights, spatial resolution of 0.1°",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "What is the horizontal resolution used in the dynamic downscaling of global climate models for Central Asia?",
+                    "Answer": "9 kilometers",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is 'quantile mapping' in the context of data collection for climate projections?",
+                    "Answer": "Quantile mapping is a method applied to correct the simulated temperature before calculating agroclimatic indicators relating to absolute temperature thresholds. It helps in reducing the bias in the indices derived from regional climate model simulations.",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What does 'dynamical downscaling' mean in the creation of high-resolution climate datasets?",
+                    "Answer": "Dynamical downscaling refers to the process of using regional climate models to enhance the resolution of global climate model outputs. In this context, it involves improving the horizontal resolution to 9 km over Central Asia to better assess agroclimatic indicators.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What is meant by 'agroclimatic indicators' in the context of assessing climate impacts on agriculture?",
+                    "Answer": "Agroclimatic indicators are proxies that represent the effects of weather and climate on agricultural activities. They include metrics such as growing season length, biologically effective degree days, and frost days, which are practical and understandable for farmers and policymakers.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "What insights can be drawn about the effectiveness of using quantile mapping in correcting temperature simulations for agroclimatic indices in Central Asia?",
+                    "Answer": "The quantile mapping method significantly reduces biases in simulated temperatures, which are crucial for accurately calculating temperature-based agroclimatic indices. This correction is particularly important as these indices are sensitive to systematic biases in regional simulation results.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes the difficulty in accurately simulating the spatial distribution of the warm spell duration index in Central Asia using regional climate models?",
+                    "Answer": "The challenge in simulating the spatial distribution of the warm spell duration index (WSDI) in Central Asia is due to the regional model's limitations, resulting in relatively low spatial correlation coefficients (SCCs) in the range of 0.3–0.4.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Why is quantile mapping applied to temperature data before calculating agroclimatic indicators in Central Asia?",
+                    "Answer": "Quantile mapping is applied to correct the simulated temperature data, which is crucial for accurately calculating agroclimatic indicators that rely on absolute temperature thresholds. This correction reduces bias in the results, enhancing the reliability of projections.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are the reasons behind the projected increase in growing season length, summer days, and tropical nights in Central Asia's agricultural areas?",
+                    "Answer": "The projected increase in growing season length, summer days, and tropical nights in Central Asia is attributed to the impacts of climate change, which include significant warming trends and changes in temperature patterns as identified through the high-resolution projection dataset.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential outcomes of using the quantile mapping method to correct temperature simulations on the accuracy of agroclimatic indicators for assessing climate change impacts in Central Asia?",
+                    "Answer": "The quantile mapping method significantly reduces the bias in the agroclimatic indicators, which are based on absolute temperature thresholds. This improvement in accuracy allows for more reliable assessments of the impacts of climate change on agriculture in Central Asia.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What could be the implications of dynamically downscaling global climate models to a 9-km resolution on the precision of agroclimatic indicators in regions like Central Asia?",
+                    "Answer": "Dynamic downscaling to a 9-km resolution enhances the precision of agroclimatic indicators by providing more detailed spatial data, which is critical for capturing localized climate variations that affect agricultural activities in Central Asia.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "If future climate scenarios predict an increase in growing season length, summer days, and warm spell duration, what might be the potential impacts on agricultural productivity and planning in Central Asia?",
+                    "Answer": "Increased growing season length, summer days, and warm spell duration could lead to higher agricultural productivity potential in Central Asia. However, it may also necessitate adjustments in agricultural planning, such as changes in crop varieties or irrigation practices to adapt to the evolving climate conditions.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the intention behind creating a high-resolution projection dataset for agroclimatic indicators in Central Asia?",
+                    "Answer": "The aim is to assess the future risks to local agriculture from climate change and aid in planning adaptation and mitigation actions for food security in Central Asia.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "Why is it important to use dynamical downscaling of global climate models when assessing agroclimatic indicators in Central Asia?",
+                    "Answer": "Dynamical downscaling is used to achieve a high-resolution (9 km) dataset that can accurately project changes in agroclimatic indicators, which are essential for evaluating the impacts of climate change on agriculture in a region that lacks high-resolution climate data.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What is the goal of applying the quantile mapping method in the calculation of agroclimatic indicators for Central Asia?",
+                    "Answer": "The quantile mapping method is applied to correct simulated temperatures to reduce biases in the calculation of agroclimatic indicators, ensuring more accurate assessments of climate impacts on agriculture.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "What specific procedures are utilized to dynamically downscale global climate models for generating high-resolution agroclimatic indicators in Central Asia?",
+                    "Answer": "The procedures involve the dynamical downscaling of multiple global climate models (GCMs) for the Central Asia region using a regional climate model, specifically the Weather Research and Forecasting (WRF) model. This process achieves a high horizontal resolution of 9 km, which is used to calculate key agroclimatic indicators.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "How is the quantile mapping method applied to correct simulated temperature data before calculating agroclimatic indicators?",
+                    "Answer": "The quantile mapping method is applied to correct the simulated temperature data by addressing systematic biases in the regional climate model outputs. This correction is crucial for calculating agroclimatic indicators that rely on absolute temperature thresholds, ensuring more accurate projections.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What is the approach for assessing the projected changes in agroclimatic indicators over main agricultural areas in Central Asia?",
+                    "Answer": "The approach involves using the ensemble mean of simulations from the downscaled climate model data to assess projected changes in agroclimatic indicators over main agricultural areas, such as wheat and cotton producing regions. This includes analyzing changes in growing season length, biologically effective degree days, summer days, warm spell duration index, tropical nights, and frost days.",
+                    "Level": "C3(Applying)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What data collection techniques enable the generation of high-resolution agroclimatic indicators for Central Asia?",
+                    "Answer": "The generation of high-resolution agroclimatic indicators for Central Asia is enabled by the dynamical downscaling of multiple global climate models (GCMs) to a horizontal resolution of 9 km using a regional climate model, specifically the Weather Research and Forecasting (WRF) model. This approach allows for the calculation of agroclimatic indicators based on daily mean/maximum/minimum temperature data.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "How does the application of quantile mapping contribute to the accuracy of temperature-based agroclimatic indicators?",
+                    "Answer": "The application of quantile mapping contributes to the accuracy of temperature-based agroclimatic indicators by correcting the simulated temperature data before calculating the indicators. This method significantly reduces systematic biases in the temperature simulation, improving the reliability of the resulting agroclimatic indicators.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What challenges are associated with simulating the spatial distribution of agroclimatic indicators in Central Asia, and how are they addressed?",
+                    "Answer": "One challenge associated with simulating the spatial distribution of agroclimatic indicators in Central Asia is the difficulty in accurately simulating the spatial distribution of the Warm Spell Duration Index (WSDI), with spatial correlation coefficients (SCCs) in the range of 0.3–0.4. This challenge is addressed by employing a high-resolution regional climate model and applying quantile mapping to correct temperature biases, although it remains a complex issue.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "Why might there be challenges in accurately simulating the spatial distribution of warm spell duration index (WSDI) in the Central Asia region?",
+                    "Answer": "It is noted that the regional model has difficulty accurately simulating the spatial distribution of WSDI in Central Asia, with spatial correlation coefficients (SCCs) in the range of 0.3–0.4, indicating that existing modeling approaches may struggle with regional variations and complexities.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What are the anticipated benefits of using a high-resolution projection dataset for assessing climate change impacts on agriculture in Central Asia?",
+                    "Answer": "The high-resolution projection dataset serves as a scientific basis for assessing future risks to local agriculture from climate change, facilitating better planning of adaptation and mitigation actions for food security in the region.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What are the potential challenges in using high-resolution dynamical downscaling to assess agroclimatic indicators in Central Asia?",
+                    "Answer": "One of the challenges is accurately simulating the spatial distribution of certain indicators like the warm spell duration index (WSDI) in Central Asia, with spatial correlation coefficients (SCCs) ranging from 0.3 to 0.4, indicating difficulty in achieving precise spatial representation.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "To what extent do the projected changes in agroclimatic indicators represent future risks to agriculture in Central Asia?",
+                    "Answer": "The projected changes in agroclimatic indicators suggest significant future risks to agriculture in Central Asia, with increases in growing season length, summer days, warm spell duration index, and tropical nights, while frost days are expected to decrease, potentially impacting key agricultural activities such as wheat and cotton production.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I don't understand the challenges faced in accurately simulating the spatial distribution of warm spell duration index in climate models for agricultural applications.",
+                    "Answer": "The field above indicates that there are difficulties in accurately simulating the spatial distribution of the warm spell duration index in Central Asia, with the spatial correlation coefficients being in the range of 0.3–0.4, which poses a challenge for regional climate models.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the challenges faced in accurately simulating agroclimatic indicators over Central Asia using high-resolution regional climate models.",
+                    "Answer": "It is difficult for the regional model to accurately simulate the spatial distribution of the warm spell duration index (WSDI) in Central Asia, with the spatial correlation coefficients (SCCs) in the range of 0.3–0.4.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Please explore potential datasets that could be used for assessing the impact of climate change on agriculture in Central Asia.",
+                    "Answer": "A high-resolution projected dataset of agroclimatic indicators over Central Asia is used to assess potential climate change impacts. This dataset covers the reference period from 1986 to 2005 and future projections from 2031 to 2050 under the RCP 4.5 emission scenario. It includes indicators like growing season length, effective degree days, frost days, summer days, warm spell duration index, and tropical nights.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

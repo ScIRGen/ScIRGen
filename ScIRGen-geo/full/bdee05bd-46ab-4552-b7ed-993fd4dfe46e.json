@@ -1,0 +1,366 @@
+{
+    "id": "bdee05bd-46ab-4552-b7ed-993fd4dfe46e",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Global 25 km monthly aerodynamic roughness length dataset (2010-2020)",
+            "description": "Global monthly aerodynamic roughness length dataset is available at a spatial resolution of 0.25° (~25 km), with temporal coverage from January 2010 to December 2020. The aerodynamic roughness length is a key parameter in characterizing aerodynamic resistance in land surface processes and climate-related models, and its accurate estimation is important for the accurate estimation of surface turbulent flux. This dataset is estimated by using the balanced random forest algorithm combining the MODIS, GLASS, and ERA5-land datasets, and the aerodynamic roughness length derived from AmeriFlux, FLUXNET, and the National Tibetan Plateau Data Center eddy observations are used as validation. The validation results indicated that the model estimates were in good agreement against the site observations, and the estimates well captured the seasonal variation trend of the aerodynamic roughness length. The dataset is saved in NetCDF format and contains the variables of the aerodynamic roughness length (in m), longitude and latitude in the range of -180E to 180E and latitude in the range of -90N to 90N, and the coordinate system is WGS84.",
+            "instructions": "The dataset is saved in NetCDF format, and the file name is yyyymmdd_global_monthly_z0m_25km.nc, where yyyy represents year, mm represents month, and dd represents day. For example, the “20100515_global_monthly_z0m_25km.nc” represents the NetCDF file describing the aerodynamic roughness length in May 2010.",
+            "east": 180.0,
+            "west": 180.0,
+            "south": 90.0,
+            "north": 90.0,
+            "startTime": "2010-01-01 14:39:28",
+            "endTime": "2020-12-31 14:39:28",
+            "fileSize": 95428943.0,
+            "cstr": "18406.11.Terre.tpdc.300182",
+            "doi": "10.11888/Terre.tpdc.300182",
+            "dataFormat": null,
+            "license": ""
+        },
+        "authorList": [
+            {
+                "nameEn": "TANG Ronglin",
+                "unitEn": "Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences"
+            },
+            {
+                "nameEn": "PENG Zhong",
+                "unitEn": "Institute of Geographic Sciences and Natural Resources Research, Chinese Academy of Sciences"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleEn": "Global estimates of 500 m daily aerodynamic roughness length from MODIS data",
+                "referenceEn": "Peng, Z., Tang, R., Jiang, Y., Liu, M., & Li, Z. (2022). Global estimates of 500 m daily aerodynamic roughness length from MODIS data. ISPRS Journal of Photogrammetry and     Remote Sensing, 183, 336-351. DOI: 10.1016/j.isprsjprs.2021.11.015"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameEn": "Solid earth"
+            },
+            {
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameEn": "Land Surface Parameter"
+            },
+            {
+                "nameEn": "Surface Roughness"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordEn": "globe"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordEn": "2010-2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleEn": "National Key Research and Development Program of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Aerodynamic roughness length (z0m), a virtual height (above zero plane displacement height) at which the theoretical wind speed becomes zero at neutral atmospheric conditions, is a key parameter in the characterization of surface aerodynamic resistance in many surface and climate-related process models and thus significantly influences the exchange rate of turbulent energy, water, and momentum between land and atmosphere. Accurate estimates of z0m with high spatio-temporal resolution at regional and global scale could greatly benefit the improvement of the simulation of land–atmosphere interactions, the development of high spatio-temporal resolution land surface/earth system models, and the better understanding of the Earth-Mankind in the past, nowadays, and future. Over the past decades, substantial physical and empirical methods have been developed to parameterize z0m for different land cover types at different scales. The typical physical method is to deduce z0m by applying logarithmic wind profile equation with meteorological measurements at different levels or by numerically solving the turbulent transfer model. This method is advantageous for its physical basis and spatio-temporal consistency of the z0m estimates, but may be only applicable at restricted sites, largely subject to the uncertainties of involved numerous empirically determined parameters, or almost impossible to accurately estimate the z0m magnitude at regional scale, mesoscale and global scale."
+            ],
+            "research objective": [
+                "Here we presented a practical method for global estimates of 500 m daily z0m with a combination of machine learning techniques, wind profile equation, observations from 273 sites and MODIS remote sensing data."
+            ],
+            "challenges": [],
+            "methods": [
+                "To this end, observations at 273 sites from the AmeriFlux network (2000 – 2020), FLUXNET network (2000 – 2014) and National Tibetan Plateau/Third Pole Environment Data Center (NTPDC, 2012 – 2019) worldwide are collected, and three machine learning models, including random forest, deep neural network, and convolutional neural network, are constructed. We produce the global 500 m z0m products in 2019 and compare the differences of z0m between machine learning model, ERA5 and CFSv2."
+            ],
+            "dataset": [
+                "Ground-based observations from 1 March 2000 to December 2020 were collected at 464 sites covering 16 land cover types and a variety of climate regimes from three flux networks, namely 304 sites from the AmeriFlux network (2000 – 2020), 212 sites from the FLUXNET network (2000 – 2014) and 34 sites from the National Tibetan Plateau/Third Pole Environment Data Center (NTPDC, 2012 – 2019). Remote sensing datasets used in this study include the MODIS/Terra 16-Day 500 m Vegetation Indices (MOD13A1), the MODIS/Terra + Aqua yearly 500 m Land Cover Type product (MCD12Q1), the MODIS/Terra + Aqua 4-Day 500 m Leaf Area Index/Fraction of Photosynthetically Active Radiation product (MCD15A3H), the MODIS/Terra + Aqua daily 500 m Nadir BRDF-Adjusted Reflectance (NBAR, MCD43A4), the MODIS/Terra yearly 250 m Vegetation Continuous Fields products (MOD44B) at global scale from March 2000 to December 2020 and the Multi-Error-Removed Improved-Terrain (MERIT) 90 m Digital Elevation Model (DEM) product."
+            ],
+            "findings": [
+                "Results showed that the random forest (RF) model outperformed the deep neural network (DNN) and convolutional neural network (CNN) models, and it could well reproduce the magnitude and temporal variability of daily z0m at almost all sites for all land cover types. In the validation of the RF-estimated daily z0m with the in-situ observations, the root mean square error (RMSE) varied between 0.02 m and 0.09 m, the mean absolute error (MAE) varied between 0.01 m and 0.05 m and the coefficient of determination (R2) was 1 for medium-to-high canopy shrublands, savannas and forests; for short-canopy croplands, grasslands and wetlands, the RMSE and MAE were 0.02 m and 0.01 m, respectively, and the R2 varied between 0.94 and 1. Compared to the Climate Forecast System Version 2 (CFSv2, 0.3◦/monthly) and ECMWF Reanalysis v5 (ERA5, 0.25◦/monthly) products in 2019, the RF-estimated z0m was found to have the similar global spatial pattern but significantly larger temporal variability, and it also showed a higher and lower global mean of z0m over forests and non-forests, respectively. The RF-estimated z0m displayed a higher temporal variability but a similar global spatial pattern of this variability compared to the CFSv2, whereas the ERA5 z0m product exhibited almost no temporal variability except for grasslands and croplands."
+            ]
+        }
+    ],
+    "query": [
+        {
+            "Verification": [
+                {
+                    "Question": "Is the random forest algorithm used in estimating aerodynamic roughness length considered effective in reproducing both magnitude and temporal variability across different land cover types?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Can the ground-based observations from AmeriFlux, FLUXNET, and National Tibetan Plateau/Third Pole Environment Data Center be used to validate estimates of aerodynamic roughness length at a global scale?",
+                    "Answer": "Yes",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Disjunctive": [
+                {
+                    "Question": "Are data collection methods for estimating aerodynamic roughness length primarily based on ground-based observations, remote sensing data, or machine learning models?",
+                    "Answer": "ground-based observations, remote sensing data, machine learning models",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "Which machine learning model is found to be more accurate for estimating aerodynamic roughness length: random forest, deep neural network, or convolutional neural network?",
+                    "Answer": "random forest",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Is the primary challenge in parameterizing aerodynamic roughness length related to physical methods, empirical methods, or machine learning techniques?",
+                    "Answer": "physical methods",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Concept Completion": [
+                {
+                    "Question": "Where were the ground-based observations for estimating aerodynamic roughness length collected?",
+                    "Answer": "464 sites worldwide",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "When were the remote sensing datasets used in estimating aerodynamic roughness length collected?",
+                    "Answer": "March 2000 to December 2020",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Example": [
+                {
+                    "Question": "What is an example of a challenge faced when estimating aerodynamic roughness length (z0m) at a regional or global scale?",
+                    "Answer": "One challenge in estimating aerodynamic roughness length (z0m) at regional or global scales is the applicability of physical methods, which may be restricted to specific sites and subject to uncertainties from empirically determined parameters, making it difficult to accurately estimate z0m magnitude across large scales.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Feature Specification": [
+                {
+                    "Question": "What are the essential properties and characteristics of the machine learning models used in estimating aerodynamic roughness length (z0m)?",
+                    "Answer": "random forest, deep neural network, convolutional neural network, trained with observations from flux networks and MODIS remote sensing data, global 500 m z0m products, superior performance in reproducing magnitude and temporal variability of daily z0m across different land cover types",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Quantification": [
+                {
+                    "Question": "How many land cover types are represented in the ground-based observation datasets collected from flux networks for aerodynamic roughness length estimation?",
+                    "Answer": "16",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "What is the spatial resolution of the global aerodynamic roughness length (z0m) product produced using machine learning models?",
+                    "Answer": "500 m",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "Over how many years were ground-based observations collected from the AmeriFlux network to support aerodynamic roughness length estimation?",
+                    "Answer": "20 years",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Definition": [
+                {
+                    "Question": "What is aerodynamic roughness length (z0m) and why is it significant in surface and climate-related process models?",
+                    "Answer": "Aerodynamic roughness length (z0m) is a virtual height (above zero plane displacement height) at which the theoretical wind speed becomes zero under neutral atmospheric conditions. It is a key parameter in the characterization of surface aerodynamic resistance in many surface and climate-related process models and significantly influences the exchange rate of turbulent energy, water, and momentum between land and atmosphere.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What are some methods used to estimate aerodynamic roughness length (z0m) at different scales?",
+                    "Answer": "Some methods used to estimate aerodynamic roughness length (z0m) include physical methods that deduce z0m by applying the logarithmic wind profile equation with meteorological measurements at different levels or numerically solving the turbulent transfer model. These methods are advantageous for their physical basis and spatio-temporal consistency but may be limited to restricted sites and subject to uncertainties in numerous empirically determined parameters.",
+                    "Level": "C1(Remembering)"
+                }
+            ]
+        },
+        {
+            "Comparison": [
+                {
+                    "Question": "How does the use of machine learning models for estimating aerodynamic roughness length compare to traditional physical methods in terms of accuracy and applicability across different land cover types?",
+                    "Answer": "Machine learning models, such as random forest, deep neural network, and convolutional neural network, have been applied to estimate aerodynamic roughness length and have shown to outperform traditional methods like the logarithmic wind profile equation. The random forest model, in particular, demonstrated high accuracy with a lower RMSE and MAE across various land cover types compared to ERA5 and CFSv2 products, indicating better applicability and higher temporal variability in its estimates.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Interpretation": [
+                {
+                    "Question": "How can machine learning techniques aid in interpreting the spatio-temporal patterns observed in aerodynamic roughness length data?",
+                    "Answer": "Machine learning techniques, such as random forest, deep neural network, and convolutional neural network, can be used to analyze and interpret the spatio-temporal patterns of aerodynamic roughness length (z0m) by effectively handling complex datasets from diverse sources like AmeriFlux, FLUXNET, and remote sensing data. These models can capture the variability across different land cover types and climatic conditions, producing estimates that reflect both the magnitude and temporal variability of z0m at regional and global scales.",
+                    "Level": "C2(Understanding)"
+                },
+                {
+                    "Question": "What underlying factors might contribute to differences in temporal variability of aerodynamic roughness length across various land cover types?",
+                    "Answer": "Differences in temporal variability of aerodynamic roughness length (z0m) across land cover types can be attributed to the varying structural characteristics of vegetation, such as canopy height and density, which influence wind profiles and surface resistance. Additionally, the interactions between land surface processes and atmospheric conditions, as well as seasonal changes in vegetation cover and meteorological factors, may also contribute to these differences.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Antecedent": [
+                {
+                    "Question": "What causes the need for combining multiple remote sensing datasets and machine learning techniques in estimating surface aerodynamic roughness at a global scale?",
+                    "Answer": "The need arises from the limitations of physical methods, which can only be applied at restricted sites and are influenced by uncertainties of empirically determined parameters. Accurate and high-resolution spatio-temporal estimates of aerodynamic roughness are crucial for improving the simulation of land-atmosphere interactions and developing models, necessitating the integration of various datasets and advanced techniques.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "What factors contribute to the differences in temporal variability and global spatial patterns of aerodynamic roughness estimates when comparing machine learning models with existing reanalysis products?",
+                    "Answer": "Factors contributing to these differences include the methodologies used in data estimation, such as the random forest model's ability to capture temporal variability more effectively than reanalysis products like ERA5 and CFSv2, which might exhibit limited variability. The choice of input data and the spatial resolution of the models also play significant roles.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Causal Consequence": [
+                {
+                    "Question": "What are the potential consequences of integrating machine learning techniques with ground-based observations for estimating aerodynamic roughness length on a global scale?",
+                    "Answer": "Integrating machine learning techniques with ground-based observations can lead to more accurate global estimates of aerodynamic roughness length by effectively reproducing the magnitude and temporal variability across various land cover types. This integration helps overcome the limitations of traditional physical methods and provides high spatio-temporal resolution estimates.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Goal Orientation": [
+                {
+                    "Question": "What is the primary goal of integrating machine learning techniques with wind profile equations and remote sensing data for estimating aerodynamic roughness length?",
+                    "Answer": "The primary goal is to provide global estimates of aerodynamic roughness length (z0m) with high spatio-temporal resolution, which can enhance the simulation of land–atmosphere interactions and improve land surface/earth system models.",
+                    "Level": "C2(Understanding)"
+                }
+            ]
+        },
+        {
+            "Instrumental/Procedural": [
+                {
+                    "Question": "How can machine learning techniques be employed to estimate aerodynamic roughness length at a global scale, and what are the specific procedural steps involved in integrating ground-based observations with remote sensing data?",
+                    "Answer": "Machine learning techniques, such as random forest, deep neural network, and convolutional neural network models, can be used to estimate aerodynamic roughness length (z0m) at a global scale by integrating ground-based observations from networks like AmeriFlux, FLUXNET, and the National Tibetan Plateau/Third Pole Environment Data Center with remote sensing datasets such as MODIS products. The process involves collecting observations from various sites, constructing models, and comparing the results with existing datasets like ERA5 and CFSv2 to validate the estimates.",
+                    "Level": "C3(Applying)"
+                },
+                {
+                    "Question": "What are the methodological steps for validating aerodynamic roughness length estimates derived from machine learning models using in-situ observations, and how are these steps adapted to different land cover types?",
+                    "Answer": "The methodological steps for validating aerodynamic roughness length estimates involve comparing the machine learning model outputs with in-situ observations from networks like AmeriFlux and FLUXNET. This validation process includes calculating metrics such as root mean square error (RMSE), mean absolute error (MAE), and the coefficient of determination (R2) across different land cover types. The models are tuned to reproduce the magnitude and temporal variability of daily z0m for each land cover type, ensuring accuracy and consistency.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Enablement": [
+                {
+                    "Question": "What machine learning techniques enable the estimation of aerodynamic roughness length at a global scale?",
+                    "Answer": "Machine learning techniques such as random forest, deep neural network, and convolutional neural network are used to estimate aerodynamic roughness length at a global scale by combining wind profile equations, site observations, and MODIS remote sensing data.",
+                    "Level": "C1(Remembering)"
+                },
+                {
+                    "Question": "How does the integration of ground-based observations from multiple networks enable accurate validation of aerodynamic roughness length estimates?",
+                    "Answer": "The integration of ground-based observations from networks like AmeriFlux, FLUXNET, and the National Tibetan Plateau/Third Pole Environment Data Center enables accurate validation by providing a diverse set of data points covering various land cover types and climate regimes, which helps in assessing the consistency and accuracy of estimates with in-situ observations.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Expectation": [
+                {
+                    "Question": "What are the expected advantages of using a combination of machine learning techniques and remote sensing data in estimating aerodynamic roughness length at a global scale?",
+                    "Answer": "The combination of machine learning techniques and remote sensing data allows for high spatio-temporal resolution estimates of aerodynamic roughness length, which can significantly improve the simulation of land-atmosphere interactions and the development of high-resolution land surface/earth system models. This approach also provides a practical way to produce global-scale estimates, overcoming the limitations of physical methods that are often restricted to specific sites.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "What challenges are anticipated when attempting to parameterize aerodynamic roughness length using physical methods at a regional or global scale?",
+                    "Answer": "Parameterizing aerodynamic roughness length using physical methods at a regional or global scale is challenging due to the need for meteorological measurements at different levels, which may not be available everywhere. Additionally, the method is subject to uncertainties from numerous empirically determined parameters, making it almost impossible to accurately estimate aerodynamic roughness length consistently at larger scales.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Judgmental": [
+                {
+                    "Question": "What is your evaluation of the effectiveness of using machine learning techniques for estimating aerodynamic roughness length globally?",
+                    "Answer": "The use of machine learning techniques, such as random forest, deep neural network, and convolutional neural network, in estimating aerodynamic roughness length globally is evaluated positively. The random forest model, in particular, outperformed other models and effectively reproduced the magnitude and temporal variability of daily aerodynamic roughness length across diverse sites and land cover types. This suggests that machine learning can provide reliable estimates and capture temporal variability better than traditional products like ERA5 and CFSv2.",
+                    "Level": "C5(Evaluating)"
+                }
+            ]
+        },
+        {
+            "Assertion": [
+                {
+                    "Question": "I can't figure out how ground-based observations are integrated with remote sensing data to improve the accuracy of aerodynamic roughness length estimates.",
+                    "Answer": "Ground-based observations collected from networks like AmeriFlux, FLUXNET, and the National Tibetan Plateau/Third Pole Environment Data Center are combined with remote sensing datasets from MODIS, such as vegetation indices, land cover type, and leaf area index, to enhance the estimation of aerodynamic roughness length. This integration is facilitated by using machine learning models that leverage the detailed ground observations and broad spatial coverage of remote sensing data.",
+                    "Level": "C4(Analyzing)"
+                },
+                {
+                    "Question": "I'm not sure why different machine learning models show varied performance in estimating aerodynamic roughness length.",
+                    "Answer": "Different machine learning models, such as random forest, deep neural network, and convolutional neural network, have distinct architectures and ways of learning from data, which can lead to variations in their performance. For example, the random forest model was found to outperform the others, showing better reproduction of the magnitude and temporal variability of daily aerodynamic roughness length across various land cover types and climate regimes.",
+                    "Level": "C4(Analyzing)"
+                }
+            ]
+        },
+        {
+            "Request/Directive": [
+                {
+                    "Question": "Please analyze the effectiveness of various machine learning models in estimating aerodynamic roughness length (z0m) using available datasets.",
+                    "Answer": "The analysis showed that the random forest (RF) model outperformed deep neural network (DNN) and convolutional neural network (CNN) models. The RF model successfully reproduced the magnitude and temporal variability of daily z0m across different land cover types. Validation showed a root mean square error (RMSE) ranging between 0.02 m and 0.09 m, a mean absolute error (MAE) between 0.01 m and 0.05 m, and a coefficient of determination (R2) of 1 for medium-to-high canopy areas.",
+                    "Level": "C5(Evaluating)"
+                },
+                {
+                    "Question": "Please explore potential challenges in parameterizing aerodynamic roughness length (z0m) for diverse land cover types using empirical and physical methods.",
+                    "Answer": "A challenge in parameterizing aerodynamic roughness length (z0m) using empirical and physical methods is their limited applicability to specific sites due to the uncertainties in empirically determined parameters. Physical methods, though grounded in theory, struggle to provide accurate z0m estimates at regional or global scales due to these uncertainties.",
+                    "Level": "C6(Creating)"
+                },
+                {
+                    "Question": "Please identify and discuss potential datasets and data collection methods that could enhance the accuracy of aerodynamic roughness length (z0m) estimates.",
+                    "Answer": "Ground-based observations from 464 sites, including the AmeriFlux network, FLUXNET network, and National Tibetan Plateau/Third Pole Environment Data Center, along with remote sensing datasets such as MODIS products and the Multi-Error-Removed Improved-Terrain (MERIT) 90 m Digital Elevation Model, could enhance z0m estimates. These datasets provide a range of land cover types and climate regimes, supporting diverse data collection methods.",
+                    "Level": "C6(Creating)"
+                }
+            ]
+        }
+    ]
+}

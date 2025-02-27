@@ -23,11 +23,6 @@ The repository is organized into four main directories:
 ## How to Use
 
 1. **Clone the Repository:**
-
-    bash
-
-    复制
-
     `gitclonehttps://github.com/your_username/ScIRGen-Geo.gitcdScIRGen-Geo`
 2. **Select the Appropriate Data Split:**  
 

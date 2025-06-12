@@ -1,198 +1,198 @@
 {
-    "id": "71ab4677-b66c-4fd1-a004-b2a541c4d5bf",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "1-km monthly mean temperature dataset for china (1901-2023)",
-            "titleCn": "中国1km分辨率逐月平均气温数据集（1901-2023）",
-            "description": "This dataset includes the monthly mean temperature data with 0.0083333 arc degree (~1km)  for China from Jan 1901 to Dec 2023. The data form belongs to NETCDF, namely .nc file. The unit of the data is 0.1 ℃. The dataset was spatially downscaled from CRU TS v4.02 with WorldClim datasets based on Delta downscaling method. The dataset was evaluated by 496 national weather stations across China, and the evaluation indicated that the downscaled dataset is reliable for the investigations related to climate change across China. The dataset covers the main land area of China, including Hong Kong, Macao and Taiwan regions, and excluding islands and reefs in South China Sea. WGS84 is recommended for data coordinate system.",
-            "descriptionCn": "该数据为中国逐月平均温度数据，空间分辨率为0.0083333°（约1km），时间为1901.1-2023.12。数据格式为NETCDF，即.nc格式。数据单位为0.1 ℃。该数据集是根据CRU发布的全球0.5°气候数据集以及WorldClim发布的全球高分辨率气候数据集，通过Delta空间降尺度方案在中国降尺度生成的。并且，使用496个独立气象观测点数据进行验证，验证结果可信。本数据集包含的地理空间范围是全国主要陆地（包含港澳台地区），不含南海岛礁等区域。nc数据可使用ArcMAP软件打开制图; 并可用Matlab软件进行提取处理，Matlab发布了读入与存储nc文件的函数，读取函数为ncread，切换到nc文件存储文件夹，语句表达为：ncread (‘XXX.nc’,‘var’, [i j t],[leni lenj lent])，其中XXX.nc为文件名，为字符串需要’’；var是从XXX.nc中读取的变量名，为字符串需要’’；i、j、t分别为读取数据的起始行、列、时间，leni、lenj、lent i分别为在行、列、时间维度上读取的长度。这样，研究区内任何地区、任何时间段均可用此函数读取。Matlab的help里面有很多关于nc数据的命令，可查看。数据坐标系统建议使用WGS84。 ",
-            "instructions": "Stored in NC format, the file name is \"tmp_yyyy. nc\", where yyyy is the year. Each NC file contains 12 time points, representing January to December. To reduce storage capacity, all files have been compressed and stored, such as tmp_yyyy.rar. The nc format can be opened using the ArcGIS multidimensional data tool, or Matlab, R, and so on. Note: Each NC file has 12 layers. If opened in ArcMap, you can select the time dimension. Selecting 1 represents January, selecting 7 represents July, and so on; If the time dimension is not selected by default, when the data is opened, it defaults to the first layer, which is January. The nc file can be opened in the Make NetCDF Raster Layer tool under the Multidimensional Tools in the ArcMap toolbox. After the dialog box opens, you can select time under Dimension Values (optional), and click on the value to see a list of values 1-12. Select one of the months to complete the process; Alternatively, after opening the nc file by default, the first layer (January) will be displayed. Then, under the layer properties, click on the NETCDF property card and select the value list for the time dimension, which will show 1-12. Choose one of the months to complete the process. If performing grid calculations and other operations in ArcMap, it is recommended to export as a grid data entity and store it on the hard drive after selecting the month, as the loaded nc data is still a temporary data in memory. After exporting as a raster data entity, it is recommended to provide the WGS84 coordinate system before starting the analysis operation. When giving WGS84, find the exported raster data entity in the Catalog, click on its properties, find the Spatial Reference property, click on Edit to open the coordinate system option, find World in Geographic Coordinate Systems (i.e. geodetic coordinate system), and select WGS 1984 under it. Afterwards, the projection system and other operations can be assigned, if necessary.",
-            "instructionsCn": "以nc格式为存储，文件名称为“tmp_yyyy.nc”，其中yyyy为年份，每个nc文件包含12个时间点，代表1-12月。为减少存储量，均已压缩文件存放，如tmp_yyyy.rar。nc格式可用arcmap多维数据工具打开，或者Matlab、R等等。注意：每个nc文件有12个图层，如在ArcMap中打开，是可以选择time维度，选择1代表1月，选择7则代表7月，依次类推；如果默认不选择time维度，打开数据后则默认为第一个图层，也就是1月。nc文件可以在ArcMap工具箱Multidimension Tools下面的Make NetCDF Raster Layer工具打开，对话框打开后，可在Dimension Values (optional)下选择time，其value数值点开可看到数值列表1-12，选择其中一个月份即可；或者默认打开nc文件后，显示第一个图层（1月份），然后在图层属性下点击NETCDF属性卡，选择time维度的value列表，可以看到1-12，选择其中一个月份即可。如在ArcMap中进行栅格计算等操作，建议在选择好月份之后，导出为一个栅格数据实体存于硬盘，因为加载的nc数据仍为一个临时数据在内存中。导出为栅格数据实体后，建议给WGS84坐标系统，然后开始操作分析。给WGS84时，在Catalog中找到导出的栅格数据实体，点开其属性，找到Spatial Reference属性，点开Edit打开坐标系统选项，在Geographic Coordinate Systems（也就是大地坐标系统）找到World，选择其下WGS 1984。其后才可以赋予投影系统等等操作，如需要的话。",
-            "east": 136.196045022846,
-            "west": 72.1960450229045,
-            "south": 16.2504610568287,
-            "north": 55.558794390126,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 29440014553.0,
-            "cstr": "18406.11.Meteoro.tpdc.270961",
-            "doi": "10.11888/Meteoro.tpdc.270961",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "彭守璋",
-                "nameEn": "PENG Shouzhang",
-                "unitEn": "",
-                "unitCn": "西北农林科技大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "ssessment of climate change trends over the Loess Plateau in China from 1901 to 2100",
-                "referenceCn": null,
-                "referenceEn": "Peng, S. Z., Gang, C. , Cao, Y. , & Chen, Y. . (2017). Assessment of climate change trends over the loess plateau in china from 1901 to 2100. International Journal of Climatology."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100",
-                "referenceCn": null,
-                "referenceEn": "Peng, S.Z., Ding, Y.X., Wen, Z.M., Chen, Y.M., Cao, Y., & Ren, J.Y. (2017). Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100. Agricultural and Forest Meteorology, 233, 183-194. https://doi.org/10.1016/j.agrformet.2016.11.129"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "patiotemporal trends and attribution of drought across China from 1901–2100.",
-                "referenceCn": null,
-                "referenceEn": "Ding, Y.X., & Peng, S.Z. (2020). Spatiotemporal trends and attribution of drought across China from 1901–2100. Sustainability, 12(2), 477."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "1 km monthly temperature and precipitation dataset for China from 1901 to 2017",
-                "referenceCn": null,
-                "referenceEn": "Peng, S.Z., Ding, Y.X., Liu, W.Z., & Li, Z. (2019). 1 km monthly temperature and precipitation dataset for China from 1901 to 2017. Earth System Science Data, 11, 1931–1946. https://doi.org/10.5194/essd-11-1931-2019"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "平均气温",
-                "nameEn": "Mean temperature"
-            },
-            {
-                "nameCn": "温度",
-                "nameEn": "Temperature"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1901-2023",
-                "keywordEn": "1901-2023",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "the Second Tibetan Plateau Scientific Expedition and Research Program"
-            },
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program"
-            },
-            {
-                "titleCn": "变化环境下黄河中游生态水文模型及洪旱灾害风险评估（U2243226）",
-                "titleEn": "Ecological hydrological model and flood and drought disaster risk assessment in the middle reaches of the Yellow River under changing environment"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
-            }
-        ]
+  "id": "71ab4677-b66c-4fd1-a004-b2a541c4d5bf",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "1-km monthly mean temperature dataset for china (1901-2023)",
+      "titleCn": "中国1km分辨率逐月平均气温数据集（1901-2023）",
+      "description": "This dataset includes the monthly mean temperature data with 0.0083333 arc degree (~1km)  for China from Jan 1901 to Dec 2023. The data form belongs to NETCDF, namely .nc file. The unit of the data is 0.1 ℃. The dataset was spatially downscaled from CRU TS v4.02 with WorldClim datasets based on Delta downscaling method. The dataset was evaluated by 496 national weather stations across China, and the evaluation indicated that the downscaled dataset is reliable for the investigations related to climate change across China. The dataset covers the main land area of China, including Hong Kong, Macao and Taiwan regions, and excluding islands and reefs in South China Sea. WGS84 is recommended for data coordinate system.",
+      "descriptionCn": "该数据为中国逐月平均温度数据，空间分辨率为0.0083333°（约1km），时间为1901.1-2023.12。数据格式为NETCDF，即.nc格式。数据单位为0.1 ℃。该数据集是根据CRU发布的全球0.5°气候数据集以及WorldClim发布的全球高分辨率气候数据集，通过Delta空间降尺度方案在中国降尺度生成的。并且，使用496个独立气象观测点数据进行验证，验证结果可信。本数据集包含的地理空间范围是全国主要陆地（包含港澳台地区），不含南海岛礁等区域。nc数据可使用ArcMAP软件打开制图; 并可用Matlab软件进行提取处理，Matlab发布了读入与存储nc文件的函数，读取函数为ncread，切换到nc文件存储文件夹，语句表达为：ncread (‘XXX.nc’,‘var’, [i j t],[leni lenj lent])，其中XXX.nc为文件名，为字符串需要’’；var是从XXX.nc中读取的变量名，为字符串需要’’；i、j、t分别为读取数据的起始行、列、时间，leni、lenj、lent i分别为在行、列、时间维度上读取的长度。这样，研究区内任何地区、任何时间段均可用此函数读取。Matlab的help里面有很多关于nc数据的命令，可查看。数据坐标系统建议使用WGS84。 ",
+      "instructions": "Stored in NC format, the file name is \"tmp_yyyy. nc\", where yyyy is the year. Each NC file contains 12 time points, representing January to December. To reduce storage capacity, all files have been compressed and stored, such as tmp_yyyy.rar. The nc format can be opened using the ArcGIS multidimensional data tool, or Matlab, R, and so on. Note: Each NC file has 12 layers. If opened in ArcMap, you can select the time dimension. Selecting 1 represents January, selecting 7 represents July, and so on; If the time dimension is not selected by default, when the data is opened, it defaults to the first layer, which is January. The nc file can be opened in the Make NetCDF Raster Layer tool under the Multidimensional Tools in the ArcMap toolbox. After the dialog box opens, you can select time under Dimension Values (optional), and click on the value to see a list of values 1-12. Select one of the months to complete the process; Alternatively, after opening the nc file by default, the first layer (January) will be displayed. Then, under the layer properties, click on the NETCDF property card and select the value list for the time dimension, which will show 1-12. Choose one of the months to complete the process. If performing grid calculations and other operations in ArcMap, it is recommended to export as a grid data entity and store it on the hard drive after selecting the month, as the loaded nc data is still a temporary data in memory. After exporting as a raster data entity, it is recommended to provide the WGS84 coordinate system before starting the analysis operation. When giving WGS84, find the exported raster data entity in the Catalog, click on its properties, find the Spatial Reference property, click on Edit to open the coordinate system option, find World in Geographic Coordinate Systems (i.e. geodetic coordinate system), and select WGS 1984 under it. Afterwards, the projection system and other operations can be assigned, if necessary.",
+      "instructionsCn": "以nc格式为存储，文件名称为“tmp_yyyy.nc”，其中yyyy为年份，每个nc文件包含12个时间点，代表1-12月。为减少存储量，均已压缩文件存放，如tmp_yyyy.rar。nc格式可用arcmap多维数据工具打开，或者Matlab、R等等。注意：每个nc文件有12个图层，如在ArcMap中打开，是可以选择time维度，选择1代表1月，选择7则代表7月，依次类推；如果默认不选择time维度，打开数据后则默认为第一个图层，也就是1月。nc文件可以在ArcMap工具箱Multidimension Tools下面的Make NetCDF Raster Layer工具打开，对话框打开后，可在Dimension Values (optional)下选择time，其value数值点开可看到数值列表1-12，选择其中一个月份即可；或者默认打开nc文件后，显示第一个图层（1月份），然后在图层属性下点击NETCDF属性卡，选择time维度的value列表，可以看到1-12，选择其中一个月份即可。如在ArcMap中进行栅格计算等操作，建议在选择好月份之后，导出为一个栅格数据实体存于硬盘，因为加载的nc数据仍为一个临时数据在内存中。导出为栅格数据实体后，建议给WGS84坐标系统，然后开始操作分析。给WGS84时，在Catalog中找到导出的栅格数据实体，点开其属性，找到Spatial Reference属性，点开Edit打开坐标系统选项，在Geographic Coordinate Systems（也就是大地坐标系统）找到World，选择其下WGS 1984。其后才可以赋予投影系统等等操作，如需要的话。",
+      "east": 136.196045022846,
+      "west": 72.1960450229045,
+      "south": 16.2504610568287,
+      "north": 55.558794390126,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 29440014553.0,
+      "cstr": "18406.11.Meteoro.tpdc.270961",
+      "doi": "10.11888/Meteoro.tpdc.270961",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the temperature data collected for China from 1901 to 2023?",
-                "QuestionCn": "中国从1901年到2023年收集的温度数据的空间分辨率是多少？",
-                "AnswerEn": "0.0083333°",
-                "AnswerCn": "0.0083333°",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the need for spatial downscaling in generating high-resolution temperature datasets for China?",
-                "QuestionCn": "生成中国高分辨率温度数据集时，空间下采样需求的因素有哪些？",
-                "AnswerEn": "The need for spatial downscaling arises because global climate datasets, such as those from CRU and WorldClim, are typically at a coarser resolution (0.5°) and do not capture the finer spatial variations in temperature at a local level. To generate a high-resolution dataset with approximately 1km resolution, a Delta spatial downscaling method was used, which allows for more detailed representation of temperature variations across China's diverse geographical regions.",
-                "AnswerCn": "空间下采样的需求源于全球气候数据集，如CRU和WorldClim，通常具有较粗的分辨率（0.5°），无法捕捉到局部温度的细微空间变化。为了生成一个约1公里分辨率的高分辨率数据集，采用了Delta空间下采样方法，这使得中国多样地理区域的温度变化得以更详细地表示。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary objective of developing a high-resolution temperature dataset for China with a spatial resolution of 1km over an extended period from 1901 to 2023?",
-                "QuestionCn": "开发一个高分辨率的中国温度数据集，空间分辨率为1公里，覆盖1901年至2023年的长期数据集的主要目标是什么？",
-                "AnswerEn": "The primary objective of developing a high-resolution temperature dataset for China with a spatial resolution of 1km over an extended period from 1901 to 2023 is to provide detailed climate information that can be used for various research and practical applications. This includes understanding climate change patterns, supporting agricultural planning, and aiding in ecological and environmental management. The dataset aims to enhance the resolution of existing global datasets through spatial downscaling techniques, making the data more applicable for localized studies and decision-making processes.",
-                "AnswerCn": "开发一个高分辨率的中国温度数据集，空间分辨率为1公里，覆盖1901年至2023年的长期数据，主要目的是提供详细的气候信息，以便用于各种研究和实际应用。这包括理解气候变化模式、支持农业规划以及协助生态和环境管理。该数据集旨在通过空间下采样技术提高现有全球数据集的分辨率，使数据更适用于地方性研究和决策过程。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in validating the accuracy of a high-resolution climate dataset using independent meteorological observation points in the context of temperature data collection in China?",
-                "QuestionCn": "在中国的温度数据收集背景下，使用独立气象观测点验证高分辨率气候数据集的准确性涉及以下程序步骤：\n\n1. **数据收集**：收集高分辨率气候数据集和独立气象观测点的温度数据。\n\n2. **数据预处理**：对收集到的数据进行清洗和预处理，包括处理缺失值、异常值和数据格式统一。\n\n3. **空间匹配**：将高分辨率气候数据与独立观测点的数据进行空间匹配，确保两者在相同的地理区域内进行比较。\n\n4. **时间匹配**：确保高分辨率气候数据和独立观测点数据在时间上对齐，通常需要选择相同的时间段进行比较。\n\n5. **统计分析**：使用统计方法（如均方根误差、相关系数、偏差分析等）评估高分辨率气候数据与独立观测点数据之间的差异和一致性。\n\n6. **误差评估**：分析和评估高分辨率气候数据的系统误差和随机误差，识别潜在的偏差来源。\n\n7. **结果验证**：根据统计分析的结果，验证高分辨率气候数据集的准确性，并提出改进建议。\n\n8. **报告撰写**：撰写验证报告，详细记录验证过程、结果和结论，为后续研究和应用提供参考。",
-                "AnswerEn": "The validation of a high-resolution climate dataset is conducted using 496 independent meteorological observation points to verify the accuracy of the data. These points provide a means to compare and ensure the reliability of the temperature data collected.",
-                "AnswerCn": "高分辨率气候数据集的验证是通过使用496个独立的气象观测点来进行的，以验证数据的准确性。这些观测点提供了一种比较和确保所收集温度数据可靠性的方法。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methods and technologies enable the creation of a high-resolution temperature dataset with monthly averages spanning over a century in China?",
-                "QuestionCn": "哪些方法和技术能够在中国创建一个跨越一个世纪的高分辨率温度数据集，包含每月平均值？",
-                "AnswerEn": "The creation of a high-resolution temperature dataset with monthly averages spanning over a century in China is enabled by using Delta spatial downscaling techniques based on global climate datasets from CRU and WorldClim. The process involves using a spatial resolution of 0.0083333° (approximately 1 km) and validating the results with data from 496 independent meteorological observation points across China. The data is stored in NETCDF format, which can be accessed and processed using software like ArcMAP and Matlab.",
-                "AnswerCn": "通过使用基于CRU和WorldClim的全球气候数据集的Delta空间下采样技术，创建了一个涵盖中国超过一个世纪的高分辨率温度数据集，包含每月平均值。该过程使用的空间分辨率为0.0083333°（约1公里），并通过与中国496个独立气象观测点的数据进行验证。数据以NETCDF格式存储，可以使用ArcMAP和Matlab等软件进行访问和处理。",
-                "Level": "C6(Creating)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "彭守璋",
+        "nameEn": "PENG Shouzhang",
+        "unitEn": "",
+        "unitCn": "西北农林科技大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "ssessment of climate change trends over the Loess Plateau in China from 1901 to 2100",
+        "referenceCn": null,
+        "referenceEn": "Peng, S. Z., Gang, C. , Cao, Y. , & Chen, Y. . (2017). Assessment of climate change trends over the loess plateau in china from 1901 to 2100. International Journal of Climatology."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100",
+        "referenceCn": null,
+        "referenceEn": "Peng, S.Z., Ding, Y.X., Wen, Z.M., Chen, Y.M., Cao, Y., & Ren, J.Y. (2017). Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100. Agricultural and Forest Meteorology, 233, 183-194. https://doi.org/10.1016/j.agrformet.2016.11.129"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "patiotemporal trends and attribution of drought across China from 1901–2100.",
+        "referenceCn": null,
+        "referenceEn": "Ding, Y.X., & Peng, S.Z. (2020). Spatiotemporal trends and attribution of drought across China from 1901–2100. Sustainability, 12(2), 477."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "1 km monthly temperature and precipitation dataset for China from 1901 to 2017",
+        "referenceCn": null,
+        "referenceEn": "Peng, S.Z., Ding, Y.X., Liu, W.Z., & Li, Z. (2019). 1 km monthly temperature and precipitation dataset for China from 1901 to 2017. Earth System Science Data, 11, 1931–1946. https://doi.org/10.5194/essd-11-1931-2019"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "平均气温",
+        "nameEn": "Mean temperature"
+      },
+      {
+        "nameCn": "温度",
+        "nameEn": "Temperature"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1901-2023",
+        "keywordEn": "1901-2023",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "the Second Tibetan Plateau Scientific Expedition and Research Program"
+      },
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program"
+      },
+      {
+        "titleCn": "变化环境下黄河中游生态水文模型及洪旱灾害风险评估（U2243226）",
+        "titleEn": "Ecological hydrological model and flood and drought disaster risk assessment in the middle reaches of the Yellow River under changing environment"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the temperature data collected for China from 1901 to 2023?",
+        "QuestionCn": "中国从1901年到2023年收集的温度数据的空间分辨率是多少？",
+        "AnswerEn": "0.0083333°",
+        "AnswerCn": "0.0083333°",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the need for spatial downscaling in generating high-resolution temperature datasets for China?",
+        "QuestionCn": "生成中国高分辨率温度数据集时，空间下采样需求的因素有哪些？",
+        "AnswerEn": "The need for spatial downscaling arises because global climate datasets, such as those from CRU and WorldClim, are typically at a coarser resolution (0.5°) and do not capture the finer spatial variations in temperature at a local level. To generate a high-resolution dataset with approximately 1km resolution, a Delta spatial downscaling method was used, which allows for more detailed representation of temperature variations across China's diverse geographical regions.",
+        "AnswerCn": "空间下采样的需求源于全球气候数据集，如CRU和WorldClim，通常具有较粗的分辨率（0.5°），无法捕捉到局部温度的细微空间变化。为了生成一个约1公里分辨率的高分辨率数据集，采用了Delta空间下采样方法，这使得中国多样地理区域的温度变化得以更详细地表示。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary objective of developing a high-resolution temperature dataset for China with a spatial resolution of 1km over an extended period from 1901 to 2023?",
+        "QuestionCn": "开发一个高分辨率的中国温度数据集，空间分辨率为1公里，覆盖1901年至2023年的长期数据集的主要目标是什么？",
+        "AnswerEn": "The primary objective of developing a high-resolution temperature dataset for China with a spatial resolution of 1km over an extended period from 1901 to 2023 is to provide detailed climate information that can be used for various research and practical applications. This includes understanding climate change patterns, supporting agricultural planning, and aiding in ecological and environmental management. The dataset aims to enhance the resolution of existing global datasets through spatial downscaling techniques, making the data more applicable for localized studies and decision-making processes.",
+        "AnswerCn": "开发一个高分辨率的中国温度数据集，空间分辨率为1公里，覆盖1901年至2023年的长期数据，主要目的是提供详细的气候信息，以便用于各种研究和实际应用。这包括理解气候变化模式、支持农业规划以及协助生态和环境管理。该数据集旨在通过空间下采样技术提高现有全球数据集的分辨率，使数据更适用于地方性研究和决策过程。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in validating the accuracy of a high-resolution climate dataset using independent meteorological observation points in the context of temperature data collection in China?",
+        "QuestionCn": "在中国的温度数据收集中，使用独立气象观测点验证高分辨率气候数据集准确性的程序步骤有哪些？",
+        "AnswerEn": "The validation of a high-resolution climate dataset is conducted using 496 independent meteorological observation points to verify the accuracy of the data. These points provide a means to compare and ensure the reliability of the temperature data collected.",
+        "AnswerCn": "高分辨率气候数据集的验证是通过使用496个独立的气象观测点来进行的，以验证数据的准确性。这些观测点提供了一种比较和确保所收集温度数据可靠性的方法。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methods and technologies enable the creation of a high-resolution temperature dataset with monthly averages spanning over a century in China?",
+        "QuestionCn": "哪些方法和技术能够在中国创建一个跨越一个世纪的高分辨率温度数据集，包含每月平均值？",
+        "AnswerEn": "The creation of a high-resolution temperature dataset with monthly averages spanning over a century in China is enabled by using Delta spatial downscaling techniques based on global climate datasets from CRU and WorldClim. The process involves using a spatial resolution of 0.0083333° (approximately 1 km) and validating the results with data from 496 independent meteorological observation points across China. The data is stored in NETCDF format, which can be accessed and processed using software like ArcMAP and Matlab.",
+        "AnswerCn": "通过使用基于CRU和WorldClim的全球气候数据集的Delta空间下采样技术，创建了一个涵盖中国超过一个世纪的高分辨率温度数据集，包含每月平均值。该过程使用的空间分辨率为0.0083333°（约1公里），并通过与中国496个独立气象观测点的数据进行验证。数据以NETCDF格式存储，可以使用ArcMAP和Matlab等软件进行访问和处理。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

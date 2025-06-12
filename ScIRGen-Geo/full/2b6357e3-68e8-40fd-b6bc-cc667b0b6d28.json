@@ -1,630 +1,630 @@
 {
-    "id": "2b6357e3-68e8-40fd-b6bc-cc667b0b6d28",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Cosmic-ray observation system of soil moisture of Sidaoqiao Superstation, 2021)",
-            "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站宇宙射线观测系统-2021）",
-            "description": "This dataset includes data recorded by the Heihe integrated observatory network obtained from a Cosmic-ray Soil Moisture Observing System of soil moisture of Sidaoqiao Superstation from January 1 to December 31, 2021. The site (101.1374° E, 42.0012° N) was located in the Ejina Banner in Inner Mongolia Autonomous Region. The elevation is 873 m. The bottom of the probe was 0.5 m above the ground; the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, C), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour), thermal neutron counts (N2C, counts per hour), sample time of fast neutrons (N1ET, s), and sample time of thermal neutrons (N2ET, s). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Data were removed and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity was greater than 80% inside the probe box, (c) the counting data were not of one-hour duration and (d) neutron count differed from the previous value by more than 20%; 2) An air pressure correction was applied to the quality-controlled raw data according to the equation contained in the equipment manual; 3) After the quality control and corrections were applied, soil moisture was calculated using the equation in Zreda et al. (2012), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 was calibrated using the in situ observed soil moisture by SoilNET within the footprint; 4) Based on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation from the equipment manual. Moreover, suspicious data were marked in red.\nFor more information, please refer to Liu et al. (2018) (for sites information), Zhu et al. (2015) for data processing) in the Citation section.",
-            "descriptionCn": "该数据集包含了2021年1月1日至2021年12月31日黑河流域地表过程综合观测网上游阿柔超级站宇宙射线观测系统数据。站点位于内蒙古额济纳旗四道桥，下垫面是柽柳。观测点的经纬度是101.1374° E, 42.0012° N，海拔873 m。仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）、热中子数N2C（个/小时）、快中子采样时间N1ET（s）及热中子采样时间N2ET（s）。发布的数据为经过处理计算后的数据，数据表头包括：Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。剔除及缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor。\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再通过公式反求得到N0。\n黑河综合观测网或站点信息请参考Liu et al. (2018)，观测数据处理请参考Zhu et al. (2015)。",
-            "instructions": "Year+** observatory network+ site+ COSMOS",
-            "instructionsCn": "年份+**观测网+站点名称+ COSMOS",
-            "east": 101.1374,
-            "west": 101.1374,
-            "south": 42.0012,
-            "north": 42.0012,
-            "startTime": "2021-01-01 00:00:00",
-            "endTime": "2021-12-31 00:00:00",
-            "fileSize": 499126.0,
-            "cstr": "18406.11.Atmos.tpdc.272464",
-            "doi": "10.11888/Atmos.tpdc.272464",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "刘绍民",
-                "nameEn": "LIU Shaomin",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "车涛",
-                "nameEn": "CHE Tao",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "朱忠礼",
-                "nameEn": "ZHU Zhongli",
-                "unitEn": "",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "徐自为",
-                "nameEn": "XU Ziwei",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "任志国",
-                "nameEn": "REN Zhiguo",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "谭俊磊",
-                "nameEn": "TAN Junlei",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "张阳",
-                "nameEn": "ZHANG Yang",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "李新",
-                "nameEn": "LI Xin",
-                "unitEn": "",
-                "unitCn": "中国科学院青藏高原研究所"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China",
-                "referenceCn": null,
-                "referenceEn": "Liu, S., Li, X., Xu, Z., Che, T., Xiao, Q., Ma, M., Liu, Q., Jin, R., Guo, J., Wang, L., Wang, W., Qi, Y., Li, H., Xu, T., Ran, Y., Hu, X., Shi, S., Zhu, Z., Tan, J., Zhang, Y., Ren, Z. (2018). The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China. Vadose Zone Journal, 17,180072. https://doi.org/10.2136/vzj2018.04.0072."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in a typical endorheic basin",
-                "referenceCn": null,
-                "referenceEn": "Liu, S.M., Xu, Z.W., Che, T., Li, X.,  Xu, T.R.,  Ren, Z.G., Zhang, Y., Tan, J.L., Song, L.S., Zhou, J., Zhu, Z.L., Yang, X.F., Liu, R., & Ma, Y.F. (2023). A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in\na typical endorheic basin. Earth System Science Data, 15, 4959-4981."
-            },
-            {
-                "titleCn": "宇宙射线快中子法在农田土壤水分测量中的研究与应用",
-                "titleEn": null,
-                "referenceCn": "焦其顺, 朱忠礼, 刘绍民, 晋锐, 杜帆. (2013). 宇宙射线快中子法在农田土壤水分测量中的研究与应用. 地球科学进展, 28(10), 1136-1143.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
-                "referenceCn": null,
-                "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "能见度",
-                "nameEn": "Visibility"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "四道桥超级站",
-                "keywordEn": "Sidaoqiao superstation"
-            },
-            {
-                "keywordCn": "黑河流域",
-                "keywordEn": "Heihe River Basin"
-            },
-            {
-                "keywordCn": "黑河流域下游",
-                "keywordEn": "The lower reaches of the heihe river"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2021年",
-                "keywordEn": "2021",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
-                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "2b6357e3-68e8-40fd-b6bc-cc667b0b6d28",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Cosmic-ray observation system of soil moisture of Sidaoqiao Superstation, 2021)",
+      "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站宇宙射线观测系统-2021）",
+      "description": "This dataset includes data recorded by the Heihe integrated observatory network obtained from a Cosmic-ray Soil Moisture Observing System of soil moisture of Sidaoqiao Superstation from January 1 to December 31, 2021. The site (101.1374° E, 42.0012° N) was located in the Ejina Banner in Inner Mongolia Autonomous Region. The elevation is 873 m. The bottom of the probe was 0.5 m above the ground; the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, C), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour), thermal neutron counts (N2C, counts per hour), sample time of fast neutrons (N1ET, s), and sample time of thermal neutrons (N2ET, s). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Data were removed and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity was greater than 80% inside the probe box, (c) the counting data were not of one-hour duration and (d) neutron count differed from the previous value by more than 20%; 2) An air pressure correction was applied to the quality-controlled raw data according to the equation contained in the equipment manual; 3) After the quality control and corrections were applied, soil moisture was calculated using the equation in Zreda et al. (2012), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 was calibrated using the in situ observed soil moisture by SoilNET within the footprint; 4) Based on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation from the equipment manual. Moreover, suspicious data were marked in red.\nFor more information, please refer to Liu et al. (2018) (for sites information), Zhu et al. (2015) for data processing) in the Citation section.",
+      "descriptionCn": "该数据集包含了2021年1月1日至2021年12月31日黑河流域地表过程综合观测网上游阿柔超级站宇宙射线观测系统数据。站点位于内蒙古额济纳旗四道桥，下垫面是柽柳。观测点的经纬度是101.1374° E, 42.0012° N，海拔873 m。仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）、热中子数N2C（个/小时）、快中子采样时间N1ET（s）及热中子采样时间N2ET（s）。发布的数据为经过处理计算后的数据，数据表头包括：Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。剔除及缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor。\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再通过公式反求得到N0。\n黑河综合观测网或站点信息请参考Liu et al. (2018)，观测数据处理请参考Zhu et al. (2015)。",
+      "instructions": "Year+** observatory network+ site+ COSMOS",
+      "instructionsCn": "年份+**观测网+站点名称+ COSMOS",
+      "east": 101.1374,
+      "west": 101.1374,
+      "south": 42.0012,
+      "north": 42.0012,
+      "startTime": "2021-01-01 00:00:00",
+      "endTime": "2021-12-31 00:00:00",
+      "fileSize": 499126.0,
+      "cstr": "18406.11.Atmos.tpdc.272464",
+      "doi": "10.11888/Atmos.tpdc.272464",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Arid and semiarid regions represent approximately 30 % of the global terrestrial surface area (Dregne, 1991; Scanlon et al., 2006), and dryland expansion occurs under climate change, especially in developing countries (Huang et al., 2016). An oasis is a unique ecological landscape in arid and semi-arid areas that is not only the core of regions’ ecological environment but also the foundation of their economic development, especially in western China, which has been an important part of the “Silk Road” since ancient times. Oases comprising less than 10 % of the total area of arid regions support more than 90 % of the population in these regions of China (Chu et al., 2005; Li et al., 2016; Zhou et al., 2022). The oasis–desert system plays a crucial role in maintaining a stable ecological environment and agricultural productivity (Zhang and Zhao, 2015). Extensive studies have investigated energy, water vapor, and carbon exchange in oasis–desert areas based on field and remote-sensing observations (Taha et al., 1991; Potchter et al., 2008; Xue et al., 2019; Wang et al., 2019; Zhou et al., 2022) and numerical simulations (Chu et al., 2005; Meng et al., 2009; Georgescu et al., 2011; Liu et al., 2020). In addition, oasis–desert areas located in semiarid regions have been found to be carbon sinks by previous researchers (Tagesson et al., 2016; Wang et al., 2019); thus, they can significantly affect the carbon balance of arid regions and play an increasingly important role within the global carbon cycle."
-            ],
-            "research objective": [
-                "Therefore, it is critical to maintain the balance between oasis and desert systems in order to achieve the goal of sustainable oasis development. Understanding the basic characteristics of energy, water vapor, and carbon exchange in oasis–desert ecosystems is important to achieve the goals of carbon peaking and carbon neutrality in the oasis–desert area and support the ecological security and sustainable development of the oasis. A quantitative understanding of the energy, water vapor, and carbon exchange in oasis–desert areas is crucial to recognize the oasis–desert interactions and is significant to protect the ecological stability and socioeconomic development of oases; moreover, long-term observations are indispensable."
-            ],
-            "challenges": [
-                "Inland river basins in arid and semiarid areas are facing the crisis of ecological environment degradation, such as the drying up of rivers and lakes, the degradation of natural vegetation, the intensification of land desertification, and the frequent occurrence of dust storms, especially in many inland river basins westward along the Silk Road, such as the Tarim River basin (Zhao et al., 2013), the Aral Sea basin (Stanev et al., 2004; Crétaux et al., 2009), and the Lake Urmia basin (Stone, 2015)."
-            ],
-            "methods": [
-                "In this study, we present a suite of observational datasets from artificial and natural oasis–desert systems that consist of long-term energy, water vapor, carbon and methane fluxes as well as auxiliary data involving hydrometeorology, vegetation, and soil parameters from 2012 to 2021. Half-hourly turbulent flux data were acquired by an eddy covariance system and scintillometer. The hydrometeorological data (including radiation, soil heat flux, and soil temperature profiles; gradients of air temperature and humidity and of wind speed and direction; and air pressure, precipitation, and soil moisture profiles) were observed from automatic weather stations with a 10 min average period as well as the groundwater table data. Moreover, vegetation and soil parameters were also supplemented in the datasets. The data processing and quality control procedure can be divided into data collection, data processing, and data archiving and sharing."
-            ],
-            "dataset": [
-                "The study area comprises the middle and lower reaches of the HRB, located in the arid regions of western China, that receive water from the typical cryosphere of the upper reaches. A total of 11 land surface flux and meteorological stations have been established in these regions since 2012 – 2 superstations and 9 ordinary stations. The dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas reported in this study (including energy, water vapor, and carbon fluxes; hydrometeorological data; and vegetation and soil parameters) is freely available from the National Tibetan Plateau Data Center."
-            ],
-            "findings": [],
-            "backgroundCn": [
-                "干旱和半干旱地区约占全球陆地表面积的30%（Dregne, 1991；Scanlon et al., 2006），在气候变化的影响下，干旱地区的扩展尤其发生在发展中国家（Huang et al., 2016）。绿洲是干旱和半干旱地区独特的生态景观，不仅是这些地区生态环境的核心，也是经济发展的基础，尤其是在中国西部，自古以来就一直是“丝绸之路”的重要组成部分。绿洲占干旱地区总面积的不到10%，却支持了中国这些地区90%以上的人口（Chu et al., 2005；Li et al., 2016；Zhou et al., 2022）。绿洲-沙漠系统在维持稳定的生态环境和农业生产力方面发挥着至关重要的作用（Zhang and Zhao, 2015）。大量研究基于实地和遥感观测（Taha et al., 1991；Potchter et al., 2008；Xue et al., 2019；Wang et al., 2019；Zhou et al., 2022）以及数值模拟（Chu et al., 2005；Meng et al., 2009；Georgescu et al., 2011；Liu et al., 2020）对绿洲-沙漠地区的能量、水汽和碳交换进行了广泛研究。此外，位于半干旱地区的绿洲-沙漠地区已被前期研究者发现是碳汇（Tagesson et al., 2016；Wang et al., 2019）；因此，它们可以显著影响干旱地区的碳平衡，并在全球碳循环中发挥越来越重要的作用。"
-            ],
-            "research objectiveCn": [
-                "因此，保持绿洲与沙漠系统之间的平衡对于实现可持续绿洲发展的目标至关重要。了解绿洲-沙漠生态系统中能量、水汽和碳交换的基本特征，对于实现绿洲-沙漠地区的碳达峰和碳中和目标，并支持绿洲的生态安全和可持续发展是非常重要的。对绿洲-沙漠地区能量、水汽和碳交换的定量理解对于认识绿洲-沙漠之间的相互作用至关重要，并对保护绿洲的生态稳定性和社会经济发展具有重要意义；此外，长期观测是不可或缺的。"
-            ],
-            "challengesCn": [
-                "内陆河流流域在干旱和半干旱地区面临生态环境退化的危机，例如河流和湖泊干涸、自然植被退化、土地沙漠化加剧以及沙尘暴频发，尤其是在丝绸之路沿线的许多内陆河流流域，如塔里木河流域（赵等，2013）、咸海流域（Stanev等，2004；Crétaux等，2009）和乌尔米湖流域（Stone，2015）。"
-            ],
-            "methodsCn": [
-                "在本研究中，我们呈现了一套来自人工和自然绿洲-沙漠系统的观测数据集，包括2012年至2021年的长期能量、水蒸气、碳和甲烷通量，以及涉及水文气象、植被和土壤参数的辅助数据。半小时的湍流通量数据通过涡度协方差系统和闪烁仪获取。水文气象数据（包括辐射、土壤热通量和土壤温度剖面；空气温度和湿度的梯度、风速和风向的梯度；以及气压、降水和土壤湿度剖面）通过自动气象站以10分钟的平均周期进行观测，同时也记录了地下水位数据。此外，数据集中还补充了植被和土壤参数。数据处理和质量控制程序可以分为数据收集、数据处理和数据归档与共享。"
-            ],
-            "datasetCn": [
-                "研究区域包括位于中国西部干旱地区的HRB中下游，水源来自上游典型的冰冻圈。自2012年以来，在这些地区建立了共11个地表通量和气象站，其中包括2个超级站和9个普通站。本研究报告的绿洲-沙漠地区能量、水汽和碳交换观测数据集（包括能量、水汽和碳通量；水文气象数据；以及植被和土壤参数）可从国家西藏高原数据中心免费获取。"
-            ],
-            "findingsCn": []
-        },
-        {
-            "background": [
-                "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括: 称重法(烘干法)、中子仪法、电容法、张力计法、时域反射计(Time-Domain Ｒeflectometry，TDＲ)、频域反射计(Frequency-Domain Ｒeflectometry，FDＲ)等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米(航空遥感)到数十公里(航天遥感)之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
-            ],
-            "research objective": [
-                "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
-            ],
-            "challenges": [
-                "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不只存在于土壤水分中，在晶格水、土壤有机质、植被以及水汽中均存在氢原子，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
-            ],
-            "methods": [
-                "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集(Soil-NET部分)和降雨数据集(大满站)。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。"
-            ],
-            "dataset": [
-                "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP(SImple SOil MOisture Probe)土壤水分/温度探头，分别探测4，10，20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集(大满超级站)主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
-            ],
-            "findings": [
-                "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
-            ],
-            "backgroundCn": [
-                "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括：称重法（烘干法）、中子仪法、电容法、张力计法、时域反射计（Time-Domain Reflectometry，TDR）、频域反射计（Frequency-Domain Reflectometry，FDR）等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米（航空遥感）到数十公里（航天遥感）之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
-            ],
-            "research objectiveCn": [
-                "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
-            ],
-            "challengesCn": [
-                "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不仅存在于土壤水分中，还存在于晶格水、土壤有机质、植被以及水汽中，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
-            ],
-            "methodsCn": [
-                "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集（Soil-NET部分）和降雨数据集（大满站）。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。"
-            ],
-            "datasetCn": [
-                "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP（SImple SOil MOisture Probe）土壤水分/温度探头，分别探测4、10、20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集（大满超级站）主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
-            ],
-            "findingsCn": [
-                "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "刘绍民",
+        "nameEn": "LIU Shaomin",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "车涛",
+        "nameEn": "CHE Tao",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "朱忠礼",
+        "nameEn": "ZHU Zhongli",
+        "unitEn": "",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "徐自为",
+        "nameEn": "XU Ziwei",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "任志国",
+        "nameEn": "REN Zhiguo",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "谭俊磊",
+        "nameEn": "TAN Junlei",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "张阳",
+        "nameEn": "ZHANG Yang",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "李新",
+        "nameEn": "LI Xin",
+        "unitEn": "",
+        "unitCn": "中国科学院青藏高原研究所"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Does the cosmic-ray neutron method effectively fill the gap between point measurements and large-scale remote sensing for soil moisture monitoring?",
-                "QuestionCn": "宇宙射线中子法是否有效填补了土壤湿度监测中点测量与大规模遥感之间的空白？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Can cosmic-ray neutron probes provide reliable long-term soil moisture data in agricultural regions?",
-                "QuestionCn": "宇宙射线中子探测器能否在农业地区提供可靠的长期土壤湿度数据？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is it possible to correct cosmic-ray neutron measurements for atmospheric pressure to improve accuracy?",
-                "QuestionCn": "是否可以对宇宙射线中子测量进行大气压力校正以提高准确性？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which method is commonly used for measuring soil moisture in arid and semi-arid regions: neutron probe, eddy covariance, or cosmic-ray neutron sensing?",
-                "QuestionCn": "在干旱和半干旱地区，常用的土壤湿度测量方法是中子探头、涡度协方差或宇宙射线中子传感。",
-                "AnswerEn": "Cosmic-ray neutron sensing",
-                "AnswerCn": "宇宙射线中子感应",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is a significant challenge in soil moisture measurement: spatial representativeness, instrumentation cost, or data frequency?",
-                "QuestionCn": "土壤湿度测量中的一个重大挑战是空间代表性、仪器成本还是数据频率？",
-                "AnswerEn": "spatial representativeness",
-                "AnswerCn": "空间代表性",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "Where can datasets of energy, water vapor, and carbon exchange observations in oasis–desert areas be accessed?",
-                "QuestionCn": "可以在哪里获取绿洲-沙漠地区的能量、水汽和碳交换观测数据集？",
-                "AnswerEn": "National Tibetan Plateau Data Center",
-                "AnswerCn": "国家青藏高原数据中心",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What challenges are faced when measuring soil moisture using cosmic ray neutron methods?",
-                "QuestionCn": "使用宇宙射线中子法测量土壤湿度时面临的挑战有哪些？",
-                "AnswerEn": "interference from hydrogen atoms in lattice water, soil organic matter, vegetation, and water vapor",
-                "AnswerCn": "晶格水、土壤有机质、植被和水蒸气中氢原子的干扰。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "What is an example of a data processing step used to correct cosmic-ray soil moisture data?",
-                "QuestionCn": "一个用于修正宇宙射线土壤湿度数据的数据处理步骤的例子是什么？",
-                "AnswerEn": "One example of a data processing step used to correct cosmic-ray soil moisture data is air pressure correction. The raw fast neutron count data is adjusted using a formula provided in the instrument's manual to account for variations in air pressure, resulting in pressure-corrected neutron counts.",
-                "AnswerCn": "用于校正宇宙射线土壤湿度数据的一个数据处理步骤是气压校正。原始快速中子计数数据使用仪器手册中提供的公式进行调整，以考虑气压变化，从而得到气压校正后的中子计数。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of data collection methods used for measuring soil moisture using cosmic-ray neutron probes?",
-                "QuestionCn": "使用宇宙射线中子探测器测量土壤湿度的数据收集方法的特点是什么？",
-                "AnswerEn": "passive, non-invasive, medium-scale measurement radius of approximately 300 meters, effective measurement depth of 12 to 76 cm, continuous monitoring, data collected hourly",
-                "AnswerCn": "被动、非侵入式、中等规模测量，半径约300米，有效测量深度为12至76厘米，连续监测，每小时收集数据。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What challenges are associated with the use of cosmic-ray neutron probes in soil moisture measurement?",
-                "QuestionCn": "使用宇宙射线中子探测器进行土壤湿度测量面临哪些挑战？",
-                "AnswerEn": "hydrogen atoms in sources other than soil moisture, presence of lattice water, influence of vegetation, presence of water vapor, 10% decrease in saturated conditions",
-                "AnswerCn": "氢原子在土壤水分以外的来源中，晶格水的存在，植被的影响，水蒸气的存在，饱和条件下减少10%。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What features are included in datasets used for studying energy, water vapor, and carbon exchange in oasis-desert areas?",
-                "QuestionCn": "用于研究绿洲-沙漠地区能量、水蒸气和碳交换的数据集中包含哪些特征？",
-                "AnswerEn": "half-hourly turbulent flux data, hydrometeorological data, radiation, soil heat flux, soil temperature, air temperature and humidity gradients, wind speed and direction, air pressure, precipitation, soil moisture profiles, vegetation and soil parameters",
-                "AnswerCn": "半小时湍流通量数据、水文气象数据、辐射、土壤热通量、土壤温度、空气温度和湿度梯度、风速和风向、气压、降水、土壤湿度剖面、植被和土壤参数。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the sampling frequency for the cosmic ray neutron data in the observational network?",
-                "QuestionCn": "观测网络中宇宙射线中子数据的采样频率是多少？",
-                "AnswerEn": "1 hour",
-                "AnswerCn": "1小时",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the measurement radius of the cosmic ray neutron soil moisture method?",
-                "QuestionCn": "宇宙射线中子土壤湿度测量方法的测量半径是多少？",
-                "AnswerEn": "300 m",
-                "AnswerCn": "300 米",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the role of cosmic ray neutron sensing in measuring regional soil moisture, and how does it compare to traditional methods?",
-                "QuestionCn": "宇宙射线中子传感在测量区域土壤湿度中的作用是什么？它与传统方法相比如何？",
-                "AnswerEn": "Cosmic ray neutron sensing is a method for measuring regional soil moisture that captures data from a large area, approximately 300 meters in radius, offering a bridge between traditional point measurements and large-scale remote sensing. Unlike traditional methods such as gravimetric or capacitance techniques, which are invasive and limited to small scales, cosmic ray neutron sensing is passive and non-intrusive, providing a mid-scale measurement of soil moisture. This method is particularly useful in filling the gap between point measurements and satellite-based large-area observations.",
-                "AnswerCn": "宇宙射线中子传感是一种测量区域土壤湿度的方法，能够捕获大约300米半径范围内的数据，提供了传统点测量与大规模遥感之间的桥梁。与传统的重力法或电容法等侵入性且局限于小规模的测量方法不同，宇宙射线中子传感是被动的、非侵入性的，能够提供中尺度的土壤湿度测量。这种方法特别适用于填补点测量与卫星基于大面积观测之间的空白。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "How do environmental factors such as vegetation and atmospheric conditions affect the accuracy of cosmic ray neutron sensing in soil moisture measurement?",
-                "QuestionCn": "环境因素如植被和大气条件如何影响宇宙射线中子传感器在土壤湿度测量中的准确性？",
-                "AnswerEn": "Environmental factors like vegetation and atmospheric conditions can significantly influence the accuracy of cosmic ray neutron sensing for soil moisture measurement. Hydrogen atoms present in vegetation, water vapor, and soil organic matter can impact the propagation of fast neutrons, thus affecting the measurements. While some of these influences can be mitigated through in-situ calibration, challenges remain in accurately accounting for the effects of rapidly changing vegetation and saturated water vapor levels on the sensing radius and depth.",
-                "AnswerCn": "环境因素如植被和大气条件可以显著影响宇宙射线中子传感器在土壤湿度测量中的准确性。植被、水蒸气和土壤有机质中的氢原子会影响快中子的传播，从而影响测量结果。虽然通过原位校准可以减轻一些影响，但在准确考虑快速变化的植被和饱和水蒸气水平对传感半径和深度的影响方面仍然存在挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the main data quality control steps necessary when preparing cosmic ray neutron data for soil moisture analysis?",
-                "QuestionCn": "在准备宇宙射线中子数据进行土壤湿度分析时，主要的数据质量控制步骤包括：",
-                "AnswerEn": "The main data quality control steps in preparing cosmic ray neutron data for soil moisture analysis include: removing data with low battery voltage, filtering out observations with high relative humidity, ensuring the sampling time is consistent, and excluding data with significant fluctuations in neutron counts. After these steps, pressure correction is applied to adjust the neutron counts, followed by calibration to establish the baseline neutron count (N0) under dry soil conditions. This involves comparing neutron data against actual soil moisture measurements obtained from soil samples or dense sensor networks.",
-                "AnswerCn": "准备宇宙射线中子数据以进行土壤湿度分析的主要数据质量控制步骤包括：去除电池电压低的数据，过滤掉相对湿度高的观测值，确保采样时间一致，以及排除中子计数波动显著的数据。在这些步骤之后，进行压力修正以调整中子计数，然后进行校准以建立干燥土壤条件下的基线中子计数（N0）。这涉及将中子数据与从土壤样本或密集传感器网络获得的实际土壤湿度测量进行比较。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the use of cosmic-ray neutron probes for soil moisture measurement compare to traditional methods like TDR or FDR in terms of scale and spatial representation?",
-                "QuestionCn": "宇宙射线中子探测器用于土壤湿度测量与传统方法如时域反射法（TDR）或频域反射法（FDR）在规模和空间表现方面的比较。",
-                "AnswerEn": "Cosmic-ray neutron probes provide a mid-scale, non-invasive method for soil moisture measurement with a measurement radius of approximately 300 m, bridging the gap between traditional point measurements and large-scale remote sensing. Traditional methods like TDR or FDR are invasive and offer small-scale, point measurements with limited spatial representation.",
-                "AnswerCn": "宇宙射线中子探测器提供了一种中尺度、非侵入式的土壤湿度测量方法，测量半径约为300米，填补了传统点测量与大规模遥感之间的空白。传统方法如时域反射法（TDR）或频域反射法（FDR）是侵入式的，提供小规模的点测量，空间代表性有限。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways do the challenges of measuring soil moisture using cosmic-ray neutron methods differ from those encountered in wireless sensor network deployments?",
-                "QuestionCn": "使用宇宙射线中子方法测量土壤湿度的挑战与无线传感器网络部署中遇到的挑战有哪些不同之处？",
-                "AnswerEn": "Cosmic-ray neutron methods face challenges from hydrogen presence in non-soil components like vegetation and atmospheric moisture, affecting neutron propagation. Wireless sensor networks, however, are influenced by discrete sampling points and sensor calibration, focusing on local soil moisture variability rather than broader spatial coverage.",
-                "AnswerCn": "宇宙射线中子方法面临来自非土壤成分（如植被和大气湿度）中氢存在的挑战，这影响了中子的传播。然而，无线传感器网络受到离散采样点和传感器校准的影响，关注局部土壤湿度的变异性，而不是更广泛的空间覆盖。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What insights can be inferred about regional soil moisture distribution by comparing data from cosmic-ray neutron sensors to wireless sensor networks?",
-                "QuestionCn": "通过比较宇宙射线中子传感器与无线传感器网络的数据，可以推断出关于区域土壤湿度分布的洞察。",
-                "AnswerEn": "The comparison of cosmic-ray neutron sensor data with wireless sensor network data can reveal the reliability of cosmic-ray observations in capturing regional soil moisture. It shows that cosmic-ray neutron sensors effectively provide long-term, continuous monitoring of soil moisture at a regional scale, which can serve as an accurate ground validation for remote sensing-derived soil moisture data.",
-                "AnswerCn": "将宇宙射线中子传感器数据与无线传感器网络数据进行比较，可以揭示宇宙射线观测在捕捉区域土壤湿度方面的可靠性。研究表明，宇宙射线中子传感器能够有效地提供区域尺度上土壤湿度的长期、连续监测，这可以作为遥感衍生土壤湿度数据的准确地面验证。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How do cosmic-ray neutron observations address the limitations of traditional point measurement and remote sensing techniques in soil moisture monitoring?",
-                "QuestionCn": "宇宙射线中子观测如何解决传统点测量和遥感技术在土壤湿度监测中的局限性？",
-                "AnswerEn": "Cosmic-ray neutron observations fill the gap between traditional point measurement, which lacks spatial representation, and remote sensing, which provides instantaneous values at pixel scale but lacks continuous data. These observations offer a non-invasive method to measure soil moisture over a medium scale with a radius of approximately 300 meters, providing valuable data for regional soil moisture distribution.",
-                "AnswerCn": "宇宙射线中子观测填补了传统点测量（缺乏空间代表性）与遥感（提供像素尺度的瞬时值但缺乏连续数据）之间的空白。这些观测提供了一种非侵入性的方法，以中等尺度（约300米半径）测量土壤湿度，为区域土壤湿度分布提供了宝贵的数据。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What challenges might arise from the presence of hydrogen atoms in non-soil moisture sources when using cosmic-ray neutron detection for soil moisture measurement, and how can these challenges be mitigated?",
-                "QuestionCn": "在使用宇宙射线中子探测进行土壤湿度测量时，非土壤水分源中氢原子的存在可能会带来哪些挑战，以及如何缓解这些挑战？",
-                "AnswerEn": "The presence of hydrogen atoms in sources like lattice water, soil organic matter, vegetation, and water vapor can affect the propagation of fast neutrons, potentially influencing soil moisture measurements. These challenges can be mitigated by conducting in-situ soil moisture calibration within the measurement area to account for constant sources like lattice water and soil organic matter, and by adjusting for vegetation effects in sparsely vegetated areas. However, rapidly changing vegetation and water vapor remain complex to correct accurately.",
-                "AnswerCn": "氢原子的存在，如晶格水、土壤有机质、植被和水蒸气，可能会影响快中子的传播，从而影响土壤湿度测量。这些挑战可以通过在测量区域内进行原位土壤湿度校准来缓解，以考虑晶格水和土壤有机质等恒定来源的影响，并通过调整稀疏植被区域的植被效应来进行修正。然而，快速变化的植被和水蒸气仍然难以准确校正。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors lead to the necessity of using cosmic ray neutron sensing as opposed to traditional soil moisture measurement techniques in arid regions?",
-                "QuestionCn": "在干旱地区，使用宇宙射线中子传感器而不是传统土壤湿度测量技术的必要性因素有哪些？",
-                "AnswerEn": "Cosmic ray neutron sensing is used in arid regions due to its capability to cover a larger measurement area with a radius of about 300 meters, bridging the gap between traditional point measurements and large-scale remote sensing. Traditional methods such as gravimetric methods, neutron probes, and time-domain reflectometry are point-based and invasive, while cosmic ray neutron sensing is non-invasive and offers a broader spatial coverage, providing more representative soil moisture data for regional distribution analysis.",
-                "AnswerCn": "宇宙射线中子传感在干旱地区被广泛应用，因为它能够覆盖约300米的测量半径，弥补了传统点测量与大规模遥感之间的差距。传统方法如重力法、中子探头和时域反射法都是基于点的且具有侵入性，而宇宙射线中子传感则是非侵入性的，提供了更广泛的空间覆盖，能够为区域分布分析提供更具代表性的土壤湿度数据。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is data screening important in the process of analyzing cosmic ray neutron data for soil moisture measurement?",
-                "QuestionCn": "数据筛选在分析宇宙射线中子数据以测量土壤湿度的过程中非常重要，原因如下：",
-                "AnswerEn": "Data screening is crucial for ensuring the reliability and accuracy of cosmic ray neutron data. It involves removing data points that fall below specific voltage thresholds, exceed relative humidity limits, or deviate from the standard sampling interval, as well as eliminating outliers with large fluctuations in neutron counts. This process helps in maintaining the integrity of the dataset by reducing noise and correcting for environmental factors such as pressure variations.",
-                "AnswerCn": "数据筛选对于确保宇宙射线中子数据的可靠性和准确性至关重要。它涉及去除低于特定电压阈值的数据点、超过相对湿度限制的数据点、偏离标准采样间隔的数据点，以及消除具有大幅波动的中子计数的异常值。这个过程有助于通过减少噪声和修正压力变化等环境因素来维护数据集的完整性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What challenges necessitate the calibration of cosmic ray neutron data to accurately calculate soil moisture content?",
-                "QuestionCn": "哪些挑战需要对宇宙射线中子数据进行校准，以准确计算土壤水分含量？",
-                "AnswerEn": "Calibration of cosmic ray neutron data is necessary due to the influence of hydrogen atoms from sources other than soil moisture, such as lattice water, organic matter, vegetation, and water vapor. These sources can affect neutron propagation, and calibration involves soil moisture correction to account for these influences. The calibration process is also essential to determine the dry soil neutron count (N0), critical for accurate soil moisture calculations.",
-                "AnswerCn": "宇宙射线中子数据的校准是必要的，因为除了土壤水分外，氢原子还受到其他来源的影响，如晶格水、有机物、植被和水蒸气。这些来源会影响中子的传播，校准过程涉及土壤水分修正，以考虑这些影响。校准过程对于确定干土中子的计数（N0）至关重要，这对于准确的土壤水分计算是必不可少的。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the consequences of using a cosmic-ray neutron method for soil moisture measurement compared to traditional methods like gravimetric or remote sensing techniques?",
-                "QuestionCn": "使用宇宙射线中子法测量土壤水分与传统方法如重力法或遥感技术相比，有哪些后果？",
-                "AnswerEn": "Using a cosmic-ray neutron method for soil moisture measurement allows for non-invasive, mid-scale measurements with a radius of about 300 meters, bridging the gap between point observations and large-scale remote sensing. This method provides more representative data for regional soil moisture distribution and offers continuous data over time, which traditional methods may not offer due to their point-based nature or lack of temporal continuity.",
-                "AnswerCn": "使用宇宙射线中子法进行土壤湿度测量可以实现非侵入性、中尺度的测量，测量半径约为300米，填补了点观测与大规模遥感之间的空白。这种方法提供了更具代表性的区域土壤湿度分布数据，并且提供了时间上的连续数据，而传统方法由于其点基性质或缺乏时间连续性，可能无法提供这样的数据。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the potential effects of integrating wireless sensor network data with cosmic-ray neutron data on understanding soil moisture variability?",
-                "QuestionCn": "将无线传感器网络数据与宇宙射线中子数据结合，可能对理解土壤湿度变异性产生哪些潜在影响？",
-                "AnswerEn": "Integrating wireless sensor network data with cosmic-ray neutron data can enhance understanding of soil moisture variability by providing high-resolution, point-based measurements that complement the broader coverage of cosmic-ray data. This integration allows for cross-validation and comprehensive analysis, enabling more accurate depiction of soil moisture dynamics across different scales and improving the overall quality of soil moisture datasets.",
-                "AnswerCn": "将无线传感器网络数据与宇宙射线中子数据集成，可以通过提供高分辨率的点测量来增强对土壤湿度变化的理解，这些测量补充了宇宙射线数据的广泛覆盖。这种集成允许交叉验证和综合分析，使得对不同尺度的土壤湿度动态的更准确描绘成为可能，从而提高土壤湿度数据集的整体质量。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to use cosmic-ray neutron sensing for long-term monitoring of soil moisture in arid and semi-arid regions?",
-                "QuestionCn": "在干旱和半干旱地区，使用宇宙射线中子传感器进行土壤湿度的长期监测是非常重要的。",
-                "AnswerEn": "Cosmic-ray neutron sensing is crucial for long-term monitoring of soil moisture in arid and semi-arid regions because it provides a non-invasive, medium-scale method to obtain soil moisture data over a large area, bridging the gap between traditional point measurements and remote sensing. This approach allows for accurate assessment of soil moisture dynamics in these regions, which is vital for understanding the interactions within oasis–desert ecosystems and supporting sustainable development.",
-                "AnswerCn": "宇宙射线中子传感对于干旱和半干旱地区土壤湿度的长期监测至关重要，因为它提供了一种非侵入性、中等规模的方法，可以在大范围内获取土壤湿度数据，弥补了传统点测量和遥感之间的差距。这种方法能够准确评估这些地区的土壤湿度动态，这对于理解绿洲-沙漠生态系统内的相互作用以及支持可持续发展至关重要。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What objectives are pursued by integrating data from cosmic-ray neutron sensors and wireless sensor networks in soil moisture studies?",
-                "QuestionCn": "在土壤湿度研究中，整合宇宙射线中子传感器和无线传感器网络的数据所追求的目标是什么？",
-                "AnswerEn": "The integration of data from cosmic-ray neutron sensors and wireless sensor networks aims to validate the reliability of cosmic-ray observations by comparing them with high-resolution soil moisture data from wireless sensors. This approach helps to ensure accuracy and provides a comprehensive view of soil moisture conditions, which is essential for improving remote sensing inversion validation and understanding soil moisture distribution at the field or watershed scale.",
-                "AnswerCn": "宇宙射线中子传感器与无线传感器网络的数据集成旨在通过将其与无线传感器提供的高分辨率土壤湿度数据进行比较，以验证宇宙射线观测的可靠性。这种方法有助于确保准确性，并提供土壤湿度状况的全面视图，这对于改善遥感反演验证和理解田间或流域尺度的土壤湿度分布至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in calibrating cosmic ray neutron data to accurately measure soil moisture in arid regions?",
-                "QuestionCn": "校准宇宙射线中子数据以准确测量干旱地区土壤湿度的程序步骤包括：",
-                "AnswerEn": "The calibration process involves determining N0, which is the fast neutron count under dry soil conditions. This is achieved by measuring soil samples within the measurement area to obtain actual soil moisture content and comparing it with the corrected fast neutron data. This allows for recalculating N0 to align the observed data with actual conditions.",
-                "AnswerCn": "校准过程涉及确定 N0，即在干燥土壤条件下的快中子计数。这是通过在测量区域内测量土壤样本以获得实际土壤水分含量，并将其与修正后的快中子数据进行比较来实现的。这允许重新计算 N0，以使观察到的数据与实际条件对齐。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How is data quality ensured during the collection of cosmic ray neutron measurements for soil moisture estimation?",
-                "QuestionCn": "在收集宇宙射线中子测量以估算土壤湿度的过程中，如何确保数据质量？",
-                "AnswerEn": "Data quality is ensured through a multi-step screening process: eliminating data with voltage less than or equal to 11.8 volts, relative humidity greater than or equal to 80%, sampling time intervals not within 60±1 minutes, and fast neutron counts with hourly fluctuations greater than 200. Missing or excluded data are filled with a placeholder value of -6999.",
-                "AnswerCn": "数据质量通过多步骤筛选过程来确保：剔除电压小于或等于11.8伏的数据显示，剔除相对湿度大于或等于80%的数据，剔除采样时间间隔不在60±1分钟内的数据，以及剔除快中子计数每小时波动超过200的数据。缺失或被排除的数据用占位符值-6999进行填充。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methodological approaches are used to address the challenges of hydrogen atom interference in cosmic ray neutron measurements?",
-                "QuestionCn": "在宇宙射线中子测量中，解决氢原子干扰的挑战所采用的方法论方法有哪些？",
-                "AnswerEn": "To address hydrogen atom interference from sources like lattice water, soil organic matter, vegetation, and water vapor, site-specific soil moisture calibration is conducted. While lattice water and stable soil organic matter effects can be negated through calibration, vegetation effects pose challenges in rapidly growing vegetation areas, and water vapor presence alters the detection radius by about 10%, as shown by MCNPX simulations.",
-                "AnswerCn": "为了应对来自晶格水、土壤有机质、植被和水蒸气等来源的氢原子干扰，进行现场特定的土壤湿度校准。虽然通过校准可以消除晶格水和稳定土壤有机质的影响，但在快速生长的植被区域，植被的影响仍然带来挑战，而水蒸气的存在会使探测半径改变约10%，这一点通过MCNPX模拟得到了验证。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What technological advancements have enabled the collection of soil moisture data using cosmic-ray neutron sensing in arid regions?",
-                "QuestionCn": "哪些技术进步使得在干旱地区使用宇宙射线中子传感器收集土壤湿度数据成为可能？",
-                "AnswerEn": "The use of cosmic-ray neutron sensing technology allows for the non-invasive measurement of soil moisture over a large area, filling the gap between traditional point measurements and remote sensing. This method can effectively gather soil moisture data within a radius of approximately 300 meters and at a depth of 12 to 76 cm, providing a comprehensive view of soil moisture distribution in the region.",
-                "AnswerCn": "宇宙射线中子传感技术的使用允许对大面积土壤湿度进行非侵入性测量，填补了传统点测量和遥感之间的空白。这种方法可以有效地在约300米的半径内以及12到76厘米的深度收集土壤湿度数据，为该地区的土壤湿度分布提供了全面的视角。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How does the integration of wireless sensor networks enhance the reliability of soil moisture data collection in agricultural settings?",
-                "QuestionCn": "无线传感器网络的集成如何增强农业环境中土壤湿度数据收集的可靠性？",
-                "AnswerEn": "Wireless sensor networks (WSN) offer a means to compare and validate cosmic-ray neutron sensing data by providing detailed soil moisture and temperature data at multiple depths from numerous observation points. By integrating WSN data, researchers can ensure the reliability and accuracy of the cosmic-ray neutron sensing results, offering ground-truth verification and enabling comprehensive monitoring over time.",
-                "AnswerCn": "无线传感器网络（WSN）提供了一种比较和验证宇宙射线中子传感数据的方法，通过在多个观测点提供详细的土壤湿度和温度数据，涵盖多个深度。通过整合WSN数据，研究人员可以确保宇宙射线中子传感结果的可靠性和准确性，提供实地验证，并实现全面的长期监测。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What challenges do high humidity levels pose in the collection of cosmic-ray neutron data, and what methods are used to address these issues?",
-                "QuestionCn": "高湿度水平在收集宇宙射线中子数据时会带来哪些挑战，以及采用了哪些方法来应对这些问题？",
-                "AnswerEn": "High humidity levels can affect the accuracy of cosmic-ray neutron data by influencing the propagation of neutrons. To address this challenge, data collection involves screening out observations with relative humidity above 80%, and pressure corrections are applied to the neutron data to account for atmospheric conditions. This ensures that the resulting data is more accurate and reliable for interpreting soil moisture.",
-                "AnswerCn": "高湿度水平会影响宇宙射线中子数据的准确性，因为它会影响中子的传播。为了解决这个挑战，数据收集过程中会筛选掉相对湿度超过80%的观测值，并对中子数据进行压力修正，以考虑大气条件。这确保了最终的数据更加准确可靠，有助于解释土壤湿度。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might there be challenges in obtaining continuous soil moisture data at a regional scale using traditional methods?",
-                "QuestionCn": "使用传统方法在区域尺度上获取连续土壤湿度数据可能面临哪些挑战？",
-                "AnswerEn": "Traditional soil moisture measurement methods like weighing, neutron probe, capacitance, tensiometer, and time-domain reflectometry are often point-based, invasive, and limited to small-scale measurements, making it difficult to capture regional scale soil moisture distribution.",
-                "AnswerCn": "传统的土壤湿度测量方法，如称重法、中子探针、电容法、张力计和时域反射法，通常是基于点的、侵入性的，并且仅限于小规模测量，这使得捕捉区域尺度的土壤湿度分布变得困难。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is there a need for developing new methodologies to bridge the gap between point measurements and large-scale remote sensing in soil moisture monitoring?",
-                "QuestionCn": "为什么需要开发新的方法来弥合土壤湿度监测中点测量与大规模遥感之间的差距？",
-                "AnswerEn": "There is a gap between point measurements and remote sensing in terms of spatial resolution and temporal continuity. While remote sensing provides large-scale data, it lacks continuous temporal coverage and detailed spatial information at the farm or small watershed scale, which is critical for accurate soil moisture monitoring.",
-                "AnswerCn": "在点测量和遥感之间存在空间分辨率和时间连续性方面的差距。虽然遥感提供了大规模的数据，但在农场或小流域尺度上，它缺乏连续的时间覆盖和详细的空间信息，而这些对于准确的土壤湿度监测至关重要。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Why might cosmic-ray neutron sensing be considered a promising approach for regional soil moisture measurement compared to other existing technologies?",
-                "QuestionCn": "宇宙射线中子传感被认为是一种有前景的区域土壤湿度测量方法，相较于其他现有技术，原因可能包括以下几点：",
-                "AnswerEn": "Cosmic-ray neutron sensing offers a passive, non-invasive method with a measurement radius of approximately 300 m and an effective depth of 12 to 76 cm, providing a middle ground between point measurements and large-scale remote sensing, and effectively capturing area-wide soil moisture data.",
-                "AnswerCn": "宇宙射线中子传感提供了一种被动的、非侵入式的方法，测量半径约为300米，有效深度为12至76厘米，提供了点测量和大规模遥感之间的中间选择，有效捕捉区域范围内的土壤湿度数据。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How might the integration of cosmic-ray neutron sensing improve the accuracy and representativeness of soil moisture measurements compared to traditional methods?",
-                "QuestionCn": "宇宙射线中子传感的整合如何提高土壤湿度测量的准确性和代表性，相较于传统方法？",
-                "AnswerEn": "Cosmic-ray neutron sensing offers a non-invasive, large-area measurement capability with a radius of approximately 300 meters, bridging the gap between point-scale traditional methods and large-scale remote sensing. This method captures soil moisture changes over a wider area, providing more comprehensive data that can better represent regional soil moisture variability.",
-                "AnswerCn": "宇宙射线中子传感提供了一种非侵入性的大面积测量能力，半径约为300米，弥补了传统点尺度方法与大规模遥感之间的差距。这种方法能够捕捉更大区域内的土壤湿度变化，提供更全面的数据，更好地代表区域土壤湿度的变异性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the potential challenges in using cosmic-ray neutron sensing for soil moisture measurement in regions with sparse vegetation or rapidly changing plant growth conditions?",
-                "QuestionCn": "在植被稀疏或植物生长条件快速变化的地区，使用宇宙射线中子传感器进行土壤湿度测量可能面临的潜在挑战包括：",
-                "AnswerEn": "Challenges arise from the presence of hydrogen atoms in sources other than soil moisture, such as vegetation, lattice water, and soil organic matter, which can affect neutron readings. While corrections are possible, rapidly changing vegetation poses difficulties, as current methods may not fully account for the variability in plant water content, influencing the accuracy of soil moisture measurements.",
-                "AnswerCn": "氢原子的存在来自土壤水分以外的来源，如植被、晶格水和土壤有机质，这会影响中子读数。虽然可以进行修正，但快速变化的植被带来了困难，因为当前的方法可能无法完全考虑植物水分含量的变异性，从而影响土壤水分测量的准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways can long-term observational datasets from oasis–desert ecosystems contribute to understanding the interactions between energy, water vapor, and carbon exchange in these regions?",
-                "QuestionCn": "长期观测数据集来自绿洲-沙漠生态系统可以通过以下几种方式帮助理解这些地区能量、水蒸气和碳交换之间的相互作用：",
-                "AnswerEn": "Long-term datasets provide valuable insights into the dynamics of energy, water vapor, and carbon exchange, critical for assessing the balance and stability of oasis–desert ecosystems. These datasets help in understanding the ecological and socioeconomic impacts of these interactions, supporting strategies for sustainable development and carbon neutrality goals in arid and semi-arid regions.",
-                "AnswerCn": "长期数据集为评估绿洲-沙漠生态系统的能量、水汽和碳交换动态提供了宝贵的见解，这对于评估生态平衡和稳定性至关重要。这些数据集有助于理解这些相互作用的生态和社会经济影响，支持在干旱和半干旱地区实现可持续发展和碳中和目标的策略。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how a dataset can effectively measure soil moisture using cosmic-ray neutron sensing across large areas.",
-                "QuestionCn": "我不明白如何通过宇宙射线中子传感器在大面积范围内有效测量土壤湿度。",
-                "AnswerEn": "Cosmic-ray neutron sensing is a passive, non-invasive method that measures soil moisture over a large area with a radius of approximately 300 meters. This method fills the gap between traditional point measurements and large-scale remote sensing by providing continuous data on soil moisture, leveraging the inverse relationship between cosmic-ray neutron intensity and soil moisture content.",
-                "AnswerCn": "宇宙射线中子传感是一种被动的、非侵入式的方法，可以在大约300米的半径范围内测量土壤湿度。这种方法填补了传统点测量和大规模遥感之间的空白，通过利用宇宙射线中子强度与土壤湿度含量之间的反比关系，提供了土壤湿度的连续数据。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I'm unsure about the challenges faced in using cosmic-ray neutron sensing for soil moisture data collection in arid regions.",
-                "QuestionCn": "我对在干旱地区使用宇宙射线中子传感器收集土壤湿度数据所面临的挑战感到不确定。",
-                "AnswerEn": "Challenges include the presence of hydrogen atoms in sources other than soil moisture, such as lattice water, soil organic matter, vegetation, and water vapor, which can affect neutron propagation. These factors can complicate measurements, but they can be mitigated through field calibration under certain conditions, although challenges remain in areas with rapidly growing vegetation and high water vapor.",
-                "AnswerCn": "挑战包括氢原子存在于土壤水分以外的来源，如晶格水、土壤有机质、植被和水蒸气，这些因素会影响中子传播。这些因素可能会使测量变得复杂，但在某些条件下可以通过现场校准来减轻这些影响，尽管在植被快速生长和水蒸气含量高的地区仍然存在挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "I can't make sense of how long-term observational data is organized and validated for oasis-desert ecosystem studies.",
-                "QuestionCn": "我无法理解长期观察数据是如何组织和验证的，以用于绿洲-沙漠生态系统研究。",
-                "AnswerEn": "Long-term observational datasets for oasis-desert ecosystems include energy, water vapor, carbon and methane fluxes, and auxiliary data like hydrometeorological, vegetation, and soil parameters. Data is acquired through systems like eddy covariance and scintillometers, supplemented by automatic weather stations, and is subjected to rigorous data collection, processing, and quality control procedures to ensure reliability and accuracy.",
-                "AnswerCn": "长期观测数据集用于绿洲-沙漠生态系统，包括能量、水蒸气、碳和甲烷通量，以及辅助数据如水文气象、植被和土壤参数。数据通过涡度协方差和闪烁仪等系统获取，辅以自动气象站，并经过严格的数据收集、处理和质量控制程序，以确保可靠性和准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please analyze the challenges faced in measuring soil moisture in arid regions using cosmic-ray neutron sensing compared to traditional and remote sensing methods.",
-                "QuestionCn": "请分析在干旱地区使用宇宙射线中子传感器测量土壤湿度时面临的挑战，与传统和遥感方法相比。",
-                "AnswerEn": "Traditional point measurement methods and remote sensing have limitations in measuring soil moisture over large areas or specific scales like farmlands or small watersheds. Cosmic-ray neutron sensing bridges this gap by providing non-invasive, mid-scale measurements with a radius of about 300 m and depths of 12 to 76 cm. However, challenges include interference from hydrogen atoms in lattice water, soil organic matter, vegetation, and water vapor, which can affect the neutron count and require specific corrections or calibrations.",
-                "AnswerCn": "传统的点测量方法和遥感在测量大面积或特定尺度（如农田或小流域）的土壤湿度方面存在局限性。宇宙射线中子传感技术弥补了这一空白，能够提供半径约为300米、深度在12到76厘米之间的非侵入性中尺度测量。然而，挑战在于土壤中氢原子的干扰，包括晶格水、土壤有机质、植被和水蒸气，这些因素会影响中子计数，需要进行特定的修正或校准。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please summarize the data collection techniques used for monitoring energy, water vapor, and carbon exchange in oasis-desert ecosystems.",
-                "QuestionCn": "总结用于监测绿洲-沙漠生态系统中能量、水蒸气和碳交换的数据收集技术。",
-                "AnswerEn": "Data collection techniques for these ecosystems involve long-term observations using eddy covariance systems and scintillometers for flux data, as well as automatic weather stations for hydrometeorological data. These stations gather data on radiation, soil heat flux, air temperature, humidity, wind speed, soil moisture, and groundwater tables. The dataset encompasses energy, water vapor, carbon and methane fluxes, which are essential for understanding oasis-desert interactions.",
-                "AnswerCn": "这些生态系统的数据收集技术涉及使用涡度协方差系统和闪烁仪进行长期观察以获取通量数据，以及自动气象站用于获取水文气象数据。这些站点收集辐射、土壤热通量、空气温度、湿度、风速、土壤湿度和地下水位的数据。该数据集涵盖能量、水蒸气、碳和甲烷通量，这对于理解绿洲-沙漠相互作用至关重要。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Please explore potential methods for improving the accuracy of soil moisture measurements using cosmic-ray neutron sensing in the presence of varying vegetation cover.",
-                "QuestionCn": "探索在不同植被覆盖条件下，利用宇宙射线中子传感技术提高土壤湿度测量准确性的潜在方法。",
-                "AnswerEn": "To improve accuracy, it is crucial to calibrate the cosmic-ray neutron sensing method by accounting for the hydrogen sources in vegetation, which can impact neutron propagation. While in sparse vegetation areas, field soil moisture calibration can mitigate these effects, rapidly growing vegetation presents challenges that lack comprehensive correction methods. Further research is needed to develop reliable correction techniques for dynamic vegetation conditions.",
-                "AnswerCn": "为了提高准确性，必须通过考虑植被中的氢源来校准宇宙射线中子传感方法，因为这些氢源会影响中子的传播。在稀疏植被区域，田间土壤湿度校准可以减轻这些影响，但快速生长的植被则带来了缺乏全面校正方法的挑战。需要进一步研究以开发适用于动态植被条件的可靠校正技术。",
-                "Level": "C6(Creating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China",
+        "referenceCn": null,
+        "referenceEn": "Liu, S., Li, X., Xu, Z., Che, T., Xiao, Q., Ma, M., Liu, Q., Jin, R., Guo, J., Wang, L., Wang, W., Qi, Y., Li, H., Xu, T., Ran, Y., Hu, X., Shi, S., Zhu, Z., Tan, J., Zhang, Y., Ren, Z. (2018). The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China. Vadose Zone Journal, 17,180072. https://doi.org/10.2136/vzj2018.04.0072."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in a typical endorheic basin",
+        "referenceCn": null,
+        "referenceEn": "Liu, S.M., Xu, Z.W., Che, T., Li, X.,  Xu, T.R.,  Ren, Z.G., Zhang, Y., Tan, J.L., Song, L.S., Zhou, J., Zhu, Z.L., Yang, X.F., Liu, R., & Ma, Y.F. (2023). A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in\na typical endorheic basin. Earth System Science Data, 15, 4959-4981."
+      },
+      {
+        "titleCn": "宇宙射线快中子法在农田土壤水分测量中的研究与应用",
+        "titleEn": null,
+        "referenceCn": "焦其顺, 朱忠礼, 刘绍民, 晋锐, 杜帆. (2013). 宇宙射线快中子法在农田土壤水分测量中的研究与应用. 地球科学进展, 28(10), 1136-1143.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
+        "referenceCn": null,
+        "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "能见度",
+        "nameEn": "Visibility"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "四道桥超级站",
+        "keywordEn": "Sidaoqiao superstation"
+      },
+      {
+        "keywordCn": "黑河流域",
+        "keywordEn": "Heihe River Basin"
+      },
+      {
+        "keywordCn": "黑河流域下游",
+        "keywordEn": "The lower reaches of the heihe river"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2021年",
+        "keywordEn": "2021",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
+        "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Arid and semiarid regions represent approximately 30 % of the global terrestrial surface area (Dregne, 1991; Scanlon et al., 2006), and dryland expansion occurs under climate change, especially in developing countries (Huang et al., 2016). An oasis is a unique ecological landscape in arid and semi-arid areas that is not only the core of regions’ ecological environment but also the foundation of their economic development, especially in western China, which has been an important part of the “Silk Road” since ancient times. Oases comprising less than 10 % of the total area of arid regions support more than 90 % of the population in these regions of China (Chu et al., 2005; Li et al., 2016; Zhou et al., 2022). The oasis–desert system plays a crucial role in maintaining a stable ecological environment and agricultural productivity (Zhang and Zhao, 2015). Extensive studies have investigated energy, water vapor, and carbon exchange in oasis–desert areas based on field and remote-sensing observations (Taha et al., 1991; Potchter et al., 2008; Xue et al., 2019; Wang et al., 2019; Zhou et al., 2022) and numerical simulations (Chu et al., 2005; Meng et al., 2009; Georgescu et al., 2011; Liu et al., 2020). In addition, oasis–desert areas located in semiarid regions have been found to be carbon sinks by previous researchers (Tagesson et al., 2016; Wang et al., 2019); thus, they can significantly affect the carbon balance of arid regions and play an increasingly important role within the global carbon cycle."
+      ],
+      "research objective": [
+        "Therefore, it is critical to maintain the balance between oasis and desert systems in order to achieve the goal of sustainable oasis development. Understanding the basic characteristics of energy, water vapor, and carbon exchange in oasis–desert ecosystems is important to achieve the goals of carbon peaking and carbon neutrality in the oasis–desert area and support the ecological security and sustainable development of the oasis. A quantitative understanding of the energy, water vapor, and carbon exchange in oasis–desert areas is crucial to recognize the oasis–desert interactions and is significant to protect the ecological stability and socioeconomic development of oases; moreover, long-term observations are indispensable."
+      ],
+      "challenges": [
+        "Inland river basins in arid and semiarid areas are facing the crisis of ecological environment degradation, such as the drying up of rivers and lakes, the degradation of natural vegetation, the intensification of land desertification, and the frequent occurrence of dust storms, especially in many inland river basins westward along the Silk Road, such as the Tarim River basin (Zhao et al., 2013), the Aral Sea basin (Stanev et al., 2004; Crétaux et al., 2009), and the Lake Urmia basin (Stone, 2015)."
+      ],
+      "methods": [
+        "In this study, we present a suite of observational datasets from artificial and natural oasis–desert systems that consist of long-term energy, water vapor, carbon and methane fluxes as well as auxiliary data involving hydrometeorology, vegetation, and soil parameters from 2012 to 2021. Half-hourly turbulent flux data were acquired by an eddy covariance system and scintillometer. The hydrometeorological data (including radiation, soil heat flux, and soil temperature profiles; gradients of air temperature and humidity and of wind speed and direction; and air pressure, precipitation, and soil moisture profiles) were observed from automatic weather stations with a 10 min average period as well as the groundwater table data. Moreover, vegetation and soil parameters were also supplemented in the datasets. The data processing and quality control procedure can be divided into data collection, data processing, and data archiving and sharing."
+      ],
+      "dataset": [
+        "The study area comprises the middle and lower reaches of the HRB, located in the arid regions of western China, that receive water from the typical cryosphere of the upper reaches. A total of 11 land surface flux and meteorological stations have been established in these regions since 2012 – 2 superstations and 9 ordinary stations. The dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas reported in this study (including energy, water vapor, and carbon fluxes; hydrometeorological data; and vegetation and soil parameters) is freely available from the National Tibetan Plateau Data Center."
+      ],
+      "findings": [],
+      "backgroundCn": [
+        "干旱和半干旱地区约占全球陆地表面积的30%（Dregne, 1991；Scanlon et al., 2006），在气候变化的影响下，干旱地区的扩展尤其发生在发展中国家（Huang et al., 2016）。绿洲是干旱和半干旱地区独特的生态景观，不仅是这些地区生态环境的核心，也是经济发展的基础，尤其是在中国西部，自古以来就一直是“丝绸之路”的重要组成部分。绿洲占干旱地区总面积的不到10%，却支持了中国这些地区90%以上的人口（Chu et al., 2005；Li et al., 2016；Zhou et al., 2022）。绿洲-沙漠系统在维持稳定的生态环境和农业生产力方面发挥着至关重要的作用（Zhang and Zhao, 2015）。大量研究基于实地和遥感观测（Taha et al., 1991；Potchter et al., 2008；Xue et al., 2019；Wang et al., 2019；Zhou et al., 2022）以及数值模拟（Chu et al., 2005；Meng et al., 2009；Georgescu et al., 2011；Liu et al., 2020）对绿洲-沙漠地区的能量、水汽和碳交换进行了广泛研究。此外，位于半干旱地区的绿洲-沙漠地区已被前期研究者发现是碳汇（Tagesson et al., 2016；Wang et al., 2019）；因此，它们可以显著影响干旱地区的碳平衡，并在全球碳循环中发挥越来越重要的作用。"
+      ],
+      "research objectiveCn": [
+        "因此，保持绿洲与沙漠系统之间的平衡对于实现可持续绿洲发展的目标至关重要。了解绿洲-沙漠生态系统中能量、水汽和碳交换的基本特征，对于实现绿洲-沙漠地区的碳达峰和碳中和目标，并支持绿洲的生态安全和可持续发展是非常重要的。对绿洲-沙漠地区能量、水汽和碳交换的定量理解对于认识绿洲-沙漠之间的相互作用至关重要，并对保护绿洲的生态稳定性和社会经济发展具有重要意义；此外，长期观测是不可或缺的。"
+      ],
+      "challengesCn": [
+        "内陆河流流域在干旱和半干旱地区面临生态环境退化的危机，例如河流和湖泊干涸、自然植被退化、土地沙漠化加剧以及沙尘暴频发，尤其是在丝绸之路沿线的许多内陆河流流域，如塔里木河流域（赵等，2013）、咸海流域（Stanev等，2004；Crétaux等，2009）和乌尔米湖流域（Stone，2015）。"
+      ],
+      "methodsCn": [
+        "在本研究中，我们呈现了一套来自人工和自然绿洲-沙漠系统的观测数据集，包括2012年至2021年的长期能量、水蒸气、碳和甲烷通量，以及涉及水文气象、植被和土壤参数的辅助数据。半小时的湍流通量数据通过涡度协方差系统和闪烁仪获取。水文气象数据（包括辐射、土壤热通量和土壤温度剖面；空气温度和湿度的梯度、风速和风向的梯度；以及气压、降水和土壤湿度剖面）通过自动气象站以10分钟的平均周期进行观测，同时也记录了地下水位数据。此外，数据集中还补充了植被和土壤参数。数据处理和质量控制程序可以分为数据收集、数据处理和数据归档与共享。"
+      ],
+      "datasetCn": [
+        "研究区域包括位于中国西部干旱地区的HRB中下游，水源来自上游典型的冰冻圈。自2012年以来，在这些地区建立了共11个地表通量和气象站，其中包括2个超级站和9个普通站。本研究报告的绿洲-沙漠地区能量、水汽和碳交换观测数据集（包括能量、水汽和碳通量；水文气象数据；以及植被和土壤参数）可从国家西藏高原数据中心免费获取。"
+      ],
+      "findingsCn": []
+    },
+    {
+      "background": [
+        "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括: 称重法(烘干法)、中子仪法、电容法、张力计法、时域反射计(Time-Domain Ｒeflectometry，TDＲ)、频域反射计(Frequency-Domain Ｒeflectometry，FDＲ)等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米(航空遥感)到数十公里(航天遥感)之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
+      ],
+      "research objective": [
+        "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
+      ],
+      "challenges": [
+        "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不只存在于土壤水分中，在晶格水、土壤有机质、植被以及水汽中均存在氢原子，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
+      ],
+      "methods": [
+        "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集(Soil-NET部分)和降雨数据集(大满站)。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。"
+      ],
+      "dataset": [
+        "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP(SImple SOil MOisture Probe)土壤水分/温度探头，分别探测4，10，20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集(大满超级站)主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
+      ],
+      "findings": [
+        "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
+      ],
+      "backgroundCn": [
+        "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括：称重法（烘干法）、中子仪法、电容法、张力计法、时域反射计（Time-Domain Reflectometry，TDR）、频域反射计（Frequency-Domain Reflectometry，FDR）等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米（航空遥感）到数十公里（航天遥感）之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
+      ],
+      "research objectiveCn": [
+        "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
+      ],
+      "challengesCn": [
+        "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不仅存在于土壤水分中，还存在于晶格水、土壤有机质、植被以及水汽中，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
+      ],
+      "methodsCn": [
+        "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集（Soil-NET部分）和降雨数据集（大满站）。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。"
+      ],
+      "datasetCn": [
+        "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP（SImple SOil MOisture Probe）土壤水分/温度探头，分别探测4、10、20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集（大满超级站）主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
+      ],
+      "findingsCn": [
+        "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Does the cosmic-ray neutron method effectively fill the gap between point measurements and large-scale remote sensing for soil moisture monitoring?",
+        "QuestionCn": "宇宙射线中子法是否有效填补了土壤湿度监测中点测量与大规模遥感之间的空白？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Can cosmic-ray neutron probes provide reliable long-term soil moisture data in agricultural regions?",
+        "QuestionCn": "宇宙射线中子探测器能否在农业地区提供可靠的长期土壤湿度数据？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is it possible to correct cosmic-ray neutron measurements for atmospheric pressure to improve accuracy?",
+        "QuestionCn": "是否可以对宇宙射线中子测量进行大气压力校正以提高准确性？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which method is commonly used for measuring soil moisture in arid and semi-arid regions: neutron probe, eddy covariance, or cosmic-ray neutron sensing?",
+        "QuestionCn": "在干旱和半干旱地区，常用哪种方法来测量土壤湿度：中子探针、涡度协方差或宇宙射线中子感应？",
+        "AnswerEn": "Cosmic-ray neutron sensing",
+        "AnswerCn": "宇宙射线中子感应",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is a significant challenge in soil moisture measurement: spatial representativeness, instrumentation cost, or data frequency?",
+        "QuestionCn": "土壤湿度测量中的一个重大挑战是空间代表性、仪器成本还是数据频率？",
+        "AnswerEn": "spatial representativeness",
+        "AnswerCn": "空间代表性",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "Where can datasets of energy, water vapor, and carbon exchange observations in oasis–desert areas be accessed?",
+        "QuestionCn": "可以在哪里获取绿洲-沙漠地区的能量、水汽和碳交换观测数据集？",
+        "AnswerEn": "National Tibetan Plateau Data Center",
+        "AnswerCn": "国家青藏高原数据中心",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What challenges are faced when measuring soil moisture using cosmic ray neutron methods?",
+        "QuestionCn": "使用宇宙射线中子法测量土壤湿度时面临的挑战有哪些？",
+        "AnswerEn": "interference from hydrogen atoms in lattice water, soil organic matter, vegetation, and water vapor",
+        "AnswerCn": "晶格水、土壤有机质、植被和水蒸气中氢原子的干扰。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "What is an example of a data processing step used to correct cosmic-ray soil moisture data?",
+        "QuestionCn": "一个用于修正宇宙射线土壤湿度数据的数据处理步骤的例子是什么？",
+        "AnswerEn": "One example of a data processing step used to correct cosmic-ray soil moisture data is air pressure correction. The raw fast neutron count data is adjusted using a formula provided in the instrument's manual to account for variations in air pressure, resulting in pressure-corrected neutron counts.",
+        "AnswerCn": "用于校正宇宙射线土壤湿度数据的一个数据处理步骤是气压校正。原始快速中子计数数据使用仪器手册中提供的公式进行调整，以考虑气压变化，从而得到气压校正后的中子计数。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of data collection methods used for measuring soil moisture using cosmic-ray neutron probes?",
+        "QuestionCn": "使用宇宙射线中子探测器测量土壤湿度的数据收集方法的特点是什么？",
+        "AnswerEn": "passive, non-invasive, medium-scale measurement radius of approximately 300 meters, effective measurement depth of 12 to 76 cm, continuous monitoring, data collected hourly",
+        "AnswerCn": "被动、非侵入式、中等规模测量，半径约300米，有效测量深度为12至76厘米，连续监测，每小时收集数据。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What challenges are associated with the use of cosmic-ray neutron probes in soil moisture measurement?",
+        "QuestionCn": "使用宇宙射线中子探测器进行土壤湿度测量面临哪些挑战？",
+        "AnswerEn": "hydrogen atoms in sources other than soil moisture, presence of lattice water, influence of vegetation, presence of water vapor, 10% decrease in saturated conditions",
+        "AnswerCn": "氢原子在土壤水分以外的来源中，晶格水的存在，植被的影响，水蒸气的存在，饱和条件下减少10%。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What features are included in datasets used for studying energy, water vapor, and carbon exchange in oasis-desert areas?",
+        "QuestionCn": "用于研究绿洲-沙漠地区能量、水蒸气和碳交换的数据集中包含哪些特征？",
+        "AnswerEn": "half-hourly turbulent flux data, hydrometeorological data, radiation, soil heat flux, soil temperature, air temperature and humidity gradients, wind speed and direction, air pressure, precipitation, soil moisture profiles, vegetation and soil parameters",
+        "AnswerCn": "半小时湍流通量数据、水文气象数据、辐射、土壤热通量、土壤温度、空气温度和湿度梯度、风速和风向、气压、降水、土壤湿度剖面、植被和土壤参数。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the sampling frequency for the cosmic ray neutron data in the observational network?",
+        "QuestionCn": "观测网络中宇宙射线中子数据的采样频率是多少？",
+        "AnswerEn": "1 hour",
+        "AnswerCn": "1小时",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the measurement radius of the cosmic ray neutron soil moisture method?",
+        "QuestionCn": "宇宙射线中子土壤湿度测量方法的测量半径是多少？",
+        "AnswerEn": "300 m",
+        "AnswerCn": "300 米",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the role of cosmic ray neutron sensing in measuring regional soil moisture, and how does it compare to traditional methods?",
+        "QuestionCn": "宇宙射线中子传感在测量区域土壤湿度中的作用是什么？它与传统方法相比如何？",
+        "AnswerEn": "Cosmic ray neutron sensing is a method for measuring regional soil moisture that captures data from a large area, approximately 300 meters in radius, offering a bridge between traditional point measurements and large-scale remote sensing. Unlike traditional methods such as gravimetric or capacitance techniques, which are invasive and limited to small scales, cosmic ray neutron sensing is passive and non-intrusive, providing a mid-scale measurement of soil moisture. This method is particularly useful in filling the gap between point measurements and satellite-based large-area observations.",
+        "AnswerCn": "宇宙射线中子传感是一种测量区域土壤湿度的方法，能够捕获大约300米半径范围内的数据，提供了传统点测量与大规模遥感之间的桥梁。与传统的重力法或电容法等侵入性且局限于小规模的测量方法不同，宇宙射线中子传感是被动的、非侵入性的，能够提供中尺度的土壤湿度测量。这种方法特别适用于填补点测量与卫星基于大面积观测之间的空白。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "How do environmental factors such as vegetation and atmospheric conditions affect the accuracy of cosmic ray neutron sensing in soil moisture measurement?",
+        "QuestionCn": "环境因素如植被和大气条件如何影响宇宙射线中子传感器在土壤湿度测量中的准确性？",
+        "AnswerEn": "Environmental factors like vegetation and atmospheric conditions can significantly influence the accuracy of cosmic ray neutron sensing for soil moisture measurement. Hydrogen atoms present in vegetation, water vapor, and soil organic matter can impact the propagation of fast neutrons, thus affecting the measurements. While some of these influences can be mitigated through in-situ calibration, challenges remain in accurately accounting for the effects of rapidly changing vegetation and saturated water vapor levels on the sensing radius and depth.",
+        "AnswerCn": "环境因素如植被和大气条件可以显著影响宇宙射线中子传感器在土壤湿度测量中的准确性。植被、水蒸气和土壤有机质中的氢原子会影响快中子的传播，从而影响测量结果。虽然通过原位校准可以减轻一些影响，但在准确考虑快速变化的植被和饱和水蒸气水平对传感半径和深度的影响方面仍然存在挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the main data quality control steps necessary when preparing cosmic ray neutron data for soil moisture analysis?",
+        "QuestionCn": "在准备宇宙射线中子数据用于土壤湿度分析时，主要的数据质量控制步骤是什么？",
+        "AnswerEn": "The main data quality control steps in preparing cosmic ray neutron data for soil moisture analysis include: removing data with low battery voltage, filtering out observations with high relative humidity, ensuring the sampling time is consistent, and excluding data with significant fluctuations in neutron counts. After these steps, pressure correction is applied to adjust the neutron counts, followed by calibration to establish the baseline neutron count (N0) under dry soil conditions. This involves comparing neutron data against actual soil moisture measurements obtained from soil samples or dense sensor networks.",
+        "AnswerCn": "准备宇宙射线中子数据以进行土壤湿度分析的主要数据质量控制步骤包括：去除电池电压低的数据，过滤掉相对湿度高的观测值，确保采样时间一致，以及排除中子计数波动显著的数据。在这些步骤之后，进行压力修正以调整中子计数，然后进行校准以建立干燥土壤条件下的基线中子计数（N0）。这涉及将中子数据与从土壤样本或密集传感器网络获得的实际土壤湿度测量进行比较。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the use of cosmic-ray neutron probes for soil moisture measurement compare to traditional methods like TDR or FDR in terms of scale and spatial representation?",
+        "QuestionCn": "使用宇宙射线中子探测器进行土壤湿度测量在尺度和空间表示方面如何与传统方法如TDR或FDR进行比较？",
+        "AnswerEn": "Cosmic-ray neutron probes provide a mid-scale, non-invasive method for soil moisture measurement with a measurement radius of approximately 300 m, bridging the gap between traditional point measurements and large-scale remote sensing. Traditional methods like TDR or FDR are invasive and offer small-scale, point measurements with limited spatial representation.",
+        "AnswerCn": "宇宙射线中子探测器提供了一种中尺度、非侵入式的土壤湿度测量方法，测量半径约为300米，填补了传统点测量与大规模遥感之间的空白。传统方法如时域反射法（TDR）或频域反射法（FDR）是侵入式的，提供小规模的点测量，空间代表性有限。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways do the challenges of measuring soil moisture using cosmic-ray neutron methods differ from those encountered in wireless sensor network deployments?",
+        "QuestionCn": "使用宇宙射线中子方法测量土壤湿度的挑战与无线传感器网络部署中遇到的挑战有哪些不同之处？",
+        "AnswerEn": "Cosmic-ray neutron methods face challenges from hydrogen presence in non-soil components like vegetation and atmospheric moisture, affecting neutron propagation. Wireless sensor networks, however, are influenced by discrete sampling points and sensor calibration, focusing on local soil moisture variability rather than broader spatial coverage.",
+        "AnswerCn": "宇宙射线中子方法面临来自非土壤成分（如植被和大气湿度）中氢存在的挑战，这影响了中子的传播。然而，无线传感器网络受到离散采样点和传感器校准的影响，关注局部土壤湿度的变异性，而不是更广泛的空间覆盖。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What insights can be inferred about regional soil moisture distribution by comparing data from cosmic-ray neutron sensors to wireless sensor networks?",
+        "QuestionCn": "通过将宇宙射线中子传感器的数据与无线传感器网络进行比较，可以推断出关于区域土壤湿度分布的哪些见解？",
+        "AnswerEn": "The comparison of cosmic-ray neutron sensor data with wireless sensor network data can reveal the reliability of cosmic-ray observations in capturing regional soil moisture. It shows that cosmic-ray neutron sensors effectively provide long-term, continuous monitoring of soil moisture at a regional scale, which can serve as an accurate ground validation for remote sensing-derived soil moisture data.",
+        "AnswerCn": "将宇宙射线中子传感器数据与无线传感器网络数据进行比较，可以揭示宇宙射线观测在捕捉区域土壤湿度方面的可靠性。研究表明，宇宙射线中子传感器能够有效地提供区域尺度上土壤湿度的长期、连续监测，这可以作为遥感衍生土壤湿度数据的准确地面验证。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How do cosmic-ray neutron observations address the limitations of traditional point measurement and remote sensing techniques in soil moisture monitoring?",
+        "QuestionCn": "宇宙射线中子观测如何解决传统点测量和遥感技术在土壤湿度监测中的局限性？",
+        "AnswerEn": "Cosmic-ray neutron observations fill the gap between traditional point measurement, which lacks spatial representation, and remote sensing, which provides instantaneous values at pixel scale but lacks continuous data. These observations offer a non-invasive method to measure soil moisture over a medium scale with a radius of approximately 300 meters, providing valuable data for regional soil moisture distribution.",
+        "AnswerCn": "宇宙射线中子观测填补了传统点测量（缺乏空间代表性）与遥感（提供像素尺度的瞬时值但缺乏连续数据）之间的空白。这些观测提供了一种非侵入性的方法，以中等尺度（约300米半径）测量土壤湿度，为区域土壤湿度分布提供了宝贵的数据。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What challenges might arise from the presence of hydrogen atoms in non-soil moisture sources when using cosmic-ray neutron detection for soil moisture measurement, and how can these challenges be mitigated?",
+        "QuestionCn": "在使用宇宙射线中子探测进行土壤湿度测量时，非土壤水分源中氢原子的存在可能会带来哪些挑战，以及如何缓解这些挑战？",
+        "AnswerEn": "The presence of hydrogen atoms in sources like lattice water, soil organic matter, vegetation, and water vapor can affect the propagation of fast neutrons, potentially influencing soil moisture measurements. These challenges can be mitigated by conducting in-situ soil moisture calibration within the measurement area to account for constant sources like lattice water and soil organic matter, and by adjusting for vegetation effects in sparsely vegetated areas. However, rapidly changing vegetation and water vapor remain complex to correct accurately.",
+        "AnswerCn": "氢原子的存在，如晶格水、土壤有机质、植被和水蒸气，可能会影响快中子的传播，从而影响土壤湿度测量。这些挑战可以通过在测量区域内进行原位土壤湿度校准来缓解，以考虑晶格水和土壤有机质等恒定来源的影响，并通过调整稀疏植被区域的植被效应来进行修正。然而，快速变化的植被和水蒸气仍然难以准确校正。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors lead to the necessity of using cosmic ray neutron sensing as opposed to traditional soil moisture measurement techniques in arid regions?",
+        "QuestionCn": "在干旱地区，使用宇宙射线中子传感器而不是传统土壤湿度测量技术的必要性因素有哪些？",
+        "AnswerEn": "Cosmic ray neutron sensing is used in arid regions due to its capability to cover a larger measurement area with a radius of about 300 meters, bridging the gap between traditional point measurements and large-scale remote sensing. Traditional methods such as gravimetric methods, neutron probes, and time-domain reflectometry are point-based and invasive, while cosmic ray neutron sensing is non-invasive and offers a broader spatial coverage, providing more representative soil moisture data for regional distribution analysis.",
+        "AnswerCn": "宇宙射线中子传感在干旱地区被广泛应用，因为它能够覆盖约300米的测量半径，弥补了传统点测量与大规模遥感之间的差距。传统方法如重力法、中子探头和时域反射法都是基于点的且具有侵入性，而宇宙射线中子传感则是非侵入性的，提供了更广泛的空间覆盖，能够为区域分布分析提供更具代表性的土壤湿度数据。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is data screening important in the process of analyzing cosmic ray neutron data for soil moisture measurement?",
+        "QuestionCn": "为什么在分析用于土壤湿度测量的宇宙射线中子数据的过程中数据筛选很重要？",
+        "AnswerEn": "Data screening is crucial for ensuring the reliability and accuracy of cosmic ray neutron data. It involves removing data points that fall below specific voltage thresholds, exceed relative humidity limits, or deviate from the standard sampling interval, as well as eliminating outliers with large fluctuations in neutron counts. This process helps in maintaining the integrity of the dataset by reducing noise and correcting for environmental factors such as pressure variations.",
+        "AnswerCn": "数据筛选对于确保宇宙射线中子数据的可靠性和准确性至关重要。它涉及去除低于特定电压阈值的数据点、超过相对湿度限制的数据点、偏离标准采样间隔的数据点，以及消除具有大幅波动的中子计数的异常值。这个过程有助于通过减少噪声和修正压力变化等环境因素来维护数据集的完整性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What challenges necessitate the calibration of cosmic ray neutron data to accurately calculate soil moisture content?",
+        "QuestionCn": "哪些挑战需要对宇宙射线中子数据进行校准，以准确计算土壤水分含量？",
+        "AnswerEn": "Calibration of cosmic ray neutron data is necessary due to the influence of hydrogen atoms from sources other than soil moisture, such as lattice water, organic matter, vegetation, and water vapor. These sources can affect neutron propagation, and calibration involves soil moisture correction to account for these influences. The calibration process is also essential to determine the dry soil neutron count (N0), critical for accurate soil moisture calculations.",
+        "AnswerCn": "宇宙射线中子数据的校准是必要的，因为除了土壤水分外，氢原子还受到其他来源的影响，如晶格水、有机物、植被和水蒸气。这些来源会影响中子的传播，校准过程涉及土壤水分修正，以考虑这些影响。校准过程对于确定干土中子的计数（N0）至关重要，这对于准确的土壤水分计算是必不可少的。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the consequences of using a cosmic-ray neutron method for soil moisture measurement compared to traditional methods like gravimetric or remote sensing techniques?",
+        "QuestionCn": "使用宇宙射线中子法测量土壤水分与传统方法如重力法或遥感技术相比，有哪些后果？",
+        "AnswerEn": "Using a cosmic-ray neutron method for soil moisture measurement allows for non-invasive, mid-scale measurements with a radius of about 300 meters, bridging the gap between point observations and large-scale remote sensing. This method provides more representative data for regional soil moisture distribution and offers continuous data over time, which traditional methods may not offer due to their point-based nature or lack of temporal continuity.",
+        "AnswerCn": "使用宇宙射线中子法进行土壤湿度测量可以实现非侵入性、中尺度的测量，测量半径约为300米，填补了点观测与大规模遥感之间的空白。这种方法提供了更具代表性的区域土壤湿度分布数据，并且提供了时间上的连续数据，而传统方法由于其点基性质或缺乏时间连续性，可能无法提供这样的数据。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the potential effects of integrating wireless sensor network data with cosmic-ray neutron data on understanding soil moisture variability?",
+        "QuestionCn": "将无线传感器网络数据与宇宙射线中子数据结合，可能对理解土壤湿度变异性产生哪些潜在影响？",
+        "AnswerEn": "Integrating wireless sensor network data with cosmic-ray neutron data can enhance understanding of soil moisture variability by providing high-resolution, point-based measurements that complement the broader coverage of cosmic-ray data. This integration allows for cross-validation and comprehensive analysis, enabling more accurate depiction of soil moisture dynamics across different scales and improving the overall quality of soil moisture datasets.",
+        "AnswerCn": "将无线传感器网络数据与宇宙射线中子数据集成，可以通过提供高分辨率的点测量来增强对土壤湿度变化的理解，这些测量补充了宇宙射线数据的广泛覆盖。这种集成允许交叉验证和综合分析，使得对不同尺度的土壤湿度动态的更准确描绘成为可能，从而提高土壤湿度数据集的整体质量。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to use cosmic-ray neutron sensing for long-term monitoring of soil moisture in arid and semi-arid regions?",
+        "QuestionCn": "为什么在干旱和半干旱地区使用宇宙射线中子传感器进行长期土壤湿度监测很重要？",
+        "AnswerEn": "Cosmic-ray neutron sensing is crucial for long-term monitoring of soil moisture in arid and semi-arid regions because it provides a non-invasive, medium-scale method to obtain soil moisture data over a large area, bridging the gap between traditional point measurements and remote sensing. This approach allows for accurate assessment of soil moisture dynamics in these regions, which is vital for understanding the interactions within oasis–desert ecosystems and supporting sustainable development.",
+        "AnswerCn": "宇宙射线中子传感对于干旱和半干旱地区土壤湿度的长期监测至关重要，因为它提供了一种非侵入性、中等规模的方法，可以在大范围内获取土壤湿度数据，弥补了传统点测量和遥感之间的差距。这种方法能够准确评估这些地区的土壤湿度动态，这对于理解绿洲-沙漠生态系统内的相互作用以及支持可持续发展至关重要。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What objectives are pursued by integrating data from cosmic-ray neutron sensors and wireless sensor networks in soil moisture studies?",
+        "QuestionCn": "在土壤湿度研究中，整合宇宙射线中子传感器和无线传感器网络的数据所追求的目标是什么？",
+        "AnswerEn": "The integration of data from cosmic-ray neutron sensors and wireless sensor networks aims to validate the reliability of cosmic-ray observations by comparing them with high-resolution soil moisture data from wireless sensors. This approach helps to ensure accuracy and provides a comprehensive view of soil moisture conditions, which is essential for improving remote sensing inversion validation and understanding soil moisture distribution at the field or watershed scale.",
+        "AnswerCn": "宇宙射线中子传感器与无线传感器网络的数据集成旨在通过将其与无线传感器提供的高分辨率土壤湿度数据进行比较，以验证宇宙射线观测的可靠性。这种方法有助于确保准确性，并提供土壤湿度状况的全面视图，这对于改善遥感反演验证和理解田间或流域尺度的土壤湿度分布至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in calibrating cosmic ray neutron data to accurately measure soil moisture in arid regions?",
+        "QuestionCn": "校准宇宙射线中子数据以准确测量干旱地区的土壤湿度涉及哪些程序步骤？",
+        "AnswerEn": "The calibration process involves determining N0, which is the fast neutron count under dry soil conditions. This is achieved by measuring soil samples within the measurement area to obtain actual soil moisture content and comparing it with the corrected fast neutron data. This allows for recalculating N0 to align the observed data with actual conditions.",
+        "AnswerCn": "校准过程涉及确定 N0，即在干燥土壤条件下的快中子计数。这是通过在测量区域内测量土壤样本以获得实际土壤水分含量，并将其与修正后的快中子数据进行比较来实现的。这允许重新计算 N0，以使观察到的数据与实际条件对齐。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How is data quality ensured during the collection of cosmic ray neutron measurements for soil moisture estimation?",
+        "QuestionCn": "在收集宇宙射线中子测量以估算土壤湿度的过程中，如何确保数据质量？",
+        "AnswerEn": "Data quality is ensured through a multi-step screening process: eliminating data with voltage less than or equal to 11.8 volts, relative humidity greater than or equal to 80%, sampling time intervals not within 60±1 minutes, and fast neutron counts with hourly fluctuations greater than 200. Missing or excluded data are filled with a placeholder value of -6999.",
+        "AnswerCn": "数据质量通过多步骤筛选过程来确保：剔除电压小于或等于11.8伏的数据显示，剔除相对湿度大于或等于80%的数据，剔除采样时间间隔不在60±1分钟内的数据，以及剔除快中子计数每小时波动超过200的数据。缺失或被排除的数据用占位符值-6999进行填充。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methodological approaches are used to address the challenges of hydrogen atom interference in cosmic ray neutron measurements?",
+        "QuestionCn": "在宇宙射线中子测量中，解决氢原子干扰的挑战所采用的方法论方法有哪些？",
+        "AnswerEn": "To address hydrogen atom interference from sources like lattice water, soil organic matter, vegetation, and water vapor, site-specific soil moisture calibration is conducted. While lattice water and stable soil organic matter effects can be negated through calibration, vegetation effects pose challenges in rapidly growing vegetation areas, and water vapor presence alters the detection radius by about 10%, as shown by MCNPX simulations.",
+        "AnswerCn": "为了应对来自晶格水、土壤有机质、植被和水蒸气等来源的氢原子干扰，进行现场特定的土壤湿度校准。虽然通过校准可以消除晶格水和稳定土壤有机质的影响，但在快速生长的植被区域，植被的影响仍然带来挑战，而水蒸气的存在会使探测半径改变约10%，这一点通过MCNPX模拟得到了验证。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What technological advancements have enabled the collection of soil moisture data using cosmic-ray neutron sensing in arid regions?",
+        "QuestionCn": "哪些技术进步使得在干旱地区使用宇宙射线中子传感器收集土壤湿度数据成为可能？",
+        "AnswerEn": "The use of cosmic-ray neutron sensing technology allows for the non-invasive measurement of soil moisture over a large area, filling the gap between traditional point measurements and remote sensing. This method can effectively gather soil moisture data within a radius of approximately 300 meters and at a depth of 12 to 76 cm, providing a comprehensive view of soil moisture distribution in the region.",
+        "AnswerCn": "宇宙射线中子传感技术的使用允许对大面积土壤湿度进行非侵入性测量，填补了传统点测量和遥感之间的空白。这种方法可以有效地在约300米的半径内以及12到76厘米的深度收集土壤湿度数据，为该地区的土壤湿度分布提供了全面的视角。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How does the integration of wireless sensor networks enhance the reliability of soil moisture data collection in agricultural settings?",
+        "QuestionCn": "无线传感器网络的集成如何增强农业环境中土壤湿度数据收集的可靠性？",
+        "AnswerEn": "Wireless sensor networks (WSN) offer a means to compare and validate cosmic-ray neutron sensing data by providing detailed soil moisture and temperature data at multiple depths from numerous observation points. By integrating WSN data, researchers can ensure the reliability and accuracy of the cosmic-ray neutron sensing results, offering ground-truth verification and enabling comprehensive monitoring over time.",
+        "AnswerCn": "无线传感器网络（WSN）提供了一种比较和验证宇宙射线中子传感数据的方法，通过在多个观测点提供详细的土壤湿度和温度数据，涵盖多个深度。通过整合WSN数据，研究人员可以确保宇宙射线中子传感结果的可靠性和准确性，提供实地验证，并实现全面的长期监测。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What challenges do high humidity levels pose in the collection of cosmic-ray neutron data, and what methods are used to address these issues?",
+        "QuestionCn": "高湿度水平在收集宇宙射线中子数据时会带来哪些挑战，以及采用了哪些方法来应对这些问题？",
+        "AnswerEn": "High humidity levels can affect the accuracy of cosmic-ray neutron data by influencing the propagation of neutrons. To address this challenge, data collection involves screening out observations with relative humidity above 80%, and pressure corrections are applied to the neutron data to account for atmospheric conditions. This ensures that the resulting data is more accurate and reliable for interpreting soil moisture.",
+        "AnswerCn": "高湿度水平会影响宇宙射线中子数据的准确性，因为它会影响中子的传播。为了解决这个挑战，数据收集过程中会筛选掉相对湿度超过80%的观测值，并对中子数据进行压力修正，以考虑大气条件。这确保了最终的数据更加准确可靠，有助于解释土壤湿度。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might there be challenges in obtaining continuous soil moisture data at a regional scale using traditional methods?",
+        "QuestionCn": "使用传统方法在区域尺度上获取连续土壤湿度数据可能面临哪些挑战？",
+        "AnswerEn": "Traditional soil moisture measurement methods like weighing, neutron probe, capacitance, tensiometer, and time-domain reflectometry are often point-based, invasive, and limited to small-scale measurements, making it difficult to capture regional scale soil moisture distribution.",
+        "AnswerCn": "传统的土壤湿度测量方法，如称重法、中子探针、电容法、张力计和时域反射法，通常是基于点的、侵入性的，并且仅限于小规模测量，这使得捕捉区域尺度的土壤湿度分布变得困难。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is there a need for developing new methodologies to bridge the gap between point measurements and large-scale remote sensing in soil moisture monitoring?",
+        "QuestionCn": "为什么需要开发新的方法来弥合土壤湿度监测中点测量与大规模遥感之间的差距？",
+        "AnswerEn": "There is a gap between point measurements and remote sensing in terms of spatial resolution and temporal continuity. While remote sensing provides large-scale data, it lacks continuous temporal coverage and detailed spatial information at the farm or small watershed scale, which is critical for accurate soil moisture monitoring.",
+        "AnswerCn": "在点测量和遥感之间存在空间分辨率和时间连续性方面的差距。虽然遥感提供了大规模的数据，但在农场或小流域尺度上，它缺乏连续的时间覆盖和详细的空间信息，而这些对于准确的土壤湿度监测至关重要。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Why might cosmic-ray neutron sensing be considered a promising approach for regional soil moisture measurement compared to other existing technologies?",
+        "QuestionCn": "为什么宇宙射线中子传感可能被认为是区域土壤湿度测量的一种有前途的方法，而不是其他现有技术？",
+        "AnswerEn": "Cosmic-ray neutron sensing offers a passive, non-invasive method with a measurement radius of approximately 300 m and an effective depth of 12 to 76 cm, providing a middle ground between point measurements and large-scale remote sensing, and effectively capturing area-wide soil moisture data.",
+        "AnswerCn": "宇宙射线中子传感提供了一种被动的、非侵入式的方法，测量半径约为300米，有效深度为12至76厘米，提供了点测量和大规模遥感之间的中间选择，有效捕捉区域范围内的土壤湿度数据。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How might the integration of cosmic-ray neutron sensing improve the accuracy and representativeness of soil moisture measurements compared to traditional methods?",
+        "QuestionCn": "宇宙射线中子传感的整合如何提高土壤湿度测量的准确性和代表性，相较于传统方法？",
+        "AnswerEn": "Cosmic-ray neutron sensing offers a non-invasive, large-area measurement capability with a radius of approximately 300 meters, bridging the gap between point-scale traditional methods and large-scale remote sensing. This method captures soil moisture changes over a wider area, providing more comprehensive data that can better represent regional soil moisture variability.",
+        "AnswerCn": "宇宙射线中子传感提供了一种非侵入性的大面积测量能力，半径约为300米，弥补了传统点尺度方法与大规模遥感之间的差距。这种方法能够捕捉更大区域内的土壤湿度变化，提供更全面的数据，更好地代表区域土壤湿度的变异性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the potential challenges in using cosmic-ray neutron sensing for soil moisture measurement in regions with sparse vegetation or rapidly changing plant growth conditions?",
+        "QuestionCn": "在植被稀疏或植物生长条件迅速变化的地区使用宇宙射线中子传感器进行土壤湿度测量可能面临哪些潜在挑战？",
+        "AnswerEn": "Challenges arise from the presence of hydrogen atoms in sources other than soil moisture, such as vegetation, lattice water, and soil organic matter, which can affect neutron readings. While corrections are possible, rapidly changing vegetation poses difficulties, as current methods may not fully account for the variability in plant water content, influencing the accuracy of soil moisture measurements.",
+        "AnswerCn": "氢原子的存在来自土壤水分以外的来源，如植被、晶格水和土壤有机质，这会影响中子读数。虽然可以进行修正，但快速变化的植被带来了困难，因为当前的方法可能无法完全考虑植物水分含量的变异性，从而影响土壤水分测量的准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways can long-term observational datasets from oasis–desert ecosystems contribute to understanding the interactions between energy, water vapor, and carbon exchange in these regions?",
+        "QuestionCn": "长期观测的绿洲-沙漠生态系统数据集可以通过哪些方式帮助理解这些地区的能量、水汽和碳交换之间的相互作用？",
+        "AnswerEn": "Long-term datasets provide valuable insights into the dynamics of energy, water vapor, and carbon exchange, critical for assessing the balance and stability of oasis–desert ecosystems. These datasets help in understanding the ecological and socioeconomic impacts of these interactions, supporting strategies for sustainable development and carbon neutrality goals in arid and semi-arid regions.",
+        "AnswerCn": "长期数据集为评估绿洲-沙漠生态系统的能量、水汽和碳交换动态提供了宝贵的见解，这对于评估生态平衡和稳定性至关重要。这些数据集有助于理解这些相互作用的生态和社会经济影响，支持在干旱和半干旱地区实现可持续发展和碳中和目标的策略。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how a dataset can effectively measure soil moisture using cosmic-ray neutron sensing across large areas.",
+        "QuestionCn": "我不明白如何通过宇宙射线中子传感器在大面积范围内有效测量土壤湿度。",
+        "AnswerEn": "Cosmic-ray neutron sensing is a passive, non-invasive method that measures soil moisture over a large area with a radius of approximately 300 meters. This method fills the gap between traditional point measurements and large-scale remote sensing by providing continuous data on soil moisture, leveraging the inverse relationship between cosmic-ray neutron intensity and soil moisture content.",
+        "AnswerCn": "宇宙射线中子传感是一种被动的、非侵入式的方法，可以在大约300米的半径范围内测量土壤湿度。这种方法填补了传统点测量和大规模遥感之间的空白，通过利用宇宙射线中子强度与土壤湿度含量之间的反比关系，提供了土壤湿度的连续数据。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I'm unsure about the challenges faced in using cosmic-ray neutron sensing for soil moisture data collection in arid regions.",
+        "QuestionCn": "我对在干旱地区使用宇宙射线中子传感器收集土壤湿度数据所面临的挑战感到不确定。",
+        "AnswerEn": "Challenges include the presence of hydrogen atoms in sources other than soil moisture, such as lattice water, soil organic matter, vegetation, and water vapor, which can affect neutron propagation. These factors can complicate measurements, but they can be mitigated through field calibration under certain conditions, although challenges remain in areas with rapidly growing vegetation and high water vapor.",
+        "AnswerCn": "挑战包括氢原子存在于土壤水分以外的来源，如晶格水、土壤有机质、植被和水蒸气，这些因素会影响中子传播。这些因素可能会使测量变得复杂，但在某些条件下可以通过现场校准来减轻这些影响，尽管在植被快速生长和水蒸气含量高的地区仍然存在挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "I can't make sense of how long-term observational data is organized and validated for oasis-desert ecosystem studies.",
+        "QuestionCn": "我无法理解长期观察数据是如何组织和验证的，以用于绿洲-沙漠生态系统研究。",
+        "AnswerEn": "Long-term observational datasets for oasis-desert ecosystems include energy, water vapor, carbon and methane fluxes, and auxiliary data like hydrometeorological, vegetation, and soil parameters. Data is acquired through systems like eddy covariance and scintillometers, supplemented by automatic weather stations, and is subjected to rigorous data collection, processing, and quality control procedures to ensure reliability and accuracy.",
+        "AnswerCn": "长期观测数据集用于绿洲-沙漠生态系统，包括能量、水蒸气、碳和甲烷通量，以及辅助数据如水文气象、植被和土壤参数。数据通过涡度协方差和闪烁仪等系统获取，辅以自动气象站，并经过严格的数据收集、处理和质量控制程序，以确保可靠性和准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please analyze the challenges faced in measuring soil moisture in arid regions using cosmic-ray neutron sensing compared to traditional and remote sensing methods.",
+        "QuestionCn": "请分析在干旱地区使用宇宙射线中子传感器测量土壤湿度时面临的挑战，与传统和遥感方法相比。",
+        "AnswerEn": "Traditional point measurement methods and remote sensing have limitations in measuring soil moisture over large areas or specific scales like farmlands or small watersheds. Cosmic-ray neutron sensing bridges this gap by providing non-invasive, mid-scale measurements with a radius of about 300 m and depths of 12 to 76 cm. However, challenges include interference from hydrogen atoms in lattice water, soil organic matter, vegetation, and water vapor, which can affect the neutron count and require specific corrections or calibrations.",
+        "AnswerCn": "传统的点测量方法和遥感在测量大面积或特定尺度（如农田或小流域）的土壤湿度方面存在局限性。宇宙射线中子传感技术弥补了这一空白，能够提供半径约为300米、深度在12到76厘米之间的非侵入性中尺度测量。然而，挑战在于土壤中氢原子的干扰，包括晶格水、土壤有机质、植被和水蒸气，这些因素会影响中子计数，需要进行特定的修正或校准。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please summarize the data collection techniques used for monitoring energy, water vapor, and carbon exchange in oasis-desert ecosystems.",
+        "QuestionCn": "总结用于监测绿洲-沙漠生态系统中能量、水蒸气和碳交换的数据收集技术。",
+        "AnswerEn": "Data collection techniques for these ecosystems involve long-term observations using eddy covariance systems and scintillometers for flux data, as well as automatic weather stations for hydrometeorological data. These stations gather data on radiation, soil heat flux, air temperature, humidity, wind speed, soil moisture, and groundwater tables. The dataset encompasses energy, water vapor, carbon and methane fluxes, which are essential for understanding oasis-desert interactions.",
+        "AnswerCn": "这些生态系统的数据收集技术涉及使用涡度协方差系统和闪烁仪进行长期观察以获取通量数据，以及自动气象站用于获取水文气象数据。这些站点收集辐射、土壤热通量、空气温度、湿度、风速、土壤湿度和地下水位的数据。该数据集涵盖能量、水蒸气、碳和甲烷通量，这对于理解绿洲-沙漠相互作用至关重要。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Please explore potential methods for improving the accuracy of soil moisture measurements using cosmic-ray neutron sensing in the presence of varying vegetation cover.",
+        "QuestionCn": "探索在不同植被覆盖条件下，利用宇宙射线中子传感技术提高土壤湿度测量准确性的潜在方法。",
+        "AnswerEn": "To improve accuracy, it is crucial to calibrate the cosmic-ray neutron sensing method by accounting for the hydrogen sources in vegetation, which can impact neutron propagation. While in sparse vegetation areas, field soil moisture calibration can mitigate these effects, rapidly growing vegetation presents challenges that lack comprehensive correction methods. Further research is needed to develop reliable correction techniques for dynamic vegetation conditions.",
+        "AnswerCn": "为了提高准确性，必须通过考虑植被中的氢源来校准宇宙射线中子传感方法，因为这些氢源会影响中子的传播。在稀疏植被区域，田间土壤湿度校准可以减轻这些影响，但快速生长的植被则带来了缺乏全面校正方法的挑战。需要进一步研究以开发适用于动态植被条件的可靠校正技术。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

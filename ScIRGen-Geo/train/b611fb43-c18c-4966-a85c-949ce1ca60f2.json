@@ -1,453 +1,453 @@
 {
-    "id": "b611fb43-c18c-4966-a85c-949ce1ca60f2",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "A 1 km daily soil moisture dataset over the Qinghai-Tibet  Plateau (2001-2020)",
-            "titleCn": "青藏高原1km逐日土壤水分数据集（2001-2020）",
-            "description": "Soil moisture is the key variable of water and energy cycle, but the long-term, high-resolution soil moisture data with high accuracy is still relatively lacking on the Qinghai-Tibet Plateau. Therefore, we provide the 1 km seamless daily soil moisture data over the Qinghai-Tibet Plateau during 2001-2020 (named as BTCH). Firstly, several predictors including the vegetation index (NDVI and EVI), land surface temperature (LST), evapotranspiration, precipitation, topography (DEM, aspect, slope, TWI), soil properties and three soil moisture related indices (SWCI SIWSI VSDI) were utilized. Five machine/deep learning methods including the artificial neural network (ANN), convolutional neural network (CNN), residual neural networks (ResNet), the long short-term memory network (LSTM) and XGBoost were trained for each year taking the ESA CCI soil moisture data as target. Then the Bayesian three-cornered hat method was adopted for model integration and the final dataset was generated. Evaluaion against four in-situ measurement networks shows that the BTCH dataset has relativey high accuracy both as station and network scales with mean unbiased RMSE values of 0.048 m3/m3 and 0.034 m3/m3. The dataset can be used for various regional hydrological, meteorological, ecological analysis and modeling.",
-            "descriptionCn": "土壤水分是陆表水分和能量循环的关键参数，但长时序、高空间分辨率、高质量的土壤水分数据集在青藏高原地区仍然比较稀缺。因此我们提供了1km、无缝、逐日、高质量青藏高原土壤水分数据集BTCH。首先，利用植被指数（NDVI、EVI）、地表温度（LST）、蒸散发（ET）、降水、地形（DEM、坡度、坡向、TWI）、土壤属性（soil properties）和土壤水分相关指数（SWCI、SIWSI、VSDI）等辅助因子，使用人工神经网络（ANN）、卷积神经网络（CNN）、残差神经网络（ResNet）、长短时记忆网络（LSTM）和XGBoost等5种机器/深度学习方法对ESA CCI土壤水分数据进行降尺度。然后使用基于贝叶斯广义三角帽法（Bayesian three-cornered hat method）对降尺度得到的土壤水分数据进行融合得到本产品。由4个地面观测网的验证结果表明该数据产品具有较高的精度，其站点尺度和观测网尺度无偏RMSE的均值分别为0.048 m³/m³和0.034 m³/m³。该数据产品可用于各种区域水文、气象、生态分析和建模。",
-            "instructions": "File name: the dataset is in TIFF format, a single file for the name of the \"BTCH_yyyymmdd. Tif\", such as BTCH_20010101. Tif, its corresponding is January 1, 2001 soil moisture value of the unit is m after/m after.Note: elements of real value = pixels * scaling factor (the scaling factor is 0.0001)",
-            "instructionsCn": "文件命名：该数据集数据以TIFF格式存储，单个文件的名称为“BTCH_yyyymmdd.tif”，如BTCH_20010101.tif，其对应的是2001年1月1日的土壤水分值，其单位为m³/m³。注意：要素真实值 = 像素值 * 缩放因子（其中，缩放因子为0.0001）\n",
-            "east": 104.7,
-            "west": 73.5,
-            "south": 26.0,
-            "north": 39.8,
-            "startTime": "2001-01-01 16:26:05",
-            "endTime": "2020-12-31 16:26:05",
-            "fileSize": 56598703058.0,
-            "cstr": "18406.11.Terre.tpdc.300224",
-            "doi": "10.11888/Terre.tpdc.300224",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "上官宇霖",
-                "nameEn": "SHANGGUAN Yulin",
-                "unitEn": "",
-                "unitCn": "浙江大学"
-            },
-            {
-                "nameCn": "史舟",
-                "nameEn": "SHI Zhou",
-                "unitEn": "",
-                "unitCn": "浙江大学"
-            },
-            {
-                "nameCn": "闵肖肖",
-                "nameEn": "MIN Xiaoxiao",
-                "unitEn": "",
-                "unitCn": "浙江大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Inter-comparison and integration of different soil moisture downscaling  methods over the Qinghai-Tibet Plateau",
-                "referenceCn": null,
-                "referenceEn": "Shangguan, Y., Min, X., & Shi, Z. (2023). Inter-comparison and integration of different soil moisture downscaling methods over the Qinghai-Tibet Plateau. Journal of Hydrology, 617, 129014, https://doi.org/10.1016/j.jhydrol.2022.129014."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "其他",
-                "nameEn": "Others"
-            },
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "其他数据",
-                "nameEn": "Others"
-            },
-            {
-                "nameCn": "土壤水分",
-                "nameEn": "Soil moisture"
-            },
-            {
-                "nameCn": "土壤湿度",
-                "nameEn": "soil moisture"
-            },
-            {
-                "nameCn": "机器学习",
-                "nameEn": "Machine Learning"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "降尺度",
-                "nameEn": "Downscaling"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "青藏高原",
-                "keywordEn": "Qinghai-Tibet Plateau"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2001-2020",
-                "keywordEn": "2001-2020",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "藏东南土壤有机碳高异质性成因与高精度量化研究",
-                "titleEn": "National Natural Science Foundation of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "b611fb43-c18c-4966-a85c-949ce1ca60f2",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "A 1 km daily soil moisture dataset over the Qinghai-Tibet  Plateau (2001-2020)",
+      "titleCn": "青藏高原1km逐日土壤水分数据集（2001-2020）",
+      "description": "Soil moisture is the key variable of water and energy cycle, but the long-term, high-resolution soil moisture data with high accuracy is still relatively lacking on the Qinghai-Tibet Plateau. Therefore, we provide the 1 km seamless daily soil moisture data over the Qinghai-Tibet Plateau during 2001-2020 (named as BTCH). Firstly, several predictors including the vegetation index (NDVI and EVI), land surface temperature (LST), evapotranspiration, precipitation, topography (DEM, aspect, slope, TWI), soil properties and three soil moisture related indices (SWCI SIWSI VSDI) were utilized. Five machine/deep learning methods including the artificial neural network (ANN), convolutional neural network (CNN), residual neural networks (ResNet), the long short-term memory network (LSTM) and XGBoost were trained for each year taking the ESA CCI soil moisture data as target. Then the Bayesian three-cornered hat method was adopted for model integration and the final dataset was generated. Evaluaion against four in-situ measurement networks shows that the BTCH dataset has relativey high accuracy both as station and network scales with mean unbiased RMSE values of 0.048 m3/m3 and 0.034 m3/m3. The dataset can be used for various regional hydrological, meteorological, ecological analysis and modeling.",
+      "descriptionCn": "土壤水分是陆表水分和能量循环的关键参数，但长时序、高空间分辨率、高质量的土壤水分数据集在青藏高原地区仍然比较稀缺。因此我们提供了1km、无缝、逐日、高质量青藏高原土壤水分数据集BTCH。首先，利用植被指数（NDVI、EVI）、地表温度（LST）、蒸散发（ET）、降水、地形（DEM、坡度、坡向、TWI）、土壤属性（soil properties）和土壤水分相关指数（SWCI、SIWSI、VSDI）等辅助因子，使用人工神经网络（ANN）、卷积神经网络（CNN）、残差神经网络（ResNet）、长短时记忆网络（LSTM）和XGBoost等5种机器/深度学习方法对ESA CCI土壤水分数据进行降尺度。然后使用基于贝叶斯广义三角帽法（Bayesian three-cornered hat method）对降尺度得到的土壤水分数据进行融合得到本产品。由4个地面观测网的验证结果表明该数据产品具有较高的精度，其站点尺度和观测网尺度无偏RMSE的均值分别为0.048 m³/m³和0.034 m³/m³。该数据产品可用于各种区域水文、气象、生态分析和建模。",
+      "instructions": "File name: the dataset is in TIFF format, a single file for the name of the \"BTCH_yyyymmdd. Tif\", such as BTCH_20010101. Tif, its corresponding is January 1, 2001 soil moisture value of the unit is m after/m after.Note: elements of real value = pixels * scaling factor (the scaling factor is 0.0001)",
+      "instructionsCn": "文件命名：该数据集数据以TIFF格式存储，单个文件的名称为“BTCH_yyyymmdd.tif”，如BTCH_20010101.tif，其对应的是2001年1月1日的土壤水分值，其单位为m³/m³。注意：要素真实值 = 像素值 * 缩放因子（其中，缩放因子为0.0001）\n",
+      "east": 104.7,
+      "west": 73.5,
+      "south": 26.0,
+      "north": 39.8,
+      "startTime": "2001-01-01 16:26:05",
+      "endTime": "2020-12-31 16:26:05",
+      "fileSize": 56598703058.0,
+      "cstr": "18406.11.Terre.tpdc.300224",
+      "doi": "10.11888/Terre.tpdc.300224",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Soil moisture (SM), defined as the total amount of water within the unsaturated zone, is a key state variable in water cycle and energy budgets of land ecosystem, controlling the process of evapotranspiration, influencing the partitioning of infiltration and runoff, and governing vegetation water uptake, thus having an essential role in weather forecasting, drought monitoring and water resource management. Accurate and detailed information of the spatiotemporal distribution of SM would therefore greatly improve our understanding of the land-atmosphere system. However, due to the complex and unique geographical environment, detailed seamless soil moisture information with high precision and high resolution over the Qinghai-Tibet Plateau (QTP) is still severely lacking. Generally speaking, ground observation can provide precise estimation of soil moisture but are costly and labor-intensive, and also have poor spatial representation for neighboring areas due to its high spatial heterogeneity. While, remote sensing, especially microwave remote sensing becomes the most promising tools in mapping regional to global soil moisture owing to the direct relationship between the electromagnetic radiation, soil dielectric and water content and the better penetrating capability of microwaves. Nevertheless, microwave soil moisture products usually have spatial resolutions of tens of kilometers. Such soil moisture products are only suitable for potential applications at continental and global scales but fail to meet regional application requirements such as water resource management, drought monitoring, precipitation/evapotranspiration estimation and precision agriculture."
-            ],
-            "research objective": [
-                "Therefore, this study firstly evaluated and inter-compared the downscaling performances of six machine/deep learning approaches and further proposed a hybrid downscaling method based on Bayesian three-cornered hat merging (MATCH)."
-            ],
-            "challenges": [
-                "However, only a few studies have intercompared the performances of different soil moisture downscaling methods and the performance discrepancy of diverse machine learning approaches should be further investigated."
-            ],
-            "methods": [
-                "First, SM downscaling predictors including NDVI, EVI, LST, albedo, SOC, soil texture (clay, sand and silt), terrain (dem, slope, aspect and TWI), landcover, latitude, longitude and day of the year (DOY) were preprocessed and resampled to 36 km. Then, six machine learning models were constructed taking the SMAP soil moisture data as target, and the corresponding downscaled surface soil moisture was generated. A Bayesian-based three-cornered hat (BTCH) merging method was subsequently applied to obtain the final downscaled surface soil moisture. Finally, the performance of each downscaled SM and merged downscaled product was evaluated using ground-based measurements and inter-compared."
-            ],
-            "dataset": [
-                "The daily 1 km seamless soil moisture product during 2015 – 2019 over the Qinghai-Tibet Plateau was then obtained."
-            ],
-            "findings": [
-                "Evaluation and inter-comparison results revealed that there was obvious performance discrepancy among different downscaling approaches and the gradient boosting decision tree (GBDT) and random forest (RF) were the best two methods, which performed best in the southern and eastern of the plateau, respectively. While the artificial neural network (ANN) outperformed other approaches in the northwestern areas. Validation against in-situ measurements showed that compared with SMAP SM, the MATCH SM exhibited comparable accuracy and lower error with mean R and ubRMSE values of 0.55 and 0.047 m3/m3. The mean R and ubRMSE values for SMAP SM were 0.67 and 0.056 m3/m3, respectively. In addition, the MATCH SM presented great improvement compared with any single downscaled SM data, having the highest correlation and the lowest ubRMSE scores. While, among different methods, the highest R was 0.50 (GBDT) and the lowest ubRMSE was 0.052 m3/m3 (residual network (ResNet)). Besides, the downscaled SM could accurately reflect the temporal variations of soil moisture and precipitation, and effectively represent the spatial patterns of soil moisture. Satisfactory downscaling results were achieved in arid and semi-arid areas whereas a certain degree of overestimation still existed in the eastern and southeastern regions with dense vegetation and high moisture conditions. Such overestimation was inherent from original SMAP SM but was mitigated after downscaling. In conclusion, performance differences existed among diverse downscaling approaches and the developed MATCH method could maximize the potentials of each method and show encouraging downscaling performances."
-            ],
-            "backgroundCn": [
-                "土壤湿度（SM）被定义为非饱和区内的水总量，是陆地生态系统水循环和能量预算中的关键状态变量，控制蒸散发过程，影响入渗和径流的分配，并主导植被的水分吸收，因此在天气预报、干旱监测和水资源管理中具有重要作用。因此，准确和详细的土壤湿度时空分布信息将极大地提高我们对陆气系统的理解。然而，由于复杂而独特的地理环境，青藏高原（QTP）地区缺乏高精度和高分辨率的无缝土壤湿度信息。一般来说，地面观测可以提供精确的土壤湿度估计，但成本高、劳动密集，并且由于其高空间异质性，邻近地区的空间代表性较差。而遥感，特别是微波遥感，成为了从区域到全球土壤湿度制图的最有前景的工具，因为电磁辐射、土壤介电常数和水分含量之间存在直接关系，且微波具有更好的穿透能力。然而，微波土壤湿度产品通常具有数十公里的空间分辨率。这类土壤湿度产品仅适用于大陆和全球尺度的潜在应用，但无法满足区域应用需求，如水资源管理、干旱监测、降水/蒸散发估算和精准农业。"
-            ],
-            "research objectiveCn": [
-                "因此，本研究首先评估并比较了六种机器/深度学习方法的降尺度性能，并进一步提出了一种基于贝叶斯三角帽合并（MATCH）的混合降尺度方法。"
-            ],
-            "challengesCn": [
-                "然而，目前只有少数研究对不同土壤湿度下采样方法的性能进行了比较，而不同机器学习方法的性能差异仍需进一步研究。"
-            ],
-            "methodsCn": [
-                "首先，对SM下调预测因子进行预处理，包括NDVI、EVI、LST、反照率、土壤有机碳（SOC）、土壤质地（粘土、沙子和粉土）、地形（数字高程模型、坡度、方位和水文指数）、土地覆盖、纬度、经度和一年中的天数（DOY），并将其重采样至36公里。然后，构建了六个机器学习模型，以SMAP土壤湿度数据作为目标，生成相应的下调表层土壤湿度。随后，应用基于贝叶斯的三角帽（BTCH）合并方法，以获得最终的下调表层土壤湿度。最后，使用地面测量数据对每个下调的土壤湿度和合并的下调产品的性能进行了评估和相互比较。"
-            ],
-            "datasetCn": [
-                "2015年至2019年期间，获得了青藏高原每日1公里无缝土壤湿度产品。"
-            ],
-            "findingsCn": [
-                "评估和比较结果显示，不同下采样方法之间存在明显的性能差异，梯度提升决策树（GBDT）和随机森林（RF）是表现最好的两种方法，分别在高原的南部和东部表现最佳。而人工神经网络（ANN）在西北地区的表现优于其他方法。与现场测量结果的验证表明，与SMAP土壤湿度（SM）相比，MATCH土壤湿度展现出相似的准确性和更低的误差，平均相关系数（R）和无偏根均方根误差（ubRMSE）值分别为0.55和0.047 m³/m³。SMAP土壤湿度的平均R和ubRMSE值分别为0.67和0.056 m³/m³。此外，MATCH土壤湿度相比任何单一的下采样土壤湿度数据有显著改善，具有最高的相关性和最低的ubRMSE分数。在不同方法中，最高的R为0.50（GBDT），最低的ubRMSE为0.052 m³/m³（残差网络（ResNet））。此外，下采样的土壤湿度能够准确反映土壤湿度和降水的时间变化，并有效表示土壤湿度的空间模式。在干旱和半干旱地区取得了令人满意的下采样结果，但在植被茂密和湿度较高的东部和东南部地区仍存在一定程度的高估。这种高估是源于原始的SMAP土壤湿度，但在下采样后有所减轻。总之，不同下采样方法之间存在性能差异，开发的MATCH方法能够最大化每种方法的潜力，并展现出令人鼓舞的下采样性能。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "上官宇霖",
+        "nameEn": "SHANGGUAN Yulin",
+        "unitEn": "",
+        "unitCn": "浙江大学"
+      },
+      {
+        "nameCn": "史舟",
+        "nameEn": "SHI Zhou",
+        "unitEn": "",
+        "unitCn": "浙江大学"
+      },
+      {
+        "nameCn": "闵肖肖",
+        "nameEn": "MIN Xiaoxiao",
+        "unitEn": "",
+        "unitCn": "浙江大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Is remote sensing considered a promising tool for mapping soil moisture due to its relationship with electromagnetic radiation?",
-                "QuestionCn": "遥感被认为是一个有前景的土壤湿度测绘工具，因为它与电磁辐射之间存在关系。",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Do ground-based observations provide higher precision soil moisture estimates at the cost of spatial representation?",
-                "QuestionCn": "地面观测是否提供更高精度的土壤湿度估计，但代价是空间表现的降低？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which machine learning method is more suitable for downscaling soil moisture data in the southern and eastern Qinghai-Tibet Plateau: GBDT or RF?",
-                "QuestionCn": "哪种机器学习方法更适合在青藏高原南部和东部进行土壤湿度数据的降尺度：GBDT还是RF？",
-                "AnswerEn": "GBDT",
-                "AnswerCn": "GBDT",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is the primary challenge in obtaining high-resolution soil moisture data over the Qinghai-Tibet Plateau more related to the geographical environment or the cost and labor of ground observation?",
-                "QuestionCn": "在青藏高原获取高分辨率土壤湿度数据的主要挑战是与地理环境相关，还是与地面观测的成本和劳动有关？",
-                "AnswerEn": "geographical environment",
-                "AnswerCn": "地理环境",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "For evaluating downscaled soil moisture products, are ground-based measurements or remote sensing data typically more effective?",
-                "QuestionCn": "在评估下调土壤湿度产品时，地面测量还是遥感数据通常更有效？",
-                "AnswerEn": "Ground-based measurements",
-                "AnswerCn": "地面测量",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the auxiliary factors used in data collection methods for soil moisture downscaling in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在青藏高原土壤湿度下分辨率的资料收集方法中使用的辅助因素有哪些？",
-                "AnswerEn": "vegetation indices NDVI EVI land surface temperature LST evapotranspiration ET precipitation terrain DEM slope aspect TWI soil properties soil moisture-related indices SWCI SIWSI VSDI",
-                "AnswerCn": "植被指数 NDVI EVI 地表温度 LST 蒸散发 ET 降水 地形 DEM 坡度 坡向 TWI 土壤性质 土壤湿度相关指数 SWCI SIWSI VSDI",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method used to improve the accuracy and resolution of soil moisture datasets in challenging geographical environments like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "您能否提供一个数据收集方法的例子，用于提高像青藏高原这样具有挑战性地理环境中的土壤湿度数据集的准确性和分辨率？",
-                "AnswerEn": "One example of a data collection method used in such environments is the combination of remote sensing data with auxiliary factors like vegetation indices (NDVI, EVI), land surface temperature, and terrain attributes. These factors are integrated using machine and deep learning models such as artificial neural networks (ANN) and convolutional neural networks (CNN) to enhance the spatial resolution and accuracy of soil moisture datasets.",
-                "AnswerCn": "在这样的环境中使用的一种数据收集方法是将遥感数据与辅助因素结合起来，如植被指数（NDVI、EVI）、地表温度和地形属性。这些因素通过机器学习和深度学习模型（如人工神经网络（ANN）和卷积神经网络（CNN））进行整合，以提高土壤湿度数据集的空间分辨率和准确性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the key characteristics of soil moisture datasets that can enhance our understanding of the land-atmosphere system in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "土壤湿度数据集的关键特征有哪些，可以增强我们对青藏高原陆气系统的理解？",
-                "AnswerEn": "high spatial resolution, temporal seamlessness, high accuracy, spatiotemporal distribution of soil moisture",
-                "AnswerCn": "高空间分辨率、时间无缝性、高精度、土壤湿度的时空分布",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What characteristics of soil moisture data contribute to its applicability in regional water resource management and drought monitoring?",
-                "QuestionCn": "土壤湿度数据的哪些特征有助于其在区域水资源管理和干旱监测中的应用？",
-                "AnswerEn": "high spatial resolution, precision, seamless integration of data, ability to accurately reflect temporal variations and spatial patterns, ability to mitigate overestimations",
-                "AnswerCn": "高空间分辨率、精确度、数据的无缝集成、准确反映时间变化和空间模式的能力、减轻高估的能力。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does 'downscaling' mean in the context of soil moisture data collection over the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在青藏高原土壤湿度数据收集的背景下，“下采样”是什么意思？",
-                "AnswerEn": "In the context of soil moisture data collection over the Qinghai-Tibet Plateau, 'downscaling' refers to the process of increasing the spatial resolution of soil moisture data. This is achieved by using predictors such as NDVI, EVI, LST, and others, in combination with machine learning models, to refine the coarser resolution SMAP soil moisture data to a finer 1 km resolution.",
-                "AnswerCn": "在青藏高原土壤湿度数据收集的背景下，“下采样”指的是提高土壤湿度数据的空间分辨率。通过使用NDVI、EVI、LST等预测因子，结合机器学习模型，将较粗分辨率的SMAP土壤湿度数据细化到1公里的分辨率。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is the 'Bayesian three-cornered hat method' in the context of merging soil moisture datasets?",
-                "QuestionCn": "“贝叶斯三角帽方法”是在合并土壤湿度数据集的背景下使用的一种方法。",
-                "AnswerEn": "The 'Bayesian three-cornered hat method' is a merging technique used to combine different downscaled soil moisture datasets. This method aims to utilize the strengths of various machine learning approaches to produce a final product with improved accuracy and reduced error, as evidenced by validation against ground-based measurements.",
-                "AnswerCn": "“贝叶斯三角帽方法”是一种合并技术，用于结合不同的下调土壤湿度数据集。该方法旨在利用各种机器学习方法的优势，生成具有更高准确性和降低误差的最终产品，经过与地面测量的验证证明了这一点。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do machine learning methods like gradient boosting decision tree and random forest compare to deep learning approaches such as convolutional neural networks and residual networks in terms of soil moisture downscaling accuracy?",
-                "QuestionCn": "机器学习方法如梯度提升决策树和随机森林与深度学习方法如卷积神经网络和残差网络在土壤湿度下采样精度方面如何比较？",
-                "AnswerEn": "Gradient boosting decision tree and random forest performed best in the southern and eastern regions of the plateau, while artificial neural networks outperformed other approaches in the northwestern areas. The residual network had the lowest unbiased RMSE among different methods.",
-                "AnswerCn": "梯度提升决策树和随机森林在高原的南部和东部地区表现最佳，而人工神经网络在西北地区的表现优于其他方法。残差网络在不同方法中具有最低的无偏均方根误差（RMSE）。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "How does the Bayesian three-cornered hat merging method enhance the accuracy of downscaled soil moisture datasets compared to individual machine learning models?",
-                "QuestionCn": "贝叶斯三角帽合并方法如何提高降尺度土壤湿度数据集的准确性，相较于单独的机器学习模型？",
-                "AnswerEn": "The Bayesian three-cornered hat merging method resulted in a soil moisture product with comparable accuracy and lower error than the original SMAP data, achieving the highest correlation and the lowest unbiased RMSE scores compared to any single downscaled soil moisture data.",
-                "AnswerCn": "贝叶斯三角帽合并方法生成的土壤湿度产品在准确性上与原始SMAP数据相当，并且误差更低，达到了与任何单一下调土壤湿度数据相比最高的相关性和最低的无偏均方根误差（RMSE）得分。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What potential challenges might arise from using remote sensing data to generate high-resolution soil moisture datasets, and how can these challenges be mitigated?",
-                "QuestionCn": "使用遥感数据生成高分辨率土壤湿度数据集可能会面临哪些潜在挑战，以及如何减轻这些挑战？",
-                "AnswerEn": "Remote sensing data often suffer from coarse spatial resolutions, leading to potential challenges in regional application. These challenges can be mitigated by employing machine learning-driven downscaling methods, which enhance resolution and precision. Additionally, the inherent overestimation from original datasets like SMAP SM can be addressed through downscaling approaches which refine spatial patterns and temporal variations.",
-                "AnswerCn": "遥感数据通常存在空间分辨率较粗的问题，这给区域应用带来了潜在挑战。通过采用基于机器学习的下采样方法，可以提高分辨率和精度，从而缓解这些挑战。此外，像SMAP SM这样的原始数据集固有的高估问题也可以通过下采样方法进行处理，从而改善空间模式和时间变化。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the implications of using a Bayesian-based merging method for synthesizing multi-source soil moisture data, and how does it contribute to dataset accuracy?",
-                "QuestionCn": "使用基于贝叶斯的合并方法合成多源土壤湿度数据的影响是什么？它如何有助于数据集的准确性？",
-                "AnswerEn": "Using a Bayesian-based merging method, such as the three-cornered hat method, allows for the synthesis of multi-source soil moisture data, enhancing accuracy by maximizing the strengths of individual datasets. This method contributes to achieving lower error rates and higher correlation values, thus providing a more reliable and comprehensive soil moisture dataset for applications in hydrology, meteorology, and ecology.",
-                "AnswerCn": "使用基于贝叶斯的合并方法，如三角帽方法，可以合成多源土壤湿度数据，通过最大化各个数据集的优势来提高准确性。这种方法有助于实现更低的误差率和更高的相关性值，从而为水文学、气象学和生态学等应用提供更可靠和全面的土壤湿度数据集。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "Why is there a lack of detailed seamless soil moisture information with high precision and high resolution over the Qinghai-Tibet Plateau?",
-                "QuestionCn": "为什么青藏高原缺乏高精度和高分辨率的详细无缝土壤湿度信息？",
-                "AnswerEn": "The complex and unique geographical environment of the Qinghai-Tibet Plateau makes it challenging to obtain detailed seamless soil moisture information. Ground observations can provide precise estimations but are costly, labor-intensive, and have poor spatial representation due to high spatial heterogeneity. Microwave remote sensing, while promising, typically offers resolutions of tens of kilometers, which are insufficient for regional applications.",
-                "AnswerCn": "青藏高原复杂独特的地理环境使得获取详细的无缝土壤湿度信息变得具有挑战性。地面观测可以提供精确的估算，但成本高、劳动密集，并且由于空间异质性强，空间代表性差。微波遥感虽然前景广阔，但通常提供的分辨率为数十公里，这对于区域应用来说是不够的。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What factors contribute to the discrepancies in performance among different soil moisture downscaling methods?",
-                "QuestionCn": "不同土壤湿度下采样方法之间性能差异的因素有哪些？",
-                "AnswerEn": "Performance discrepancies among different soil moisture downscaling methods arise due to the diverse nature of machine learning approaches and their varying effectiveness across different regions. The gradient boosting decision tree and random forest methods perform well in the southern and eastern plateau, while the artificial neural network excels in the northwestern areas. These differences highlight the influence of regional characteristics and the inherent limitations of each method.",
-                "AnswerCn": "不同土壤湿度下采样方法之间的性能差异源于机器学习方法的多样性及其在不同地区的有效性差异。梯度提升决策树和随机森林方法在南部和东部高原表现良好，而人工神经网络在西北地区表现出色。这些差异突显了区域特征的影响以及每种方法固有的局限性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why do certain areas, such as the eastern and southeastern regions with dense vegetation and high moisture conditions, experience a degree of overestimation in soil moisture data?",
-                "QuestionCn": "某些地区，如东部和东南部的植被茂密和高湿度条件下，为什么会在土壤湿度数据中出现一定程度的高估？",
-                "AnswerEn": "The overestimation in soil moisture data in regions with dense vegetation and high moisture conditions is a consequence of the inherent limitations in the original soil moisture data sources, such as SMAP. These sources tend to overestimate moisture in such areas, although the downscaling process helps mitigate some of these errors.",
-                "AnswerCn": "在植被密集和湿度较高的地区，土壤湿度数据的高估是原始土壤湿度数据源（如SMAP）固有局限性的结果。这些数据源在这些区域往往会高估湿度，尽管下采样过程有助于减轻一些这些错误。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential effects on data accuracy and spatial resolution when employing machine learning and deep learning techniques for soil moisture downscaling?",
-                "QuestionCn": "在采用机器学习和深度学习技术进行土壤湿度下采样时，数据准确性和空间分辨率可能会受到哪些潜在影响？",
-                "AnswerEn": "Using machine learning and deep learning techniques, such as artificial neural networks (ANN), convolutional neural networks (CNN), and others, can improve the spatial resolution and accuracy of soil moisture datasets. These methods allow the transformation of coarse-resolution soil moisture data into higher-resolution products by utilizing auxiliary data like vegetation indices, surface temperature, and soil properties. This approach can enhance data quality, making the datasets more suitable for regional hydrological and ecological applications on the Qinghai-Tibet Plateau.",
-                "AnswerCn": "使用机器学习和深度学习技术，如人工神经网络（ANN）、卷积神经网络（CNN）等，可以提高土壤湿度数据集的空间分辨率和准确性。这些方法通过利用辅助数据，如植被指数、地表温度和土壤特性，将粗分辨率的土壤湿度数据转化为更高分辨率的产品。这种方法可以提高数据质量，使数据集更适合在青藏高原进行区域水文和生态应用。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the implications of using a hybrid downscaling method, such as the Bayesian three-cornered hat method, on the consistency and reliability of soil moisture data products?",
-                "QuestionCn": "使用混合下采样方法，如贝叶斯三角帽方法，对土壤湿度数据产品的一致性和可靠性有什么影响？",
-                "AnswerEn": "Employing a hybrid downscaling method like the Bayesian three-cornered hat method can enhance the consistency and reliability of soil moisture data products. This approach integrates multiple downscaling models, leveraging their strengths to produce a more robust dataset. The method mitigates individual model biases and errors, leading to improved correlation and reduced root mean square errors compared to single-method datasets. Consequently, it provides a more reliable source of soil moisture information for various environmental and hydrological analyses.",
-                "AnswerCn": "采用混合降尺度方法，如贝叶斯三角帽方法，可以增强土壤湿度数据产品的一致性和可靠性。这种方法整合了多种降尺度模型，利用它们的优势生成更强大的数据集。该方法减轻了单一模型的偏差和错误，从而提高了相关性并减少了与单一方法数据集相比的均方根误差。因此，它为各种环境和水文分析提供了更可靠的土壤湿度信息。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the purpose of utilizing machine learning and deep learning approaches for soil moisture downscaling in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在青藏高原利用机器学习和深度学习方法进行土壤湿度下采样的目的是什么？",
-                "AnswerEn": "The purpose is to evaluate and inter-compare the downscaling performances of various machine/deep learning approaches and to propose a hybrid downscaling method for generating high-resolution soil moisture data, addressing the lack of detailed seamless soil moisture information in the region.",
-                "AnswerCn": "该研究的目的是评估和比较各种机器/深度学习方法的降尺度性能，并提出一种混合降尺度方法，以生成高分辨率的土壤湿度数据，解决该地区缺乏详细无缝土壤湿度信息的问题。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why is it important to integrate auxiliary factors such as NDVI, EVI, and LST in downscaling soil moisture data?",
-                "QuestionCn": "将辅助因子如NDVI、EVI和LST整合到土壤湿度数据的下采样中是重要的原因是什么？",
-                "AnswerEn": "Integrating auxiliary factors like NDVI, EVI, and LST is important because they serve as predictors for downscaling soil moisture, enhancing the accuracy and quality of the high-resolution soil moisture dataset by capturing relevant environmental variables.",
-                "AnswerCn": "整合辅助因素如NDVI、EVI和LST很重要，因为它们作为下调土壤湿度的预测因子，通过捕捉相关环境变量，提高了高分辨率土壤湿度数据集的准确性和质量。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in using machine learning techniques to downscale soil moisture data for the Qinghai-Tibet Plateau?",
-                "QuestionCn": "使用机器学习技术对青藏高原土壤湿度数据进行下采样的程序步骤包括：",
-                "AnswerEn": "The procedural steps involve preprocessing and resampling predictors such as NDVI, EVI, LST, albedo, SOC, soil texture, terrain features, landcover, latitude, longitude, and day of the year to a resolution of 36 km. Six machine learning models are then constructed using the SMAP soil moisture data as the target to generate corresponding downscaled surface soil moisture. A Bayesian-based three-cornered hat merging method is subsequently applied to obtain the final downscaled surface soil moisture, which is then evaluated using ground-based measurements.",
-                "AnswerCn": "程序步骤包括对NDVI、EVI、LST、反照率、土壤有机碳、土壤纹理、地形特征、土地覆盖、纬度、经度和一年中的天数等预测因子进行预处理和重采样，分辨率为36公里。然后，构建六个机器学习模型，以SMAP土壤湿度数据作为目标，生成相应的下分辨率表层土壤湿度。随后，应用基于贝叶斯的三角帽合并方法，以获得最终的下分辨率表层土壤湿度，并使用地面测量数据进行评估。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can machine and deep learning methods be integrated to enhance the accuracy of soil moisture datasets?",
-                "QuestionCn": "如何将机器学习和深度学习方法结合起来，以提高土壤湿度数据集的准确性？",
-                "AnswerEn": "Machine and deep learning methods can be integrated by evaluating and inter-comparing the downscaling performances of various approaches, including ANN, CNN, ResNet, LSTM, and XGBoost. The integration also involves the use of a hybrid downscaling method based on Bayesian three-cornered hat merging to combine the strengths of each method, leading to enhanced accuracy in the final soil moisture datasets.",
-                "AnswerCn": "机器学习和深度学习方法可以通过评估和比较各种方法的降尺度性能来进行集成，包括人工神经网络（ANN）、卷积神经网络（CNN）、残差网络（ResNet）、长短期记忆网络（LSTM）和XGBoost。集成还涉及基于贝叶斯三角帽合并的混合降尺度方法，以结合每种方法的优点，从而提高最终土壤湿度数据集的准确性。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What challenges must be addressed to improve the spatial resolution and accuracy of soil moisture data in remote sensing applications?",
-                "QuestionCn": "在遥感应用中，提高土壤湿度数据的空间分辨率和准确性必须解决哪些挑战？",
-                "AnswerEn": "Challenges to be addressed include the performance discrepancy among different soil moisture downscaling methods, the need for detailed and seamless soil moisture information over complex geographical environments like the Qinghai-Tibet Plateau, and the inherent overestimation in original SMAP SM data. Addressing these challenges involves intercomparing different downscaling methods, refining machine learning approaches, and applying advanced merging techniques like the Bayesian three-cornered hat method to improve spatial resolution and accuracy.",
-                "AnswerCn": "需要解决的挑战包括不同土壤湿度下采样方法之间的性能差异、在像青藏高原这样复杂地理环境中对详细和无缝土壤湿度信息的需求，以及原始SMAP SM数据中固有的过高估计。解决这些挑战涉及对不同下采样方法的相互比较、改进机器学习方法，以及应用先进的合并技术，如贝叶斯三角帽方法，以提高空间分辨率和准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might a dataset over the Qinghai-Tibet Plateau fail to meet regional application requirements such as water resource management or precision agriculture?",
-                "QuestionCn": "一个关于青藏高原的数据集可能会因以下原因未能满足区域应用需求，例如水资源管理或精准农业：",
-                "AnswerEn": "Microwave soil moisture products usually have spatial resolutions of tens of kilometers, making them suitable for continental and global scales but inadequate for regional applications that require higher precision and resolution.",
-                "AnswerCn": "微波土壤湿度产品通常具有数十公里的空间分辨率，适合于大陆和全球尺度，但对于需要更高精度和分辨率的区域应用则不够充分。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What challenges might arise when evaluating and inter-comparing the performances of different soil moisture downscaling methods?",
-                "QuestionCn": "在评估和比较不同土壤湿度下采样方法的性能时，可能会出现哪些挑战？",
-                "AnswerEn": "Few studies have intercompared the performances of different soil moisture downscaling methods, and the performance discrepancy of diverse machine learning approaches should be further investigated to understand their effectiveness in different regions and conditions.",
-                "AnswerCn": "少数研究对不同土壤湿度下采样方法的性能进行了比较，而不同机器学习方法的性能差异应进一步研究，以了解它们在不同地区和条件下的有效性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How would you evaluate the effectiveness of machine learning methods in enhancing the spatial resolution of soil moisture datasets over complex terrains like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "如何评估机器学习方法在提高复杂地形（如青藏高原）土壤湿度数据集空间分辨率方面的有效性？",
-                "AnswerEn": "Machine learning methods, specifically different approaches like GBDT, RF, and ANN, have shown varied effectiveness in downscaling soil moisture datasets. The evaluation and inter-comparison reveal that some methods perform better in specific regions of the plateau. For instance, GBDT and RF are more effective in the southern and eastern areas, while ANN performs better in the northwestern region. The effectiveness is further demonstrated through the improvement in correlation and reduction in unbias RMSE, indicating that these methods can significantly enhance the spatial resolution of soil moisture datasets over complex terrains like the Qinghai-Tibet Plateau.",
-                "AnswerCn": "机器学习方法，特别是不同的算法如GBDT、RF和ANN，在下调土壤湿度数据集方面表现出不同的有效性。评估和比较表明，一些方法在高原的特定区域表现更好。例如，GBDT和RF在南部和东部地区更有效，而ANN在西北地区表现更佳。通过相关性改善和无偏RMSE减少进一步证明了这些方法的有效性，表明它们可以显著提高复杂地形（如青藏高原）上土壤湿度数据集的空间分辨率。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What challenges do you perceive in integrating remote sensing data with ground observations to create high-resolution soil moisture datasets?",
-                "QuestionCn": "您认为在将遥感数据与地面观测数据结合以创建高分辨率土壤湿度数据集时会面临哪些挑战？",
-                "AnswerEn": "Integrating remote sensing data with ground observations presents challenges such as spatial heterogeneity and the high spatial resolution required for regional applications. Ground observations, although precise, are labor-intensive and costly and may not represent broader areas effectively. Remote sensing, particularly microwave sensing, offers better spatial coverage but typically at lower resolutions, making it challenging to meet regional requirements. The need for seamless, high-resolution data necessitates advanced downscaling techniques, such as machine learning, to bridge the gap between these data sources.",
-                "AnswerCn": "将遥感数据与地面观测相结合面临着空间异质性和区域应用所需的高空间分辨率等挑战。地面观测虽然精确，但劳动密集且成本高，可能无法有效代表更广泛的区域。遥感，特别是微波遥感，提供了更好的空间覆盖，但通常分辨率较低，这使得满足区域需求变得困难。无缝、高分辨率数据的需求需要先进的下采样技术，如机器学习，以弥合这些数据源之间的差距。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "In what ways could fusion methods like the Bayesian three-cornered hat enhance the quality and applicability of soil moisture datasets for regional hydrological analysis?",
-                "QuestionCn": "融合方法如贝叶斯三角帽如何增强土壤湿度数据集在区域水文分析中的质量和适用性？",
-                "AnswerEn": "Fusion methods like the Bayesian three-cornered hat can significantly enhance the quality and applicability of soil moisture datasets by combining data from multiple sources to leverage their strengths. This method facilitates the merging of downscaled data from various machine learning models, resulting in higher accuracy and reduced errors. Such enhancements are crucial for regional hydrological analysis, where high precision and resolution are required to accurately reflect temporal variations and spatial patterns of soil moisture, especially in areas with high vegetation and moisture variability.",
-                "AnswerCn": "融合方法，如贝叶斯三角帽，可以通过结合来自多个来源的数据来显著提高土壤湿度数据集的质量和适用性，从而发挥各自的优势。这种方法促进了来自各种机器学习模型的降尺度数据的合并，从而提高了准确性并减少了误差。这种增强对于区域水文分析至关重要，因为高精度和高分辨率是准确反映土壤湿度的时间变化和空间模式所必需的，尤其是在植被和湿度变异性较高的地区。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I'm unsure about the specific challenges faced in collecting and validating soil moisture data over the Qinghai-Tibet Plateau.",
-                "QuestionCn": "我不确定在青藏高原收集和验证土壤湿度数据时面临的具体挑战。",
-                "AnswerEn": "The challenges in this region include the high spatial heterogeneity and complex geographical environment, which make ground observations costly and labor-intensive. Additionally, remote sensing usually offers low spatial resolution. Validation is also complex, requiring the use of data from multiple ground observation networks to ensure the downscaled products reflect accurate soil moisture levels.",
-                "AnswerCn": "该地区面临的挑战包括高空间异质性和复杂的地理环境，这使得地面观测成本高且劳动密集。此外，遥感通常提供低空间分辨率。验证也很复杂，需要使用来自多个地面观测网络的数据，以确保下调产品反映准确的土壤湿度水平。",
-                "Level": "C1(Remembering)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Inter-comparison and integration of different soil moisture downscaling  methods over the Qinghai-Tibet Plateau",
+        "referenceCn": null,
+        "referenceEn": "Shangguan, Y., Min, X., & Shi, Z. (2023). Inter-comparison and integration of different soil moisture downscaling methods over the Qinghai-Tibet Plateau. Journal of Hydrology, 617, 129014, https://doi.org/10.1016/j.jhydrol.2022.129014."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "其他",
+        "nameEn": "Others"
+      },
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "其他数据",
+        "nameEn": "Others"
+      },
+      {
+        "nameCn": "土壤水分",
+        "nameEn": "Soil moisture"
+      },
+      {
+        "nameCn": "土壤湿度",
+        "nameEn": "soil moisture"
+      },
+      {
+        "nameCn": "机器学习",
+        "nameEn": "Machine Learning"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "降尺度",
+        "nameEn": "Downscaling"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "青藏高原",
+        "keywordEn": "Qinghai-Tibet Plateau"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2001-2020",
+        "keywordEn": "2001-2020",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "藏东南土壤有机碳高异质性成因与高精度量化研究",
+        "titleEn": "National Natural Science Foundation of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Soil moisture (SM), defined as the total amount of water within the unsaturated zone, is a key state variable in water cycle and energy budgets of land ecosystem, controlling the process of evapotranspiration, influencing the partitioning of infiltration and runoff, and governing vegetation water uptake, thus having an essential role in weather forecasting, drought monitoring and water resource management. Accurate and detailed information of the spatiotemporal distribution of SM would therefore greatly improve our understanding of the land-atmosphere system. However, due to the complex and unique geographical environment, detailed seamless soil moisture information with high precision and high resolution over the Qinghai-Tibet Plateau (QTP) is still severely lacking. Generally speaking, ground observation can provide precise estimation of soil moisture but are costly and labor-intensive, and also have poor spatial representation for neighboring areas due to its high spatial heterogeneity. While, remote sensing, especially microwave remote sensing becomes the most promising tools in mapping regional to global soil moisture owing to the direct relationship between the electromagnetic radiation, soil dielectric and water content and the better penetrating capability of microwaves. Nevertheless, microwave soil moisture products usually have spatial resolutions of tens of kilometers. Such soil moisture products are only suitable for potential applications at continental and global scales but fail to meet regional application requirements such as water resource management, drought monitoring, precipitation/evapotranspiration estimation and precision agriculture."
+      ],
+      "research objective": [
+        "Therefore, this study firstly evaluated and inter-compared the downscaling performances of six machine/deep learning approaches and further proposed a hybrid downscaling method based on Bayesian three-cornered hat merging (MATCH)."
+      ],
+      "challenges": [
+        "However, only a few studies have intercompared the performances of different soil moisture downscaling methods and the performance discrepancy of diverse machine learning approaches should be further investigated."
+      ],
+      "methods": [
+        "First, SM downscaling predictors including NDVI, EVI, LST, albedo, SOC, soil texture (clay, sand and silt), terrain (dem, slope, aspect and TWI), landcover, latitude, longitude and day of the year (DOY) were preprocessed and resampled to 36 km. Then, six machine learning models were constructed taking the SMAP soil moisture data as target, and the corresponding downscaled surface soil moisture was generated. A Bayesian-based three-cornered hat (BTCH) merging method was subsequently applied to obtain the final downscaled surface soil moisture. Finally, the performance of each downscaled SM and merged downscaled product was evaluated using ground-based measurements and inter-compared."
+      ],
+      "dataset": [
+        "The daily 1 km seamless soil moisture product during 2015 – 2019 over the Qinghai-Tibet Plateau was then obtained."
+      ],
+      "findings": [
+        "Evaluation and inter-comparison results revealed that there was obvious performance discrepancy among different downscaling approaches and the gradient boosting decision tree (GBDT) and random forest (RF) were the best two methods, which performed best in the southern and eastern of the plateau, respectively. While the artificial neural network (ANN) outperformed other approaches in the northwestern areas. Validation against in-situ measurements showed that compared with SMAP SM, the MATCH SM exhibited comparable accuracy and lower error with mean R and ubRMSE values of 0.55 and 0.047 m3/m3. The mean R and ubRMSE values for SMAP SM were 0.67 and 0.056 m3/m3, respectively. In addition, the MATCH SM presented great improvement compared with any single downscaled SM data, having the highest correlation and the lowest ubRMSE scores. While, among different methods, the highest R was 0.50 (GBDT) and the lowest ubRMSE was 0.052 m3/m3 (residual network (ResNet)). Besides, the downscaled SM could accurately reflect the temporal variations of soil moisture and precipitation, and effectively represent the spatial patterns of soil moisture. Satisfactory downscaling results were achieved in arid and semi-arid areas whereas a certain degree of overestimation still existed in the eastern and southeastern regions with dense vegetation and high moisture conditions. Such overestimation was inherent from original SMAP SM but was mitigated after downscaling. In conclusion, performance differences existed among diverse downscaling approaches and the developed MATCH method could maximize the potentials of each method and show encouraging downscaling performances."
+      ],
+      "backgroundCn": [
+        "土壤湿度（SM）被定义为非饱和区内的水总量，是陆地生态系统水循环和能量预算中的关键状态变量，控制蒸散发过程，影响入渗和径流的分配，并主导植被的水分吸收，因此在天气预报、干旱监测和水资源管理中具有重要作用。因此，准确和详细的土壤湿度时空分布信息将极大地提高我们对陆气系统的理解。然而，由于复杂而独特的地理环境，青藏高原（QTP）地区缺乏高精度和高分辨率的无缝土壤湿度信息。一般来说，地面观测可以提供精确的土壤湿度估计，但成本高、劳动密集，并且由于其高空间异质性，邻近地区的空间代表性较差。而遥感，特别是微波遥感，成为了从区域到全球土壤湿度制图的最有前景的工具，因为电磁辐射、土壤介电常数和水分含量之间存在直接关系，且微波具有更好的穿透能力。然而，微波土壤湿度产品通常具有数十公里的空间分辨率。这类土壤湿度产品仅适用于大陆和全球尺度的潜在应用，但无法满足区域应用需求，如水资源管理、干旱监测、降水/蒸散发估算和精准农业。"
+      ],
+      "research objectiveCn": [
+        "因此，本研究首先评估并比较了六种机器/深度学习方法的降尺度性能，并进一步提出了一种基于贝叶斯三角帽合并（MATCH）的混合降尺度方法。"
+      ],
+      "challengesCn": [
+        "然而，目前只有少数研究对不同土壤湿度下采样方法的性能进行了比较，而不同机器学习方法的性能差异仍需进一步研究。"
+      ],
+      "methodsCn": [
+        "首先，对SM下调预测因子进行预处理，包括NDVI、EVI、LST、反照率、土壤有机碳（SOC）、土壤质地（粘土、沙子和粉土）、地形（数字高程模型、坡度、方位和水文指数）、土地覆盖、纬度、经度和一年中的天数（DOY），并将其重采样至36公里。然后，构建了六个机器学习模型，以SMAP土壤湿度数据作为目标，生成相应的下调表层土壤湿度。随后，应用基于贝叶斯的三角帽（BTCH）合并方法，以获得最终的下调表层土壤湿度。最后，使用地面测量数据对每个下调的土壤湿度和合并的下调产品的性能进行了评估和相互比较。"
+      ],
+      "datasetCn": [
+        "2015年至2019年期间，获得了青藏高原每日1公里无缝土壤湿度产品。"
+      ],
+      "findingsCn": [
+        "评估和比较结果显示，不同下采样方法之间存在明显的性能差异，梯度提升决策树（GBDT）和随机森林（RF）是表现最好的两种方法，分别在高原的南部和东部表现最佳。而人工神经网络（ANN）在西北地区的表现优于其他方法。与现场测量结果的验证表明，与SMAP土壤湿度（SM）相比，MATCH土壤湿度展现出相似的准确性和更低的误差，平均相关系数（R）和无偏根均方根误差（ubRMSE）值分别为0.55和0.047 m³/m³。SMAP土壤湿度的平均R和ubRMSE值分别为0.67和0.056 m³/m³。此外，MATCH土壤湿度相比任何单一的下采样土壤湿度数据有显著改善，具有最高的相关性和最低的ubRMSE分数。在不同方法中，最高的R为0.50（GBDT），最低的ubRMSE为0.052 m³/m³（残差网络（ResNet））。此外，下采样的土壤湿度能够准确反映土壤湿度和降水的时间变化，并有效表示土壤湿度的空间模式。在干旱和半干旱地区取得了令人满意的下采样结果，但在植被茂密和湿度较高的东部和东南部地区仍存在一定程度的高估。这种高估是源于原始的SMAP土壤湿度，但在下采样后有所减轻。总之，不同下采样方法之间存在性能差异，开发的MATCH方法能够最大化每种方法的潜力，并展现出令人鼓舞的下采样性能。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Is remote sensing considered a promising tool for mapping soil moisture due to its relationship with electromagnetic radiation?",
+        "QuestionCn": "遥感是否被认为是一种有前途的工具用于测绘土壤湿度，因为它与电磁辐射有关？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Do ground-based observations provide higher precision soil moisture estimates at the cost of spatial representation?",
+        "QuestionCn": "地面观测是否提供更高精度的土壤湿度估计，但代价是空间表现的降低？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which machine learning method is more suitable for downscaling soil moisture data in the southern and eastern Qinghai-Tibet Plateau: GBDT or RF?",
+        "QuestionCn": "哪种机器学习方法更适合在青藏高原南部和东部进行土壤湿度数据的降尺度：GBDT还是RF？",
+        "AnswerEn": "GBDT",
+        "AnswerCn": "GBDT",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is the primary challenge in obtaining high-resolution soil moisture data over the Qinghai-Tibet Plateau more related to the geographical environment or the cost and labor of ground observation?",
+        "QuestionCn": "在青藏高原获取高分辨率土壤湿度数据的主要挑战是与地理环境相关，还是与地面观测的成本和劳动有关？",
+        "AnswerEn": "geographical environment",
+        "AnswerCn": "地理环境",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "For evaluating downscaled soil moisture products, are ground-based measurements or remote sensing data typically more effective?",
+        "QuestionCn": "在评估下调土壤湿度产品时，地面测量还是遥感数据通常更有效？",
+        "AnswerEn": "Ground-based measurements",
+        "AnswerCn": "地面测量",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the auxiliary factors used in data collection methods for soil moisture downscaling in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在青藏高原土壤湿度下分辨率的资料收集方法中使用的辅助因素有哪些？",
+        "AnswerEn": "vegetation indices NDVI EVI land surface temperature LST evapotranspiration ET precipitation terrain DEM slope aspect TWI soil properties soil moisture-related indices SWCI SIWSI VSDI",
+        "AnswerCn": "植被指数 NDVI EVI 地表温度 LST 蒸散发 ET 降水 地形 DEM 坡度 坡向 TWI 土壤性质 土壤湿度相关指数 SWCI SIWSI VSDI",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method used to improve the accuracy and resolution of soil moisture datasets in challenging geographical environments like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "您能否提供一个数据收集方法的例子，用于提高像青藏高原这样具有挑战性地理环境中的土壤湿度数据集的准确性和分辨率？",
+        "AnswerEn": "One example of a data collection method used in such environments is the combination of remote sensing data with auxiliary factors like vegetation indices (NDVI, EVI), land surface temperature, and terrain attributes. These factors are integrated using machine and deep learning models such as artificial neural networks (ANN) and convolutional neural networks (CNN) to enhance the spatial resolution and accuracy of soil moisture datasets.",
+        "AnswerCn": "在这样的环境中使用的一种数据收集方法是将遥感数据与辅助因素结合起来，如植被指数（NDVI、EVI）、地表温度和地形属性。这些因素通过机器学习和深度学习模型（如人工神经网络（ANN）和卷积神经网络（CNN））进行整合，以提高土壤湿度数据集的空间分辨率和准确性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the key characteristics of soil moisture datasets that can enhance our understanding of the land-atmosphere system in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "土壤湿度数据集的关键特征有哪些，可以增强我们对青藏高原陆气系统的理解？",
+        "AnswerEn": "high spatial resolution, temporal seamlessness, high accuracy, spatiotemporal distribution of soil moisture",
+        "AnswerCn": "高空间分辨率、时间无缝性、高精度、土壤湿度的时空分布",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What characteristics of soil moisture data contribute to its applicability in regional water resource management and drought monitoring?",
+        "QuestionCn": "土壤湿度数据的哪些特征有助于其在区域水资源管理和干旱监测中的应用？",
+        "AnswerEn": "high spatial resolution, precision, seamless integration of data, ability to accurately reflect temporal variations and spatial patterns, ability to mitigate overestimations",
+        "AnswerCn": "高空间分辨率、精确度、数据的无缝集成、准确反映时间变化和空间模式的能力、减轻高估的能力。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does 'downscaling' mean in the context of soil moisture data collection over the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在青藏高原土壤湿度数据收集的背景下，“下采样”是什么意思？",
+        "AnswerEn": "In the context of soil moisture data collection over the Qinghai-Tibet Plateau, 'downscaling' refers to the process of increasing the spatial resolution of soil moisture data. This is achieved by using predictors such as NDVI, EVI, LST, and others, in combination with machine learning models, to refine the coarser resolution SMAP soil moisture data to a finer 1 km resolution.",
+        "AnswerCn": "在青藏高原土壤湿度数据收集的背景下，“下采样”指的是提高土壤湿度数据的空间分辨率。通过使用NDVI、EVI、LST等预测因子，结合机器学习模型，将较粗分辨率的SMAP土壤湿度数据细化到1公里的分辨率。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is the 'Bayesian three-cornered hat method' in the context of merging soil moisture datasets?",
+        "QuestionCn": "在合并土壤湿度数据集的背景下，什么是“贝叶斯三角帽方法”？",
+        "AnswerEn": "The 'Bayesian three-cornered hat method' is a merging technique used to combine different downscaled soil moisture datasets. This method aims to utilize the strengths of various machine learning approaches to produce a final product with improved accuracy and reduced error, as evidenced by validation against ground-based measurements.",
+        "AnswerCn": "“贝叶斯三角帽方法”是一种合并技术，用于结合不同的下调土壤湿度数据集。该方法旨在利用各种机器学习方法的优势，生成具有更高准确性和降低误差的最终产品，经过与地面测量的验证证明了这一点。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do machine learning methods like gradient boosting decision tree and random forest compare to deep learning approaches such as convolutional neural networks and residual networks in terms of soil moisture downscaling accuracy?",
+        "QuestionCn": "机器学习方法如梯度提升决策树和随机森林与深度学习方法如卷积神经网络和残差网络在土壤湿度下采样精度方面如何比较？",
+        "AnswerEn": "Gradient boosting decision tree and random forest performed best in the southern and eastern regions of the plateau, while artificial neural networks outperformed other approaches in the northwestern areas. The residual network had the lowest unbiased RMSE among different methods.",
+        "AnswerCn": "梯度提升决策树和随机森林在高原的南部和东部地区表现最佳，而人工神经网络在西北地区的表现优于其他方法。残差网络在不同方法中具有最低的无偏均方根误差（RMSE）。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "How does the Bayesian three-cornered hat merging method enhance the accuracy of downscaled soil moisture datasets compared to individual machine learning models?",
+        "QuestionCn": "贝叶斯三角帽合并方法如何提高降尺度土壤湿度数据集的准确性，相较于单独的机器学习模型？",
+        "AnswerEn": "The Bayesian three-cornered hat merging method resulted in a soil moisture product with comparable accuracy and lower error than the original SMAP data, achieving the highest correlation and the lowest unbiased RMSE scores compared to any single downscaled soil moisture data.",
+        "AnswerCn": "贝叶斯三角帽合并方法生成的土壤湿度产品在准确性上与原始SMAP数据相当，并且误差更低，达到了与任何单一下调土壤湿度数据相比最高的相关性和最低的无偏均方根误差（RMSE）得分。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What potential challenges might arise from using remote sensing data to generate high-resolution soil moisture datasets, and how can these challenges be mitigated?",
+        "QuestionCn": "使用遥感数据生成高分辨率土壤湿度数据集可能会面临哪些潜在挑战，以及如何减轻这些挑战？",
+        "AnswerEn": "Remote sensing data often suffer from coarse spatial resolutions, leading to potential challenges in regional application. These challenges can be mitigated by employing machine learning-driven downscaling methods, which enhance resolution and precision. Additionally, the inherent overestimation from original datasets like SMAP SM can be addressed through downscaling approaches which refine spatial patterns and temporal variations.",
+        "AnswerCn": "遥感数据通常存在空间分辨率较粗的问题，这给区域应用带来了潜在挑战。通过采用基于机器学习的下采样方法，可以提高分辨率和精度，从而缓解这些挑战。此外，像SMAP SM这样的原始数据集固有的高估问题也可以通过下采样方法进行处理，从而改善空间模式和时间变化。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the implications of using a Bayesian-based merging method for synthesizing multi-source soil moisture data, and how does it contribute to dataset accuracy?",
+        "QuestionCn": "使用基于贝叶斯的合并方法合成多源土壤湿度数据的影响是什么？它如何有助于数据集的准确性？",
+        "AnswerEn": "Using a Bayesian-based merging method, such as the three-cornered hat method, allows for the synthesis of multi-source soil moisture data, enhancing accuracy by maximizing the strengths of individual datasets. This method contributes to achieving lower error rates and higher correlation values, thus providing a more reliable and comprehensive soil moisture dataset for applications in hydrology, meteorology, and ecology.",
+        "AnswerCn": "使用基于贝叶斯的合并方法，如三角帽方法，可以合成多源土壤湿度数据，通过最大化各个数据集的优势来提高准确性。这种方法有助于实现更低的误差率和更高的相关性值，从而为水文学、气象学和生态学等应用提供更可靠和全面的土壤湿度数据集。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "Why is there a lack of detailed seamless soil moisture information with high precision and high resolution over the Qinghai-Tibet Plateau?",
+        "QuestionCn": "为什么青藏高原缺乏高精度和高分辨率的详细无缝土壤湿度信息？",
+        "AnswerEn": "The complex and unique geographical environment of the Qinghai-Tibet Plateau makes it challenging to obtain detailed seamless soil moisture information. Ground observations can provide precise estimations but are costly, labor-intensive, and have poor spatial representation due to high spatial heterogeneity. Microwave remote sensing, while promising, typically offers resolutions of tens of kilometers, which are insufficient for regional applications.",
+        "AnswerCn": "青藏高原复杂独特的地理环境使得获取详细的无缝土壤湿度信息变得具有挑战性。地面观测可以提供精确的估算，但成本高、劳动密集，并且由于空间异质性强，空间代表性差。微波遥感虽然前景广阔，但通常提供的分辨率为数十公里，这对于区域应用来说是不够的。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What factors contribute to the discrepancies in performance among different soil moisture downscaling methods?",
+        "QuestionCn": "不同土壤湿度下采样方法之间性能差异的因素有哪些？",
+        "AnswerEn": "Performance discrepancies among different soil moisture downscaling methods arise due to the diverse nature of machine learning approaches and their varying effectiveness across different regions. The gradient boosting decision tree and random forest methods perform well in the southern and eastern plateau, while the artificial neural network excels in the northwestern areas. These differences highlight the influence of regional characteristics and the inherent limitations of each method.",
+        "AnswerCn": "不同土壤湿度下采样方法之间的性能差异源于机器学习方法的多样性及其在不同地区的有效性差异。梯度提升决策树和随机森林方法在南部和东部高原表现良好，而人工神经网络在西北地区表现出色。这些差异突显了区域特征的影响以及每种方法固有的局限性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why do certain areas, such as the eastern and southeastern regions with dense vegetation and high moisture conditions, experience a degree of overestimation in soil moisture data?",
+        "QuestionCn": "某些地区，如东部和东南部的植被茂密和高湿度条件下，为什么会在土壤湿度数据中出现一定程度的高估？",
+        "AnswerEn": "The overestimation in soil moisture data in regions with dense vegetation and high moisture conditions is a consequence of the inherent limitations in the original soil moisture data sources, such as SMAP. These sources tend to overestimate moisture in such areas, although the downscaling process helps mitigate some of these errors.",
+        "AnswerCn": "在植被密集和湿度较高的地区，土壤湿度数据的高估是原始土壤湿度数据源（如SMAP）固有局限性的结果。这些数据源在这些区域往往会高估湿度，尽管下采样过程有助于减轻一些这些错误。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential effects on data accuracy and spatial resolution when employing machine learning and deep learning techniques for soil moisture downscaling?",
+        "QuestionCn": "在采用机器学习和深度学习技术进行土壤湿度下采样时，数据准确性和空间分辨率可能会受到哪些潜在影响？",
+        "AnswerEn": "Using machine learning and deep learning techniques, such as artificial neural networks (ANN), convolutional neural networks (CNN), and others, can improve the spatial resolution and accuracy of soil moisture datasets. These methods allow the transformation of coarse-resolution soil moisture data into higher-resolution products by utilizing auxiliary data like vegetation indices, surface temperature, and soil properties. This approach can enhance data quality, making the datasets more suitable for regional hydrological and ecological applications on the Qinghai-Tibet Plateau.",
+        "AnswerCn": "使用机器学习和深度学习技术，如人工神经网络（ANN）、卷积神经网络（CNN）等，可以提高土壤湿度数据集的空间分辨率和准确性。这些方法通过利用辅助数据，如植被指数、地表温度和土壤特性，将粗分辨率的土壤湿度数据转化为更高分辨率的产品。这种方法可以提高数据质量，使数据集更适合在青藏高原进行区域水文和生态应用。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the implications of using a hybrid downscaling method, such as the Bayesian three-cornered hat method, on the consistency and reliability of soil moisture data products?",
+        "QuestionCn": "使用混合下采样方法，如贝叶斯三角帽方法，对土壤湿度数据产品的一致性和可靠性有什么影响？",
+        "AnswerEn": "Employing a hybrid downscaling method like the Bayesian three-cornered hat method can enhance the consistency and reliability of soil moisture data products. This approach integrates multiple downscaling models, leveraging their strengths to produce a more robust dataset. The method mitigates individual model biases and errors, leading to improved correlation and reduced root mean square errors compared to single-method datasets. Consequently, it provides a more reliable source of soil moisture information for various environmental and hydrological analyses.",
+        "AnswerCn": "采用混合降尺度方法，如贝叶斯三角帽方法，可以增强土壤湿度数据产品的一致性和可靠性。这种方法整合了多种降尺度模型，利用它们的优势生成更强大的数据集。该方法减轻了单一模型的偏差和错误，从而提高了相关性并减少了与单一方法数据集相比的均方根误差。因此，它为各种环境和水文分析提供了更可靠的土壤湿度信息。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the purpose of utilizing machine learning and deep learning approaches for soil moisture downscaling in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在青藏高原利用机器学习和深度学习方法进行土壤湿度下采样的目的是什么？",
+        "AnswerEn": "The purpose is to evaluate and inter-compare the downscaling performances of various machine/deep learning approaches and to propose a hybrid downscaling method for generating high-resolution soil moisture data, addressing the lack of detailed seamless soil moisture information in the region.",
+        "AnswerCn": "该研究的目的是评估和比较各种机器/深度学习方法的降尺度性能，并提出一种混合降尺度方法，以生成高分辨率的土壤湿度数据，解决该地区缺乏详细无缝土壤湿度信息的问题。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why is it important to integrate auxiliary factors such as NDVI, EVI, and LST in downscaling soil moisture data?",
+        "QuestionCn": "将辅助因子如NDVI、EVI和LST整合到土壤湿度数据的下采样中是重要的原因是什么？",
+        "AnswerEn": "Integrating auxiliary factors like NDVI, EVI, and LST is important because they serve as predictors for downscaling soil moisture, enhancing the accuracy and quality of the high-resolution soil moisture dataset by capturing relevant environmental variables.",
+        "AnswerCn": "整合辅助因素如NDVI、EVI和LST很重要，因为它们作为下调土壤湿度的预测因子，通过捕捉相关环境变量，提高了高分辨率土壤湿度数据集的准确性和质量。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in using machine learning techniques to downscale soil moisture data for the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在使用机器学习技术对青藏高原的土壤湿度数据进行降尺度处理时涉及哪些步骤？",
+        "AnswerEn": "The procedural steps involve preprocessing and resampling predictors such as NDVI, EVI, LST, albedo, SOC, soil texture, terrain features, landcover, latitude, longitude, and day of the year to a resolution of 36 km. Six machine learning models are then constructed using the SMAP soil moisture data as the target to generate corresponding downscaled surface soil moisture. A Bayesian-based three-cornered hat merging method is subsequently applied to obtain the final downscaled surface soil moisture, which is then evaluated using ground-based measurements.",
+        "AnswerCn": "程序步骤包括对NDVI、EVI、LST、反照率、土壤有机碳、土壤纹理、地形特征、土地覆盖、纬度、经度和一年中的天数等预测因子进行预处理和重采样，分辨率为36公里。然后，构建六个机器学习模型，以SMAP土壤湿度数据作为目标，生成相应的下分辨率表层土壤湿度。随后，应用基于贝叶斯的三角帽合并方法，以获得最终的下分辨率表层土壤湿度，并使用地面测量数据进行评估。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can machine and deep learning methods be integrated to enhance the accuracy of soil moisture datasets?",
+        "QuestionCn": "如何将机器学习和深度学习方法结合起来，以提高土壤湿度数据集的准确性？",
+        "AnswerEn": "Machine and deep learning methods can be integrated by evaluating and inter-comparing the downscaling performances of various approaches, including ANN, CNN, ResNet, LSTM, and XGBoost. The integration also involves the use of a hybrid downscaling method based on Bayesian three-cornered hat merging to combine the strengths of each method, leading to enhanced accuracy in the final soil moisture datasets.",
+        "AnswerCn": "机器学习和深度学习方法可以通过评估和比较各种方法的降尺度性能来进行集成，包括人工神经网络（ANN）、卷积神经网络（CNN）、残差网络（ResNet）、长短期记忆网络（LSTM）和XGBoost。集成还涉及基于贝叶斯三角帽合并的混合降尺度方法，以结合每种方法的优点，从而提高最终土壤湿度数据集的准确性。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What challenges must be addressed to improve the spatial resolution and accuracy of soil moisture data in remote sensing applications?",
+        "QuestionCn": "在遥感应用中，提高土壤湿度数据的空间分辨率和准确性必须解决哪些挑战？",
+        "AnswerEn": "Challenges to be addressed include the performance discrepancy among different soil moisture downscaling methods, the need for detailed and seamless soil moisture information over complex geographical environments like the Qinghai-Tibet Plateau, and the inherent overestimation in original SMAP SM data. Addressing these challenges involves intercomparing different downscaling methods, refining machine learning approaches, and applying advanced merging techniques like the Bayesian three-cornered hat method to improve spatial resolution and accuracy.",
+        "AnswerCn": "需要解决的挑战包括不同土壤湿度下采样方法之间的性能差异、在像青藏高原这样复杂地理环境中对详细和无缝土壤湿度信息的需求，以及原始SMAP SM数据中固有的过高估计。解决这些挑战涉及对不同下采样方法的相互比较、改进机器学习方法，以及应用先进的合并技术，如贝叶斯三角帽方法，以提高空间分辨率和准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might a dataset over the Qinghai-Tibet Plateau fail to meet regional application requirements such as water resource management or precision agriculture?",
+        "QuestionCn": "为什么青藏高原的数据集可能无法满足区域应用需求，例如水资源管理或精准农业？",
+        "AnswerEn": "Microwave soil moisture products usually have spatial resolutions of tens of kilometers, making them suitable for continental and global scales but inadequate for regional applications that require higher precision and resolution.",
+        "AnswerCn": "微波土壤湿度产品通常具有数十公里的空间分辨率，适合于大陆和全球尺度，但对于需要更高精度和分辨率的区域应用则不够充分。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What challenges might arise when evaluating and inter-comparing the performances of different soil moisture downscaling methods?",
+        "QuestionCn": "在评估和比较不同土壤湿度下采样方法的性能时，可能会出现哪些挑战？",
+        "AnswerEn": "Few studies have intercompared the performances of different soil moisture downscaling methods, and the performance discrepancy of diverse machine learning approaches should be further investigated to understand their effectiveness in different regions and conditions.",
+        "AnswerCn": "少数研究对不同土壤湿度下采样方法的性能进行了比较，而不同机器学习方法的性能差异应进一步研究，以了解它们在不同地区和条件下的有效性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How would you evaluate the effectiveness of machine learning methods in enhancing the spatial resolution of soil moisture datasets over complex terrains like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "如何评估机器学习方法在提高复杂地形（如青藏高原）土壤湿度数据集空间分辨率方面的有效性？",
+        "AnswerEn": "Machine learning methods, specifically different approaches like GBDT, RF, and ANN, have shown varied effectiveness in downscaling soil moisture datasets. The evaluation and inter-comparison reveal that some methods perform better in specific regions of the plateau. For instance, GBDT and RF are more effective in the southern and eastern areas, while ANN performs better in the northwestern region. The effectiveness is further demonstrated through the improvement in correlation and reduction in unbias RMSE, indicating that these methods can significantly enhance the spatial resolution of soil moisture datasets over complex terrains like the Qinghai-Tibet Plateau.",
+        "AnswerCn": "机器学习方法，特别是不同的算法如GBDT、RF和ANN，在下调土壤湿度数据集方面表现出不同的有效性。评估和比较表明，一些方法在高原的特定区域表现更好。例如，GBDT和RF在南部和东部地区更有效，而ANN在西北地区表现更佳。通过相关性改善和无偏RMSE减少进一步证明了这些方法的有效性，表明它们可以显著提高复杂地形（如青藏高原）上土壤湿度数据集的空间分辨率。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What challenges do you perceive in integrating remote sensing data with ground observations to create high-resolution soil moisture datasets?",
+        "QuestionCn": "您认为在将遥感数据与地面观测数据结合以创建高分辨率土壤湿度数据集时会面临哪些挑战？",
+        "AnswerEn": "Integrating remote sensing data with ground observations presents challenges such as spatial heterogeneity and the high spatial resolution required for regional applications. Ground observations, although precise, are labor-intensive and costly and may not represent broader areas effectively. Remote sensing, particularly microwave sensing, offers better spatial coverage but typically at lower resolutions, making it challenging to meet regional requirements. The need for seamless, high-resolution data necessitates advanced downscaling techniques, such as machine learning, to bridge the gap between these data sources.",
+        "AnswerCn": "将遥感数据与地面观测相结合面临着空间异质性和区域应用所需的高空间分辨率等挑战。地面观测虽然精确，但劳动密集且成本高，可能无法有效代表更广泛的区域。遥感，特别是微波遥感，提供了更好的空间覆盖，但通常分辨率较低，这使得满足区域需求变得困难。无缝、高分辨率数据的需求需要先进的下采样技术，如机器学习，以弥合这些数据源之间的差距。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "In what ways could fusion methods like the Bayesian three-cornered hat enhance the quality and applicability of soil moisture datasets for regional hydrological analysis?",
+        "QuestionCn": "融合方法如贝叶斯三角帽如何增强土壤湿度数据集在区域水文分析中的质量和适用性？",
+        "AnswerEn": "Fusion methods like the Bayesian three-cornered hat can significantly enhance the quality and applicability of soil moisture datasets by combining data from multiple sources to leverage their strengths. This method facilitates the merging of downscaled data from various machine learning models, resulting in higher accuracy and reduced errors. Such enhancements are crucial for regional hydrological analysis, where high precision and resolution are required to accurately reflect temporal variations and spatial patterns of soil moisture, especially in areas with high vegetation and moisture variability.",
+        "AnswerCn": "融合方法，如贝叶斯三角帽，可以通过结合来自多个来源的数据来显著提高土壤湿度数据集的质量和适用性，从而发挥各自的优势。这种方法促进了来自各种机器学习模型的降尺度数据的合并，从而提高了准确性并减少了误差。这种增强对于区域水文分析至关重要，因为高精度和高分辨率是准确反映土壤湿度的时间变化和空间模式所必需的，尤其是在植被和湿度变异性较高的地区。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I'm unsure about the specific challenges faced in collecting and validating soil moisture data over the Qinghai-Tibet Plateau.",
+        "QuestionCn": "我不确定在青藏高原收集和验证土壤湿度数据时面临的具体挑战。",
+        "AnswerEn": "The challenges in this region include the high spatial heterogeneity and complex geographical environment, which make ground observations costly and labor-intensive. Additionally, remote sensing usually offers low spatial resolution. Validation is also complex, requiring the use of data from multiple ground observation networks to ensure the downscaled products reflect accurate soil moisture levels.",
+        "AnswerCn": "该地区面临的挑战包括高空间异质性和复杂的地理环境，这使得地面观测成本高且劳动密集。此外，遥感通常提供低空间分辨率。验证也很复杂，需要使用来自多个地面观测网络的数据，以确保下调产品反映准确的土壤湿度水平。",
+        "Level": "C1(Remembering)"
+      }
+    ]
+  }
 }

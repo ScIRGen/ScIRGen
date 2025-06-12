@@ -1,236 +1,236 @@
 {
-    "id": "c13155b4-49e8-4b15-9788-59614b57349d",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "A long-term global  soil moisture dataset with enhanced spatio-temporal coverage leveraging machine learning based on TMI, AMSR-E, AMSR2, and GMI (1997-2023)",
-            "titleCn": "基于TMI、AMSR-E、AMSR2和GMI的机器学习方法增强时空覆盖的全球日尺度长时序土壤水分数据集（1997-2023）",
-            "description": "Soil moisture is a critical component of regional and global water cycles, playing important roles in various ecological, hydrological, and atmospheric processes. Accurate global soil moisture monitoring is crucial for deepening our understanding of these processes and providing information for weather and climate prediction, agricultural drought monitoring, water resource management, and global climate change research. This study integrated satellite data from multiple passive microwave sensors to overcome the lack of temporal and spatial consistency in traditional soil moisture monitoring. By combining multi frequency brightness temperature data from tilt orbit satellites (TMI and GMI) and polar orbit satellites (AMSR-E and AMSR2) that have been mutually calibrated, the soil moisture data of SMAP accurately extracted using multi-channel collaborative retrieval algorithm (MCCA) was selected as the target. The LSTM machine learning model was successfully used to generate four global soil moisture products: TMI, AMSR-E, AMSR2, and GMI. After verification, these four data have broad consistency worldwide. Therefore, these datasets were merged to create a daily scale soil moisture integrated product (MCCA-ML) with a resolution of 25 KM from 1997 to 2023. The soil moisture inversion results of the MCCA-ML soil moisture dataset inherit the advantages of the MCCA SMAP data, including the soil moisture content during the melting period and the liquid water content during the freezing period. Through validation with 24 global ground-based dense observation networks and other datasets (MCCA SMAP and ESA CCI), MCCA-ML is highly consistent with global climate and geographic features in terms of spatial distribution and seasonal variation patterns. This dataset performs better overall than traditional data products on 24 dense observation networks. During the multi satellite collaborative service period, the global land coverage of MCCA-ML exceeded 80%, significantly better than existing products, effectively enhancing the global daily scale soil moisture monitoring capability.",
-            "descriptionCn": "土壤水分是区域和全球水循环的关键组成部分，在各种生态、水文和大气过程中起着重要作用。精确的全球土壤湿度监测对于加深对这些过程的理解，并为天气和气候预测、农业干旱监测、水资源管理以及全球气候变化研究提供信息至关重要。本研究整合了多个搭载被动微波传感器的卫星数据，以克服传统土壤水分监测中的时间和空间一致性不足的问题。通过结合经过相互校准的倾斜轨道卫星（TMI和GMI）和极地轨道卫星（AMSR-E和AMSR2）的多频亮温数据，将采用多通道协作检索算法（MCCA）精确提取的SMAP的土壤水分数据作为目标，选择LSTM机器学习模型成功生成了四个全球土壤湿度产品：TMI、AMSR-E、AMSR2和GMI。经检验，这四个数据在全球具有广泛的一致性。因此，将这些数据集合并，创建了一个从1997年至2023年、25 KM分辨率的日尺度土壤水分综合产品（MCCA-ML）。MCCA-ML土壤水分数据集的土壤水分反演结果继承了MCCA SMAP数据的优势，包含了融化期的土壤水分含量与冻结期的液态水含量。通过与全球24个地面密集观测网络和其他数据集（MCCA SMAP和ESA CCI）的验证，MCCA-ML在空间分布和季节变化模式上高度吻合全球气候和地理特征。本数据集在24个密集观测网络上整体表现优于传统数据产品。在多卫星协同服务期内，MCCA-ML的全球陆地覆盖率超过80%，明显优于现有产品，有效提升了全球日尺度土壤水分监测能力。",
-            "instructions": "The file is named using the<MCCA_ML-xxKM_SM-YYYYMMDD_V1. nc>method. Among them,<MCCA>represents that this data refers to the MCCA physical inversion algorithm, which uses multi-channel observed brightness temperature data as the original input, and the target data is the MCCA SMAP soil moisture product< ML>represents the use of machine learning models for soil moisture inversion in this dataset< XxKM>represents the grid size of EASE GRID 2.0 projection< SM>represents soil moisture products< YYYYMMDD>is the year, month, day, and date of the data< V1>is the data version, and data updates and extensions will be made based on everyone's valuable opinions and needs in the future. Usage: Data can be read using various programming languages such as Matlab, Python, IDL, etc. It can also be visualized in HDFView and Panoply. For detailed information, please refer to the documentation. We provide code for reading data and drawing using Python and Matlab.",
-            "instructionsCn": "文件采用<MCCA_ML_xxKM_SM_YYYYMMDD_V1.nc>方式进行命名。其中： <MCCA> 代表本数据参考MCCA物理反演算法采用多通道观测亮温数据作为原始输入，同时目标数据是MCCA SMAP土壤水分产品； <ML>代表本数据采取了机器学习模型进行土壤水分反演； <xxKM> 代表EASE GRID 2.0投影的格网大小； <SM>代表土壤水分产品； <YYYYMMDD>是数据的年月日日期； <V1>是数据版本，之后会根据大家的宝贵意见和需求进行数据的更新和延长。使用方法： 数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在HDFView，Panoply中实现可视化，详细信息请参见说明文档。我们提供了用Python和Matlab读取数据和画图的代码。",
-            "east": 180.0,
-            "west": 180.0,
-            "south": 83.52,
-            "north": 83.52,
-            "startTime": "1997-12-28 15:48:57",
-            "endTime": "2023-03-31 15:48:57",
-            "fileSize": 30116743142.0,
-            "cstr": "18406.11.Terre.tpdc.301491",
-            "doi": "10.11888/Terre.tpdc.301491",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "张浩杰",
-                "nameEn": "ZHANG Haojie",
-                "unitEn": "",
-                "unitCn": "中国科学院青藏高原研究所"
-            },
-            {
-                "nameCn": "赵天杰",
-                "nameEn": "ZHAO Tianjie",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "郑东海",
-                "nameEn": "ZHENG Donghai",
-                "unitEn": "",
-                "unitCn": "中国科学院青藏高原研究所"
-            },
-            {
-                "nameCn": "彭志晴",
-                "nameEn": "PENG Zhiqing ",
-                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "姚盼盼",
-                "nameEn": "YAO Panpan",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry",
-                "referenceCn": null,
-                "referenceEn": "Peng, Z., Zhao, T., Shi, J., Hu, L., Rodríguez-Fernández, N., Wigneron, J., Jackson, T., Walker, J., Cosh, M., Yang, K., Lu, H., Bai, Y., Yao, P., Zheng, J., & Wei, Z. (2024). First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry. Remote Sensing of Environment, 302, 113970, https://doi.org/10.1016/j.rse.2023.113970."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm",
-                "referenceCn": null,
-                "referenceEn": "Zhao, T., Shi, J., Entekhabi, D., Jackson, T. J., Hu, L., Peng, Z., Yao, P., Li, S., & Kang, C. S. (2021). Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm. Remote Sensing of Environment, 257, 112321, https://doi.org/10.1016/j.rse.2021.112321."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "土壤",
-                "nameEn": "Soil"
-            },
-            {
-                "nameCn": "土壤湿度/水分含量",
-                "nameEn": "Soil moisture/Water content"
-            },
-            {
-                "nameCn": "机器学习",
-                "nameEn": "Machine learning"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球尺度",
-                "keywordEn": "Global scale"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1997-2023",
-                "keywordEn": "1997-2023",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            },
-            {
-                "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
-                "titleEn": "Major Research plan of the National Natural Science Foundation of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "c13155b4-49e8-4b15-9788-59614b57349d",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "A long-term global  soil moisture dataset with enhanced spatio-temporal coverage leveraging machine learning based on TMI, AMSR-E, AMSR2, and GMI (1997-2023)",
+      "titleCn": "基于TMI、AMSR-E、AMSR2和GMI的机器学习方法增强时空覆盖的全球日尺度长时序土壤水分数据集（1997-2023）",
+      "description": "Soil moisture is a critical component of regional and global water cycles, playing important roles in various ecological, hydrological, and atmospheric processes. Accurate global soil moisture monitoring is crucial for deepening our understanding of these processes and providing information for weather and climate prediction, agricultural drought monitoring, water resource management, and global climate change research. This study integrated satellite data from multiple passive microwave sensors to overcome the lack of temporal and spatial consistency in traditional soil moisture monitoring. By combining multi frequency brightness temperature data from tilt orbit satellites (TMI and GMI) and polar orbit satellites (AMSR-E and AMSR2) that have been mutually calibrated, the soil moisture data of SMAP accurately extracted using multi-channel collaborative retrieval algorithm (MCCA) was selected as the target. The LSTM machine learning model was successfully used to generate four global soil moisture products: TMI, AMSR-E, AMSR2, and GMI. After verification, these four data have broad consistency worldwide. Therefore, these datasets were merged to create a daily scale soil moisture integrated product (MCCA-ML) with a resolution of 25 KM from 1997 to 2023. The soil moisture inversion results of the MCCA-ML soil moisture dataset inherit the advantages of the MCCA SMAP data, including the soil moisture content during the melting period and the liquid water content during the freezing period. Through validation with 24 global ground-based dense observation networks and other datasets (MCCA SMAP and ESA CCI), MCCA-ML is highly consistent with global climate and geographic features in terms of spatial distribution and seasonal variation patterns. This dataset performs better overall than traditional data products on 24 dense observation networks. During the multi satellite collaborative service period, the global land coverage of MCCA-ML exceeded 80%, significantly better than existing products, effectively enhancing the global daily scale soil moisture monitoring capability.",
+      "descriptionCn": "土壤水分是区域和全球水循环的关键组成部分，在各种生态、水文和大气过程中起着重要作用。精确的全球土壤湿度监测对于加深对这些过程的理解，并为天气和气候预测、农业干旱监测、水资源管理以及全球气候变化研究提供信息至关重要。本研究整合了多个搭载被动微波传感器的卫星数据，以克服传统土壤水分监测中的时间和空间一致性不足的问题。通过结合经过相互校准的倾斜轨道卫星（TMI和GMI）和极地轨道卫星（AMSR-E和AMSR2）的多频亮温数据，将采用多通道协作检索算法（MCCA）精确提取的SMAP的土壤水分数据作为目标，选择LSTM机器学习模型成功生成了四个全球土壤湿度产品：TMI、AMSR-E、AMSR2和GMI。经检验，这四个数据在全球具有广泛的一致性。因此，将这些数据集合并，创建了一个从1997年至2023年、25 KM分辨率的日尺度土壤水分综合产品（MCCA-ML）。MCCA-ML土壤水分数据集的土壤水分反演结果继承了MCCA SMAP数据的优势，包含了融化期的土壤水分含量与冻结期的液态水含量。通过与全球24个地面密集观测网络和其他数据集（MCCA SMAP和ESA CCI）的验证，MCCA-ML在空间分布和季节变化模式上高度吻合全球气候和地理特征。本数据集在24个密集观测网络上整体表现优于传统数据产品。在多卫星协同服务期内，MCCA-ML的全球陆地覆盖率超过80%，明显优于现有产品，有效提升了全球日尺度土壤水分监测能力。",
+      "instructions": "The file is named using the<MCCA_ML-xxKM_SM-YYYYMMDD_V1. nc>method. Among them,<MCCA>represents that this data refers to the MCCA physical inversion algorithm, which uses multi-channel observed brightness temperature data as the original input, and the target data is the MCCA SMAP soil moisture product< ML>represents the use of machine learning models for soil moisture inversion in this dataset< XxKM>represents the grid size of EASE GRID 2.0 projection< SM>represents soil moisture products< YYYYMMDD>is the year, month, day, and date of the data< V1>is the data version, and data updates and extensions will be made based on everyone's valuable opinions and needs in the future. Usage: Data can be read using various programming languages such as Matlab, Python, IDL, etc. It can also be visualized in HDFView and Panoply. For detailed information, please refer to the documentation. We provide code for reading data and drawing using Python and Matlab.",
+      "instructionsCn": "文件采用<MCCA_ML_xxKM_SM_YYYYMMDD_V1.nc>方式进行命名。其中： <MCCA> 代表本数据参考MCCA物理反演算法采用多通道观测亮温数据作为原始输入，同时目标数据是MCCA SMAP土壤水分产品； <ML>代表本数据采取了机器学习模型进行土壤水分反演； <xxKM> 代表EASE GRID 2.0投影的格网大小； <SM>代表土壤水分产品； <YYYYMMDD>是数据的年月日日期； <V1>是数据版本，之后会根据大家的宝贵意见和需求进行数据的更新和延长。使用方法： 数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在HDFView，Panoply中实现可视化，详细信息请参见说明文档。我们提供了用Python和Matlab读取数据和画图的代码。",
+      "east": 180.0,
+      "west": 180.0,
+      "south": 83.52,
+      "north": 83.52,
+      "startTime": "1997-12-28 15:48:57",
+      "endTime": "2023-03-31 15:48:57",
+      "fileSize": 30116743142.0,
+      "cstr": "18406.11.Terre.tpdc.301491",
+      "doi": "10.11888/Terre.tpdc.301491",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of the machine learning models used to enhance the spatiotemporal coverage of global soil moisture datasets?",
-                "QuestionCn": "用于增强全球土壤湿度数据集时空覆盖的机器学习模型的特点是什么？",
-                "AnswerEn": "LSTM, integrates multi-frequency brightness temperature data from TMI, AMSR-E, AMSR2, GMI satellites, accurately extracts soil moisture data, maintains consistency, overcomes limitations in traditional monitoring methods",
-                "AnswerCn": "LSTM集成了来自TMI、AMSR-E、AMSR2、GMI卫星的多频亮温数据，能够准确提取土壤湿度数据，保持一致性，克服了传统监测方法的局限性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the global daily soil moisture dataset spanning from 1997 to 2023?",
-                "QuestionCn": "全球日土壤湿度数据集的空间分辨率是多少，时间跨度为1997年至2023年？",
-                "AnswerEn": "25 km",
-                "AnswerCn": "25公里",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the MCCA-ML soil moisture dataset and how does it enhance global soil moisture monitoring?",
-                "QuestionCn": "MCCA-ML土壤湿度数据集是什么，它如何增强全球土壤湿度监测？",
-                "AnswerEn": "The MCCA-ML soil moisture dataset is a global daily-scale long-term soil moisture dataset that spans from 1997 to 2023 with a 25 km resolution. It enhances global soil moisture monitoring by integrating satellite data from multiple passive microwave sensors, such as TMI, AMSR-E, AMSR2, and GMI. By utilizing a multi-channel collaborative retrieval algorithm (MCCA) and LSTM machine learning models, it overcomes temporal and spatial inconsistencies in traditional soil moisture monitoring methods. The dataset exhibits high consistency with global climate and geographical features and provides improved global land coverage, especially during the multi-satellite collaborative service period, thus significantly enhancing global daily-scale soil moisture monitoring capabilities.",
-                "AnswerCn": "MCCA-ML土壤湿度数据集是一个全球日尺度的长期土壤湿度数据集，覆盖1997年至2023年，分辨率为25公里。它通过整合来自多个被动微波传感器的卫星数据，如TMI、AMSR-E、AMSR2和GMI，增强了全球土壤湿度监测。通过利用多通道协同反演算法（MCCA）和LSTM机器学习模型，该数据集克服了传统土壤湿度监测方法中的时间和空间不一致性。该数据集与全球气候和地理特征表现出高度一致性，并在多卫星协同服务期间提供了改善的全球土地覆盖，从而显著增强了全球日尺度土壤湿度监测能力。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What can be inferred about the effectiveness of using multiple satellite data sources to improve the temporal and spatial consistency of soil moisture monitoring on a global scale?",
-                "QuestionCn": "可以推断出，使用多个卫星数据源来提高全球范围内土壤湿度监测的时间和空间一致性是有效的。",
-                "AnswerEn": "Integrating data from multiple satellite sources, such as TMI, AMSR-E, AMSR2, and GMI, can significantly improve the temporal and spatial consistency of soil moisture monitoring globally. This approach addresses the limitations of traditional soil moisture monitoring methods by leveraging a combination of orbiting satellites with different characteristics, enhancing the global coverage and accuracy of the data. The use of a machine learning model like LSTM further refines this integration, leading to the creation of a comprehensive soil moisture product that maintains high consistency with observed climate and geographic patterns.",
-                "AnswerCn": "整合来自多个卫星源的数据，如TMI、AMSR-E、AMSR2和GMI，可以显著提高全球土壤湿度监测的时间和空间一致性。这种方法通过利用具有不同特征的轨道卫星，解决了传统土壤湿度监测方法的局限性，从而增强了数据的全球覆盖和准确性。使用像LSTM这样的机器学习模型进一步优化了这种整合，最终形成了一种全面的土壤湿度产品，能够与观察到的气候和地理模式保持高度一致。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What are the underlying reasons for using multiple satellites with passive microwave sensors to address time and space consistency issues in global soil moisture monitoring?",
-                "QuestionCn": "使用多个卫星配备被动微波传感器来解决全球土壤湿度监测中的时间和空间一致性问题的潜在原因是什么？",
-                "AnswerEn": "Traditional soil moisture monitoring faces challenges with temporal and spatial consistency due to limitations in data coverage and frequency. By integrating data from multiple satellites equipped with passive microwave sensors, such as TMI, AMSR-E, AMSR2, and GMI, researchers can overcome these limitations. The combination of geostationary and polar orbit satellites allows for a more comprehensive and frequent collection of soil moisture data, addressing gaps in temporal and spatial coverage. This integration, enhanced by the use of machine learning models like LSTM, ensures more accurate and consistent global soil moisture monitoring, essential for understanding ecological, hydrological, and atmospheric processes.",
-                "AnswerCn": "传统的土壤湿度监测面临着由于数据覆盖和频率限制而导致的时间和空间一致性挑战。通过整合多颗配备被动微波传感器的卫星数据，如TMI、AMSR-E、AMSR2和GMI，研究人员可以克服这些限制。结合静止轨道和极轨卫星，可以更全面和频繁地收集土壤湿度数据，从而解决时间和空间覆盖的空白。这种整合，结合使用像LSTM这样的机器学习模型，确保了更准确和一致的全球土壤湿度监测，这对于理解生态、水文和大气过程至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the objectives behind integrating multiple satellite data with passive microwave sensors into a machine learning model for soil moisture monitoring from 1997 to 2023?",
-                "QuestionCn": "将多个卫星数据与被动微波传感器集成到机器学习模型中，用于1997年至2023年的土壤湿度监测的目标是什么？",
-                "AnswerEn": "The goal is to enhance the temporal and spatial coverage of soil moisture monitoring on a global scale, which is crucial for understanding regional and global water cycles and for applications such as weather and climate forecasting, agricultural drought monitoring, water resource management, and climate change research. By combining satellite data from TMI, GMI, AMSR-E, and AMSR2 using a multi-channel collaborative retrieval algorithm (MCCA) and a machine learning model (LSTM), it addresses the inconsistencies in traditional soil moisture monitoring and provides a comprehensive dataset from 1997 to 2023 at 25 KM resolution. This approach aims to improve the accuracy and coverage of soil moisture data, which are validated against global ground observation networks and other datasets, demonstrating superior performance in spatial and seasonal distribution alignment with global climate and geographical features.",
-                "AnswerCn": "目标是增强全球范围内土壤湿度监测的时间和空间覆盖，这对于理解区域和全球水循环以及天气和气候预测、农业干旱监测、水资源管理和气候变化研究等应用至关重要。通过结合来自TMI、GMI、AMSR-E和AMSR2的卫星数据，采用多通道协同反演算法（MCCA）和机器学习模型（LSTM），解决了传统土壤湿度监测中的不一致性，并提供了1997年至2023年的综合数据集，分辨率为25公里。这种方法旨在提高土壤湿度数据的准确性和覆盖率，并通过与全球地面观测网络和其他数据集的验证，展示了在空间和季节分布上与全球气候和地理特征的优越对齐性能。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the key steps involved in using machine learning models to enhance the spatiotemporal coverage of global soil moisture datasets, especially when integrating data from multiple satellite sources?",
-                "QuestionCn": "使用机器学习模型增强全球土壤湿度数据集的时空覆盖，特别是在整合多个卫星源的数据时，涉及的关键步骤包括：\n\n1. 数据收集：收集来自不同卫星源的土壤湿度数据，包括遥感数据和地面观测数据。\n\n2. 数据预处理：对收集到的数据进行清洗、去噪和标准化，以确保数据的一致性和可用性。\n\n3. 特征工程：从原始数据中提取相关特征，包括时空特征、气候变量和土地利用信息，以提高模型的预测能力。\n\n4. 数据融合：将来自不同卫星源的数据进行融合，利用插值、加权平均或其他方法整合成一个统一的数据集。\n\n5. 模型选择：选择适合的机器学习模型，如随机森林、支持向量机或深度学习模型，以进行土壤湿度的预测。\n\n6. 模型训练：使用预处理后的数据集对选定的模型进行训练，调整超参数以优化模型性能。\n\n7. 模型评估：通过交叉验证和其他评估指标（如均方误差、R²等）评估模型的预测能力。\n\n8. 结果验证：将模型预测结果与独立的地面观测数据进行比较，以验证模型的准确性。\n\n9. 数据发布：将增强后的土壤湿度数据集发布，供研究和应用使用。\n\n10. 持续更新：定期更新模型和数据集，以反映新的观测数据和改进的算法。",
-                "AnswerEn": "The key steps involve integrating multiple satellite data equipped with passive microwave sensors to address limitations in time and space consistency of traditional soil moisture monitoring. The process includes combining inter-calibrated inclined orbit satellites (TMI and GMI) and polar orbit satellites (AMSR-E and AMSR2) multi-frequency brightness temperature data. A multi-channel collaborative retrieval algorithm (MCCA) is used to accurately extract soil moisture data from SMAP as targets. An LSTM machine learning model is then selected to successfully generate global soil moisture products. The data are validated against global ground observation networks and other datasets to ensure spatial distribution and seasonal variation patterns align with global climate and geographic characteristics.",
-                "AnswerCn": "关键步骤包括整合多颗配备被动微波传感器的卫星数据，以解决传统土壤湿度监测在时间和空间一致性方面的局限性。该过程包括结合经过互校准的倾斜轨道卫星（TMI和GMI）和极轨卫星（AMSR-E和AMSR2）的多频率亮温数据。采用多通道协同反演算法（MCCA）准确提取SMAP作为目标的土壤湿度数据。然后选择LSTM机器学习模型成功生成全球土壤湿度产品。数据通过与全球地面观测网络和其他数据集进行验证，以确保空间分布和季节变化模式与全球气候和地理特征相一致。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "张浩杰",
+        "nameEn": "ZHANG Haojie",
+        "unitEn": "",
+        "unitCn": "中国科学院青藏高原研究所"
+      },
+      {
+        "nameCn": "赵天杰",
+        "nameEn": "ZHAO Tianjie",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "郑东海",
+        "nameEn": "ZHENG Donghai",
+        "unitEn": "",
+        "unitCn": "中国科学院青藏高原研究所"
+      },
+      {
+        "nameCn": "彭志晴",
+        "nameEn": "PENG Zhiqing ",
+        "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "姚盼盼",
+        "nameEn": "YAO Panpan",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry",
+        "referenceCn": null,
+        "referenceEn": "Peng, Z., Zhao, T., Shi, J., Hu, L., Rodríguez-Fernández, N., Wigneron, J., Jackson, T., Walker, J., Cosh, M., Yang, K., Lu, H., Bai, Y., Yao, P., Zheng, J., & Wei, Z. (2024). First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry. Remote Sensing of Environment, 302, 113970, https://doi.org/10.1016/j.rse.2023.113970."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm",
+        "referenceCn": null,
+        "referenceEn": "Zhao, T., Shi, J., Entekhabi, D., Jackson, T. J., Hu, L., Peng, Z., Yao, P., Li, S., & Kang, C. S. (2021). Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm. Remote Sensing of Environment, 257, 112321, https://doi.org/10.1016/j.rse.2021.112321."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "土壤",
+        "nameEn": "Soil"
+      },
+      {
+        "nameCn": "土壤湿度/水分含量",
+        "nameEn": "Soil moisture/Water content"
+      },
+      {
+        "nameCn": "机器学习",
+        "nameEn": "Machine learning"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球尺度",
+        "keywordEn": "Global scale"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1997-2023",
+        "keywordEn": "1997-2023",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      },
+      {
+        "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
+        "titleEn": "Major Research plan of the National Natural Science Foundation of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of the machine learning models used to enhance the spatiotemporal coverage of global soil moisture datasets?",
+        "QuestionCn": "用于增强全球土壤湿度数据集时空覆盖的机器学习模型的特点是什么？",
+        "AnswerEn": "LSTM, integrates multi-frequency brightness temperature data from TMI, AMSR-E, AMSR2, GMI satellites, accurately extracts soil moisture data, maintains consistency, overcomes limitations in traditional monitoring methods",
+        "AnswerCn": "LSTM集成了来自TMI、AMSR-E、AMSR2、GMI卫星的多频亮温数据，能够准确提取土壤湿度数据，保持一致性，克服了传统监测方法的局限性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the global daily soil moisture dataset spanning from 1997 to 2023?",
+        "QuestionCn": "全球日土壤湿度数据集的空间分辨率是多少，时间跨度为1997年至2023年？",
+        "AnswerEn": "25 km",
+        "AnswerCn": "25公里",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the MCCA-ML soil moisture dataset and how does it enhance global soil moisture monitoring?",
+        "QuestionCn": "MCCA-ML土壤湿度数据集是什么，它如何增强全球土壤湿度监测？",
+        "AnswerEn": "The MCCA-ML soil moisture dataset is a global daily-scale long-term soil moisture dataset that spans from 1997 to 2023 with a 25 km resolution. It enhances global soil moisture monitoring by integrating satellite data from multiple passive microwave sensors, such as TMI, AMSR-E, AMSR2, and GMI. By utilizing a multi-channel collaborative retrieval algorithm (MCCA) and LSTM machine learning models, it overcomes temporal and spatial inconsistencies in traditional soil moisture monitoring methods. The dataset exhibits high consistency with global climate and geographical features and provides improved global land coverage, especially during the multi-satellite collaborative service period, thus significantly enhancing global daily-scale soil moisture monitoring capabilities.",
+        "AnswerCn": "MCCA-ML土壤湿度数据集是一个全球日尺度的长期土壤湿度数据集，覆盖1997年至2023年，分辨率为25公里。它通过整合来自多个被动微波传感器的卫星数据，如TMI、AMSR-E、AMSR2和GMI，增强了全球土壤湿度监测。通过利用多通道协同反演算法（MCCA）和LSTM机器学习模型，该数据集克服了传统土壤湿度监测方法中的时间和空间不一致性。该数据集与全球气候和地理特征表现出高度一致性，并在多卫星协同服务期间提供了改善的全球土地覆盖，从而显著增强了全球日尺度土壤湿度监测能力。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What can be inferred about the effectiveness of using multiple satellite data sources to improve the temporal and spatial consistency of soil moisture monitoring on a global scale?",
+        "QuestionCn": "可以推断出使用多个卫星数据源能够提高全球范围内土壤湿度监测的时间和空间一致性吗？",
+        "AnswerEn": "Integrating data from multiple satellite sources, such as TMI, AMSR-E, AMSR2, and GMI, can significantly improve the temporal and spatial consistency of soil moisture monitoring globally. This approach addresses the limitations of traditional soil moisture monitoring methods by leveraging a combination of orbiting satellites with different characteristics, enhancing the global coverage and accuracy of the data. The use of a machine learning model like LSTM further refines this integration, leading to the creation of a comprehensive soil moisture product that maintains high consistency with observed climate and geographic patterns.",
+        "AnswerCn": "整合来自多个卫星源的数据，如TMI、AMSR-E、AMSR2和GMI，可以显著提高全球土壤湿度监测的时间和空间一致性。这种方法通过利用具有不同特征的轨道卫星，解决了传统土壤湿度监测方法的局限性，从而增强了数据的全球覆盖和准确性。使用像LSTM这样的机器学习模型进一步优化了这种整合，最终形成了一种全面的土壤湿度产品，能够与观察到的气候和地理模式保持高度一致。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What are the underlying reasons for using multiple satellites with passive microwave sensors to address time and space consistency issues in global soil moisture monitoring?",
+        "QuestionCn": "使用多个卫星配备被动微波传感器来解决全球土壤湿度监测中的时间和空间一致性问题的潜在原因是什么？",
+        "AnswerEn": "Traditional soil moisture monitoring faces challenges with temporal and spatial consistency due to limitations in data coverage and frequency. By integrating data from multiple satellites equipped with passive microwave sensors, such as TMI, AMSR-E, AMSR2, and GMI, researchers can overcome these limitations. The combination of geostationary and polar orbit satellites allows for a more comprehensive and frequent collection of soil moisture data, addressing gaps in temporal and spatial coverage. This integration, enhanced by the use of machine learning models like LSTM, ensures more accurate and consistent global soil moisture monitoring, essential for understanding ecological, hydrological, and atmospheric processes.",
+        "AnswerCn": "传统的土壤湿度监测面临着由于数据覆盖和频率限制而导致的时间和空间一致性挑战。通过整合多颗配备被动微波传感器的卫星数据，如TMI、AMSR-E、AMSR2和GMI，研究人员可以克服这些限制。结合静止轨道和极轨卫星，可以更全面和频繁地收集土壤湿度数据，从而解决时间和空间覆盖的空白。这种整合，结合使用像LSTM这样的机器学习模型，确保了更准确和一致的全球土壤湿度监测，这对于理解生态、水文和大气过程至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the objectives behind integrating multiple satellite data with passive microwave sensors into a machine learning model for soil moisture monitoring from 1997 to 2023?",
+        "QuestionCn": "将多个卫星数据与被动微波传感器集成到机器学习模型中，用于1997年至2023年的土壤湿度监测的目标是什么？",
+        "AnswerEn": "The goal is to enhance the temporal and spatial coverage of soil moisture monitoring on a global scale, which is crucial for understanding regional and global water cycles and for applications such as weather and climate forecasting, agricultural drought monitoring, water resource management, and climate change research. By combining satellite data from TMI, GMI, AMSR-E, and AMSR2 using a multi-channel collaborative retrieval algorithm (MCCA) and a machine learning model (LSTM), it addresses the inconsistencies in traditional soil moisture monitoring and provides a comprehensive dataset from 1997 to 2023 at 25 KM resolution. This approach aims to improve the accuracy and coverage of soil moisture data, which are validated against global ground observation networks and other datasets, demonstrating superior performance in spatial and seasonal distribution alignment with global climate and geographical features.",
+        "AnswerCn": "目标是增强全球范围内土壤湿度监测的时间和空间覆盖，这对于理解区域和全球水循环以及天气和气候预测、农业干旱监测、水资源管理和气候变化研究等应用至关重要。通过结合来自TMI、GMI、AMSR-E和AMSR2的卫星数据，采用多通道协同反演算法（MCCA）和机器学习模型（LSTM），解决了传统土壤湿度监测中的不一致性，并提供了1997年至2023年的综合数据集，分辨率为25公里。这种方法旨在提高土壤湿度数据的准确性和覆盖率，并通过与全球地面观测网络和其他数据集的验证，展示了在空间和季节分布上与全球气候和地理特征的优越对齐性能。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the key steps involved in using machine learning models to enhance the spatiotemporal coverage of global soil moisture datasets, especially when integrating data from multiple satellite sources?",
+        "QuestionCn": "使用机器学习模型增强全球土壤湿度数据集的时空覆盖范围的关键步骤，特别是在整合来自多个卫星源的数据时有哪些？",
+        "AnswerEn": "The key steps involve integrating multiple satellite data equipped with passive microwave sensors to address limitations in time and space consistency of traditional soil moisture monitoring. The process includes combining inter-calibrated inclined orbit satellites (TMI and GMI) and polar orbit satellites (AMSR-E and AMSR2) multi-frequency brightness temperature data. A multi-channel collaborative retrieval algorithm (MCCA) is used to accurately extract soil moisture data from SMAP as targets. An LSTM machine learning model is then selected to successfully generate global soil moisture products. The data are validated against global ground observation networks and other datasets to ensure spatial distribution and seasonal variation patterns align with global climate and geographic characteristics.",
+        "AnswerCn": "关键步骤包括整合多颗配备被动微波传感器的卫星数据，以解决传统土壤湿度监测在时间和空间一致性方面的局限性。该过程包括结合经过互校准的倾斜轨道卫星（TMI和GMI）和极轨卫星（AMSR-E和AMSR2）的多频率亮温数据。采用多通道协同反演算法（MCCA）准确提取SMAP作为目标的土壤湿度数据。然后选择LSTM机器学习模型成功生成全球土壤湿度产品。数据通过与全球地面观测网络和其他数据集进行验证，以确保空间分布和季节变化模式与全球气候和地理特征相一致。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

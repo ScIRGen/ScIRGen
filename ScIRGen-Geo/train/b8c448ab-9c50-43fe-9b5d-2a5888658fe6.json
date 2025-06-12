@@ -1,526 +1,526 @@
 {
-    "id": "b8c448ab-9c50-43fe-9b5d-2a5888658fe6",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "Global daily 0.05 ° spatiotemporal continuous land surface temperature dataset (2002-2022)",
-            "titleCn": "全球逐日0.05°时空连续地表温度数据集（2002-2022）",
-            "description": "Land surface temperature (LST) is a key parameter in the study of surface energy balance. It is widely used in the fields of meteorology, climate, hydrology, agriculture and ecology. As an important means to obtain global and regional scale LST information, satellite (thermal infrared) remote sensing is vulnerable to the influence of cloud cover and other atmospheric conditions, resulting in temporal and spatial discontinuity of LST remote sensing products, which greatly limits the application of LST remote sensing products in related research fields.\nThe preparation of this data set is based on the empirical orthogonal function interpolation method, using Terra / Aqua MODIS surface temperature products to reconstruct the lst under ideal clear sky conditions, and then using the cumulative distribution function matching method to fuse era5 land reanalysis data to obtain the lst under all-weather conditions. This method makes full use of the spatio-temporal information of the original MODIS remote sensing products and the cloud impact information in the reanalysis data, alleviates the impact of cloud cover on LST estimation, and finally reconstructs the high-quality global 0.05 ° spatio-temporal continuous ideal clear sky and all-weather LST data set.\nThis data set not only realizes the seamless coverage of space-time, but also has good verification accuracy. The reconstructed ideal clear sky LST data in the experimental areas of 17 land cover types in the world, the average correlation coefficient (R) is 0.971, the bias (bias) is -0.001 K to 0.049 K, and the root mean square error (RMSE) is 1.436 K to 2.688 K. The verification results of the reconstructed all-weather LST data and the measured data of ground stations: the average R is 0.895, the bias is 0.025 K to 2.599 K, and the RMSE is 4.503 K to 7.299 K.\nThe time resolution of this data set is 4 times a day, the spatial resolution is 0.05 °, the time span is 2002-2022, and the spatial range covers the world.",
-            "descriptionCn": "地表温度（Land Surface Temperature，LST）是地表能量平衡研究的关键参数，被广泛用于气象、气候、水文、农业和生态等领域研究。卫星（热红外）遥感作为获取全球和区域尺度LST信息的重要手段，容易受到云层覆盖和其他大气条件的影响，导致LST遥感产品时空不连续，极大限制了LST遥感产品在相关研究领域的应用。\n本数据集的制备首先基于经验正交函数插值方法，利用Terra/Aqua MODIS 地表温度产品重建理想晴空条件下的LST，然后使用累积分布函数匹配方法融合 ERA5-Land再分析数据获取全天候条件下的LST。该方法充分利用了原始MODIS遥感产品的时空信息以及再分析数据中的云影响信息，缓解了云层覆盖对LST估算的影响，最终重建得到较高质量的全球0.05°时空连续的理想晴空和全天候LST数据集。\n本数据集不仅实现了时空无缝覆盖，并且具有良好的验证精度。重建的理想晴空LST数据在全球17种土地覆盖类型实验区内，平均相关系数（R）为0.971，偏差（Bias）为-0.001 K至0.049 K，均方根误差（RMSE）为1.436 K至2.688 K。重建的全天候 LST 数据与地面站点实测数据的验证结果：平均 R 为 0.895，Bias为0.025 K 至 2.599 K， RMSE为4.503 K至7.299 K。\n本数据集的时间分辨率为逐日4次，空间分辨率为0.05°，时间跨度为2002年-2022年，空间范围覆盖全球。",
-            "instructions": "File naming:\n(1) Global 0.05° spatiotemporal continuous ideal clear-sky land surface temperature dataset, file naming:\n<MOD11C1(MYD11C1)_YYYYDDD_Clear-sky>.h5, MOD11C1(MYD11C1) represents the MODIS LST product of Terra (Aqua) sun-synchronous satellite, <YYYY> is the year, <DDD> represents the day of year, and <Clear-sky> represents it is ideal clear-sky MODIS LST product.\n(2) Global 0.05° spatiotemporal continuous all-weather land surface temperature dataset, file naming:\n<MOD11C1(MYD11C1)_YYYYDDD_All-weather>.h5, MOD11C1(MYD11C1) represents the MODIS LST product of Terra (Aqua) sun-synchronous satellite, <YYYY> is the year, <DDD> represents the day of year, and < All-weather > represents it is all-weather MODIS LST product.\nHow to use:\nThe data can be read in various programming languages such as Matlab, Python, IDL, etc., and can also be visualized in Panoply. When reading data from a scientific data set, it needs to be multiplied by its corresponding scale factor. For details, please refer to the description documentation.",
-            "instructionsCn": "数据文件命名方式：\n（1）全球0.05°时空连续理想晴空MODIS地表温度数据，命名方式：\n<MOD11C1(MYD11C1)_YYYYDDD_Clear-sky>.h5，MOD11C1(MYD11C1)代表Terra（Aqua）太阳同步卫星的MODIS LST产品，<YYYY>为年份，<DDD>代表一年中的一天，<Clear-sky>表示是理想晴空的MODIS LST产品。\n（2）全球0.05°时空连续全天候MODIS地表温度数据，命名方式：\n<MOD11C1(MYD11C1)_YYYYDDD_All-weather>.h5，MOD11C1(MYD11C1)代表Terra（Aqua）太阳同步卫星的MODIS LST产品，<YYYY>为年份，<DDD>代表一年中的一天，< All-weather >表示是全天候的MODIS LST产品。\n使用方法：\n数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在Panoply中实现可视化。从科学数据集中读取数据时需要乘以其对应的比例因子，详细信息请参见说明文档。",
-            "east": 180.0,
-            "west": 180.0,
-            "south": 90.0,
-            "north": 90.0,
-            "startTime": "2002-01-01 00:00:00",
-            "endTime": "2022-12-31 11:59:59",
-            "fileSize": 944475551854.0,
-            "cstr": "18406.11.Meteoro.tpdc.271663",
-            "doi": "10.11888/Meteoro.tpdc.271663",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "赵天杰",
-                "nameEn": "ZHAO Tianjie",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "余沛",
-                "nameEn": "YU Pei",
-                "unitEn": "",
-                "unitCn": "河南理工大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Global spatiotemporally continuous MODIS land surface temperature dataset",
-                "referenceCn": null,
-                "referenceEn": "Yu, P., Zhao, T.J, Shi, J.C., Ran, Y.H., Jia, L., Ji, D.B., & Xue, H.Z. (2022). Global spatiotemporally continuous MODIS land surface temperature dataset. Scientific Data, 9, 143. https://doi.org/10.1038/s41597-022-01214-8."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "其他",
-                "nameEn": "Others"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "其他",
-                "nameEn": "Others"
-            },
-            {
-                "nameCn": "地表温度",
-                "nameEn": "land surface temperature"
-            },
-            {
-                "nameCn": "大气遥感",
-                "nameEn": "Atmosphere Remote Sensing"
-            },
-            {
-                "nameCn": "热红外遥感",
-                "nameEn": "Thermal infrared remote sensing"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2002-2022",
-                "keywordEn": "2002-2022",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "地球大数据科学工程专项时空三极环境项目",
-                "titleEn": "CASEarth:Big Earth Data for Three Poles"
-            },
-            {
-                "titleCn": "中国科学院战略性先导科技专项（A类）",
-                "titleEn": "Strategic Priority Research Program (A) of the Chinese Academy of Sciences"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            },
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "b8c448ab-9c50-43fe-9b5d-2a5888658fe6",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "Global daily 0.05 ° spatiotemporal continuous land surface temperature dataset (2002-2022)",
+      "titleCn": "全球逐日0.05°时空连续地表温度数据集（2002-2022）",
+      "description": "Land surface temperature (LST) is a key parameter in the study of surface energy balance. It is widely used in the fields of meteorology, climate, hydrology, agriculture and ecology. As an important means to obtain global and regional scale LST information, satellite (thermal infrared) remote sensing is vulnerable to the influence of cloud cover and other atmospheric conditions, resulting in temporal and spatial discontinuity of LST remote sensing products, which greatly limits the application of LST remote sensing products in related research fields.\nThe preparation of this data set is based on the empirical orthogonal function interpolation method, using Terra / Aqua MODIS surface temperature products to reconstruct the lst under ideal clear sky conditions, and then using the cumulative distribution function matching method to fuse era5 land reanalysis data to obtain the lst under all-weather conditions. This method makes full use of the spatio-temporal information of the original MODIS remote sensing products and the cloud impact information in the reanalysis data, alleviates the impact of cloud cover on LST estimation, and finally reconstructs the high-quality global 0.05 ° spatio-temporal continuous ideal clear sky and all-weather LST data set.\nThis data set not only realizes the seamless coverage of space-time, but also has good verification accuracy. The reconstructed ideal clear sky LST data in the experimental areas of 17 land cover types in the world, the average correlation coefficient (R) is 0.971, the bias (bias) is -0.001 K to 0.049 K, and the root mean square error (RMSE) is 1.436 K to 2.688 K. The verification results of the reconstructed all-weather LST data and the measured data of ground stations: the average R is 0.895, the bias is 0.025 K to 2.599 K, and the RMSE is 4.503 K to 7.299 K.\nThe time resolution of this data set is 4 times a day, the spatial resolution is 0.05 °, the time span is 2002-2022, and the spatial range covers the world.",
+      "descriptionCn": "地表温度（Land Surface Temperature，LST）是地表能量平衡研究的关键参数，被广泛用于气象、气候、水文、农业和生态等领域研究。卫星（热红外）遥感作为获取全球和区域尺度LST信息的重要手段，容易受到云层覆盖和其他大气条件的影响，导致LST遥感产品时空不连续，极大限制了LST遥感产品在相关研究领域的应用。\n本数据集的制备首先基于经验正交函数插值方法，利用Terra/Aqua MODIS 地表温度产品重建理想晴空条件下的LST，然后使用累积分布函数匹配方法融合 ERA5-Land再分析数据获取全天候条件下的LST。该方法充分利用了原始MODIS遥感产品的时空信息以及再分析数据中的云影响信息，缓解了云层覆盖对LST估算的影响，最终重建得到较高质量的全球0.05°时空连续的理想晴空和全天候LST数据集。\n本数据集不仅实现了时空无缝覆盖，并且具有良好的验证精度。重建的理想晴空LST数据在全球17种土地覆盖类型实验区内，平均相关系数（R）为0.971，偏差（Bias）为-0.001 K至0.049 K，均方根误差（RMSE）为1.436 K至2.688 K。重建的全天候 LST 数据与地面站点实测数据的验证结果：平均 R 为 0.895，Bias为0.025 K 至 2.599 K， RMSE为4.503 K至7.299 K。\n本数据集的时间分辨率为逐日4次，空间分辨率为0.05°，时间跨度为2002年-2022年，空间范围覆盖全球。",
+      "instructions": "File naming:\n(1) Global 0.05° spatiotemporal continuous ideal clear-sky land surface temperature dataset, file naming:\n<MOD11C1(MYD11C1)_YYYYDDD_Clear-sky>.h5, MOD11C1(MYD11C1) represents the MODIS LST product of Terra (Aqua) sun-synchronous satellite, <YYYY> is the year, <DDD> represents the day of year, and <Clear-sky> represents it is ideal clear-sky MODIS LST product.\n(2) Global 0.05° spatiotemporal continuous all-weather land surface temperature dataset, file naming:\n<MOD11C1(MYD11C1)_YYYYDDD_All-weather>.h5, MOD11C1(MYD11C1) represents the MODIS LST product of Terra (Aqua) sun-synchronous satellite, <YYYY> is the year, <DDD> represents the day of year, and < All-weather > represents it is all-weather MODIS LST product.\nHow to use:\nThe data can be read in various programming languages such as Matlab, Python, IDL, etc., and can also be visualized in Panoply. When reading data from a scientific data set, it needs to be multiplied by its corresponding scale factor. For details, please refer to the description documentation.",
+      "instructionsCn": "数据文件命名方式：\n（1）全球0.05°时空连续理想晴空MODIS地表温度数据，命名方式：\n<MOD11C1(MYD11C1)_YYYYDDD_Clear-sky>.h5，MOD11C1(MYD11C1)代表Terra（Aqua）太阳同步卫星的MODIS LST产品，<YYYY>为年份，<DDD>代表一年中的一天，<Clear-sky>表示是理想晴空的MODIS LST产品。\n（2）全球0.05°时空连续全天候MODIS地表温度数据，命名方式：\n<MOD11C1(MYD11C1)_YYYYDDD_All-weather>.h5，MOD11C1(MYD11C1)代表Terra（Aqua）太阳同步卫星的MODIS LST产品，<YYYY>为年份，<DDD>代表一年中的一天，< All-weather >表示是全天候的MODIS LST产品。\n使用方法：\n数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在Panoply中实现可视化。从科学数据集中读取数据时需要乘以其对应的比例因子，详细信息请参见说明文档。",
+      "east": 180.0,
+      "west": 180.0,
+      "south": 90.0,
+      "north": 90.0,
+      "startTime": "2002-01-01 00:00:00",
+      "endTime": "2022-12-31 11:59:59",
+      "fileSize": 944475551854.0,
+      "cstr": "18406.11.Meteoro.tpdc.271663",
+      "doi": "10.11888/Meteoro.tpdc.271663",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Land surface temperature (LST) plays a critical role in land surface processes. However, as one of the effective means for obtaining global LST observations, remote sensing observations are inherently affected by cloud cover, resulting in varying degrees of missing data in satellite-derived LST products."
-            ],
-            "research objective": [
-                "Here, we propose a solution."
-            ],
-            "challenges": [
-                "However, these reanalysis datasets are usually output with coarse resolutions, and the effects of surface properties on LSTs are only roughly considered in these numerical models, which are unable to meet the requirements of many applications, which demand LSTs with finer resolution. However, this category of algorithms works only under clear-sky conditions; thus, when affected by clouds or other atmospheric disturbances, an MODIS LST product may possess large proportions of missing data, which greatly limits the application of MODIS LST products. However, the abovementioned methods can only reconstruct the missing LST values under ideal, clear-sky conditions but cannot construct real LSTs under cloudy sky conditions. However, some of these methods need to calculate regional parameters from ground-based measurements, and some are not effective when larger areas of data are missing, so they are difficult to apply to LST reconstruction at large scales from global perspectives."
-            ],
-            "methods": [
-                "In the first step is to use the DINEOF reconstruction process to obtain the ideal clear-sky LSTs for cloud-contaminated areas. In the second step, the ideal clear-sky LSTs are corrected to the real LSTs by a cumulative distribution function (CDF) matching-based method with LSTs from the ERA5-Land climate reanalysis data. We use the level-3 daily global LST products (MOD11C1/MYD11C1, Collection 6) provided by two polar-orbiting sun-synchronous satellites, Terra and Aqua (10:30 AM/PM and 1:30 AM/PM local solar time, respectively), from the NASA Earth Observing System, which provide temperature and emissivity values at 0.05° latitude/longitude climate model grids (CMGs). In this work, we also include the climate reanalysis data from ERA5-Land’s skin temperature data (hereinafter referred to as ERA5-Land LST data) based on the HTESSEL model."
-            ],
-            "dataset": [
-                "We use the level-3 daily global LST products (MOD11C1/MYD11C1, Collection 6) provided by two polar-orbiting sun-synchronous satellites, Terra and Aqua (10:30 AM/PM and 1:30 AM/PM local solar time, respectively), from the NASA Earth Observing System, which provide temperature and emissivity values at 0.05° latitude/longitude climate model grids (CMGs). In this work, we also include the climate reanalysis data from ERA5-Land’s skin temperature data (hereinafter referred to as ERA5-Land LST data) based on the HTESSEL model."
-            ],
-            "findings": [
-                "Overall, the DINEOF method showed good performance, with an average R of 0.971, a minimum Bias of −0.001 K, a maximum Bias of 0.049 K, and an RMSE between 1.436 K and 2.688 K. From the above statistical metrics, it is shown that the DINEOF method generally effectively reconstructs missing LST information under all land cover types. Overall, the combination of the DINEOF reconstruction method and the CDF matching-based correction method is an effective approach for MODIS LST reconstruction."
-            ],
-            "backgroundCn": [
-                "地表温度（LST）在地表过程中的作用至关重要。然而，作为获取全球LST观测的有效手段之一，遥感观测受到云层覆盖的影响，导致卫星衍生的LST产品中存在不同程度的缺失数据。"
-            ],
-            "research objectiveCn": [
-                "在这里，我们提出一个解决方案。"
-            ],
-            "challengesCn": [
-                "然而，这些再分析数据集通常以粗分辨率输出，表面特性对地表温度（LST）的影响在这些数值模型中仅被粗略考虑，无法满足许多应用对更高分辨率LST的需求。然而，这类算法仅在晴天条件下有效；因此，当受到云层或其他大气干扰影响时，MODIS LST产品可能会存在大量缺失数据，这极大限制了MODIS LST产品的应用。然而，上述方法只能在理想的晴天条件下重建缺失的LST值，而无法在多云天气条件下构建真实的LST。然而，其中一些方法需要从地面测量中计算区域参数，而有些在较大区域数据缺失时效果不佳，因此在全球范围内进行大规模LST重建时难以应用。"
-            ],
-            "methodsCn": [
-                "第一步是使用DINEOF重建过程获取云污染区域的理想晴空地表温度（LST）。第二步是通过基于累积分布函数（CDF）匹配的方法，将理想晴空LST校正为真实LST，使用ERA5-Land气候重分析数据中的LST。我们使用由两个极地轨道日同步卫星Terra和Aqua提供的第三级每日全球LST产品（MOD11C1/MYD11C1，集合6），这些卫星在当地太阳时间上午10:30/下午1:30和凌晨1:30/下午1:30提供温度和发射率值，分辨率为0.05°纬度/经度气候模型网格（CMGs）。在本研究中，我们还包括基于HTESSEL模型的ERA5-Land的地表温度数据（以下简称ERA5-Land LST数据）。"
-            ],
-            "datasetCn": [
-                "我们使用由两个极地轨道太阳同步卫星（Terra和Aqua）提供的级别3日全球陆地表面温度（LST）产品（MOD11C1/MYD11C1，集合6），其观测时间分别为当地太阳时间上午10:30/下午1:30和下午1:30。该产品由NASA地球观测系统提供，提供0.05°纬度/经度气候模型网格（CMGs）上的温度和发射率值。在本研究中，我们还包括基于HTESSEL模型的ERA5-Land气候再分析数据中的地表温度数据（以下简称ERA5-Land LST数据）。"
-            ],
-            "findingsCn": [
-                "总体而言，DINEOF 方法表现良好，平均 R 值为 0.971，最小偏差为 -0.001 K，最大偏差为 0.049 K，均方根误差（RMSE）在 1.436 K 到 2.688 K 之间。从上述统计指标来看，DINEOF 方法在所有土地覆盖类型下通常有效地重建缺失的地表温度（LST）信息。总体而言，DINEOF 重建方法与基于 CDF 匹配的修正方法的结合是 MODIS LST 重建的有效方法。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "赵天杰",
+        "nameEn": "ZHAO Tianjie",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "余沛",
+        "nameEn": "YU Pei",
+        "unitEn": "",
+        "unitCn": "河南理工大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Can the DINEOF reconstruction method effectively reconstruct missing land surface temperature information under various land cover types?",
-                "QuestionCn": "DINEOF重建方法能否有效重建不同土地覆盖类型下缺失的地表温度信息？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which data source contributes more effectively to the generation of global LST datasets, MODIS satellite products or ERA5-Land climate reanalysis data?",
-                "QuestionCn": "哪个数据源对全球地表温度（LST）数据集的生成贡献更有效，MODIS卫星产品还是ERA5-Land气候重分析数据？",
-                "AnswerEn": "MODIS satellite products",
-                "AnswerCn": "MODIS 卫星产品",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Do challenges in LST data collection primarily arise from cloud cover, coarse resolution of reanalysis datasets, or surface property effects?",
-                "QuestionCn": "LST数据收集中的挑战主要来自云层覆盖、再分析数据集的粗分辨率或地表属性效应吗？",
-                "AnswerEn": "cloud cover",
-                "AnswerCn": "云层覆盖",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What method is used to reconstruct ideal clear-sky Land Surface Temperature (LST) data in regions affected by cloud cover?",
-                "QuestionCn": "用于重建受云层覆盖影响的理想晴空陆地表面温度（LST）数据的方法是什么？",
-                "AnswerEn": "DINEOF",
-                "AnswerCn": "DINEOF",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Where do the level-3 daily global LST products used in the reconstruction process come from?",
-                "QuestionCn": "用于重建过程的三级日全球地表温度（LST）产品来自哪里？",
-                "AnswerEn": "NASA Earth Observing System",
-                "AnswerCn": "NASA地球观测系统",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "When is the cumulative distribution function (CDF) matching-based method applied in the data reconstruction process?",
-                "QuestionCn": "累积分布函数（CDF）匹配方法在数据重建过程中何时应用？",
-                "AnswerEn": "second step",
-                "AnswerCn": "第二步",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a method used to reconstruct land surface temperature data in areas affected by cloud cover?",
-                "QuestionCn": "您能否提供一个用于重建受云层覆盖影响地区的地表温度数据的方法示例？",
-                "AnswerEn": "An example of a method used to reconstruct land surface temperature data in cloud-contaminated areas is the DINEOF reconstruction process. This method first obtains ideal clear-sky LSTs and then corrects them to real LSTs using a cumulative distribution function (CDF) matching-based method with LSTs from the ERA5-Land climate reanalysis data.",
-                "AnswerCn": "一种用于重建云污染区域地表温度数据的方法是DINEOF重建过程。该方法首先获取理想的晴空地表温度（LST），然后使用基于累积分布函数（CDF）匹配的方法，将其校正为真实的地表温度，所用的真实地表温度数据来自ERA5-Land气候重分析数据。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced in collecting land surface temperature data through satellite remote sensing?",
-                "QuestionCn": "通过卫星遥感收集地表温度数据时面临的一个挑战是什么？",
-                "AnswerEn": "An example of a challenge in collecting land surface temperature data through satellite remote sensing is the influence of cloud cover, which leads to missing data in satellite-derived LST products. This issue significantly limits the application of these products in various research domains.",
-                "AnswerCn": "通过卫星遥感收集地表温度数据的一个挑战是云层覆盖的影响，这导致卫星衍生的地表温度产品中出现缺失数据。这个问题显著限制了这些产品在各个研究领域的应用。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Can you give an example of a dataset that integrates multiple sources to provide land surface temperature information on a global scale?",
-                "QuestionCn": "您能否提供一个整合多个来源以提供全球范围内地表温度信息的数据集的示例？",
-                "AnswerEn": "An example of a dataset that integrates multiple sources for global land surface temperature information is the one that combines level-3 daily global LST products from Terra and Aqua satellites with climate reanalysis data from ERA5-Land's skin temperature data. This integration helps mitigate the impact of cloud cover on LST estimates.",
-                "AnswerCn": "一个整合多个来源的全球陆地表面温度信息的数据集的例子是将来自Terra和Aqua卫星的三级日全球陆地表面温度产品与ERA5-Land的地表温度气候再分析数据相结合。这种整合有助于减轻云层覆盖对陆地表面温度估计的影响。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the techniques used to ensure spatial and temporal continuity in land surface temperature datasets?",
-                "QuestionCn": "确保地表温度数据集空间和时间连续性所使用的技术有哪些？",
-                "AnswerEn": "empirical orthogonal function interpolation method, cumulative distribution function matching method",
-                "AnswerCn": "经验正交函数插值法，累积分布函数匹配法",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What challenges are associated with reconstructing land surface temperature data under cloudy conditions, and how are they addressed?",
-                "QuestionCn": "在多云条件下重建地表温度数据面临哪些挑战，以及如何解决这些挑战？",
-                "AnswerEn": "cloud cover, missing data, reconstruction algorithms, cumulative distribution function matching with ERA5-Land reanalysis data",
-                "AnswerCn": "云量、缺失数据、重建算法、与ERA5-Land再分析数据的累积分布函数匹配",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of a global land surface temperature dataset developed using specific reconstruction methods?",
-                "QuestionCn": "全球陆地表面温度数据集的空间分辨率是使用特定重建方法开发的。",
-                "AnswerEn": "0.05°",
-                "AnswerCn": "0.05°",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many times per day is data collected in a global land surface temperature dataset with a specific time resolution?",
-                "QuestionCn": "在具有特定时间分辨率的全球陆地表面温度数据集中，每天收集数据的次数是多少？",
-                "AnswerEn": "4 times per day",
-                "AnswerCn": "每天四次",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Over how many years does a global dataset of reconstructed land surface temperatures span, providing continuous data coverage?",
-                "QuestionCn": "全球重建的陆地表面温度数据集覆盖了多少年的连续数据？",
-                "AnswerEn": "20 years",
-                "AnswerCn": "20年",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the DINEOF reconstruction process in the context of land surface temperature data collection?",
-                "QuestionCn": "DINEOF重建过程是在地表温度数据收集的背景下进行的。",
-                "AnswerEn": "The DINEOF reconstruction process is a method used to obtain ideal clear-sky land surface temperatures (LSTs) for areas affected by cloud contamination. It is the first step in reconstructing missing LST information in satellite-derived products.",
-                "AnswerCn": "DINEOF重建过程是一种用于获取受云污染影响区域的理想晴空陆地表面温度（LSTs）的方法。它是重建卫星衍生产品中缺失的LST信息的第一步。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are cumulative distribution function (CDF) matching-based methods in the context of LST data reconstruction?",
-                "QuestionCn": "在LST数据重建的背景下，累积分布函数（CDF）匹配方法是什么？",
-                "AnswerEn": "Cumulative distribution function (CDF) matching-based methods are techniques used to correct ideal clear-sky LSTs to real LSTs by matching them with LSTs from climate reanalysis data, such as the ERA5-Land skin temperature data, to account for atmospheric disturbances.",
-                "AnswerCn": "累积分布函数（CDF）匹配方法是一种技术，用于通过将理想的晴空地表温度（LST）与气候再分析数据（如ERA5-Land地表温度数据）中的LST进行匹配，从而校正实际的LST，以考虑大气干扰。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the significance of using MOD11C1/MYD11C1 level-3 daily global LST products in LST data collection?",
-                "QuestionCn": "使用MOD11C1/MYD11C1级别3每日全球地表温度（LST）产品在地表温度数据收集中的重要性是什么？",
-                "AnswerEn": "The MOD11C1/MYD11C1 level-3 daily global LST products are significant in LST data collection as they provide temperature and emissivity values at 0.05° latitude/longitude climate model grids, offering high spatial resolution data from Terra and Aqua satellites, crucial for reconstructing high-quality global LST data.",
-                "AnswerCn": "MOD11C1/MYD11C1级别-3每日全球陆地表面温度（LST）产品在LST数据收集方面具有重要意义，因为它们提供了0.05°纬度/经度气候模型网格的温度和发射率值，来自Terra和Aqua卫星的高空间分辨率数据，对于重建高质量的全球LST数据至关重要。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "What are the differences in the challenges associated with reconstructing LST values under ideal clear-sky conditions compared to real cloudy sky conditions?",
-                "QuestionCn": "在理想的晴空条件下重建陆地表面温度（LST）值与在真实多云天空条件下重建LST值所面临的挑战有哪些不同？",
-                "AnswerEn": "Reconstructing LST values under ideal clear-sky conditions primarily deals with filling in data gaps caused by cloud cover. In contrast, reconstructing real LSTs under cloudy conditions involves correcting these values to account for atmospheric disturbances, which is more complex and requires additional correction methods like CDF matching.",
-                "AnswerCn": "在理想的晴空条件下重建地表温度（LST）值主要涉及填补因云层覆盖而造成的数据缺口。相比之下，在多云条件下重建真实的LST值则涉及对这些值进行修正，以考虑大气干扰，这一过程更为复杂，需要额外的修正方法，如累积分布函数匹配（CDF匹配）。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What methodological advancements are necessary to enhance the spatial resolution of LST datasets used in land surface processes?",
-                "QuestionCn": "为了增强用于陆面过程的地表温度（LST）数据集的空间分辨率，哪些方法论进展是必要的？",
-                "AnswerEn": "To enhance the spatial resolution of LST datasets, it is necessary to overcome the limitations posed by coarse-resolution reanalysis datasets. This can be achieved by developing algorithms that consider the effects of surface properties on LSTs more precisely and by employing high-resolution satellite data like MODIS products combined with sophisticated reconstruction methods such as DINEOF and CDF matching.",
-                "AnswerCn": "为了提高地表温度（LST）数据集的空间分辨率，有必要克服粗分辨率再分析数据集所带来的限制。这可以通过开发更精确考虑地表特性对LST影响的算法，以及结合高分辨率卫星数据（如MODIS产品）和复杂的重建方法（如DINEOF和CDF匹配）来实现。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What implications do reconstructed LST datasets have for applications requiring high accuracy under varying atmospheric conditions?",
-                "QuestionCn": "重建的陆地表面温度（LST）数据集对在不同大气条件下需要高精度的应用有什么影响？",
-                "AnswerEn": "Reconstructed LST datasets, which combine satellite observations with reanalysis data, provide high accuracy and continuity even under varying atmospheric conditions. These datasets are crucial for applications in meteorology, climate studies, hydrology, agriculture, and ecology, as they offer reliable temperature information across different land cover types, ensuring that data users can make informed decisions based on accurate temperature patterns.",
-                "AnswerCn": "重建的地表温度（LST）数据集结合了卫星观测和再分析数据，即使在不同的气象条件下也能提供高精度和连续性。这些数据集对于气象、气候研究、水文学、农业和生态学等应用至关重要，因为它们提供了不同土地覆盖类型的可靠温度信息，确保数据用户能够基于准确的温度模式做出明智的决策。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the challenges in obtaining accurate Land Surface Temperature (LST) data from satellite remote sensing observations?",
-                "QuestionCn": "从卫星遥感观测中获取准确的地表温度（LST）数据面临的挑战是什么？",
-                "AnswerEn": "Remote sensing observations for Land Surface Temperature (LST) are inherently affected by cloud cover, leading to varying degrees of missing data in satellite-derived LST products. This cloud cover and other atmospheric conditions result in temporal and spatial discontinuities, limiting the application of LST products in related research areas.",
-                "AnswerCn": "遥感观测的地表温度（LST）受到云层覆盖的影响，导致卫星衍生的LST产品中存在不同程度的缺失数据。这种云层覆盖和其他大气条件导致了时间和空间的不连续性，限制了LST产品在相关研究领域的应用。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is it necessary to use a cumulative distribution function (CDF) matching-based method in reconstructing LST data?",
-                "QuestionCn": "在重建陆地表面温度（LST）数据时，使用基于累积分布函数（CDF）匹配的方法是必要的原因是什么？",
-                "AnswerEn": "The CDF matching-based method is necessary because it corrects the ideal clear-sky LSTs to the real LSTs by integrating LSTs from the ERA5-Land climate reanalysis data, thereby addressing the limitations of reconstructing only missing LST values under ideal conditions and not under cloudy sky conditions.",
-                "AnswerCn": "基于CDF匹配的方法是必要的，因为它通过整合ERA5-Land气候重分析数据中的地表温度（LST），将理想的晴空LST校正为真实的LST，从而解决了仅在理想条件下重建缺失LST值而无法在多云天气条件下进行重建的局限性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What factors lead to the high validation accuracy of the reconstructed LST dataset under various land cover types?",
-                "QuestionCn": "导致重建的LST数据集在各种土地覆盖类型下具有高验证准确性的因素有哪些？",
-                "AnswerEn": "The high validation accuracy is attributed to the use of the DINEOF method for reconstructing missing LST information, which shows good performance across all land cover types. It effectively combines the DINEOF reconstruction method with the CDF matching-based correction method, resulting in strong statistical metrics such as an average R of 0.971, minimal Bias, and low RMSE values.",
-                "AnswerCn": "高验证准确率归因于使用DINEOF方法重建缺失的地表温度（LST）信息，该方法在所有土地覆盖类型中表现良好。它有效地将DINEOF重建方法与基于CDF匹配的校正方法相结合，产生了强大的统计指标，如平均相关系数R为0.971，偏差最小，以及低均方根误差（RMSE）值。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential outcomes of using the cumulative distribution function matching method for correcting LST data from climate reanalysis datasets?",
-                "QuestionCn": "使用累积分布函数匹配方法来校正气候再分析数据集中的地表温度（LST）数据的潜在结果是什么？",
-                "AnswerEn": "The use of the cumulative distribution function matching method for correcting LST data from climate reanalysis datasets results in the reconstruction of real LSTs under all-sky conditions, effectively mitigating the impact of cloud cover on satellite-derived LST data.",
-                "AnswerCn": "使用累积分布函数匹配方法对气候再分析数据集中的地表温度（LST）数据进行校正，可以在全云条件下重建真实的地表温度，有效减轻云层覆盖对卫星获取的地表温度数据的影响。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it necessary to develop data collection methods that can reconstruct land surface temperature under both clear and cloudy sky conditions?",
-                "QuestionCn": "为什么有必要开发能够在晴天和多云天气条件下重建地表温度的数据收集方法？",
-                "AnswerEn": "Remote sensing observations for land surface temperature are significantly affected by cloud cover, leading to missing data. This limitation restricts the application of satellite-derived LST products, as many applications require continuous data. Developing methods to reconstruct LST under all weather conditions enhances the usability of these datasets across various research fields such as climate and hydrology.",
-                "AnswerCn": "遥感观测的地表温度受到云层覆盖的显著影响，导致数据缺失。这一限制限制了卫星衍生的地表温度产品的应用，因为许多应用需要连续的数据。开发在各种天气条件下重建地表温度的方法，提高了这些数据集在气候和水文学等多个研究领域的可用性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the goals behind using a cumulative distribution function matching method to enhance land surface temperature datasets?",
-                "QuestionCn": "使用累积分布函数匹配方法来增强地表温度数据集的目标是什么？",
-                "AnswerEn": "The goal of using a cumulative distribution function matching method is to correct the ideal clear-sky LSTs to real LSTs by integrating information from climate reanalysis data. This approach aims to mitigate the effects of cloud cover and atmospheric disturbances on LST estimations, thereby increasing the accuracy and applicability of the dataset for global studies.",
-                "AnswerCn": "使用累积分布函数匹配方法的目标是通过整合气候再分析数据的信息，将理想的晴空地表温度（LST）校正为实际的地表温度。这种方法旨在减轻云层覆盖和大气干扰对地表温度估计的影响，从而提高数据集在全球研究中的准确性和适用性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why integrate satellite and reanalysis data in the creation of land surface temperature datasets?",
-                "QuestionCn": "为什么在创建地表温度数据集时要整合卫星数据和再分析数据？",
-                "AnswerEn": "Integrating satellite data with reanalysis data, such as ERA5-Land, allows for the creation of a continuous and high-resolution LST dataset. This integration leverages the spatial-temporal detail of satellite observations and the cloud influence information from reanalysis data, addressing the challenge of cloud-induced data gaps in satellite-derived LST products.",
-                "AnswerCn": "将卫星数据与再分析数据（如ERA5-Land）集成，可以创建一个连续且高分辨率的地表温度（LST）数据集。这种集成利用了卫星观测的时空细节和再分析数据中的云影响信息，解决了卫星衍生LST产品中因云造成的数据缺口问题。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in reconstructing ideal clear-sky Land Surface Temperature (LST) from satellite data under cloud-contaminated conditions?",
-                "QuestionCn": "在云污染条件下，从卫星数据重建理想的晴空地表温度（LST）所涉及的程序步骤如下：",
-                "AnswerEn": "The procedural steps involve first using the DINEOF reconstruction process to obtain the ideal clear-sky LSTs for cloud-contaminated areas. This is followed by correcting these ideal clear-sky LSTs to the real LSTs using a cumulative distribution function (CDF) matching-based method with LSTs from the ERA5-Land climate reanalysis data.",
-                "AnswerCn": "程序步骤首先使用DINEOF重建过程获取云污染区域的理想晴空地表温度（LST）。接下来，使用基于累积分布函数（CDF）匹配的方法，将这些理想晴空LST校正为真实LST，所用数据来自ERA5-Land气候重分析数据。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can researchers address the challenge of missing data due to cloud cover in satellite-derived LST products?",
-                "QuestionCn": "研究人员如何应对由于云层覆盖导致的卫星衍生地表温度（LST）产品缺失数据的挑战？",
-                "AnswerEn": "Researchers can address this challenge by combining satellite-derived LST data, such as the MODIS LST products, with reanalysis data like the ERA5-Land's skin temperature data. The DINEOF method can be used to reconstruct missing LST information, and a cumulative distribution function (CDF) matching-based method can correct the ideal clear-sky LSTs to real LSTs.",
-                "AnswerCn": "研究人员可以通过将卫星获取的地表温度（LST）数据，如MODIS LST产品，与再分析数据（如ERA5-Land的表面温度数据）相结合来应对这一挑战。可以使用DINEOF方法重建缺失的LST信息，并采用基于累积分布函数（CDF）匹配的方法将理想的晴空LST校正为真实的LST。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What methodology is used to integrate Terra/Aqua MODIS LST products with ERA5-Land reanalysis data for creating a continuous global LST dataset?",
-                "QuestionCn": "用于将Terra/Aqua MODIS LST产品与ERA5-Land再分析数据集成以创建连续全球LST数据集的方法论是什么？",
-                "AnswerEn": "The methodology involves using Terra/Aqua MODIS LST products to reconstruct LST under ideal clear-sky conditions using an empirical orthogonal function interpolation method. Then, the reconstructed LST is integrated with ERA5-Land reanalysis data using a cumulative distribution function matching method to obtain LST under all-weather conditions, ultimately creating a continuous global LST dataset.",
-                "AnswerCn": "该方法涉及使用Terra/Aqua MODIS LST产品在理想的晴空条件下重建地表温度（LST），采用经验正交函数插值方法。然后，将重建的LST与ERA5-Land再分析数据通过累积分布函数匹配方法相结合，以获得在各种天气条件下的LST，最终创建一个连续的全球LST数据集。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methodologies enable the reconstruction of land surface temperature data under cloudy conditions?",
-                "QuestionCn": "哪些方法论能够在多云条件下重建地表温度数据？",
-                "AnswerEn": "The reconstruction of land surface temperature data under cloudy conditions is enabled through a combination of the DINEOF reconstruction method to obtain ideal clear-sky LSTs for cloud-contaminated areas, followed by a cumulative distribution function (CDF) matching-based method to correct these to real LSTs, utilizing ERA5-Land climate reanalysis data.",
-                "AnswerCn": "在多云条件下，土地表面温度数据的重建通过结合DINEOF重建方法获得理想的晴空土地表面温度（LST）来处理云污染区域，随后采用基于累积分布函数（CDF）匹配的方法对这些数据进行校正，以利用ERA5-Land气候重分析数据获得真实的LST。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How do reanalysis datasets contribute to the enhancement of spatial and temporal continuity in land surface temperature observations?",
-                "QuestionCn": "再分析数据集如何促进地表温度观测的空间和时间连续性增强？",
-                "AnswerEn": "Reanalysis datasets contribute to the enhancement of spatial and temporal continuity in land surface temperature observations by providing comprehensive coverage that can be used to fill in gaps left by cloud cover in satellite data. The ERA5-Land reanalysis data are specifically used to complement satellite observations to create a globally continuous LST dataset.",
-                "AnswerCn": "再分析数据集通过提供全面的覆盖，增强了地表温度观测的空间和时间连续性，可以用来填补卫星数据因云层覆盖而留下的空白。ERA5-Land再分析数据专门用于补充卫星观测，以创建全球连续的地表温度数据集。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "What are the anticipated challenges in obtaining high-resolution LST data from reanalysis datasets, and how could these be overcome?",
-                "QuestionCn": "从再分析数据集中获取高分辨率地表温度（LST）数据的预期挑战是什么，以及如何克服这些挑战？",
-                "AnswerEn": "Reanalysis datasets are generally output at coarse resolutions and do not fully account for surface properties affecting LSTs, limiting their application in cases requiring finer resolution. Overcoming these challenges may involve integrating high-resolution satellite data with reanalysis data using methods that adjust for cloud cover and atmospheric effects to produce more accurate LST reconstructions.",
-                "AnswerCn": "再分析数据集通常以粗分辨率输出，并未充分考虑影响地表温度（LST）的表面特性，这限制了它们在需要更高分辨率的情况下的应用。克服这些挑战的方法可能包括将高分辨率卫星数据与再分析数据结合，采用调整云层覆盖和大气影响的方法，以生成更准确的地表温度重建。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What might be the reasons for the difficulty in reconstructing real LSTs under cloudy conditions, and what methodologies are expected to improve this reconstruction?",
-                "QuestionCn": "在多云条件下重建真实地表温度（LST）面临的困难可能有以下几个原因：云层会遮挡地表辐射，导致卫星遥感数据的获取受到限制；云的不同类型和厚度会影响地表温度的辐射特征；此外，云的动态变化也使得在短时间内获取一致的LST数据变得复杂。\n\n为改善这种重建，预计将采用以下方法：使用多时相遥感数据进行云检测和去云处理；应用机器学习和深度学习算法来提高LST的估算精度；结合地面观测数据与遥感数据进行数据同化；以及利用物理模型和辐射传输模型来模拟和校正云对LST的影响。",
-                "AnswerEn": "Reconstructing real LSTs under cloudy conditions is challenging because many algorithms only work under clear-sky conditions and require regional parameters from ground-based measurements, which are not effective when large areas of data are missing. To improve this, methods like DINEOF for initial reconstruction and CDF matching with reanalysis data for correction can enhance the accuracy and applicability of LST data under cloud cover.",
-                "AnswerCn": "在多云条件下重建真实的地表温度（LST）是具有挑战性的，因为许多算法仅在晴空条件下有效，并且需要来自地面测量的区域参数，而在大面积数据缺失时这些参数并不有效。为了改善这一点，像DINEOF这样的初步重建方法和与再分析数据的累积分布函数（CDF）匹配校正可以提高云层覆盖下LST数据的准确性和适用性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "What are your thoughts on the effectiveness of using a combination of DINEOF reconstruction and CDF matching-based correction methods for addressing cloud cover challenges in land surface temperature data collection?",
-                "QuestionCn": "我对使用DINEOF重建和基于CDF匹配的修正方法相结合来解决地表温度数据收集中的云覆盖挑战的有效性有何看法？",
-                "AnswerEn": "The combination of DINEOF reconstruction and CDF matching-based correction methods is considered effective in addressing cloud cover challenges. The approach successfully reconstructs missing LST information across various land cover types, achieving high correlation and low bias, indicating it is a robust solution for handling cloud-contaminated areas in LST data collection.",
-                "AnswerCn": "DINEOF重建与基于CDF匹配的修正方法的结合被认为在解决云覆盖挑战方面是有效的。这种方法成功地重建了各种土地覆盖类型中缺失的地表温度（LST）信息，达到了高相关性和低偏差，表明它是处理LST数据收集中云污染区域的稳健解决方案。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In your opinion, how does the integration of MODIS and ERA5-Land data contribute to the reliability and continuity of land surface temperature datasets?",
-                "QuestionCn": "在我看来，MODIS和ERA5-Land数据的整合有助于提高地表温度数据集的可靠性和连续性。",
-                "AnswerEn": "The integration of MODIS and ERA5-Land data enhances the reliability and continuity of land surface temperature datasets by leveraging the detailed spatial information from MODIS and the atmospheric information from ERA5-Land. This integration allows for the reconstruction of LST data under both clear and cloudy conditions, resulting in a high-quality, spatiotemporally continuous dataset that meets various research and application needs.",
-                "AnswerCn": "MODIS和ERA5-Land数据的集成通过利用MODIS的详细空间信息和ERA5-Land的气象信息，提高了地表温度数据集的可靠性和连续性。这种集成允许在晴天和多云条件下重建LST数据，从而生成高质量、时空连续的数据集，满足各种研究和应用需求。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What is your assessment of the potential benefits and limitations of using the 0.05° spatial resolution in reconstructing global land surface temperature datasets?",
-                "QuestionCn": "我对使用0.05°空间分辨率重建全球陆地表面温度数据集的潜在好处和局限性的评估是什么？",
-                "AnswerEn": "The 0.05° spatial resolution offers a fine granularity that is beneficial for detailed analysis and application across different land cover types globally. It facilitates high accuracy in temperature and emissivity data representation. However, the limitation may arise in computational demands and the need for extensive data processing capabilities, which could be challenging for large-scale, real-time applications.",
-                "AnswerCn": "0.05°的空间分辨率提供了细致的粒度，这对全球不同土地覆盖类型的详细分析和应用非常有利。它有助于高精度地表示温度和发射率数据。然而，限制可能出现在计算需求和对广泛数据处理能力的需求上，这对于大规模实时应用可能是一个挑战。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don’t understand how cloud cover affects the accuracy and continuity of land surface temperature data collected via remote sensing.",
-                "QuestionCn": "我不明白云层覆盖如何影响通过遥感收集的地表温度数据的准确性和连续性。",
-                "AnswerEn": "Remote sensing observations for land surface temperature (LST) are significantly affected by cloud cover, which leads to varying degrees of missing data in satellite-derived LST products. Clouds obstruct the thermal infrared signals used in remote sensing, causing interruptions in data collection and affecting the spatial and temporal continuity of LST products.",
-                "AnswerCn": "遥感观测的地表温度（LST）受到云层覆盖的显著影响，这导致卫星衍生的LST产品中存在不同程度的缺失数据。云层阻挡了用于遥感的热红外信号，造成数据收集的中断，并影响LST产品的空间和时间连续性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I am unsure about the methods used to reconstruct land surface temperature data under cloudy conditions.",
-                "QuestionCn": "我不确定在多云条件下重建地表温度数据的方法。",
-                "AnswerEn": "To reconstruct land surface temperature data under cloudy conditions, a method involving empirical orthogonal function interpolation is used to estimate ideal clear-sky LST. This is then combined with ERA5-Land climate reanalysis data using a cumulative distribution function matching method to correct and obtain real LST under all-weather conditions.",
-                "AnswerCn": "为了在多云条件下重建地表温度数据，采用经验正交函数插值方法来估计理想的晴空地表温度（LST）。然后，使用累积分布函数匹配方法将其与ERA5-Land气候重分析数据结合，以校正并获得在各种天气条件下的真实地表温度。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I can't make sense of why reanalysis datasets are needed alongside satellite data to improve LST data quality.",
-                "QuestionCn": "我无法理解为什么再分析数据集在提高地表温度（LST）数据质量方面需要与卫星数据一起使用。",
-                "AnswerEn": "Reanalysis datasets, like ERA5-Land's skin temperature data, are used alongside satellite data to improve LST data quality because they provide additional information on atmospheric conditions that affect LST measurements. These datasets help mitigate the impact of cloud cover and other atmospheric disturbances on satellite observations, leading to more accurate and continuous LST data.",
-                "AnswerCn": "再分析数据集，如ERA5-Land的地表温度数据，与卫星数据一起使用，以提高地表温度数据的质量，因为它们提供了影响地表温度测量的大气条件的额外信息。这些数据集有助于减轻云层覆盖和其他大气干扰对卫星观测的影响，从而导致更准确和连续的地表温度数据。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please discuss the challenges of collecting land surface temperature data via remote sensing and how these challenges can be mitigated.",
-                "QuestionCn": "请讨论通过遥感收集地表温度数据的挑战，以及如何缓解这些挑战。",
-                "AnswerEn": "Remote sensing observations for land surface temperature (LST) are significantly affected by cloud cover, leading to missing data in satellite-derived LST products. These challenges can be mitigated by using methods that reconstruct missing LST values under clear-sky conditions, such as the DINEOF reconstruction process, and by correcting these values under real conditions using cumulative distribution function (CDF) matching-based methods with reanalysis data, like ERA5-Land climate reanalysis data.",
-                "AnswerCn": "遥感观测的地表温度（LST）受到云层覆盖的显著影响，导致卫星衍生的LST产品中出现缺失数据。这些挑战可以通过在晴空条件下重建缺失LST值的方法来缓解，例如DINEOF重建过程，以及通过使用基于累积分布函数（CDF）匹配的方法与再分析数据（如ERA5-Land气候再分析数据）来修正这些值。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Please explore the potential for expanding or refining datasets for global land surface temperature by incorporating additional data sources or methods.",
-                "QuestionCn": "请探讨通过整合额外的数据源或方法来扩展或完善全球陆地表面温度数据集的潜力。",
-                "AnswerEn": "Expanding or refining datasets for global land surface temperature can involve incorporating additional data sources such as other satellite data products or higher-resolution climate reanalysis datasets. Additionally, refining the methods used, such as enhancing the accuracy of the DINEOF method or improving the CDF matching techniques, can further increase the dataset's quality. Exploring machine learning algorithms to predict missing values or using ground-based measurements to validate satellite data can also be beneficial for dataset enhancement.",
-                "AnswerCn": "扩展或精炼全球陆地表面温度数据集可以涉及整合其他数据源，例如其他卫星数据产品或更高分辨率的气候重分析数据集。此外，改进所使用的方法，例如提高DINEOF方法的准确性或改进CDF匹配技术，也可以进一步提高数据集的质量。探索机器学习算法以预测缺失值或使用地面测量数据来验证卫星数据也可以对数据集的增强有所帮助。",
-                "Level": "C6(Creating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Global spatiotemporally continuous MODIS land surface temperature dataset",
+        "referenceCn": null,
+        "referenceEn": "Yu, P., Zhao, T.J, Shi, J.C., Ran, Y.H., Jia, L., Ji, D.B., & Xue, H.Z. (2022). Global spatiotemporally continuous MODIS land surface temperature dataset. Scientific Data, 9, 143. https://doi.org/10.1038/s41597-022-01214-8."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "其他",
+        "nameEn": "Others"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "其他",
+        "nameEn": "Others"
+      },
+      {
+        "nameCn": "地表温度",
+        "nameEn": "land surface temperature"
+      },
+      {
+        "nameCn": "大气遥感",
+        "nameEn": "Atmosphere Remote Sensing"
+      },
+      {
+        "nameCn": "热红外遥感",
+        "nameEn": "Thermal infrared remote sensing"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2002-2022",
+        "keywordEn": "2002-2022",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "地球大数据科学工程专项时空三极环境项目",
+        "titleEn": "CASEarth:Big Earth Data for Three Poles"
+      },
+      {
+        "titleCn": "中国科学院战略性先导科技专项（A类）",
+        "titleEn": "Strategic Priority Research Program (A) of the Chinese Academy of Sciences"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      },
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Land surface temperature (LST) plays a critical role in land surface processes. However, as one of the effective means for obtaining global LST observations, remote sensing observations are inherently affected by cloud cover, resulting in varying degrees of missing data in satellite-derived LST products."
+      ],
+      "research objective": [
+        "Here, we propose a solution."
+      ],
+      "challenges": [
+        "However, these reanalysis datasets are usually output with coarse resolutions, and the effects of surface properties on LSTs are only roughly considered in these numerical models, which are unable to meet the requirements of many applications, which demand LSTs with finer resolution. However, this category of algorithms works only under clear-sky conditions; thus, when affected by clouds or other atmospheric disturbances, an MODIS LST product may possess large proportions of missing data, which greatly limits the application of MODIS LST products. However, the abovementioned methods can only reconstruct the missing LST values under ideal, clear-sky conditions but cannot construct real LSTs under cloudy sky conditions. However, some of these methods need to calculate regional parameters from ground-based measurements, and some are not effective when larger areas of data are missing, so they are difficult to apply to LST reconstruction at large scales from global perspectives."
+      ],
+      "methods": [
+        "In the first step is to use the DINEOF reconstruction process to obtain the ideal clear-sky LSTs for cloud-contaminated areas. In the second step, the ideal clear-sky LSTs are corrected to the real LSTs by a cumulative distribution function (CDF) matching-based method with LSTs from the ERA5-Land climate reanalysis data. We use the level-3 daily global LST products (MOD11C1/MYD11C1, Collection 6) provided by two polar-orbiting sun-synchronous satellites, Terra and Aqua (10:30 AM/PM and 1:30 AM/PM local solar time, respectively), from the NASA Earth Observing System, which provide temperature and emissivity values at 0.05° latitude/longitude climate model grids (CMGs). In this work, we also include the climate reanalysis data from ERA5-Land’s skin temperature data (hereinafter referred to as ERA5-Land LST data) based on the HTESSEL model."
+      ],
+      "dataset": [
+        "We use the level-3 daily global LST products (MOD11C1/MYD11C1, Collection 6) provided by two polar-orbiting sun-synchronous satellites, Terra and Aqua (10:30 AM/PM and 1:30 AM/PM local solar time, respectively), from the NASA Earth Observing System, which provide temperature and emissivity values at 0.05° latitude/longitude climate model grids (CMGs). In this work, we also include the climate reanalysis data from ERA5-Land’s skin temperature data (hereinafter referred to as ERA5-Land LST data) based on the HTESSEL model."
+      ],
+      "findings": [
+        "Overall, the DINEOF method showed good performance, with an average R of 0.971, a minimum Bias of −0.001 K, a maximum Bias of 0.049 K, and an RMSE between 1.436 K and 2.688 K. From the above statistical metrics, it is shown that the DINEOF method generally effectively reconstructs missing LST information under all land cover types. Overall, the combination of the DINEOF reconstruction method and the CDF matching-based correction method is an effective approach for MODIS LST reconstruction."
+      ],
+      "backgroundCn": [
+        "地表温度（LST）在地表过程中的作用至关重要。然而，作为获取全球LST观测的有效手段之一，遥感观测受到云层覆盖的影响，导致卫星衍生的LST产品中存在不同程度的缺失数据。"
+      ],
+      "research objectiveCn": [
+        "在这里，我们提出一个解决方案。"
+      ],
+      "challengesCn": [
+        "然而，这些再分析数据集通常以粗分辨率输出，表面特性对地表温度（LST）的影响在这些数值模型中仅被粗略考虑，无法满足许多应用对更高分辨率LST的需求。然而，这类算法仅在晴天条件下有效；因此，当受到云层或其他大气干扰影响时，MODIS LST产品可能会存在大量缺失数据，这极大限制了MODIS LST产品的应用。然而，上述方法只能在理想的晴天条件下重建缺失的LST值，而无法在多云天气条件下构建真实的LST。然而，其中一些方法需要从地面测量中计算区域参数，而有些在较大区域数据缺失时效果不佳，因此在全球范围内进行大规模LST重建时难以应用。"
+      ],
+      "methodsCn": [
+        "第一步是使用DINEOF重建过程获取云污染区域的理想晴空地表温度（LST）。第二步是通过基于累积分布函数（CDF）匹配的方法，将理想晴空LST校正为真实LST，使用ERA5-Land气候重分析数据中的LST。我们使用由两个极地轨道日同步卫星Terra和Aqua提供的第三级每日全球LST产品（MOD11C1/MYD11C1，集合6），这些卫星在当地太阳时间上午10:30/下午1:30和凌晨1:30/下午1:30提供温度和发射率值，分辨率为0.05°纬度/经度气候模型网格（CMGs）。在本研究中，我们还包括基于HTESSEL模型的ERA5-Land的地表温度数据（以下简称ERA5-Land LST数据）。"
+      ],
+      "datasetCn": [
+        "我们使用由两个极地轨道太阳同步卫星（Terra和Aqua）提供的级别3日全球陆地表面温度（LST）产品（MOD11C1/MYD11C1，集合6），其观测时间分别为当地太阳时间上午10:30/下午1:30和下午1:30。该产品由NASA地球观测系统提供，提供0.05°纬度/经度气候模型网格（CMGs）上的温度和发射率值。在本研究中，我们还包括基于HTESSEL模型的ERA5-Land气候再分析数据中的地表温度数据（以下简称ERA5-Land LST数据）。"
+      ],
+      "findingsCn": [
+        "总体而言，DINEOF 方法表现良好，平均 R 值为 0.971，最小偏差为 -0.001 K，最大偏差为 0.049 K，均方根误差（RMSE）在 1.436 K 到 2.688 K 之间。从上述统计指标来看，DINEOF 方法在所有土地覆盖类型下通常有效地重建缺失的地表温度（LST）信息。总体而言，DINEOF 重建方法与基于 CDF 匹配的修正方法的结合是 MODIS LST 重建的有效方法。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Can the DINEOF reconstruction method effectively reconstruct missing land surface temperature information under various land cover types?",
+        "QuestionCn": "DINEOF重建方法能否有效重建不同土地覆盖类型下缺失的地表温度信息？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which data source contributes more effectively to the generation of global LST datasets, MODIS satellite products or ERA5-Land climate reanalysis data?",
+        "QuestionCn": "哪个数据源对全球地表温度（LST）数据集的生成贡献更有效，MODIS卫星产品还是ERA5-Land气候重分析数据？",
+        "AnswerEn": "MODIS satellite products",
+        "AnswerCn": "MODIS 卫星产品",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Do challenges in LST data collection primarily arise from cloud cover, coarse resolution of reanalysis datasets, or surface property effects?",
+        "QuestionCn": "LST数据收集中的挑战主要来自云层覆盖、再分析数据集的粗分辨率或地表属性效应吗？",
+        "AnswerEn": "cloud cover",
+        "AnswerCn": "云层覆盖",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What method is used to reconstruct ideal clear-sky Land Surface Temperature (LST) data in regions affected by cloud cover?",
+        "QuestionCn": "用于重建受云层覆盖影响的理想晴空陆地表面温度（LST）数据的方法是什么？",
+        "AnswerEn": "DINEOF",
+        "AnswerCn": "DINEOF",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Where do the level-3 daily global LST products used in the reconstruction process come from?",
+        "QuestionCn": "用于重建过程的三级日全球地表温度（LST）产品来自哪里？",
+        "AnswerEn": "NASA Earth Observing System",
+        "AnswerCn": "NASA地球观测系统",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "When is the cumulative distribution function (CDF) matching-based method applied in the data reconstruction process?",
+        "QuestionCn": "累积分布函数（CDF）匹配方法在数据重建过程中何时应用？",
+        "AnswerEn": "second step",
+        "AnswerCn": "第二步",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a method used to reconstruct land surface temperature data in areas affected by cloud cover?",
+        "QuestionCn": "您能否提供一个用于重建受云层覆盖影响地区的地表温度数据的方法示例？",
+        "AnswerEn": "An example of a method used to reconstruct land surface temperature data in cloud-contaminated areas is the DINEOF reconstruction process. This method first obtains ideal clear-sky LSTs and then corrects them to real LSTs using a cumulative distribution function (CDF) matching-based method with LSTs from the ERA5-Land climate reanalysis data.",
+        "AnswerCn": "一种用于重建云污染区域地表温度数据的方法是DINEOF重建过程。该方法首先获取理想的晴空地表温度（LST），然后使用基于累积分布函数（CDF）匹配的方法，将其校正为真实的地表温度，所用的真实地表温度数据来自ERA5-Land气候重分析数据。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced in collecting land surface temperature data through satellite remote sensing?",
+        "QuestionCn": "通过卫星遥感收集地表温度数据时面临的一个挑战是什么？",
+        "AnswerEn": "An example of a challenge in collecting land surface temperature data through satellite remote sensing is the influence of cloud cover, which leads to missing data in satellite-derived LST products. This issue significantly limits the application of these products in various research domains.",
+        "AnswerCn": "通过卫星遥感收集地表温度数据的一个挑战是云层覆盖的影响，这导致卫星衍生的地表温度产品中出现缺失数据。这个问题显著限制了这些产品在各个研究领域的应用。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Can you give an example of a dataset that integrates multiple sources to provide land surface temperature information on a global scale?",
+        "QuestionCn": "您能否提供一个整合多个来源以提供全球范围内地表温度信息的数据集的示例？",
+        "AnswerEn": "An example of a dataset that integrates multiple sources for global land surface temperature information is the one that combines level-3 daily global LST products from Terra and Aqua satellites with climate reanalysis data from ERA5-Land's skin temperature data. This integration helps mitigate the impact of cloud cover on LST estimates.",
+        "AnswerCn": "一个整合多个来源的全球陆地表面温度信息的数据集的例子是将来自Terra和Aqua卫星的三级日全球陆地表面温度产品与ERA5-Land的地表温度气候再分析数据相结合。这种整合有助于减轻云层覆盖对陆地表面温度估计的影响。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the techniques used to ensure spatial and temporal continuity in land surface temperature datasets?",
+        "QuestionCn": "确保地表温度数据集空间和时间连续性所使用的技术有哪些？",
+        "AnswerEn": "empirical orthogonal function interpolation method, cumulative distribution function matching method",
+        "AnswerCn": "经验正交函数插值法，累积分布函数匹配法",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What challenges are associated with reconstructing land surface temperature data under cloudy conditions, and how are they addressed?",
+        "QuestionCn": "在多云条件下重建地表温度数据面临哪些挑战，以及如何解决这些挑战？",
+        "AnswerEn": "cloud cover, missing data, reconstruction algorithms, cumulative distribution function matching with ERA5-Land reanalysis data",
+        "AnswerCn": "云量、缺失数据、重建算法、与ERA5-Land再分析数据的累积分布函数匹配",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of a global land surface temperature dataset developed using specific reconstruction methods?",
+        "QuestionCn": "使用特定重建方法开发的全球陆地表面温度数据集的空间分辨率是多少？",
+        "AnswerEn": "0.05°",
+        "AnswerCn": "0.05°",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many times per day is data collected in a global land surface temperature dataset with a specific time resolution?",
+        "QuestionCn": "在具有特定时间分辨率的全球陆地表面温度数据集中，每天收集数据的次数是多少？",
+        "AnswerEn": "4 times per day",
+        "AnswerCn": "每天四次",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Over how many years does a global dataset of reconstructed land surface temperatures span, providing continuous data coverage?",
+        "QuestionCn": "全球重建的陆地表面温度数据集覆盖了多少年的连续数据？",
+        "AnswerEn": "20 years",
+        "AnswerCn": "20年",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the DINEOF reconstruction process in the context of land surface temperature data collection?",
+        "QuestionCn": "在陆地表面温度数据收集的背景下，DINEOF重建过程是什么？",
+        "AnswerEn": "The DINEOF reconstruction process is a method used to obtain ideal clear-sky land surface temperatures (LSTs) for areas affected by cloud contamination. It is the first step in reconstructing missing LST information in satellite-derived products.",
+        "AnswerCn": "DINEOF重建过程是一种用于获取受云污染影响区域的理想晴空陆地表面温度（LSTs）的方法。它是重建卫星衍生产品中缺失的LST信息的第一步。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are cumulative distribution function (CDF) matching-based methods in the context of LST data reconstruction?",
+        "QuestionCn": "在LST数据重建的背景下，累积分布函数（CDF）匹配方法是什么？",
+        "AnswerEn": "Cumulative distribution function (CDF) matching-based methods are techniques used to correct ideal clear-sky LSTs to real LSTs by matching them with LSTs from climate reanalysis data, such as the ERA5-Land skin temperature data, to account for atmospheric disturbances.",
+        "AnswerCn": "累积分布函数（CDF）匹配方法是一种技术，用于通过将理想的晴空地表温度（LST）与气候再分析数据（如ERA5-Land地表温度数据）中的LST进行匹配，从而校正实际的LST，以考虑大气干扰。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the significance of using MOD11C1/MYD11C1 level-3 daily global LST products in LST data collection?",
+        "QuestionCn": "使用MOD11C1/MYD11C1级别3每日全球地表温度（LST）产品在地表温度数据收集中的重要性是什么？",
+        "AnswerEn": "The MOD11C1/MYD11C1 level-3 daily global LST products are significant in LST data collection as they provide temperature and emissivity values at 0.05° latitude/longitude climate model grids, offering high spatial resolution data from Terra and Aqua satellites, crucial for reconstructing high-quality global LST data.",
+        "AnswerCn": "MOD11C1/MYD11C1级别-3每日全球陆地表面温度（LST）产品在LST数据收集方面具有重要意义，因为它们提供了0.05°纬度/经度气候模型网格的温度和发射率值，来自Terra和Aqua卫星的高空间分辨率数据，对于重建高质量的全球LST数据至关重要。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "What are the differences in the challenges associated with reconstructing LST values under ideal clear-sky conditions compared to real cloudy sky conditions?",
+        "QuestionCn": "在理想的晴空条件下重建陆地表面温度（LST）值与在真实多云天空条件下重建LST值所面临的挑战有哪些不同？",
+        "AnswerEn": "Reconstructing LST values under ideal clear-sky conditions primarily deals with filling in data gaps caused by cloud cover. In contrast, reconstructing real LSTs under cloudy conditions involves correcting these values to account for atmospheric disturbances, which is more complex and requires additional correction methods like CDF matching.",
+        "AnswerCn": "在理想的晴空条件下重建地表温度（LST）值主要涉及填补因云层覆盖而造成的数据缺口。相比之下，在多云条件下重建真实的LST值则涉及对这些值进行修正，以考虑大气干扰，这一过程更为复杂，需要额外的修正方法，如累积分布函数匹配（CDF匹配）。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What methodological advancements are necessary to enhance the spatial resolution of LST datasets used in land surface processes?",
+        "QuestionCn": "为了增强用于陆面过程的地表温度（LST）数据集的空间分辨率，哪些方法论进展是必要的？",
+        "AnswerEn": "To enhance the spatial resolution of LST datasets, it is necessary to overcome the limitations posed by coarse-resolution reanalysis datasets. This can be achieved by developing algorithms that consider the effects of surface properties on LSTs more precisely and by employing high-resolution satellite data like MODIS products combined with sophisticated reconstruction methods such as DINEOF and CDF matching.",
+        "AnswerCn": "为了提高地表温度（LST）数据集的空间分辨率，有必要克服粗分辨率再分析数据集所带来的限制。这可以通过开发更精确考虑地表特性对LST影响的算法，以及结合高分辨率卫星数据（如MODIS产品）和复杂的重建方法（如DINEOF和CDF匹配）来实现。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What implications do reconstructed LST datasets have for applications requiring high accuracy under varying atmospheric conditions?",
+        "QuestionCn": "重建的陆地表面温度（LST）数据集对在不同大气条件下需要高精度的应用有什么影响？",
+        "AnswerEn": "Reconstructed LST datasets, which combine satellite observations with reanalysis data, provide high accuracy and continuity even under varying atmospheric conditions. These datasets are crucial for applications in meteorology, climate studies, hydrology, agriculture, and ecology, as they offer reliable temperature information across different land cover types, ensuring that data users can make informed decisions based on accurate temperature patterns.",
+        "AnswerCn": "重建的地表温度（LST）数据集结合了卫星观测和再分析数据，即使在不同的气象条件下也能提供高精度和连续性。这些数据集对于气象、气候研究、水文学、农业和生态学等应用至关重要，因为它们提供了不同土地覆盖类型的可靠温度信息，确保数据用户能够基于准确的温度模式做出明智的决策。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the challenges in obtaining accurate Land Surface Temperature (LST) data from satellite remote sensing observations?",
+        "QuestionCn": "从卫星遥感观测中获取准确的地表温度（LST）数据面临的挑战是什么？",
+        "AnswerEn": "Remote sensing observations for Land Surface Temperature (LST) are inherently affected by cloud cover, leading to varying degrees of missing data in satellite-derived LST products. This cloud cover and other atmospheric conditions result in temporal and spatial discontinuities, limiting the application of LST products in related research areas.",
+        "AnswerCn": "遥感观测的地表温度（LST）受到云层覆盖的影响，导致卫星衍生的LST产品中存在不同程度的缺失数据。这种云层覆盖和其他大气条件导致了时间和空间的不连续性，限制了LST产品在相关研究领域的应用。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is it necessary to use a cumulative distribution function (CDF) matching-based method in reconstructing LST data?",
+        "QuestionCn": "在重建陆地表面温度（LST）数据时，使用基于累积分布函数（CDF）匹配的方法是必要的原因是什么？",
+        "AnswerEn": "The CDF matching-based method is necessary because it corrects the ideal clear-sky LSTs to the real LSTs by integrating LSTs from the ERA5-Land climate reanalysis data, thereby addressing the limitations of reconstructing only missing LST values under ideal conditions and not under cloudy sky conditions.",
+        "AnswerCn": "基于CDF匹配的方法是必要的，因为它通过整合ERA5-Land气候重分析数据中的地表温度（LST），将理想的晴空LST校正为真实的LST，从而解决了仅在理想条件下重建缺失LST值而无法在多云天气条件下进行重建的局限性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What factors lead to the high validation accuracy of the reconstructed LST dataset under various land cover types?",
+        "QuestionCn": "导致重建的LST数据集在各种土地覆盖类型下具有高验证准确性的因素有哪些？",
+        "AnswerEn": "The high validation accuracy is attributed to the use of the DINEOF method for reconstructing missing LST information, which shows good performance across all land cover types. It effectively combines the DINEOF reconstruction method with the CDF matching-based correction method, resulting in strong statistical metrics such as an average R of 0.971, minimal Bias, and low RMSE values.",
+        "AnswerCn": "高验证准确率归因于使用DINEOF方法重建缺失的地表温度（LST）信息，该方法在所有土地覆盖类型中表现良好。它有效地将DINEOF重建方法与基于CDF匹配的校正方法相结合，产生了强大的统计指标，如平均相关系数R为0.971，偏差最小，以及低均方根误差（RMSE）值。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential outcomes of using the cumulative distribution function matching method for correcting LST data from climate reanalysis datasets?",
+        "QuestionCn": "使用累积分布函数匹配方法来校正气候再分析数据集中的地表温度（LST）数据的潜在结果是什么？",
+        "AnswerEn": "The use of the cumulative distribution function matching method for correcting LST data from climate reanalysis datasets results in the reconstruction of real LSTs under all-sky conditions, effectively mitigating the impact of cloud cover on satellite-derived LST data.",
+        "AnswerCn": "使用累积分布函数匹配方法对气候再分析数据集中的地表温度（LST）数据进行校正，可以在全云条件下重建真实的地表温度，有效减轻云层覆盖对卫星获取的地表温度数据的影响。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it necessary to develop data collection methods that can reconstruct land surface temperature under both clear and cloudy sky conditions?",
+        "QuestionCn": "为什么有必要开发能够在晴天和多云天气条件下重建地表温度的数据收集方法？",
+        "AnswerEn": "Remote sensing observations for land surface temperature are significantly affected by cloud cover, leading to missing data. This limitation restricts the application of satellite-derived LST products, as many applications require continuous data. Developing methods to reconstruct LST under all weather conditions enhances the usability of these datasets across various research fields such as climate and hydrology.",
+        "AnswerCn": "遥感观测的地表温度受到云层覆盖的显著影响，导致数据缺失。这一限制限制了卫星衍生的地表温度产品的应用，因为许多应用需要连续的数据。开发在各种天气条件下重建地表温度的方法，提高了这些数据集在气候和水文学等多个研究领域的可用性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the goals behind using a cumulative distribution function matching method to enhance land surface temperature datasets?",
+        "QuestionCn": "使用累积分布函数匹配方法来增强地表温度数据集的目标是什么？",
+        "AnswerEn": "The goal of using a cumulative distribution function matching method is to correct the ideal clear-sky LSTs to real LSTs by integrating information from climate reanalysis data. This approach aims to mitigate the effects of cloud cover and atmospheric disturbances on LST estimations, thereby increasing the accuracy and applicability of the dataset for global studies.",
+        "AnswerCn": "使用累积分布函数匹配方法的目标是通过整合气候再分析数据的信息，将理想的晴空地表温度（LST）校正为实际的地表温度。这种方法旨在减轻云层覆盖和大气干扰对地表温度估计的影响，从而提高数据集在全球研究中的准确性和适用性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why integrate satellite and reanalysis data in the creation of land surface temperature datasets?",
+        "QuestionCn": "为什么在创建地表温度数据集时要整合卫星数据和再分析数据？",
+        "AnswerEn": "Integrating satellite data with reanalysis data, such as ERA5-Land, allows for the creation of a continuous and high-resolution LST dataset. This integration leverages the spatial-temporal detail of satellite observations and the cloud influence information from reanalysis data, addressing the challenge of cloud-induced data gaps in satellite-derived LST products.",
+        "AnswerCn": "将卫星数据与再分析数据（如ERA5-Land）集成，可以创建一个连续且高分辨率的地表温度（LST）数据集。这种集成利用了卫星观测的时空细节和再分析数据中的云影响信息，解决了卫星衍生LST产品中因云造成的数据缺口问题。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in reconstructing ideal clear-sky Land Surface Temperature (LST) from satellite data under cloud-contaminated conditions?",
+        "QuestionCn": "在云污染条件下，从卫星数据重建理想的晴空地表温度（LST）涉及哪些程序步骤？",
+        "AnswerEn": "The procedural steps involve first using the DINEOF reconstruction process to obtain the ideal clear-sky LSTs for cloud-contaminated areas. This is followed by correcting these ideal clear-sky LSTs to the real LSTs using a cumulative distribution function (CDF) matching-based method with LSTs from the ERA5-Land climate reanalysis data.",
+        "AnswerCn": "程序步骤首先使用DINEOF重建过程获取云污染区域的理想晴空地表温度（LST）。接下来，使用基于累积分布函数（CDF）匹配的方法，将这些理想晴空LST校正为真实LST，所用数据来自ERA5-Land气候重分析数据。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can researchers address the challenge of missing data due to cloud cover in satellite-derived LST products?",
+        "QuestionCn": "研究人员如何应对由于云层覆盖导致的卫星衍生地表温度（LST）产品缺失数据的挑战？",
+        "AnswerEn": "Researchers can address this challenge by combining satellite-derived LST data, such as the MODIS LST products, with reanalysis data like the ERA5-Land's skin temperature data. The DINEOF method can be used to reconstruct missing LST information, and a cumulative distribution function (CDF) matching-based method can correct the ideal clear-sky LSTs to real LSTs.",
+        "AnswerCn": "研究人员可以通过将卫星获取的地表温度（LST）数据，如MODIS LST产品，与再分析数据（如ERA5-Land的表面温度数据）相结合来应对这一挑战。可以使用DINEOF方法重建缺失的LST信息，并采用基于累积分布函数（CDF）匹配的方法将理想的晴空LST校正为真实的LST。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What methodology is used to integrate Terra/Aqua MODIS LST products with ERA5-Land reanalysis data for creating a continuous global LST dataset?",
+        "QuestionCn": "用于将Terra/Aqua MODIS LST产品与ERA5-Land再分析数据集成以创建连续全球LST数据集的方法论是什么？",
+        "AnswerEn": "The methodology involves using Terra/Aqua MODIS LST products to reconstruct LST under ideal clear-sky conditions using an empirical orthogonal function interpolation method. Then, the reconstructed LST is integrated with ERA5-Land reanalysis data using a cumulative distribution function matching method to obtain LST under all-weather conditions, ultimately creating a continuous global LST dataset.",
+        "AnswerCn": "该方法涉及使用Terra/Aqua MODIS LST产品在理想的晴空条件下重建地表温度（LST），采用经验正交函数插值方法。然后，将重建的LST与ERA5-Land再分析数据通过累积分布函数匹配方法相结合，以获得在各种天气条件下的LST，最终创建一个连续的全球LST数据集。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methodologies enable the reconstruction of land surface temperature data under cloudy conditions?",
+        "QuestionCn": "哪些方法论能够在多云条件下重建地表温度数据？",
+        "AnswerEn": "The reconstruction of land surface temperature data under cloudy conditions is enabled through a combination of the DINEOF reconstruction method to obtain ideal clear-sky LSTs for cloud-contaminated areas, followed by a cumulative distribution function (CDF) matching-based method to correct these to real LSTs, utilizing ERA5-Land climate reanalysis data.",
+        "AnswerCn": "在多云条件下，土地表面温度数据的重建通过结合DINEOF重建方法获得理想的晴空土地表面温度（LST）来处理云污染区域，随后采用基于累积分布函数（CDF）匹配的方法对这些数据进行校正，以利用ERA5-Land气候重分析数据获得真实的LST。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How do reanalysis datasets contribute to the enhancement of spatial and temporal continuity in land surface temperature observations?",
+        "QuestionCn": "再分析数据集如何促进地表温度观测的空间和时间连续性增强？",
+        "AnswerEn": "Reanalysis datasets contribute to the enhancement of spatial and temporal continuity in land surface temperature observations by providing comprehensive coverage that can be used to fill in gaps left by cloud cover in satellite data. The ERA5-Land reanalysis data are specifically used to complement satellite observations to create a globally continuous LST dataset.",
+        "AnswerCn": "再分析数据集通过提供全面的覆盖，增强了地表温度观测的空间和时间连续性，可以用来填补卫星数据因云层覆盖而留下的空白。ERA5-Land再分析数据专门用于补充卫星观测，以创建全球连续的地表温度数据集。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "What are the anticipated challenges in obtaining high-resolution LST data from reanalysis datasets, and how could these be overcome?",
+        "QuestionCn": "从再分析数据集中获取高分辨率地表温度（LST）数据的预期挑战是什么，以及如何克服这些挑战？",
+        "AnswerEn": "Reanalysis datasets are generally output at coarse resolutions and do not fully account for surface properties affecting LSTs, limiting their application in cases requiring finer resolution. Overcoming these challenges may involve integrating high-resolution satellite data with reanalysis data using methods that adjust for cloud cover and atmospheric effects to produce more accurate LST reconstructions.",
+        "AnswerCn": "再分析数据集通常以粗分辨率输出，并未充分考虑影响地表温度（LST）的表面特性，这限制了它们在需要更高分辨率的情况下的应用。克服这些挑战的方法可能包括将高分辨率卫星数据与再分析数据结合，采用调整云层覆盖和大气影响的方法，以生成更准确的地表温度重建。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What might be the reasons for the difficulty in reconstructing real LSTs under cloudy conditions, and what methodologies are expected to improve this reconstruction?",
+        "QuestionCn": "在多云条件下重建真实地表温度（LST）困难的原因可能是什么，以及哪些方法预计会改善这种重建？",
+        "AnswerEn": "Reconstructing real LSTs under cloudy conditions is challenging because many algorithms only work under clear-sky conditions and require regional parameters from ground-based measurements, which are not effective when large areas of data are missing. To improve this, methods like DINEOF for initial reconstruction and CDF matching with reanalysis data for correction can enhance the accuracy and applicability of LST data under cloud cover.",
+        "AnswerCn": "在多云条件下重建真实的地表温度（LST）是具有挑战性的，因为许多算法仅在晴空条件下有效，并且需要来自地面测量的区域参数，而在大面积数据缺失时这些参数并不有效。为了改善这一点，像DINEOF这样的初步重建方法和与再分析数据的累积分布函数（CDF）匹配校正可以提高云层覆盖下LST数据的准确性和适用性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "What are your thoughts on the effectiveness of using a combination of DINEOF reconstruction and CDF matching-based correction methods for addressing cloud cover challenges in land surface temperature data collection?",
+        "QuestionCn": "我对使用DINEOF重建和基于CDF匹配的修正方法相结合来解决地表温度数据收集中的云覆盖挑战的有效性有何看法？",
+        "AnswerEn": "The combination of DINEOF reconstruction and CDF matching-based correction methods is considered effective in addressing cloud cover challenges. The approach successfully reconstructs missing LST information across various land cover types, achieving high correlation and low bias, indicating it is a robust solution for handling cloud-contaminated areas in LST data collection.",
+        "AnswerCn": "DINEOF重建与基于CDF匹配的修正方法的结合被认为在解决云覆盖挑战方面是有效的。这种方法成功地重建了各种土地覆盖类型中缺失的地表温度（LST）信息，达到了高相关性和低偏差，表明它是处理LST数据收集中云污染区域的稳健解决方案。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In your opinion, how does the integration of MODIS and ERA5-Land data contribute to the reliability and continuity of land surface temperature datasets?",
+        "QuestionCn": "在您看来，整合MODIS和ERA5-Land数据如何有助于提高地表温度数据集的可靠性和连续性？",
+        "AnswerEn": "The integration of MODIS and ERA5-Land data enhances the reliability and continuity of land surface temperature datasets by leveraging the detailed spatial information from MODIS and the atmospheric information from ERA5-Land. This integration allows for the reconstruction of LST data under both clear and cloudy conditions, resulting in a high-quality, spatiotemporally continuous dataset that meets various research and application needs.",
+        "AnswerCn": "MODIS和ERA5-Land数据的集成通过利用MODIS的详细空间信息和ERA5-Land的气象信息，提高了地表温度数据集的可靠性和连续性。这种集成允许在晴天和多云条件下重建LST数据，从而生成高质量、时空连续的数据集，满足各种研究和应用需求。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What is your assessment of the potential benefits and limitations of using the 0.05° spatial resolution in reconstructing global land surface temperature datasets?",
+        "QuestionCn": "我对使用0.05°空间分辨率重建全球陆地表面温度数据集的潜在好处和局限性的评估是什么？",
+        "AnswerEn": "The 0.05° spatial resolution offers a fine granularity that is beneficial for detailed analysis and application across different land cover types globally. It facilitates high accuracy in temperature and emissivity data representation. However, the limitation may arise in computational demands and the need for extensive data processing capabilities, which could be challenging for large-scale, real-time applications.",
+        "AnswerCn": "0.05°的空间分辨率提供了细致的粒度，这对全球不同土地覆盖类型的详细分析和应用非常有利。它有助于高精度地表示温度和发射率数据。然而，限制可能出现在计算需求和对广泛数据处理能力的需求上，这对于大规模实时应用可能是一个挑战。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don’t understand how cloud cover affects the accuracy and continuity of land surface temperature data collected via remote sensing.",
+        "QuestionCn": "我不明白云层覆盖如何影响通过遥感收集的地表温度数据的准确性和连续性。",
+        "AnswerEn": "Remote sensing observations for land surface temperature (LST) are significantly affected by cloud cover, which leads to varying degrees of missing data in satellite-derived LST products. Clouds obstruct the thermal infrared signals used in remote sensing, causing interruptions in data collection and affecting the spatial and temporal continuity of LST products.",
+        "AnswerCn": "遥感观测的地表温度（LST）受到云层覆盖的显著影响，这导致卫星衍生的LST产品中存在不同程度的缺失数据。云层阻挡了用于遥感的热红外信号，造成数据收集的中断，并影响LST产品的空间和时间连续性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I am unsure about the methods used to reconstruct land surface temperature data under cloudy conditions.",
+        "QuestionCn": "我不确定在多云条件下重建地表温度数据的方法。",
+        "AnswerEn": "To reconstruct land surface temperature data under cloudy conditions, a method involving empirical orthogonal function interpolation is used to estimate ideal clear-sky LST. This is then combined with ERA5-Land climate reanalysis data using a cumulative distribution function matching method to correct and obtain real LST under all-weather conditions.",
+        "AnswerCn": "为了在多云条件下重建地表温度数据，采用经验正交函数插值方法来估计理想的晴空地表温度（LST）。然后，使用累积分布函数匹配方法将其与ERA5-Land气候重分析数据结合，以校正并获得在各种天气条件下的真实地表温度。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I can't make sense of why reanalysis datasets are needed alongside satellite data to improve LST data quality.",
+        "QuestionCn": "我无法理解为什么再分析数据集在提高地表温度（LST）数据质量方面需要与卫星数据一起使用。",
+        "AnswerEn": "Reanalysis datasets, like ERA5-Land's skin temperature data, are used alongside satellite data to improve LST data quality because they provide additional information on atmospheric conditions that affect LST measurements. These datasets help mitigate the impact of cloud cover and other atmospheric disturbances on satellite observations, leading to more accurate and continuous LST data.",
+        "AnswerCn": "再分析数据集，如ERA5-Land的地表温度数据，与卫星数据一起使用，以提高地表温度数据的质量，因为它们提供了影响地表温度测量的大气条件的额外信息。这些数据集有助于减轻云层覆盖和其他大气干扰对卫星观测的影响，从而导致更准确和连续的地表温度数据。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please discuss the challenges of collecting land surface temperature data via remote sensing and how these challenges can be mitigated.",
+        "QuestionCn": "请讨论通过遥感收集地表温度数据的挑战，以及如何缓解这些挑战。",
+        "AnswerEn": "Remote sensing observations for land surface temperature (LST) are significantly affected by cloud cover, leading to missing data in satellite-derived LST products. These challenges can be mitigated by using methods that reconstruct missing LST values under clear-sky conditions, such as the DINEOF reconstruction process, and by correcting these values under real conditions using cumulative distribution function (CDF) matching-based methods with reanalysis data, like ERA5-Land climate reanalysis data.",
+        "AnswerCn": "遥感观测的地表温度（LST）受到云层覆盖的显著影响，导致卫星衍生的LST产品中出现缺失数据。这些挑战可以通过在晴空条件下重建缺失LST值的方法来缓解，例如DINEOF重建过程，以及通过使用基于累积分布函数（CDF）匹配的方法与再分析数据（如ERA5-Land气候再分析数据）来修正这些值。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Please explore the potential for expanding or refining datasets for global land surface temperature by incorporating additional data sources or methods.",
+        "QuestionCn": "请探讨通过整合额外的数据源或方法来扩展或完善全球陆地表面温度数据集的潜力。",
+        "AnswerEn": "Expanding or refining datasets for global land surface temperature can involve incorporating additional data sources such as other satellite data products or higher-resolution climate reanalysis datasets. Additionally, refining the methods used, such as enhancing the accuracy of the DINEOF method or improving the CDF matching techniques, can further increase the dataset's quality. Exploring machine learning algorithms to predict missing values or using ground-based measurements to validate satellite data can also be beneficial for dataset enhancement.",
+        "AnswerCn": "扩展或精炼全球陆地表面温度数据集可以涉及整合其他数据源，例如其他卫星数据产品或更高分辨率的气候重分析数据集。此外，改进所使用的方法，例如提高DINEOF方法的准确性或改进CDF匹配技术，也可以进一步提高数据集的质量。探索机器学习算法以预测缺失值或使用地面测量数据来验证卫星数据也可以对数据集的增强有所帮助。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

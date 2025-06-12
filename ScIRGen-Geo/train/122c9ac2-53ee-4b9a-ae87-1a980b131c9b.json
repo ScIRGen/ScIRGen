@@ -1,591 +1,591 @@
 {
-    "id": "122c9ac2-53ee-4b9a-ae87-1a980b131c9b",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "1:100,000 desert (sand) distribution dataset in China",
-            "titleCn": "中国1:10万沙漠(沙地)分布数据集",
-            "description": "This dataset is the first 1: 100,000 desert spatial database in China based on the graphic data of desert thematic maps. It mainly reflects the geographical distribution, area size, and mobility of sand dunes in China. According to the system design requirements and relevant standards, the input data is standardized and uniformly converted into a standard format for various types of data input. Build a library to run the delivery system.\nThis project uses the TM image in 2000 as the information source, and interprets, extracts, and edits the coverage of the national land use map and TM digital image information in 2000. It uses remote sensing and geographic information system technology to 1: 100,000 Thematic mapping requirements for scale bar maps were made on the desert, sandy land and gravel Gobi in China. The 1: 100,000 desert map across the country can save users a lot of data entry and editing work when they are engaged in research on resources and the environment. Digital maps can be easily converted into layout maps\nThe dataset properties are as follows:\nDivided into two folders e00 and shp:\nDesert map name and province comparison table in each folder\n01 Ahsm Anhui\n02 Bjsm Beijing\n03 Fjsm Fujian\n04 Gdsm Guangdong\n05 Gssm Gansu\n06 Gxsm Guangxi Zhuang Autonomous Region\n07 Gzsm Guizhou\n08 Hebsm Hebei\n09 Hensm Henan\n10 Hljsm Heilongjiang\n11 Hndsm Hainan\n12 Hubsm Hubei\n13 Jlsm Jilin Province\n14 Jssm Jiangsu\n15 Jxsm Jiangxi\n16 Lnsm Liaoning\n17 Nmsm Inner Mongolia Gu Autonomous Region\n18 Nxsm Ningxia Hui Autonomous Region\n19 Qhsm Qinghai\n20 Scsm Sichuan\n21 Sdsm Shandong\n22 Sxsm Shaanxi Province\n23 Tjsm Tianjin\n24 Twsm Taiwan Province\n25 Xjsm Xinjiang Uygur Autonomous Region\n26 Xzsm Tibet Autonomous Region\n27 Zjsm Zhejiang\n28 Shxsm Shanxi\n1. Data projection:\n               Projection: Albers\n               False_Easting: 0.000000\n               False_Northing: 0.000000\n               Central_Meridian: 105.000000\n               Standard_Parallel_1: 25.000000\n               Standard_Parallel_2: 47.000000\n               Latitude_Of_Origin: 0.000000\n               Linear Unit: Meter (1.000000)\n2. Data attribute table: area (area)\n                  perimeter\n                  ashm_ (sequence code)\n                  class (desert encoding)\n                  ashm_id (desert encoding)\n3. Desert coding: mobile sandy land 2341010\n                  Semi-mobile sandy land\n                  Semi-fixed sandy land 2341030\n                  Gobi 2342000\n                  Saline land 2343000\n4: File format: National, sub-provincial and county-level desert map data types are vector shapefiles and E00\n5: File naming: Data organization based on the National Basic Resources and Environmental Remote Sensing Dynamic Information Service System is performed on the file management layer of Windows NT. The file and directory names are compound names of English characters and numbers. Pinyin + SM composition, such as the desert map of Gansu Province is GSSM. The flag and county desert map is the pinyin + xxxx of the province name, and xxxx is the last four digits of the flag and county code. The division of provinces, districts, flags and counties is based on the administrative division data files in the national basic resources and environmental remote sensing dynamic information service operation system.",
-            "descriptionCn": "该数据集是将沙漠专题地图的图形数据建立的我国第一个1∶10万沙漠空间数据库，重点反映我国沙漠的地理分布、面积大小、沙丘的流动性与固定程度。按照系统设计要求及有关标准，将输入数据进行标准化，统一转换为各类数据输入的标准格式。建库以交付系统运行。\n本项目以2000年的TM影像为信息源，在全国土地利用现状图的Coverage和2000年TM数字影像信息，进行解译、提取、修编，利用遥感与地理信息系统技术结合以1：10万比例尺专题图成图要求，对我国的沙漠、沙地和砾质戈壁进行了专题制图。1∶10万全国沙漠分布图可以使用户在从事资源与环境的研究工作时节省大量的数据录入和编辑工作。数字地图能非常方便地转化为版式地图\n数据集属性如下：\n分为e00和shp两个文件夹：\n文件夹内各省沙漠分布图名称与省份对照表\n\t01 Ahsm            安徽省\n\t02 Bjsm            北京市\n\t03 Fjsm            福建省\n\t04 Gdsm            广东省\n\t05 Gssm            甘肃省\n\t06 Gxsm            广西壮族自治区\n\t07 Gzsm            贵州省\n\t08 Hebsm           河北省\n\t09 Hensm           河南省\n\t10 Hljsm           黑龙江省\n\t11 Hndsm           海南省\n\t12 Hubsm           湖北省\n\t13 Jlsm            吉林省\n\t14 Jssm            江苏省\n\t15 Jxsm            江西省\n\t16 Lnsm            辽宁省\n\t17 Nmsm            内蒙固自治区\n\t18 Nxsm            宁夏回族自治区\n\t19 Qhsm            青海省\n\t20 Scsm            四川省\n\t21 Sdsm            山东省\n\t22 Sxsm            陕西省\n\t23 Tjsm            天津市\n\t24 Twsm            台湾省\n\t25 Xjsm            新疆维吾尔自治区\n\t26 Xzsm            西藏自治区\n\t27 Zjsm            浙江省\n        28 Shxsm           山西省\n1、数据投影：\n               Projection: Albers\n               False_Easting: 0.000000\n               False_Northing: 0.000000\n               Central_Meridian: 105.000000\n               Standard_Parallel_1: 25.000000\n               Standard_Parallel_2: 47.000000\n               Latitude_Of_Origin: 0.000000\n               Linear Unit: Meter (1.000000)\n2、数据属性表：area（面积）\n                  perimeter（周长）\n                  ashm_(序列码）\n                  class（沙漠编码）\n                  ashm_id（沙漠编码）\n3、沙漠编码：流动沙地\t    2341010\t\n                  半流动沙地    2341020\n                  半固定沙地    2341030\n                  戈壁             2342000\t\n                  盐碱地          2343000\n4：文件格式：全国、分省及县级沙漠图的数据类型为矢量型的shapefile和E00\n5：文件命名： 基于国家基本资源与环境遥感动态信息服务系统数据组织在Windows NT的文件管理层面上进行，文件和目录名采用英文字和数字的复合名称，分省沙漠图以省、区名拼音+SM构成，如甘肃省沙漠分布图即为GSSM。旗、县沙漠图为省区名拼音+xxxx，xxxx为旗、县代码后四位数值，如兰州沙漠图命名为GS0101。省、区和旗、县的分幅切割以国家级基本资源与环境遥感动态信息服务运行系统中的行政区划数据文件为据。",
-            "instructions": "SHP format storage",
-            "instructionsCn": "shp 格式存储",
-            "east": 135.5,
-            "west": 73.2,
-            "south": 17.8,
-            "north": 53.9,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 1544004130.0,
-            "cstr": "18406.11.westdc.006.2013.db",
-            "doi": "10.3972/westdc.006.2013.db",
-            "dataFormat": "矢量",
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "王建华",
-                "nameEn": "WANG Jianhua",
-                "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院寒区旱区环境与工程研究所"
-            },
-            {
-                "nameCn": "王一谋",
-                "nameEn": "WANG Yimou",
-                "unitEn": "",
-                "unitCn": "中科院寒区旱区环境与工程研究所"
-            },
-            {
-                "nameCn": "颜长珍",
-                "nameEn": "YAN Changzhen",
-                "unitEn": "Northwest Institute of Eco-Environment and Resources, CAS",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "祁元",
-                "nameEn": "QI Yuan",
-                "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院寒区旱区环境与工程研究所"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": "古尔班通古特沙漠NDVI时空变化及其与沙尘天气的关系",
-                "titleEn": null,
-                "referenceCn": "李杨，刘艳，张璞，等. 古尔班通古特沙漠NDVI时空变化及其与沙尘天气的关系[C]. 中国北京: 2008.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于GIS的南水北调中西线联合调水工程研究",
-                "titleEn": null,
-                "referenceCn": "梁书民. 基于GIS的南水北调中西线联合调水工程研究. 水利发展研究, 2010, (03):17-24",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Sand dune mobilization caused by regional warming in Otintag, China",
-                "referenceCn": null,
-                "referenceEn": "Zhang B, Lu X, Luo R. Sand dune mobilization caused by regional warming in Otintag, China[C]//2010 18th International Conference on Geoinformatics. 2010: 1–5. doi:10.1109/GEOINFORMATICS.2010.5567890"
-            },
-            {
-                "titleCn": "末次盛冰期和全新世大暖期浑善达克沙地边界的变化",
-                "titleEn": null,
-                "referenceCn": "周亚利，鹿化煜，张小艳，等. 末次盛冰期和全新世大暖期浑善达克沙地边界的变化[J]. 第四纪研究. 2013, 33(2).",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "古尔班通古特沙漠植被覆盖变化及其对沙尘天气的影响",
-                "titleEn": null,
-                "referenceCn": "李杨, 刘艳, 张璞. 古尔班通古特沙漠植被覆盖变化及其对沙尘天气的影响. 干旱区资源与环境, 2010, (03):141-146",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Time lag responses of Gurbantonggut Desert vegetation to meteorological factors",
-                "referenceCn": null,
-                "referenceEn": "Li Y, Lin N, Liu Y, Zhang P. Time lag responses of Gurbantonggut Desert vegetation to meteorological factors[C]//Proc. SPIE 7498, MIPPR 2009: Remote Sensing and GIS Data Processing and Other Applications, 74980I. 2009, 7498: 74980I–74980I–11. doi:10.1117/12.829389"
-            },
-            {
-                "titleCn": "颗粒物质对风积沙压实特性影响研究",
-                "titleEn": null,
-                "referenceCn": "舒斌, 于进庆, 刘桂英, 官国琳. 颗粒物质对风积沙压实特性影响研究. 工程地质学报, 2010, (05):692-697",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Effectiveness of ecological restoration projects in Horqin Sandy Land, China based on SPOT-VGT NDVI data",
-                "referenceCn": null,
-                "referenceEn": "Zhang, Geli, Dong, Jinwei, Xiao, Xiangming, Hu, Zhongmin, Sheldon, Sage. Effectiveness of ecological restoration projects in Horqin Sandy Land, China based on SPOT-VGT NDVI data. Ecological Engineering, 2012, 38(1):20-29. doi:10.1016/j.ecoleng.2011.09.005"
-            },
-            {
-                "titleCn": "古尔班通古特沙漠NDVI时空变化特征",
-                "titleEn": null,
-                "referenceCn": "李杨，刘艳，张璞，等. 古尔班通古特沙漠NDVI时空变化特征[J]. 干旱区研究. 2009(05): 686-693.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "The Effects of Eco-Compensation in the Farming-Pastoral Transitional Zone of Inner Mongolia, China",
-                "referenceCn": null,
-                "referenceEn": "Peng H, Heqing H, Lin Z, Fen L. The Effects of Eco-Compensation in the Farming-Pastoral Transitional Zone of Inner Mongolia, China[J]. Journal of Resources and Ecology, 2011, 2(2): 141–150."
-            },
-            {
-                "titleCn": "塔克拉玛干沙漠周边地区潜在蒸散时空演变特征及其主要影响因素",
-                "titleEn": null,
-                "referenceCn": "段春锋, 缪启龙, 曹雯. 塔克拉玛干沙漠周边地区潜在蒸散时空演变特征及其主要影响因素[C]//第28届中国气象学会年会——S4应对气候变化，发展低碳经济. 2011: 9.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于面向对象方法的土地沙化遥感信息提取技术研究",
-                "titleEn": null,
-                "referenceCn": "王志波. 基于面向对象方法的土地沙化遥感信息提取技术研究[D]. 中国林业科学研究院, 2012.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "农牧交错带城市人居环境自然适宜性评价",
-                "titleEn": null,
-                "referenceCn": "岳大鹏，刘鹏，刘焱序. 农牧交错带城市人居环境自然适宜性评价[J]. 安徽农业科学. 2013(01): 288-291.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于GIS的榆林市土壤风蚀危险度评价",
-                "titleEn": null,
-                "referenceCn": "曹晓仪，董治宝，李静，等. 基于GIS的榆林市土壤风蚀危险度评价[J]. 水土保持通报. 2013(01): 206-210.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Numerical analysis for contribution of the Tibetan Plateau to dust aerosols in the atmosphere over the East Asia",
-                "referenceCn": null,
-                "referenceEn": "Mao R, Gong D Y, Shao Y P, et al. Numerical analysis for contribution of the Tibetan Plateau to dust aerosols in the atmosphere over the East Asia[J]. SCIENCE CHINA-EARTH SCIENCES. 2013, 56(2): 301-310."
-            },
-            {
-                "titleCn": "古尔班通古特沙漠积雪覆盖、沙尘天气特征及其相互关系",
-                "titleEn": null,
-                "referenceCn": "李杨, 艾力·买买提明, 刘艳, 张璞, 吉春容. 古尔班通古特沙漠积雪覆盖、沙尘天气特征及其相互关系. 中国沙漠, 2010, (04):961-967",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "地理国情监测内容分类与指标体系构建方法研究",
-                "titleEn": null,
-                "referenceCn": "武琛. 地理国情监测内容分类与指标体系构建方法研究[D]. 山东农业大学, 2012.",
-                "referenceEn": null
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "沙漠/荒漠",
-                "nameEn": "Desert"
-            },
-            {
-                "nameCn": "沙漠、沙地",
-                "nameEn": "Desert, sand"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2000年",
-                "keywordEn": "2000",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            },
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
-                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
-            }
-        ]
+  "id": "122c9ac2-53ee-4b9a-ae87-1a980b131c9b",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "1:100,000 desert (sand) distribution dataset in China",
+      "titleCn": "中国1:10万沙漠(沙地)分布数据集",
+      "description": "This dataset is the first 1: 100,000 desert spatial database in China based on the graphic data of desert thematic maps. It mainly reflects the geographical distribution, area size, and mobility of sand dunes in China. According to the system design requirements and relevant standards, the input data is standardized and uniformly converted into a standard format for various types of data input. Build a library to run the delivery system.\nThis project uses the TM image in 2000 as the information source, and interprets, extracts, and edits the coverage of the national land use map and TM digital image information in 2000. It uses remote sensing and geographic information system technology to 1: 100,000 Thematic mapping requirements for scale bar maps were made on the desert, sandy land and gravel Gobi in China. The 1: 100,000 desert map across the country can save users a lot of data entry and editing work when they are engaged in research on resources and the environment. Digital maps can be easily converted into layout maps\nThe dataset properties are as follows:\nDivided into two folders e00 and shp:\nDesert map name and province comparison table in each folder\n01 Ahsm Anhui\n02 Bjsm Beijing\n03 Fjsm Fujian\n04 Gdsm Guangdong\n05 Gssm Gansu\n06 Gxsm Guangxi Zhuang Autonomous Region\n07 Gzsm Guizhou\n08 Hebsm Hebei\n09 Hensm Henan\n10 Hljsm Heilongjiang\n11 Hndsm Hainan\n12 Hubsm Hubei\n13 Jlsm Jilin Province\n14 Jssm Jiangsu\n15 Jxsm Jiangxi\n16 Lnsm Liaoning\n17 Nmsm Inner Mongolia Gu Autonomous Region\n18 Nxsm Ningxia Hui Autonomous Region\n19 Qhsm Qinghai\n20 Scsm Sichuan\n21 Sdsm Shandong\n22 Sxsm Shaanxi Province\n23 Tjsm Tianjin\n24 Twsm Taiwan Province\n25 Xjsm Xinjiang Uygur Autonomous Region\n26 Xzsm Tibet Autonomous Region\n27 Zjsm Zhejiang\n28 Shxsm Shanxi\n1. Data projection:\n               Projection: Albers\n               False_Easting: 0.000000\n               False_Northing: 0.000000\n               Central_Meridian: 105.000000\n               Standard_Parallel_1: 25.000000\n               Standard_Parallel_2: 47.000000\n               Latitude_Of_Origin: 0.000000\n               Linear Unit: Meter (1.000000)\n2. Data attribute table: area (area)\n                  perimeter\n                  ashm_ (sequence code)\n                  class (desert encoding)\n                  ashm_id (desert encoding)\n3. Desert coding: mobile sandy land 2341010\n                  Semi-mobile sandy land\n                  Semi-fixed sandy land 2341030\n                  Gobi 2342000\n                  Saline land 2343000\n4: File format: National, sub-provincial and county-level desert map data types are vector shapefiles and E00\n5: File naming: Data organization based on the National Basic Resources and Environmental Remote Sensing Dynamic Information Service System is performed on the file management layer of Windows NT. The file and directory names are compound names of English characters and numbers. Pinyin + SM composition, such as the desert map of Gansu Province is GSSM. The flag and county desert map is the pinyin + xxxx of the province name, and xxxx is the last four digits of the flag and county code. The division of provinces, districts, flags and counties is based on the administrative division data files in the national basic resources and environmental remote sensing dynamic information service operation system.",
+      "descriptionCn": "该数据集是将沙漠专题地图的图形数据建立的我国第一个1∶10万沙漠空间数据库，重点反映我国沙漠的地理分布、面积大小、沙丘的流动性与固定程度。按照系统设计要求及有关标准，将输入数据进行标准化，统一转换为各类数据输入的标准格式。建库以交付系统运行。\n本项目以2000年的TM影像为信息源，在全国土地利用现状图的Coverage和2000年TM数字影像信息，进行解译、提取、修编，利用遥感与地理信息系统技术结合以1：10万比例尺专题图成图要求，对我国的沙漠、沙地和砾质戈壁进行了专题制图。1∶10万全国沙漠分布图可以使用户在从事资源与环境的研究工作时节省大量的数据录入和编辑工作。数字地图能非常方便地转化为版式地图\n数据集属性如下：\n分为e00和shp两个文件夹：\n文件夹内各省沙漠分布图名称与省份对照表\n\t01 Ahsm            安徽省\n\t02 Bjsm            北京市\n\t03 Fjsm            福建省\n\t04 Gdsm            广东省\n\t05 Gssm            甘肃省\n\t06 Gxsm            广西壮族自治区\n\t07 Gzsm            贵州省\n\t08 Hebsm           河北省\n\t09 Hensm           河南省\n\t10 Hljsm           黑龙江省\n\t11 Hndsm           海南省\n\t12 Hubsm           湖北省\n\t13 Jlsm            吉林省\n\t14 Jssm            江苏省\n\t15 Jxsm            江西省\n\t16 Lnsm            辽宁省\n\t17 Nmsm            内蒙固自治区\n\t18 Nxsm            宁夏回族自治区\n\t19 Qhsm            青海省\n\t20 Scsm            四川省\n\t21 Sdsm            山东省\n\t22 Sxsm            陕西省\n\t23 Tjsm            天津市\n\t24 Twsm            台湾省\n\t25 Xjsm            新疆维吾尔自治区\n\t26 Xzsm            西藏自治区\n\t27 Zjsm            浙江省\n        28 Shxsm           山西省\n1、数据投影：\n               Projection: Albers\n               False_Easting: 0.000000\n               False_Northing: 0.000000\n               Central_Meridian: 105.000000\n               Standard_Parallel_1: 25.000000\n               Standard_Parallel_2: 47.000000\n               Latitude_Of_Origin: 0.000000\n               Linear Unit: Meter (1.000000)\n2、数据属性表：area（面积）\n                  perimeter（周长）\n                  ashm_(序列码）\n                  class（沙漠编码）\n                  ashm_id（沙漠编码）\n3、沙漠编码：流动沙地\t    2341010\t\n                  半流动沙地    2341020\n                  半固定沙地    2341030\n                  戈壁             2342000\t\n                  盐碱地          2343000\n4：文件格式：全国、分省及县级沙漠图的数据类型为矢量型的shapefile和E00\n5：文件命名： 基于国家基本资源与环境遥感动态信息服务系统数据组织在Windows NT的文件管理层面上进行，文件和目录名采用英文字和数字的复合名称，分省沙漠图以省、区名拼音+SM构成，如甘肃省沙漠分布图即为GSSM。旗、县沙漠图为省区名拼音+xxxx，xxxx为旗、县代码后四位数值，如兰州沙漠图命名为GS0101。省、区和旗、县的分幅切割以国家级基本资源与环境遥感动态信息服务运行系统中的行政区划数据文件为据。",
+      "instructions": "SHP format storage",
+      "instructionsCn": "shp 格式存储",
+      "east": 135.5,
+      "west": 73.2,
+      "south": 17.8,
+      "north": 53.9,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 1544004130.0,
+      "cstr": "18406.11.westdc.006.2013.db",
+      "doi": "10.3972/westdc.006.2013.db",
+      "dataFormat": "矢量",
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "大范围荒漠地区的植被野外调查非常困难，而遥感技术的发展提供了从多时相、多波段遥感信息提取地表植被状况的强有力手段，使得大范围地表植被的监测成为可能。VI (Vegetation Index，植被指数)法是从遥感影像获取大范围植被信息常用的经济且有效的办法，它将在轨卫星包含了90％以上植被信息的红光和红外波段进行不同组合开展植被研究。干旱、半干旱地区植被稀疏、盖度低，地表强烈异质，通过分析不同VI发现，NDVI(Normalized Difference Vegetation Index，归一化植被指数)探测低盖度植被的能力最强,能够较好地监测荒漠植被的变化。NOAA/AVHRR是迄今为止最长时间序列的卫星对地观测数据集之一，因此NOAA/AVHRR NDVI成为区域尺度上分析植被参数最重要的数据。古尔班通古特沙漠约4.88万平方公里，是我国面积仅次于塔克拉玛干沙漠的第二大沙漠。与其他流动性沙漠不同，其特殊的地理环境和气候条件使大量荒漠植被得以生存，沙丘表面植被覆盖度可达15％～50％。同时，古尔班通古特沙漠又处于从西北路径影响我国沙尘暴的必经之地上，其植被状况直接关系到地表的稳定性，对沙尘暴的发生起着削弱或加强的作用。"
-            ],
-            "research objective": [
-                "因此，使用长序列遥感数据从区域尺度上对古尔班通古特沙漠植被的时空变化及与沙尘天气关系的研究，可为该区域降低沙尘暴的危害、改善生态环境及人们的社会经济生活提供科学依据。"
-            ],
-            "challenges": [],
-            "methods": [
-                "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据由以下公式计算得来：NDVI = （CH2 –CH1）/（CH2 +CH1）。先使用ArcMap软件将古尔班通古特沙漠边界矢量文件转成与NDVI数据相同的投影方式，然后调用ERDAS软件（均为批处理方式）将边界矢量文件转换为IMG格式，再使用ERDAS的Mask功能从欧亚大陆数据集中提取古尔班通古特沙漠的NDVI数据，并将其转换为分辨率为0.1度的经纬网投影(Geographic)，最后，将IMG格式文件导出为二进制格点数据，使用IDL语言编写程序对552景NDVI数据进行统计计算。为了更加有效地消除云遮蔽、大气影响、观测中的几何关系等不利因素的影响，对研究区域旬NDVI数据进行MVC处理（式2），以获取月NDVI最大值。"
-            ],
-            "dataset": [
-                "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据空间分辨率为8km×8km，投影方式为Albers等面积投影，时间分辨率为半月，时间序列为1981～2003年，共552景。沙尘暴、扬沙日数数据来源于新疆气象局信息中心，数据主要包括各月、年沙尘暴、扬沙天气（合计）数，由于有沙尘暴发生将不计扬沙，所以本文定义的沙尘日数为扬沙和沙尘暴日数之和,时间序列为1981～2003年。"
-            ],
-            "findings": [
-                "结果表明，23年来古尔班通古特沙漠NDVI总体上呈现增加趋势，年内NDVI月均值从4月开始逐渐增加，6～8月达到最大,12～2月降至最低;在空间分布上NDVI高值区集中分布在沙漠中部和西部，即德佐索腾艾里松沙漠中部和索布古尔布格莱沙漠，同时这里也是23年来NDVI显著增加的区域。对23年来古尔班通古特沙漠NDVI与同期沙尘天气的相关性分析发现，其NDVI与沙尘天气之间呈现明显的负相关关系，在夏季这种负相关更为显著。这说明在古尔班通古特沙漠，植被状况与沙尘天气之间存在着负耦合关系，植被是影响沙尘天气发生及其强度的因子之一。"
-            ],
-            "backgroundCn": [
-                "大范围荒漠地区的植被野外调查非常困难，而遥感技术的发展提供了从多时相、多波段遥感信息提取地表植被状况的强有力手段，使得大范围地表植被的监测成为可能。VI（Vegetation Index，植被指数）法是从遥感影像获取大范围植被信息常用的经济且有效的办法，它将在轨卫星包含了90％以上植被信息的红光和红外波段进行不同组合开展植被研究。干旱、半干旱地区植被稀疏、盖度低，地表强烈异质，通过分析不同VI发现，NDVI（Normalized Difference Vegetation Index，归一化植被指数）探测低盖度植被的能力最强，能够较好地监测荒漠植被的变化。NOAA/AVHRR是迄今为止最长时间序列的卫星对地观测数据集之一，因此NOAA/AVHRR NDVI成为区域尺度上分析植被参数最重要的数据。古尔班通古特沙漠约4.88万平方公里，是我国面积仅次于塔克拉玛干沙漠的第二大沙漠。与其他流动性沙漠不同，其特殊的地理环境和气候条件使大量荒漠植被得以生存，沙丘表面植被覆盖度可达15％～50％。同时，古尔班通古特沙漠又处于从西北路径影响我国沙尘暴的必经之地上，其植被状况直接关系到地表的稳定性，对沙尘暴的发生起着削弱或加强的作用。"
-            ],
-            "research objectiveCn": [
-                "Therefore, using long-term remote sensing data to study the temporal and spatial changes of vegetation in the Gurbantünggüt Desert and its relationship with dust weather on a regional scale can provide a scientific basis for reducing the harm of dust storms in the area, improving the ecological environment, and enhancing people's socio-economic life."
-            ],
-            "challengesCn": [],
-            "methodsCn": [
-                "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据由以下公式计算得来：NDVI = （CH2 – CH1）/（CH2 + CH1）。先使用ArcMap软件将古尔班通古特沙漠边界矢量文件转成与NDVI数据相同的投影方式，然后调用ERDAS软件（均为批处理方式）将边界矢量文件转换为IMG格式，再使用ERDAS的Mask功能从欧亚大陆数据集中提取古尔班通古特沙漠的NDVI数据，并将其转换为分辨率为0.1度的经纬网投影（Geographic），最后，将IMG格式文件导出为二进制格点数据，使用IDL语言编写程序对552景NDVI数据进行统计计算。为了更加有效地消除云遮蔽、大气影响、观测中的几何关系等不利因素的影响，对研究区域旬NDVI数据进行MVC处理（式2），以获取月NDVI最大值。"
-            ],
-            "datasetCn": [
-                "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据空间分辨率为8km×8km，投影方式为Albers等面积投影，时间分辨率为半月，时间序列为1981～2003年，共552景。沙尘暴、扬沙日数数据来源于新疆气象局信息中心，数据主要包括各月、年沙尘暴、扬沙天气（合计）数，由于有沙尘暴发生将不计扬沙，所以本文定义的沙尘日数为扬沙和沙尘暴日数之和，时间序列为1981～2003年。"
-            ],
-            "findingsCn": [
-                "结果表明，23年来古尔班通古特沙漠NDVI总体上呈现增加趋势，年内NDVI月均值从4月开始逐渐增加，6～8月达到最大，12～2月降至最低；在空间分布上NDVI高值区集中分布在沙漠中部和西部，即德佐索腾艾里松沙漠中部和索布古尔布格莱沙漠，同时这里也是23年来NDVI显著增加的区域。对23年来古尔班通古特沙漠NDVI与同期沙尘天气的相关性分析发现，其NDVI与沙尘天气之间呈现明显的负相关关系，在夏季这种负相关更为显著。这说明在古尔班通古特沙漠，植被状况与沙尘天气之间存在着负耦合关系，植被是影响沙尘天气发生及其强度的因子之一。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "王建华",
+        "nameEn": "WANG Jianhua",
+        "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院寒区旱区环境与工程研究所"
+      },
+      {
+        "nameCn": "王一谋",
+        "nameEn": "WANG Yimou",
+        "unitEn": "",
+        "unitCn": "中科院寒区旱区环境与工程研究所"
+      },
+      {
+        "nameCn": "颜长珍",
+        "nameEn": "YAN Changzhen",
+        "unitEn": "Northwest Institute of Eco-Environment and Resources, CAS",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "祁元",
+        "nameEn": "QI Yuan",
+        "unitEn": "Cold and Arid Regions Environmental and Engineering Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院寒区旱区环境与工程研究所"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Is it possible for the NDVI data from the USGS/EROS data center used in research to have a spatial resolution of 8km×8km?",
-                "QuestionCn": "USGS/EROS 数据中心用于研究的 NDVI 数据是否可能具有 8km×8km 的空间分辨率？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which projection method is used for desert distribution data, Albers, Mercator, or UTM?",
-                "QuestionCn": "用于沙漠分布数据的投影方法是阿尔伯斯、墨卡托还是UTM？",
-                "AnswerEn": "Albers",
-                "AnswerCn": "阿尔伯斯",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the primary source for vegetation index data in desert studies: MODIS, Landsat, or NOAA/AVHRR?",
-                "QuestionCn": "在沙漠研究中，植被指数数据的主要来源是MODIS、Landsat还是NOAA/AVHRR？",
-                "AnswerEn": "NOAA/AVHRR",
-                "AnswerCn": "美国国家海洋和大气管理局/高级甚高分辨率辐射计",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Are the vegetation monitoring methods in arid regions based more on NDVI, SAVI, or EVI?",
-                "QuestionCn": "干旱地区的植被监测方法主要基于NDVI、SAVI还是EVI？",
-                "AnswerEn": "NDVI",
-                "AnswerCn": "NDVI（归一化差异植被指数）",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What methods are used to extract vegetation information from remote sensing imagery in desert regions?",
-                "QuestionCn": "在沙漠地区，从遥感影像中提取植被信息的方法有哪些？",
-                "AnswerEn": "NDVI",
-                "AnswerCn": "NDVI",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Where can datasets related to desert vegetation and dust storm occurrences be sourced from for research purposes?",
-                "QuestionCn": "可以从哪里获取与沙漠植被和沙尘暴发生相关的数据集用于研究目的？",
-                "AnswerEn": "USGS/EROS, Xinjiang Meteorological Bureau",
-                "AnswerCn": "美国地质调查局/地球资源观测与科学中心，新疆气象局",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "When is the NDVI data timeline used for analyzing vegetation trends in desert regions?",
-                "QuestionCn": "NDVI数据时间线用于分析沙漠地区植被趋势的时间是什么时候？",
-                "AnswerEn": "1981 to 2003",
-                "AnswerCn": "1981年至2003年",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method that integrates remote sensing and GIS technology to map desert distribution?",
-                "QuestionCn": "您能否提供一个集成遥感和GIS技术以绘制沙漠分布的数据收集方法的示例？",
-                "AnswerEn": "The data collection method used a combination of remote sensing and GIS technology, specifically utilizing 2000 TM satellite imagery as the information source to perform interpretation, extraction, and revision. This approach was applied to create thematic maps of deserts, sandy lands, and gravelly Gobi at a scale of 1:100,000.",
-                "AnswerCn": "数据收集方法结合了遥感和GIS技术，具体利用2000年TM卫星影像作为信息来源进行解译、提取和修订。该方法用于制作比例尺为1:100,000的沙漠、沙地和砾石戈壁的专题地图。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced in using vegetation indices for monitoring desert vegetation?",
-                "QuestionCn": "使用植被指数监测沙漠植被时面临的一个挑战是什么？",
-                "AnswerEn": "A challenge in utilizing vegetation indices like NDVI for monitoring desert vegetation is dealing with the sparse and low coverage of vegetation in arid and semi-arid regions, which results in strong surface heterogeneity. The NDVI is particularly effective in detecting low-cover vegetation and monitoring desert vegetation changes despite these challenges.",
-                "AnswerCn": "利用植被指数如NDVI监测沙漠植被的一个挑战是处理干旱和半干旱地区植被稀疏和覆盖率低的问题，这导致了强烈的地表异质性。尽管面临这些挑战，NDVI在检测低覆盖植被和监测沙漠植被变化方面仍然特别有效。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What specific attributes are typically included in the attribute tables of desert distribution datasets?",
-                "QuestionCn": "沙漠分布数据集的属性表中通常包含哪些具体属性？",
-                "AnswerEn": "area, perimeter, ashm_, class, ashm_id",
-                "AnswerCn": "面积，周长，ashm_，类别，ashm_id",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the distinctive features of vegetation index methods used for monitoring desert vegetation changes?",
-                "QuestionCn": "用于监测沙漠植被变化的植被指数方法的独特特征是什么？",
-                "AnswerEn": "NDVI, detects low-density vegetation, uses red and infrared bands",
-                "AnswerCn": "NDVI 使用红光和红外波段来检测低密度植被。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of a dataset used for monitoring desert vegetation using remote sensing techniques?",
-                "QuestionCn": "用于监测沙漠植被的遥感技术数据集的空间分辨率是多少？",
-                "AnswerEn": "8 km × 8 km",
-                "AnswerCn": "8公里 × 8公里",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many regions or provinces are represented in a nationwide desert distribution dataset?",
-                "QuestionCn": "全国沙漠分布数据集中代表了多少个地区或省份？",
-                "AnswerEn": "28",
-                "AnswerCn": "二十八",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the temporal resolution of remote sensing data used to analyze vegetation changes in arid regions?",
-                "QuestionCn": "用于分析干旱地区植被变化的遥感数据的时间分辨率是多少？",
-                "AnswerEn": "Semi-monthly",
-                "AnswerCn": "半月一次",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does '遥感与地理信息系统技术结合' mean in the context of desert mapping?",
-                "QuestionCn": "'遥感与地理信息系统技术结合'在沙漠制图的背景下意味着将遥感技术与地理信息系统（GIS）技术相结合，以获取、分析和展示沙漠地区的地理信息和环境特征。",
-                "AnswerEn": "In the context of desert mapping, '遥感与地理信息系统技术结合' refers to the integration of remote sensing and geographic information system (GIS) technologies to interpret, extract, and modify data for creating thematic maps at a 1:100,000 scale, focusing on the geographical distribution, size, and dune mobility of deserts.",
-                "AnswerCn": "在沙漠制图的背景下，“遥感与地理信息系统技术结合”指的是将遥感技术与地理信息系统（GIS）技术相结合，以解释、提取和修改数据，从而创建比例尺为1:100,000的专题地图，重点关注沙漠的地理分布、大小和沙丘的移动性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is the significance of 'Albers等面积投影' in spatial data representation?",
-                "QuestionCn": "'Albers等面积投影'在空间数据表示中的重要性是什么？",
-                "AnswerEn": "'Albers等面积投影' refers to the Albers equal-area projection, which is significant in spatial data representation for ensuring area accuracy across the map, especially important when analyzing large areas such as national desert distributions where maintaining the true size of features is crucial.",
-                "AnswerCn": "'Albers等面积投影'指的是Albers等面积投影，这在空间数据表示中具有重要意义，因为它确保了地图上的面积准确性，特别是在分析大面积区域如国家沙漠分布时，保持特征的真实大小至关重要。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the use of remote sensing technology for desert mapping compare to traditional field survey methods in terms of efficiency and data accuracy?",
-                "QuestionCn": "遥感技术在沙漠制图中的使用与传统实地调查方法相比，在效率和数据准确性方面如何？",
-                "AnswerEn": "Remote sensing technology, as utilized in the desert distribution dataset, provides a powerful means to extract vegetation information across large areas using multi-temporal and multi-band data. This is more efficient compared to traditional field surveys, which are challenging in vast desert regions. The dataset specifically uses 2000 TM imagery for interpretation, showing advancements over manual data entry and editing associated with field methods.",
-                "AnswerCn": "遥感技术在沙漠分布数据集中被利用，提供了一种强大的手段，通过多时相和多波段数据提取大面积的植被信息。这比传统的实地调查更高效，因为在广阔的沙漠地区进行实地调查是具有挑战性的。该数据集特别使用了2000年的TM影像进行解读，显示出相较于与实地方法相关的手动数据录入和编辑的进步。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What are the differences in data projection methods used between the desert distribution dataset and the NDVI dataset for vegetation monitoring?",
-                "QuestionCn": "沙漠分布数据集和NDVI（归一化植被指数）数据集在植被监测中使用的数据投影方法有什么区别？",
-                "AnswerEn": "The desert distribution dataset uses the Albers projection method with specific parameters for standard parallels and central meridian, suitable for creating detailed spatial maps. In contrast, the NDVI dataset from NOAA/AVHRR employs an Albers equal-area projection with a spatial resolution of 8km, focusing on regional scale analysis, indicating a difference in projection focus and scale between the datasets.",
-                "AnswerCn": "沙漠分布数据集使用阿尔伯斯投影方法，具有特定的标准平行线和中央子午线参数，适合制作详细的空间地图。相比之下，来自NOAA/AVHRR的NDVI数据集采用阿尔伯斯等面积投影，空间分辨率为8公里，侧重于区域尺度分析，表明两个数据集在投影重点和尺度上存在差异。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways do the data attributes of the desert distribution dataset differ from those used in the NDVI data for vegetation change analysis?",
-                "QuestionCn": "沙漠分布数据集的数据属性与用于植被变化分析的NDVI数据在什么方面有所不同？",
-                "AnswerEn": "The desert distribution dataset includes attributes such as area, perimeter, and desert classification codes, which focus on spatial characteristics and desert types. On the other hand, the NDVI dataset emphasizes temporal changes in vegetation cover, using attributes like vegetation index values to monitor spatial and temporal changes. This highlights a difference in focus between spatial distribution and temporal vegetation dynamics.",
-                "AnswerCn": "沙漠分布数据集包括面积、周长和沙漠分类代码等属性，侧重于空间特征和沙漠类型。另一方面，NDVI数据集强调植被覆盖的时间变化，使用植被指数值等属性来监测空间和时间变化。这突显了空间分布与时间植被动态之间的关注差异。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can remote sensing data, such as NDVI, provide insights into the spatial and temporal patterns of desert vegetation, and what challenges might arise from using this method in arid regions?",
-                "QuestionCn": "遥感数据，如NDVI，可以提供沙漠植被的空间和时间模式的洞察，但在干旱地区使用这种方法可能会面临一些挑战。",
-                "AnswerEn": "Remote sensing data like NDVI can reveal spatial and temporal patterns of desert vegetation by utilizing multi-temporal and multi-band satellite information to monitor vegetation cover. Challenges include dealing with sparse vegetation in arid regions, where low coverage and surface heterogeneity can complicate the detection and interpretation of data. NDVI effectively monitors low-density vegetation changes, but factors such as cloud cover and atmospheric conditions may impact data accuracy.",
-                "AnswerCn": "遥感数据如NDVI可以通过利用多时相和多波段的卫星信息来揭示沙漠植被的空间和时间模式，以监测植被覆盖情况。挑战包括处理干旱地区稀疏植被的问题，在这些地区，低覆盖率和表面异质性可能会使数据的检测和解释变得复杂。NDVI有效地监测低密度植被的变化，但云层覆盖和大气条件等因素可能会影响数据的准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methodologies would be effective in interpreting the relationship between vegetation indices and dust storm occurrences in desert regions?",
-                "QuestionCn": "在沙漠地区，解释植被指数与沙尘暴发生之间关系的有效方法论有哪些？",
-                "AnswerEn": "Analyzing the relationship between vegetation indices and dust storm occurrences can involve using long-term remote sensing data like NOAA/AVHRR NDVI to study vegetation changes and correlate these with weather records of dust storms. Methods include statistical correlation analysis and spatial mapping to identify areas where vegetation changes influence dust storm frequency and intensity. The study of negative coupling relationships between vegetation coverage and dust storms can provide insights into how vegetation stabilizes the surface and mitigates dust storm impacts.",
-                "AnswerCn": "分析植被指数与沙尘暴发生之间的关系可以使用长期的遥感数据，如NOAA/AVHRR NDVI，研究植被变化，并将其与沙尘暴的天气记录进行关联。方法包括统计相关分析和空间制图，以识别植被变化影响沙尘暴频率和强度的区域。研究植被覆盖与沙尘暴之间的负耦合关系可以提供关于植被如何稳定地表并减轻沙尘暴影响的见解。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "In what ways can the integration of geospatial datasets enhance our understanding of desert distribution and dynamics across different provinces in China?",
-                "QuestionCn": "地理空间数据集的整合可以通过以下几种方式增强我们对中国不同省份沙漠分布和动态的理解：",
-                "AnswerEn": "The integration of geospatial datasets, such as the 1:100,000 scale desert distribution maps and remote sensing data, can improve understanding of desert distribution and dynamics by providing detailed geographical, area, and movement classifications of sand dunes and deserts. This approach allows for standardizing data input formats and creating comprehensive maps that reflect desert characteristics, improving resource and environmental studies. Challenges include ensuring data consistency and accuracy across different regions and maintaining updated datasets to reflect changes over time.",
-                "AnswerCn": "地理空间数据集的整合，例如1:100,000比例尺的沙漠分布图和遥感数据，可以通过提供沙丘和沙漠的详细地理、面积和运动分类，来改善对沙漠分布和动态的理解。这种方法允许标准化数据输入格式，并创建反映沙漠特征的综合地图，从而改善资源和环境研究。挑战包括确保不同地区数据的一致性和准确性，以及保持更新的数据集以反映随时间变化的情况。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the need for standardization and format conversion in the data collection processes for desert distribution mapping in China?",
-                "QuestionCn": "在中国的沙漠分布映射的数据收集过程中，导致标准化和格式转换需求的原因是什么？",
-                "AnswerEn": "Standardization and format conversion are necessary to ensure that the data input from various sources is consistent and compatible with the system's requirements and standards, allowing for seamless integration into the spatial database.",
-                "AnswerCn": "标准化和格式转换是必要的，以确保来自各种来源的数据输入一致，并与系统的要求和标准兼容，从而允许无缝集成到空间数据库中。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is remote sensing technology particularly effective for monitoring vegetation in large desert areas?",
-                "QuestionCn": "遥感技术在监测大面积沙漠地区的植被方面特别有效的原因是什么？",
-                "AnswerEn": "Remote sensing technology is effective because it can extract vegetation information from multi-temporal and multi-spectral data, allowing researchers to monitor vast areas that are otherwise challenging to survey due to sparse vegetation and surface heterogeneity.",
-                "AnswerCn": "遥感技术之所以有效，是因为它可以从多时相和多光谱数据中提取植被信息，使研究人员能够监测那些由于植被稀疏和地表异质性而难以调查的广阔区域。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What are the reasons for the selection of Albers equal-area projection in the mapping of desert distribution in China?",
-                "QuestionCn": "选择阿尔伯斯等面积投影用于中国沙漠分布制图的原因是什么？",
-                "AnswerEn": "The Albers equal-area projection is selected because it preserves area, which is crucial for accurately representing the size and distribution of desert regions across varying latitudes in China, ensuring reliable spatial analysis and interpretation.",
-                "AnswerCn": "阿尔伯斯等面积投影被选用是因为它保持面积，这对于准确表示中国不同纬度沙漠地区的大小和分布至关重要，从而确保可靠的空间分析和解读。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "How might satellite-derived vegetation indices impact the understanding of desertification processes?",
-                "QuestionCn": "卫星衍生的植被指数如何影响对沙漠化过程的理解？",
-                "AnswerEn": "Satellite-derived vegetation indices, such as the NDVI, can highlight areas of vegetation degradation or improvement, helping to map the progression or regression of desertification. The ability to monitor these changes could lead to better resource management and interventions to curb desertification.",
-                "AnswerCn": "卫星衍生的植被指数，如NDVI，可以突出植被退化或改善的区域，帮助绘制沙漠化的进展或退化图。监测这些变化的能力可以促进更好的资源管理和干预，以遏制沙漠化。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to study the temporal and spatial changes of vegetation in the Gurbantunggut Desert using long-sequenced remote sensing data?",
-                "QuestionCn": "研究戈壁滩沙漠植被的时间和空间变化，使用长期序列的遥感数据是重要的原因是什么？",
-                "AnswerEn": "Studying these changes is crucial for providing scientific evidence to mitigate the harmful effects of sandstorms, improve the ecological environment, and enhance socio-economic life in the region.",
-                "AnswerCn": "研究这些变化对于提供科学证据以减轻沙尘暴的有害影响、改善生态环境以及提升该地区的社会经济生活至关重要。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What objectives are achieved by employing NDVI data to analyze vegetation parameters in arid and semi-arid regions?",
-                "QuestionCn": "通过使用NDVI数据分析干旱和半干旱地区的植被参数，可以实现以下目标：",
-                "AnswerEn": "The objectives include effectively monitoring desert vegetation changes, understanding vegetation's role in stabilizing the surface and influencing sandstorm occurrence, and assessing vegetation's response to climatic and environmental changes.",
-                "AnswerCn": "目标包括有效监测沙漠植被变化，理解植被在稳定地表和影响沙尘暴发生中的作用，以及评估植被对气候和环境变化的响应。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in using remote sensing technology to create a 1:100,000 scale thematic map for desert distribution?",
-                "QuestionCn": "使用遥感技术创建1:100,000比例尺沙漠分布专题图的程序步骤包括：\n\n1. 确定研究区域：选择需要制作专题图的沙漠区域。\n2. 数据收集：获取相关的遥感影像数据，通常来自卫星或航空摄影。\n3. 数据预处理：对收集到的遥感数据进行校正，包括几何校正、辐射校正和大气校正。\n4. 特征提取：利用图像处理技术提取沙漠区域的特征，可能包括分类算法和阈值分割。\n5. 分类：将提取的特征进行分类，识别沙漠及其周边环境。\n6. 数据分析：分析分类结果，评估沙漠分布的空间特征和变化。\n7. 制图：将分析结果转化为地图，设置比例尺为1:100,000，并添加必要的图例和注释。\n8. 验证与精度评估：通过地面实地调查或其他数据源验证地图的准确性。\n9. 发布与共享：将最终的专题图发布，并与相关利益方共享。",
-                "AnswerEn": "The process involves using 2000 TM imagery as the information source, interpreting, extracting, and revising data based on national land use status maps and TM digital images. The procedure combines remote sensing and GIS technology to meet the thematic mapping requirements at a 1:100,000 scale, focusing on mapping deserts, sandy areas, and gravelly gobi.",
-                "AnswerCn": "该过程涉及使用2000年的TM影像作为信息源，基于国家土地利用现状图和TM数字图像进行解读、提取和修订数据。该程序结合了遥感和GIS技术，以满足1:100,000比例尺的专题制图要求，重点绘制沙漠、沙质区域和砾石戈壁。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "What methods are utilized to ensure the accuracy of desert distribution data and its conversion into user-friendly formats for research purposes?",
-                "QuestionCn": "确保沙漠分布数据准确性及其转换为用户友好格式以供研究使用的方法有哪些？",
-                "AnswerEn": "The accuracy of desert distribution data is ensured by standardizing input data and converting it into standardized formats as per system design requirements and standards. The data is organized at the Windows NT file management level, with naming conventions based on province or region names. The digital maps, in shapefile and E00 vector formats, can be easily transformed into layout maps, facilitating user-friendly access for resource and environmental research.",
-                "AnswerCn": "沙漠分布数据的准确性通过标准化输入数据并根据系统设计要求和标准将其转换为标准格式来确保。数据在Windows NT文件管理级别进行组织，命名约定基于省或地区名称。数字地图以shapefile和E00矢量格式存在，可以轻松转换为布局地图，便于资源和环境研究的用户友好访问。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What technologies or methodologies enable the creation of a 1:10,000 scale spatial database for desert distribution in China?",
-                "QuestionCn": "哪些技术或方法论能够支持在中国创建1:10,000比例尺的沙漠分布空间数据库？",
-                "AnswerEn": "The creation of a 1:10,000 scale spatial database for desert distribution in China is enabled by the integration of remote sensing and geographic information system (GIS) technologies, using TM imagery from the year 2000 as the primary information source. This involves interpreting, extracting, and revising data from national land use maps and TM digital imagery to meet the requirements of thematic mapping at this scale.",
-                "AnswerCn": "通过整合遥感和地理信息系统（GIS）技术，利用2000年的TM影像作为主要信息来源，创建一个1:10,000比例尺的中国沙漠分布空间数据库。这涉及对国家土地利用图和TM数字影像的数据进行解读、提取和修订，以满足该比例尺下主题制图的要求。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "How does the use of the NDVI method enable effective monitoring of desert vegetation changes over time?",
-                "QuestionCn": "NDVI方法如何有效监测沙漠植被随时间变化的情况？",
-                "AnswerEn": "The NDVI method enables effective monitoring of desert vegetation changes by utilizing the strong capability of NDVI to detect low-density vegetation, which is common in arid and semi-arid regions. This method uses data from satellites like NOAA/AVHRR, which provides a long time series of observational data, allowing for temporal analysis of vegetation changes and their correlation with dust storm occurrences.",
-                "AnswerCn": "NDVI方法通过利用NDVI在检测稀疏植被方面的强大能力，有效监测沙漠植被变化，这在干旱和半干旱地区是很常见的。该方法使用来自NOAA/AVHRR等卫星的数据，这些数据提供了长期的观测数据序列，允许对植被变化及其与沙尘暴发生的相关性进行时间分析。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What conditions or resources are necessary to effectively process and analyze NDVI data from the NOAA/AVHRR dataset for desert vegetation studies?",
-                "QuestionCn": "有效处理和分析来自NOAA/AVHRR数据集的NDVI数据以进行沙漠植被研究所需的条件或资源是什么？",
-                "AnswerEn": "To effectively process and analyze NDVI data from the NOAA/AVHRR dataset for desert vegetation studies, it is necessary to have access to long-term NDVI data with appropriate spatial and temporal resolutions. Additionally, using software like ArcMap and ERDAS for data projection and transformation, along with programming capabilities in languages like IDL for statistical analysis, are required to manage and interpret the large datasets while considering factors such as cloud cover and atmospheric effects.",
-                "AnswerCn": "为了有效处理和分析来自NOAA/AVHRR数据集的NDVI数据，以进行沙漠植被研究，必须获得具有适当空间和时间分辨率的长期NDVI数据。此外，使用ArcMap和ERDAS等软件进行数据投影和转换，以及在IDL等编程语言中进行统计分析的能力，是管理和解释大型数据集所必需的，同时还需考虑云覆盖和大气影响等因素。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might it be expected that remote sensing techniques provide a comprehensive method for monitoring desert vegetation changes over time?",
-                "QuestionCn": "为什么人们可能会认为遥感技术提供了一种全面的方法来监测沙漠植被随时间的变化？",
-                "AnswerEn": "Remote sensing techniques allow for the extraction of surface vegetation conditions from multi-temporal, multi-spectral satellite data, enabling large-scale vegetation monitoring. The use of NDVI from satellite data like NOAA/AVHRR provides an economical and effective way to obtain extensive vegetation information, making it possible to monitor desert vegetation changes over time.",
-                "AnswerCn": "遥感技术允许从多时相、多光谱卫星数据中提取地表植被状况，从而实现大规模的植被监测。使用来自NOAA/AVHRR的NDVI卫星数据提供了一种经济有效的方式来获取广泛的植被信息，使得监测沙漠植被变化成为可能。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why might spatial resolution be a critical factor in the effectiveness of a dataset for analyzing desert environments?",
-                "QuestionCn": "空间分辨率可能是分析沙漠环境的数据集有效性的一个关键因素。",
-                "AnswerEn": "Spatial resolution is crucial because it determines the level of detail that can be captured in a dataset. In desert environments, where vegetation is sparse and the surface is highly heterogeneous, a dataset with adequate spatial resolution, like the 8km×8km resolution used for NDVI data, is necessary to accurately capture the spatial variability in vegetation coverage.",
-                "AnswerCn": "空间分辨率至关重要，因为它决定了数据集中可以捕获的细节水平。在植被稀疏且表面高度异质的沙漠环境中，具有足够空间分辨率的数据集（如用于NDVI数据的8km×8km分辨率）是必要的，以准确捕捉植被覆盖的空间变异性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How effective are remote sensing techniques and tools like NDVI in capturing detailed spatial information about desert vegetation, considering the challenges of low vegetation cover and high surface heterogeneity?",
-                "QuestionCn": "遥感技术和工具如NDVI在捕捉沙漠植被的详细空间信息方面的有效性如何，考虑到低植被覆盖和高表面异质性带来的挑战？",
-                "AnswerEn": "Remote sensing techniques and tools like NDVI are considered effective for capturing detailed spatial information about desert vegetation, especially given the challenges of low vegetation cover and high surface heterogeneity. The use of NDVI has been identified as particularly strong in detecting low-density vegetation, making it a reliable method for monitoring desert vegetation changes and assessing their impact on surface stability and dust storm occurrences.",
-                "AnswerCn": "遥感技术和工具，如NDVI，被认为在捕捉沙漠植被的详细空间信息方面非常有效，尤其是在低植被覆盖和高表面异质性带来的挑战下。NDVI的使用被认为在检测低密度植被方面特别强大，使其成为监测沙漠植被变化和评估其对地表稳定性及沙尘暴发生影响的可靠方法。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In what ways can the integration of remote sensing data and GIS technology enhance the accuracy and resolution of desert mapping at a national scale?",
-                "QuestionCn": "遥感数据与GIS技术的整合可以通过以下方式提高国家级沙漠制图的准确性和分辨率：",
-                "AnswerEn": "The integration of remote sensing data and GIS technology can significantly enhance the accuracy and resolution of desert mapping at a national scale by combining multiple data sources, such as TM imagery and land use maps, into a standardized format. This allows for the creation of detailed thematic maps that reflect geographic distribution, area size, and dune mobility. The use of a 1:100,000 scale ensures that users can efficiently engage in resource and environmental research without extensive data input or editing.",
-                "AnswerCn": "遥感数据与GIS技术的结合可以显著提高国家级沙漠制图的准确性和分辨率，通过将多种数据源（如TM影像和土地利用图）整合为标准化格式。这使得能够创建反映地理分布、面积大小和沙丘移动性的详细专题地图。使用1:100,000的比例尺确保用户能够高效地进行资源和环境研究，而无需大量的数据输入或编辑。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how data collection methods can effectively monitor vegetation changes in large arid and semi-arid regions.",
-                "QuestionCn": "我不明白数据收集方法如何有效监测大面积干旱和半干旱地区的植被变化。",
-                "AnswerEn": "The use of remote sensing techniques, such as the Vegetation Index (VI) method, allows for the extraction of surface vegetation conditions from multi-temporal and multi-band remote sensing information, making large-scale vegetation monitoring possible.",
-                "AnswerCn": "遥感技术的使用，例如植被指数（VI）方法，使得从多时相和多波段遥感信息中提取地表植被状况成为可能，从而实现大规模的植被监测。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please outline how remote sensing and geographic information system technologies can be integrated to create detailed desert distribution maps at a scale of 1:100,000.",
-                "QuestionCn": "请概述如何将遥感和地理信息系统技术集成，以在1:100,000的比例尺下创建详细的沙漠分布地图。",
-                "AnswerEn": "The integration involves using TM imagery as the information source, which is interpreted and extracted using remote sensing techniques. The data is then edited and compiled using GIS technologies to meet the cartographic requirements of a 1:100,000 scale thematic map, focusing on the distribution of deserts, sandy areas, and gravelly gobi in China.",
-                "AnswerCn": "该集成涉及使用TM影像作为信息源，通过遥感技术进行解读和提取。然后，利用GIS技术对数据进行编辑和编制，以满足1:100,000比例尺专题地图的制图要求，重点关注中国沙漠、沙质地区和砾石戈壁的分布。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "Please describe the process of standardizing and converting input data to a unified format for inclusion in a spatial database focused on desert distribution.",
-                "QuestionCn": "请描述将输入数据标准化和转换为统一格式以纳入专注于沙漠分布的空间数据库的过程。",
-                "AnswerEn": "The process involves standardizing the input data according to system design requirements and relevant standards. This includes converting the data into a uniform format suitable for input, which is then used to build and deliver a spatial database system that reflects the geographic distribution, size, and mobility of sand dunes.",
-                "AnswerCn": "该过程涉及根据系统设计要求和相关标准对输入数据进行标准化。这包括将数据转换为适合输入的统一格式，然后用于构建和交付一个反映沙丘的地理分布、大小和移动性的空间数据库系统。",
-                "Level": "C2(Understanding)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": "古尔班通古特沙漠NDVI时空变化及其与沙尘天气的关系",
+        "titleEn": null,
+        "referenceCn": "李杨，刘艳，张璞，等. 古尔班通古特沙漠NDVI时空变化及其与沙尘天气的关系[C]. 中国北京: 2008.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于GIS的南水北调中西线联合调水工程研究",
+        "titleEn": null,
+        "referenceCn": "梁书民. 基于GIS的南水北调中西线联合调水工程研究. 水利发展研究, 2010, (03):17-24",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Sand dune mobilization caused by regional warming in Otintag, China",
+        "referenceCn": null,
+        "referenceEn": "Zhang B, Lu X, Luo R. Sand dune mobilization caused by regional warming in Otintag, China[C]//2010 18th International Conference on Geoinformatics. 2010: 1–5. doi:10.1109/GEOINFORMATICS.2010.5567890"
+      },
+      {
+        "titleCn": "末次盛冰期和全新世大暖期浑善达克沙地边界的变化",
+        "titleEn": null,
+        "referenceCn": "周亚利，鹿化煜，张小艳，等. 末次盛冰期和全新世大暖期浑善达克沙地边界的变化[J]. 第四纪研究. 2013, 33(2).",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "古尔班通古特沙漠植被覆盖变化及其对沙尘天气的影响",
+        "titleEn": null,
+        "referenceCn": "李杨, 刘艳, 张璞. 古尔班通古特沙漠植被覆盖变化及其对沙尘天气的影响. 干旱区资源与环境, 2010, (03):141-146",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Time lag responses of Gurbantonggut Desert vegetation to meteorological factors",
+        "referenceCn": null,
+        "referenceEn": "Li Y, Lin N, Liu Y, Zhang P. Time lag responses of Gurbantonggut Desert vegetation to meteorological factors[C]//Proc. SPIE 7498, MIPPR 2009: Remote Sensing and GIS Data Processing and Other Applications, 74980I. 2009, 7498: 74980I–74980I–11. doi:10.1117/12.829389"
+      },
+      {
+        "titleCn": "颗粒物质对风积沙压实特性影响研究",
+        "titleEn": null,
+        "referenceCn": "舒斌, 于进庆, 刘桂英, 官国琳. 颗粒物质对风积沙压实特性影响研究. 工程地质学报, 2010, (05):692-697",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Effectiveness of ecological restoration projects in Horqin Sandy Land, China based on SPOT-VGT NDVI data",
+        "referenceCn": null,
+        "referenceEn": "Zhang, Geli, Dong, Jinwei, Xiao, Xiangming, Hu, Zhongmin, Sheldon, Sage. Effectiveness of ecological restoration projects in Horqin Sandy Land, China based on SPOT-VGT NDVI data. Ecological Engineering, 2012, 38(1):20-29. doi:10.1016/j.ecoleng.2011.09.005"
+      },
+      {
+        "titleCn": "古尔班通古特沙漠NDVI时空变化特征",
+        "titleEn": null,
+        "referenceCn": "李杨，刘艳，张璞，等. 古尔班通古特沙漠NDVI时空变化特征[J]. 干旱区研究. 2009(05): 686-693.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "The Effects of Eco-Compensation in the Farming-Pastoral Transitional Zone of Inner Mongolia, China",
+        "referenceCn": null,
+        "referenceEn": "Peng H, Heqing H, Lin Z, Fen L. The Effects of Eco-Compensation in the Farming-Pastoral Transitional Zone of Inner Mongolia, China[J]. Journal of Resources and Ecology, 2011, 2(2): 141–150."
+      },
+      {
+        "titleCn": "塔克拉玛干沙漠周边地区潜在蒸散时空演变特征及其主要影响因素",
+        "titleEn": null,
+        "referenceCn": "段春锋, 缪启龙, 曹雯. 塔克拉玛干沙漠周边地区潜在蒸散时空演变特征及其主要影响因素[C]//第28届中国气象学会年会——S4应对气候变化，发展低碳经济. 2011: 9.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于面向对象方法的土地沙化遥感信息提取技术研究",
+        "titleEn": null,
+        "referenceCn": "王志波. 基于面向对象方法的土地沙化遥感信息提取技术研究[D]. 中国林业科学研究院, 2012.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "农牧交错带城市人居环境自然适宜性评价",
+        "titleEn": null,
+        "referenceCn": "岳大鹏，刘鹏，刘焱序. 农牧交错带城市人居环境自然适宜性评价[J]. 安徽农业科学. 2013(01): 288-291.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于GIS的榆林市土壤风蚀危险度评价",
+        "titleEn": null,
+        "referenceCn": "曹晓仪，董治宝，李静，等. 基于GIS的榆林市土壤风蚀危险度评价[J]. 水土保持通报. 2013(01): 206-210.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Numerical analysis for contribution of the Tibetan Plateau to dust aerosols in the atmosphere over the East Asia",
+        "referenceCn": null,
+        "referenceEn": "Mao R, Gong D Y, Shao Y P, et al. Numerical analysis for contribution of the Tibetan Plateau to dust aerosols in the atmosphere over the East Asia[J]. SCIENCE CHINA-EARTH SCIENCES. 2013, 56(2): 301-310."
+      },
+      {
+        "titleCn": "古尔班通古特沙漠积雪覆盖、沙尘天气特征及其相互关系",
+        "titleEn": null,
+        "referenceCn": "李杨, 艾力·买买提明, 刘艳, 张璞, 吉春容. 古尔班通古特沙漠积雪覆盖、沙尘天气特征及其相互关系. 中国沙漠, 2010, (04):961-967",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "地理国情监测内容分类与指标体系构建方法研究",
+        "titleEn": null,
+        "referenceCn": "武琛. 地理国情监测内容分类与指标体系构建方法研究[D]. 山东农业大学, 2012.",
+        "referenceEn": null
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "沙漠/荒漠",
+        "nameEn": "Desert"
+      },
+      {
+        "nameCn": "沙漠、沙地",
+        "nameEn": "Desert, sand"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2000年",
+        "keywordEn": "2000",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      },
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+        "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "大范围荒漠地区的植被野外调查非常困难，而遥感技术的发展提供了从多时相、多波段遥感信息提取地表植被状况的强有力手段，使得大范围地表植被的监测成为可能。VI (Vegetation Index，植被指数)法是从遥感影像获取大范围植被信息常用的经济且有效的办法，它将在轨卫星包含了90％以上植被信息的红光和红外波段进行不同组合开展植被研究。干旱、半干旱地区植被稀疏、盖度低，地表强烈异质，通过分析不同VI发现，NDVI(Normalized Difference Vegetation Index，归一化植被指数)探测低盖度植被的能力最强,能够较好地监测荒漠植被的变化。NOAA/AVHRR是迄今为止最长时间序列的卫星对地观测数据集之一，因此NOAA/AVHRR NDVI成为区域尺度上分析植被参数最重要的数据。古尔班通古特沙漠约4.88万平方公里，是我国面积仅次于塔克拉玛干沙漠的第二大沙漠。与其他流动性沙漠不同，其特殊的地理环境和气候条件使大量荒漠植被得以生存，沙丘表面植被覆盖度可达15％～50％。同时，古尔班通古特沙漠又处于从西北路径影响我国沙尘暴的必经之地上，其植被状况直接关系到地表的稳定性，对沙尘暴的发生起着削弱或加强的作用。"
+      ],
+      "research objective": [
+        "因此，使用长序列遥感数据从区域尺度上对古尔班通古特沙漠植被的时空变化及与沙尘天气关系的研究，可为该区域降低沙尘暴的危害、改善生态环境及人们的社会经济生活提供科学依据。"
+      ],
+      "challenges": [],
+      "methods": [
+        "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据由以下公式计算得来：NDVI = （CH2 –CH1）/（CH2 +CH1）。先使用ArcMap软件将古尔班通古特沙漠边界矢量文件转成与NDVI数据相同的投影方式，然后调用ERDAS软件（均为批处理方式）将边界矢量文件转换为IMG格式，再使用ERDAS的Mask功能从欧亚大陆数据集中提取古尔班通古特沙漠的NDVI数据，并将其转换为分辨率为0.1度的经纬网投影(Geographic)，最后，将IMG格式文件导出为二进制格点数据，使用IDL语言编写程序对552景NDVI数据进行统计计算。为了更加有效地消除云遮蔽、大气影响、观测中的几何关系等不利因素的影响，对研究区域旬NDVI数据进行MVC处理（式2），以获取月NDVI最大值。"
+      ],
+      "dataset": [
+        "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据空间分辨率为8km×8km，投影方式为Albers等面积投影，时间分辨率为半月，时间序列为1981～2003年，共552景。沙尘暴、扬沙日数数据来源于新疆气象局信息中心，数据主要包括各月、年沙尘暴、扬沙天气（合计）数，由于有沙尘暴发生将不计扬沙，所以本文定义的沙尘日数为扬沙和沙尘暴日数之和,时间序列为1981～2003年。"
+      ],
+      "findings": [
+        "结果表明，23年来古尔班通古特沙漠NDVI总体上呈现增加趋势，年内NDVI月均值从4月开始逐渐增加，6～8月达到最大,12～2月降至最低;在空间分布上NDVI高值区集中分布在沙漠中部和西部，即德佐索腾艾里松沙漠中部和索布古尔布格莱沙漠，同时这里也是23年来NDVI显著增加的区域。对23年来古尔班通古特沙漠NDVI与同期沙尘天气的相关性分析发现，其NDVI与沙尘天气之间呈现明显的负相关关系，在夏季这种负相关更为显著。这说明在古尔班通古特沙漠，植被状况与沙尘天气之间存在着负耦合关系，植被是影响沙尘天气发生及其强度的因子之一。"
+      ],
+      "backgroundCn": [
+        "大范围荒漠地区的植被野外调查非常困难，而遥感技术的发展提供了从多时相、多波段遥感信息提取地表植被状况的强有力手段，使得大范围地表植被的监测成为可能。VI（Vegetation Index，植被指数）法是从遥感影像获取大范围植被信息常用的经济且有效的办法，它将在轨卫星包含了90％以上植被信息的红光和红外波段进行不同组合开展植被研究。干旱、半干旱地区植被稀疏、盖度低，地表强烈异质，通过分析不同VI发现，NDVI（Normalized Difference Vegetation Index，归一化植被指数）探测低盖度植被的能力最强，能够较好地监测荒漠植被的变化。NOAA/AVHRR是迄今为止最长时间序列的卫星对地观测数据集之一，因此NOAA/AVHRR NDVI成为区域尺度上分析植被参数最重要的数据。古尔班通古特沙漠约4.88万平方公里，是我国面积仅次于塔克拉玛干沙漠的第二大沙漠。与其他流动性沙漠不同，其特殊的地理环境和气候条件使大量荒漠植被得以生存，沙丘表面植被覆盖度可达15％～50％。同时，古尔班通古特沙漠又处于从西北路径影响我国沙尘暴的必经之地上，其植被状况直接关系到地表的稳定性，对沙尘暴的发生起着削弱或加强的作用。"
+      ],
+      "research objectiveCn": [
+        "Therefore, using long-term remote sensing data to study the temporal and spatial changes of vegetation in the Gurbantünggüt Desert and its relationship with dust weather on a regional scale can provide a scientific basis for reducing the harm of dust storms in the area, improving the ecological environment, and enhancing people's socio-economic life."
+      ],
+      "challengesCn": [],
+      "methodsCn": [
+        "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据由以下公式计算得来：NDVI = （CH2 – CH1）/（CH2 + CH1）。先使用ArcMap软件将古尔班通古特沙漠边界矢量文件转成与NDVI数据相同的投影方式，然后调用ERDAS软件（均为批处理方式）将边界矢量文件转换为IMG格式，再使用ERDAS的Mask功能从欧亚大陆数据集中提取古尔班通古特沙漠的NDVI数据，并将其转换为分辨率为0.1度的经纬网投影（Geographic），最后，将IMG格式文件导出为二进制格点数据，使用IDL语言编写程序对552景NDVI数据进行统计计算。为了更加有效地消除云遮蔽、大气影响、观测中的几何关系等不利因素的影响，对研究区域旬NDVI数据进行MVC处理（式2），以获取月NDVI最大值。"
+      ],
+      "datasetCn": [
+        "本研究所用NOAA/AVHRR NDVI数据来自美国USGS/EROS数据中心，NDVI数据空间分辨率为8km×8km，投影方式为Albers等面积投影，时间分辨率为半月，时间序列为1981～2003年，共552景。沙尘暴、扬沙日数数据来源于新疆气象局信息中心，数据主要包括各月、年沙尘暴、扬沙天气（合计）数，由于有沙尘暴发生将不计扬沙，所以本文定义的沙尘日数为扬沙和沙尘暴日数之和，时间序列为1981～2003年。"
+      ],
+      "findingsCn": [
+        "结果表明，23年来古尔班通古特沙漠NDVI总体上呈现增加趋势，年内NDVI月均值从4月开始逐渐增加，6～8月达到最大，12～2月降至最低；在空间分布上NDVI高值区集中分布在沙漠中部和西部，即德佐索腾艾里松沙漠中部和索布古尔布格莱沙漠，同时这里也是23年来NDVI显著增加的区域。对23年来古尔班通古特沙漠NDVI与同期沙尘天气的相关性分析发现，其NDVI与沙尘天气之间呈现明显的负相关关系，在夏季这种负相关更为显著。这说明在古尔班通古特沙漠，植被状况与沙尘天气之间存在着负耦合关系，植被是影响沙尘天气发生及其强度的因子之一。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Is it possible for the NDVI data from the USGS/EROS data center used in research to have a spatial resolution of 8km×8km?",
+        "QuestionCn": "USGS/EROS 数据中心用于研究的 NDVI 数据是否可能具有 8km×8km 的空间分辨率？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which projection method is used for desert distribution data, Albers, Mercator, or UTM?",
+        "QuestionCn": "用于沙漠分布数据的投影方法是阿尔伯斯、墨卡托还是UTM？",
+        "AnswerEn": "Albers",
+        "AnswerCn": "阿尔伯斯",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the primary source for vegetation index data in desert studies: MODIS, Landsat, or NOAA/AVHRR?",
+        "QuestionCn": "在沙漠研究中，植被指数数据的主要来源是MODIS、Landsat还是NOAA/AVHRR？",
+        "AnswerEn": "NOAA/AVHRR",
+        "AnswerCn": "美国国家海洋和大气管理局/高级甚高分辨率辐射计",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Are the vegetation monitoring methods in arid regions based more on NDVI, SAVI, or EVI?",
+        "QuestionCn": "干旱地区的植被监测方法主要基于NDVI、SAVI还是EVI？",
+        "AnswerEn": "NDVI",
+        "AnswerCn": "NDVI（归一化差异植被指数）",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What methods are used to extract vegetation information from remote sensing imagery in desert regions?",
+        "QuestionCn": "在沙漠地区，从遥感影像中提取植被信息的方法有哪些？",
+        "AnswerEn": "NDVI",
+        "AnswerCn": "NDVI",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Where can datasets related to desert vegetation and dust storm occurrences be sourced from for research purposes?",
+        "QuestionCn": "可以从哪里获取与沙漠植被和沙尘暴发生相关的数据集用于研究目的？",
+        "AnswerEn": "USGS/EROS, Xinjiang Meteorological Bureau",
+        "AnswerCn": "美国地质调查局/地球资源观测与科学中心，新疆气象局",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "When is the NDVI data timeline used for analyzing vegetation trends in desert regions?",
+        "QuestionCn": "NDVI数据时间线用于分析沙漠地区植被趋势的时间是什么时候？",
+        "AnswerEn": "1981 to 2003",
+        "AnswerCn": "1981年至2003年",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method that integrates remote sensing and GIS technology to map desert distribution?",
+        "QuestionCn": "您能否提供一个集成遥感和GIS技术以绘制沙漠分布的数据收集方法的示例？",
+        "AnswerEn": "The data collection method used a combination of remote sensing and GIS technology, specifically utilizing 2000 TM satellite imagery as the information source to perform interpretation, extraction, and revision. This approach was applied to create thematic maps of deserts, sandy lands, and gravelly Gobi at a scale of 1:100,000.",
+        "AnswerCn": "数据收集方法结合了遥感和GIS技术，具体利用2000年TM卫星影像作为信息来源进行解译、提取和修订。该方法用于制作比例尺为1:100,000的沙漠、沙地和砾石戈壁的专题地图。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced in using vegetation indices for monitoring desert vegetation?",
+        "QuestionCn": "使用植被指数监测沙漠植被时面临的一个挑战是什么？",
+        "AnswerEn": "A challenge in utilizing vegetation indices like NDVI for monitoring desert vegetation is dealing with the sparse and low coverage of vegetation in arid and semi-arid regions, which results in strong surface heterogeneity. The NDVI is particularly effective in detecting low-cover vegetation and monitoring desert vegetation changes despite these challenges.",
+        "AnswerCn": "利用植被指数如NDVI监测沙漠植被的一个挑战是处理干旱和半干旱地区植被稀疏和覆盖率低的问题，这导致了强烈的地表异质性。尽管面临这些挑战，NDVI在检测低覆盖植被和监测沙漠植被变化方面仍然特别有效。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What specific attributes are typically included in the attribute tables of desert distribution datasets?",
+        "QuestionCn": "沙漠分布数据集的属性表中通常包含哪些具体属性？",
+        "AnswerEn": "area, perimeter, ashm_, class, ashm_id",
+        "AnswerCn": "面积，周长，ashm_，类别，ashm_id",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the distinctive features of vegetation index methods used for monitoring desert vegetation changes?",
+        "QuestionCn": "用于监测沙漠植被变化的植被指数方法的独特特征是什么？",
+        "AnswerEn": "NDVI, detects low-density vegetation, uses red and infrared bands",
+        "AnswerCn": "NDVI 使用红光和红外波段来检测低密度植被。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of a dataset used for monitoring desert vegetation using remote sensing techniques?",
+        "QuestionCn": "用于监测沙漠植被的遥感技术数据集的空间分辨率是多少？",
+        "AnswerEn": "8 km × 8 km",
+        "AnswerCn": "8公里 × 8公里",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many regions or provinces are represented in a nationwide desert distribution dataset?",
+        "QuestionCn": "全国沙漠分布数据集中代表了多少个地区或省份？",
+        "AnswerEn": "28",
+        "AnswerCn": "二十八",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the temporal resolution of remote sensing data used to analyze vegetation changes in arid regions?",
+        "QuestionCn": "用于分析干旱地区植被变化的遥感数据的时间分辨率是多少？",
+        "AnswerEn": "Semi-monthly",
+        "AnswerCn": "半月一次",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does '遥感与地理信息系统技术结合' mean in the context of desert mapping?",
+        "QuestionCn": "在沙漠制图的背景下，“遥感与地理信息系统技术结合”是什么意思？",
+        "AnswerEn": "In the context of desert mapping, '遥感与地理信息系统技术结合' refers to the integration of remote sensing and geographic information system (GIS) technologies to interpret, extract, and modify data for creating thematic maps at a 1:100,000 scale, focusing on the geographical distribution, size, and dune mobility of deserts.",
+        "AnswerCn": "在沙漠制图的背景下，“遥感与地理信息系统技术结合”指的是将遥感技术与地理信息系统（GIS）技术相结合，以解释、提取和修改数据，从而创建比例尺为1:100,000的专题地图，重点关注沙漠的地理分布、大小和沙丘的移动性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is the significance of 'Albers等面积投影' in spatial data representation?",
+        "QuestionCn": "'Albers等面积投影'在空间数据表示中的重要性是什么？",
+        "AnswerEn": "'Albers等面积投影' refers to the Albers equal-area projection, which is significant in spatial data representation for ensuring area accuracy across the map, especially important when analyzing large areas such as national desert distributions where maintaining the true size of features is crucial.",
+        "AnswerCn": "'Albers等面积投影'指的是Albers等面积投影，这在空间数据表示中具有重要意义，因为它确保了地图上的面积准确性，特别是在分析大面积区域如国家沙漠分布时，保持特征的真实大小至关重要。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the use of remote sensing technology for desert mapping compare to traditional field survey methods in terms of efficiency and data accuracy?",
+        "QuestionCn": "遥感技术在沙漠制图中的使用与传统实地调查方法相比，在效率和数据准确性方面如何？",
+        "AnswerEn": "Remote sensing technology, as utilized in the desert distribution dataset, provides a powerful means to extract vegetation information across large areas using multi-temporal and multi-band data. This is more efficient compared to traditional field surveys, which are challenging in vast desert regions. The dataset specifically uses 2000 TM imagery for interpretation, showing advancements over manual data entry and editing associated with field methods.",
+        "AnswerCn": "遥感技术在沙漠分布数据集中被利用，提供了一种强大的手段，通过多时相和多波段数据提取大面积的植被信息。这比传统的实地调查更高效，因为在广阔的沙漠地区进行实地调查是具有挑战性的。该数据集特别使用了2000年的TM影像进行解读，显示出相较于与实地方法相关的手动数据录入和编辑的进步。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What are the differences in data projection methods used between the desert distribution dataset and the NDVI dataset for vegetation monitoring?",
+        "QuestionCn": "沙漠分布数据集和NDVI（归一化植被指数）数据集在植被监测中使用的数据投影方法有什么区别？",
+        "AnswerEn": "The desert distribution dataset uses the Albers projection method with specific parameters for standard parallels and central meridian, suitable for creating detailed spatial maps. In contrast, the NDVI dataset from NOAA/AVHRR employs an Albers equal-area projection with a spatial resolution of 8km, focusing on regional scale analysis, indicating a difference in projection focus and scale between the datasets.",
+        "AnswerCn": "沙漠分布数据集使用阿尔伯斯投影方法，具有特定的标准平行线和中央子午线参数，适合制作详细的空间地图。相比之下，来自NOAA/AVHRR的NDVI数据集采用阿尔伯斯等面积投影，空间分辨率为8公里，侧重于区域尺度分析，表明两个数据集在投影重点和尺度上存在差异。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways do the data attributes of the desert distribution dataset differ from those used in the NDVI data for vegetation change analysis?",
+        "QuestionCn": "沙漠分布数据集的数据属性与用于植被变化分析的NDVI数据在什么方面有所不同？",
+        "AnswerEn": "The desert distribution dataset includes attributes such as area, perimeter, and desert classification codes, which focus on spatial characteristics and desert types. On the other hand, the NDVI dataset emphasizes temporal changes in vegetation cover, using attributes like vegetation index values to monitor spatial and temporal changes. This highlights a difference in focus between spatial distribution and temporal vegetation dynamics.",
+        "AnswerCn": "沙漠分布数据集包括面积、周长和沙漠分类代码等属性，侧重于空间特征和沙漠类型。另一方面，NDVI数据集强调植被覆盖的时间变化，使用植被指数值等属性来监测空间和时间变化。这突显了空间分布与时间植被动态之间的关注差异。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can remote sensing data, such as NDVI, provide insights into the spatial and temporal patterns of desert vegetation, and what challenges might arise from using this method in arid regions?",
+        "QuestionCn": "遥感数据，如NDVI，如何提供关于沙漠植被的空间和时间模式的见解，并且在干旱地区使用这种方法可能会出现哪些挑战？",
+        "AnswerEn": "Remote sensing data like NDVI can reveal spatial and temporal patterns of desert vegetation by utilizing multi-temporal and multi-band satellite information to monitor vegetation cover. Challenges include dealing with sparse vegetation in arid regions, where low coverage and surface heterogeneity can complicate the detection and interpretation of data. NDVI effectively monitors low-density vegetation changes, but factors such as cloud cover and atmospheric conditions may impact data accuracy.",
+        "AnswerCn": "遥感数据如NDVI可以通过利用多时相和多波段的卫星信息来揭示沙漠植被的空间和时间模式，以监测植被覆盖情况。挑战包括处理干旱地区稀疏植被的问题，在这些地区，低覆盖率和表面异质性可能会使数据的检测和解释变得复杂。NDVI有效地监测低密度植被的变化，但云层覆盖和大气条件等因素可能会影响数据的准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methodologies would be effective in interpreting the relationship between vegetation indices and dust storm occurrences in desert regions?",
+        "QuestionCn": "在沙漠地区，解释植被指数与沙尘暴发生之间关系的有效方法论有哪些？",
+        "AnswerEn": "Analyzing the relationship between vegetation indices and dust storm occurrences can involve using long-term remote sensing data like NOAA/AVHRR NDVI to study vegetation changes and correlate these with weather records of dust storms. Methods include statistical correlation analysis and spatial mapping to identify areas where vegetation changes influence dust storm frequency and intensity. The study of negative coupling relationships between vegetation coverage and dust storms can provide insights into how vegetation stabilizes the surface and mitigates dust storm impacts.",
+        "AnswerCn": "分析植被指数与沙尘暴发生之间的关系可以使用长期的遥感数据，如NOAA/AVHRR NDVI，研究植被变化，并将其与沙尘暴的天气记录进行关联。方法包括统计相关分析和空间制图，以识别植被变化影响沙尘暴频率和强度的区域。研究植被覆盖与沙尘暴之间的负耦合关系可以提供关于植被如何稳定地表并减轻沙尘暴影响的见解。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "In what ways can the integration of geospatial datasets enhance our understanding of desert distribution and dynamics across different provinces in China?",
+        "QuestionCn": "将地理空间数据集整合可以通过哪些方式增强我们对中国不同省份沙漠分布和动态的理解？",
+        "AnswerEn": "The integration of geospatial datasets, such as the 1:100,000 scale desert distribution maps and remote sensing data, can improve understanding of desert distribution and dynamics by providing detailed geographical, area, and movement classifications of sand dunes and deserts. This approach allows for standardizing data input formats and creating comprehensive maps that reflect desert characteristics, improving resource and environmental studies. Challenges include ensuring data consistency and accuracy across different regions and maintaining updated datasets to reflect changes over time.",
+        "AnswerCn": "地理空间数据集的整合，例如1:100,000比例尺的沙漠分布图和遥感数据，可以通过提供沙丘和沙漠的详细地理、面积和运动分类，来改善对沙漠分布和动态的理解。这种方法允许标准化数据输入格式，并创建反映沙漠特征的综合地图，从而改善资源和环境研究。挑战包括确保不同地区数据的一致性和准确性，以及保持更新的数据集以反映随时间变化的情况。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the need for standardization and format conversion in the data collection processes for desert distribution mapping in China?",
+        "QuestionCn": "在中国的沙漠分布映射的数据收集过程中，导致标准化和格式转换需求的原因是什么？",
+        "AnswerEn": "Standardization and format conversion are necessary to ensure that the data input from various sources is consistent and compatible with the system's requirements and standards, allowing for seamless integration into the spatial database.",
+        "AnswerCn": "标准化和格式转换是必要的，以确保来自各种来源的数据输入一致，并与系统的要求和标准兼容，从而允许无缝集成到空间数据库中。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is remote sensing technology particularly effective for monitoring vegetation in large desert areas?",
+        "QuestionCn": "遥感技术在监测大面积沙漠地区的植被方面特别有效的原因是什么？",
+        "AnswerEn": "Remote sensing technology is effective because it can extract vegetation information from multi-temporal and multi-spectral data, allowing researchers to monitor vast areas that are otherwise challenging to survey due to sparse vegetation and surface heterogeneity.",
+        "AnswerCn": "遥感技术之所以有效，是因为它可以从多时相和多光谱数据中提取植被信息，使研究人员能够监测那些由于植被稀疏和地表异质性而难以调查的广阔区域。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What are the reasons for the selection of Albers equal-area projection in the mapping of desert distribution in China?",
+        "QuestionCn": "选择阿尔伯斯等面积投影用于中国沙漠分布制图的原因是什么？",
+        "AnswerEn": "The Albers equal-area projection is selected because it preserves area, which is crucial for accurately representing the size and distribution of desert regions across varying latitudes in China, ensuring reliable spatial analysis and interpretation.",
+        "AnswerCn": "阿尔伯斯等面积投影被选用是因为它保持面积，这对于准确表示中国不同纬度沙漠地区的大小和分布至关重要，从而确保可靠的空间分析和解读。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "How might satellite-derived vegetation indices impact the understanding of desertification processes?",
+        "QuestionCn": "卫星衍生的植被指数如何影响对沙漠化过程的理解？",
+        "AnswerEn": "Satellite-derived vegetation indices, such as the NDVI, can highlight areas of vegetation degradation or improvement, helping to map the progression or regression of desertification. The ability to monitor these changes could lead to better resource management and interventions to curb desertification.",
+        "AnswerCn": "卫星衍生的植被指数，如NDVI，可以突出植被退化或改善的区域，帮助绘制沙漠化的进展或退化图。监测这些变化的能力可以促进更好的资源管理和干预，以遏制沙漠化。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to study the temporal and spatial changes of vegetation in the Gurbantunggut Desert using long-sequenced remote sensing data?",
+        "QuestionCn": "研究戈壁滩沙漠植被的时间和空间变化，使用长期序列的遥感数据是重要的原因是什么？",
+        "AnswerEn": "Studying these changes is crucial for providing scientific evidence to mitigate the harmful effects of sandstorms, improve the ecological environment, and enhance socio-economic life in the region.",
+        "AnswerCn": "研究这些变化对于提供科学证据以减轻沙尘暴的有害影响、改善生态环境以及提升该地区的社会经济生活至关重要。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What objectives are achieved by employing NDVI data to analyze vegetation parameters in arid and semi-arid regions?",
+        "QuestionCn": "通过使用NDVI数据分析干旱和半干旱地区的植被参数可以实现哪些目标？",
+        "AnswerEn": "The objectives include effectively monitoring desert vegetation changes, understanding vegetation's role in stabilizing the surface and influencing sandstorm occurrence, and assessing vegetation's response to climatic and environmental changes.",
+        "AnswerCn": "目标包括有效监测沙漠植被变化，理解植被在稳定地表和影响沙尘暴发生中的作用，以及评估植被对气候和环境变化的响应。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in using remote sensing technology to create a 1:100,000 scale thematic map for desert distribution?",
+        "QuestionCn": "使用遥感技术创建1:100,000比例尺的沙漠分布专题地图涉及哪些程序步骤？",
+        "AnswerEn": "The process involves using 2000 TM imagery as the information source, interpreting, extracting, and revising data based on national land use status maps and TM digital images. The procedure combines remote sensing and GIS technology to meet the thematic mapping requirements at a 1:100,000 scale, focusing on mapping deserts, sandy areas, and gravelly gobi.",
+        "AnswerCn": "该过程涉及使用2000年的TM影像作为信息源，基于国家土地利用现状图和TM数字图像进行解读、提取和修订数据。该程序结合了遥感和GIS技术，以满足1:100,000比例尺的专题制图要求，重点绘制沙漠、沙质区域和砾石戈壁。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "What methods are utilized to ensure the accuracy of desert distribution data and its conversion into user-friendly formats for research purposes?",
+        "QuestionCn": "确保沙漠分布数据准确性及其转换为用户友好格式以供研究使用的方法有哪些？",
+        "AnswerEn": "The accuracy of desert distribution data is ensured by standardizing input data and converting it into standardized formats as per system design requirements and standards. The data is organized at the Windows NT file management level, with naming conventions based on province or region names. The digital maps, in shapefile and E00 vector formats, can be easily transformed into layout maps, facilitating user-friendly access for resource and environmental research.",
+        "AnswerCn": "沙漠分布数据的准确性通过标准化输入数据并根据系统设计要求和标准将其转换为标准格式来确保。数据在Windows NT文件管理级别进行组织，命名约定基于省或地区名称。数字地图以shapefile和E00矢量格式存在，可以轻松转换为布局地图，便于资源和环境研究的用户友好访问。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What technologies or methodologies enable the creation of a 1:10,000 scale spatial database for desert distribution in China?",
+        "QuestionCn": "哪些技术或方法论能够支持在中国创建1:10,000比例尺的沙漠分布空间数据库？",
+        "AnswerEn": "The creation of a 1:10,000 scale spatial database for desert distribution in China is enabled by the integration of remote sensing and geographic information system (GIS) technologies, using TM imagery from the year 2000 as the primary information source. This involves interpreting, extracting, and revising data from national land use maps and TM digital imagery to meet the requirements of thematic mapping at this scale.",
+        "AnswerCn": "通过整合遥感和地理信息系统（GIS）技术，利用2000年的TM影像作为主要信息来源，创建一个1:10,000比例尺的中国沙漠分布空间数据库。这涉及对国家土地利用图和TM数字影像的数据进行解读、提取和修订，以满足该比例尺下主题制图的要求。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "How does the use of the NDVI method enable effective monitoring of desert vegetation changes over time?",
+        "QuestionCn": "NDVI方法如何有效监测沙漠植被随时间变化的情况？",
+        "AnswerEn": "The NDVI method enables effective monitoring of desert vegetation changes by utilizing the strong capability of NDVI to detect low-density vegetation, which is common in arid and semi-arid regions. This method uses data from satellites like NOAA/AVHRR, which provides a long time series of observational data, allowing for temporal analysis of vegetation changes and their correlation with dust storm occurrences.",
+        "AnswerCn": "NDVI方法通过利用NDVI在检测稀疏植被方面的强大能力，有效监测沙漠植被变化，这在干旱和半干旱地区是很常见的。该方法使用来自NOAA/AVHRR等卫星的数据，这些数据提供了长期的观测数据序列，允许对植被变化及其与沙尘暴发生的相关性进行时间分析。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What conditions or resources are necessary to effectively process and analyze NDVI data from the NOAA/AVHRR dataset for desert vegetation studies?",
+        "QuestionCn": "有效处理和分析来自NOAA/AVHRR数据集的NDVI数据以进行沙漠植被研究所需的条件或资源是什么？",
+        "AnswerEn": "To effectively process and analyze NDVI data from the NOAA/AVHRR dataset for desert vegetation studies, it is necessary to have access to long-term NDVI data with appropriate spatial and temporal resolutions. Additionally, using software like ArcMap and ERDAS for data projection and transformation, along with programming capabilities in languages like IDL for statistical analysis, are required to manage and interpret the large datasets while considering factors such as cloud cover and atmospheric effects.",
+        "AnswerCn": "为了有效处理和分析来自NOAA/AVHRR数据集的NDVI数据，以进行沙漠植被研究，必须获得具有适当空间和时间分辨率的长期NDVI数据。此外，使用ArcMap和ERDAS等软件进行数据投影和转换，以及在IDL等编程语言中进行统计分析的能力，是管理和解释大型数据集所必需的，同时还需考虑云覆盖和大气影响等因素。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might it be expected that remote sensing techniques provide a comprehensive method for monitoring desert vegetation changes over time?",
+        "QuestionCn": "为什么人们可能会认为遥感技术提供了一种全面的方法来监测沙漠植被随时间的变化？",
+        "AnswerEn": "Remote sensing techniques allow for the extraction of surface vegetation conditions from multi-temporal, multi-spectral satellite data, enabling large-scale vegetation monitoring. The use of NDVI from satellite data like NOAA/AVHRR provides an economical and effective way to obtain extensive vegetation information, making it possible to monitor desert vegetation changes over time.",
+        "AnswerCn": "遥感技术允许从多时相、多光谱卫星数据中提取地表植被状况，从而实现大规模的植被监测。使用来自NOAA/AVHRR的NDVI卫星数据提供了一种经济有效的方式来获取广泛的植被信息，使得监测沙漠植被变化成为可能。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why might spatial resolution be a critical factor in the effectiveness of a dataset for analyzing desert environments?",
+        "QuestionCn": "为什么空间分辨率可能是分析沙漠环境数据集有效性的关键因素？",
+        "AnswerEn": "Spatial resolution is crucial because it determines the level of detail that can be captured in a dataset. In desert environments, where vegetation is sparse and the surface is highly heterogeneous, a dataset with adequate spatial resolution, like the 8km×8km resolution used for NDVI data, is necessary to accurately capture the spatial variability in vegetation coverage.",
+        "AnswerCn": "空间分辨率至关重要，因为它决定了数据集中可以捕获的细节水平。在植被稀疏且表面高度异质的沙漠环境中，具有足够空间分辨率的数据集（如用于NDVI数据的8km×8km分辨率）是必要的，以准确捕捉植被覆盖的空间变异性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How effective are remote sensing techniques and tools like NDVI in capturing detailed spatial information about desert vegetation, considering the challenges of low vegetation cover and high surface heterogeneity?",
+        "QuestionCn": "遥感技术和工具如NDVI在捕捉沙漠植被的详细空间信息方面的有效性如何，考虑到低植被覆盖和高表面异质性带来的挑战？",
+        "AnswerEn": "Remote sensing techniques and tools like NDVI are considered effective for capturing detailed spatial information about desert vegetation, especially given the challenges of low vegetation cover and high surface heterogeneity. The use of NDVI has been identified as particularly strong in detecting low-density vegetation, making it a reliable method for monitoring desert vegetation changes and assessing their impact on surface stability and dust storm occurrences.",
+        "AnswerCn": "遥感技术和工具，如NDVI，被认为在捕捉沙漠植被的详细空间信息方面非常有效，尤其是在低植被覆盖和高表面异质性带来的挑战下。NDVI的使用被认为在检测低密度植被方面特别强大，使其成为监测沙漠植被变化和评估其对地表稳定性及沙尘暴发生影响的可靠方法。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In what ways can the integration of remote sensing data and GIS technology enhance the accuracy and resolution of desert mapping at a national scale?",
+        "QuestionCn": "遥感数据和GIS技术的整合可以通过哪些方式提高国家层面沙漠地图的准确性和分辨率？",
+        "AnswerEn": "The integration of remote sensing data and GIS technology can significantly enhance the accuracy and resolution of desert mapping at a national scale by combining multiple data sources, such as TM imagery and land use maps, into a standardized format. This allows for the creation of detailed thematic maps that reflect geographic distribution, area size, and dune mobility. The use of a 1:100,000 scale ensures that users can efficiently engage in resource and environmental research without extensive data input or editing.",
+        "AnswerCn": "遥感数据与GIS技术的结合可以显著提高国家级沙漠制图的准确性和分辨率，通过将多种数据源（如TM影像和土地利用图）整合为标准化格式。这使得能够创建反映地理分布、面积大小和沙丘移动性的详细专题地图。使用1:100,000的比例尺确保用户能够高效地进行资源和环境研究，而无需大量的数据输入或编辑。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how data collection methods can effectively monitor vegetation changes in large arid and semi-arid regions.",
+        "QuestionCn": "我不明白数据收集方法如何有效监测大面积干旱和半干旱地区的植被变化。",
+        "AnswerEn": "The use of remote sensing techniques, such as the Vegetation Index (VI) method, allows for the extraction of surface vegetation conditions from multi-temporal and multi-band remote sensing information, making large-scale vegetation monitoring possible.",
+        "AnswerCn": "遥感技术的使用，例如植被指数（VI）方法，使得从多时相和多波段遥感信息中提取地表植被状况成为可能，从而实现大规模的植被监测。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please outline how remote sensing and geographic information system technologies can be integrated to create detailed desert distribution maps at a scale of 1:100,000.",
+        "QuestionCn": "请概述如何将遥感和地理信息系统技术集成，以在1:100,000的比例尺下创建详细的沙漠分布地图。",
+        "AnswerEn": "The integration involves using TM imagery as the information source, which is interpreted and extracted using remote sensing techniques. The data is then edited and compiled using GIS technologies to meet the cartographic requirements of a 1:100,000 scale thematic map, focusing on the distribution of deserts, sandy areas, and gravelly gobi in China.",
+        "AnswerCn": "该集成涉及使用TM影像作为信息源，通过遥感技术进行解读和提取。然后，利用GIS技术对数据进行编辑和编制，以满足1:100,000比例尺专题地图的制图要求，重点关注中国沙漠、沙质地区和砾石戈壁的分布。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "Please describe the process of standardizing and converting input data to a unified format for inclusion in a spatial database focused on desert distribution.",
+        "QuestionCn": "请描述将输入数据标准化和转换为统一格式以纳入专注于沙漠分布的空间数据库的过程。",
+        "AnswerEn": "The process involves standardizing the input data according to system design requirements and relevant standards. This includes converting the data into a uniform format suitable for input, which is then used to build and deliver a spatial database system that reflects the geographic distribution, size, and mobility of sand dunes.",
+        "AnswerCn": "该过程涉及根据系统设计要求和相关标准对输入数据进行标准化。这包括将数据转换为适合输入的统一格式，然后用于构建和交付一个反映沙丘的地理分布、大小和移动性的空间数据库系统。",
+        "Level": "C2(Understanding)"
+      }
+    ]
+  }
 }

@@ -1,241 +1,241 @@
 {
-    "id": "b2972a12-78b7-4438-adf6-2a06a06ead37",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Upscaling scheme for global urbanization products",
-            "titleCn": "全球城镇化产品的升尺度方案",
-            "description": "The upscaling scheme is to convert the targeted global urbanization products into surface input data with a desired resolution of 0.9°×1.25° for the Community Land Model (CLM), and further adjust the converted data to obtain the corresponding global urban proportion data for CLM climate modelling. The conversion is accomplished via the Urban Properties Tool (UPT) in the Toolbox for Human-Earth System Integration and Scaling (THESIS) provided by the National Center for Atmospheric Research. The adjustment is because the UPT-converted data may differ from CLM historical data in terms of urban distribution and urban areas. To avoid the abrupt change in CLM simulation results between historical and future time, the converted data needs to be adjusted. The adjustment includes the following steps: 1) Adjust the proportion of urban subgrid; 2) Adjust the proportion of vegetation and cropland subgrids; 3) Re-assign urban density types; 4) Linearly interpolate the subgrid proportion for the remaining years. The upscaling scheme has been successfully applied to the 1 km resolution global urbanization product (2020~2070) developed by Beijing Normal University. The new product obtained by the upscaling scheme shows significantly increased global urban area compared to original data. Its global urban area and temporal trend are also reasonably consistent with other publicly-shared global urbanization products. The upscaling scheme has provided an example for customizing CLM's urban parameterization, so that in the future, researchers can use other urban-related data of different sources, convert them into CLM-supported format, and perform exclusive climate simulations.",
-            "descriptionCn": "升尺度方案将指定的全球城镇化产品转换为符合通用陆面模型CLM模拟要求的0.9°×1.25°分辨率的地表输入数据，并对转换后的数据做进一步调整，得到对应的全球城镇占比数据集，以用于输入CLM进行气候模拟。其中，转换部分借助美国国家大气研究中心NCAR提供的Toolbox for Human-Earth System Integration and Scaling（THESIS）中的城市属性工具Urban Properties Tool（UPT）完成。调整部分是由于UPT转换后的数据可能与CLM历史数据在城镇分布和面积上存在差异，为避免CLM模拟结果在历史和未来之间的突变，需要对转换后的数据进行调整。调整步骤包括：1）调整城市次网格的占比；2）调整植被和农田次网格的占比；3）重分配城市密度类型；4）对剩余年份的各类次网格占比进行线性插值。此方案已成功应用于北京师范大学开发的2020~2070年1 km分辨率的全球城镇化产品，相比原始数据，由升尺度方案得到的新产品的全球城镇总面积显著增加；与其他公开共享的全球城镇化产品对比，新产品的全球城镇总面积及其时间变化趋势均较为合理。升尺度方案为用户自定义CLM的城市参数化方案提供了范例，未来研究者可根据需要使用其他不同来源的城市相关数据，通过升尺度方案转换为CLM支持的格式，从而进行有针对性的气候模拟。",
-            "instructions": "File naming: The upscaling scheme consists of three MATLAB scripts (file extension “.m”). “BNUadj1_2020.m” is to adjust the UPT-converted 2020 data of Beijing Normal University's 1 km global urbanization product. “BNUadj2_20x0.m” is to adjust the data for the years 2030, 2040, 2050, 2060, and 2070. “BNUadj3_20xx.m” is to adjust the data for the remaining years during 2020~2070.\nApplication method: All scripts can be directly opened, edited, and executed by MATLAB.",
-            "instructionsCn": "文件命名：升尺度方案包含三个MATLAB代码文件（后缀名“.m”）。BNUadj1_2020.m：调整UPT转换后的北京师范大学1 km全球城镇化产品2020年的数据；BNUadj2_20x0.m：调整2030、2040、2050、2060、2070年的数据；BNUadj3_20xx.m：调整2020~2070年期间的余下年份的数据。\n使用方法：所有代码文件可直接用MATLAB打开，编辑并执行。",
-            "east": 180.0,
-            "west": -180.0,
-            "south": -90.0,
-            "north": 90.0,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 10157.0,
-            "cstr": "18406.11.Terre.tpdc.300873",
-            "doi": "10.11888/Terre.tpdc.300873",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "张可儿",
-                "nameEn": "ZHANG Keer",
-                "unitEn": "",
-                "unitCn": "耶鲁大学"
-            },
-            {
-                "nameCn": "李旭辉",
-                "nameEn": "LEE Xuhui",
-                "unitEn": "",
-                "unitCn": "耶鲁大学"
-            },
-            {
-                "nameCn": "楚淏然",
-                "nameEn": "CHU Haoran",
-                "unitEn": "",
-                "unitCn": "南京信息工程大学"
-            },
-            {
-                "nameCn": "赵佳玉",
-                "nameEn": "ZHAO Jiayu",
-                "unitEn": "",
-                "unitCn": "广东海洋大学"
-            },
-            {
-                "nameCn": "曹畅",
-                "nameEn": "CAO Chang",
-                "unitEn": "",
-                "unitCn": "南京信息工程大学"
-            },
-            {
-                "nameCn": "肖薇",
-                "nameEn": "XIAO Wei",
-                "unitEn": "",
-                "unitCn": "南京信息工程大学"
-            },
-            {
-                "nameCn": "张弥",
-                "nameEn": "ZHANG Mi",
-                "unitEn": "",
-                "unitCn": "南京信息工程大学"
-            },
-            {
-                "nameCn": "赵磊",
-                "nameEn": "ZHAO Lei",
-                "unitEn": "",
-                "unitCn": "伊利诺伊大学厄巴纳-香槟分校"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A global dataset on subgrid land surface climate (2015–2100)  from the Community Earth System Model",
-                "referenceCn": null,
-                "referenceEn": "Zhang, K., Lee, X., Schultz, N.M., Zhao, L., He, C., Huang, Q., Liu, Z., Chu, H., & Zhao, J. (2023). A global dataset on subgrid land surface climate (2015–2100) from the Community Earth System Model. Geoscience Data Journal, 10, 208-219. DOI: 10.1002/gdj3.153."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "土地利用/覆盖",
-                "nameEn": "Land Use/Land Cover"
-            },
-            {
-                "nameCn": "城市与农村聚落",
-                "nameEn": "Urban and rural area"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球陆地",
-                "keywordEn": "Global Land"
-            },
-            {
-                "keywordCn": "城市区域",
-                "keywordEn": "Urban"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "年尺度",
-                "keywordEn": "Annual Scale",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "未来共享社会经济路径",
-                "keywordEn": "Shared Socioeconomic Pathways",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "城镇化对区域及全球气候变化影响机理",
-                "titleEn": "Urbanizaiton Impact on Regional and Global Climate Change"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
-                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
-            }
-        ]
+  "id": "b2972a12-78b7-4438-adf6-2a06a06ead37",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Upscaling scheme for global urbanization products",
+      "titleCn": "全球城镇化产品的升尺度方案",
+      "description": "The upscaling scheme is to convert the targeted global urbanization products into surface input data with a desired resolution of 0.9°×1.25° for the Community Land Model (CLM), and further adjust the converted data to obtain the corresponding global urban proportion data for CLM climate modelling. The conversion is accomplished via the Urban Properties Tool (UPT) in the Toolbox for Human-Earth System Integration and Scaling (THESIS) provided by the National Center for Atmospheric Research. The adjustment is because the UPT-converted data may differ from CLM historical data in terms of urban distribution and urban areas. To avoid the abrupt change in CLM simulation results between historical and future time, the converted data needs to be adjusted. The adjustment includes the following steps: 1) Adjust the proportion of urban subgrid; 2) Adjust the proportion of vegetation and cropland subgrids; 3) Re-assign urban density types; 4) Linearly interpolate the subgrid proportion for the remaining years. The upscaling scheme has been successfully applied to the 1 km resolution global urbanization product (2020~2070) developed by Beijing Normal University. The new product obtained by the upscaling scheme shows significantly increased global urban area compared to original data. Its global urban area and temporal trend are also reasonably consistent with other publicly-shared global urbanization products. The upscaling scheme has provided an example for customizing CLM's urban parameterization, so that in the future, researchers can use other urban-related data of different sources, convert them into CLM-supported format, and perform exclusive climate simulations.",
+      "descriptionCn": "升尺度方案将指定的全球城镇化产品转换为符合通用陆面模型CLM模拟要求的0.9°×1.25°分辨率的地表输入数据，并对转换后的数据做进一步调整，得到对应的全球城镇占比数据集，以用于输入CLM进行气候模拟。其中，转换部分借助美国国家大气研究中心NCAR提供的Toolbox for Human-Earth System Integration and Scaling（THESIS）中的城市属性工具Urban Properties Tool（UPT）完成。调整部分是由于UPT转换后的数据可能与CLM历史数据在城镇分布和面积上存在差异，为避免CLM模拟结果在历史和未来之间的突变，需要对转换后的数据进行调整。调整步骤包括：1）调整城市次网格的占比；2）调整植被和农田次网格的占比；3）重分配城市密度类型；4）对剩余年份的各类次网格占比进行线性插值。此方案已成功应用于北京师范大学开发的2020~2070年1 km分辨率的全球城镇化产品，相比原始数据，由升尺度方案得到的新产品的全球城镇总面积显著增加；与其他公开共享的全球城镇化产品对比，新产品的全球城镇总面积及其时间变化趋势均较为合理。升尺度方案为用户自定义CLM的城市参数化方案提供了范例，未来研究者可根据需要使用其他不同来源的城市相关数据，通过升尺度方案转换为CLM支持的格式，从而进行有针对性的气候模拟。",
+      "instructions": "File naming: The upscaling scheme consists of three MATLAB scripts (file extension “.m”). “BNUadj1_2020.m” is to adjust the UPT-converted 2020 data of Beijing Normal University's 1 km global urbanization product. “BNUadj2_20x0.m” is to adjust the data for the years 2030, 2040, 2050, 2060, and 2070. “BNUadj3_20xx.m” is to adjust the data for the remaining years during 2020~2070.\nApplication method: All scripts can be directly opened, edited, and executed by MATLAB.",
+      "instructionsCn": "文件命名：升尺度方案包含三个MATLAB代码文件（后缀名“.m”）。BNUadj1_2020.m：调整UPT转换后的北京师范大学1 km全球城镇化产品2020年的数据；BNUadj2_20x0.m：调整2030、2040、2050、2060、2070年的数据；BNUadj3_20xx.m：调整2020~2070年期间的余下年份的数据。\n使用方法：所有代码文件可直接用MATLAB打开，编辑并执行。",
+      "east": 180.0,
+      "west": -180.0,
+      "south": -90.0,
+      "north": 90.0,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 10157.0,
+      "cstr": "18406.11.Terre.tpdc.300873",
+      "doi": "10.11888/Terre.tpdc.300873",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Comparison": [
-            {
-                "QuestionEn": "How does the data collection and conversion process for creating a 0.9°×1.25° resolution surface input dataset for the CLM model using the Urban Properties Tool compare to other methods of scaling global urbanization products for climate simulations?",
-                "QuestionCn": "如何使用城市属性工具创建0.9°×1.25°分辨率的表面输入数据集的数据显示和转换过程，与其他用于气候模拟的全球城市化产品缩放方法相比，有何不同？",
-                "AnswerEn": "The process using the Urban Properties Tool involves converting specified global urbanization products into a format that meets the requirements of the CLM model, followed by adjustments to reconcile differences with historical CLM data. This method includes specific adjustments like subgrid proportion adjustments, vegetation and cropland proportion adjustments, reallocation of urban density types, and linear interpolation for other years. Compared to other methods, this approach provides a detailed framework for user-customizable urban parameterization, and has been shown to result in a significantly increased global urban area with reasonable temporal trends when applied to a 1 km resolution global urbanization product.",
-                "AnswerCn": "使用城市属性工具的过程涉及将指定的全球城市化产品转换为符合CLM模型要求的格式，随后进行调整以调和与历史CLM数据之间的差异。该方法包括特定的调整，如子网比例调整、植被和农田比例调整、城市密度类型的重新分配，以及对其他年份的线性插值。与其他方法相比，这种方法提供了一个详细的用户可定制城市参数化框架，并且在应用于1公里分辨率的全球城市化产品时，已显示出显著增加全球城市面积，并具有合理的时间趋势。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How might the data conversion process using the Toolbox for Human-Earth System Integration and Scaling (THESIS) influence the accuracy and reliability of urbanization data for climate modeling?",
-                "QuestionCn": "数据转换过程使用人类-地球系统集成与缩放工具箱（THESIS）可能会如何影响气候建模中城市化数据的准确性和可靠性？",
-                "AnswerEn": "The data conversion process using THESIS, specifically the Urban Properties Tool (UPT), is critical as it transforms global urbanization products into a resolution compatible with the Community Land Model (CLM) for climate simulations. This process could introduce discrepancies in urban distribution and area compared to historical CLM data, impacting the accuracy of climate predictions. Therefore, adjustments are necessary to align the converted data with CLM's historical data, which involves modifying subgrid proportions and urban density types, and applying linear interpolation over time. Such steps help mitigate sudden shifts between historical and future simulation results, enhancing the reliability of the data for climate modeling.",
-                "AnswerCn": "使用THESIS进行数据转换过程，特别是城市属性工具（UPT），至关重要，因为它将全球城市化产品转换为与社区土地模型（CLM）兼容的分辨率，以便进行气候模拟。这个过程可能会导致与历史CLM数据相比，城市分布和面积出现差异，从而影响气候预测的准确性。因此，有必要对转换后的数据进行调整，以使其与CLM的历史数据对齐，这涉及修改子网格比例和城市密度类型，并在时间上应用线性插值。这些步骤有助于减轻历史和未来模拟结果之间的突然变化，提高数据在气候建模中的可靠性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What are the underlying reasons for the need to adjust global urbanization product data when converting it to a format suitable for CLM climate simulations?",
-                "QuestionCn": "在将全球城市化产品数据转换为适合CLM气候模拟的格式时，需要调整的潜在原因是什么？",
-                "AnswerEn": "The adjustments are necessary because the data converted using UPT might differ from CLM's historical data in terms of urban distribution and area. This discrepancy can lead to abrupt changes between historical and future simulation results, necessitating adjustments to ensure continuity and accuracy. Steps involved include adjusting the proportion of urban sub-grid areas, vegetation and farmland sub-grid proportions, redistributing urban density types, and performing linear interpolation of sub-grid proportions for remaining years.",
-                "AnswerCn": "这些调整是必要的，因为使用UPT转换的数据可能在城市分布和面积上与CLM的历史数据存在差异。这种差异可能导致历史和未来模拟结果之间的突然变化，因此需要进行调整以确保连续性和准确性。涉及的步骤包括调整城市子网格面积的比例、植被和农田子网格的比例、重新分配城市密度类型，以及对剩余年份的子网格比例进行线性插值。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential effects on climate simulation outcomes when using a dataset that has undergone an upscaling scheme to match the requirements of a common land model?",
-                "QuestionCn": "使用经过上采样方案以匹配通用土地模型要求的数据集时，对气候模拟结果的潜在影响是什么？",
-                "AnswerEn": "Using a dataset that has undergone an upscaling scheme to match the requirements of a common land model, such as CLM, can lead to more accurate and reasonable simulations of global urban areas and their changes over time. The upscaling process involves converting global urbanization products to a compatible resolution and adjusting them to prevent abrupt changes in simulations between historical and future projections. This can result in a significant increase in the total urban area representation in the dataset, providing a more realistic input for climate simulations.",
-                "AnswerCn": "使用经过上采样方案处理的数据集，以满足常见土地模型（如CLM）的要求，可以更准确合理地模拟全球城市区域及其随时间的变化。上采样过程涉及将全球城市化产品转换为兼容的分辨率，并进行调整，以防止历史和未来预测之间的模拟出现突变。这可以显著增加数据集中城市面积的总表示，为气候模拟提供更现实的输入。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to transform global urbanization products into surface input data that meet the simulation requirements of the CLM with a resolution of 0.9°×1.25°?",
-                "QuestionCn": "将全球城市化产品转化为满足CLM模拟要求的0.9°×1.25°分辨率的表面输入数据是重要的，因为这可以确保模型能够准确反映城市化对气候、生态和水文过程的影响，从而提高模拟结果的可靠性和有效性。",
-                "AnswerEn": "The transformation of global urbanization products into surface input data that meet the CLM simulation requirements with a resolution of 0.9°×1.25° is crucial because it allows for the integration of urbanization data into climate models, enabling accurate climate simulations. This process, facilitated by tools like the Urban Properties Tool from THESIS, ensures that the urban data aligns with the historical data used in CLM, preventing abrupt changes in simulation results between historical and future scenarios. The ultimate goal is to provide a more accurate and reasonable global urbanization dataset for climate modeling, which can then be adjusted and customized for specific research needs. This approach exemplifies how urban parameters can be tailored within CLM models, offering a framework for other researchers to convert various urban data sources into CLM-compatible formats for targeted climate simulations.",
-                "AnswerCn": "将全球城市化产品转化为满足CLM模拟要求的0.9°×1.25°分辨率的表面输入数据至关重要，因为这使得城市化数据能够融入气候模型，从而实现准确的气候模拟。这个过程由THESIS的城市属性工具等工具促进，确保城市数据与CLM中使用的历史数据对齐，防止历史和未来情景之间的模拟结果出现突变。最终目标是为气候建模提供更准确合理的全球城市化数据集，这些数据集可以根据特定研究需求进行调整和定制。这种方法展示了如何在CLM模型中定制城市参数，为其他研究人员提供了一个框架，以将各种城市数据源转换为CLM兼容格式，以便进行针对性的气候模拟。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the detailed procedures involved in converting and adjusting global urbanization products to meet the input requirements for the Community Land Model (CLM) simulations?",
-                "QuestionCn": "将全球城市化产品转换和调整以满足社区土地模型（CLM）模拟输入要求的详细程序是什么？",
-                "AnswerEn": "The process involves converting global urbanization products to a 0.9°×1.25° resolution using the Urban Properties Tool (UPT) from the Toolbox for Human-Earth System Integration and Scaling (THESIS) provided by the National Center for Atmospheric Research (NCAR). After conversion, adjustments are made to address discrepancies with CLM historical data and avoid abrupt changes in simulation results. These adjustments include modifying the proportion of urban subgrids, revising the proportions of vegetation and farmland subgrids, reallocating urban density types, and linearly interpolating subgrid proportions for remaining years. This approach has been successfully applied to a 1 km resolution global urbanization product for 2020~2070.",
-                "AnswerCn": "该过程涉及使用国家大气研究中心（NCAR）提供的人地系统集成与缩放工具箱（THESIS）中的城市属性工具（UPT）将全球城市化产品转换为0.9°×1.25°的分辨率。在转换后，进行调整以解决与CLM历史数据的差异，并避免模拟结果的突变。这些调整包括修改城市子网格的比例、修订植被和农田子网格的比例、重新分配城市密度类型，以及对剩余年份的子网格比例进行线性插值。这种方法已成功应用于2020~2070年的1公里分辨率全球城市化产品。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "What could be the potential reasons for discrepancies in urban distribution and area when using a dataset for simulating climate models?",
-                "QuestionCn": "在使用数据集模拟气候模型时，城市分布和面积出现差异的潜在原因可能包括：",
-                "AnswerEn": "Discrepancies in urban distribution and area may arise due to differences between the converted data and historical data in the climate model, necessitating adjustments to prevent abrupt changes in simulation results. These adjustments include modifying urban and vegetation subgrid proportions, redistributing urban density types, and applying linear interpolation for subgrid proportions over remaining years.",
-                "AnswerCn": "城市分布和面积的差异可能由于气候模型中转换数据与历史数据之间的差异而产生，因此需要进行调整以防止模拟结果的突然变化。这些调整包括修改城市和植被子网格比例、重新分配城市密度类型，以及对剩余年份的子网格比例应用线性插值。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "张可儿",
+        "nameEn": "ZHANG Keer",
+        "unitEn": "",
+        "unitCn": "耶鲁大学"
+      },
+      {
+        "nameCn": "李旭辉",
+        "nameEn": "LEE Xuhui",
+        "unitEn": "",
+        "unitCn": "耶鲁大学"
+      },
+      {
+        "nameCn": "楚淏然",
+        "nameEn": "CHU Haoran",
+        "unitEn": "",
+        "unitCn": "南京信息工程大学"
+      },
+      {
+        "nameCn": "赵佳玉",
+        "nameEn": "ZHAO Jiayu",
+        "unitEn": "",
+        "unitCn": "广东海洋大学"
+      },
+      {
+        "nameCn": "曹畅",
+        "nameEn": "CAO Chang",
+        "unitEn": "",
+        "unitCn": "南京信息工程大学"
+      },
+      {
+        "nameCn": "肖薇",
+        "nameEn": "XIAO Wei",
+        "unitEn": "",
+        "unitCn": "南京信息工程大学"
+      },
+      {
+        "nameCn": "张弥",
+        "nameEn": "ZHANG Mi",
+        "unitEn": "",
+        "unitCn": "南京信息工程大学"
+      },
+      {
+        "nameCn": "赵磊",
+        "nameEn": "ZHAO Lei",
+        "unitEn": "",
+        "unitCn": "伊利诺伊大学厄巴纳-香槟分校"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A global dataset on subgrid land surface climate (2015–2100)  from the Community Earth System Model",
+        "referenceCn": null,
+        "referenceEn": "Zhang, K., Lee, X., Schultz, N.M., Zhao, L., He, C., Huang, Q., Liu, Z., Chu, H., & Zhao, J. (2023). A global dataset on subgrid land surface climate (2015–2100) from the Community Earth System Model. Geoscience Data Journal, 10, 208-219. DOI: 10.1002/gdj3.153."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "土地利用/覆盖",
+        "nameEn": "Land Use/Land Cover"
+      },
+      {
+        "nameCn": "城市与农村聚落",
+        "nameEn": "Urban and rural area"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球陆地",
+        "keywordEn": "Global Land"
+      },
+      {
+        "keywordCn": "城市区域",
+        "keywordEn": "Urban"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "年尺度",
+        "keywordEn": "Annual Scale",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "未来共享社会经济路径",
+        "keywordEn": "Shared Socioeconomic Pathways",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "城镇化对区域及全球气候变化影响机理",
+        "titleEn": "Urbanizaiton Impact on Regional and Global Climate Change"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+        "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Comparison": [
+      {
+        "QuestionEn": "How does the data collection and conversion process for creating a 0.9°×1.25° resolution surface input dataset for the CLM model using the Urban Properties Tool compare to other methods of scaling global urbanization products for climate simulations?",
+        "QuestionCn": "如何使用城市属性工具创建0.9°×1.25°分辨率的表面输入数据集的数据显示和转换过程，与其他用于气候模拟的全球城市化产品缩放方法相比，有何不同？",
+        "AnswerEn": "The process using the Urban Properties Tool involves converting specified global urbanization products into a format that meets the requirements of the CLM model, followed by adjustments to reconcile differences with historical CLM data. This method includes specific adjustments like subgrid proportion adjustments, vegetation and cropland proportion adjustments, reallocation of urban density types, and linear interpolation for other years. Compared to other methods, this approach provides a detailed framework for user-customizable urban parameterization, and has been shown to result in a significantly increased global urban area with reasonable temporal trends when applied to a 1 km resolution global urbanization product.",
+        "AnswerCn": "使用城市属性工具的过程涉及将指定的全球城市化产品转换为符合CLM模型要求的格式，随后进行调整以调和与历史CLM数据之间的差异。该方法包括特定的调整，如子网比例调整、植被和农田比例调整、城市密度类型的重新分配，以及对其他年份的线性插值。与其他方法相比，这种方法提供了一个详细的用户可定制城市参数化框架，并且在应用于1公里分辨率的全球城市化产品时，已显示出显著增加全球城市面积，并具有合理的时间趋势。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How might the data conversion process using the Toolbox for Human-Earth System Integration and Scaling (THESIS) influence the accuracy and reliability of urbanization data for climate modeling?",
+        "QuestionCn": "数据转换过程使用人类-地球系统集成与缩放工具箱（THESIS）可能会如何影响气候建模中城市化数据的准确性和可靠性？",
+        "AnswerEn": "The data conversion process using THESIS, specifically the Urban Properties Tool (UPT), is critical as it transforms global urbanization products into a resolution compatible with the Community Land Model (CLM) for climate simulations. This process could introduce discrepancies in urban distribution and area compared to historical CLM data, impacting the accuracy of climate predictions. Therefore, adjustments are necessary to align the converted data with CLM's historical data, which involves modifying subgrid proportions and urban density types, and applying linear interpolation over time. Such steps help mitigate sudden shifts between historical and future simulation results, enhancing the reliability of the data for climate modeling.",
+        "AnswerCn": "使用THESIS进行数据转换过程，特别是城市属性工具（UPT），至关重要，因为它将全球城市化产品转换为与社区土地模型（CLM）兼容的分辨率，以便进行气候模拟。这个过程可能会导致与历史CLM数据相比，城市分布和面积出现差异，从而影响气候预测的准确性。因此，有必要对转换后的数据进行调整，以使其与CLM的历史数据对齐，这涉及修改子网格比例和城市密度类型，并在时间上应用线性插值。这些步骤有助于减轻历史和未来模拟结果之间的突然变化，提高数据在气候建模中的可靠性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What are the underlying reasons for the need to adjust global urbanization product data when converting it to a format suitable for CLM climate simulations?",
+        "QuestionCn": "在将全球城市化产品数据转换为适合CLM气候模拟的格式时，需要调整的潜在原因是什么？",
+        "AnswerEn": "The adjustments are necessary because the data converted using UPT might differ from CLM's historical data in terms of urban distribution and area. This discrepancy can lead to abrupt changes between historical and future simulation results, necessitating adjustments to ensure continuity and accuracy. Steps involved include adjusting the proportion of urban sub-grid areas, vegetation and farmland sub-grid proportions, redistributing urban density types, and performing linear interpolation of sub-grid proportions for remaining years.",
+        "AnswerCn": "这些调整是必要的，因为使用UPT转换的数据可能在城市分布和面积上与CLM的历史数据存在差异。这种差异可能导致历史和未来模拟结果之间的突然变化，因此需要进行调整以确保连续性和准确性。涉及的步骤包括调整城市子网格面积的比例、植被和农田子网格的比例、重新分配城市密度类型，以及对剩余年份的子网格比例进行线性插值。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential effects on climate simulation outcomes when using a dataset that has undergone an upscaling scheme to match the requirements of a common land model?",
+        "QuestionCn": "使用经过上采样方案以匹配通用土地模型要求的数据集时，对气候模拟结果的潜在影响是什么？",
+        "AnswerEn": "Using a dataset that has undergone an upscaling scheme to match the requirements of a common land model, such as CLM, can lead to more accurate and reasonable simulations of global urban areas and their changes over time. The upscaling process involves converting global urbanization products to a compatible resolution and adjusting them to prevent abrupt changes in simulations between historical and future projections. This can result in a significant increase in the total urban area representation in the dataset, providing a more realistic input for climate simulations.",
+        "AnswerCn": "使用经过上采样方案处理的数据集，以满足常见土地模型（如CLM）的要求，可以更准确合理地模拟全球城市区域及其随时间的变化。上采样过程涉及将全球城市化产品转换为兼容的分辨率，并进行调整，以防止历史和未来预测之间的模拟出现突变。这可以显著增加数据集中城市面积的总表示，为气候模拟提供更现实的输入。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to transform global urbanization products into surface input data that meet the simulation requirements of the CLM with a resolution of 0.9°×1.25°?",
+        "QuestionCn": "为什么将全球城市化产品转化为满足分辨率为0.9°×1.25°的CLM模拟要求的地表输入数据很重要？",
+        "AnswerEn": "The transformation of global urbanization products into surface input data that meet the CLM simulation requirements with a resolution of 0.9°×1.25° is crucial because it allows for the integration of urbanization data into climate models, enabling accurate climate simulations. This process, facilitated by tools like the Urban Properties Tool from THESIS, ensures that the urban data aligns with the historical data used in CLM, preventing abrupt changes in simulation results between historical and future scenarios. The ultimate goal is to provide a more accurate and reasonable global urbanization dataset for climate modeling, which can then be adjusted and customized for specific research needs. This approach exemplifies how urban parameters can be tailored within CLM models, offering a framework for other researchers to convert various urban data sources into CLM-compatible formats for targeted climate simulations.",
+        "AnswerCn": "将全球城市化产品转化为满足CLM模拟要求的0.9°×1.25°分辨率的表面输入数据至关重要，因为这使得城市化数据能够融入气候模型，从而实现准确的气候模拟。这个过程由THESIS的城市属性工具等工具促进，确保城市数据与CLM中使用的历史数据对齐，防止历史和未来情景之间的模拟结果出现突变。最终目标是为气候建模提供更准确合理的全球城市化数据集，这些数据集可以根据特定研究需求进行调整和定制。这种方法展示了如何在CLM模型中定制城市参数，为其他研究人员提供了一个框架，以将各种城市数据源转换为CLM兼容格式，以便进行针对性的气候模拟。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the detailed procedures involved in converting and adjusting global urbanization products to meet the input requirements for the Community Land Model (CLM) simulations?",
+        "QuestionCn": "将全球城市化产品转换和调整以满足社区土地模型（CLM）模拟输入要求的详细程序是什么？",
+        "AnswerEn": "The process involves converting global urbanization products to a 0.9°×1.25° resolution using the Urban Properties Tool (UPT) from the Toolbox for Human-Earth System Integration and Scaling (THESIS) provided by the National Center for Atmospheric Research (NCAR). After conversion, adjustments are made to address discrepancies with CLM historical data and avoid abrupt changes in simulation results. These adjustments include modifying the proportion of urban subgrids, revising the proportions of vegetation and farmland subgrids, reallocating urban density types, and linearly interpolating subgrid proportions for remaining years. This approach has been successfully applied to a 1 km resolution global urbanization product for 2020~2070.",
+        "AnswerCn": "该过程涉及使用国家大气研究中心（NCAR）提供的人地系统集成与缩放工具箱（THESIS）中的城市属性工具（UPT）将全球城市化产品转换为0.9°×1.25°的分辨率。在转换后，进行调整以解决与CLM历史数据的差异，并避免模拟结果的突变。这些调整包括修改城市子网格的比例、修订植被和农田子网格的比例、重新分配城市密度类型，以及对剩余年份的子网格比例进行线性插值。这种方法已成功应用于2020~2070年的1公里分辨率全球城市化产品。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "What could be the potential reasons for discrepancies in urban distribution and area when using a dataset for simulating climate models?",
+        "QuestionCn": "在使用数据集模拟气候模型时，城市分布和面积出现差异的潜在原因是什么？",
+        "AnswerEn": "Discrepancies in urban distribution and area may arise due to differences between the converted data and historical data in the climate model, necessitating adjustments to prevent abrupt changes in simulation results. These adjustments include modifying urban and vegetation subgrid proportions, redistributing urban density types, and applying linear interpolation for subgrid proportions over remaining years.",
+        "AnswerCn": "城市分布和面积的差异可能由于气候模型中转换数据与历史数据之间的差异而产生，因此需要进行调整以防止模拟结果的突然变化。这些调整包括修改城市和植被子网格比例、重新分配城市密度类型，以及对剩余年份的子网格比例应用线性插值。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

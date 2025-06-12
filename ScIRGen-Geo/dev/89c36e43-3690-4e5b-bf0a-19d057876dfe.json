@@ -1,445 +1,445 @@
 {
-    "id": "89c36e43-3690-4e5b-bf0a-19d057876dfe",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "GRFRV1.0: Global Reach-level 3-hourly river flood reanalysis (1980-2019)",
-            "titleCn": "全球3小时河道洪水再分析数据GRFR V1.0（1980-2019）",
-            "description": "The global reach-level 3-hourly river flood reanalysis (GRFR) dataset includes 1) global 0.05 degree, 3-hourly/daily runoff data, 2) 3hourly/daily naturalized river discharge at 2.94 million river reaches, 3) global 3-hourly river flood events from 1980 to 2019, 4) underlying hydrography MERIT-Basins.\nGrounded on recent breakthroughs in global runoff hydrology, river modeling, high-resolution hydrography, and climate reanalysis, the 3-hourly river discharge record globally for 2.94 million river reaches during the 40-yr period of 1980–2019 was developed. The underlying modeling chain consists of the VIC land surface model (0.05°, 3-hourly) that is well calibrated and bias-corrected and the RAPID routing model (2.94 million river and catchment vectors), with precipitation input from MSWEP and other meteorological fields downscaled from ERA5. Flood events (above 2-yr return) and their characteristics (number, spatial distribution, and seasonality) were extracted and studied. Validations against 3-hourly flow records from 6,000+ gauges in CONUS and daily records from 14,000+ gauges globally show good modeling performance across all flow ranges, good skills in reconstructing flood events (high extremes), and the benefit of (and need for) sub-daily modeling.\nThe GRFR database represents a pioneering effort on global reach-level flood reanalysis and may offer new opportunities for global flood studies in terms of baseline data and potential research pathways. Also, it can better help river-observing satellite missions to develop their discharge algorithms.",
-            "descriptionCn": "全球3小时河道洪水再分析数据GRFR，包括1）1980-2019年全球0.05度，3小时/日格点陆面产流数据。2）全球294万条河段（基于90m数字高程模型提取），3小时/日天然径流模拟数据。3）全球3小时河道洪水事件数据。4）基础地形数据MERIT-Basins。\n该数据集以分布式水文模型VIC和河道汇流模型RAPID为模型链核心，集合一系列多源数据和模型手段构建的全球高分辨率高精度天然河川径流模拟系统模拟而成。基于美国6000余个站点3小时和全球14000余个站点日径流观测资料的精度评估表明，该数据能够较好地再现3小时和日尺度径流过程，同时能够较好地捕捉洪水事件。详细过程请参阅参考文献。\n该数据集为遥感卫星径流反演算法开发、全球洪水特性分析和物理机制分析尤其是无资料地区提供了强有力的新数据支撑。",
-            "instructions": "The global VIC runoff is stored in nc format. The file name is \"RUNOFF_yyyy. nc\", where yyyy represents the year.\nThe river discharge is stored in nc format, and the file name is \"output_pfaf_xx_1979-2019.nc\", where xx represents the region, 01 represents Africa, 02 represents Europe, 03 represents North Asia (Siberia), 04 represents South Asia, 05 represents Oceania, 06 represents South America, 07 represents North America, and 08 represents the Arctic.\nThe global 3-hour river flood events data is stored in nc format. The file name is   \"mswep_output_mswep_threshold_gt20_pfaf_xx_1980_2019_2daprt. nc\", where xx represents the region.\nThe underlying hydrography dataset contains two levels. Level_01 provides the first level rivers (riv) and catchments (cat) infomation for pfaf 0x (where 0x stands for region). Level_02 provides the second level rivers (riv) and catchments (cat) information for pfaf xy, where x stands for region, y stands for the subregion y of the region x. The hydrography data are stored in shp and dbf format, which can be easily read by ARCGIS.",
-            "instructionsCn": "全球VIC产流数据（runoff）以nc格式存储，文件的名称为“RUNOFF_yyyy.nc”，其中yyyy代表年。\n河道流量数据（discharge）以nc格式存储，文件的名称为“output_pfaf_xx_1979-2019.nc”，其中xx代表地区，01为非洲，02为欧洲，03为北亚（西伯利亚），04为南亚，05为大洋洲，06为南美，07为北美，08为北极。\n全球3小时河道洪水事件数据集（flood events）以nc格式存储，文件的名称为“mswep_output_mswep_threshold_gt20_pfaf_xx_1980_2019_2daprt.nc”，其中xx代表地区。\n基础地形数据（MERIT_Basins_v0.7.zip）包括level_01和level_02两层次地形数据，level_01提供pfaf0x一级河流（riv)和流域（cat）地形数据， level_02提供pfafxy 二级河流（riv)和流域（cat）地形数据，其中x代表地区，y代表二级分区编号。地形数据以shp和dbf格式存储。",
-            "east": 180.0,
-            "west": -180.0,
-            "south": -60.0,
-            "north": 90.0,
-            "startTime": "1979-01-01 00:00:00",
-            "endTime": "2019-12-31 00:00:00",
-            "fileSize": 510227141836.0,
-            "cstr": "18406.11.Terre.tpdc.272901",
-            "doi": "10.11888/Terre.tpdc.272901",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "杨媛",
-                "nameEn": "YANG Yuan ",
-                "unitEn": "University of California, San Diego",
-                "unitCn": "加利福尼亚大学圣迭戈分校（UCSD)"
-            },
-            {
-                "nameCn": "潘铭",
-                "nameEn": "PAN Ming ",
-                "unitEn": "UCSD",
-                "unitCn": "UCSD"
-            },
-            {
-                "nameCn": "林佩蓉",
-                "nameEn": "LIN Peirong ",
-                "unitEn": "Peking University",
-                "unitCn": "北京大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Global Reach-level 3-hourly river f reanalysis (1980-2019)",
-                "referenceCn": null,
-                "referenceEn": "Yang, Y., Pan, M., Lin, P.R., Beck, H.E., Zeng, Z.Z., Yamazaki, D., David, C.H., Lu, H., Yang, K., Hong, Y., and Wood, E.F. (2021). Global Reach-level 3-hourly river flood reanalysis (1980-2019). Bulletin of the American Meteorological Society, 102(11), E2086-E2105."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Global reconstruction of naturalized river flows at 2.94 million reaches",
-                "referenceCn": null,
-                "referenceEn": "Lin, P., Pan, M., Beck, H.E., Yang, Y., Yamazaki, D., Frasson, R., David, C.H., Durand, M., Pavelsky, T., Allen, G., Gleason, C., & Wood, E.F. (2019). Global reconstruction of naturalized river flows at 2.94 million reaches. Water Resources Research, 55 (8), 6499-6516."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "全球水文",
-                "nameEn": "global hydrology"
-            },
-            {
-                "nameCn": "地表水",
-                "nameEn": "Surface Water"
-            },
-            {
-                "nameCn": "径流",
-                "nameEn": "Runoff"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "汇流模拟",
-                "nameEn": "river routing"
-            },
-            {
-                "nameCn": "洪水",
-                "nameEn": "Floods"
-            },
-            {
-                "nameCn": "流量",
-                "nameEn": "Discharge/Flow"
-            },
-            {
-                "nameCn": "陆面模式",
-                "nameEn": "land surface model"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Globe"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1980-2019",
-                "keywordEn": "1980-2019",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
-                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
-            }
-        ]
+  "id": "89c36e43-3690-4e5b-bf0a-19d057876dfe",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "GRFRV1.0: Global Reach-level 3-hourly river flood reanalysis (1980-2019)",
+      "titleCn": "全球3小时河道洪水再分析数据GRFR V1.0（1980-2019）",
+      "description": "The global reach-level 3-hourly river flood reanalysis (GRFR) dataset includes 1) global 0.05 degree, 3-hourly/daily runoff data, 2) 3hourly/daily naturalized river discharge at 2.94 million river reaches, 3) global 3-hourly river flood events from 1980 to 2019, 4) underlying hydrography MERIT-Basins.\nGrounded on recent breakthroughs in global runoff hydrology, river modeling, high-resolution hydrography, and climate reanalysis, the 3-hourly river discharge record globally for 2.94 million river reaches during the 40-yr period of 1980–2019 was developed. The underlying modeling chain consists of the VIC land surface model (0.05°, 3-hourly) that is well calibrated and bias-corrected and the RAPID routing model (2.94 million river and catchment vectors), with precipitation input from MSWEP and other meteorological fields downscaled from ERA5. Flood events (above 2-yr return) and their characteristics (number, spatial distribution, and seasonality) were extracted and studied. Validations against 3-hourly flow records from 6,000+ gauges in CONUS and daily records from 14,000+ gauges globally show good modeling performance across all flow ranges, good skills in reconstructing flood events (high extremes), and the benefit of (and need for) sub-daily modeling.\nThe GRFR database represents a pioneering effort on global reach-level flood reanalysis and may offer new opportunities for global flood studies in terms of baseline data and potential research pathways. Also, it can better help river-observing satellite missions to develop their discharge algorithms.",
+      "descriptionCn": "全球3小时河道洪水再分析数据GRFR，包括1）1980-2019年全球0.05度，3小时/日格点陆面产流数据。2）全球294万条河段（基于90m数字高程模型提取），3小时/日天然径流模拟数据。3）全球3小时河道洪水事件数据。4）基础地形数据MERIT-Basins。\n该数据集以分布式水文模型VIC和河道汇流模型RAPID为模型链核心，集合一系列多源数据和模型手段构建的全球高分辨率高精度天然河川径流模拟系统模拟而成。基于美国6000余个站点3小时和全球14000余个站点日径流观测资料的精度评估表明，该数据能够较好地再现3小时和日尺度径流过程，同时能够较好地捕捉洪水事件。详细过程请参阅参考文献。\n该数据集为遥感卫星径流反演算法开发、全球洪水特性分析和物理机制分析尤其是无资料地区提供了强有力的新数据支撑。",
+      "instructions": "The global VIC runoff is stored in nc format. The file name is \"RUNOFF_yyyy. nc\", where yyyy represents the year.\nThe river discharge is stored in nc format, and the file name is \"output_pfaf_xx_1979-2019.nc\", where xx represents the region, 01 represents Africa, 02 represents Europe, 03 represents North Asia (Siberia), 04 represents South Asia, 05 represents Oceania, 06 represents South America, 07 represents North America, and 08 represents the Arctic.\nThe global 3-hour river flood events data is stored in nc format. The file name is   \"mswep_output_mswep_threshold_gt20_pfaf_xx_1980_2019_2daprt. nc\", where xx represents the region.\nThe underlying hydrography dataset contains two levels. Level_01 provides the first level rivers (riv) and catchments (cat) infomation for pfaf 0x (where 0x stands for region). Level_02 provides the second level rivers (riv) and catchments (cat) information for pfaf xy, where x stands for region, y stands for the subregion y of the region x. The hydrography data are stored in shp and dbf format, which can be easily read by ARCGIS.",
+      "instructionsCn": "全球VIC产流数据（runoff）以nc格式存储，文件的名称为“RUNOFF_yyyy.nc”，其中yyyy代表年。\n河道流量数据（discharge）以nc格式存储，文件的名称为“output_pfaf_xx_1979-2019.nc”，其中xx代表地区，01为非洲，02为欧洲，03为北亚（西伯利亚），04为南亚，05为大洋洲，06为南美，07为北美，08为北极。\n全球3小时河道洪水事件数据集（flood events）以nc格式存储，文件的名称为“mswep_output_mswep_threshold_gt20_pfaf_xx_1980_2019_2daprt.nc”，其中xx代表地区。\n基础地形数据（MERIT_Basins_v0.7.zip）包括level_01和level_02两层次地形数据，level_01提供pfaf0x一级河流（riv)和流域（cat）地形数据， level_02提供pfafxy 二级河流（riv)和流域（cat）地形数据，其中x代表地区，y代表二级分区编号。地形数据以shp和dbf格式存储。",
+      "east": 180.0,
+      "west": -180.0,
+      "south": -60.0,
+      "north": 90.0,
+      "startTime": "1979-01-01 00:00:00",
+      "endTime": "2019-12-31 00:00:00",
+      "fileSize": 510227141836.0,
+      "cstr": "18406.11.Terre.tpdc.272901",
+      "doi": "10.11888/Terre.tpdc.272901",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Floods are among the most frequent and costly natural disasters. According to a United Nations report (UNISDR 2015), floods accounted for 43% of occurrences of natural disasters during 1995–2015. The EM-DAT international disaster database indicates that fluvial floods contributed to two-thirds of flood events in the past two decades. Fluvial flood is the extreme upper tail of river hydrology that can happen at different scales. The lack of global long-term fine-scale (in both time and space) river discharge (Q) records has been the major hurdle for large-scale flood research. There are large gaps in river gauge data around the world as most gauges are concentrated in developed areas like North America and Europe. The other observational alternative is remote sensing, though the first satellite mission dedicated to discharge estimation will not launch until 2022. Continuous efforts have been made by the modeling community to quantify river discharge globally with increasingly finer spatial and temporal resolutions. Recent global studies with vector networks have illustrated their efficiency at high resolutions."
-            ],
-            "research objective": [
-                "This study will inherit the basic modeling framework established in GRADES, make considerable efforts to upgrade the spatial and temporal resolutions from 0.25° daily to 0.05° 3-hourly, extend the temporal coverage (1980–2019), and carry out flood-specific (high extremes) analysis at subdaily time scales."
-            ],
-            "challenges": [
-                "The lack of global long-term fine-scale (in both time and space) river discharge (Q) records has been the major hurdle for large-scale flood research. There are large gaps in river gauge data around the world as most gauges are concentrated in developed areas like North America and Europe. Model prediction errors are a combined result of model parameterization uncertainty and forcing (precipitation) errors, which are often hard to separate."
-            ],
-            "methods": [
-                "We downscaled forcing fields to 0.05° using fine-scale elevation as the correction factor for temperature (fixed lapse rate of −6.5°C km−1), surface pressure (hydrostatic), longwave radiation (lapse adjustment for radiative temperature), humidity (lapse adjustment for saturated vapor pressure), wind speed (bilinear interpolation), and precipitation (bilinear interpolation). To reduce model biases, we performed grid-level parameter calibration and bias correction (postprocessing) against ML-derived, global runoff characteristic maps from the Global Streamflow Characteristics Dataset (GSCD). Instead of calibrating VIC against limited gauge observations, we calibrated three VIC parameters (infiltration curve shape, second soil layer thickness, and nonlinear baseflow threshold) at 0.25° grid pixel level, using the baseflow index, mean runoff, and runoff percentiles (Q10 and Q90) from the GSCD, and then resampled the parameters to 0.05° by bilinear interpolation. To reduce the remaining model biases after calibration, we applied the sparse cumulative distribution function (CDF) matching bias correction approach, which corrects the VIC runoff biases against nine runoff percentiles (Q1, Q5, Q10, Q20, Q50, Q80, Q90, Q95, and Q99) from the GSCD. The model was spun up for the 10-yr period of 1969–78 forced with downscaled Princeton Global Forcing (PGF) which has an original resolution of 0.25°. We implemented RAPID, a river routing model that uses a matrix-based version of the Muskingum method to calculate the flow and volume of water for each reach on a river network. Here, RAPID is run using a 30-min time step and forced with 3-hourly lateral inflows from VIC runoff."
-            ],
-            "dataset": [
-                "Over CONUS, we compiled 3-hourly data over 9,000+ river gauges up to 2019 from the U.S. Geological Survey (USGS). After a similar screening, 6,000+ gauges match the river reaches being simulated and come with sufficient data for skill analysis. Validation of GRFR against 3-hourly flow records from 6,000+ gauges in CONUS and daily records from 14,000+ gauges globally shows good general skills of discharge estimates across all flow values, as well as good skills in reconstructing flood events (high extremes)."
-            ],
-            "findings": [
-                "Validation of GRFR against 3-hourly flow records from 6,000+ gauges in CONUS and daily records from 14,000+ gauges globally shows good general skills of discharge estimates across all flow values, as well as good skills in reconstructing flood events (high extremes). The effort to enable subdaily high-resolution modeling is expected to offer added values in capturing subdaily dynamics that may come with local and flashy events. The comparison between 3-hourly peaks and daily peaks highlights the significant benefit of (and need for) subdaily modeling for flood extremes. Precipitation sensitivity analysis suggests that, over well-gauged areas, the global product MSWEP performs very close to local product (Stage IV)."
-            ],
-            "backgroundCn": [
-                "洪水是最频繁和最昂贵的自然灾害之一。根据联合国的一份报告（UNISDR 2015），在1995年至2015年期间，洪水占自然灾害发生的43%。EM-DAT国际灾害数据库显示，在过去二十年中，河流洪水占洪水事件的三分之二。河流洪水是河流水文学的极端上尾，可能在不同规模上发生。全球长期细尺度（在时间和空间上）的河流流量（Q）记录的缺乏是大规模洪水研究的主要障碍。全球范围内河流测量数据存在较大缺口，因为大多数测量站集中在北美和欧洲等发达地区。另一种观察替代方案是遥感，尽管第一颗专门用于流量估算的卫星任务要到2022年才会发射。建模社区持续努力以越来越细的空间和时间分辨率量化全球河流流量。最近的全球研究通过矢量网络展示了其在高分辨率下的效率。"
-            ],
-            "research objectiveCn": [
-                "本研究将继承GRADES建立的基本建模框架，努力将空间和时间分辨率从0.25°每日升级到0.05°每3小时，扩展时间覆盖范围（1980-2019），并在亚日尺度上进行特定于洪水（高极端值）分析。"
-            ],
-            "challengesCn": [
-                "全球长期细尺度（在时间和空间上）河流流量（Q）记录的缺乏是大规模洪水研究的主要障碍。世界各地的河流测量数据存在较大缺口，因为大多数测量站集中在北美和欧洲等发达地区。模型预测误差是模型参数不确定性和强迫（降水）误差的综合结果，这两者往往难以分开。"
-            ],
-            "methodsCn": [
-                "我们将强迫场降尺度至0.05°，使用细尺度的高程作为温度的修正因子（固定的垂直递减率为−6.5°C km−1）、地表气压（静力学）、长波辐射（辐射温度的递减调整）、湿度（饱和水汽压的递减调整）、风速（双线性插值）和降水（双线性插值）。为了减少模型偏差，我们对比全球流域特征数据集（GSCD）中基于机器学习的全球径流特征图进行了网格级参数校准和偏差修正（后处理）。我们没有针对有限的水文观测数据校准VIC，而是在0.25°网格像元级别上，使用GSCD中的基流指数、平均径流和径流百分位数（Q10和Q90）校准了三个VIC参数（入渗曲线形状、第二土壤层厚度和非线性基流阈值），然后通过双线性插值将参数重采样至0.05°。为了减少校准后剩余的模型偏差，我们应用了稀疏累积分布函数（CDF）匹配偏差修正方法，该方法针对GSCD中的九个径流百分位数（Q1、Q5、Q10、Q20、Q50、Q80、Q90、Q95和Q99）修正VIC的径流偏差。模型在1969年至1978年的10年期间进行了预热，强迫使用降尺度的普林斯顿全球强迫（PGF），其原始分辨率为0.25°。我们实施了RAPID，一个河流路由模型，使用基于矩阵的穆斯金根方法计算河流网络中每个河段的水流和水量。在这里，RAPID以30分钟的时间步长运行，并使用来自VIC径流的3小时侧向流入进行强迫。"
-            ],
-            "datasetCn": [
-                "在美国大陆（CONUS），我们从美国地质调查局（USGS）收集了截至2019年的3小时数据，涉及9000多个河流测量站。经过类似的筛选，6000多个测量站与正在模拟的河流段匹配，并且有足够的数据进行技能分析。对GRFR进行验证，使用了CONUS中6000多个测量站的3小时流量记录以及全球14000多个测量站的日常记录，结果显示在所有流量值上，流量估计的整体技能良好，并且在重建洪水事件（高极值）方面也表现出良好的技能。"
-            ],
-            "findingsCn": [
-                "对美国大陆地区（CONUS）6000多个水文站的3小时流量记录和全球14000多个水文站的日流量记录进行的GRFR验证显示，流量估计在所有流量值上具有良好的总体技能，并且在重建洪水事件（高极值）方面也表现良好。为了实现亚日高分辨率建模的努力，预计将为捕捉伴随局部和快速变化事件的亚日动态提供附加价值。3小时峰值与日峰值之间的比较突显了亚日建模在洪水极值中的显著益处（和必要性）。降水敏感性分析表明，在监测良好的区域，全球产品MSWEP的表现与地方产品（Stage IV）非常接近。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "杨媛",
+        "nameEn": "YANG Yuan ",
+        "unitEn": "University of California, San Diego",
+        "unitCn": "加利福尼亚大学圣迭戈分校（UCSD)"
+      },
+      {
+        "nameCn": "潘铭",
+        "nameEn": "PAN Ming ",
+        "unitEn": "UCSD",
+        "unitCn": "UCSD"
+      },
+      {
+        "nameCn": "林佩蓉",
+        "nameEn": "LIN Peirong ",
+        "unitEn": "Peking University",
+        "unitCn": "北京大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Is it confirmed that the lack of global fine-scale river discharge records poses a challenge in large-scale flood research?",
-                "QuestionCn": "缺乏全球细尺度河流排放记录是否已确认对大规模洪水研究构成挑战？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Does the data collection method include calibration of parameters specifically against global runoff characteristic maps instead of limited gauge observations?",
-                "QuestionCn": "数据收集方法是否包括针对全球径流特征图而不是有限的水文观测站进行参数校准？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Are the model biases in river discharge datasets more effectively reduced using grid-level parameter calibration, bias correction through CDF matching, or some other technique?",
-                "QuestionCn": "河流流量数据集中的模型偏差是通过网格级参数校准、CDF匹配的偏差修正，还是其他技术更有效地减少的？",
-                "AnswerEn": "grid-level parameter calibration",
-                "AnswerCn": "网格级参数校准",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the common challenges faced in collecting global long-term fine-scale river discharge records?",
-                "QuestionCn": "收集全球长期细尺度河流流量记录时面临的常见挑战有哪些？",
-                "AnswerEn": "gaps in river gauge data",
-                "AnswerCn": "河流水位监测数据的缺口",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method that addresses the challenge of sparse river gauge data in developing areas?",
-                "QuestionCn": "您能否提供一个数据收集方法的例子，以解决发展中地区稀疏河流水位计数据的挑战？",
-                "AnswerEn": "An example of a data collection method that addresses the challenge of sparse river gauge data in developing areas is the use of remote sensing combined with a global hydrological model. The model utilizes downscaled forcing fields and grid-level parameter calibration to simulate river discharge with improved spatial and temporal resolution, as seen in the modeling approaches described for enhancing discharge estimation globally.",
-                "AnswerCn": "一种解决发展地区稀疏河流测量数据挑战的数据收集方法是结合遥感技术和全球水文模型。该模型利用下调的强迫场和网格级参数校准，以提高河流流量的空间和时间分辨率，正如全球流量估算增强建模方法中所描述的那样。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a methodological approach to improve the accuracy of river discharge models?",
-                "QuestionCn": "提高河流流量模型准确性的一个方法论方法的例子是什么？",
-                "AnswerEn": "An example of a methodological approach to improve the accuracy of river discharge models is the use of bias correction techniques such as the sparse cumulative distribution function (CDF) matching approach. This method corrects biases in runoff predictions by adjusting model output against observed runoff percentiles from a global dataset, thereby enhancing the model's ability to reproduce both typical and extreme flood events.",
-                "AnswerCn": "一种提高河流流量模型准确性的研究方法是使用偏差修正技术，例如稀疏累积分布函数（CDF）匹配方法。该方法通过将模型输出与全球数据集中的观测径流百分位数进行调整，来修正径流预测中的偏差，从而增强模型再现典型和极端洪水事件的能力。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Could you provide an example of a dataset that supports global flood research by offering fine-scale temporal and spatial data?",
-                "QuestionCn": "您能否提供一个支持全球洪水研究的数据集，该数据集提供细粒度的时间和空间数据？",
-                "AnswerEn": "An example of a dataset that supports global flood research by offering fine-scale temporal and spatial data is the 全球3小时河道洪水再分析数据GRFR V1.0, which includes global 0.05-degree, 3-hourly/diurnal land surface runoff data, simulated natural runoff data for 2.94 million river reaches, and flood event data. This dataset helps in capturing the dynamics of flood events across various regions, including data-scarce areas.",
-                "AnswerCn": "一个支持全球洪水研究的数据集是全球3小时河道洪水再分析数据GRFR V1.0，该数据集包括全球0.05度、每3小时/日的地表径流数据、294万条河流的模拟自然径流数据和洪水事件数据。该数据集有助于捕捉各个地区洪水事件的动态，包括数据稀缺地区的数据。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the distinguishing features of river discharge datasets that are derived from fine-scale spatial and temporal resolutions?",
-                "QuestionCn": "从细尺度空间和时间分辨率衍生的河流流量数据集的区别特征是什么？",
-                "AnswerEn": "0.05° resolution, 3-hour intervals, high-resolution data, distributed hydrological models, river routing models, calibrated against global runoff characteristics, corrected for biases",
-                "AnswerCn": "0.05°分辨率，3小时间隔，高分辨率数据，分布式水文模型，河流汇流模型，针对全球径流特征进行校准，校正偏差。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many river segments are included in the global dataset used for river simulation?",
-                "QuestionCn": "全球河流模拟所使用的数据集中包含多少条河流段？",
-                "AnswerEn": "2.94 million",
-                "AnswerCn": "294万",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many river gauges in the United States (CONUS) were used for skill analysis and validation of flow estimates?",
-                "QuestionCn": "在美国（CONUS）用于流量估计的技能分析和验证的河流测量站有多少个？",
-                "AnswerEn": "6,000",
-                "AnswerCn": "6,000",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the calibration and bias correction techniques used in the river discharge modeling compare to traditional river gauge methods in terms of accuracy and reliability?",
-                "QuestionCn": "河流流量建模中使用的校准和偏差修正技术与传统河流测量方法在准确性和可靠性方面如何比较？",
-                "AnswerEn": "The calibration and bias correction techniques in the river discharge modeling involve grid-level parameter calibration and bias correction against global runoff characteristic maps, as well as a sparse cumulative distribution function (CDF) matching bias correction. These techniques aim to reduce model biases and improve accuracy, offering a robust alternative to traditional river gauge methods, which are limited by sparse global coverage and concentration in developed areas. The modeling approach has been shown to accurately reconstruct flood events and general discharge estimates.",
-                "AnswerCn": "河流流量建模中的校准和偏差修正技术涉及网格级参数校准和针对全球径流特征图的偏差修正，以及稀疏的累积分布函数（CDF）匹配偏差修正。这些技术旨在减少模型偏差并提高准确性，提供了一种比传统河流测量方法更为稳健的替代方案，后者受到全球覆盖稀疏和集中在发达地区的限制。这种建模方法已被证明能够准确重建洪水事件和一般流量估计。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How does the use of fine-scale elevation as a correction factor in downscaling forcing fields influence the accuracy of river discharge simulations?",
-                "QuestionCn": "细尺度高程作为修正因子在下调强迫场中的使用如何影响河流流量模拟的准确性？",
-                "AnswerEn": "The use of fine-scale elevation as a correction factor helps in adjusting for temperature, surface pressure, and other meteorological parameters, thereby reducing errors in model predictions and improving the accuracy of river discharge simulations.",
-                "AnswerCn": "使用细尺度海拔作为修正因子有助于调整温度、地表压力和其他气象参数，从而减少模型预测中的误差，提高河流流量模拟的准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the implications of model parameterization uncertainty and precipitation errors on the outcomes of river discharge modeling?",
-                "QuestionCn": "模型参数化不确定性和降水误差对河流流量建模结果的影响是什么？",
-                "AnswerEn": "Model parameterization uncertainty and precipitation errors can significantly impact the accuracy of river discharge modeling, making it difficult to separate the two and necessitating robust calibration and bias correction methods to mitigate these issues.",
-                "AnswerCn": "模型参数化不确定性和降水误差会显著影响河流流量建模的准确性，使得分离这两者变得困难，因此需要强有力的校准和偏差修正方法来减轻这些问题。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the need for model calibration and bias correction in hydrological datasets?",
-                "QuestionCn": "导致水文数据集需要模型校准和偏差修正的原因是什么？",
-                "AnswerEn": "Model prediction errors can arise from uncertainties in model parameterization and forcing errors, such as precipitation. To address these issues, calibration against global runoff maps and bias correction methods, like sparse cumulative distribution function matching, are necessary to reduce biases and improve the accuracy of river discharge estimates.",
-                "AnswerCn": "模型预测误差可能源于模型参数化的不确定性和强迫误差，例如降水。为了解决这些问题，需要针对全球径流图进行校准和偏差修正方法，如稀疏累积分布函数匹配，以减少偏差并提高河流流量估计的准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential consequences of using distributed hydrological models and river routing models for high-resolution global river discharge simulations?",
-                "QuestionCn": "使用分布式水文模型和河流输送模型进行高分辨率全球河流流量模拟的潜在后果是什么？",
-                "AnswerEn": "The use of distributed hydrological models like VIC and river routing models such as RAPID can result in the capability to simulate global high-resolution natural river runoff systems with improved accuracy. These models allow for better replication of 3-hourly and daily river discharge processes and enhance the ability to capture flood events, which is particularly beneficial for regions lacking observational data.",
-                "AnswerCn": "使用分布式水文模型如VIC和河流路由模型如RAPID，可以实现对全球高分辨率自然河流径流系统的模拟，且精度得到提升。这些模型能够更好地复制每3小时和每日的河流流量过程，并增强捕捉洪水事件的能力，这对缺乏观测数据的地区尤其有利。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What effects might arise from the calibration and bias correction of hydrological models using global runoff characteristic maps?",
-                "QuestionCn": "使用全球径流特征图对水文模型进行校准和偏差修正可能会产生哪些影响？",
-                "AnswerEn": "Calibrating and applying bias correction to hydrological models using global runoff characteristic maps can significantly reduce model biases, improving the accuracy of discharge estimates. This process allows the models to better match observed runoff characteristics, enhancing their overall performance in simulating river discharge and reconstructing flood events, especially in regions with sparse observational data.",
-                "AnswerCn": "通过使用全球径流特征图对水文模型进行校准和偏差修正，可以显著减少模型偏差，提高排水估计的准确性。这个过程使模型能够更好地匹配观测到的径流特征，从而增强其在模拟河流排水和重建洪水事件方面的整体性能，特别是在观测数据稀缺的地区。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to enhance the spatial and temporal resolutions of river discharge data globally?",
-                "QuestionCn": "提高全球河流流量数据的空间和时间分辨率为何重要？",
-                "AnswerEn": "Enhancing the spatial and temporal resolutions of river discharge data globally is crucial because it enables more accurate and detailed flood-specific analysis at subdaily time scales. This improvement helps in capturing the dynamics of local and flashy flood events, which are not adequately represented in coarser datasets. Additionally, it addresses the significant gaps in river gauge data in less-developed areas, thereby facilitating better understanding and prediction of flood events across different regions.",
-                "AnswerCn": "提高全球河流流量数据的空间和时间分辨率至关重要，因为这可以在亚日尺度上进行更准确和详细的洪水特定分析。这一改进有助于捕捉局部和快速洪水事件的动态，而这些在较粗糙的数据集中并未得到充分体现。此外，它还解决了欠发达地区河流测量数据的显著缺口，从而促进了对不同地区洪水事件的更好理解和预测。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "How do researchers aim to overcome the challenges associated with the lack of fine-scale river discharge records globally?",
-                "QuestionCn": "研究人员旨在克服全球缺乏细尺度河流流量记录所带来的挑战。",
-                "AnswerEn": "Researchers aim to overcome the challenges associated with the lack of fine-scale river discharge records globally by employing model parameter calibration and bias correction techniques. They downscale forcing fields using fine-scale elevation corrections, calibrate model parameters at grid levels using global runoff characteristics datasets, and apply bias correction approaches to adjust model outputs against observed data. These efforts are complemented by using a combination of hydrological and river routing models to simulate river discharges with improved accuracy and resolution.",
-                "AnswerCn": "研究人员旨在通过采用模型参数校准和偏差修正技术，克服全球缺乏细尺度河流流量记录的挑战。他们使用细尺度的高程修正对强迫场进行降尺度，在网格级别上利用全球径流特征数据集校准模型参数，并应用偏差修正方法对模型输出进行调整，以与观测数据相匹配。这些努力还结合了水文模型和河流路由模型，以更高的准确性和分辨率模拟河流流量。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "How can high-resolution spatial and temporal river discharge data be obtained and refined for global flood research?",
-                "QuestionCn": "如何获取和精炼高分辨率的空间和时间河流流量数据，以用于全球洪水研究？",
-                "AnswerEn": "High-resolution spatial and temporal river discharge data can be obtained by downscaling forcing fields to a finer grid using elevation as a correction factor for various meteorological variables such as temperature, pressure, and precipitation. Additionally, a model calibration process is employed, where parameters are calibrated against global runoff characteristic maps and biases are corrected using a sparse CDF matching bias correction approach. A river routing model like RAPID is then used to simulate river flow using inflows from a hydrological model.",
-                "AnswerCn": "高分辨率的空间和时间河流流量数据可以通过将强迫场下调至更细的网格来获得，使用海拔作为各种气象变量（如温度、压力和降水）的修正因子。此外，还采用模型校准过程，其中参数根据全球径流特征图进行校准，并使用稀疏CDF匹配偏差校正方法进行偏差修正。然后，使用像RAPID这样的河流路由模型，利用水文模型的流入量来模拟河流流量。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What methodologies are utilized to address the challenge of data scarcity in river gauge observations for flood modeling?",
-                "QuestionCn": "为了解决洪水建模中河流测量观测数据稀缺的挑战，采用了哪些方法论？",
-                "AnswerEn": "To address data scarcity in river gauge observations, methodologies such as remote sensing, model calibration against global runoff data, and bias correction techniques are employed. The model parameters are calibrated using global datasets like the Global Streamflow Characteristics Dataset (GSCD), and biases are corrected against runoff percentiles from the same dataset. This approach reduces reliance on limited local gauge data and enhances model accuracy.",
-                "AnswerCn": "为了应对河流水位观测数据稀缺的问题，采用了遥感、基于全球径流数据的模型校准和偏差修正技术等方法。模型参数使用全球数据集，如全球流域特征数据集（GSCD）进行校准，并根据同一数据集的径流百分位数进行偏差修正。这种方法减少了对有限的地方水位数据的依赖，提高了模型的准确性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What procedural steps are involved in validating a river discharge modeling system against observational data?",
-                "QuestionCn": "验证河流流量建模系统与观测数据的一般程序步骤包括：\n\n1. **数据收集**：收集相关的观测数据，包括流量、降水、蒸发等气象和水文数据。\n\n2. **模型选择**：选择适合的河流流量模型，可能包括物理模型、统计模型或混合模型。\n\n3. **模型设置**：根据研究区域的特征和数据可用性设置模型参数。\n\n4. **模型运行**：使用收集到的输入数据运行模型，生成模拟的流量数据。\n\n5. **数据预处理**：对观测数据和模拟数据进行预处理，以确保它们在时间和空间上可比。\n\n6. **模型验证**：通过比较模拟结果与观测数据，评估模型的准确性和可靠性。常用的验证指标包括相关系数、均方根误差（RMSE）、纳什-沙普利效率系数等。\n\n7. **敏感性分析**：分析模型对不同参数的敏感性，以识别关键参数和不确定性来源。\n\n8. **模型调整**：根据验证结果调整模型参数，以提高模型的预测能力。\n\n9. **不确定性分析**：评估模型预测的不确定性，考虑不同的输入数据和参数变化对结果的影响。\n\n10. **结果报告**：撰写报告，详细描述模型验证过程、结果和结论，并提出未来改进的建议。",
-                "AnswerEn": "The validation of a river discharge modeling system involves compiling observational data from river gauges, conducting skill analysis by comparing model outputs with observed flow records, and assessing the model's ability to reconstruct flood events. For instance, validation can be carried out using 3-hourly flow records from thousands of river gauges in well-monitored areas like CONUS and daily records from global gauges, demonstrating the model's accuracy across various flow values and its efficacy in capturing flood extremes.",
-                "AnswerCn": "河流流量建模系统的验证涉及汇编来自河流测量站的观测数据，通过将模型输出与观测流量记录进行比较来进行技能分析，并评估模型重建洪水事件的能力。例如，可以使用来自监测良好的地区（如CONUS）的数千个河流测量站的3小时流量记录，以及来自全球测量站的日记录来进行验证，从而展示模型在各种流量值下的准确性及其捕捉洪水极端事件的有效性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What data collection techniques enable the simulation of global high-resolution natural river runoff systems?",
-                "QuestionCn": "哪些数据收集技术能够模拟全球高分辨率自然河流径流系统？",
-                "AnswerEn": "The simulation of global high-resolution natural river runoff systems is enabled by a combination of distributed hydrological models like VIC and river routing models like RAPID, which use multi-source data and modeling techniques. This includes downscaling forcing fields to fine spatial resolutions and calibrating model parameters against global runoff characteristic maps, with further bias correction applied.",
-                "AnswerCn": "全球高分辨率自然河流径流系统的模拟得益于分布式水文模型（如VIC）和河流路由模型（如RAPID）的结合，这些模型使用多源数据和建模技术。这包括将强迫场降尺度到细空间分辨率，并根据全球径流特征图校准模型参数，随后还进行偏差修正。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What role do technological advancements in remote sensing and modeling play in addressing the challenges of data scarcity in global flood research?",
-                "QuestionCn": "技术进步在遥感和建模方面在应对全球洪水研究中数据稀缺的挑战中发挥了什么作用？",
-                "AnswerEn": "Technological advancements in remote sensing and modeling help address data scarcity by offering alternative observational methods and enabling the development of global high-resolution datasets. These advancements support efforts to quantify river discharge with finer spatial and temporal resolutions, bridging gaps left by the uneven distribution of river gauge data, particularly in less developed regions.",
-                "AnswerCn": "遥感和建模技术的进步通过提供替代观测方法和支持全球高分辨率数据集的开发，帮助解决数据稀缺问题。这些进展支持以更精细的空间和时间分辨率量化河流流量，弥补了河流测量数据分布不均所留下的空白，特别是在欠发达地区。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might there be challenges in obtaining fine-scale river discharge records globally?",
-                "QuestionCn": "获取全球细尺度河流流量记录可能面临的挑战是什么？",
-                "AnswerEn": "The lack of global long-term fine-scale river discharge records is a major challenge due to large gaps in river gauge data, which are mostly concentrated in developed areas like North America and Europe. Remote sensing is an alternative, but the first satellite mission dedicated to discharge estimation will not launch until 2022.",
-                "AnswerCn": "全球长期细尺度河流流量记录的缺乏是一个主要挑战，因为河流测量数据存在大量空白，这些空白主要集中在北美和欧洲等发达地区。遥感是一种替代方案，但首个专门用于流量估算的卫星任务要到2022年才会发射。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the expected outcomes of implementing subdaily high-resolution modeling in flood research?",
-                "QuestionCn": "实施亚日高分辨率建模在洪水研究中的预期结果是什么？",
-                "AnswerEn": "Subdaily high-resolution modeling is expected to offer added values in capturing subdaily dynamics that may come with local and flashy flood events. It highlights the significant benefits and needs for subdaily modeling to accurately reconstruct flood events and provide better estimates of discharge across all flow values.",
-                "AnswerCn": "亚日高分辨率建模预计将在捕捉可能伴随局部和突发性洪水事件的亚日动态方面提供附加价值。这突显了亚日建模在准确重建洪水事件和提供更好流量估算方面的显著益处和需求。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why might there be difficulties in separating model prediction errors in large-scale flood research?",
-                "QuestionCn": "在大规模洪水研究中，分离模型预测误差可能会面临困难的原因是什么？",
-                "AnswerEn": "Model prediction errors are often difficult to separate because they result from a combination of model parameterization uncertainty and forcing errors, such as those from precipitation data. The complexity in differentiating these factors contributes to the challenges in large-scale flood research.",
-                "AnswerCn": "模型预测误差往往难以分离，因为它们是由模型参数不确定性和强迫误差（例如降水数据中的误差）共同导致的。区分这些因素的复杂性加大了大规模洪水研究的挑战。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "What are the main challenges faced in enhancing the accuracy of river discharge models, and how can they be addressed?",
-                "QuestionCn": "提高河流流量模型准确性面临的主要挑战是什么，以及如何解决这些挑战？",
-                "AnswerEn": "The main challenges in enhancing the accuracy of river discharge models include model parameterization uncertainty and forcing errors, which are difficult to separate. These challenges can be addressed by performing grid-level parameter calibration, bias correction, and using advanced downscaling techniques, as well as integrating more comprehensive observational data from sources like the Global Streamflow Characteristics Dataset.",
-                "AnswerCn": "提高河流流量模型准确性的主要挑战包括模型参数不确定性和强迫误差，这些问题难以分离。可以通过进行网格级参数校准、偏差修正和使用先进的降尺度技术，以及整合来自全球流域特征数据集等来源的更全面的观测数据来解决这些挑战。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In what ways can the integration of remote sensing data improve the reliability of global flood analysis, especially in ungauged areas?",
-                "QuestionCn": "遥感数据的整合可以通过以下几种方式提高全球洪水分析的可靠性，特别是在未监测地区：\n\n1. 提供广泛的空间覆盖：遥感技术能够覆盖大范围的区域，包括那些缺乏地面监测站的偏远地区。\n\n2. 实时数据获取：遥感卫星能够定期获取地表信息，提供实时或近实时的洪水监测数据。\n\n3. 高分辨率影像：高分辨率的遥感影像可以帮助识别洪水的范围、深度和影响区域，从而提高分析的准确性。\n\n4. 多源数据融合：结合不同类型的遥感数据（如光学、雷达和激光雷达）可以提供更全面的洪水信息。\n\n5. 改进模型参数化：遥感数据可以为洪水模型提供必要的输入参数，如土地利用、土壤湿度和地形特征，从而提高模型的预测能力。\n\n6. 监测变化：遥感技术能够有效监测洪水前后的环境变化，帮助评估洪水的影响和恢复过程。\n\n7. 支持决策制定：通过提供准确的洪水信息，遥感数据可以帮助政府和应急管理机构制定更有效的应对策略。",
-                "AnswerEn": "The integration of remote sensing data can significantly improve the reliability of global flood analysis by providing additional observational data in ungauged areas. Although the first dedicated discharge estimation satellite mission is not yet launched, remote sensing can offer alternative data sources that complement existing ground-based measurements, enhancing spatial and temporal resolution and helping capture flood dynamics.",
-                "AnswerCn": "遥感数据的整合可以显著提高全球洪水分析的可靠性，因为它能够在无测站区域提供额外的观测数据。尽管首个专门的流量估算卫星任务尚未发射，遥感仍然可以提供替代数据源，补充现有的地面测量，增强空间和时间分辨率，并帮助捕捉洪水动态。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I'm unsure about how challenges in data collection are addressed when there are large gaps in river gauge data worldwide.",
-                "QuestionCn": "我不确定在全球河流水位计数据存在大缺口时，如何解决数据收集中的挑战。",
-                "AnswerEn": "Challenges in data collection due to large gaps in river gauge data are addressed by using remote sensing and modeling techniques to estimate river discharge. Calibration against global datasets and using models like VIC and RAPID with a matrix-based Muskingum method help in creating accurate simulations even in ungauged regions.",
-                "AnswerCn": "由于河流测量数据存在较大缺口，数据收集面临挑战，因此采用遥感和建模技术来估算河流流量。通过与全球数据集进行校准，并使用VIC和RAPID等模型结合基于矩阵的Muskingum方法，有助于在无测站区域创建准确的模拟。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "I can't make sense of how data validation is effectively conducted for datasets with such a vast temporal and spatial coverage.",
-                "QuestionCn": "我无法理解如何对具有如此广泛时间和空间覆盖的数据集有效地进行数据验证。",
-                "AnswerEn": "Data validation for datasets with vast temporal and spatial coverage is conducted by comparing model outputs with observed data from thousands of river gauges across the globe. The process involves ensuring that the model can accurately reconstruct flow values and flood events, with specific validation against 3-hourly and daily records.",
-                "AnswerCn": "对于具有广泛时间和空间覆盖的数据集，数据验证是通过将模型输出与全球数千个河流测量站的观测数据进行比较来进行的。该过程涉及确保模型能够准确重建流量值和洪水事件，并针对3小时和每日记录进行特定验证。",
-                "Level": "C2(Understanding)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Global Reach-level 3-hourly river f reanalysis (1980-2019)",
+        "referenceCn": null,
+        "referenceEn": "Yang, Y., Pan, M., Lin, P.R., Beck, H.E., Zeng, Z.Z., Yamazaki, D., David, C.H., Lu, H., Yang, K., Hong, Y., and Wood, E.F. (2021). Global Reach-level 3-hourly river flood reanalysis (1980-2019). Bulletin of the American Meteorological Society, 102(11), E2086-E2105."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Global reconstruction of naturalized river flows at 2.94 million reaches",
+        "referenceCn": null,
+        "referenceEn": "Lin, P., Pan, M., Beck, H.E., Yang, Y., Yamazaki, D., Frasson, R., David, C.H., Durand, M., Pavelsky, T., Allen, G., Gleason, C., & Wood, E.F. (2019). Global reconstruction of naturalized river flows at 2.94 million reaches. Water Resources Research, 55 (8), 6499-6516."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "全球水文",
+        "nameEn": "global hydrology"
+      },
+      {
+        "nameCn": "地表水",
+        "nameEn": "Surface Water"
+      },
+      {
+        "nameCn": "径流",
+        "nameEn": "Runoff"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "汇流模拟",
+        "nameEn": "river routing"
+      },
+      {
+        "nameCn": "洪水",
+        "nameEn": "Floods"
+      },
+      {
+        "nameCn": "流量",
+        "nameEn": "Discharge/Flow"
+      },
+      {
+        "nameCn": "陆面模式",
+        "nameEn": "land surface model"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Globe"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1980-2019",
+        "keywordEn": "1980-2019",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+        "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Floods are among the most frequent and costly natural disasters. According to a United Nations report (UNISDR 2015), floods accounted for 43% of occurrences of natural disasters during 1995–2015. The EM-DAT international disaster database indicates that fluvial floods contributed to two-thirds of flood events in the past two decades. Fluvial flood is the extreme upper tail of river hydrology that can happen at different scales. The lack of global long-term fine-scale (in both time and space) river discharge (Q) records has been the major hurdle for large-scale flood research. There are large gaps in river gauge data around the world as most gauges are concentrated in developed areas like North America and Europe. The other observational alternative is remote sensing, though the first satellite mission dedicated to discharge estimation will not launch until 2022. Continuous efforts have been made by the modeling community to quantify river discharge globally with increasingly finer spatial and temporal resolutions. Recent global studies with vector networks have illustrated their efficiency at high resolutions."
+      ],
+      "research objective": [
+        "This study will inherit the basic modeling framework established in GRADES, make considerable efforts to upgrade the spatial and temporal resolutions from 0.25° daily to 0.05° 3-hourly, extend the temporal coverage (1980–2019), and carry out flood-specific (high extremes) analysis at subdaily time scales."
+      ],
+      "challenges": [
+        "The lack of global long-term fine-scale (in both time and space) river discharge (Q) records has been the major hurdle for large-scale flood research. There are large gaps in river gauge data around the world as most gauges are concentrated in developed areas like North America and Europe. Model prediction errors are a combined result of model parameterization uncertainty and forcing (precipitation) errors, which are often hard to separate."
+      ],
+      "methods": [
+        "We downscaled forcing fields to 0.05° using fine-scale elevation as the correction factor for temperature (fixed lapse rate of −6.5°C km−1), surface pressure (hydrostatic), longwave radiation (lapse adjustment for radiative temperature), humidity (lapse adjustment for saturated vapor pressure), wind speed (bilinear interpolation), and precipitation (bilinear interpolation). To reduce model biases, we performed grid-level parameter calibration and bias correction (postprocessing) against ML-derived, global runoff characteristic maps from the Global Streamflow Characteristics Dataset (GSCD). Instead of calibrating VIC against limited gauge observations, we calibrated three VIC parameters (infiltration curve shape, second soil layer thickness, and nonlinear baseflow threshold) at 0.25° grid pixel level, using the baseflow index, mean runoff, and runoff percentiles (Q10 and Q90) from the GSCD, and then resampled the parameters to 0.05° by bilinear interpolation. To reduce the remaining model biases after calibration, we applied the sparse cumulative distribution function (CDF) matching bias correction approach, which corrects the VIC runoff biases against nine runoff percentiles (Q1, Q5, Q10, Q20, Q50, Q80, Q90, Q95, and Q99) from the GSCD. The model was spun up for the 10-yr period of 1969–78 forced with downscaled Princeton Global Forcing (PGF) which has an original resolution of 0.25°. We implemented RAPID, a river routing model that uses a matrix-based version of the Muskingum method to calculate the flow and volume of water for each reach on a river network. Here, RAPID is run using a 30-min time step and forced with 3-hourly lateral inflows from VIC runoff."
+      ],
+      "dataset": [
+        "Over CONUS, we compiled 3-hourly data over 9,000+ river gauges up to 2019 from the U.S. Geological Survey (USGS). After a similar screening, 6,000+ gauges match the river reaches being simulated and come with sufficient data for skill analysis. Validation of GRFR against 3-hourly flow records from 6,000+ gauges in CONUS and daily records from 14,000+ gauges globally shows good general skills of discharge estimates across all flow values, as well as good skills in reconstructing flood events (high extremes)."
+      ],
+      "findings": [
+        "Validation of GRFR against 3-hourly flow records from 6,000+ gauges in CONUS and daily records from 14,000+ gauges globally shows good general skills of discharge estimates across all flow values, as well as good skills in reconstructing flood events (high extremes). The effort to enable subdaily high-resolution modeling is expected to offer added values in capturing subdaily dynamics that may come with local and flashy events. The comparison between 3-hourly peaks and daily peaks highlights the significant benefit of (and need for) subdaily modeling for flood extremes. Precipitation sensitivity analysis suggests that, over well-gauged areas, the global product MSWEP performs very close to local product (Stage IV)."
+      ],
+      "backgroundCn": [
+        "洪水是最频繁和最昂贵的自然灾害之一。根据联合国的一份报告（UNISDR 2015），在1995年至2015年期间，洪水占自然灾害发生的43%。EM-DAT国际灾害数据库显示，在过去二十年中，河流洪水占洪水事件的三分之二。河流洪水是河流水文学的极端上尾，可能在不同规模上发生。全球长期细尺度（在时间和空间上）的河流流量（Q）记录的缺乏是大规模洪水研究的主要障碍。全球范围内河流测量数据存在较大缺口，因为大多数测量站集中在北美和欧洲等发达地区。另一种观察替代方案是遥感，尽管第一颗专门用于流量估算的卫星任务要到2022年才会发射。建模社区持续努力以越来越细的空间和时间分辨率量化全球河流流量。最近的全球研究通过矢量网络展示了其在高分辨率下的效率。"
+      ],
+      "research objectiveCn": [
+        "本研究将继承GRADES建立的基本建模框架，努力将空间和时间分辨率从0.25°每日升级到0.05°每3小时，扩展时间覆盖范围（1980-2019），并在亚日尺度上进行特定于洪水（高极端值）分析。"
+      ],
+      "challengesCn": [
+        "全球长期细尺度（在时间和空间上）河流流量（Q）记录的缺乏是大规模洪水研究的主要障碍。世界各地的河流测量数据存在较大缺口，因为大多数测量站集中在北美和欧洲等发达地区。模型预测误差是模型参数不确定性和强迫（降水）误差的综合结果，这两者往往难以分开。"
+      ],
+      "methodsCn": [
+        "我们将强迫场降尺度至0.05°，使用细尺度的高程作为温度的修正因子（固定的垂直递减率为−6.5°C km−1）、地表气压（静力学）、长波辐射（辐射温度的递减调整）、湿度（饱和水汽压的递减调整）、风速（双线性插值）和降水（双线性插值）。为了减少模型偏差，我们对比全球流域特征数据集（GSCD）中基于机器学习的全球径流特征图进行了网格级参数校准和偏差修正（后处理）。我们没有针对有限的水文观测数据校准VIC，而是在0.25°网格像元级别上，使用GSCD中的基流指数、平均径流和径流百分位数（Q10和Q90）校准了三个VIC参数（入渗曲线形状、第二土壤层厚度和非线性基流阈值），然后通过双线性插值将参数重采样至0.05°。为了减少校准后剩余的模型偏差，我们应用了稀疏累积分布函数（CDF）匹配偏差修正方法，该方法针对GSCD中的九个径流百分位数（Q1、Q5、Q10、Q20、Q50、Q80、Q90、Q95和Q99）修正VIC的径流偏差。模型在1969年至1978年的10年期间进行了预热，强迫使用降尺度的普林斯顿全球强迫（PGF），其原始分辨率为0.25°。我们实施了RAPID，一个河流路由模型，使用基于矩阵的穆斯金根方法计算河流网络中每个河段的水流和水量。在这里，RAPID以30分钟的时间步长运行，并使用来自VIC径流的3小时侧向流入进行强迫。"
+      ],
+      "datasetCn": [
+        "在美国大陆（CONUS），我们从美国地质调查局（USGS）收集了截至2019年的3小时数据，涉及9000多个河流测量站。经过类似的筛选，6000多个测量站与正在模拟的河流段匹配，并且有足够的数据进行技能分析。对GRFR进行验证，使用了CONUS中6000多个测量站的3小时流量记录以及全球14000多个测量站的日常记录，结果显示在所有流量值上，流量估计的整体技能良好，并且在重建洪水事件（高极值）方面也表现出良好的技能。"
+      ],
+      "findingsCn": [
+        "对美国大陆地区（CONUS）6000多个水文站的3小时流量记录和全球14000多个水文站的日流量记录进行的GRFR验证显示，流量估计在所有流量值上具有良好的总体技能，并且在重建洪水事件（高极值）方面也表现良好。为了实现亚日高分辨率建模的努力，预计将为捕捉伴随局部和快速变化事件的亚日动态提供附加价值。3小时峰值与日峰值之间的比较突显了亚日建模在洪水极值中的显著益处（和必要性）。降水敏感性分析表明，在监测良好的区域，全球产品MSWEP的表现与地方产品（Stage IV）非常接近。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Is it confirmed that the lack of global fine-scale river discharge records poses a challenge in large-scale flood research?",
+        "QuestionCn": "缺乏全球细尺度河流排放记录是否已确认对大规模洪水研究构成挑战？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Does the data collection method include calibration of parameters specifically against global runoff characteristic maps instead of limited gauge observations?",
+        "QuestionCn": "数据收集方法是否包括针对全球径流特征图而不是有限的水文观测站进行参数校准？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Are the model biases in river discharge datasets more effectively reduced using grid-level parameter calibration, bias correction through CDF matching, or some other technique?",
+        "QuestionCn": "河流流量数据集中的模型偏差是通过网格级参数校准、CDF匹配的偏差修正，还是其他技术更有效地减少的？",
+        "AnswerEn": "grid-level parameter calibration",
+        "AnswerCn": "网格级参数校准",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the common challenges faced in collecting global long-term fine-scale river discharge records?",
+        "QuestionCn": "收集全球长期细尺度河流流量记录时面临的常见挑战有哪些？",
+        "AnswerEn": "gaps in river gauge data",
+        "AnswerCn": "河流水位监测数据的缺口",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method that addresses the challenge of sparse river gauge data in developing areas?",
+        "QuestionCn": "您能否提供一个数据收集方法的例子，以解决发展中地区稀疏河流水位计数据的挑战？",
+        "AnswerEn": "An example of a data collection method that addresses the challenge of sparse river gauge data in developing areas is the use of remote sensing combined with a global hydrological model. The model utilizes downscaled forcing fields and grid-level parameter calibration to simulate river discharge with improved spatial and temporal resolution, as seen in the modeling approaches described for enhancing discharge estimation globally.",
+        "AnswerCn": "一种解决发展地区稀疏河流测量数据挑战的数据收集方法是结合遥感技术和全球水文模型。该模型利用下调的强迫场和网格级参数校准，以提高河流流量的空间和时间分辨率，正如全球流量估算增强建模方法中所描述的那样。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a methodological approach to improve the accuracy of river discharge models?",
+        "QuestionCn": "提高河流流量模型准确性的一个方法论方法的例子是什么？",
+        "AnswerEn": "An example of a methodological approach to improve the accuracy of river discharge models is the use of bias correction techniques such as the sparse cumulative distribution function (CDF) matching approach. This method corrects biases in runoff predictions by adjusting model output against observed runoff percentiles from a global dataset, thereby enhancing the model's ability to reproduce both typical and extreme flood events.",
+        "AnswerCn": "一种提高河流流量模型准确性的研究方法是使用偏差修正技术，例如稀疏累积分布函数（CDF）匹配方法。该方法通过将模型输出与全球数据集中的观测径流百分位数进行调整，来修正径流预测中的偏差，从而增强模型再现典型和极端洪水事件的能力。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Could you provide an example of a dataset that supports global flood research by offering fine-scale temporal and spatial data?",
+        "QuestionCn": "您能否提供一个支持全球洪水研究的数据集，该数据集提供细粒度的时间和空间数据？",
+        "AnswerEn": "An example of a dataset that supports global flood research by offering fine-scale temporal and spatial data is the 全球3小时河道洪水再分析数据GRFR V1.0, which includes global 0.05-degree, 3-hourly/diurnal land surface runoff data, simulated natural runoff data for 2.94 million river reaches, and flood event data. This dataset helps in capturing the dynamics of flood events across various regions, including data-scarce areas.",
+        "AnswerCn": "一个支持全球洪水研究的数据集是全球3小时河道洪水再分析数据GRFR V1.0，该数据集包括全球0.05度、每3小时/日的地表径流数据、294万条河流的模拟自然径流数据和洪水事件数据。该数据集有助于捕捉各个地区洪水事件的动态，包括数据稀缺地区的数据。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the distinguishing features of river discharge datasets that are derived from fine-scale spatial and temporal resolutions?",
+        "QuestionCn": "从细尺度空间和时间分辨率衍生的河流流量数据集的区别特征是什么？",
+        "AnswerEn": "0.05° resolution, 3-hour intervals, high-resolution data, distributed hydrological models, river routing models, calibrated against global runoff characteristics, corrected for biases",
+        "AnswerCn": "0.05°分辨率，3小时间隔，高分辨率数据，分布式水文模型，河流汇流模型，针对全球径流特征进行校准，校正偏差。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many river segments are included in the global dataset used for river simulation?",
+        "QuestionCn": "全球河流模拟所使用的数据集中包含多少条河流段？",
+        "AnswerEn": "2.94 million",
+        "AnswerCn": "294万",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many river gauges in the United States (CONUS) were used for skill analysis and validation of flow estimates?",
+        "QuestionCn": "在美国（CONUS）用于流量估计的技能分析和验证的河流测量站有多少个？",
+        "AnswerEn": "6,000",
+        "AnswerCn": "6,000",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the calibration and bias correction techniques used in the river discharge modeling compare to traditional river gauge methods in terms of accuracy and reliability?",
+        "QuestionCn": "河流流量建模中使用的校准和偏差修正技术与传统河流测量方法在准确性和可靠性方面如何比较？",
+        "AnswerEn": "The calibration and bias correction techniques in the river discharge modeling involve grid-level parameter calibration and bias correction against global runoff characteristic maps, as well as a sparse cumulative distribution function (CDF) matching bias correction. These techniques aim to reduce model biases and improve accuracy, offering a robust alternative to traditional river gauge methods, which are limited by sparse global coverage and concentration in developed areas. The modeling approach has been shown to accurately reconstruct flood events and general discharge estimates.",
+        "AnswerCn": "河流流量建模中的校准和偏差修正技术涉及网格级参数校准和针对全球径流特征图的偏差修正，以及稀疏的累积分布函数（CDF）匹配偏差修正。这些技术旨在减少模型偏差并提高准确性，提供了一种比传统河流测量方法更为稳健的替代方案，后者受到全球覆盖稀疏和集中在发达地区的限制。这种建模方法已被证明能够准确重建洪水事件和一般流量估计。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How does the use of fine-scale elevation as a correction factor in downscaling forcing fields influence the accuracy of river discharge simulations?",
+        "QuestionCn": "细尺度高程作为修正因子在下调强迫场中的使用如何影响河流流量模拟的准确性？",
+        "AnswerEn": "The use of fine-scale elevation as a correction factor helps in adjusting for temperature, surface pressure, and other meteorological parameters, thereby reducing errors in model predictions and improving the accuracy of river discharge simulations.",
+        "AnswerCn": "使用细尺度海拔作为修正因子有助于调整温度、地表压力和其他气象参数，从而减少模型预测中的误差，提高河流流量模拟的准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the implications of model parameterization uncertainty and precipitation errors on the outcomes of river discharge modeling?",
+        "QuestionCn": "模型参数化不确定性和降水误差对河流流量建模结果的影响是什么？",
+        "AnswerEn": "Model parameterization uncertainty and precipitation errors can significantly impact the accuracy of river discharge modeling, making it difficult to separate the two and necessitating robust calibration and bias correction methods to mitigate these issues.",
+        "AnswerCn": "模型参数化不确定性和降水误差会显著影响河流流量建模的准确性，使得分离这两者变得困难，因此需要强有力的校准和偏差修正方法来减轻这些问题。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the need for model calibration and bias correction in hydrological datasets?",
+        "QuestionCn": "导致水文数据集需要模型校准和偏差修正的原因是什么？",
+        "AnswerEn": "Model prediction errors can arise from uncertainties in model parameterization and forcing errors, such as precipitation. To address these issues, calibration against global runoff maps and bias correction methods, like sparse cumulative distribution function matching, are necessary to reduce biases and improve the accuracy of river discharge estimates.",
+        "AnswerCn": "模型预测误差可能源于模型参数化的不确定性和强迫误差，例如降水。为了解决这些问题，需要针对全球径流图进行校准和偏差修正方法，如稀疏累积分布函数匹配，以减少偏差并提高河流流量估计的准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential consequences of using distributed hydrological models and river routing models for high-resolution global river discharge simulations?",
+        "QuestionCn": "使用分布式水文模型和河流输送模型进行高分辨率全球河流流量模拟的潜在后果是什么？",
+        "AnswerEn": "The use of distributed hydrological models like VIC and river routing models such as RAPID can result in the capability to simulate global high-resolution natural river runoff systems with improved accuracy. These models allow for better replication of 3-hourly and daily river discharge processes and enhance the ability to capture flood events, which is particularly beneficial for regions lacking observational data.",
+        "AnswerCn": "使用分布式水文模型如VIC和河流路由模型如RAPID，可以实现对全球高分辨率自然河流径流系统的模拟，且精度得到提升。这些模型能够更好地复制每3小时和每日的河流流量过程，并增强捕捉洪水事件的能力，这对缺乏观测数据的地区尤其有利。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What effects might arise from the calibration and bias correction of hydrological models using global runoff characteristic maps?",
+        "QuestionCn": "使用全球径流特征图对水文模型进行校准和偏差修正可能会产生哪些影响？",
+        "AnswerEn": "Calibrating and applying bias correction to hydrological models using global runoff characteristic maps can significantly reduce model biases, improving the accuracy of discharge estimates. This process allows the models to better match observed runoff characteristics, enhancing their overall performance in simulating river discharge and reconstructing flood events, especially in regions with sparse observational data.",
+        "AnswerCn": "通过使用全球径流特征图对水文模型进行校准和偏差修正，可以显著减少模型偏差，提高排水估计的准确性。这个过程使模型能够更好地匹配观测到的径流特征，从而增强其在模拟河流排水和重建洪水事件方面的整体性能，特别是在观测数据稀缺的地区。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to enhance the spatial and temporal resolutions of river discharge data globally?",
+        "QuestionCn": "提高全球河流流量数据的空间和时间分辨率为何重要？",
+        "AnswerEn": "Enhancing the spatial and temporal resolutions of river discharge data globally is crucial because it enables more accurate and detailed flood-specific analysis at subdaily time scales. This improvement helps in capturing the dynamics of local and flashy flood events, which are not adequately represented in coarser datasets. Additionally, it addresses the significant gaps in river gauge data in less-developed areas, thereby facilitating better understanding and prediction of flood events across different regions.",
+        "AnswerCn": "提高全球河流流量数据的空间和时间分辨率至关重要，因为这可以在亚日尺度上进行更准确和详细的洪水特定分析。这一改进有助于捕捉局部和快速洪水事件的动态，而这些在较粗糙的数据集中并未得到充分体现。此外，它还解决了欠发达地区河流测量数据的显著缺口，从而促进了对不同地区洪水事件的更好理解和预测。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "How do researchers aim to overcome the challenges associated with the lack of fine-scale river discharge records globally?",
+        "QuestionCn": "研究人员如何克服全球范围内缺乏精细河流流量记录所带来的挑战？",
+        "AnswerEn": "Researchers aim to overcome the challenges associated with the lack of fine-scale river discharge records globally by employing model parameter calibration and bias correction techniques. They downscale forcing fields using fine-scale elevation corrections, calibrate model parameters at grid levels using global runoff characteristics datasets, and apply bias correction approaches to adjust model outputs against observed data. These efforts are complemented by using a combination of hydrological and river routing models to simulate river discharges with improved accuracy and resolution.",
+        "AnswerCn": "研究人员旨在通过采用模型参数校准和偏差修正技术，克服全球缺乏细尺度河流流量记录的挑战。他们使用细尺度的高程修正对强迫场进行降尺度，在网格级别上利用全球径流特征数据集校准模型参数，并应用偏差修正方法对模型输出进行调整，以与观测数据相匹配。这些努力还结合了水文模型和河流路由模型，以更高的准确性和分辨率模拟河流流量。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "How can high-resolution spatial and temporal river discharge data be obtained and refined for global flood research?",
+        "QuestionCn": "如何获取和精炼高分辨率的空间和时间河流流量数据，以用于全球洪水研究？",
+        "AnswerEn": "High-resolution spatial and temporal river discharge data can be obtained by downscaling forcing fields to a finer grid using elevation as a correction factor for various meteorological variables such as temperature, pressure, and precipitation. Additionally, a model calibration process is employed, where parameters are calibrated against global runoff characteristic maps and biases are corrected using a sparse CDF matching bias correction approach. A river routing model like RAPID is then used to simulate river flow using inflows from a hydrological model.",
+        "AnswerCn": "高分辨率的空间和时间河流流量数据可以通过将强迫场下调至更细的网格来获得，使用海拔作为各种气象变量（如温度、压力和降水）的修正因子。此外，还采用模型校准过程，其中参数根据全球径流特征图进行校准，并使用稀疏CDF匹配偏差校正方法进行偏差修正。然后，使用像RAPID这样的河流路由模型，利用水文模型的流入量来模拟河流流量。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What methodologies are utilized to address the challenge of data scarcity in river gauge observations for flood modeling?",
+        "QuestionCn": "为了解决洪水建模中河流测量观测数据稀缺的挑战，采用了哪些方法论？",
+        "AnswerEn": "To address data scarcity in river gauge observations, methodologies such as remote sensing, model calibration against global runoff data, and bias correction techniques are employed. The model parameters are calibrated using global datasets like the Global Streamflow Characteristics Dataset (GSCD), and biases are corrected against runoff percentiles from the same dataset. This approach reduces reliance on limited local gauge data and enhances model accuracy.",
+        "AnswerCn": "为了应对河流水位观测数据稀缺的问题，采用了遥感、基于全球径流数据的模型校准和偏差修正技术等方法。模型参数使用全球数据集，如全球流域特征数据集（GSCD）进行校准，并根据同一数据集的径流百分位数进行偏差修正。这种方法减少了对有限的地方水位数据的依赖，提高了模型的准确性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What procedural steps are involved in validating a river discharge modeling system against observational data?",
+        "QuestionCn": "验证河流流量建模系统与观测数据的程序步骤有哪些？",
+        "AnswerEn": "The validation of a river discharge modeling system involves compiling observational data from river gauges, conducting skill analysis by comparing model outputs with observed flow records, and assessing the model's ability to reconstruct flood events. For instance, validation can be carried out using 3-hourly flow records from thousands of river gauges in well-monitored areas like CONUS and daily records from global gauges, demonstrating the model's accuracy across various flow values and its efficacy in capturing flood extremes.",
+        "AnswerCn": "河流流量建模系统的验证涉及汇编来自河流测量站的观测数据，通过将模型输出与观测流量记录进行比较来进行技能分析，并评估模型重建洪水事件的能力。例如，可以使用来自监测良好的地区（如CONUS）的数千个河流测量站的3小时流量记录，以及来自全球测量站的日记录来进行验证，从而展示模型在各种流量值下的准确性及其捕捉洪水极端事件的有效性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What data collection techniques enable the simulation of global high-resolution natural river runoff systems?",
+        "QuestionCn": "哪些数据收集技术能够模拟全球高分辨率自然河流径流系统？",
+        "AnswerEn": "The simulation of global high-resolution natural river runoff systems is enabled by a combination of distributed hydrological models like VIC and river routing models like RAPID, which use multi-source data and modeling techniques. This includes downscaling forcing fields to fine spatial resolutions and calibrating model parameters against global runoff characteristic maps, with further bias correction applied.",
+        "AnswerCn": "全球高分辨率自然河流径流系统的模拟得益于分布式水文模型（如VIC）和河流路由模型（如RAPID）的结合，这些模型使用多源数据和建模技术。这包括将强迫场降尺度到细空间分辨率，并根据全球径流特征图校准模型参数，随后还进行偏差修正。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What role do technological advancements in remote sensing and modeling play in addressing the challenges of data scarcity in global flood research?",
+        "QuestionCn": "技术进步在遥感和建模方面在应对全球洪水研究中数据稀缺的挑战中发挥了什么作用？",
+        "AnswerEn": "Technological advancements in remote sensing and modeling help address data scarcity by offering alternative observational methods and enabling the development of global high-resolution datasets. These advancements support efforts to quantify river discharge with finer spatial and temporal resolutions, bridging gaps left by the uneven distribution of river gauge data, particularly in less developed regions.",
+        "AnswerCn": "遥感和建模技术的进步通过提供替代观测方法和支持全球高分辨率数据集的开发，帮助解决数据稀缺问题。这些进展支持以更精细的空间和时间分辨率量化河流流量，弥补了河流测量数据分布不均所留下的空白，特别是在欠发达地区。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might there be challenges in obtaining fine-scale river discharge records globally?",
+        "QuestionCn": "获取全球细尺度河流流量记录可能面临的挑战是什么？",
+        "AnswerEn": "The lack of global long-term fine-scale river discharge records is a major challenge due to large gaps in river gauge data, which are mostly concentrated in developed areas like North America and Europe. Remote sensing is an alternative, but the first satellite mission dedicated to discharge estimation will not launch until 2022.",
+        "AnswerCn": "全球长期细尺度河流流量记录的缺乏是一个主要挑战，因为河流测量数据存在大量空白，这些空白主要集中在北美和欧洲等发达地区。遥感是一种替代方案，但首个专门用于流量估算的卫星任务要到2022年才会发射。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the expected outcomes of implementing subdaily high-resolution modeling in flood research?",
+        "QuestionCn": "实施亚日高分辨率建模在洪水研究中的预期结果是什么？",
+        "AnswerEn": "Subdaily high-resolution modeling is expected to offer added values in capturing subdaily dynamics that may come with local and flashy flood events. It highlights the significant benefits and needs for subdaily modeling to accurately reconstruct flood events and provide better estimates of discharge across all flow values.",
+        "AnswerCn": "亚日高分辨率建模预计将在捕捉可能伴随局部和突发性洪水事件的亚日动态方面提供附加价值。这突显了亚日建模在准确重建洪水事件和提供更好流量估算方面的显著益处和需求。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why might there be difficulties in separating model prediction errors in large-scale flood research?",
+        "QuestionCn": "在大规模洪水研究中，分离模型预测误差可能会面临困难的原因是什么？",
+        "AnswerEn": "Model prediction errors are often difficult to separate because they result from a combination of model parameterization uncertainty and forcing errors, such as those from precipitation data. The complexity in differentiating these factors contributes to the challenges in large-scale flood research.",
+        "AnswerCn": "模型预测误差往往难以分离，因为它们是由模型参数不确定性和强迫误差（例如降水数据中的误差）共同导致的。区分这些因素的复杂性加大了大规模洪水研究的挑战。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "What are the main challenges faced in enhancing the accuracy of river discharge models, and how can they be addressed?",
+        "QuestionCn": "提高河流流量模型准确性面临的主要挑战是什么，以及如何解决这些挑战？",
+        "AnswerEn": "The main challenges in enhancing the accuracy of river discharge models include model parameterization uncertainty and forcing errors, which are difficult to separate. These challenges can be addressed by performing grid-level parameter calibration, bias correction, and using advanced downscaling techniques, as well as integrating more comprehensive observational data from sources like the Global Streamflow Characteristics Dataset.",
+        "AnswerCn": "提高河流流量模型准确性的主要挑战包括模型参数不确定性和强迫误差，这些问题难以分离。可以通过进行网格级参数校准、偏差修正和使用先进的降尺度技术，以及整合来自全球流域特征数据集等来源的更全面的观测数据来解决这些挑战。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In what ways can the integration of remote sensing data improve the reliability of global flood analysis, especially in ungauged areas?",
+        "QuestionCn": "遥感数据的整合可以通过哪些方式提高全球洪水分析的可靠性，特别是在无测量数据的地区？",
+        "AnswerEn": "The integration of remote sensing data can significantly improve the reliability of global flood analysis by providing additional observational data in ungauged areas. Although the first dedicated discharge estimation satellite mission is not yet launched, remote sensing can offer alternative data sources that complement existing ground-based measurements, enhancing spatial and temporal resolution and helping capture flood dynamics.",
+        "AnswerCn": "遥感数据的整合可以显著提高全球洪水分析的可靠性，因为它能够在无测站区域提供额外的观测数据。尽管首个专门的流量估算卫星任务尚未发射，遥感仍然可以提供替代数据源，补充现有的地面测量，增强空间和时间分辨率，并帮助捕捉洪水动态。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I'm unsure about how challenges in data collection are addressed when there are large gaps in river gauge data worldwide.",
+        "QuestionCn": "我不确定在全球河流水位计数据存在大缺口时，如何解决数据收集中的挑战。",
+        "AnswerEn": "Challenges in data collection due to large gaps in river gauge data are addressed by using remote sensing and modeling techniques to estimate river discharge. Calibration against global datasets and using models like VIC and RAPID with a matrix-based Muskingum method help in creating accurate simulations even in ungauged regions.",
+        "AnswerCn": "由于河流测量数据存在较大缺口，数据收集面临挑战，因此采用遥感和建模技术来估算河流流量。通过与全球数据集进行校准，并使用VIC和RAPID等模型结合基于矩阵的Muskingum方法，有助于在无测站区域创建准确的模拟。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "I can't make sense of how data validation is effectively conducted for datasets with such a vast temporal and spatial coverage.",
+        "QuestionCn": "我无法理解如何对具有如此广泛时间和空间覆盖的数据集有效地进行数据验证。",
+        "AnswerEn": "Data validation for datasets with vast temporal and spatial coverage is conducted by comparing model outputs with observed data from thousands of river gauges across the globe. The process involves ensuring that the model can accurately reconstruct flow values and flood events, with specific validation against 3-hourly and daily records.",
+        "AnswerCn": "对于具有广泛时间和空间覆盖的数据集，数据验证是通过将模型输出与全球数千个河流测量站的观测数据进行比较来进行的。该过程涉及确保模型能够准确重建流量值和洪水事件，并针对3小时和每日记录进行特定验证。",
+        "Level": "C2(Understanding)"
+      }
+    ]
+  }
 }

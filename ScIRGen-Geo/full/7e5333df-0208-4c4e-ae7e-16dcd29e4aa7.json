@@ -1,556 +1,556 @@
 {
-    "id": "7e5333df-0208-4c4e-ae7e-16dcd29e4aa7",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": "1km seamless land surface temperature dataset of China (2002-2020)",
-            "titleCn": "中国区域1km无缝地表温度数据集（2002-2020）",
-            "description": "Kilometer-level spatially complete (seamless) land surface temperature products have a wide range of applications needs in climate change and other fields. Satellite retrieved LST has high reliability. Integrating the LST retrieved from thermal infrared and microwave remote sensing observation is an effective way to obtain the SLT with certain accuracy and spatial integrity. Based on this guiding ideology, the author developed a framework for retrieving 1km and seamless LST over China landmass, and generated the LST data set accordingly (2002-2020)\n\nFirstly, a look-up table based empirical retrieval algorithm is developed for retrieving microwave LST from AMSR-E/AMSR2 observations. Then, AMSR-E/AMSR2 LST is downscaled by using geographic weighted regression to obtain 1km LST. Finally, the multi-scale Kalman filter is used to fuse AMSR-E/AMSR2 LST and MODIS LST to generate a 1km seamless LST data set.\n\nThe ground valuation results show that the root mean square error (RMSE) of the 1km seamless LST is about 3K. In addition, the spatial distribution of the 1km seamless LST is consistent with MODIS LST and CLDAS LST.",
-            "descriptionCn": "公里级、空间完整（无缝）的地表温度产品在全球变化等领域具有广泛的应用需求。基于遥感观测反演的地表温度具有较高的可信度，融合从热红外和微波观测反演的地表温度，是获取具有一定精度、空间完整地表温度的有效途径。基于这一指导思想，作者发展了反演中国区域1km、无缝地表温度的方法框架，并生成了相应的数据集（2002-2020）.\n\n首先采用基于查找表的AMSR-E/AMSR2 地表温度反演算法反演得到AMSR-E/AMSR2 地表温度，之后采用地理加权回归对AMSR-E/AMSR2 地表温度进行降尺度，得到1km 地表温度，最后使用多尺度卡尔曼滤波融合AMSR-E/AMSR2 1km地表温度和MODIS地表温度，生成1km无缝地表温度数据集。\n\n地面验证评价结果表明，该LST的均方根误差（RMSE）约为3K，空间分布于MODIS LST、CLDAS LST的一致性较好。",
-            "instructions": "File naming convention: MYD.ALLSKY.LST.yyyymmdd.flag.hdf (yyyymmdd: year, month, day, flag: identification of day and night, with values of 'Day' or 'Night', representing day and night respectively). For example, MYD.ALLSKY.LST.20100101.Day.hdf represents the surface temperature in the day on January 1, 2010.\nData format:. HDF\nData Description: each HDF file contains four sub datasets: Latitude, Longitude, Lst and Lst _ QC indicates latitude, longitude, land surface temperature products and quality control file respectively\nLatitude: latitude data of the product. The data type is 64 byte floating-point type, and the data unit is degrees,the filling value is 999;\nLongitude: longitude data of the product, the data type is 64 byte floating-point type, and the data unit is degrees,the filling value is 999;\nLst: all-weather surface temperature results, the data type is 16 byte unsigned integer, the data unit is k, the filling value is 0, scale is 0.02, offset is 0, that is, the real LST = LST * 0.02;\nLst_ QC: quality identification of all-weather surface temperature. See the data description document for the specific value meaning. The data type is 8-byte unsigned integer and the filling value is 255.\nData reading mode: it is stored in HDF format and can be processed by ArcGIS and other software or MATLAB\nData version No.: v1",
-            "instructionsCn": "文件命名约定：MYD.ALLSKY.LST.yyyymmdd.flag.hdf（yyyymmdd：年月日，flag：白天和夜晚的标识，取值为’Day’或者’Night’，分别代表白天和夜晚），比如 MYD.ALLSKY.LST.20100101.Day.hdf，表示2010年1月1日白天的地表温度。\n数据格式：.hdf\n数据说明：每个hdf文件包含四个子数据集Latitude、Longitude、Lst、Lst_QC分别表示纬度、经度、地表温度产品、质量控制文件\nLatitude: 产品的纬度数据，数据类型为64字节浮点型，数据单位为度，填充值为999；\nLongitude: 产品的经度数据，数据类型为64字节浮点型，数据单位为度填充值为999；\nLst:全天候地表温度结果，数据类型为16字节无符号整型，数据单位为K，填充值为0，scale为0.02，offset为0，即真实的Lst = Lst*0.02；\nLst_QC:全天候地表温度的质量标识，具体值含义详见数据说明文档，数据类型为8字节无符号整型，填充值为255。\n数据读取方式：以hdf格式存储，可用Arcgis等软件或matlab等进行处理\n数据版本号：V1",
-            "east": 134.99,
-            "west": 73.55,
-            "south": 18.33,
-            "north": 53.47,
-            "startTime": "2002-07-04 00:00:00",
-            "endTime": "2020-12-31 11:59:59",
-            "fileSize": 149036142188.0,
-            "cstr": "18406.11.Meteoro.tpdc.271657",
-            "doi": "10.11888/Meteoro.tpdc.271657",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "程洁",
-                "nameEn": "CHENG Jie",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "董胜越",
-                "nameEn": "DONG Shengyue",
-                "unitEn": "",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "施建成",
-                "nameEn": "SHI Jiancheng",
-                "unitEn": "",
-                "unitCn": "中国科学院国家空间科学中心"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A new land surface temperature fusion strategy based on cumulative distribution function matching and multiresolution Kalman fltering",
-                "referenceCn": null,
-                "referenceEn": "Xu, S., & Cheng, J. (2021). A new land surface temperature fusion strategy based on cumulative distribution function matching and multiresolution Kalman filtering. Remote Sensing of Environment, 254, 112256"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A Stepwise Downscaling Method for Generating High-Resolution Land Surface Temperature From AMSR-E Data",
-                "referenceCn": null,
-                "referenceEn": "Zhang, Q., Wang, N., Cheng, J., & Xu, S. (2020). A Stepwise Downscaling Method for Generating High-Resolution Land Surface Temperature From AMSR-E Data. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 13, 5669-5681"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "An Empirical Algorithm for Retrieving Land Surface Temperature From AMSR-E Data Considering the Comprehensive Effects of Environmental Variables",
-                "referenceCn": null,
-                "referenceEn": "Zhang, Q., & Cheng, J. (2020). An Empirical Algorithm for Retrieving Land Surface Temperature From AMSR-E Data Considering the Comprehensive Effects of Environmental Variables. Earth and Space Science, 7, e2019EA001006. https://doi.org/10.1029/2019EA001006"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "冰冻圈遥感",
-                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
-            },
-            {
-                "nameCn": "冰冻圈遥感产品",
-                "nameEn": "Cryosphere remote sensing products"
-            },
-            {
-                "nameCn": "地表温度",
-                "nameEn": "land surface temperature"
-            },
-            {
-                "nameCn": "大气遥感",
-                "nameEn": "Atmosphere Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2002-2020",
-                "keywordEn": "2002-2020",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "日",
-                "keywordEn": "Daily",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            },
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究：亚洲水塔区水循环动态监测与模拟",
-                "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program: Dynamic monitoring and simulation of water cycle in Asian water tower region"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            },
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山地区冰川边界（2018）",
-                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
-            },
-            {
-                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
-                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
-            },
-            {
-                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
-                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
-            },
-            {
-                "titleCn": "北半球湖冰物候数据集（1978-2018）",
-                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
-            },
-            {
-                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
-                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
-            },
-            {
-                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
-                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
-            },
-            {
-                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
-                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
-            },
-            {
-                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
-                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
-            },
-            {
-                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
-                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
-            }
-        ]
+  "id": "7e5333df-0208-4c4e-ae7e-16dcd29e4aa7",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": "1km seamless land surface temperature dataset of China (2002-2020)",
+      "titleCn": "中国区域1km无缝地表温度数据集（2002-2020）",
+      "description": "Kilometer-level spatially complete (seamless) land surface temperature products have a wide range of applications needs in climate change and other fields. Satellite retrieved LST has high reliability. Integrating the LST retrieved from thermal infrared and microwave remote sensing observation is an effective way to obtain the SLT with certain accuracy and spatial integrity. Based on this guiding ideology, the author developed a framework for retrieving 1km and seamless LST over China landmass, and generated the LST data set accordingly (2002-2020)\n\nFirstly, a look-up table based empirical retrieval algorithm is developed for retrieving microwave LST from AMSR-E/AMSR2 observations. Then, AMSR-E/AMSR2 LST is downscaled by using geographic weighted regression to obtain 1km LST. Finally, the multi-scale Kalman filter is used to fuse AMSR-E/AMSR2 LST and MODIS LST to generate a 1km seamless LST data set.\n\nThe ground valuation results show that the root mean square error (RMSE) of the 1km seamless LST is about 3K. In addition, the spatial distribution of the 1km seamless LST is consistent with MODIS LST and CLDAS LST.",
+      "descriptionCn": "公里级、空间完整（无缝）的地表温度产品在全球变化等领域具有广泛的应用需求。基于遥感观测反演的地表温度具有较高的可信度，融合从热红外和微波观测反演的地表温度，是获取具有一定精度、空间完整地表温度的有效途径。基于这一指导思想，作者发展了反演中国区域1km、无缝地表温度的方法框架，并生成了相应的数据集（2002-2020）.\n\n首先采用基于查找表的AMSR-E/AMSR2 地表温度反演算法反演得到AMSR-E/AMSR2 地表温度，之后采用地理加权回归对AMSR-E/AMSR2 地表温度进行降尺度，得到1km 地表温度，最后使用多尺度卡尔曼滤波融合AMSR-E/AMSR2 1km地表温度和MODIS地表温度，生成1km无缝地表温度数据集。\n\n地面验证评价结果表明，该LST的均方根误差（RMSE）约为3K，空间分布于MODIS LST、CLDAS LST的一致性较好。",
+      "instructions": "File naming convention: MYD.ALLSKY.LST.yyyymmdd.flag.hdf (yyyymmdd: year, month, day, flag: identification of day and night, with values of 'Day' or 'Night', representing day and night respectively). For example, MYD.ALLSKY.LST.20100101.Day.hdf represents the surface temperature in the day on January 1, 2010.\nData format:. HDF\nData Description: each HDF file contains four sub datasets: Latitude, Longitude, Lst and Lst _ QC indicates latitude, longitude, land surface temperature products and quality control file respectively\nLatitude: latitude data of the product. The data type is 64 byte floating-point type, and the data unit is degrees,the filling value is 999;\nLongitude: longitude data of the product, the data type is 64 byte floating-point type, and the data unit is degrees,the filling value is 999;\nLst: all-weather surface temperature results, the data type is 16 byte unsigned integer, the data unit is k, the filling value is 0, scale is 0.02, offset is 0, that is, the real LST = LST * 0.02;\nLst_ QC: quality identification of all-weather surface temperature. See the data description document for the specific value meaning. The data type is 8-byte unsigned integer and the filling value is 255.\nData reading mode: it is stored in HDF format and can be processed by ArcGIS and other software or MATLAB\nData version No.: v1",
+      "instructionsCn": "文件命名约定：MYD.ALLSKY.LST.yyyymmdd.flag.hdf（yyyymmdd：年月日，flag：白天和夜晚的标识，取值为’Day’或者’Night’，分别代表白天和夜晚），比如 MYD.ALLSKY.LST.20100101.Day.hdf，表示2010年1月1日白天的地表温度。\n数据格式：.hdf\n数据说明：每个hdf文件包含四个子数据集Latitude、Longitude、Lst、Lst_QC分别表示纬度、经度、地表温度产品、质量控制文件\nLatitude: 产品的纬度数据，数据类型为64字节浮点型，数据单位为度，填充值为999；\nLongitude: 产品的经度数据，数据类型为64字节浮点型，数据单位为度填充值为999；\nLst:全天候地表温度结果，数据类型为16字节无符号整型，数据单位为K，填充值为0，scale为0.02，offset为0，即真实的Lst = Lst*0.02；\nLst_QC:全天候地表温度的质量标识，具体值含义详见数据说明文档，数据类型为8字节无符号整型，填充值为255。\n数据读取方式：以hdf格式存储，可用Arcgis等软件或matlab等进行处理\n数据版本号：V1",
+      "east": 134.99,
+      "west": 73.55,
+      "south": 18.33,
+      "north": 53.47,
+      "startTime": "2002-07-04 00:00:00",
+      "endTime": "2020-12-31 11:59:59",
+      "fileSize": 149036142188.0,
+      "cstr": "18406.11.Meteoro.tpdc.271657",
+      "doi": "10.11888/Meteoro.tpdc.271657",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Land surface temperature (LST) is one of the critical environmental indicators for the study of energy balance and material exchange near the Earth's surface. Remote sensing is a unique means for acquiring LST on the regional and global scales. Generally, we can derive LST from thermal‐infrared (TIR) and microwave (MW) observations with specifically designed retrieval algorithms. It is well recognized that the TIR algorithm is much more developed and the retrieved LST has a relatively high spatial resolution and accuracy. However, the TIR signal is sensitive to the atmosphere and cannot penetrate the clouds, which prevents the onboard TIR sensor from capturing the land surface information and results in a serious data gap in the produced LST products. In contrast, MW can penetrate clouds, making the retrieval of all‐weather LST possible. The empirical statistical model retrieves the LST by establishing the regression relationship between the MW BT and the reference LST. The empirical statistical model is recognized as the most applied MW LST retrieval method due to its simplicity and acceptable accuracy. However, the existing literature shows that the impact of the topography has not been explicitly incorporated into the developed algorithms."
-            ],
-            "research objective": [
-                "We propose an empirical algorithm for retrieving LST from the Advanced Microwave Scanning Radiometer (AMSR‐E) brightness temperature (BT) data. The study of empirical statistical models is focused on the following two aspects: the combination of MW channels and the model's applicability. Taking the landmass of China as the study area, we explore the possibility of improving the LST accuracy by explicitly incorporating the effects of topography, and propose an empirical algorithm for LST retrieval from AMSR‐E BT data."
-            ],
-            "challenges": [
-                "However, the accuracy of MW LST is generally lower than that of TIR LST, making the retrieval of highly accurate all‐weather LST a challenging task. The scale difference can be alleviated by downscaling the MW LST. However, the performance of downscaling is affected by the accuracy of the MW LST. China has a varied and complex near‐surface environment, where the topography, LC and climate in different subregions are remarkably distinctive, making the LST retrieval more challenging."
-            ],
-            "methods": [
-                "First, we constructed a comprehensive classification system of environmental variables (CCSEV), allowing for the influence of topography, land cover, solar radiation, and atmospheric condition on the spatiotemporal distribution of LST, then the LST was expressed as a function of the combination of different AMSR‐E channels for each CCSEV class. Finally, the algorithm is verified by comparing the retrieved LST with the reference MODIS LST and field observations in China."
-            ],
-            "dataset": [
-                "The data used for developing and testing the LST retrieval algorithm primarily include the MODIS LST product and the AMSR‐E BT data in different channels. The AMSR‐E BT data used in this study belong to the level 3 product (NISDC‐0302) and were downloaded from the National Snow & Ice Data Center (NSIDC). The MODIS products used in this study include the LST product (MYD11A1), the LC product (MCD12Q1), and the snow cover product (MYD10C1). Moreover, the soil temperature observations at the sites of the HRB and Naqu verification regions are used as the reference to verify the accuracy of the proposed algorithm."
-            ],
-            "findings": [
-                "When performing the testing with the data from 2005, 2009 and 2011, the accuracy is 3.27 K, 2.65 K and 3.48 K in the daytime and 2.94 K, 2.63 K, 2.15 K at nighttime, respectively. The result shows that the accuracy of LST has improved by 2.81 K in the daytime and 2.14 K at nighttime in China, compared with the Moderate Resolution Imaging Spectroradiometer (MODIS) LST. The verification at the Naqu sites in the Qinghai‐Tibet Plateau shows that the accuracy has improved by 1–2 K in the daytime and 0.7–1 K at nighttime. These results indicate that the developed algorithm is universal and accurate and benefits the retrieval of accurate all‐weather LST."
-            ],
-            "backgroundCn": [
-                "地表温度（LST）是研究地球表面能量平衡和物质交换的重要环境指标之一。遥感是一种独特的手段，可以在区域和全球范围内获取LST。通常，我们可以通过热红外（TIR）和微波（MW）观测以及专门设计的反演算法来推导LST。众所周知，TIR算法发展得更加成熟，获取的LST具有相对较高的空间分辨率和准确性。然而，TIR信号对大气敏感，无法穿透云层，这使得机载TIR传感器无法捕捉地表信息，导致生成的LST产品存在严重的数据缺口。相比之下，MW能够穿透云层，使得全天气LST的获取成为可能。经验统计模型通过建立MW亮温（BT）与参考LST之间的回归关系来反演LST。由于其简单性和可接受的准确性，经验统计模型被认为是应用最广泛的MW LST反演方法。然而，现有文献表明，地形的影响尚未被明确纳入已开发的算法中。"
-            ],
-            "research objectiveCn": [
-                "我们提出了一种从先进微波扫描辐射计（AMSR-E）亮温（BT）数据中检索地表温度（LST）的经验算法。经验统计模型的研究重点集中在以下两个方面：微波通道的组合和模型的适用性。以中国的陆地为研究区域，我们探讨了通过明确考虑地形影响来提高LST准确性的可能性，并提出了一种从AMSR-E BT数据中检索LST的经验算法。"
-            ],
-            "challengesCn": [
-                "然而，微波（MW）地表温度（LST）的准确性通常低于热红外（TIR）地表温度，这使得获取高精度的全天候地表温度成为一项具有挑战性的任务。通过下尺度化微波地表温度可以缓解尺度差异。然而，下尺度化的性能受到微波地表温度准确性的影响。中国的近地表环境复杂多样，不同子区域的地形、土地覆盖和气候具有显著的差异，这使得地表温度的获取更加困难。"
-            ],
-            "methodsCn": [
-                "首先，我们构建了一个综合的环境变量分类系统（CCSEV），允许考虑地形、土地覆盖、太阳辐射和大气条件对地表温度（LST）时空分布的影响，然后将LST表示为不同AMSR-E通道组合的函数，针对每个CCSEV类别。最后，通过将获取的LST与中国的参考MODIS LST和实地观测进行比较，验证了该算法。"
-            ],
-            "datasetCn": [
-                "用于开发和测试LST检索算法的数据主要包括MODIS LST产品和不同通道的AMSR‐E BT数据。本研究中使用的AMSR‐E BT数据属于第3级产品（NISDC‐0302），并从国家雪冰数据中心（NSIDC）下载。 本研究中使用的MODIS产品包括LST产品（MYD11A1）、LC产品（MCD12Q1）和雪盖产品（MYD10C1）。此外，HRB和那曲验证区域的土壤温度观测数据被用作验证所提算法准确性的参考。"
-            ],
-            "findingsCn": [
-                "在使用2005年、2009年和2011年的数据进行测试时，白天的准确度分别为3.27 K、2.65 K和3.48 K，夜间的准确度分别为2.94 K、2.63 K和2.15 K。结果表明，与中分辨率成像光谱仪（MODIS）LST相比，中国的地表温度（LST）准确度在白天提高了2.81 K，夜间提高了2.14 K。在青藏高原的那曲站点进行的验证显示，白天的准确度提高了1–2 K，夜间提高了0.7–1 K。这些结果表明，所开发的算法具有普遍性和准确性，有利于获取准确的全天候LST。"
-            ]
-        },
-        {
-            "background": [
-                "A stepwise downscaling method is proposed for generating high-resolution land surface temperature (LST) from advanced microwave scanning radiometer for the Earth observing system (AMSR-E) data to benefit the fusion of thermal infrared and microwave data for high-quality all-weather LST."
-            ],
-            "research objective": [
-                "To weaken the scale effect in MW LST downscaling, this study proposes a stepwise downscaling method for AMSR-E LST. The stepwise method was expected to obtain a higher accuracy of downscaled MW LST and enhance the performance of TIR and MW LSTs fusion procedures."
-            ],
-            "challenges": [
-                "However, although the fusion methods have basically achieved all-weather coverage, the accuracy of the data filling in the cloudy area is still lower than that obtained under clear sky conditions. The major cause of this deficiency is that there is a large gap of accuracy and spatial scale between the filling source (i.e. MW LST) and TIR LST. In the experiment of AMSR-E LST downscaling, we found that the accuracy of downscaled LST derived by the regression model involving both elevation and slope was lower than that involving only one of these two topographic parameters. Another phenomenon is that slope can achieve more accurate downscaling results in the regions with flat terrain, whereas elevation works better in the regions with steep terrain."
-            ],
-            "methods": [
-                "This method sets a series of intermediate resolution levels between the initial (0.25°) and target (0.01°) resolutions, then downscales AMSR-E LST from one resolution to the next one step at a time, starting from 0.25° and ending with 0.01°. The geographically weighted regression model is adopted in each step to construct the relationship between LST and environmental variables, including normalized differential vegetation index, elevation, and slope. The stepwise method is verified over three regions in China that represent different characteristics of landscape heterogeneity varying from the highest to the lowest: the Yunnan-Guizhou Plateau (YGP), the border of Shanxi Province and Henan Province (BSH), and the central part of Inner Mongolia (CIM)."
-            ],
-            "dataset": [
-                "The datasets used for developing and assessing the MW LST downscaling method include AMSR-E LST, MODIS LST, NDVI, and shuttle radar topography mission (SRTM) elevation. Among them, the MODIS NDVI and SRTM elevation datasets serve as the scaling factors, whereas the MODIS LST dataset serves as the reference for validating the performance of the proposed method. The MW LST data used for developing the downscaling method were retrieved from the AMSR-E BT dataset using the algorithm proposed by Zhang and Cheng."
-            ],
-            "findings": [
-                "Verified using the emulated AMSR-E LST resampled from reference MODIS LST available in 2010, the results show that the proportions of dates when the stepwise method is better are 100%, 78.1%, and 51.5% in the YGP, BSH, and CIM regions, respectively, which means the stepwise method has an advantage over the direct."
-            ],
-            "backgroundCn": [
-                "提出了一种逐步降尺度的方法，用于从先进的微波扫描辐射计（AMSR-E）数据生成高分辨率的地表温度（LST），以促进热红外和微波数据的融合，从而获得高质量的全天候地表温度。"
-            ],
-            "research objectiveCn": [
-                "为了减弱微波地表温度（MW LST）下调的尺度效应，本研究提出了一种逐步下调的方法用于AMSR-E LST。预计该逐步方法能够获得更高精度的下调微波地表温度，并增强热红外（TIR）和微波地表温度融合过程的性能。"
-            ],
-            "challengesCn": [
-                "然而，尽管融合方法基本上实现了全天候覆盖，但在多云区域的数据填充精度仍低于晴空条件下获得的精度。这一缺陷的主要原因是填充源（即微波地表温度，MW LST）与热红外地表温度（TIR LST）之间存在较大的精度和空间尺度差距。在AMSR-E LST下行尺度的实验中，我们发现涉及海拔和坡度的回归模型所得到的下行尺度LST的精度低于仅涉及这两个地形参数之一的模型。另一个现象是，在平坦地形区域，坡度可以实现更准确的下行尺度结果，而在陡峭地形区域，海拔则表现得更好。"
-            ],
-            "methodsCn": [
-                "该方法在初始分辨率（0.25°）和目标分辨率（0.01°）之间设置了一系列中间分辨率级别，然后逐步将AMSR-E LST从一个分辨率降尺度到下一个分辨率，从0.25°开始，最终达到0.01°。在每一步中采用地理加权回归模型，构建LST与环境变量之间的关系，包括归一化差异植被指数、海拔和坡度。该分步方法在中国三个区域进行了验证，这些区域代表了不同的景观异质性特征，从最高到最低依次为：滇桂高原（YGP）、山西省与河南省交界处（BSH）以及内蒙古中部（CIM）。"
-            ],
-            "datasetCn": [
-                "用于开发和评估MW LST下分辨率方法的数据集包括AMSR-E LST、MODIS LST、NDVI和航天飞机雷达地形任务（SRTM）高程。其中，MODIS NDVI和SRTM高程数据集作为缩放因子，而MODIS LST数据集作为验证所提方法性能的参考。用于开发下分辨率方法的MW LST数据是通过Zhang和Cheng提出的算法从AMSR-E BT数据集中提取的。"
-            ],
-            "findingsCn": [
-                "经过验证，使用从2010年参考MODIS LST重采样的模拟AMSR-E LST，结果显示在YGP、BSH和CIM地区，步骤法优于直接法的日期比例分别为100%、78.1%和51.5%。这意味着步骤法相对于直接法具有优势。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "程洁",
+        "nameEn": "CHENG Jie",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "董胜越",
+        "nameEn": "DONG Shengyue",
+        "unitEn": "",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "施建成",
+        "nameEn": "SHI Jiancheng",
+        "unitEn": "",
+        "unitCn": "中国科学院国家空间科学中心"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Can the methodology used for retrieving land surface temperature (LST) from microwave observations be considered reliable for generating high-resolution data?",
-                "QuestionCn": "从微波观测中获取地表温度（LST）的方法论是否可以被认为是生成高分辨率数据的可靠方法？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Does the proposed stepwise downscaling method effectively improve the accuracy of microwave LST when compared to direct downscaling methods?",
-                "QuestionCn": "所提议的逐步降尺度方法是否有效提高了微波地表温度（LST）的准确性，与直接降尺度方法相比？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "For retrieving land surface temperature (LST), is it more effective to use thermal-infrared (TIR) observations, microwave (MW) observations, or a combination of both?",
-                "QuestionCn": "对于获取地表温度（LST），使用热红外（TIR）观测、微波（MW）观测，还是两者结合，哪种方法更有效？",
-                "AnswerEn": "a combination of both TIR and MW observations",
-                "AnswerCn": "结合TIR和MW观测",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What data collection methods are used to obtain all-weather land surface temperature in the context of remote sensing?",
-                "QuestionCn": "在遥感的背景下，用于获取全天候地表温度的数据收集方法有哪些？",
-                "AnswerEn": "Thermal-infrared (TIR) and microwave (MW) observations",
-                "AnswerCn": "热红外（TIR）和微波（MW）观测",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Where do challenges arise in the process of retrieving accurate land surface temperature using microwave data?",
-                "QuestionCn": "在使用微波数据获取准确的地表温度的过程中，挑战主要出现在以下几个方面：",
-                "AnswerEn": "China",
-                "AnswerCn": "中国",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the key datasets involved in developing and testing land surface temperature retrieval algorithms?",
-                "QuestionCn": "开发和测试地表温度检索算法涉及的关键数据集有哪些？",
-                "AnswerEn": "MODIS products, AMSR-E brightness temperature data, soil temperature observations",
-                "AnswerCn": "MODIS产品，AMSR-E亮温数据，土壤温度观测",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a method for retrieving land surface temperature (LST) from microwave brightness temperature data that incorporates environmental variables?",
-                "QuestionCn": "您能否提供一个从微波亮温数据中检索地表温度（LST）的方法示例，该方法结合了环境变量？",
-                "AnswerEn": "An example of such a method is the empirical algorithm for retrieving LST from Advanced Microwave Scanning Radiometer (AMSR‐E) brightness temperature data, which constructs a comprehensive classification system of environmental variables (CCSEV). This method considers the influence of topography, land cover, solar radiation, and atmospheric conditions on the spatiotemporal distribution of LST.",
-                "AnswerCn": "这种方法的一个例子是从先进微波扫描辐射计（AMSR-E）亮度温度数据中检索地表温度（LST）的经验算法，该算法构建了一个综合环境变量分类系统（CCSEV）。该方法考虑了地形、土地覆盖、太阳辐射和大气条件对地表温度时空分布的影响。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge encountered when using thermal infrared (TIR) and microwave (MW) observations for land surface temperature retrieval?",
-                "QuestionCn": "使用热红外（TIR）和微波（MW）观测进行地表温度提取时遇到的一个挑战是什么？",
-                "AnswerEn": "An example of a challenge is the difficulty in achieving highly accurate all-weather LST retrievals. The TIR signal is sensitive to atmospheric conditions and cannot penetrate clouds, resulting in data gaps. Meanwhile, although MW can penetrate clouds, its accuracy is generally lower than that of TIR, making it a challenge to obtain highly accurate LST data.",
-                "AnswerCn": "一个挑战是实现高精度的全天候地表温度（LST）反演的困难。热红外（TIR）信号对大气条件敏感，无法穿透云层，导致数据缺失。同时，虽然微波（MW）可以穿透云层，但其准确性通常低于热红外，这使得获取高精度的地表温度数据成为一项挑战。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Could you provide an example of a dataset used to validate land surface temperature retrieval algorithms?",
-                "QuestionCn": "您能否提供一个用于验证地表温度检索算法的数据集示例？",
-                "AnswerEn": "An example of such a dataset is the MODIS LST product, which is used alongside AMSR‐E brightness temperature data to develop and test LST retrieval algorithms. The MODIS LST product serves as a reference for validating the accuracy of retrieved LST, particularly in studies aiming to improve algorithm performance in regions like China.",
-                "AnswerCn": "这样的数据集的一个例子是MODIS地表温度（LST）产品，它与AMSR-E亮温数据一起用于开发和测试LST检索算法。MODIS LST产品作为验证检索LST准确性的参考，特别是在旨在提高算法在中国等地区性能的研究中。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What features define the methodology for downscaling microwave land surface temperature data to achieve high spatial resolution?",
-                "QuestionCn": "定义将微波地表温度数据降尺度以实现高空间分辨率的方法论的特征是什么？",
-                "AnswerEn": "stepwise downscaling method, intermediate resolution levels, geographically weighted regression models, relationship between land surface temperature and environmental variables, normalized differential vegetation index, elevation, slope, validated over regions with varying landscape heterogeneity",
-                "AnswerCn": "逐步降尺度方法，中间分辨率水平，地理加权回归模型，地表温度与环境变量之间的关系，归一化差异植被指数，海拔，高程，在具有不同景观异质性的区域进行验证。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the main challenges associated with retrieving accurate all-weather land surface temperature using microwave data?",
-                "QuestionCn": "使用微波数据获取准确的全天候地表温度面临的主要挑战是什么？",
-                "AnswerEn": "lower accuracy, scale difference, complex near-surface environment",
-                "AnswerCn": "较低的精度、尺度差异、复杂的近地表环境",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What characteristics of environmental variables are considered crucial in constructing a classification system for land surface temperature retrieval algorithms?",
-                "QuestionCn": "在构建地表温度检索算法的分类系统时，哪些环境变量的特征被认为是至关重要的？",
-                "AnswerEn": "topography, land cover, solar radiation, atmospheric conditions",
-                "AnswerCn": "地形、土地覆盖、太阳辐射、大气条件",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the mean root mean square error (RMSE) of the 1km seamless land surface temperature dataset for China?",
-                "QuestionCn": "中国1公里无缝地表温度数据集的均方根误差（RMSE）是多少？",
-                "AnswerEn": "3K",
-                "AnswerCn": "3K",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the resolution range used in the stepwise downscaling method for generating high-resolution land surface temperature from AMSR-E data?",
-                "QuestionCn": "用于从AMSR-E数据生成高分辨率地表温度的逐步降尺度方法的分辨率范围是什么？",
-                "AnswerEn": "0.25°-0.01°",
-                "AnswerCn": "0.25°-0.01°",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is meant by 'empirical statistical model' in the context of retrieving land surface temperature from microwave observations?",
-                "QuestionCn": "在从微波观测中获取地表温度的背景下，“经验统计模型”是指一种基于观测数据的统计方法，用于建立输入（如微波信号）与输出（如地表温度）之间的关系。这种模型通常依赖于历史数据，通过分析这些数据来识别模式和趋势，从而进行预测或推断。",
-                "AnswerEn": "An 'empirical statistical model' refers to a method that retrieves land surface temperature (LST) by establishing a regression relationship between microwave brightness temperature (BT) and a reference LST. It is recognized for its simplicity and acceptable accuracy in microwave LST retrieval.",
-                "AnswerCn": "“经验统计模型”是指通过建立微波亮温（BT）与参考地表温度（LST）之间的回归关系来获取地表温度（LST）的方法。它因其简单性和在微波LST检索中的可接受准确性而受到认可。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What does 'stepwise downscaling method' entail in the generation of high-resolution land surface temperature from microwave data?",
-                "QuestionCn": "“逐步降尺度方法”在从微波数据生成高分辨率地表温度时涉及什么？",
-                "AnswerEn": "The 'stepwise downscaling method' involves setting a series of intermediate resolution levels between the initial and target resolutions, and downscaling land surface temperature (LST) from one resolution to the next in progressive steps. This method uses geographically weighted regression models to construct the relationship between LST and environmental variables at each step.",
-                "AnswerCn": "“逐步降尺度方法”涉及在初始分辨率和目标分辨率之间设置一系列中间分辨率水平，并在每个步骤中将地表温度（LST）从一个分辨率降尺度到下一个分辨率。该方法使用地理加权回归模型来构建每个步骤中LST与环境变量之间的关系。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is the role of 'geographically weighted regression' in downscaling land surface temperature data?",
-                "QuestionCn": "“地理加权回归”在下调土地表面温度数据中的作用是什么？",
-                "AnswerEn": "'Geographically weighted regression' is used to establish a relationship between land surface temperature (LST) and environmental variables like normalized differential vegetation index, elevation, and slope. It is applied at each step of the stepwise downscaling process to improve the accuracy of downscaled microwave LST data.",
-                "AnswerCn": "“地理加权回归”用于建立地表温度（LST）与环境变量之间的关系，如归一化差异植被指数、海拔和坡度。它在逐步下调过程的每个步骤中应用，以提高下调微波LST数据的准确性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the methodology for downscaling land surface temperature (LST) data using geographically weighted regression compare to the stepwise downscaling method involving intermediate resolution levels?",
-                "QuestionCn": "使用地理加权回归法对地表温度（LST）数据进行下分辨率处理的方法与涉及中间分辨率水平的逐步下分辨率处理方法相比，如何？",
-                "AnswerEn": "The geographically weighted regression method directly downscales the LST data by establishing relationships with environmental variables like elevation and vegetation index, while the stepwise downscaling method introduces intermediate resolution levels between the initial and target resolutions, which potentially improves accuracy by addressing the scale effect step-by-step.",
-                "AnswerCn": "地理加权回归方法通过与环境变量（如海拔和植被指数）建立关系，直接对地表温度（LST）数据进行下采样，而逐步下采样方法在初始分辨率和目标分辨率之间引入中间分辨率级别，这可能通过逐步解决尺度效应来提高准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the differences in data accuracy between microwave (MW) and thermal-infrared (TIR) land surface temperature (LST) retrieval methods, and how does data fusion address these differences?",
-                "QuestionCn": "微波（MW）和热红外（TIR）地表温度（LST）提取方法在数据准确性方面有什么区别，数据融合如何解决这些差异？",
-                "AnswerEn": "MW LST retrieval methods generally have lower accuracy compared to TIR methods but can penetrate clouds, providing all-weather capability. Data fusion techniques, such as multi-scale Kalman filtering, aim to combine these methods to produce seamless and more accurate LST datasets by leveraging the strengths of both retrieval methods.",
-                "AnswerCn": "MW LST 检索方法的准确性通常低于 TIR 方法，但可以穿透云层，提供全天候能力。数据融合技术，如多尺度卡尔曼滤波，旨在结合这些方法，通过利用两种检索方法的优势，生成无缝且更准确的 LST 数据集。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What are the potential implications of incorporating topographic influences into the empirical statistical models for land surface temperature retrieval?",
-                "QuestionCn": "将地形影响纳入土地表面温度提取的经验统计模型可能带来的潜在影响是什么？",
-                "AnswerEn": "Incorporating topographic influences into empirical statistical models can enhance the accuracy of land surface temperature retrieval by accounting for the varied and complex near-surface environment, particularly in regions like China, where topography significantly affects temperature distribution.",
-                "AnswerCn": "将地形影响纳入经验统计模型可以提高地表温度提取的准确性，因为它考虑了复杂多变的近地表环境，特别是在中国等地区，地形对温度分布有显著影响。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What challenges might arise from using a geographically weighted regression model for downscaling microwave land surface temperature data, and how can these be addressed?",
-                "QuestionCn": "使用地理加权回归模型对微波地表温度数据进行下采样时可能会出现哪些挑战，以及如何解决这些挑战。",
-                "AnswerEn": "Challenges may include the varying accuracy of downscaling depending on topographic parameters like slope and elevation. This can be addressed by selecting appropriate scaling factors for specific regions, such as using slope in flat terrains and elevation in steep terrains to optimize the performance of the regression model.",
-                "AnswerCn": "挑战可能包括由于坡度和海拔等地形参数的不同，降尺度的准确性也会有所不同。可以通过为特定区域选择合适的缩放因子来解决这个问题，例如在平坦地形中使用坡度，在陡峭地形中使用海拔，以优化回归模型的性能。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the challenges in retrieving accurate land surface temperature (LST) using microwave observations compared to thermal-infrared methods?",
-                "QuestionCn": "哪些因素导致使用微波观测获取准确的地表温度（LST）面临挑战，相较于热红外方法？",
-                "AnswerEn": "The accuracy of microwave LST is generally lower due to the scale difference, which can be alleviated by downscaling. The performance of downscaling is affected by the accuracy of the microwave LST. Additionally, the varied and complex near-surface environment in China, including distinctive topography, land cover, and climate in different subregions, makes LST retrieval more challenging.",
-                "AnswerCn": "微波地表温度（LST）的准确性通常较低，原因在于尺度差异，这可以通过下尺度处理来缓解。下尺度处理的性能受到微波LST准确性的影响。此外，中国近地表环境的多样性和复杂性，包括不同子区域的独特地形、土地覆盖和气候，使得LST的获取更加具有挑战性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is it necessary to incorporate topographic effects when developing empirical algorithms for retrieving land surface temperature (LST) from microwave brightness temperature data?",
-                "QuestionCn": "在从微波亮温数据中提取地表温度（LST）的经验算法时，考虑地形效应是必要的原因是什么？",
-                "AnswerEn": "Incorporating topographic effects is necessary because China's varied and complex near-surface environment presents unique challenges to LST retrieval. The topography, along with land cover and climate differences, affects the accuracy and applicability of the empirical statistical model used for LST retrieval.",
-                "AnswerCn": "考虑到中国复杂多样的近地表环境，纳入地形效应是必要的，因为这给地表温度（LST）提取带来了独特的挑战。地形以及土地覆盖和气候差异影响了用于LST提取的经验统计模型的准确性和适用性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What causes the discrepancy in accuracy between land surface temperature (LST) data retrieved under clear sky conditions and those retrieved in cloudy areas using fusion methods?",
-                "QuestionCn": "导致在晴朗天空条件下获取的陆地表面温度（LST）数据与在多云区域使用融合方法获取的数据之间存在准确性差异的原因是什么？",
-                "AnswerEn": "The discrepancy in accuracy arises because there is a large gap in accuracy and spatial scale between the filling source (microwave LST) and the thermal-infrared LST. Although fusion methods achieve all-weather coverage, the data filling in cloudy areas is still less accurate than under clear sky conditions.",
-                "AnswerCn": "准确性差异的原因在于填充源（微波地表温度）与热红外地表温度之间存在较大的准确性和空间尺度差距。尽管融合方法实现了全天候覆盖，但在多云区域的数据填充仍然不如晴天条件下准确。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the implications of using multiple scales of data, such as 1km resolution and MODIS data, in the fusion process for generating seamless land surface temperature datasets?",
-                "QuestionCn": "使用多种数据尺度，例如1公里分辨率和MODIS数据，在生成无缝地表温度数据集的融合过程中有什么影响？",
-                "AnswerEn": "Utilizing multiple scales of data, including 1km resolution and MODIS data, in the fusion process can lead to the generation of seamless land surface temperature datasets with enhanced spatial completeness and accuracy. The application of techniques like multiscale Kalman filtering allows for the integration of different data sources, compensating for the limitations inherent in each, such as cloud cover in thermal infrared data. This results in datasets that are robust and applicable across varied environmental conditions and regions.",
-                "AnswerCn": "利用多尺度数据，包括1公里分辨率和MODIS数据，在融合过程中可以生成具有增强空间完整性和准确性的无缝地表温度数据集。应用多尺度卡尔曼滤波等技术可以整合不同的数据源，弥补各自固有的局限性，例如热红外数据中的云覆盖。这导致生成的数据集在不同环境条件和区域中都具有稳健性和适用性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the purpose of integrating microwave and thermal-infrared observations in developing a land surface temperature retrieval algorithm?",
-                "QuestionCn": "将微波和热红外观测集成在一起的目的是为了开发地表温度检索算法。",
-                "AnswerEn": "The integration of microwave and thermal-infrared observations aims to overcome the limitations of each method. Thermal-infrared provides high spatial resolution but is affected by atmospheric conditions and cannot penetrate clouds, leading to data gaps. Microwave, on the other hand, can penetrate clouds and provide all-weather observations. Combining these methods helps achieve a more accurate and spatially complete land surface temperature dataset, particularly beneficial in regions with complex topography and varied climates like China.",
-                "AnswerCn": "微波和热红外观测的结合旨在克服各自方法的局限性。热红外提供高空间分辨率，但受大气条件影响，无法穿透云层，导致数据缺口。另一方面，微波能够穿透云层，提供全天候观测。结合这两种方法有助于获得更准确和空间完整的地表温度数据集，特别是在像中国这样地形复杂、气候多样的地区。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is it important to develop a stepwise downscaling method for AMSR-E land surface temperature data?",
-                "QuestionCn": "开发AMSR-E地表温度数据的逐步下调方法为何重要？",
-                "AnswerEn": "The stepwise downscaling method is crucial to address the scale effect in microwave land surface temperature data and to enhance the accuracy of downscaled data. This method aims to improve the performance of fusion procedures between microwave and thermal-infrared land surface temperatures, which is essential for achieving high-quality all-weather land surface temperature products. It is particularly important for areas with diverse topographical features, as it helps achieve more accurate results by progressively adjusting resolution levels and incorporating environmental variables.",
-                "AnswerCn": "逐步降尺度方法对于解决微波地表温度数据中的尺度效应至关重要，并提高降尺度数据的准确性。该方法旨在改善微波与热红外地表温度融合过程的性能，这对于实现高质量的全天候地表温度产品至关重要。对于地形特征多样的地区，这一方法尤为重要，因为它通过逐步调整分辨率水平并结合环境变量，帮助实现更准确的结果。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Why is there a need to incorporate topographical features in the land surface temperature retrieval process for regions like China?",
-                "QuestionCn": "为什么在中国等地区的地表温度获取过程中需要考虑地形特征？",
-                "AnswerEn": "Incorporating topographical features in the land surface temperature retrieval process is necessary due to the varied and complex near-surface environment in China, where topography, land cover, and climate vary significantly across different subregions. By considering these features, the retrieval algorithm can improve the accuracy of land surface temperature estimates, which is particularly challenging in regions with complex terrain. This approach helps achieve more reliable and spatially detailed datasets that are crucial for environmental monitoring and climate studies.",
-                "AnswerCn": "在地表温度提取过程中，考虑地形特征是必要的，因为中国的近地表环境复杂多样，地形、土地覆盖和气候在不同子区域之间差异显著。通过考虑这些特征，提取算法可以提高地表温度估计的准确性，这在地形复杂的地区尤其具有挑战性。这种方法有助于实现更可靠和空间细致的数据集，这对于环境监测和气候研究至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in downscaling microwave land surface temperature data to improve spatial resolution?",
-                "QuestionCn": "下调微波地表温度数据以提高空间分辨率涉及哪些程序步骤？",
-                "AnswerEn": "The procedural steps involved in downscaling microwave land surface temperature (LST) data include setting a series of intermediate resolution levels between the initial and target resolutions, then downscaling the LST from one resolution to the next in a stepwise manner. A geographically weighted regression model is used in each step to establish the relationship between LST and environmental variables such as normalized differential vegetation index, elevation, and slope.",
-                "AnswerCn": "下调微波地表温度（LST）数据的程序步骤包括在初始分辨率和目标分辨率之间设置一系列中间分辨率级别，然后以逐步方式将LST从一个分辨率下调到下一个分辨率。在每一步中，使用地理加权回归模型建立LST与环境变量（如归一化差异植被指数、海拔和坡度）之间的关系。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can the fusion of thermal infrared and microwave data be achieved to obtain seamless land surface temperature datasets?",
-                "QuestionCn": "如何实现热红外和微波数据的融合，以获得无缝的地表温度数据集？",
-                "AnswerEn": "Fusion of thermal infrared and microwave data to obtain seamless land surface temperature datasets can be achieved using a multi-scale Kalman filter. This approach involves merging downscaled microwave LST with MODIS thermal infrared LST to produce a 1km resolution seamless dataset, which helps enhance the spatial completeness and accuracy of the LST data.",
-                "AnswerCn": "通过多尺度卡尔曼滤波器融合热红外和微波数据，可以获得无缝的地表温度数据集。这种方法涉及将下采样的微波地表温度与MODIS热红外地表温度合并，以生成1公里分辨率的无缝数据集，从而提高地表温度数据的空间完整性和准确性。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What methodological approach is used to incorporate topographic effects in microwave land surface temperature retrieval algorithms?",
-                "QuestionCn": "在微波地表温度反演算法中，采用何种方法论来纳入地形效应？",
-                "AnswerEn": "A methodological approach to incorporate topographic effects in microwave land surface temperature retrieval involves constructing a comprehensive classification system of environmental variables that accounts for influences such as topography, land cover, solar radiation, and atmospheric conditions. The land surface temperature is then expressed as a function of the combination of different microwave channels for each class, which improves the accuracy of the retrieval algorithm.",
-                "AnswerCn": "一种将地形效应纳入微波地表温度反演的方法论是构建一个全面的环境变量分类系统，该系统考虑了地形、土地覆盖、太阳辐射和大气条件等影响因素。然后，将地表温度表示为每个类别中不同微波通道组合的函数，从而提高反演算法的准确性。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What data integration strategies enable the creation of spatially complete and seamless land surface temperature datasets in regions with complex topography?",
-                "QuestionCn": "哪些数据集成策略能够在复杂地形区域创建空间上完整且无缝的地表温度数据集？",
-                "AnswerEn": "The integration of thermal infrared (TIR) and microwave (MW) observations enables the creation of spatially complete land surface temperature datasets. The use of geographically weighted regression and multi-scale Kalman filtering helps in integrating AMSR-E/AMSR2 and MODIS LST, addressing complex topography and providing seamless data coverage.",
-                "AnswerCn": "热红外（TIR）和微波（MW）观测的集成使得能够创建空间完整的地表温度数据集。使用地理加权回归和多尺度卡尔曼滤波有助于整合AMSR-E/AMSR2和MODIS LST，解决复杂地形问题并提供无缝的数据覆盖。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might there be challenges in achieving high accuracy for land surface temperature (LST) retrievals using microwave observations compared to thermal infrared techniques?",
-                "QuestionCn": "使用微波观测获取地表温度（LST）时，可能面临比热红外技术更高的准确性挑战的原因是什么？",
-                "AnswerEn": "The accuracy of microwave (MW) LST is generally lower than that of thermal infrared (TIR) LST because MW observations are less sensitive to surface details and variations. Additionally, the complex topography and varied subregional environments in China, including diverse land covers and climates, make LST retrieval more challenging. The scale difference between MW and TIR data further complicates achieving high accuracy in all-weather conditions.",
-                "AnswerCn": "微波（MW）地表温度（LST）的准确性通常低于热红外（TIR）地表温度，因为微波观测对表面细节和变化的敏感性较低。此外，中国复杂的地形和多样的亚区域环境，包括多样的土地覆盖和气候，使得地表温度的提取更加具有挑战性。微波和热红外数据之间的尺度差异进一步使得在各种天气条件下实现高准确性变得复杂。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the anticipated benefits of incorporating topographic and environmental variables in the downscaling process of microwave LST?",
-                "QuestionCn": "在微波地表温度（LST）下分辨率过程中，纳入地形和环境变量的预期好处是什么？",
-                "AnswerEn": "Incorporating topographic and environmental variables, such as elevation, slope, and vegetation index, in the downscaling process is expected to improve the accuracy of downscaled microwave LST. It allows for addressing the scale effect more effectively by accounting for spatial heterogeneity and environmental influences, leading to enhanced performance of LST data fusion from different sources, such as thermal infrared and microwave.",
-                "AnswerCn": "结合地形和环境变量，如海拔、坡度和植被指数，在下尺度处理过程中预计将提高下尺度微波地表温度（LST）的准确性。这使得通过考虑空间异质性和环境影响，更有效地解决尺度效应，从而增强来自不同来源（如热红外和微波）的LST数据融合的性能。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "What is your opinion on the challenges of incorporating topographical variations in the development of land surface temperature retrieval algorithms?",
-                "QuestionCn": "我对在土地表面温度检索算法开发中融入地形变化的挑战的看法是什么？",
-                "AnswerEn": "Incorporating topographical variations is challenging due to the complex and varied near-surface environments, especially in regions like China. While topography significantly affects LST retrieval, existing algorithms often do not explicitly account for these variations. Addressing this challenge requires a classification system of environmental variables that considers topography, land cover, and other factors, which can improve the accuracy and universality of retrieval algorithms.",
-                "AnswerCn": "由于复杂多变的近地表环境，尤其是在中国等地区，纳入地形变化是一个挑战。地形对陆地表面温度（LST）提取有显著影响，但现有算法往往没有明确考虑这些变化。解决这一挑战需要建立一个环境变量分类系统，该系统考虑地形、土地覆盖和其他因素，从而提高提取算法的准确性和普遍性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "How would you assess the potential for improving land surface temperature accuracy by downscaling microwave LST using regression models involving environmental variables?",
-                "QuestionCn": "您如何评估通过使用涉及环境变量的回归模型对微波地表温度进行下行尺度处理以提高其准确性的潜力？",
-                "AnswerEn": "The potential for improving land surface temperature accuracy by downscaling microwave LST using regression models is promising, particularly when involving environmental variables like elevation, slope, and vegetation indices. While such models can enhance downscaling performance, their effectiveness varies with terrain type. For example, slope may provide better results in flat regions, whereas elevation might be more suitable for steep areas. A stepwise downscaling method could further refine accuracy by addressing scale differences incrementally.",
-                "AnswerCn": "通过回归模型对微波地表温度进行下采样以提高准确性的潜力是有希望的，特别是当涉及到环境变量如海拔、坡度和植被指数时。虽然这样的模型可以增强下采样性能，但它们的有效性因地形类型而异。例如，在平坦地区，坡度可能提供更好的结果，而在陡峭地区，海拔可能更为合适。逐步下采样方法可以通过逐步解决尺度差异进一步提高准确性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how the fusion of thermal infrared and microwave data can enhance the accuracy of land surface temperature measurements in all-weather conditions.",
-                "QuestionCn": "我不明白热红外和微波数据的融合如何能在各种天气条件下提高地表温度测量的准确性。",
-                "AnswerEn": "The fusion of thermal infrared (TIR) and microwave (MW) data is an effective approach to enhance the accuracy of land surface temperature (LST) measurements in all-weather conditions. TIR data, while having high spatial resolution and accuracy, cannot penetrate clouds. In contrast, MW can penetrate clouds, allowing for all-weather LST retrieval. By integrating these two types of data, it is possible to obtain spatially complete and accurate LST measurements.",
-                "AnswerCn": "热红外（TIR）和微波（MW）数据的融合是一种有效的方法，可以提高在各种天气条件下地表温度（LST）测量的准确性。TIR数据虽然具有高空间分辨率和准确性，但无法穿透云层。相反，MW可以穿透云层，从而实现全天候的LST获取。通过整合这两种数据，可以获得空间上完整且准确的LST测量。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I'm unsure about the challenges faced in downscaling microwave land surface temperature data to a higher spatial resolution.",
-                "QuestionCn": "我对将微波地表温度数据降尺度到更高空间分辨率所面临的挑战感到不确定。",
-                "AnswerEn": "One of the main challenges in downscaling microwave LST data is the inherent scale difference between MW and TIR data. The accuracy of MW LST is generally lower than that of TIR LST, and the performance of downscaling is affected by the accuracy of MW LST. Additionally, the topography and heterogeneous landscape characteristics in regions like China add complexity to the downscaling process.",
-                "AnswerCn": "下调微波地表温度（LST）数据的主要挑战之一是微波（MW）和热红外（TIR）数据之间固有的尺度差异。微波LST的准确性通常低于热红外LST，而下调的性能受到微波LST准确性的影响。此外，中国等地区的地形和异质景观特征增加了下调过程的复杂性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I can't make sense of how environmental variables influence the retrieval of land surface temperature from microwave brightness temperature data.",
-                "QuestionCn": "我无法理解环境变量如何影响从微波亮温数据中检索地表温度。",
-                "AnswerEn": "Environmental variables such as topography, land cover, solar radiation, and atmospheric conditions significantly influence the retrieval of LST from microwave brightness temperature data. These factors affect the spatiotemporal distribution of LST, and incorporating them into the retrieval algorithm helps improve accuracy. For instance, a comprehensive classification system of environmental variables allows for a more precise LST retrieval by considering the effects of these variables on the LST.",
-                "AnswerCn": "环境变量如地形、土地覆盖、太阳辐射和大气条件显著影响从微波亮温数据中获取地表温度（LST）。这些因素影响LST的时空分布，将它们纳入检索算法有助于提高准确性。例如，全面的环境变量分类系统可以通过考虑这些变量对LST的影响，从而实现更精确的LST检索。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A new land surface temperature fusion strategy based on cumulative distribution function matching and multiresolution Kalman fltering",
+        "referenceCn": null,
+        "referenceEn": "Xu, S., & Cheng, J. (2021). A new land surface temperature fusion strategy based on cumulative distribution function matching and multiresolution Kalman filtering. Remote Sensing of Environment, 254, 112256"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A Stepwise Downscaling Method for Generating High-Resolution Land Surface Temperature From AMSR-E Data",
+        "referenceCn": null,
+        "referenceEn": "Zhang, Q., Wang, N., Cheng, J., & Xu, S. (2020). A Stepwise Downscaling Method for Generating High-Resolution Land Surface Temperature From AMSR-E Data. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 13, 5669-5681"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "An Empirical Algorithm for Retrieving Land Surface Temperature From AMSR-E Data Considering the Comprehensive Effects of Environmental Variables",
+        "referenceCn": null,
+        "referenceEn": "Zhang, Q., & Cheng, J. (2020). An Empirical Algorithm for Retrieving Land Surface Temperature From AMSR-E Data Considering the Comprehensive Effects of Environmental Variables. Earth and Space Science, 7, e2019EA001006. https://doi.org/10.1029/2019EA001006"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "冰冻圈遥感",
+        "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+      },
+      {
+        "nameCn": "冰冻圈遥感产品",
+        "nameEn": "Cryosphere remote sensing products"
+      },
+      {
+        "nameCn": "地表温度",
+        "nameEn": "land surface temperature"
+      },
+      {
+        "nameCn": "大气遥感",
+        "nameEn": "Atmosphere Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2002-2020",
+        "keywordEn": "2002-2020",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "日",
+        "keywordEn": "Daily",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      },
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究：亚洲水塔区水循环动态监测与模拟",
+        "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program: Dynamic monitoring and simulation of water cycle in Asian water tower region"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      },
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山地区冰川边界（2018）",
+        "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+      },
+      {
+        "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+        "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+      },
+      {
+        "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+        "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+      },
+      {
+        "titleCn": "北半球湖冰物候数据集（1978-2018）",
+        "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+      },
+      {
+        "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+        "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+      },
+      {
+        "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+        "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+      },
+      {
+        "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+        "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+      },
+      {
+        "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+        "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+      },
+      {
+        "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+        "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Land surface temperature (LST) is one of the critical environmental indicators for the study of energy balance and material exchange near the Earth's surface. Remote sensing is a unique means for acquiring LST on the regional and global scales. Generally, we can derive LST from thermal‐infrared (TIR) and microwave (MW) observations with specifically designed retrieval algorithms. It is well recognized that the TIR algorithm is much more developed and the retrieved LST has a relatively high spatial resolution and accuracy. However, the TIR signal is sensitive to the atmosphere and cannot penetrate the clouds, which prevents the onboard TIR sensor from capturing the land surface information and results in a serious data gap in the produced LST products. In contrast, MW can penetrate clouds, making the retrieval of all‐weather LST possible. The empirical statistical model retrieves the LST by establishing the regression relationship between the MW BT and the reference LST. The empirical statistical model is recognized as the most applied MW LST retrieval method due to its simplicity and acceptable accuracy. However, the existing literature shows that the impact of the topography has not been explicitly incorporated into the developed algorithms."
+      ],
+      "research objective": [
+        "We propose an empirical algorithm for retrieving LST from the Advanced Microwave Scanning Radiometer (AMSR‐E) brightness temperature (BT) data. The study of empirical statistical models is focused on the following two aspects: the combination of MW channels and the model's applicability. Taking the landmass of China as the study area, we explore the possibility of improving the LST accuracy by explicitly incorporating the effects of topography, and propose an empirical algorithm for LST retrieval from AMSR‐E BT data."
+      ],
+      "challenges": [
+        "However, the accuracy of MW LST is generally lower than that of TIR LST, making the retrieval of highly accurate all‐weather LST a challenging task. The scale difference can be alleviated by downscaling the MW LST. However, the performance of downscaling is affected by the accuracy of the MW LST. China has a varied and complex near‐surface environment, where the topography, LC and climate in different subregions are remarkably distinctive, making the LST retrieval more challenging."
+      ],
+      "methods": [
+        "First, we constructed a comprehensive classification system of environmental variables (CCSEV), allowing for the influence of topography, land cover, solar radiation, and atmospheric condition on the spatiotemporal distribution of LST, then the LST was expressed as a function of the combination of different AMSR‐E channels for each CCSEV class. Finally, the algorithm is verified by comparing the retrieved LST with the reference MODIS LST and field observations in China."
+      ],
+      "dataset": [
+        "The data used for developing and testing the LST retrieval algorithm primarily include the MODIS LST product and the AMSR‐E BT data in different channels. The AMSR‐E BT data used in this study belong to the level 3 product (NISDC‐0302) and were downloaded from the National Snow & Ice Data Center (NSIDC). The MODIS products used in this study include the LST product (MYD11A1), the LC product (MCD12Q1), and the snow cover product (MYD10C1). Moreover, the soil temperature observations at the sites of the HRB and Naqu verification regions are used as the reference to verify the accuracy of the proposed algorithm."
+      ],
+      "findings": [
+        "When performing the testing with the data from 2005, 2009 and 2011, the accuracy is 3.27 K, 2.65 K and 3.48 K in the daytime and 2.94 K, 2.63 K, 2.15 K at nighttime, respectively. The result shows that the accuracy of LST has improved by 2.81 K in the daytime and 2.14 K at nighttime in China, compared with the Moderate Resolution Imaging Spectroradiometer (MODIS) LST. The verification at the Naqu sites in the Qinghai‐Tibet Plateau shows that the accuracy has improved by 1–2 K in the daytime and 0.7–1 K at nighttime. These results indicate that the developed algorithm is universal and accurate and benefits the retrieval of accurate all‐weather LST."
+      ],
+      "backgroundCn": [
+        "地表温度（LST）是研究地球表面能量平衡和物质交换的重要环境指标之一。遥感是一种独特的手段，可以在区域和全球范围内获取LST。通常，我们可以通过热红外（TIR）和微波（MW）观测以及专门设计的反演算法来推导LST。众所周知，TIR算法发展得更加成熟，获取的LST具有相对较高的空间分辨率和准确性。然而，TIR信号对大气敏感，无法穿透云层，这使得机载TIR传感器无法捕捉地表信息，导致生成的LST产品存在严重的数据缺口。相比之下，MW能够穿透云层，使得全天气LST的获取成为可能。经验统计模型通过建立MW亮温（BT）与参考LST之间的回归关系来反演LST。由于其简单性和可接受的准确性，经验统计模型被认为是应用最广泛的MW LST反演方法。然而，现有文献表明，地形的影响尚未被明确纳入已开发的算法中。"
+      ],
+      "research objectiveCn": [
+        "我们提出了一种从先进微波扫描辐射计（AMSR-E）亮温（BT）数据中检索地表温度（LST）的经验算法。经验统计模型的研究重点集中在以下两个方面：微波通道的组合和模型的适用性。以中国的陆地为研究区域，我们探讨了通过明确考虑地形影响来提高LST准确性的可能性，并提出了一种从AMSR-E BT数据中检索LST的经验算法。"
+      ],
+      "challengesCn": [
+        "然而，微波（MW）地表温度（LST）的准确性通常低于热红外（TIR）地表温度，这使得获取高精度的全天候地表温度成为一项具有挑战性的任务。通过下尺度化微波地表温度可以缓解尺度差异。然而，下尺度化的性能受到微波地表温度准确性的影响。中国的近地表环境复杂多样，不同子区域的地形、土地覆盖和气候具有显著的差异，这使得地表温度的获取更加困难。"
+      ],
+      "methodsCn": [
+        "首先，我们构建了一个综合的环境变量分类系统（CCSEV），允许考虑地形、土地覆盖、太阳辐射和大气条件对地表温度（LST）时空分布的影响，然后将LST表示为不同AMSR-E通道组合的函数，针对每个CCSEV类别。最后，通过将获取的LST与中国的参考MODIS LST和实地观测进行比较，验证了该算法。"
+      ],
+      "datasetCn": [
+        "用于开发和测试LST检索算法的数据主要包括MODIS LST产品和不同通道的AMSR‐E BT数据。本研究中使用的AMSR‐E BT数据属于第3级产品（NISDC‐0302），并从国家雪冰数据中心（NSIDC）下载。 本研究中使用的MODIS产品包括LST产品（MYD11A1）、LC产品（MCD12Q1）和雪盖产品（MYD10C1）。此外，HRB和那曲验证区域的土壤温度观测数据被用作验证所提算法准确性的参考。"
+      ],
+      "findingsCn": [
+        "在使用2005年、2009年和2011年的数据进行测试时，白天的准确度分别为3.27 K、2.65 K和3.48 K，夜间的准确度分别为2.94 K、2.63 K和2.15 K。结果表明，与中分辨率成像光谱仪（MODIS）LST相比，中国的地表温度（LST）准确度在白天提高了2.81 K，夜间提高了2.14 K。在青藏高原的那曲站点进行的验证显示，白天的准确度提高了1–2 K，夜间提高了0.7–1 K。这些结果表明，所开发的算法具有普遍性和准确性，有利于获取准确的全天候LST。"
+      ]
+    },
+    {
+      "background": [
+        "A stepwise downscaling method is proposed for generating high-resolution land surface temperature (LST) from advanced microwave scanning radiometer for the Earth observing system (AMSR-E) data to benefit the fusion of thermal infrared and microwave data for high-quality all-weather LST."
+      ],
+      "research objective": [
+        "To weaken the scale effect in MW LST downscaling, this study proposes a stepwise downscaling method for AMSR-E LST. The stepwise method was expected to obtain a higher accuracy of downscaled MW LST and enhance the performance of TIR and MW LSTs fusion procedures."
+      ],
+      "challenges": [
+        "However, although the fusion methods have basically achieved all-weather coverage, the accuracy of the data filling in the cloudy area is still lower than that obtained under clear sky conditions. The major cause of this deficiency is that there is a large gap of accuracy and spatial scale between the filling source (i.e. MW LST) and TIR LST. In the experiment of AMSR-E LST downscaling, we found that the accuracy of downscaled LST derived by the regression model involving both elevation and slope was lower than that involving only one of these two topographic parameters. Another phenomenon is that slope can achieve more accurate downscaling results in the regions with flat terrain, whereas elevation works better in the regions with steep terrain."
+      ],
+      "methods": [
+        "This method sets a series of intermediate resolution levels between the initial (0.25°) and target (0.01°) resolutions, then downscales AMSR-E LST from one resolution to the next one step at a time, starting from 0.25° and ending with 0.01°. The geographically weighted regression model is adopted in each step to construct the relationship between LST and environmental variables, including normalized differential vegetation index, elevation, and slope. The stepwise method is verified over three regions in China that represent different characteristics of landscape heterogeneity varying from the highest to the lowest: the Yunnan-Guizhou Plateau (YGP), the border of Shanxi Province and Henan Province (BSH), and the central part of Inner Mongolia (CIM)."
+      ],
+      "dataset": [
+        "The datasets used for developing and assessing the MW LST downscaling method include AMSR-E LST, MODIS LST, NDVI, and shuttle radar topography mission (SRTM) elevation. Among them, the MODIS NDVI and SRTM elevation datasets serve as the scaling factors, whereas the MODIS LST dataset serves as the reference for validating the performance of the proposed method. The MW LST data used for developing the downscaling method were retrieved from the AMSR-E BT dataset using the algorithm proposed by Zhang and Cheng."
+      ],
+      "findings": [
+        "Verified using the emulated AMSR-E LST resampled from reference MODIS LST available in 2010, the results show that the proportions of dates when the stepwise method is better are 100%, 78.1%, and 51.5% in the YGP, BSH, and CIM regions, respectively, which means the stepwise method has an advantage over the direct."
+      ],
+      "backgroundCn": [
+        "提出了一种逐步降尺度的方法，用于从先进的微波扫描辐射计（AMSR-E）数据生成高分辨率的地表温度（LST），以促进热红外和微波数据的融合，从而获得高质量的全天候地表温度。"
+      ],
+      "research objectiveCn": [
+        "为了减弱微波地表温度（MW LST）下调的尺度效应，本研究提出了一种逐步下调的方法用于AMSR-E LST。预计该逐步方法能够获得更高精度的下调微波地表温度，并增强热红外（TIR）和微波地表温度融合过程的性能。"
+      ],
+      "challengesCn": [
+        "然而，尽管融合方法基本上实现了全天候覆盖，但在多云区域的数据填充精度仍低于晴空条件下获得的精度。这一缺陷的主要原因是填充源（即微波地表温度，MW LST）与热红外地表温度（TIR LST）之间存在较大的精度和空间尺度差距。在AMSR-E LST下行尺度的实验中，我们发现涉及海拔和坡度的回归模型所得到的下行尺度LST的精度低于仅涉及这两个地形参数之一的模型。另一个现象是，在平坦地形区域，坡度可以实现更准确的下行尺度结果，而在陡峭地形区域，海拔则表现得更好。"
+      ],
+      "methodsCn": [
+        "该方法在初始分辨率（0.25°）和目标分辨率（0.01°）之间设置了一系列中间分辨率级别，然后逐步将AMSR-E LST从一个分辨率降尺度到下一个分辨率，从0.25°开始，最终达到0.01°。在每一步中采用地理加权回归模型，构建LST与环境变量之间的关系，包括归一化差异植被指数、海拔和坡度。该分步方法在中国三个区域进行了验证，这些区域代表了不同的景观异质性特征，从最高到最低依次为：滇桂高原（YGP）、山西省与河南省交界处（BSH）以及内蒙古中部（CIM）。"
+      ],
+      "datasetCn": [
+        "用于开发和评估MW LST下分辨率方法的数据集包括AMSR-E LST、MODIS LST、NDVI和航天飞机雷达地形任务（SRTM）高程。其中，MODIS NDVI和SRTM高程数据集作为缩放因子，而MODIS LST数据集作为验证所提方法性能的参考。用于开发下分辨率方法的MW LST数据是通过Zhang和Cheng提出的算法从AMSR-E BT数据集中提取的。"
+      ],
+      "findingsCn": [
+        "经过验证，使用从2010年参考MODIS LST重采样的模拟AMSR-E LST，结果显示在YGP、BSH和CIM地区，步骤法优于直接法的日期比例分别为100%、78.1%和51.5%。这意味着步骤法相对于直接法具有优势。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Can the methodology used for retrieving land surface temperature (LST) from microwave observations be considered reliable for generating high-resolution data?",
+        "QuestionCn": "从微波观测中获取地表温度（LST）的方法论是否可以被认为是生成高分辨率数据的可靠方法？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Does the proposed stepwise downscaling method effectively improve the accuracy of microwave LST when compared to direct downscaling methods?",
+        "QuestionCn": "所提议的逐步降尺度方法是否有效提高了微波地表温度（LST）的准确性，与直接降尺度方法相比？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "For retrieving land surface temperature (LST), is it more effective to use thermal-infrared (TIR) observations, microwave (MW) observations, or a combination of both?",
+        "QuestionCn": "对于获取地表温度（LST），使用热红外（TIR）观测、微波（MW）观测，还是两者结合，哪种方法更有效？",
+        "AnswerEn": "a combination of both TIR and MW observations",
+        "AnswerCn": "结合TIR和MW观测",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What data collection methods are used to obtain all-weather land surface temperature in the context of remote sensing?",
+        "QuestionCn": "在遥感的背景下，用于获取全天候地表温度的数据收集方法有哪些？",
+        "AnswerEn": "Thermal-infrared (TIR) and microwave (MW) observations",
+        "AnswerCn": "热红外（TIR）和微波（MW）观测",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Where do challenges arise in the process of retrieving accurate land surface temperature using microwave data?",
+        "QuestionCn": "在使用微波数据检索准确的地表温度的过程中，挑战出现在哪里？",
+        "AnswerEn": "China",
+        "AnswerCn": "中国",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the key datasets involved in developing and testing land surface temperature retrieval algorithms?",
+        "QuestionCn": "开发和测试地表温度检索算法涉及的关键数据集有哪些？",
+        "AnswerEn": "MODIS products, AMSR-E brightness temperature data, soil temperature observations",
+        "AnswerCn": "MODIS产品，AMSR-E亮温数据，土壤温度观测",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a method for retrieving land surface temperature (LST) from microwave brightness temperature data that incorporates environmental variables?",
+        "QuestionCn": "您能否提供一个从微波亮温数据中检索地表温度（LST）的方法示例，该方法结合了环境变量？",
+        "AnswerEn": "An example of such a method is the empirical algorithm for retrieving LST from Advanced Microwave Scanning Radiometer (AMSR‐E) brightness temperature data, which constructs a comprehensive classification system of environmental variables (CCSEV). This method considers the influence of topography, land cover, solar radiation, and atmospheric conditions on the spatiotemporal distribution of LST.",
+        "AnswerCn": "这种方法的一个例子是从先进微波扫描辐射计（AMSR-E）亮度温度数据中检索地表温度（LST）的经验算法，该算法构建了一个综合环境变量分类系统（CCSEV）。该方法考虑了地形、土地覆盖、太阳辐射和大气条件对地表温度时空分布的影响。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge encountered when using thermal infrared (TIR) and microwave (MW) observations for land surface temperature retrieval?",
+        "QuestionCn": "使用热红外（TIR）和微波（MW）观测进行地表温度提取时遇到的一个挑战是什么？",
+        "AnswerEn": "An example of a challenge is the difficulty in achieving highly accurate all-weather LST retrievals. The TIR signal is sensitive to atmospheric conditions and cannot penetrate clouds, resulting in data gaps. Meanwhile, although MW can penetrate clouds, its accuracy is generally lower than that of TIR, making it a challenge to obtain highly accurate LST data.",
+        "AnswerCn": "一个挑战是实现高精度的全天候地表温度（LST）反演的困难。热红外（TIR）信号对大气条件敏感，无法穿透云层，导致数据缺失。同时，虽然微波（MW）可以穿透云层，但其准确性通常低于热红外，这使得获取高精度的地表温度数据成为一项挑战。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Could you provide an example of a dataset used to validate land surface temperature retrieval algorithms?",
+        "QuestionCn": "您能否提供一个用于验证地表温度检索算法的数据集示例？",
+        "AnswerEn": "An example of such a dataset is the MODIS LST product, which is used alongside AMSR‐E brightness temperature data to develop and test LST retrieval algorithms. The MODIS LST product serves as a reference for validating the accuracy of retrieved LST, particularly in studies aiming to improve algorithm performance in regions like China.",
+        "AnswerCn": "这样的数据集的一个例子是MODIS地表温度（LST）产品，它与AMSR-E亮温数据一起用于开发和测试LST检索算法。MODIS LST产品作为验证检索LST准确性的参考，特别是在旨在提高算法在中国等地区性能的研究中。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What features define the methodology for downscaling microwave land surface temperature data to achieve high spatial resolution?",
+        "QuestionCn": "定义将微波地表温度数据降尺度以实现高空间分辨率的方法论的特征是什么？",
+        "AnswerEn": "stepwise downscaling method, intermediate resolution levels, geographically weighted regression models, relationship between land surface temperature and environmental variables, normalized differential vegetation index, elevation, slope, validated over regions with varying landscape heterogeneity",
+        "AnswerCn": "逐步降尺度方法，中间分辨率水平，地理加权回归模型，地表温度与环境变量之间的关系，归一化差异植被指数，海拔，高程，在具有不同景观异质性的区域进行验证。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the main challenges associated with retrieving accurate all-weather land surface temperature using microwave data?",
+        "QuestionCn": "使用微波数据获取准确的全天候地表温度面临的主要挑战是什么？",
+        "AnswerEn": "lower accuracy, scale difference, complex near-surface environment",
+        "AnswerCn": "较低的精度、尺度差异、复杂的近地表环境",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What characteristics of environmental variables are considered crucial in constructing a classification system for land surface temperature retrieval algorithms?",
+        "QuestionCn": "在构建地表温度检索算法的分类系统时，哪些环境变量的特征被认为是至关重要的？",
+        "AnswerEn": "topography, land cover, solar radiation, atmospheric conditions",
+        "AnswerCn": "地形、土地覆盖、太阳辐射、大气条件",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the mean root mean square error (RMSE) of the 1km seamless land surface temperature dataset for China?",
+        "QuestionCn": "中国1公里无缝地表温度数据集的均方根误差（RMSE）是多少？",
+        "AnswerEn": "3K",
+        "AnswerCn": "3K",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the resolution range used in the stepwise downscaling method for generating high-resolution land surface temperature from AMSR-E data?",
+        "QuestionCn": "用于从AMSR-E数据生成高分辨率地表温度的逐步降尺度方法的分辨率范围是什么？",
+        "AnswerEn": "0.25°-0.01°",
+        "AnswerCn": "0.25°-0.01°",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is meant by 'empirical statistical model' in the context of retrieving land surface temperature from microwave observations?",
+        "QuestionCn": "在从微波观测中获取地表温度的背景下，“经验统计模型”是什么意思？",
+        "AnswerEn": "An 'empirical statistical model' refers to a method that retrieves land surface temperature (LST) by establishing a regression relationship between microwave brightness temperature (BT) and a reference LST. It is recognized for its simplicity and acceptable accuracy in microwave LST retrieval.",
+        "AnswerCn": "“经验统计模型”是指通过建立微波亮温（BT）与参考地表温度（LST）之间的回归关系来获取地表温度（LST）的方法。它因其简单性和在微波LST检索中的可接受准确性而受到认可。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What does 'stepwise downscaling method' entail in the generation of high-resolution land surface temperature from microwave data?",
+        "QuestionCn": "“逐步降尺度方法”在从微波数据生成高分辨率地表温度时涉及什么？",
+        "AnswerEn": "The 'stepwise downscaling method' involves setting a series of intermediate resolution levels between the initial and target resolutions, and downscaling land surface temperature (LST) from one resolution to the next in progressive steps. This method uses geographically weighted regression models to construct the relationship between LST and environmental variables at each step.",
+        "AnswerCn": "“逐步降尺度方法”涉及在初始分辨率和目标分辨率之间设置一系列中间分辨率水平，并在每个步骤中将地表温度（LST）从一个分辨率降尺度到下一个分辨率。该方法使用地理加权回归模型来构建每个步骤中LST与环境变量之间的关系。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is the role of 'geographically weighted regression' in downscaling land surface temperature data?",
+        "QuestionCn": "“地理加权回归”在下调土地表面温度数据中的作用是什么？",
+        "AnswerEn": "'Geographically weighted regression' is used to establish a relationship between land surface temperature (LST) and environmental variables like normalized differential vegetation index, elevation, and slope. It is applied at each step of the stepwise downscaling process to improve the accuracy of downscaled microwave LST data.",
+        "AnswerCn": "“地理加权回归”用于建立地表温度（LST）与环境变量之间的关系，如归一化差异植被指数、海拔和坡度。它在逐步下调过程的每个步骤中应用，以提高下调微波LST数据的准确性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the methodology for downscaling land surface temperature (LST) data using geographically weighted regression compare to the stepwise downscaling method involving intermediate resolution levels?",
+        "QuestionCn": "使用地理加权回归法对地表温度（LST）数据进行下分辨率处理的方法与涉及中间分辨率水平的逐步下分辨率处理方法相比，如何？",
+        "AnswerEn": "The geographically weighted regression method directly downscales the LST data by establishing relationships with environmental variables like elevation and vegetation index, while the stepwise downscaling method introduces intermediate resolution levels between the initial and target resolutions, which potentially improves accuracy by addressing the scale effect step-by-step.",
+        "AnswerCn": "地理加权回归方法通过与环境变量（如海拔和植被指数）建立关系，直接对地表温度（LST）数据进行下采样，而逐步下采样方法在初始分辨率和目标分辨率之间引入中间分辨率级别，这可能通过逐步解决尺度效应来提高准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the differences in data accuracy between microwave (MW) and thermal-infrared (TIR) land surface temperature (LST) retrieval methods, and how does data fusion address these differences?",
+        "QuestionCn": "微波（MW）和热红外（TIR）地表温度（LST）提取方法在数据准确性方面有什么区别，数据融合如何解决这些差异？",
+        "AnswerEn": "MW LST retrieval methods generally have lower accuracy compared to TIR methods but can penetrate clouds, providing all-weather capability. Data fusion techniques, such as multi-scale Kalman filtering, aim to combine these methods to produce seamless and more accurate LST datasets by leveraging the strengths of both retrieval methods.",
+        "AnswerCn": "MW LST 检索方法的准确性通常低于 TIR 方法，但可以穿透云层，提供全天候能力。数据融合技术，如多尺度卡尔曼滤波，旨在结合这些方法，通过利用两种检索方法的优势，生成无缝且更准确的 LST 数据集。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What are the potential implications of incorporating topographic influences into the empirical statistical models for land surface temperature retrieval?",
+        "QuestionCn": "将地形影响纳入土地表面温度提取的经验统计模型可能带来的潜在影响是什么？",
+        "AnswerEn": "Incorporating topographic influences into empirical statistical models can enhance the accuracy of land surface temperature retrieval by accounting for the varied and complex near-surface environment, particularly in regions like China, where topography significantly affects temperature distribution.",
+        "AnswerCn": "将地形影响纳入经验统计模型可以提高地表温度提取的准确性，因为它考虑了复杂多变的近地表环境，特别是在中国等地区，地形对温度分布有显著影响。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What challenges might arise from using a geographically weighted regression model for downscaling microwave land surface temperature data, and how can these be addressed?",
+        "QuestionCn": "使用地理加权回归模型对微波地表温度数据进行降尺度处理可能会出现哪些挑战，以及如何解决这些挑战？",
+        "AnswerEn": "Challenges may include the varying accuracy of downscaling depending on topographic parameters like slope and elevation. This can be addressed by selecting appropriate scaling factors for specific regions, such as using slope in flat terrains and elevation in steep terrains to optimize the performance of the regression model.",
+        "AnswerCn": "挑战可能包括由于坡度和海拔等地形参数的不同，降尺度的准确性也会有所不同。可以通过为特定区域选择合适的缩放因子来解决这个问题，例如在平坦地形中使用坡度，在陡峭地形中使用海拔，以优化回归模型的性能。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the challenges in retrieving accurate land surface temperature (LST) using microwave observations compared to thermal-infrared methods?",
+        "QuestionCn": "哪些因素导致使用微波观测获取准确的地表温度（LST）面临挑战，相较于热红外方法？",
+        "AnswerEn": "The accuracy of microwave LST is generally lower due to the scale difference, which can be alleviated by downscaling. The performance of downscaling is affected by the accuracy of the microwave LST. Additionally, the varied and complex near-surface environment in China, including distinctive topography, land cover, and climate in different subregions, makes LST retrieval more challenging.",
+        "AnswerCn": "微波地表温度（LST）的准确性通常较低，原因在于尺度差异，这可以通过下尺度处理来缓解。下尺度处理的性能受到微波LST准确性的影响。此外，中国近地表环境的多样性和复杂性，包括不同子区域的独特地形、土地覆盖和气候，使得LST的获取更加具有挑战性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is it necessary to incorporate topographic effects when developing empirical algorithms for retrieving land surface temperature (LST) from microwave brightness temperature data?",
+        "QuestionCn": "在从微波亮温数据中提取地表温度（LST）的经验算法时，考虑地形效应是必要的原因是什么？",
+        "AnswerEn": "Incorporating topographic effects is necessary because China's varied and complex near-surface environment presents unique challenges to LST retrieval. The topography, along with land cover and climate differences, affects the accuracy and applicability of the empirical statistical model used for LST retrieval.",
+        "AnswerCn": "考虑到中国复杂多样的近地表环境，纳入地形效应是必要的，因为这给地表温度（LST）提取带来了独特的挑战。地形以及土地覆盖和气候差异影响了用于LST提取的经验统计模型的准确性和适用性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What causes the discrepancy in accuracy between land surface temperature (LST) data retrieved under clear sky conditions and those retrieved in cloudy areas using fusion methods?",
+        "QuestionCn": "导致在晴朗天空条件下获取的陆地表面温度（LST）数据与在多云区域使用融合方法获取的数据之间存在准确性差异的原因是什么？",
+        "AnswerEn": "The discrepancy in accuracy arises because there is a large gap in accuracy and spatial scale between the filling source (microwave LST) and the thermal-infrared LST. Although fusion methods achieve all-weather coverage, the data filling in cloudy areas is still less accurate than under clear sky conditions.",
+        "AnswerCn": "准确性差异的原因在于填充源（微波地表温度）与热红外地表温度之间存在较大的准确性和空间尺度差距。尽管融合方法实现了全天候覆盖，但在多云区域的数据填充仍然不如晴天条件下准确。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the implications of using multiple scales of data, such as 1km resolution and MODIS data, in the fusion process for generating seamless land surface temperature datasets?",
+        "QuestionCn": "使用多种数据尺度，例如1公里分辨率和MODIS数据，在生成无缝地表温度数据集的融合过程中有什么影响？",
+        "AnswerEn": "Utilizing multiple scales of data, including 1km resolution and MODIS data, in the fusion process can lead to the generation of seamless land surface temperature datasets with enhanced spatial completeness and accuracy. The application of techniques like multiscale Kalman filtering allows for the integration of different data sources, compensating for the limitations inherent in each, such as cloud cover in thermal infrared data. This results in datasets that are robust and applicable across varied environmental conditions and regions.",
+        "AnswerCn": "利用多尺度数据，包括1公里分辨率和MODIS数据，在融合过程中可以生成具有增强空间完整性和准确性的无缝地表温度数据集。应用多尺度卡尔曼滤波等技术可以整合不同的数据源，弥补各自固有的局限性，例如热红外数据中的云覆盖。这导致生成的数据集在不同环境条件和区域中都具有稳健性和适用性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the purpose of integrating microwave and thermal-infrared observations in developing a land surface temperature retrieval algorithm?",
+        "QuestionCn": "将微波和热红外观测集成到地表温度反演算法中的目的是什么？",
+        "AnswerEn": "The integration of microwave and thermal-infrared observations aims to overcome the limitations of each method. Thermal-infrared provides high spatial resolution but is affected by atmospheric conditions and cannot penetrate clouds, leading to data gaps. Microwave, on the other hand, can penetrate clouds and provide all-weather observations. Combining these methods helps achieve a more accurate and spatially complete land surface temperature dataset, particularly beneficial in regions with complex topography and varied climates like China.",
+        "AnswerCn": "微波和热红外观测的结合旨在克服各自方法的局限性。热红外提供高空间分辨率，但受大气条件影响，无法穿透云层，导致数据缺口。另一方面，微波能够穿透云层，提供全天候观测。结合这两种方法有助于获得更准确和空间完整的地表温度数据集，特别是在像中国这样地形复杂、气候多样的地区。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is it important to develop a stepwise downscaling method for AMSR-E land surface temperature data?",
+        "QuestionCn": "开发AMSR-E地表温度数据的逐步下调方法为何重要？",
+        "AnswerEn": "The stepwise downscaling method is crucial to address the scale effect in microwave land surface temperature data and to enhance the accuracy of downscaled data. This method aims to improve the performance of fusion procedures between microwave and thermal-infrared land surface temperatures, which is essential for achieving high-quality all-weather land surface temperature products. It is particularly important for areas with diverse topographical features, as it helps achieve more accurate results by progressively adjusting resolution levels and incorporating environmental variables.",
+        "AnswerCn": "逐步降尺度方法对于解决微波地表温度数据中的尺度效应至关重要，并提高降尺度数据的准确性。该方法旨在改善微波与热红外地表温度融合过程的性能，这对于实现高质量的全天候地表温度产品至关重要。对于地形特征多样的地区，这一方法尤为重要，因为它通过逐步调整分辨率水平并结合环境变量，帮助实现更准确的结果。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Why is there a need to incorporate topographical features in the land surface temperature retrieval process for regions like China?",
+        "QuestionCn": "为什么在中国等地区的地表温度获取过程中需要考虑地形特征？",
+        "AnswerEn": "Incorporating topographical features in the land surface temperature retrieval process is necessary due to the varied and complex near-surface environment in China, where topography, land cover, and climate vary significantly across different subregions. By considering these features, the retrieval algorithm can improve the accuracy of land surface temperature estimates, which is particularly challenging in regions with complex terrain. This approach helps achieve more reliable and spatially detailed datasets that are crucial for environmental monitoring and climate studies.",
+        "AnswerCn": "在地表温度提取过程中，考虑地形特征是必要的，因为中国的近地表环境复杂多样，地形、土地覆盖和气候在不同子区域之间差异显著。通过考虑这些特征，提取算法可以提高地表温度估计的准确性，这在地形复杂的地区尤其具有挑战性。这种方法有助于实现更可靠和空间细致的数据集，这对于环境监测和气候研究至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in downscaling microwave land surface temperature data to improve spatial resolution?",
+        "QuestionCn": "下调微波地表温度数据以提高空间分辨率涉及哪些程序步骤？",
+        "AnswerEn": "The procedural steps involved in downscaling microwave land surface temperature (LST) data include setting a series of intermediate resolution levels between the initial and target resolutions, then downscaling the LST from one resolution to the next in a stepwise manner. A geographically weighted regression model is used in each step to establish the relationship between LST and environmental variables such as normalized differential vegetation index, elevation, and slope.",
+        "AnswerCn": "下调微波地表温度（LST）数据的程序步骤包括在初始分辨率和目标分辨率之间设置一系列中间分辨率级别，然后以逐步方式将LST从一个分辨率下调到下一个分辨率。在每一步中，使用地理加权回归模型建立LST与环境变量（如归一化差异植被指数、海拔和坡度）之间的关系。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can the fusion of thermal infrared and microwave data be achieved to obtain seamless land surface temperature datasets?",
+        "QuestionCn": "如何实现热红外和微波数据的融合，以获得无缝的地表温度数据集？",
+        "AnswerEn": "Fusion of thermal infrared and microwave data to obtain seamless land surface temperature datasets can be achieved using a multi-scale Kalman filter. This approach involves merging downscaled microwave LST with MODIS thermal infrared LST to produce a 1km resolution seamless dataset, which helps enhance the spatial completeness and accuracy of the LST data.",
+        "AnswerCn": "通过多尺度卡尔曼滤波器融合热红外和微波数据，可以获得无缝的地表温度数据集。这种方法涉及将下采样的微波地表温度与MODIS热红外地表温度合并，以生成1公里分辨率的无缝数据集，从而提高地表温度数据的空间完整性和准确性。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What methodological approach is used to incorporate topographic effects in microwave land surface temperature retrieval algorithms?",
+        "QuestionCn": "在微波地表温度反演算法中，采用何种方法论来纳入地形效应？",
+        "AnswerEn": "A methodological approach to incorporate topographic effects in microwave land surface temperature retrieval involves constructing a comprehensive classification system of environmental variables that accounts for influences such as topography, land cover, solar radiation, and atmospheric conditions. The land surface temperature is then expressed as a function of the combination of different microwave channels for each class, which improves the accuracy of the retrieval algorithm.",
+        "AnswerCn": "一种将地形效应纳入微波地表温度反演的方法论是构建一个全面的环境变量分类系统，该系统考虑了地形、土地覆盖、太阳辐射和大气条件等影响因素。然后，将地表温度表示为每个类别中不同微波通道组合的函数，从而提高反演算法的准确性。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What data integration strategies enable the creation of spatially complete and seamless land surface temperature datasets in regions with complex topography?",
+        "QuestionCn": "哪些数据集成策略能够在复杂地形区域创建空间上完整且无缝的地表温度数据集？",
+        "AnswerEn": "The integration of thermal infrared (TIR) and microwave (MW) observations enables the creation of spatially complete land surface temperature datasets. The use of geographically weighted regression and multi-scale Kalman filtering helps in integrating AMSR-E/AMSR2 and MODIS LST, addressing complex topography and providing seamless data coverage.",
+        "AnswerCn": "热红外（TIR）和微波（MW）观测的集成使得能够创建空间完整的地表温度数据集。使用地理加权回归和多尺度卡尔曼滤波有助于整合AMSR-E/AMSR2和MODIS LST，解决复杂地形问题并提供无缝的数据覆盖。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might there be challenges in achieving high accuracy for land surface temperature (LST) retrievals using microwave observations compared to thermal infrared techniques?",
+        "QuestionCn": "使用微波观测获取地表温度（LST）时，可能面临比热红外技术更高的准确性挑战的原因是什么？",
+        "AnswerEn": "The accuracy of microwave (MW) LST is generally lower than that of thermal infrared (TIR) LST because MW observations are less sensitive to surface details and variations. Additionally, the complex topography and varied subregional environments in China, including diverse land covers and climates, make LST retrieval more challenging. The scale difference between MW and TIR data further complicates achieving high accuracy in all-weather conditions.",
+        "AnswerCn": "微波（MW）地表温度（LST）的准确性通常低于热红外（TIR）地表温度，因为微波观测对表面细节和变化的敏感性较低。此外，中国复杂的地形和多样的亚区域环境，包括多样的土地覆盖和气候，使得地表温度的提取更加具有挑战性。微波和热红外数据之间的尺度差异进一步使得在各种天气条件下实现高准确性变得复杂。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the anticipated benefits of incorporating topographic and environmental variables in the downscaling process of microwave LST?",
+        "QuestionCn": "在微波地表温度（LST）下分辨率过程中，纳入地形和环境变量的预期好处是什么？",
+        "AnswerEn": "Incorporating topographic and environmental variables, such as elevation, slope, and vegetation index, in the downscaling process is expected to improve the accuracy of downscaled microwave LST. It allows for addressing the scale effect more effectively by accounting for spatial heterogeneity and environmental influences, leading to enhanced performance of LST data fusion from different sources, such as thermal infrared and microwave.",
+        "AnswerCn": "结合地形和环境变量，如海拔、坡度和植被指数，在下尺度处理过程中预计将提高下尺度微波地表温度（LST）的准确性。这使得通过考虑空间异质性和环境影响，更有效地解决尺度效应，从而增强来自不同来源（如热红外和微波）的LST数据融合的性能。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "What is your opinion on the challenges of incorporating topographical variations in the development of land surface temperature retrieval algorithms?",
+        "QuestionCn": "我对在土地表面温度检索算法开发中融入地形变化的挑战的看法是什么？",
+        "AnswerEn": "Incorporating topographical variations is challenging due to the complex and varied near-surface environments, especially in regions like China. While topography significantly affects LST retrieval, existing algorithms often do not explicitly account for these variations. Addressing this challenge requires a classification system of environmental variables that considers topography, land cover, and other factors, which can improve the accuracy and universality of retrieval algorithms.",
+        "AnswerCn": "由于复杂多变的近地表环境，尤其是在中国等地区，纳入地形变化是一个挑战。地形对陆地表面温度（LST）提取有显著影响，但现有算法往往没有明确考虑这些变化。解决这一挑战需要建立一个环境变量分类系统，该系统考虑地形、土地覆盖和其他因素，从而提高提取算法的准确性和普遍性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "How would you assess the potential for improving land surface temperature accuracy by downscaling microwave LST using regression models involving environmental variables?",
+        "QuestionCn": "您如何评估通过使用涉及环境变量的回归模型对微波地表温度进行下行尺度处理以提高其准确性的潜力？",
+        "AnswerEn": "The potential for improving land surface temperature accuracy by downscaling microwave LST using regression models is promising, particularly when involving environmental variables like elevation, slope, and vegetation indices. While such models can enhance downscaling performance, their effectiveness varies with terrain type. For example, slope may provide better results in flat regions, whereas elevation might be more suitable for steep areas. A stepwise downscaling method could further refine accuracy by addressing scale differences incrementally.",
+        "AnswerCn": "通过回归模型对微波地表温度进行下采样以提高准确性的潜力是有希望的，特别是当涉及到环境变量如海拔、坡度和植被指数时。虽然这样的模型可以增强下采样性能，但它们的有效性因地形类型而异。例如，在平坦地区，坡度可能提供更好的结果，而在陡峭地区，海拔可能更为合适。逐步下采样方法可以通过逐步解决尺度差异进一步提高准确性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how the fusion of thermal infrared and microwave data can enhance the accuracy of land surface temperature measurements in all-weather conditions.",
+        "QuestionCn": "我不明白热红外和微波数据的融合如何能在各种天气条件下提高地表温度测量的准确性。",
+        "AnswerEn": "The fusion of thermal infrared (TIR) and microwave (MW) data is an effective approach to enhance the accuracy of land surface temperature (LST) measurements in all-weather conditions. TIR data, while having high spatial resolution and accuracy, cannot penetrate clouds. In contrast, MW can penetrate clouds, allowing for all-weather LST retrieval. By integrating these two types of data, it is possible to obtain spatially complete and accurate LST measurements.",
+        "AnswerCn": "热红外（TIR）和微波（MW）数据的融合是一种有效的方法，可以提高在各种天气条件下地表温度（LST）测量的准确性。TIR数据虽然具有高空间分辨率和准确性，但无法穿透云层。相反，MW可以穿透云层，从而实现全天候的LST获取。通过整合这两种数据，可以获得空间上完整且准确的LST测量。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I'm unsure about the challenges faced in downscaling microwave land surface temperature data to a higher spatial resolution.",
+        "QuestionCn": "我对将微波地表温度数据降尺度到更高空间分辨率所面临的挑战感到不确定。",
+        "AnswerEn": "One of the main challenges in downscaling microwave LST data is the inherent scale difference between MW and TIR data. The accuracy of MW LST is generally lower than that of TIR LST, and the performance of downscaling is affected by the accuracy of MW LST. Additionally, the topography and heterogeneous landscape characteristics in regions like China add complexity to the downscaling process.",
+        "AnswerCn": "下调微波地表温度（LST）数据的主要挑战之一是微波（MW）和热红外（TIR）数据之间固有的尺度差异。微波LST的准确性通常低于热红外LST，而下调的性能受到微波LST准确性的影响。此外，中国等地区的地形和异质景观特征增加了下调过程的复杂性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I can't make sense of how environmental variables influence the retrieval of land surface temperature from microwave brightness temperature data.",
+        "QuestionCn": "我无法理解环境变量如何影响从微波亮温数据中检索地表温度。",
+        "AnswerEn": "Environmental variables such as topography, land cover, solar radiation, and atmospheric conditions significantly influence the retrieval of LST from microwave brightness temperature data. These factors affect the spatiotemporal distribution of LST, and incorporating them into the retrieval algorithm helps improve accuracy. For instance, a comprehensive classification system of environmental variables allows for a more precise LST retrieval by considering the effects of these variables on the LST.",
+        "AnswerCn": "环境变量如地形、土地覆盖、太阳辐射和大气条件显著影响从微波亮温数据中获取地表温度（LST）。这些因素影响LST的时空分布，将它们纳入检索算法有助于提高准确性。例如，全面的环境变量分类系统可以通过考虑这些变量对LST的影响，从而实现更精确的LST检索。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

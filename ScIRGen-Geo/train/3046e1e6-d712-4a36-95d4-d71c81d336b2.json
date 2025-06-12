@@ -1,241 +1,241 @@
 {
-    "id": "3046e1e6-d712-4a36-95d4-d71c81d336b2",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "A dataset of multiscale topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole",
-            "titleCn": "泛第三极短波下行辐射多空间尺度地形校正系数数据集",
-            "description": "Shortwave downward radiation (SWDR) is an important component of the Earth's system for material and energy balance. However, existing SWDR estimates are typically developed under the assumption of a flat surface, neglecting the effects of topography. This leads to significant errors in SWDR estimates in mountainous regions and smooths out the spatial distribution of SWDR. The Pan-Third Pole region, with the Tibetan Plateau at its core, is one of the most complex surface areas in the world. The dramatic changes in topography have a severe impact on surface shortwave downward radiation.\nBased on SRTM data, this study developed a multi-spatial scale topographic correction parameterization product for the Pan-Third Pole region, with spatial resolutions of 3 seconds, 15 seconds, 30 seconds, 1 minute, and 2.5 minutes. This topographic correction parameterization product fully considers the effects of changes in solar position and topographic conditions on surface shortwave downward radiation, direct radiation, and diffuse sky radiation. It effectively converts SWDR estimates based on flat surface assumptions to the actual SWDR received by the mountainous surface.\nAt the common spatial resolution of many existing SWDR products (2.5 arc-minutes), the correction accuracy for direct solar radiation is characterized by a coefficient of determination (R²) of 0.998, a relative root mean square error (rRMSE) of 2.4%, and a relative bias (rbias) of 0.8%. The correction accuracy for diffused radiation is represented by an R² of 0.965, an rRMSE of 1.2%, and an rbias of -0.8%. Under clear sky conditions, the terrain correction results for SWDR using TCCs show an rbias of 5.1%, an rRMSE of 7.8%, and an R² of 0.989 for low surface albedo (grass, albedo=0.2). For high surface albedo (snow, albedo=0.8), the rbias is 4.9%, the rRMSE is 8.3%, and the R² is 0.979. The terrain correction results under cloudy sky conditions show an rbias of -1.8%, an rRMSE of 2.2%, and an R² of 0.991.\nIt is worth noting that compared to traditional topographic correction methods, this product can directly correct flat surface SWDR across different spatial scales with more reliable accuracy. This dataset is a topographic correction coefficient product within the Long-term Earth System Spatiotemporally Seamless Radiation Budget dataset (LessRad).",
-            "descriptionCn": "短波下行辐射（SWDR）是地球系统物质与能量平衡的重要组成部分。然而，目前现有的SWDR通常在平坦地表假设下进行开发，忽略了地形效应的影响。这给山区SWDR估算产生了极大的误差，也平滑了SWDR的空间分布。以青藏高原为核心的泛第三极地区是全球地表最为复杂的区域，地形的急剧变化对地表短波下行辐射带来了严重的影响。研究基于SRTM数据开发了泛第三极地区的多空间尺度地形校正参数化产品（空间分辨率为3s、15s、30s、1min和2.5min）。地形校正参数化产品充分考虑了太阳位置和地形条件变化对地表短波下行辐射、直射辐射和天空散射辐射带来的影响，能够有效地将平面假设下的SWDR转化为山区地表实际接收到的SWDR。在许多现有SWDR产品的常见空间分辨率（2.5 arc-minutes）下，太阳直射辐射的校正精度表现为决定系数（R²）为0.998，相对均方根误差（rRMSE）为2.4%，相对偏差（rbias）为0.8%。天空散射辐射的校正精度表现为R²为0.965，rRMSE为1.2%，rbias为-0.8%。在晴空条件下，使用TCCs对SWDR进行地形校正的结果显示，对于低地表反照率（草地，albedo=0.2），rbias为5.1%，rRMSE为7.8%，R²为0.989。对于高地表反照率（雪地，albedo=0.8），rbias为4.9%，rRMSE为8.3%，R²为0.979。云天条件下的整体地形校正结果rbias为-1.8%，rRMSE为2.2%，R²为0.991。值得特别指出的是，与传统的地形校正方法相比，本产品能够直接对不同空间尺度的平面短波下行辐射进行地形校正，并且具有更可靠的精度。\n本数据集是Long-term Earth System spatiotemporally Seamless Radiation budget dataset (LessRad)中的地形校正系数产品。",
-            "instructions": "Filename: the terrain correction parameter data is stored in .tif format with file names following the pattern \"TCCSDR_lon_lat_LON_LAT_SZA_SAA_rr.tif\", \"TCCDIF_lon_lat_LON_LAT_rr.tif\", and \"TCCREF_lon_lat_LON_LAT_rr.tif\". Among them, TCCSDR: Terrain Correction Coefficient of Shortwave Direct Radiation; TCCDIF: Terrain Correction Coefficient of Shortwave Diffused Radiation; TCCREF: Terrain Correction Coefficient of Reflection; lon: minimum longitude value of image range (°); lat: minimum latitude value of image range (°); LON: maximum longitude value of image range (°); LAT: maximum latitude value of image range (°); SZA: Solar Zenith Angle (°); SAA: Solar Azimuth Angle (°); rr: spatial resolution (3s, 15s, 30s, 1min, and 2.5min); tif: geotiff format.\nFor example, a file named \"TCCSDR_60_20_65_25_10_100.tif\" represents the geotiff file that describes the terrain correction coefficient of shortwave direct radiation in the longitude range of 60-65°E and latitude range of 20-25°N when the solar zenith angle is 10° and the solar azimuth angle is 100°.\nUsage: you can use ArcGIS, python, IDL and other programming languages to read. The terrain correction coefficient (TCC) can be calculated as TCC = 0.001 * DN, where TCC is the terrain correction coefficient (including TCCSDR, TCCDIF and TCCREF) and DN is the digital quantized value. the real terrain correction coefficient needs to be multiplied by the quantized value in the file by a coefficient of 0.001.\nTherefore, the shortwave direct radiation received on the real rugged surface can be calculated as SDR = TCCSDR * SDR_Flat (equivalent plane shortwave direct radiation). Similarly, the shortwave diffused radiation can be calculated as DIF = TCCDIF * DIF_Flat (equivalent plane shortwave diffused radiation). The shortwave downward radiation (SWDR) can be calculated as SWDR = SDR + DIF + (SDR + DIF) * TCCREF * surface albedo.",
-            "instructionsCn": "文件命名：地形校正参数数据以.tiff格式存储，文件的名称为“TCCSDR_lon_lat_LON_LAT_SZA_SAA_rr.tif，TCCDIF_lon_lat_LON_LAT_rr.tif，TCCREF_lon_lat_LON_LAT_rr.tif”，其中， TCCSDR：短波下行直射辐射地形校正参数，TCCDIF：短波下行散射辐射地形校正参数，TCCREF：短波下行地形反射地形校正参数，lon：影像范围经度最小值（°），lat：影像范围纬度最小值（°），LON：影像范围经度最大值（°），LAT：影像范围纬度最大值（°），SZA：太阳天顶角（°），SAA：太阳方位角（°），rr：空间分辨率（3s, 15s, 30s, 1min, and 2.5min），tif：geotiff格式。 例如：TCCSDR_60_20_65_25_10_100.tif就代表这个geotiff文件描述太阳天顶角为10°，太阳方位角为100°时，经度范围60-65°，纬度20-25°区域范围内的短波下行直射辐射地形校正参数。\n数据读取方式：该数据集中的所有tiff文件可使用ArcGIS或者Python、IDL等编程语言进行读取。TCC = 0.001* DN 。其中TCC为短波下行辐射地形校正系数（包括TCCSDR、TCCDIF、TCCREF），DN为数字量化值，即真实的短波下行辐射地形校正系数需要将文件中的量化值乘上系数0.001。因此，真实地表接收到的短波下行直射辐射为SDR=TCCSDR*SDR_flat（等效平面的短波下行直射辐射），短波下行散射辐射为DIF=TCCDIF*DIF_flat（等效平面的短波下行散射辐射）。",
-            "east": 110.0,
-            "west": 60.0,
-            "south": 20.0,
-            "north": 50.0,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 3836180994004.0,
-            "cstr": "18406.11.Atmos.tpdc.300784",
-            "doi": "10.11888/Atmos.tpdc.300784",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "冼宇阳",
-                "nameEn": "XIAN Yuyang",
-                "unitEn": "",
-                "unitCn": "中山大学"
-            },
-            {
-                "nameCn": "王天星",
-                "nameEn": "WANG Tianxing",
-                "unitEn": "",
-                "unitCn": "中山大学"
-            },
-            {
-                "nameCn": "黎达辉",
-                "nameEn": "LI Dahui",
-                "unitEn": "",
-                "unitCn": "中山大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A Uniform Model for Correcting Shortwave Downward Radiation Over Rugged Terrain at Various Scales",
-                "referenceCn": null,
-                "referenceEn": "Xian, Y.Y., Wang, T.X., Cheng, W.J., Letu, H., Du, Y.H., & Leng, W.C. (2023). A Uniform Model for Correcting Shortwave Downward Radiation Over Rugged Terrain at Various Scales. IEEE Transactions on Geoscience and Remote Sensing, 61, 1–12. DOI: 10.1109/TGRS.2023.3278081."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A dataset of topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole",
-                "referenceCn": null,
-                "referenceEn": "Xian, Y., Wang, T., Du, Y., Letu, H., Qi, J., & Li, D. (2024). A dataset of topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole. Scientific Data, 11, 779. https://doi.org/10.1038/s41597-024-03616-2"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            },
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "地形",
-                "nameEn": "Topography"
-            },
-            {
-                "nameCn": "地表参数",
-                "nameEn": "Land Surface Parameter"
-            },
-            {
-                "nameCn": "短波辐射",
-                "nameEn": "Shortwave radiation"
-            },
-            {
-                "nameCn": "辐射",
-                "nameEn": "Radiation"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "泛第三级",
-                "keywordEn": "Pan-Third Pole"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "无",
-                "keywordEn": "none",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "南方海洋科学与工程广东省实验室（珠海）创新团队建设项目",
-                "titleEn": "The Innovation Group Project of Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)"
-            },
-            {
-                "titleCn": "辐射平衡遥感",
-                "titleEn": "National Natural Science Foundation of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            }
-        ]
+  "id": "3046e1e6-d712-4a36-95d4-d71c81d336b2",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "A dataset of multiscale topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole",
+      "titleCn": "泛第三极短波下行辐射多空间尺度地形校正系数数据集",
+      "description": "Shortwave downward radiation (SWDR) is an important component of the Earth's system for material and energy balance. However, existing SWDR estimates are typically developed under the assumption of a flat surface, neglecting the effects of topography. This leads to significant errors in SWDR estimates in mountainous regions and smooths out the spatial distribution of SWDR. The Pan-Third Pole region, with the Tibetan Plateau at its core, is one of the most complex surface areas in the world. The dramatic changes in topography have a severe impact on surface shortwave downward radiation.\nBased on SRTM data, this study developed a multi-spatial scale topographic correction parameterization product for the Pan-Third Pole region, with spatial resolutions of 3 seconds, 15 seconds, 30 seconds, 1 minute, and 2.5 minutes. This topographic correction parameterization product fully considers the effects of changes in solar position and topographic conditions on surface shortwave downward radiation, direct radiation, and diffuse sky radiation. It effectively converts SWDR estimates based on flat surface assumptions to the actual SWDR received by the mountainous surface.\nAt the common spatial resolution of many existing SWDR products (2.5 arc-minutes), the correction accuracy for direct solar radiation is characterized by a coefficient of determination (R²) of 0.998, a relative root mean square error (rRMSE) of 2.4%, and a relative bias (rbias) of 0.8%. The correction accuracy for diffused radiation is represented by an R² of 0.965, an rRMSE of 1.2%, and an rbias of -0.8%. Under clear sky conditions, the terrain correction results for SWDR using TCCs show an rbias of 5.1%, an rRMSE of 7.8%, and an R² of 0.989 for low surface albedo (grass, albedo=0.2). For high surface albedo (snow, albedo=0.8), the rbias is 4.9%, the rRMSE is 8.3%, and the R² is 0.979. The terrain correction results under cloudy sky conditions show an rbias of -1.8%, an rRMSE of 2.2%, and an R² of 0.991.\nIt is worth noting that compared to traditional topographic correction methods, this product can directly correct flat surface SWDR across different spatial scales with more reliable accuracy. This dataset is a topographic correction coefficient product within the Long-term Earth System Spatiotemporally Seamless Radiation Budget dataset (LessRad).",
+      "descriptionCn": "短波下行辐射（SWDR）是地球系统物质与能量平衡的重要组成部分。然而，目前现有的SWDR通常在平坦地表假设下进行开发，忽略了地形效应的影响。这给山区SWDR估算产生了极大的误差，也平滑了SWDR的空间分布。以青藏高原为核心的泛第三极地区是全球地表最为复杂的区域，地形的急剧变化对地表短波下行辐射带来了严重的影响。研究基于SRTM数据开发了泛第三极地区的多空间尺度地形校正参数化产品（空间分辨率为3s、15s、30s、1min和2.5min）。地形校正参数化产品充分考虑了太阳位置和地形条件变化对地表短波下行辐射、直射辐射和天空散射辐射带来的影响，能够有效地将平面假设下的SWDR转化为山区地表实际接收到的SWDR。在许多现有SWDR产品的常见空间分辨率（2.5 arc-minutes）下，太阳直射辐射的校正精度表现为决定系数（R²）为0.998，相对均方根误差（rRMSE）为2.4%，相对偏差（rbias）为0.8%。天空散射辐射的校正精度表现为R²为0.965，rRMSE为1.2%，rbias为-0.8%。在晴空条件下，使用TCCs对SWDR进行地形校正的结果显示，对于低地表反照率（草地，albedo=0.2），rbias为5.1%，rRMSE为7.8%，R²为0.989。对于高地表反照率（雪地，albedo=0.8），rbias为4.9%，rRMSE为8.3%，R²为0.979。云天条件下的整体地形校正结果rbias为-1.8%，rRMSE为2.2%，R²为0.991。值得特别指出的是，与传统的地形校正方法相比，本产品能够直接对不同空间尺度的平面短波下行辐射进行地形校正，并且具有更可靠的精度。\n本数据集是Long-term Earth System spatiotemporally Seamless Radiation budget dataset (LessRad)中的地形校正系数产品。",
+      "instructions": "Filename: the terrain correction parameter data is stored in .tif format with file names following the pattern \"TCCSDR_lon_lat_LON_LAT_SZA_SAA_rr.tif\", \"TCCDIF_lon_lat_LON_LAT_rr.tif\", and \"TCCREF_lon_lat_LON_LAT_rr.tif\". Among them, TCCSDR: Terrain Correction Coefficient of Shortwave Direct Radiation; TCCDIF: Terrain Correction Coefficient of Shortwave Diffused Radiation; TCCREF: Terrain Correction Coefficient of Reflection; lon: minimum longitude value of image range (°); lat: minimum latitude value of image range (°); LON: maximum longitude value of image range (°); LAT: maximum latitude value of image range (°); SZA: Solar Zenith Angle (°); SAA: Solar Azimuth Angle (°); rr: spatial resolution (3s, 15s, 30s, 1min, and 2.5min); tif: geotiff format.\nFor example, a file named \"TCCSDR_60_20_65_25_10_100.tif\" represents the geotiff file that describes the terrain correction coefficient of shortwave direct radiation in the longitude range of 60-65°E and latitude range of 20-25°N when the solar zenith angle is 10° and the solar azimuth angle is 100°.\nUsage: you can use ArcGIS, python, IDL and other programming languages to read. The terrain correction coefficient (TCC) can be calculated as TCC = 0.001 * DN, where TCC is the terrain correction coefficient (including TCCSDR, TCCDIF and TCCREF) and DN is the digital quantized value. the real terrain correction coefficient needs to be multiplied by the quantized value in the file by a coefficient of 0.001.\nTherefore, the shortwave direct radiation received on the real rugged surface can be calculated as SDR = TCCSDR * SDR_Flat (equivalent plane shortwave direct radiation). Similarly, the shortwave diffused radiation can be calculated as DIF = TCCDIF * DIF_Flat (equivalent plane shortwave diffused radiation). The shortwave downward radiation (SWDR) can be calculated as SWDR = SDR + DIF + (SDR + DIF) * TCCREF * surface albedo.",
+      "instructionsCn": "文件命名：地形校正参数数据以.tiff格式存储，文件的名称为“TCCSDR_lon_lat_LON_LAT_SZA_SAA_rr.tif，TCCDIF_lon_lat_LON_LAT_rr.tif，TCCREF_lon_lat_LON_LAT_rr.tif”，其中， TCCSDR：短波下行直射辐射地形校正参数，TCCDIF：短波下行散射辐射地形校正参数，TCCREF：短波下行地形反射地形校正参数，lon：影像范围经度最小值（°），lat：影像范围纬度最小值（°），LON：影像范围经度最大值（°），LAT：影像范围纬度最大值（°），SZA：太阳天顶角（°），SAA：太阳方位角（°），rr：空间分辨率（3s, 15s, 30s, 1min, and 2.5min），tif：geotiff格式。 例如：TCCSDR_60_20_65_25_10_100.tif就代表这个geotiff文件描述太阳天顶角为10°，太阳方位角为100°时，经度范围60-65°，纬度20-25°区域范围内的短波下行直射辐射地形校正参数。\n数据读取方式：该数据集中的所有tiff文件可使用ArcGIS或者Python、IDL等编程语言进行读取。TCC = 0.001* DN 。其中TCC为短波下行辐射地形校正系数（包括TCCSDR、TCCDIF、TCCREF），DN为数字量化值，即真实的短波下行辐射地形校正系数需要将文件中的量化值乘上系数0.001。因此，真实地表接收到的短波下行直射辐射为SDR=TCCSDR*SDR_flat（等效平面的短波下行直射辐射），短波下行散射辐射为DIF=TCCDIF*DIF_flat（等效平面的短波下行散射辐射）。",
+      "east": 110.0,
+      "west": 60.0,
+      "south": 20.0,
+      "north": 50.0,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 3836180994004.0,
+      "cstr": "18406.11.Atmos.tpdc.300784",
+      "doi": "10.11888/Atmos.tpdc.300784",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of terrain correction coefficients used in the estimation of shortwave downward radiation in mountainous regions?",
-                "QuestionCn": "在山区估算短波下行辐射时，地形修正系数的特征包括：",
-                "AnswerEn": "parameterized products, impacts of solar position, impacts of terrain conditions, R² of 0.998, relative RMSE of 2.4%, relative bias of 0.8%, R² of 0.965, relative RMSE of 1.2%, relative bias of -0.8%, rbias of 5.1%, rRMSE of 7.8%, R² of 0.989, rbias of 4.9%, rRMSE of 8.3%, R² of 0.979, rbias of -1.8%, rRMSE of 2.2%, R² of 0.991, reliable accuracy across different spatial scales",
-                "AnswerCn": "参数化产品，太阳位置的影响，地形条件的影响，R²为0.998，相对RMSE为2.4%，相对偏差为0.8%，R²为0.965，相对RMSE为1.2%，相对偏差为-0.8%，相对偏差为5.1%，相对RMSE为7.8%，R²为0.989，相对偏差为4.9%，相对RMSE为8.3%，R²为0.979，相对偏差为-1.8%，相对RMSE为2.2%，R²为0.991，在不同空间尺度上具有可靠的准确性。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What are the spatial resolutions provided for the terrain correction parameterization products in data collection for shortwave downward radiation (SWDR) in the Pan-Third Pole region?",
-                "QuestionCn": "在泛第三极地区的短波下行辐射（SWDR）数据收集中，地形校正参数化产品提供的空间分辨率是什么？",
-                "AnswerEn": "3 seconds, 15 seconds, 30 seconds, 1 minute, 2.5 minutes",
-                "AnswerCn": "3秒，15秒，30秒，1分钟，2.5分钟",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the significance of terrain correction coefficients in the context of shortwave downward radiation (SWDR) estimation?",
-                "QuestionCn": "地形修正系数在短波下行辐射（SWDR）估计中的重要性是什么？",
-                "AnswerEn": "Terrain correction coefficients are crucial in estimating shortwave downward radiation (SWDR) as they account for the effects of solar position and terrain variations on surface radiation, which are often ignored under the assumption of a flat surface. This is particularly important in complex terrains like the pan-Third Pole region, where significant errors can arise if terrain effects are not considered. By using these coefficients, SWDR estimates can be corrected for direct and diffuse solar radiation, improving the accuracy of radiation budget assessments across different spatial resolutions.",
-                "AnswerCn": "地形修正系数在估计短波下行辐射（SWDR）中至关重要，因为它们考虑了太阳位置和地形变化对表面辐射的影响，而这些影响在假设平坦表面的情况下往往被忽视。这在像泛第三极地区这样复杂的地形中尤为重要，因为如果不考虑地形效应，可能会产生显著的误差。通过使用这些系数，可以对直接和散射太阳辐射进行修正，从而提高不同空间分辨率下辐射预算评估的准确性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the accuracy of terrain correction coefficients in the estimation of shortwave downward radiation compare when using SRTM data at different spatial resolutions (e.g., 3s, 15s, 30s) versus a traditional planar surface assumption in complex terrains like the Pan-Third Pole region?",
-                "QuestionCn": "在复杂地形如泛第三极地区，使用不同空间分辨率（例如3秒、15秒、30秒）的SRTM数据与传统平面表面假设相比，地形修正系数在短波下行辐射估计中的准确性如何？",
-                "AnswerEn": "The terrain correction coefficients developed using SRTM data for the Pan-Third Pole region show significantly higher accuracy in estimating shortwave downward radiation compared to the traditional planar surface assumption. At a common spatial resolution of 2.5 arc-minutes, the corrected solar direct radiation achieves a coefficient of determination (R²) of 0.998 and a relative root mean square error (rRMSE) of 2.4%. In contrast, traditional planar assumptions do not account for the complex terrain effects, leading to greater estimation errors. The correction parameters account for variations in solar position and terrain conditions, providing more reliable results across different spatial resolutions.",
-                "AnswerCn": "使用SRTM数据为泛第三极地区开发的地形修正系数在估计短波下行辐射方面显示出显著高于传统平面表面假设的准确性。在共同的2.5弧分钟空间分辨率下，修正后的太阳直接辐射达到了0.998的决定系数（R²）和2.4%的相对均方根误差（rRMSE）。相比之下，传统的平面假设未考虑复杂的地形效应，导致更大的估计误差。修正参数考虑了太阳位置和地形条件的变化，提供了在不同空间分辨率下更可靠的结果。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What underlying factors might explain the high accuracy of terrain correction parameters in converting planar shortwave downward radiation to actual surface-received radiation in mountainous regions?",
-                "QuestionCn": "哪些潜在因素可能解释在山区将平面短波下行辐射转换为实际地表接收辐射时地形修正参数的高准确性？",
-                "AnswerEn": "The high accuracy of terrain correction parameters can be attributed to the consideration of solar position and terrain condition variations, which significantly impact surface shortwave downward radiation, direct radiation, and sky-scattered radiation. These parameters enable effective conversion from planar assumptions to actual surface-received shortwave downward radiation, especially in complex terrains like the Pan-Third Pole region.",
-                "AnswerCn": "地形修正参数的高精度可以归因于对太阳位置和地形条件变化的考虑，这些变化对表面短波下行辐射、直接辐射和天空散射辐射有显著影响。这些参数使得从平面假设转换为实际表面接收到的短波下行辐射变得有效，尤其是在像泛第三极地区这样的复杂地形中。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the inaccuracies in estimating shortwave downwelling radiation (SWDR) in mountainous regions, and how does terrain correction help mitigate these errors?",
-                "QuestionCn": "在山区估计短波下行辐射（SWDR）时，哪些因素会导致不准确？地形修正如何帮助减轻这些误差？",
-                "AnswerEn": "Inaccuracies in estimating SWDR in mountainous regions arise from the assumption of flat surfaces in existing SWDR models, which do not account for the complex terrain effects. The rapid changes in terrain, especially in regions like the Tibetan Plateau, significantly affect the distribution of SWDR. Terrain correction, as developed using SRTM data, addresses these inaccuracies by considering the impact of solar position and terrain conditions on SWDR, direct radiation, and sky-scattered radiation. This correction effectively transforms SWDR estimates from flat assumptions to more accurate representations of what is received on the mountainous surface.",
-                "AnswerCn": "在山区估算SWDR（太阳辐射水分需求）时，由于现有SWDR模型假设地表为平坦，导致了不准确性，这并未考虑复杂地形的影响。尤其是在像青藏高原这样的地区，地形的快速变化显著影响SWDR的分布。利用SRTM数据开发的地形修正方法，通过考虑太阳位置和地形条件对SWDR、直接辐射和天空散射辐射的影响，解决了这些不准确性。该修正有效地将SWDR估算从平坦假设转变为对山区表面接收到的辐射的更准确表示。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential outcomes of applying terrain correction coefficients to shortwave downward radiation data in mountainous regions with varying spatial scales?",
-                "QuestionCn": "在具有不同空间尺度的山区应用地形修正系数于短波下行辐射数据的潜在结果是什么？",
-                "AnswerEn": "Applying terrain correction coefficients to shortwave downward radiation data in mountainous regions can significantly enhance the accuracy of radiation estimates by accounting for the effects of solar position and terrain conditions. This adjustment can effectively transform the estimated radiation under flat surface assumptions to reflect the actual radiation received by the mountainous surface. The results indicate high precision in the correction of solar direct radiation and sky scattering radiation, with accuracy metrics such as a high coefficient of determination (R²) and low relative root mean square error (rRMSE) and relative bias (rbias). For instance, in areas with low surface albedo like grassland, the relative bias is 5.1% and the rRMSE is 7.8%, whereas in high albedo areas like snow, the relative bias is 4.9% and the rRMSE is 8.3%. Under cloudy conditions, the overall terrain correction results show a relative bias of -1.8%, an rRMSE of 2.2%, and an R² of 0.991. This approach offers more reliable accuracy compared to traditional terrain correction methods and can be applied directly to shortwave downward radiation across different spatial scales.",
-                "AnswerCn": "在山区应用地形修正系数对短波下行辐射数据进行调整，可以显著提高辐射估计的准确性，考虑到太阳位置和地形条件的影响。这种调整可以有效地将基于平坦表面假设的辐射估计转化为反映山区表面实际接收的辐射。结果表明，太阳直接辐射和天空散射辐射的修正精度很高，准确性指标如高决定系数（R²）和低相对均方根误差（rRMSE）及相对偏差（rbias）。例如，在表面反照率较低的草地地区，相对偏差为5.1%，rRMSE为7.8%；而在反照率较高的雪地地区，相对偏差为4.9%，rRMSE为8.3%。在多云条件下，整体地形修正结果显示相对偏差为-1.8%，rRMSE为2.2%，R²为0.991。这种方法相比传统的地形修正方法提供了更可靠的准确性，并可以直接应用于不同空间尺度的短波下行辐射。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the primary objectives of developing a dataset that considers terrain effects on shortwave downward radiation in complex geographical areas like the Pan-Third Pole region?",
-                "QuestionCn": "开发一个考虑复杂地理区域（如泛第三极地区）地形对短波下行辐射影响的数据集的主要目标是什么？",
-                "AnswerEn": "The primary objectives are to address the inaccuracies in estimating shortwave downward radiation (SWDR) in mountainous areas caused by the assumption of a flat surface, to enhance the precision of SWDR spatial distribution by incorporating terrain effects, and to provide a more reliable terrain correction parameterization product that accounts for variations in solar position and terrain conditions, thereby improving the accuracy of SWDR estimations in complex terrains.",
-                "AnswerCn": "主要目标是解决由于假设平坦表面而导致的山区短波下行辐射（SWDR）估算不准确的问题，通过考虑地形效应来提高SWDR空间分布的精确度，并提供一个更可靠的地形修正参数化产品，以考虑太阳位置和地形条件的变化，从而提高复杂地形中SWDR估算的准确性。",
-                "Level": "C2(Understanding)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "冼宇阳",
+        "nameEn": "XIAN Yuyang",
+        "unitEn": "",
+        "unitCn": "中山大学"
+      },
+      {
+        "nameCn": "王天星",
+        "nameEn": "WANG Tianxing",
+        "unitEn": "",
+        "unitCn": "中山大学"
+      },
+      {
+        "nameCn": "黎达辉",
+        "nameEn": "LI Dahui",
+        "unitEn": "",
+        "unitCn": "中山大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A Uniform Model for Correcting Shortwave Downward Radiation Over Rugged Terrain at Various Scales",
+        "referenceCn": null,
+        "referenceEn": "Xian, Y.Y., Wang, T.X., Cheng, W.J., Letu, H., Du, Y.H., & Leng, W.C. (2023). A Uniform Model for Correcting Shortwave Downward Radiation Over Rugged Terrain at Various Scales. IEEE Transactions on Geoscience and Remote Sensing, 61, 1–12. DOI: 10.1109/TGRS.2023.3278081."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A dataset of topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole",
+        "referenceCn": null,
+        "referenceEn": "Xian, Y., Wang, T., Du, Y., Letu, H., Qi, J., & Li, D. (2024). A dataset of topographic correction coefficients for shortwave downward radiation over the Pan-Third Pole. Scientific Data, 11, 779. https://doi.org/10.1038/s41597-024-03616-2"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      },
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "地形",
+        "nameEn": "Topography"
+      },
+      {
+        "nameCn": "地表参数",
+        "nameEn": "Land Surface Parameter"
+      },
+      {
+        "nameCn": "短波辐射",
+        "nameEn": "Shortwave radiation"
+      },
+      {
+        "nameCn": "辐射",
+        "nameEn": "Radiation"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "泛第三级",
+        "keywordEn": "Pan-Third Pole"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "无",
+        "keywordEn": "none",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "南方海洋科学与工程广东省实验室（珠海）创新团队建设项目",
+        "titleEn": "The Innovation Group Project of Southern Marine Science and Engineering Guangdong Laboratory (Zhuhai)"
+      },
+      {
+        "titleCn": "辐射平衡遥感",
+        "titleEn": "National Natural Science Foundation of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of terrain correction coefficients used in the estimation of shortwave downward radiation in mountainous regions?",
+        "QuestionCn": "在山区估算短波向下辐射时使用的地形校正系数的特征是什么？",
+        "AnswerEn": "parameterized products, impacts of solar position, impacts of terrain conditions, R² of 0.998, relative RMSE of 2.4%, relative bias of 0.8%, R² of 0.965, relative RMSE of 1.2%, relative bias of -0.8%, rbias of 5.1%, rRMSE of 7.8%, R² of 0.989, rbias of 4.9%, rRMSE of 8.3%, R² of 0.979, rbias of -1.8%, rRMSE of 2.2%, R² of 0.991, reliable accuracy across different spatial scales",
+        "AnswerCn": "参数化产品，太阳位置的影响，地形条件的影响，R²为0.998，相对RMSE为2.4%，相对偏差为0.8%，R²为0.965，相对RMSE为1.2%，相对偏差为-0.8%，相对偏差为5.1%，相对RMSE为7.8%，R²为0.989，相对偏差为4.9%，相对RMSE为8.3%，R²为0.979，相对偏差为-1.8%，相对RMSE为2.2%，R²为0.991，在不同空间尺度上具有可靠的准确性。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What are the spatial resolutions provided for the terrain correction parameterization products in data collection for shortwave downward radiation (SWDR) in the Pan-Third Pole region?",
+        "QuestionCn": "在泛第三极地区的短波下行辐射（SWDR）数据收集中，地形校正参数化产品提供的空间分辨率是什么？",
+        "AnswerEn": "3 seconds, 15 seconds, 30 seconds, 1 minute, 2.5 minutes",
+        "AnswerCn": "3秒，15秒，30秒，1分钟，2.5分钟",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the significance of terrain correction coefficients in the context of shortwave downward radiation (SWDR) estimation?",
+        "QuestionCn": "地形修正系数在短波下行辐射（SWDR）估计中的重要性是什么？",
+        "AnswerEn": "Terrain correction coefficients are crucial in estimating shortwave downward radiation (SWDR) as they account for the effects of solar position and terrain variations on surface radiation, which are often ignored under the assumption of a flat surface. This is particularly important in complex terrains like the pan-Third Pole region, where significant errors can arise if terrain effects are not considered. By using these coefficients, SWDR estimates can be corrected for direct and diffuse solar radiation, improving the accuracy of radiation budget assessments across different spatial resolutions.",
+        "AnswerCn": "地形修正系数在估计短波下行辐射（SWDR）中至关重要，因为它们考虑了太阳位置和地形变化对表面辐射的影响，而这些影响在假设平坦表面的情况下往往被忽视。这在像泛第三极地区这样复杂的地形中尤为重要，因为如果不考虑地形效应，可能会产生显著的误差。通过使用这些系数，可以对直接和散射太阳辐射进行修正，从而提高不同空间分辨率下辐射预算评估的准确性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the accuracy of terrain correction coefficients in the estimation of shortwave downward radiation compare when using SRTM data at different spatial resolutions (e.g., 3s, 15s, 30s) versus a traditional planar surface assumption in complex terrains like the Pan-Third Pole region?",
+        "QuestionCn": "在复杂地形如泛第三极地区，使用不同空间分辨率（例如3秒、15秒、30秒）的SRTM数据与传统平面表面假设相比，地形修正系数在短波下行辐射估计中的准确性如何？",
+        "AnswerEn": "The terrain correction coefficients developed using SRTM data for the Pan-Third Pole region show significantly higher accuracy in estimating shortwave downward radiation compared to the traditional planar surface assumption. At a common spatial resolution of 2.5 arc-minutes, the corrected solar direct radiation achieves a coefficient of determination (R²) of 0.998 and a relative root mean square error (rRMSE) of 2.4%. In contrast, traditional planar assumptions do not account for the complex terrain effects, leading to greater estimation errors. The correction parameters account for variations in solar position and terrain conditions, providing more reliable results across different spatial resolutions.",
+        "AnswerCn": "使用SRTM数据为泛第三极地区开发的地形修正系数在估计短波下行辐射方面显示出显著高于传统平面表面假设的准确性。在共同的2.5弧分钟空间分辨率下，修正后的太阳直接辐射达到了0.998的决定系数（R²）和2.4%的相对均方根误差（rRMSE）。相比之下，传统的平面假设未考虑复杂的地形效应，导致更大的估计误差。修正参数考虑了太阳位置和地形条件的变化，提供了在不同空间分辨率下更可靠的结果。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What underlying factors might explain the high accuracy of terrain correction parameters in converting planar shortwave downward radiation to actual surface-received radiation in mountainous regions?",
+        "QuestionCn": "哪些潜在因素可能解释在山区将平面短波下行辐射转换为实际地表接收辐射时地形修正参数的高准确性？",
+        "AnswerEn": "The high accuracy of terrain correction parameters can be attributed to the consideration of solar position and terrain condition variations, which significantly impact surface shortwave downward radiation, direct radiation, and sky-scattered radiation. These parameters enable effective conversion from planar assumptions to actual surface-received shortwave downward radiation, especially in complex terrains like the Pan-Third Pole region.",
+        "AnswerCn": "地形修正参数的高精度可以归因于对太阳位置和地形条件变化的考虑，这些变化对表面短波下行辐射、直接辐射和天空散射辐射有显著影响。这些参数使得从平面假设转换为实际表面接收到的短波下行辐射变得有效，尤其是在像泛第三极地区这样的复杂地形中。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the inaccuracies in estimating shortwave downwelling radiation (SWDR) in mountainous regions, and how does terrain correction help mitigate these errors?",
+        "QuestionCn": "在山区估计短波下行辐射（SWDR）时，哪些因素会导致不准确？地形修正如何帮助减轻这些误差？",
+        "AnswerEn": "Inaccuracies in estimating SWDR in mountainous regions arise from the assumption of flat surfaces in existing SWDR models, which do not account for the complex terrain effects. The rapid changes in terrain, especially in regions like the Tibetan Plateau, significantly affect the distribution of SWDR. Terrain correction, as developed using SRTM data, addresses these inaccuracies by considering the impact of solar position and terrain conditions on SWDR, direct radiation, and sky-scattered radiation. This correction effectively transforms SWDR estimates from flat assumptions to more accurate representations of what is received on the mountainous surface.",
+        "AnswerCn": "在山区估算SWDR（太阳辐射水分需求）时，由于现有SWDR模型假设地表为平坦，导致了不准确性，这并未考虑复杂地形的影响。尤其是在像青藏高原这样的地区，地形的快速变化显著影响SWDR的分布。利用SRTM数据开发的地形修正方法，通过考虑太阳位置和地形条件对SWDR、直接辐射和天空散射辐射的影响，解决了这些不准确性。该修正有效地将SWDR估算从平坦假设转变为对山区表面接收到的辐射的更准确表示。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential outcomes of applying terrain correction coefficients to shortwave downward radiation data in mountainous regions with varying spatial scales?",
+        "QuestionCn": "在具有不同空间尺度的山区应用地形修正系数于短波下行辐射数据的潜在结果是什么？",
+        "AnswerEn": "Applying terrain correction coefficients to shortwave downward radiation data in mountainous regions can significantly enhance the accuracy of radiation estimates by accounting for the effects of solar position and terrain conditions. This adjustment can effectively transform the estimated radiation under flat surface assumptions to reflect the actual radiation received by the mountainous surface. The results indicate high precision in the correction of solar direct radiation and sky scattering radiation, with accuracy metrics such as a high coefficient of determination (R²) and low relative root mean square error (rRMSE) and relative bias (rbias). For instance, in areas with low surface albedo like grassland, the relative bias is 5.1% and the rRMSE is 7.8%, whereas in high albedo areas like snow, the relative bias is 4.9% and the rRMSE is 8.3%. Under cloudy conditions, the overall terrain correction results show a relative bias of -1.8%, an rRMSE of 2.2%, and an R² of 0.991. This approach offers more reliable accuracy compared to traditional terrain correction methods and can be applied directly to shortwave downward radiation across different spatial scales.",
+        "AnswerCn": "在山区应用地形修正系数对短波下行辐射数据进行调整，可以显著提高辐射估计的准确性，考虑到太阳位置和地形条件的影响。这种调整可以有效地将基于平坦表面假设的辐射估计转化为反映山区表面实际接收的辐射。结果表明，太阳直接辐射和天空散射辐射的修正精度很高，准确性指标如高决定系数（R²）和低相对均方根误差（rRMSE）及相对偏差（rbias）。例如，在表面反照率较低的草地地区，相对偏差为5.1%，rRMSE为7.8%；而在反照率较高的雪地地区，相对偏差为4.9%，rRMSE为8.3%。在多云条件下，整体地形修正结果显示相对偏差为-1.8%，rRMSE为2.2%，R²为0.991。这种方法相比传统的地形修正方法提供了更可靠的准确性，并可以直接应用于不同空间尺度的短波下行辐射。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the primary objectives of developing a dataset that considers terrain effects on shortwave downward radiation in complex geographical areas like the Pan-Third Pole region?",
+        "QuestionCn": "开发一个考虑复杂地理区域（如泛第三极地区）地形对短波下行辐射影响的数据集的主要目标是什么？",
+        "AnswerEn": "The primary objectives are to address the inaccuracies in estimating shortwave downward radiation (SWDR) in mountainous areas caused by the assumption of a flat surface, to enhance the precision of SWDR spatial distribution by incorporating terrain effects, and to provide a more reliable terrain correction parameterization product that accounts for variations in solar position and terrain conditions, thereby improving the accuracy of SWDR estimations in complex terrains.",
+        "AnswerCn": "主要目标是解决由于假设平坦表面而导致的山区短波下行辐射（SWDR）估算不准确的问题，通过考虑地形效应来提高SWDR空间分布的精确度，并提供一个更可靠的地形修正参数化产品，以考虑太阳位置和地形条件的变化，从而提高复杂地形中SWDR估算的准确性。",
+        "Level": "C2(Understanding)"
+      }
+    ]
+  }
 }

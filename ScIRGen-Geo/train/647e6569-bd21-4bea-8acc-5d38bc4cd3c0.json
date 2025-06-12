@@ -1,526 +1,526 @@
 {
-    "id": "647e6569-bd21-4bea-8acc-5d38bc4cd3c0",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": "China meteorological assimilation driving datasets for the SWAT model Version 1.1 (2008-2016)",
-            "titleCn": "SWAT模型中国大气同化驱动数据集（CMADS V1.1）（2008-2016）",
-            "description": "CMADS V1.1(The China Meteorological Assimilation Driving Datasets for the SWAT model Version 1.1) Version of the data set introduced the STMAS assimilation algorithm. It was constructed using multiple technologies and scientific methods, including loop nesting of data, projection of resampling models, and bilinear interpolation. The CMADS series of datasets can be used to drive various hydrological models, such as SWAT, the Variable Infiltration Capacity (VIC) model, and the Storm Water Management model (SWMM). It also allows users to conveniently extract a wide range of meteorological elements for detailed climatic analyses. Data sources for the CMADS series include nearly 40,000 regional automatic stations under China’s 2,421 national automatic and business assessment centres. This ensures that the CMADS datasets have wide applicability within the country, and that data accuracy was vastly improved.\nThe CMADS series of datasets has undergone finishing and correction to match the specific format of input and driving data of SWAT models. This reduces the volume of complex work that model builders have to deal with. An index table of the various elements encompassing all of East Asia was also established for SWAT models. This allows the models to utilize the datasets directly, thus eliminating the need for any format conversion or calculations using weather generators. Consequently, significant improvements to the modelling speed and output accuracy of SWAT models were achieved.\nMost of the source data in the CMADS datasets are derived from CLDAS in China and other reanalysis data in the world. The integration of air temperature (2m), air pressure, humidity, and wind speed data (10m) was mainly achieved through the LAPS/STMAS system. Precipitation data were stitched using CMORPH’s global precipitation products and the National Meteorological Information Center’s data of China (which is based on CMORPH’s integrated precipitation products). The latter contains daily precipitation records observed at 2,400 national meteorological stations and the CMORPH satellite’s inversion precipitation products.The inversion algorithm for incoming solar radiation at the ground surface makes use of the discrete longitudinal method by Stamnes et al.(1988)to calculate radiation transmission. The resolutions for CMADS V1.0, V1.1, V1.2, and V1.3 were 1/3°, 1/4°, 1/8°, and 1/16°, respectively.\nIn CMADS V1.0 (at a spatial resolution of 1/3°), East Asia was spatially divided into 195 × 300 grid points containing 58,500 stations. Despite being at the same spatial resolution as CMADS V1.0, CMADS V1.1 contains more data, with 260 × 400 grid points containing 104,000 stations. For both versions, the stations’ daily data include average solar radiation, average temperature (2m), average pressure, maximum and minimum temperature (2m), specific humidity, cumulative precipitation, and average wind speed (10m).\nThe CMADS comprises other variables for any hydrological model(under 'For-other-model' folder): Daily Average Temperature (2m), Daily Maximum Temperature (2m), Daily Minimum Temperature (2m), Daily cumulative precipitation (20-20h), Daily average Relative Humidity, Daily average Specific Humidity, Daily average Solar Radiation, Daily average Wind (10m), and Daily average Atmospheric Pressure.\nIntroduction to metadata of CMADS\nCMADS storage path description:(CMADS was divided into two datesets)\n1.CMADS-V1.0 For-swat  --specifically driving the SWAT model\n2.CMADS-V1.0 For-other-model  --specifically driving the other hydrological model(VIC,SWMM,etc.)\nCMADS-- For-swat-2009  folder contain:(Station  and Fork )\n1).Station \nRelative-Humidity-58500  Daily average relative humidity(fraction)\nPrecipitation-58500  Daily accumulated 24-hour precipitation(mm)\nSolar radiation-58500  Daily average solar radiation(MJ/m2)\nTmperature-58500  Daily maximum and minimum 2m temperature(℃) \nWind-58500  Daily average 10m wind speed(m/s)\nWhere R, P, S, T, W+ dimensional grid number - the number of longitude grid is the station in the above five\nfolders respectively.(Where R,P,S,T,W respective Daily average relative humidity,Daily cumulative\nprecipitation(24h),Daily mean solar radiation(MJ/m2),Daily maximum and minimum temperature(℃) and Daily mean\nwind speed (m/s)) respectively.Data format is (.dbf)\n2).Fork  (Station index table over East Asia)\nPCPFORK.txt (Precipitation index table)\nRHFORK.txt (Relative humidity index table)\nSORFORK.txt (Solar radiation index table)\nTMPFORK.txt (Temperature index table)\nWINDFORK.txt (Wind speed index)\nCMADS-- For-swat-2012  folder contain:(Station  and Fork ) Storage structure is consistency with  For-swat-\n2009 .However, all the data in this directory are only available in TXT format and can be readed by SWAT2012.\n3) For-other-model  (Includes all weather input data required by the any hydrologic model (daily).)\nAtmospheric-Pressure-txt  Daily average atmospheric pressure(hPa)\nAverage-Temperature-txt  Daily average 2m temperature(℃)\nMaximum-Temperature-txt  Daily maximum 2m temperature(℃)\nMinimum-Temperature-txt  Daily minimum 2m temperature(℃)\nPrecipitation-txt  Daily accumulated 24-hour precipitation (mm)\nRelative-Humidity-txt  Daily average relative humidity(fraction)\nSolar-Radiation-txt  Daily average solar radiation(MJ/m2)\nSpecific-Humidity-txt  Daily average Specific Humidity(g/kg)\nWind-txt  Daily average 10m wind speed(m/s)\nData storage information: data set storage format is .dbf and .txt\nOther data information:\nTotal data:45GB\nOccupied space: 50GB\nTime: From year 2008 to year 2014\nTime resolution: Daily\nGeographical scope description: East Asia\nLongitude: 60° E\nThe most east longitude: 160°E\nNorth latitude: 65°N\nMost southern latitude: 0°N\nNumber of stations: 58500 stations\nSpatial resolution: 1/3 * 1/3 * grid points\nVertical range: None",
-            "descriptionCn": "CMADS V1.1(The China Meteorological Assimilation Driving Datasets for the SWAT model Version 1.1) 版本数据集引入STMAS同化算法, 利用数据循环嵌套,模式推算等多种技术手段而建立。CMADS V1.1数据集按照SWAT模型输入驱动数据格式进行了格式整理与修正,使SWAT模型可直接使用该数据集而不需要任何格式转换。CMADS V1.1数据集同时建立了两种格式的数据(.dbf和.txt),方便其他它模型应用人员及气象分析人员调用与分析。CMADS数据源介绍：气温、气压、比湿、风速驱动数据采用了2421个国家级自动站和业务考核的29452个区域自动站2009年1月以来地面基本气象要素逐小时观测数据以及相应时期的台站信息（台站经纬度、海拔高度）,利用多重网格三维变分方法（STMAS）,在NCEP/GFS背景场基础上制作地面基本要素分析场；其中,中国区域以外,只对NCEP/GFS背景数据做地形调整、变量诊断,并插值到分析格点；中国区域以内,利用STMAS算法,将经过前处理的NCEP/GFS背景数据和自动站观测融合,并与中国区域以外的数据进行拼接。降水：由多卫星与地面自动站降水融合而成。其中,中国区域以外采用NCEP-CPC制作的CMORPH卫星融合降水产品,中国区域采用CMORPH产品为背景场融合中国降水自动站观测制作的中国区域小时降水量融合产品。辐射：基于DISSORT辐射传输模型,获取来自FY2E卫星一级产品实时反演太阳短波辐射产品。主要以ISCCP资料为背景数据,利用大气辐射传输模式DISORT对FY2D/E标称图数据进行反演,计算出分析格点上的地面入射太阳总辐射辐照度。本页发布的数据集为CMADS V1.1版本空间分辨率: 1/4°,时间分辨率:逐日，时间尺度为2008-2016年。空间覆盖范围:东亚(0°N-65°N,60°E-160°E)。提供要素:日平均2米温度,日最高\\低2米温度,日累计24时降水量,日平均太阳辐射,日平均气压,日比湿度,日相对湿度,日平均10米风速,提供数据格式:dbf及txt。\n\n\nCMADS V1.1元数据介绍\n\nCMADS V1.1--SWAT驱动数据总体存放路径说明：\n数据集分为专门驱动SWAT模型的子数据驱动集与其他模型使用的数据驱动集\n1)专门驱动SWAT模型的子数据集路径为：CMADS-V1.1\\For-swat\\\n2)专门其他模型使用的子数据集路径为：CMADS-V1.1\\For-other-model\\\n\nCMADS V1.1--SWAT驱动数据各子集文件路径及名说明\nCMADS V1.1--SWAT驱动数据子集路径\n1)CMADS V1.1的SWAT子数据驱动集（For-swat文件夹内）,包含Station\\与Fork\\子目录。\n其中Station\\目录下为SWAT模型需要的所有输入数据（逐日）。以上输入数据分别位于以下目录：\nRelative-Humidity-104000\\        日平均相对湿度(fraction)\nPrecipitation-104000\\            日累计降水量(mm)\nSolar radiation-104000\\          日平均太阳辐射(MJ/m2)\nTemperature-104000\\              日最高最低2米气温(℃)\nWind-104000\\                     日平均10米风速(m/s)\n\nCMADS V1.1--SWAT驱动数据子集命名格式\n中国大气数据同化SWAT模型数据集(CMADS)的SWAT子集文件命名：\n数据集代码由要素代码：R、P、S、T、W+维度格网数-经度格网数组成(经纬度网格数提取参见CMADS数据集使用手册.pdf)。\n\nCMADS V1.1--SWAT驱动数据子集命名格式实体文件的内容描述：\n数据集时间尺度：2008年－2016年间共9年数据文件\n空间分辨率：1/4度\n时间分辨率：逐日\n要素数据存放格式：dbf\n索引表存放格式：txt\nCMADS V1.1--SWAT驱动数据子集索引表：\n其中Fork\\目录下为SWAT模型需要的所有站点索引表。以上输入数据索引表均可用以下索引表索引：\nPCPFORK.txt                      降水索引表\nRHFORK.txt                       相对湿度索引表\nSORFORK.txt                      太阳辐射索引表\nTMPFORK.txt                      温度索引表\nWINDFORK.txt                     风速索引表\n\nCMADS V1.1其他模式驱动数据子集路径\nCMADS V1.1的SWAT子数据驱动集（For-other-model文件夹内）,包括常规模型需要的所有气象输入数据（逐日）。以上输入数据分别位于以下目录：\nAtmospheric-Pressure-txt\\        日平均大气压强(hPa)\nAverage-Temperature-txt\\         日平均2米气温(℃)\nMaximum-Temperature-txt\\         日最高2米气温(℃)\nMinimum-Temperature-txt\\         日最低2米气温(℃)  \nPrecipitation-txt\\               日累计降水(mm)\nRelative-Humidity-txt\\           日平均相对湿度(fraction)\nSolar-Radiation-txt\\             日平均太阳辐射(MJ/m2)\nSpecific-Humidity-txt\\           日平均比湿(g/kg)\nWind-txt\\                        日平均10米风速(m/s)\n\n数据存储信息\n存储格式和读取：数据集存储格式分为SWAT子集文件（dbf文件）,及其他模式数据集（txt文件）。\n\n\n数据集附属说明文档:                \nmetadata：元数据文档(CMADS_META_C.pdf)。\ndescription：说明文档(CMADS_DOCU_C.pdf)。\n数据总量：45GB\n占用空间：50GB\n时间范围：2008年－2016年\n时间分辨率：逐日\n地理范围描述：东亚\n最西经度：60°E\n最东经度：160°E\n最北纬度：65°N\n最南纬度：0°N\n台站数量：104000站\n空间分辨率： 1/4°×1/4°网格点\n垂直范围：无",
-            "instructions": "The Swat sub data drive set of cmads v1.1 (in the for other model folder), including all weather input data required by the regular model (day by day). The above input data are located in the following directories:\nAtmospheric pressure TXT \\ daily average atmospheric pressure (HPA)\nAverage temperature TXT \\ daily average temperature of 2 meters (℃)\nMaximum temperature-txt \\ daily maximum temperature of 2m (℃)\nMinimum-Temperature-txt daily minimum temperature of 2 meters (℃)\nPrecision-txt \\ daily accumulated precipitation (mm)\nRelative humidity TXT \\ daily average relative humidity (fraction)\nSolar radiation-txt \\ daily average solar radiation (MJ / m2)\nSpecific humidity TXT \\ daily average specific humidity (g / kg)\nWind TXT \\ daily average wind speed of 10m (M / s)\nData storage information\nStorage format and read: the data set storage format is divided into SWAT subset file (DBF file) and other schema data set (txt file).",
-            "instructionsCn": "CMADS V1.1的SWAT子数据驱动集（For-other-model文件夹内）,包括常规模型需要的所有气象输入数据（逐日）。以上输入数据分别位于以下目录：\nAtmospheric-Pressure-txt\\        日平均大气压强(hPa)\nAverage-Temperature-txt\\         日平均2米气温(℃)\nMaximum-Temperature-txt\\         日最高2米气温(℃)\nMinimum-Temperature-txt\\         日最低2米气温(℃)  \nPrecipitation-txt\\               日累计降水(mm)\nRelative-Humidity-txt\\           日平均相对湿度(fraction)\nSolar-Radiation-txt\\             日平均太阳辐射(MJ/m2)\nSpecific-Humidity-txt\\           日平均比湿(g/kg)\nWind-txt\\                        日平均10米风速(m/s)\n\n数据存储信息\n存储格式和读取：数据集存储格式分为SWAT子集文件（dbf文件）,及其他模式数据集（txt文件）。",
-            "east": 160.0,
-            "west": 60.0,
-            "south": 0.0,
-            "north": 65.0,
-            "startTime": "2008-05-11 08:00:00",
-            "endTime": "2017-05-11 08:00:00",
-            "fileSize": 8763916390.0,
-            "cstr": "18406.11.westdc.002.2016.db",
-            "doi": "10.3972/westdc.002.2016.db",
-            "dataFormat": "数字文档",
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "孟现勇",
-                "nameEn": "Meng Xianyong",
-                "unitEn": "College of Resources and Environment Sciences, China Agricultural University",
-                "unitCn": "中国农业大学资源与环境学院"
-            },
-            {
-                "nameCn": "王浩",
-                "nameEn": "Wang Hao",
-                "unitEn": "China Institute of Water Resources and Hydropower Research",
-                "unitCn": "中国水利水电科学研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": "CMADS数据集及其在流域水文模型中的驱动作用—以黑河流域为例",
-                "titleEn": null,
-                "referenceCn": "孟现勇, 师春香, 刘时银, 王浩, 雷晓辉, 刘志辉, 吉晓楠, 蔡思宇, 赵求东. (2016). CMADS数据集及其在流域水文模型中的驱动作用——以黑河流域为例[J]. 人民珠江, 37(7), 1-19.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Investigating spatiotemporal changes of the land surface processes in Xinjiang using high-resolution CLM3.5 and CLDAS: Soil temperature",
-                "referenceCn": null,
-                "referenceEn": "Meng, X.Y., Wang, H., Wu, Y.P., Long, A.H., Wang, J.H., Shi, C.X. et al. (2017). Investigating spatiotemporal changes of the land surface processes in Xinjiang using high-resolution CLM3.5 and CLDAS: Soil temperature. Scientific Reports. 7. doi:10.1038/s41598-017-10665-8."
-            },
-            {
-                "titleCn": "SWAT模型融雪模块的改进与应用研究",
-                "titleEn": null,
-                "referenceCn": "孟现勇, 吉晓楠, 刘志辉等. (2014). SWAT模型融雪模块的改进与应用研究[J]. 自然资源学报, 29(3), 528-539.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Spring Flood Forecasting Based on the WRF-TSRM mode",
-                "referenceCn": null,
-                "referenceEn": "Meng, X.Y. (2018). Spring Flood Forecasting Based on the WRF-TSRM mode. Teh. Vjesn. 25(1), 27-37."
-            },
-            {
-                "titleCn": "地面自动站观测资料三级质量控制业务系统的研制",
-                "titleEn": null,
-                "referenceCn": "任芝花, 熊安元. (2007). 地面自动站观测资料三级质量控制业务系统的研制[J]. 气象, (01), 19-24.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Energy Balance-Based SWAT Model to Simulate the Mountain Snowmelt and Runoff – Taking the Application in Juntanghu Watershed (China) as an Example",
-                "referenceCn": null,
-                "referenceEn": "Meng, X.Y., Ji, X.N., Liu, Z.H. (2015). Energy Balance-Based SWAT Model to Simulate the Mountain Snowmelt and Runoff – Taking the Application in Juntanghu Watershed (China) as an Example[J]. Journal of Mountain Sciences, 12(2), 368-381. DOI:10.1007/s11629-014-3081-6."
-            },
-            {
-                "titleCn": "基于静止气象卫星观测的降水时间将尺度研究",
-                "titleEn": null,
-                "referenceCn": "师春香, 谢正辉. 2008,基于静止气象卫星观测的降水时间将尺度研究[J].地理科学进展, 27(4): 15-22.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于CLDAS强迫CLM3.5模式的新疆区域土壤温度陆面过程模拟及验证",
-                "titleEn": null,
-                "referenceCn": "孟现勇,王浩等.基于CLDAS强迫CLM3.5模式的新疆区域土壤温度陆面过程模拟及验证[J].生态学报.2017,37(3),979-995.DOI:10.5846/stxb201508171717.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于EnKF算法的卫星遥感土壤湿度同化研究",
-                "titleEn": null,
-                "referenceCn": "师春香, (2008). 基于EnKF算法的卫星遥感土壤湿度同化研究[D]. 博士学位论文, 北京: 中国科学院研究生院.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Snowmelt runoff analysis under generated climate change scenarios for the Juntanghu River basin in Xinjiang",
-                "referenceCn": null,
-                "referenceEn": "Wang, Y.J. & Meng, X.Y. (2016). Snowmelt runoff analysis under generated climate change scenarios for the Juntanghu River basin in Xinjiang, China. Tecnología y Ciencias del Agua, 7(4), 41-54."
-            },
-            {
-                "titleCn": "基于LAPS/STMAS的多源资料融合及应用研究",
-                "titleEn": null,
-                "referenceCn": "张涛,2013. 基于LAPS/STMAS的多源资料融合及应用研究[M]. 硕士学位论文,南京：南京信息工程大学。",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Hydrological Modeling in the Manas River Basin Using Soil and Water Assessment Tool Driven by CMADS",
-                "referenceCn": null,
-                "referenceEn": "Meng,X.Y.,Wang,H.,Lei,X.H.,Cai,S.Y.,Wu,H.J.(2017).Hydrological Modeling in the Manas River Basin Using Soil and Water Assessment Tool Driven by CMADS. Tehnicki Vjesnik -Technical Gazette,24,(2),525-534.DOI: 10.17559/TV-20170108133334"
-            },
-            {
-                "titleCn": "FY-2C 卫星降水估计产品",
-                "titleEn": null,
-                "referenceCn": "游然,卢乃锰: FY-2C 卫星降水估计产品 http://satellite.cma.gov.cn.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Significance of the China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) of East Asia",
-                "referenceCn": null,
-                "referenceEn": "Meng, X., Wang, H. (2017). Significance of the China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) of East Asia. Water. 9, (10),765. doi:10.3390/w9100765."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "气压",
-                "nameEn": "Pressure"
-            },
-            {
-                "nameCn": "温度",
-                "nameEn": "Temperature"
-            },
-            {
-                "nameCn": "湿度/干燥度",
-                "nameEn": "Humidity/Dryness"
-            },
-            {
-                "nameCn": "辐射",
-                "nameEn": "Radiation"
-            },
-            {
-                "nameCn": "降水",
-                "nameEn": "Precipitation"
-            },
-            {
-                "nameCn": "降水量",
-                "nameEn": "Precipitation amount"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "East & South East Asia",
-                "keywordEn": null
-            },
-            {
-                "keywordCn": "东亚区域",
-                "keywordEn": "East Asia"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2016",
-                "keywordEn": "2016",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "南水北调中东线工程运行管理关键技术研究与示范",
-                "titleEn": "National Science & Technology Pillar Program of China"
-            },
-            {
-                "titleCn": "多源资料降水和土壤水分融合研究",
-                "titleEn": "International Science and Technology Cooperation Program"
-            },
-            {
-                "titleCn": "多源土壤湿度业务数据的融合技术研究",
-                "titleEn": "Special Scientific Research Fund of Meteorological Public Welfare Profession of China"
-            },
-            {
-                "titleCn": "内陆干旱区实施最严格水资源管理关键技术",
-                "titleEn": "Special Scientific Research Fund of Water Resource Public Welfare Profession of China"
-            },
-            {
-                "titleCn": "干旱区湖泊流域路面过程及人类活动适应性—以艾比湖流域为例",
-                "titleEn": "Key Program of the National Natural Science Foundation of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            },
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
-            }
-        ]
+  "id": "647e6569-bd21-4bea-8acc-5d38bc4cd3c0",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": "China meteorological assimilation driving datasets for the SWAT model Version 1.1 (2008-2016)",
+      "titleCn": "SWAT模型中国大气同化驱动数据集（CMADS V1.1）（2008-2016）",
+      "description": "CMADS V1.1(The China Meteorological Assimilation Driving Datasets for the SWAT model Version 1.1) Version of the data set introduced the STMAS assimilation algorithm. It was constructed using multiple technologies and scientific methods, including loop nesting of data, projection of resampling models, and bilinear interpolation. The CMADS series of datasets can be used to drive various hydrological models, such as SWAT, the Variable Infiltration Capacity (VIC) model, and the Storm Water Management model (SWMM). It also allows users to conveniently extract a wide range of meteorological elements for detailed climatic analyses. Data sources for the CMADS series include nearly 40,000 regional automatic stations under China’s 2,421 national automatic and business assessment centres. This ensures that the CMADS datasets have wide applicability within the country, and that data accuracy was vastly improved.\nThe CMADS series of datasets has undergone finishing and correction to match the specific format of input and driving data of SWAT models. This reduces the volume of complex work that model builders have to deal with. An index table of the various elements encompassing all of East Asia was also established for SWAT models. This allows the models to utilize the datasets directly, thus eliminating the need for any format conversion or calculations using weather generators. Consequently, significant improvements to the modelling speed and output accuracy of SWAT models were achieved.\nMost of the source data in the CMADS datasets are derived from CLDAS in China and other reanalysis data in the world. The integration of air temperature (2m), air pressure, humidity, and wind speed data (10m) was mainly achieved through the LAPS/STMAS system. Precipitation data were stitched using CMORPH’s global precipitation products and the National Meteorological Information Center’s data of China (which is based on CMORPH’s integrated precipitation products). The latter contains daily precipitation records observed at 2,400 national meteorological stations and the CMORPH satellite’s inversion precipitation products.The inversion algorithm for incoming solar radiation at the ground surface makes use of the discrete longitudinal method by Stamnes et al.(1988)to calculate radiation transmission. The resolutions for CMADS V1.0, V1.1, V1.2, and V1.3 were 1/3°, 1/4°, 1/8°, and 1/16°, respectively.\nIn CMADS V1.0 (at a spatial resolution of 1/3°), East Asia was spatially divided into 195 × 300 grid points containing 58,500 stations. Despite being at the same spatial resolution as CMADS V1.0, CMADS V1.1 contains more data, with 260 × 400 grid points containing 104,000 stations. For both versions, the stations’ daily data include average solar radiation, average temperature (2m), average pressure, maximum and minimum temperature (2m), specific humidity, cumulative precipitation, and average wind speed (10m).\nThe CMADS comprises other variables for any hydrological model(under 'For-other-model' folder): Daily Average Temperature (2m), Daily Maximum Temperature (2m), Daily Minimum Temperature (2m), Daily cumulative precipitation (20-20h), Daily average Relative Humidity, Daily average Specific Humidity, Daily average Solar Radiation, Daily average Wind (10m), and Daily average Atmospheric Pressure.\nIntroduction to metadata of CMADS\nCMADS storage path description:(CMADS was divided into two datesets)\n1.CMADS-V1.0 For-swat  --specifically driving the SWAT model\n2.CMADS-V1.0 For-other-model  --specifically driving the other hydrological model(VIC,SWMM,etc.)\nCMADS-- For-swat-2009  folder contain:(Station  and Fork )\n1).Station \nRelative-Humidity-58500  Daily average relative humidity(fraction)\nPrecipitation-58500  Daily accumulated 24-hour precipitation(mm)\nSolar radiation-58500  Daily average solar radiation(MJ/m2)\nTmperature-58500  Daily maximum and minimum 2m temperature(℃) \nWind-58500  Daily average 10m wind speed(m/s)\nWhere R, P, S, T, W+ dimensional grid number - the number of longitude grid is the station in the above five\nfolders respectively.(Where R,P,S,T,W respective Daily average relative humidity,Daily cumulative\nprecipitation(24h),Daily mean solar radiation(MJ/m2),Daily maximum and minimum temperature(℃) and Daily mean\nwind speed (m/s)) respectively.Data format is (.dbf)\n2).Fork  (Station index table over East Asia)\nPCPFORK.txt (Precipitation index table)\nRHFORK.txt (Relative humidity index table)\nSORFORK.txt (Solar radiation index table)\nTMPFORK.txt (Temperature index table)\nWINDFORK.txt (Wind speed index)\nCMADS-- For-swat-2012  folder contain:(Station  and Fork ) Storage structure is consistency with  For-swat-\n2009 .However, all the data in this directory are only available in TXT format and can be readed by SWAT2012.\n3) For-other-model  (Includes all weather input data required by the any hydrologic model (daily).)\nAtmospheric-Pressure-txt  Daily average atmospheric pressure(hPa)\nAverage-Temperature-txt  Daily average 2m temperature(℃)\nMaximum-Temperature-txt  Daily maximum 2m temperature(℃)\nMinimum-Temperature-txt  Daily minimum 2m temperature(℃)\nPrecipitation-txt  Daily accumulated 24-hour precipitation (mm)\nRelative-Humidity-txt  Daily average relative humidity(fraction)\nSolar-Radiation-txt  Daily average solar radiation(MJ/m2)\nSpecific-Humidity-txt  Daily average Specific Humidity(g/kg)\nWind-txt  Daily average 10m wind speed(m/s)\nData storage information: data set storage format is .dbf and .txt\nOther data information:\nTotal data:45GB\nOccupied space: 50GB\nTime: From year 2008 to year 2014\nTime resolution: Daily\nGeographical scope description: East Asia\nLongitude: 60° E\nThe most east longitude: 160°E\nNorth latitude: 65°N\nMost southern latitude: 0°N\nNumber of stations: 58500 stations\nSpatial resolution: 1/3 * 1/3 * grid points\nVertical range: None",
+      "descriptionCn": "CMADS V1.1(The China Meteorological Assimilation Driving Datasets for the SWAT model Version 1.1) 版本数据集引入STMAS同化算法, 利用数据循环嵌套,模式推算等多种技术手段而建立。CMADS V1.1数据集按照SWAT模型输入驱动数据格式进行了格式整理与修正,使SWAT模型可直接使用该数据集而不需要任何格式转换。CMADS V1.1数据集同时建立了两种格式的数据(.dbf和.txt),方便其他它模型应用人员及气象分析人员调用与分析。CMADS数据源介绍：气温、气压、比湿、风速驱动数据采用了2421个国家级自动站和业务考核的29452个区域自动站2009年1月以来地面基本气象要素逐小时观测数据以及相应时期的台站信息（台站经纬度、海拔高度）,利用多重网格三维变分方法（STMAS）,在NCEP/GFS背景场基础上制作地面基本要素分析场；其中,中国区域以外,只对NCEP/GFS背景数据做地形调整、变量诊断,并插值到分析格点；中国区域以内,利用STMAS算法,将经过前处理的NCEP/GFS背景数据和自动站观测融合,并与中国区域以外的数据进行拼接。降水：由多卫星与地面自动站降水融合而成。其中,中国区域以外采用NCEP-CPC制作的CMORPH卫星融合降水产品,中国区域采用CMORPH产品为背景场融合中国降水自动站观测制作的中国区域小时降水量融合产品。辐射：基于DISSORT辐射传输模型,获取来自FY2E卫星一级产品实时反演太阳短波辐射产品。主要以ISCCP资料为背景数据,利用大气辐射传输模式DISORT对FY2D/E标称图数据进行反演,计算出分析格点上的地面入射太阳总辐射辐照度。本页发布的数据集为CMADS V1.1版本空间分辨率: 1/4°,时间分辨率:逐日，时间尺度为2008-2016年。空间覆盖范围:东亚(0°N-65°N,60°E-160°E)。提供要素:日平均2米温度,日最高\\低2米温度,日累计24时降水量,日平均太阳辐射,日平均气压,日比湿度,日相对湿度,日平均10米风速,提供数据格式:dbf及txt。\n\n\nCMADS V1.1元数据介绍\n\nCMADS V1.1--SWAT驱动数据总体存放路径说明：\n数据集分为专门驱动SWAT模型的子数据驱动集与其他模型使用的数据驱动集\n1)专门驱动SWAT模型的子数据集路径为：CMADS-V1.1\\For-swat\\\n2)专门其他模型使用的子数据集路径为：CMADS-V1.1\\For-other-model\\\n\nCMADS V1.1--SWAT驱动数据各子集文件路径及名说明\nCMADS V1.1--SWAT驱动数据子集路径\n1)CMADS V1.1的SWAT子数据驱动集（For-swat文件夹内）,包含Station\\与Fork\\子目录。\n其中Station\\目录下为SWAT模型需要的所有输入数据（逐日）。以上输入数据分别位于以下目录：\nRelative-Humidity-104000\\        日平均相对湿度(fraction)\nPrecipitation-104000\\            日累计降水量(mm)\nSolar radiation-104000\\          日平均太阳辐射(MJ/m2)\nTemperature-104000\\              日最高最低2米气温(℃)\nWind-104000\\                     日平均10米风速(m/s)\n\nCMADS V1.1--SWAT驱动数据子集命名格式\n中国大气数据同化SWAT模型数据集(CMADS)的SWAT子集文件命名：\n数据集代码由要素代码：R、P、S、T、W+维度格网数-经度格网数组成(经纬度网格数提取参见CMADS数据集使用手册.pdf)。\n\nCMADS V1.1--SWAT驱动数据子集命名格式实体文件的内容描述：\n数据集时间尺度：2008年－2016年间共9年数据文件\n空间分辨率：1/4度\n时间分辨率：逐日\n要素数据存放格式：dbf\n索引表存放格式：txt\nCMADS V1.1--SWAT驱动数据子集索引表：\n其中Fork\\目录下为SWAT模型需要的所有站点索引表。以上输入数据索引表均可用以下索引表索引：\nPCPFORK.txt                      降水索引表\nRHFORK.txt                       相对湿度索引表\nSORFORK.txt                      太阳辐射索引表\nTMPFORK.txt                      温度索引表\nWINDFORK.txt                     风速索引表\n\nCMADS V1.1其他模式驱动数据子集路径\nCMADS V1.1的SWAT子数据驱动集（For-other-model文件夹内）,包括常规模型需要的所有气象输入数据（逐日）。以上输入数据分别位于以下目录：\nAtmospheric-Pressure-txt\\        日平均大气压强(hPa)\nAverage-Temperature-txt\\         日平均2米气温(℃)\nMaximum-Temperature-txt\\         日最高2米气温(℃)\nMinimum-Temperature-txt\\         日最低2米气温(℃)  \nPrecipitation-txt\\               日累计降水(mm)\nRelative-Humidity-txt\\           日平均相对湿度(fraction)\nSolar-Radiation-txt\\             日平均太阳辐射(MJ/m2)\nSpecific-Humidity-txt\\           日平均比湿(g/kg)\nWind-txt\\                        日平均10米风速(m/s)\n\n数据存储信息\n存储格式和读取：数据集存储格式分为SWAT子集文件（dbf文件）,及其他模式数据集（txt文件）。\n\n\n数据集附属说明文档:                \nmetadata：元数据文档(CMADS_META_C.pdf)。\ndescription：说明文档(CMADS_DOCU_C.pdf)。\n数据总量：45GB\n占用空间：50GB\n时间范围：2008年－2016年\n时间分辨率：逐日\n地理范围描述：东亚\n最西经度：60°E\n最东经度：160°E\n最北纬度：65°N\n最南纬度：0°N\n台站数量：104000站\n空间分辨率： 1/4°×1/4°网格点\n垂直范围：无",
+      "instructions": "The Swat sub data drive set of cmads v1.1 (in the for other model folder), including all weather input data required by the regular model (day by day). The above input data are located in the following directories:\nAtmospheric pressure TXT \\ daily average atmospheric pressure (HPA)\nAverage temperature TXT \\ daily average temperature of 2 meters (℃)\nMaximum temperature-txt \\ daily maximum temperature of 2m (℃)\nMinimum-Temperature-txt daily minimum temperature of 2 meters (℃)\nPrecision-txt \\ daily accumulated precipitation (mm)\nRelative humidity TXT \\ daily average relative humidity (fraction)\nSolar radiation-txt \\ daily average solar radiation (MJ / m2)\nSpecific humidity TXT \\ daily average specific humidity (g / kg)\nWind TXT \\ daily average wind speed of 10m (M / s)\nData storage information\nStorage format and read: the data set storage format is divided into SWAT subset file (DBF file) and other schema data set (txt file).",
+      "instructionsCn": "CMADS V1.1的SWAT子数据驱动集（For-other-model文件夹内）,包括常规模型需要的所有气象输入数据（逐日）。以上输入数据分别位于以下目录：\nAtmospheric-Pressure-txt\\        日平均大气压强(hPa)\nAverage-Temperature-txt\\         日平均2米气温(℃)\nMaximum-Temperature-txt\\         日最高2米气温(℃)\nMinimum-Temperature-txt\\         日最低2米气温(℃)  \nPrecipitation-txt\\               日累计降水(mm)\nRelative-Humidity-txt\\           日平均相对湿度(fraction)\nSolar-Radiation-txt\\             日平均太阳辐射(MJ/m2)\nSpecific-Humidity-txt\\           日平均比湿(g/kg)\nWind-txt\\                        日平均10米风速(m/s)\n\n数据存储信息\n存储格式和读取：数据集存储格式分为SWAT子集文件（dbf文件）,及其他模式数据集（txt文件）。",
+      "east": 160.0,
+      "west": 60.0,
+      "south": 0.0,
+      "north": 65.0,
+      "startTime": "2008-05-11 08:00:00",
+      "endTime": "2017-05-11 08:00:00",
+      "fileSize": 8763916390.0,
+      "cstr": "18406.11.westdc.002.2016.db",
+      "doi": "10.3972/westdc.002.2016.db",
+      "dataFormat": "数字文档",
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "In this study, the Community Land Model (CLM3.5), developed by the National Center for Atmospheric Research (NCAR), was used, which integrates several well-known land surface models internationally, such as the Land Surface Model (LSM), Biosphere-Atmosphere Transfer Scheme (BATS), and the Institute of Atmospheric Physics Land Surface Model version 1994 (IAP94). The CLM model is considered one of the most comprehensive and reliable land surface models internationally. Soil temperature is crucial in land surface process research because it affects the surface water and energy balance, providing feedback to the climate and serving as an important factor in soil moisture status and thermal properties. Recent research has shown that soil temperature can significantly impact meteorological research and forecasting models, such as the Weather Research and Forecasting (WRF) and the National Centers for Environmental Prediction (NCEP) operational forecast models, affecting short-term precipitation simulation results."
-            ],
-            "research objective": [
-                "This study modeled the spatial and temporal distribution of soil temperatures in the Xinjiang region of China, using atmospheric surface forcing data in the China Meteorological Administration Land Data Assimilation System (CLDAS) to drive the Community Land Model (CLM3.5) for hourly off-line simulations (from 2009 to 2012). The primary purpose was to verify the CLM3.5 simulated soil temperatures using data from national automatic soil-temperature stations (105 in the Xinjiang region) at three soil layers (5 cm, 20 cm, and 80 cm)."
-            ],
-            "challenges": [
-                "The large discrepancies in July soil temperatures in the top surface layers can be explained by the drastic surface temperature changes in the Xinjiang region during that month. With day-time temperatures that can reach above 30℃, combined with large diurnal temperature differences, it becomes very difficult to accurately capture surface temperature variation by using the model. The poor simulation of temperatures at the surface layer may be caused by the parameterization scheme of the surface parameters in this model, which will be addressed and corrected in a later phase."
-            ],
-            "methods": [
-                "This study modeled the spatial and temporal distribution of soil temperatures in the Xinjiang region of China, using atmospheric surface forcing data in the China Meteorological Administration Land Data Assimilation System (CLDAS) to drive the Community Land Model (CLM3.5) for hourly off-line simulations (from 2009 to 2012). To verify the CLM3.5 simulated soil temperatures, data from national automatic soil-temperature stations (105 in the Xinjiang region) were used at three soil layers (5 cm, 20 cm, and 80 cm)."
-            ],
-            "dataset": [
-                "To verify the CLM3.5 simulated soil temperatures, data from national automatic soil-temperature stations (105 in the Xinjiang region) were used at three soil layers (5 cm, 20 cm, and 80 cm)."
-            ],
-            "findings": [
-                "Overall, this study shows that the CLM3.5 model forced by a CLDAS driving field can simulate the multi-year spatial and temporal distribution of average soil temperatures in the Xinjiang region precisely. It furthermore showed that this method could simulate and reflect the hourly, daily, monthly, and yearly patterns of soil temperature in the Xinjiang region."
-            ],
-            "backgroundCn": [
-                "在这项研究中，使用了由国家大气研究中心（NCAR）开发的社区陆面模型（CLM3.5），该模型整合了多个国际知名的陆面模型，如陆面模型（LSM）、生物圈-大气传输方案（BATS）和1994年大气物理研究所陆面模型（IAP94）。CLM模型被认为是国际上最全面和可靠的陆面模型之一。土壤温度在陆面过程研究中至关重要，因为它影响表面水分和能量平衡，提供对气候的反馈，并作为土壤湿度状态和热特性的重要因素。最近的研究表明，土壤温度可以显著影响气象研究和预报模型，如天气研究与预报（WRF）和国家环境预报中心（NCEP）操作预报模型，影响短期降水模拟结果。"
-            ],
-            "research objectiveCn": [
-                "本研究模拟了中国新疆地区土壤温度的空间和时间分布，使用中国气象局陆地数据同化系统（CLDAS）中的大气表面强迫数据驱动社区陆地模型（CLM3.5）进行小时离线模拟（2009年至2012年）。主要目的是验证CLM3.5模拟的土壤温度，使用来自新疆地区105个国家自动土壤温度站的数据，涵盖三个土层（5厘米、20厘米和80厘米）。"
-            ],
-            "challengesCn": [
-                "七月份土壤表层温度的大幅差异可以通过新疆地区在该月的剧烈表面温度变化来解释。白天气温可超过30℃，加上较大的昼夜温差，使得使用模型准确捕捉表面温度变化变得非常困难。表层温度模拟不佳可能是由于该模型中表面参数的参数化方案所致，这将在后续阶段进行修正和改进。"
-            ],
-            "methodsCn": [
-                "本研究模拟了中国新疆地区土壤温度的空间和时间分布，使用中国气象局陆地数据同化系统（CLDAS）中的大气表面强迫数据驱动社区陆地模型（CLM3.5）进行小时离线模拟（2009年至2012年）。为了验证CLM3.5模拟的土壤温度，使用了新疆地区105个国家自动土壤温度站的数据，涵盖三个土层（5厘米、20厘米和80厘米）。"
-            ],
-            "datasetCn": [
-                "为了验证CLM3.5模拟的土壤温度，使用了新疆地区105个国家自动土壤温度站的数据，涉及三个土层（5厘米、20厘米和80厘米）。"
-            ],
-            "findingsCn": [
-                "总体而言，这项研究表明，CLM3.5模型在CLDAS驱动场的强迫下，能够精确模拟新疆地区平均土壤温度的多年空间和时间分布。此外，该方法还能够模拟和反映新疆地区土壤温度的小时、日、月和年模式。"
-            ]
-        },
-        {
-            "background": [
-                "The quality of atmospheric forcing data is one of the most important factors in hydrological simulation. However, the output uncertainty of hydrological models is increased by error propagation. Although the terrain of China is vast and complex, meteorological stations are scarce in contrast. The existing observation stations are unable to simulate large-scale hydrological simulations (water, energy balance). The China Meteorological Assimilation Driving Datasets for the SWAT model (CMADS) was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS) in this research. The Heihe River Basin was selected as the research area in this study. The CMADS, Climate Forecast System Reanalysis (CFSR), and the traditional weather station (TWS) were forcing the Soil and Water Assessment Tool (SWAT) model separately. According to the observation results obtained from three hydrological stations (Ying Luoxia, Qilian Mountains, and Zha Mashenke) in the Heihe River Basin, the runoff simulated by the CMADS data overall was better than the simulation results driven by the CFSR and the TWS."
-            ],
-            "research objective": [
-                "This study aims to analyze the application of the CMADS dataset in driving watershed hydrological models, specifically using the Heihe River Basin as a case study. The research seeks to compare the performance of the CMADS dataset with the CFSR and traditional weather station data in driving the SWAT model, to evaluate the advantages of CMADS in simulating hydrological processes in regions lacking meteorological stations."
-            ],
-            "challenges": [
-                "The existing observation stations are unable to simulate large-scale hydrological simulations (water, energy balance). Even though the CFSR dataset is widely applied internationally, its applicability and accuracy in China are questioned due to the lack of observational correction and quality control in the region."
-            ],
-            "methods": [
-                "In this research, the CMADS dataset was used to drive the SWAT model in the Heihe River Basin, and the results were compared with those obtained using the CFSR and traditional weather station data. The study involved calibrating and validating the runoff at three hydrological control stations (Ying Luoxia, Qilian Mountains, and Zha Mashenke) in the Heihe River Basin. The CMADS dataset was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS)."
-            ],
-            "dataset": [
-                "The CMADS dataset was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS) in this research. The CMADS, Climate Forecast System Reanalysis (CFSR), and the traditional weather station (TWS) data were used to force the Soil and Water Assessment Tool (SWAT) model separately."
-            ],
-            "findings": [
-                "The runoff simulated by the CMADS data overall was better than the simulation results driven by the CFSR and the TWS. The CMADS + SWAT mode can reproduce the spatial and temporal response characteristics of all surface components (such as soil moisture, snow melting, etc.) in the Heihe River basin. We conclude that the CMADS data have obvious advantages for large-scale coupling atmospheric and hydrologic, hydrological process simulation."
-            ],
-            "backgroundCn": [
-                "大气强迫数据的质量是水文模拟中最重要的因素之一。然而，水文模型的输出不确定性因误差传播而增加。尽管中国的地形广阔而复杂，但气象站的分布相对稀少。现有的观测站无法进行大规模的水文模拟（水量、能量平衡）。本研究基于中国气象局陆地数据同化系统（CLDAS）建立了中国气象同化驱动数据集（CMADS）。本研究选择了黑河流域作为研究区域。CMADS、气候预报系统再分析（CFSR）和传统气象站（TWS）分别对土壤和水评估工具（SWAT）模型进行了强迫。根据在黑河流域三个水文站（营洛峡、祁连山和扎马深克）获得的观测结果，CMADS数据驱动的径流模拟整体上优于CFSR和TWS驱动的模拟结果。"
-            ],
-            "research objectiveCn": [
-                "本研究旨在分析CMADS数据集在驱动流域水文模型中的应用，特别是以黑河流域为案例。研究旨在比较CMADS数据集与CFSR和传统气象站数据在驱动SWAT模型中的表现，以评估CMADS在模拟缺乏气象站地区水文过程中的优势。"
-            ],
-            "challengesCn": [
-                "现有的观测站无法进行大规模的水文模拟（水、能量平衡）。尽管CFSR数据集在国际上被广泛应用，但由于该地区缺乏观测校正和质量控制，其适用性和准确性在中国受到质疑。"
-            ],
-            "methodsCn": [
-                "在本研究中，CMADS 数据集被用于驱动 Heihe 河流域的 SWAT 模型，并将结果与使用 CFSR 和传统气象站数据获得的结果进行了比较。该研究涉及在 Heihe 河流域的三个水文控制站（营洛峡、祁连山和扎马申克）进行径流的校准和验证。CMADS 数据集是基于中国气象局陆地数据同化系统（CLDAS）建立的。"
-            ],
-            "datasetCn": [
-                "CMADS 数据集是基于中国气象局陆地数据同化系统（CLDAS）建立的。在本研究中，CMADS、气候预报系统再分析（CFSR）和传统气象站（TWS）数据被分别用于驱动土壤和水评估工具（SWAT）模型。"
-            ],
-            "findingsCn": [
-                "CMADS数据驱动的径流模拟整体上优于CFSR和TWS驱动的模拟结果。CMADS + SWAT模型能够再现黑河流域所有地表成分（如土壤湿度、雪融等）的空间和时间响应特征。我们得出结论，CMADS数据在大规模耦合大气与水文、以及水文过程模拟方面具有明显优势。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "孟现勇",
+        "nameEn": "Meng Xianyong",
+        "unitEn": "College of Resources and Environment Sciences, China Agricultural University",
+        "unitCn": "中国农业大学资源与环境学院"
+      },
+      {
+        "nameCn": "王浩",
+        "nameEn": "Wang Hao",
+        "unitEn": "China Institute of Water Resources and Hydropower Research",
+        "unitCn": "中国水利水电科学研究院"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Does the CMADS V1.1 dataset utilize STMAS assimilation algorithms for data collection?",
-                "QuestionCn": "CMADS V1.1 数据集是否使用 STMAS 同化算法进行数据收集？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Is the CMADS V1.1 dataset structured to facilitate direct use with the SWAT model without format conversion?",
-                "QuestionCn": "CMADS V1.1 数据集是否被结构化以便于直接与 SWAT 模型使用，而无需格式转换？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "When is the data from the CMADS V1.1 dataset available for use in hydrological models?",
-                "QuestionCn": "CMADS V1.1 数据集的可用时间是什么时候，可以用于水文模型？",
-                "AnswerEn": "2008 to 2016",
-                "AnswerCn": "2008年至2016年",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of how atmospheric surface forcing data is used to model soil temperatures in a specific region?",
-                "QuestionCn": "您能否提供一个例子，说明大气表面强迫数据如何用于建模特定区域的土壤温度？",
-                "AnswerEn": "In the field described, atmospheric surface forcing data from the China Meteorological Administration Land Data Assimilation System (CLDAS) was used to drive the Community Land Model (CLM3.5) for modeling the spatial and temporal distribution of soil temperatures in the Xinjiang region of China from 2009 to 2012.",
-                "AnswerCn": "在所描述的领域中，使用中国气象局陆地数据同化系统（CLDAS）的气象表面强迫数据驱动社区陆地模型（CLM3.5），对2009年至2012年新疆地区土壤温度的时空分布进行建模。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced when using automated weather station data for large-scale hydrological simulations?",
-                "QuestionCn": "使用自动气象站数据进行大规模水文模拟时面临的一个挑战是什么？",
-                "AnswerEn": "One challenge mentioned is the scarcity of meteorological stations in China, which makes it difficult to perform large-scale hydrological simulations due to error propagation and the complexity of the terrain. This challenge was addressed by creating the China Meteorological Assimilation Driving Datasets for the SWAT model (CMADS) to improve simulation accuracy.",
-                "AnswerCn": "一个提到的挑战是中国气象站的稀缺，这使得由于误差传播和地形复杂性，进行大规模水文模拟变得困难。为了解决这个挑战，创建了中国气象同化驱动数据集（CMADS），以提高模拟的准确性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What features are essential in a dataset that integrates multiple data sources and assimilation algorithms for meteorological analysis?",
-                "QuestionCn": "在整合多个数据源和同化算法进行气象分析的数据集中，哪些特征是必不可少的？",
-                "AnswerEn": "numerous automatic weather stations, assimilation algorithms like STMAS, adjustment for terrain, variable diagnostics, temperature, pressure, humidity, wind speed, precipitation, accessible formats like .dbf and .txt",
-                "AnswerCn": "众多自动气象站、STMAS等同化算法、地形调整、变量诊断、温度、气压、湿度、风速、降水、可访问格式如.dbf和.txt。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the atmospheric data collected in the CMADS V1.1 dataset for the SWAT model?",
-                "QuestionCn": "CMADS V1.1 数据集中收集的气象数据的空间分辨率是多少？",
-                "AnswerEn": "1/4°",
-                "AnswerCn": "1/4°",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Over how many years does the CMADS V1.1 dataset provide meteorological data for East Asia?",
-                "QuestionCn": "CMADS V1.1 数据集为东亚提供了多少年的气象数据？",
-                "AnswerEn": "9 years",
-                "AnswerCn": "9年",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "In what ways do the challenges of simulating hydrological processes using the CMADS dataset differ from those encountered when using the CFSR dataset?",
-                "QuestionCn": "使用CMADS数据集模拟水文过程的挑战与使用CFSR数据集时遇到的挑战有哪些不同之处？",
-                "AnswerEn": "The CMADS dataset addresses the challenge of limited meteorological stations in China by integrating data from numerous automatic stations and satellite observations, while the CFSR dataset may lack observational correction and quality control in the region, leading to potential inaccuracies in hydrological simulations.",
-                "AnswerCn": "CMADS 数据集通过整合众多自动气象站和卫星观测数据，解决了中国气象站数量有限的问题，而 CFSR 数据集可能缺乏观测校正和质量控制，导致在水文模拟中可能存在不准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can advancements in atmospheric data assimilation techniques improve the simulation of extreme weather events in regions with limited observational data?",
-                "QuestionCn": "大气数据同化技术的进步如何改善在观测数据有限的地区对极端天气事件的模拟？",
-                "AnswerEn": "Advancements in atmospheric data assimilation techniques, such as the use of three-dimensional variational methods, can improve the simulation of extreme weather events by effectively integrating high-resolution satellite data and ground-based observations. This enables more accurate modeling of weather patterns and enhances the predictive capabilities of hydrological models in regions with limited observational data.",
-                "AnswerCn": "大气数据同化技术的进展，例如三维变分方法的使用，可以通过有效整合高分辨率卫星数据和地面观测，改善极端天气事件的模拟。这使得天气模式的建模更加准确，并增强了在观测数据有限的地区水文模型的预测能力。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors influence the accuracy of atmospheric forcing data used in hydrological simulations within complex terrains like China?",
-                "QuestionCn": "影响在复杂地形（如中国）中进行水文模拟时大气强迫数据准确性的因素有哪些？",
-                "AnswerEn": "The accuracy of atmospheric forcing data in such terrains is influenced by the scarcity of meteorological stations and the complex topography. The CMADS dataset was created to address these challenges by integrating data from multiple sources, including automatic stations and satellite products, and using advanced assimilation techniques like STMAS.",
-                "AnswerCn": "在这种地形中，大气强迫数据的准确性受到气象站稀缺和复杂地形的影响。CMADS 数据集的创建旨在解决这些挑战，通过整合来自多个来源的数据，包括自动气象站和卫星产品，并使用先进的同化技术，如 STMAS。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential impacts on hydrological model accuracy when using atmospheric forcing data from multiple sources compared to a single, consistent data source?",
-                "QuestionCn": "使用来自多个来源的大气强迫数据与使用单一一致的数据源相比，对水文模型准确性的潜在影响是什么？",
-                "AnswerEn": "Using atmospheric forcing data from multiple sources, such as national automatic stations and satellite products, can improve the accuracy of hydrological models by reducing the uncertainty caused by data scarcity and error propagation. The integration of multiple data sources allows for more comprehensive coverage and better representation of spatial and temporal variability, particularly in regions where meteorological stations are sparse.",
-                "AnswerCn": "使用来自多个来源的大气强迫数据，如国家自动气象站和卫星产品，可以通过减少数据稀缺和误差传播造成的不确定性来提高水文模型的准确性。整合多个数据源可以实现更全面的覆盖，更好地表示空间和时间的变化，特别是在气象站稀少的地区。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it essential to model soil temperature distributions using atmospheric surface forcing data in land surface models?",
-                "QuestionCn": "在陆面模型中，使用大气表面强迫数据建模土壤温度分布是至关重要的原因是什么？",
-                "AnswerEn": "Modeling soil temperature distributions using atmospheric surface forcing data in land surface models is essential because soil temperature plays a critical role in land surface processes. It affects the surface water and energy balance and provides feedback to the climate, influencing soil moisture status and thermal properties. Accurate modeling of soil temperature distributions can significantly enhance meteorological research and forecasting models, such as those predicting short-term precipitation.",
-                "AnswerCn": "使用大气表面强迫数据在陆面模型中模拟土壤温度分布是至关重要的，因为土壤温度在陆面过程中发挥着关键作用。它影响表面水分和能量平衡，并对气候产生反馈，影响土壤湿度状态和热特性。准确模拟土壤温度分布可以显著增强气象研究和预测模型，例如那些预测短期降水的模型。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What are the goals of utilizing the CMADS dataset to drive the SWAT model for hydrological simulations, particularly in the context of the Heihe River Basin case study?",
-                "QuestionCn": "利用CMADS数据集驱动SWAT模型进行水文模拟的目标，特别是在黑河流域案例研究的背景下，是什么？",
-                "AnswerEn": "The goals of utilizing the CMADS dataset to drive the SWAT model for hydrological simulations include evaluating the dataset's performance in regions with scarce meteorological stations, comparing it to other datasets like CFSR and traditional weather station data, and demonstrating its advantages in simulating hydrological processes. In the context of the Heihe River Basin case study, the aim is to accurately reproduce the spatial and temporal response characteristics of surface components, such as soil moisture and snow melting, thereby supporting large-scale hydrological and atmospheric coupling.",
-                "AnswerCn": "利用CMADS数据集驱动SWAT模型进行水文模拟的目标包括评估该数据集在气象站稀缺地区的表现，比较其与其他数据集（如CFSR）和传统气象站数据的差异，以及展示其在模拟水文过程中的优势。在黑河流域案例研究中，目标是准确再现表面组分（如土壤湿度和雪融化）的空间和时间响应特征，从而支持大规模水文与大气的耦合。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What steps should be followed to ensure the effective calibration and validation of hydrological models using meteorological assimilation datasets?",
-                "QuestionCn": "确保使用气象同化数据集有效校准和验证水文模型的步骤应包括以下内容：",
-                "AnswerEn": "The steps involve using the meteorological assimilation dataset to drive the SWAT model, calibrating and validating the model using observation data from hydrological control stations, and comparing results with other datasets like CFSR and traditional weather station data to assess performance and accuracy.",
-                "AnswerCn": "这些步骤包括使用气象同化数据集驱动SWAT模型，利用水文控制站的观测数据对模型进行校准和验证，并将结果与其他数据集（如CFSR和传统气象站数据）进行比较，以评估性能和准确性。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "How do specific data collection techniques address the challenge of sparse meteorological stations in large regions like China?",
-                "QuestionCn": "特定的数据收集技术如何应对像中国这样的大区域内气象站稀疏的挑战？",
-                "AnswerEn": "The CMADS V1.1 dataset addresses this challenge by utilizing data from thousands of national and regional automatic stations, combining them with satellite-derived products and assimilation techniques to fill gaps and provide reliable analysis fields over large areas.",
-                "AnswerCn": "CMADS V1.1 数据集通过利用来自数千个国家和地区自动气象站的数据，结合卫星衍生产品和同化技术，填补空白并提供大面积的可靠分析场，来应对这一挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways does the use of satellite-derived data enhance the simulation of hydrological processes in regions with limited ground-based observations?",
-                "QuestionCn": "卫星衍生数据在缺乏地面观测的地区增强水文过程模拟的方式有哪些？",
-                "AnswerEn": "Satellite-derived data are used to complement ground-based observations in the CMADS V1.1 dataset, particularly for precipitation and solar radiation, allowing for improved simulation of hydrological processes by providing consistent and wide-ranging data coverage.",
-                "AnswerCn": "卫星衍生数据用于补充CMADS V1.1数据集中基于地面的观测，特别是在降水和太阳辐射方面，从而通过提供一致且广泛的数据覆盖，改善水文过程的模拟。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "What challenges are expected when using models like CLM3.5 to simulate soil temperatures in regions with extreme temperature variations, such as Xinjiang during July?",
-                "QuestionCn": "在使用像CLM3.5这样的模型模拟极端温度变化地区（如七月的新疆）土壤温度时，预计会面临哪些挑战？",
-                "AnswerEn": "Extreme temperature variations, such as those in Xinjiang during July, present challenges like accurately capturing drastic surface temperature changes. This can lead to discrepancies in simulation results due to limitations in the parameterization of surface parameters in models like CLM3.5.",
-                "AnswerCn": "极端温度变化，例如七月份新疆的情况，给准确捕捉剧烈的地表温度变化带来了挑战。这可能导致模拟结果的差异，因为像CLM3.5这样的模型在地表参数的参数化方面存在局限性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why might datasets like CMADS be expected to perform better in hydrological simulations compared to datasets without observational correction and quality control?",
-                "QuestionCn": "像CMADS这样的数据集在水文模拟中可能表现更好的原因是什么？相比之下，未经观测校正和质量控制的数据集可能存在什么问题？",
-                "AnswerEn": "Datasets like CMADS are expected to perform better because they are based on comprehensive data assimilation systems that incorporate observational corrections and quality control, unlike datasets like CFSR, which may lack these adjustments in certain regions, affecting their accuracy and applicability.",
-                "AnswerCn": "像CMADS这样的数据集预计会表现更好，因为它们基于综合数据同化系统，结合了观测校正和质量控制，而像CFSR这样的数据集可能在某些区域缺乏这些调整，从而影响其准确性和适用性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "What is your evaluation of the effectiveness of using the STMAS assimilation algorithm for integrating data from various sources in atmospheric data collection?",
-                "QuestionCn": "我对使用STMAS同化算法整合来自各种来源的大气数据收集的有效性进行评估。",
-                "AnswerEn": "The STMAS assimilation algorithm effectively integrates data from multiple sources, such as national and regional automatic stations, to create comprehensive atmospheric analysis fields. Its use in the CMADS dataset allows for improved accuracy and reliability in the data used to drive models like SWAT, addressing challenges of data sparsity and complex terrain.",
-                "AnswerCn": "STMAS同化算法有效地整合来自多个来源的数据，如国家和区域自动站，以创建全面的大气分析场。它在CMADS数据集中的应用提高了用于驱动SWAT等模型的数据的准确性和可靠性，解决了数据稀疏和复杂地形的挑战。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "How do you perceive the potential for improving hydrological simulations in regions with sparse meteorological stations by utilizing datasets like CMADS?",
-                "QuestionCn": "您如何看待利用像CMADS这样的数据集来改善气象站稀少地区的水文模拟的潜力？",
-                "AnswerEn": "Utilizing datasets like CMADS can significantly enhance hydrological simulations in regions with sparse meteorological stations by providing high-resolution, assimilated atmospheric data. The dataset's ability to integrate satellite and ground station data can improve the simulation of water and energy balances, offering advantages over conventional datasets like CFSR and traditional weather station data.",
-                "AnswerCn": "利用像CMADS这样的数据集可以显著增强在气象站稀少地区的水文模拟，因为它提供了高分辨率的同化大气数据。该数据集整合了卫星和地面站的数据，可以改善水和能量平衡的模拟，相较于传统的数据集如CFSR和传统气象站数据具有优势。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In your opinion, what are the challenges and benefits of using multi-source data fusion, such as satellite and ground-based observations, for driving land surface models?",
-                "QuestionCn": "在您看来，使用多源数据融合，例如卫星和地面观测，来驱动陆面模型的挑战和好处是什么？",
-                "AnswerEn": "The challenges of multi-source data fusion include the complexity of accurately merging diverse data types and ensuring consistent quality across different sources. However, the benefits include enhanced spatial coverage and temporal resolution, as seen in the CMADS dataset, which can improve the reliability of land surface models by providing comprehensive atmospheric forcing data, crucial for accurate simulations in regions with limited observational networks.",
-                "AnswerCn": "多源数据融合的挑战包括准确合并不同数据类型的复杂性以及确保不同来源的一致质量。然而，其好处包括增强的空间覆盖和时间分辨率，正如CMADS数据集所示，这可以通过提供全面的大气强迫数据来提高陆面模型的可靠性，这对于在观测网络有限的地区进行准确模拟至关重要。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please explore and summarize the various data collection techniques employed for compiling atmospheric and meteorological datasets for hydrological modeling in East Asia.",
-                "QuestionCn": "请探讨并总结在东亚地区为水文模型编制大气和气象数据集所采用的各种数据收集技术。",
-                "AnswerEn": "Data collection techniques include using STMAS assimilation algorithms, data cycling nesting, and model estimation. Meteorological data are gathered from 2421 national automatic stations and 29452 regional automatic stations, incorporating multi-satellite and ground-station precipitation fusion, and solar radiation data are derived using the DISSORT radiation transmission model with FY2E satellite data.",
-                "AnswerCn": "数据收集技术包括使用STMAS同化算法、数据循环嵌套和模型估计。气象数据来自2421个国家自动站和29452个区域自动站，结合多卫星和地面站降水融合，太阳辐射数据则使用DISSORT辐射传输模型与FY2E卫星数据获得。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Please research and describe potential datasets that can complement the SWAT model driving datasets with additional atmospheric parameters to improve hydrological modeling accuracy.",
-                "QuestionCn": "请研究并描述潜在的数据集，这些数据集可以补充SWAT模型驱动的数据集，提供额外的气象参数，以提高水文建模的准确性。",
-                "AnswerEn": "Potential complementary datasets could include high-resolution soil moisture datasets, enhanced satellite-derived radiation products, and real-time atmospheric pressure data. Utilizing datasets like CMORPH satellite precipitation products and integrating them with local observations could further refine hydrological models by providing more accurate and comprehensive atmospheric inputs.",
-                "AnswerCn": "潜在的互补数据集可以包括高分辨率土壤湿度数据集、增强的卫星辐射产品和实时大气压力数据。利用CMORPH卫星降水产品等数据集，并将其与当地观测数据结合，可以通过提供更准确和全面的大气输入，进一步优化水文模型。",
-                "Level": "C6(Creating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": "CMADS数据集及其在流域水文模型中的驱动作用—以黑河流域为例",
+        "titleEn": null,
+        "referenceCn": "孟现勇, 师春香, 刘时银, 王浩, 雷晓辉, 刘志辉, 吉晓楠, 蔡思宇, 赵求东. (2016). CMADS数据集及其在流域水文模型中的驱动作用——以黑河流域为例[J]. 人民珠江, 37(7), 1-19.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Investigating spatiotemporal changes of the land surface processes in Xinjiang using high-resolution CLM3.5 and CLDAS: Soil temperature",
+        "referenceCn": null,
+        "referenceEn": "Meng, X.Y., Wang, H., Wu, Y.P., Long, A.H., Wang, J.H., Shi, C.X. et al. (2017). Investigating spatiotemporal changes of the land surface processes in Xinjiang using high-resolution CLM3.5 and CLDAS: Soil temperature. Scientific Reports. 7. doi:10.1038/s41598-017-10665-8."
+      },
+      {
+        "titleCn": "SWAT模型融雪模块的改进与应用研究",
+        "titleEn": null,
+        "referenceCn": "孟现勇, 吉晓楠, 刘志辉等. (2014). SWAT模型融雪模块的改进与应用研究[J]. 自然资源学报, 29(3), 528-539.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Spring Flood Forecasting Based on the WRF-TSRM mode",
+        "referenceCn": null,
+        "referenceEn": "Meng, X.Y. (2018). Spring Flood Forecasting Based on the WRF-TSRM mode. Teh. Vjesn. 25(1), 27-37."
+      },
+      {
+        "titleCn": "地面自动站观测资料三级质量控制业务系统的研制",
+        "titleEn": null,
+        "referenceCn": "任芝花, 熊安元. (2007). 地面自动站观测资料三级质量控制业务系统的研制[J]. 气象, (01), 19-24.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Energy Balance-Based SWAT Model to Simulate the Mountain Snowmelt and Runoff – Taking the Application in Juntanghu Watershed (China) as an Example",
+        "referenceCn": null,
+        "referenceEn": "Meng, X.Y., Ji, X.N., Liu, Z.H. (2015). Energy Balance-Based SWAT Model to Simulate the Mountain Snowmelt and Runoff – Taking the Application in Juntanghu Watershed (China) as an Example[J]. Journal of Mountain Sciences, 12(2), 368-381. DOI:10.1007/s11629-014-3081-6."
+      },
+      {
+        "titleCn": "基于静止气象卫星观测的降水时间将尺度研究",
+        "titleEn": null,
+        "referenceCn": "师春香, 谢正辉. 2008,基于静止气象卫星观测的降水时间将尺度研究[J].地理科学进展, 27(4): 15-22.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于CLDAS强迫CLM3.5模式的新疆区域土壤温度陆面过程模拟及验证",
+        "titleEn": null,
+        "referenceCn": "孟现勇,王浩等.基于CLDAS强迫CLM3.5模式的新疆区域土壤温度陆面过程模拟及验证[J].生态学报.2017,37(3),979-995.DOI:10.5846/stxb201508171717.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于EnKF算法的卫星遥感土壤湿度同化研究",
+        "titleEn": null,
+        "referenceCn": "师春香, (2008). 基于EnKF算法的卫星遥感土壤湿度同化研究[D]. 博士学位论文, 北京: 中国科学院研究生院.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Snowmelt runoff analysis under generated climate change scenarios for the Juntanghu River basin in Xinjiang",
+        "referenceCn": null,
+        "referenceEn": "Wang, Y.J. & Meng, X.Y. (2016). Snowmelt runoff analysis under generated climate change scenarios for the Juntanghu River basin in Xinjiang, China. Tecnología y Ciencias del Agua, 7(4), 41-54."
+      },
+      {
+        "titleCn": "基于LAPS/STMAS的多源资料融合及应用研究",
+        "titleEn": null,
+        "referenceCn": "张涛,2013. 基于LAPS/STMAS的多源资料融合及应用研究[M]. 硕士学位论文,南京：南京信息工程大学。",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Hydrological Modeling in the Manas River Basin Using Soil and Water Assessment Tool Driven by CMADS",
+        "referenceCn": null,
+        "referenceEn": "Meng,X.Y.,Wang,H.,Lei,X.H.,Cai,S.Y.,Wu,H.J.(2017).Hydrological Modeling in the Manas River Basin Using Soil and Water Assessment Tool Driven by CMADS. Tehnicki Vjesnik -Technical Gazette,24,(2),525-534.DOI: 10.17559/TV-20170108133334"
+      },
+      {
+        "titleCn": "FY-2C 卫星降水估计产品",
+        "titleEn": null,
+        "referenceCn": "游然,卢乃锰: FY-2C 卫星降水估计产品 http://satellite.cma.gov.cn.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Significance of the China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) of East Asia",
+        "referenceCn": null,
+        "referenceEn": "Meng, X., Wang, H. (2017). Significance of the China Meteorological Assimilation Driving Datasets for the SWAT Model (CMADS) of East Asia. Water. 9, (10),765. doi:10.3390/w9100765."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "气压",
+        "nameEn": "Pressure"
+      },
+      {
+        "nameCn": "温度",
+        "nameEn": "Temperature"
+      },
+      {
+        "nameCn": "湿度/干燥度",
+        "nameEn": "Humidity/Dryness"
+      },
+      {
+        "nameCn": "辐射",
+        "nameEn": "Radiation"
+      },
+      {
+        "nameCn": "降水",
+        "nameEn": "Precipitation"
+      },
+      {
+        "nameCn": "降水量",
+        "nameEn": "Precipitation amount"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "East & South East Asia",
+        "keywordEn": null
+      },
+      {
+        "keywordCn": "东亚区域",
+        "keywordEn": "East Asia"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2016",
+        "keywordEn": "2016",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "南水北调中东线工程运行管理关键技术研究与示范",
+        "titleEn": "National Science & Technology Pillar Program of China"
+      },
+      {
+        "titleCn": "多源资料降水和土壤水分融合研究",
+        "titleEn": "International Science and Technology Cooperation Program"
+      },
+      {
+        "titleCn": "多源土壤湿度业务数据的融合技术研究",
+        "titleEn": "Special Scientific Research Fund of Meteorological Public Welfare Profession of China"
+      },
+      {
+        "titleCn": "内陆干旱区实施最严格水资源管理关键技术",
+        "titleEn": "Special Scientific Research Fund of Water Resource Public Welfare Profession of China"
+      },
+      {
+        "titleCn": "干旱区湖泊流域路面过程及人类活动适应性—以艾比湖流域为例",
+        "titleEn": "Key Program of the National Natural Science Foundation of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      },
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "In this study, the Community Land Model (CLM3.5), developed by the National Center for Atmospheric Research (NCAR), was used, which integrates several well-known land surface models internationally, such as the Land Surface Model (LSM), Biosphere-Atmosphere Transfer Scheme (BATS), and the Institute of Atmospheric Physics Land Surface Model version 1994 (IAP94). The CLM model is considered one of the most comprehensive and reliable land surface models internationally. Soil temperature is crucial in land surface process research because it affects the surface water and energy balance, providing feedback to the climate and serving as an important factor in soil moisture status and thermal properties. Recent research has shown that soil temperature can significantly impact meteorological research and forecasting models, such as the Weather Research and Forecasting (WRF) and the National Centers for Environmental Prediction (NCEP) operational forecast models, affecting short-term precipitation simulation results."
+      ],
+      "research objective": [
+        "This study modeled the spatial and temporal distribution of soil temperatures in the Xinjiang region of China, using atmospheric surface forcing data in the China Meteorological Administration Land Data Assimilation System (CLDAS) to drive the Community Land Model (CLM3.5) for hourly off-line simulations (from 2009 to 2012). The primary purpose was to verify the CLM3.5 simulated soil temperatures using data from national automatic soil-temperature stations (105 in the Xinjiang region) at three soil layers (5 cm, 20 cm, and 80 cm)."
+      ],
+      "challenges": [
+        "The large discrepancies in July soil temperatures in the top surface layers can be explained by the drastic surface temperature changes in the Xinjiang region during that month. With day-time temperatures that can reach above 30℃, combined with large diurnal temperature differences, it becomes very difficult to accurately capture surface temperature variation by using the model. The poor simulation of temperatures at the surface layer may be caused by the parameterization scheme of the surface parameters in this model, which will be addressed and corrected in a later phase."
+      ],
+      "methods": [
+        "This study modeled the spatial and temporal distribution of soil temperatures in the Xinjiang region of China, using atmospheric surface forcing data in the China Meteorological Administration Land Data Assimilation System (CLDAS) to drive the Community Land Model (CLM3.5) for hourly off-line simulations (from 2009 to 2012). To verify the CLM3.5 simulated soil temperatures, data from national automatic soil-temperature stations (105 in the Xinjiang region) were used at three soil layers (5 cm, 20 cm, and 80 cm)."
+      ],
+      "dataset": [
+        "To verify the CLM3.5 simulated soil temperatures, data from national automatic soil-temperature stations (105 in the Xinjiang region) were used at three soil layers (5 cm, 20 cm, and 80 cm)."
+      ],
+      "findings": [
+        "Overall, this study shows that the CLM3.5 model forced by a CLDAS driving field can simulate the multi-year spatial and temporal distribution of average soil temperatures in the Xinjiang region precisely. It furthermore showed that this method could simulate and reflect the hourly, daily, monthly, and yearly patterns of soil temperature in the Xinjiang region."
+      ],
+      "backgroundCn": [
+        "在这项研究中，使用了由国家大气研究中心（NCAR）开发的社区陆面模型（CLM3.5），该模型整合了多个国际知名的陆面模型，如陆面模型（LSM）、生物圈-大气传输方案（BATS）和1994年大气物理研究所陆面模型（IAP94）。CLM模型被认为是国际上最全面和可靠的陆面模型之一。土壤温度在陆面过程研究中至关重要，因为它影响表面水分和能量平衡，提供对气候的反馈，并作为土壤湿度状态和热特性的重要因素。最近的研究表明，土壤温度可以显著影响气象研究和预报模型，如天气研究与预报（WRF）和国家环境预报中心（NCEP）操作预报模型，影响短期降水模拟结果。"
+      ],
+      "research objectiveCn": [
+        "本研究模拟了中国新疆地区土壤温度的空间和时间分布，使用中国气象局陆地数据同化系统（CLDAS）中的大气表面强迫数据驱动社区陆地模型（CLM3.5）进行小时离线模拟（2009年至2012年）。主要目的是验证CLM3.5模拟的土壤温度，使用来自新疆地区105个国家自动土壤温度站的数据，涵盖三个土层（5厘米、20厘米和80厘米）。"
+      ],
+      "challengesCn": [
+        "七月份土壤表层温度的大幅差异可以通过新疆地区在该月的剧烈表面温度变化来解释。白天气温可超过30℃，加上较大的昼夜温差，使得使用模型准确捕捉表面温度变化变得非常困难。表层温度模拟不佳可能是由于该模型中表面参数的参数化方案所致，这将在后续阶段进行修正和改进。"
+      ],
+      "methodsCn": [
+        "本研究模拟了中国新疆地区土壤温度的空间和时间分布，使用中国气象局陆地数据同化系统（CLDAS）中的大气表面强迫数据驱动社区陆地模型（CLM3.5）进行小时离线模拟（2009年至2012年）。为了验证CLM3.5模拟的土壤温度，使用了新疆地区105个国家自动土壤温度站的数据，涵盖三个土层（5厘米、20厘米和80厘米）。"
+      ],
+      "datasetCn": [
+        "为了验证CLM3.5模拟的土壤温度，使用了新疆地区105个国家自动土壤温度站的数据，涉及三个土层（5厘米、20厘米和80厘米）。"
+      ],
+      "findingsCn": [
+        "总体而言，这项研究表明，CLM3.5模型在CLDAS驱动场的强迫下，能够精确模拟新疆地区平均土壤温度的多年空间和时间分布。此外，该方法还能够模拟和反映新疆地区土壤温度的小时、日、月和年模式。"
+      ]
+    },
+    {
+      "background": [
+        "The quality of atmospheric forcing data is one of the most important factors in hydrological simulation. However, the output uncertainty of hydrological models is increased by error propagation. Although the terrain of China is vast and complex, meteorological stations are scarce in contrast. The existing observation stations are unable to simulate large-scale hydrological simulations (water, energy balance). The China Meteorological Assimilation Driving Datasets for the SWAT model (CMADS) was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS) in this research. The Heihe River Basin was selected as the research area in this study. The CMADS, Climate Forecast System Reanalysis (CFSR), and the traditional weather station (TWS) were forcing the Soil and Water Assessment Tool (SWAT) model separately. According to the observation results obtained from three hydrological stations (Ying Luoxia, Qilian Mountains, and Zha Mashenke) in the Heihe River Basin, the runoff simulated by the CMADS data overall was better than the simulation results driven by the CFSR and the TWS."
+      ],
+      "research objective": [
+        "This study aims to analyze the application of the CMADS dataset in driving watershed hydrological models, specifically using the Heihe River Basin as a case study. The research seeks to compare the performance of the CMADS dataset with the CFSR and traditional weather station data in driving the SWAT model, to evaluate the advantages of CMADS in simulating hydrological processes in regions lacking meteorological stations."
+      ],
+      "challenges": [
+        "The existing observation stations are unable to simulate large-scale hydrological simulations (water, energy balance). Even though the CFSR dataset is widely applied internationally, its applicability and accuracy in China are questioned due to the lack of observational correction and quality control in the region."
+      ],
+      "methods": [
+        "In this research, the CMADS dataset was used to drive the SWAT model in the Heihe River Basin, and the results were compared with those obtained using the CFSR and traditional weather station data. The study involved calibrating and validating the runoff at three hydrological control stations (Ying Luoxia, Qilian Mountains, and Zha Mashenke) in the Heihe River Basin. The CMADS dataset was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS)."
+      ],
+      "dataset": [
+        "The CMADS dataset was established based on the China Meteorological Administration Land Data Assimilation System (CLDAS) in this research. The CMADS, Climate Forecast System Reanalysis (CFSR), and the traditional weather station (TWS) data were used to force the Soil and Water Assessment Tool (SWAT) model separately."
+      ],
+      "findings": [
+        "The runoff simulated by the CMADS data overall was better than the simulation results driven by the CFSR and the TWS. The CMADS + SWAT mode can reproduce the spatial and temporal response characteristics of all surface components (such as soil moisture, snow melting, etc.) in the Heihe River basin. We conclude that the CMADS data have obvious advantages for large-scale coupling atmospheric and hydrologic, hydrological process simulation."
+      ],
+      "backgroundCn": [
+        "大气强迫数据的质量是水文模拟中最重要的因素之一。然而，水文模型的输出不确定性因误差传播而增加。尽管中国的地形广阔而复杂，但气象站的分布相对稀少。现有的观测站无法进行大规模的水文模拟（水量、能量平衡）。本研究基于中国气象局陆地数据同化系统（CLDAS）建立了中国气象同化驱动数据集（CMADS）。本研究选择了黑河流域作为研究区域。CMADS、气候预报系统再分析（CFSR）和传统气象站（TWS）分别对土壤和水评估工具（SWAT）模型进行了强迫。根据在黑河流域三个水文站（营洛峡、祁连山和扎马深克）获得的观测结果，CMADS数据驱动的径流模拟整体上优于CFSR和TWS驱动的模拟结果。"
+      ],
+      "research objectiveCn": [
+        "本研究旨在分析CMADS数据集在驱动流域水文模型中的应用，特别是以黑河流域为案例。研究旨在比较CMADS数据集与CFSR和传统气象站数据在驱动SWAT模型中的表现，以评估CMADS在模拟缺乏气象站地区水文过程中的优势。"
+      ],
+      "challengesCn": [
+        "现有的观测站无法进行大规模的水文模拟（水、能量平衡）。尽管CFSR数据集在国际上被广泛应用，但由于该地区缺乏观测校正和质量控制，其适用性和准确性在中国受到质疑。"
+      ],
+      "methodsCn": [
+        "在本研究中，CMADS 数据集被用于驱动 Heihe 河流域的 SWAT 模型，并将结果与使用 CFSR 和传统气象站数据获得的结果进行了比较。该研究涉及在 Heihe 河流域的三个水文控制站（营洛峡、祁连山和扎马申克）进行径流的校准和验证。CMADS 数据集是基于中国气象局陆地数据同化系统（CLDAS）建立的。"
+      ],
+      "datasetCn": [
+        "CMADS 数据集是基于中国气象局陆地数据同化系统（CLDAS）建立的。在本研究中，CMADS、气候预报系统再分析（CFSR）和传统气象站（TWS）数据被分别用于驱动土壤和水评估工具（SWAT）模型。"
+      ],
+      "findingsCn": [
+        "CMADS数据驱动的径流模拟整体上优于CFSR和TWS驱动的模拟结果。CMADS + SWAT模型能够再现黑河流域所有地表成分（如土壤湿度、雪融等）的空间和时间响应特征。我们得出结论，CMADS数据在大规模耦合大气与水文、以及水文过程模拟方面具有明显优势。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Does the CMADS V1.1 dataset utilize STMAS assimilation algorithms for data collection?",
+        "QuestionCn": "CMADS V1.1 数据集是否使用 STMAS 同化算法进行数据收集？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Is the CMADS V1.1 dataset structured to facilitate direct use with the SWAT model without format conversion?",
+        "QuestionCn": "CMADS V1.1 数据集是否被结构化以便于直接与 SWAT 模型使用，而无需格式转换？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "When is the data from the CMADS V1.1 dataset available for use in hydrological models?",
+        "QuestionCn": "CMADS V1.1 数据集的可用时间是什么时候，可以用于水文模型？",
+        "AnswerEn": "2008 to 2016",
+        "AnswerCn": "2008年至2016年",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of how atmospheric surface forcing data is used to model soil temperatures in a specific region?",
+        "QuestionCn": "您能否提供一个例子，说明大气表面强迫数据如何用于建模特定区域的土壤温度？",
+        "AnswerEn": "In the field described, atmospheric surface forcing data from the China Meteorological Administration Land Data Assimilation System (CLDAS) was used to drive the Community Land Model (CLM3.5) for modeling the spatial and temporal distribution of soil temperatures in the Xinjiang region of China from 2009 to 2012.",
+        "AnswerCn": "在所描述的领域中，使用中国气象局陆地数据同化系统（CLDAS）的气象表面强迫数据驱动社区陆地模型（CLM3.5），对2009年至2012年新疆地区土壤温度的时空分布进行建模。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced when using automated weather station data for large-scale hydrological simulations?",
+        "QuestionCn": "使用自动气象站数据进行大规模水文模拟时面临的一个挑战是什么？",
+        "AnswerEn": "One challenge mentioned is the scarcity of meteorological stations in China, which makes it difficult to perform large-scale hydrological simulations due to error propagation and the complexity of the terrain. This challenge was addressed by creating the China Meteorological Assimilation Driving Datasets for the SWAT model (CMADS) to improve simulation accuracy.",
+        "AnswerCn": "一个提到的挑战是中国气象站的稀缺，这使得由于误差传播和地形复杂性，进行大规模水文模拟变得困难。为了解决这个挑战，创建了中国气象同化驱动数据集（CMADS），以提高模拟的准确性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What features are essential in a dataset that integrates multiple data sources and assimilation algorithms for meteorological analysis?",
+        "QuestionCn": "在整合多个数据源和同化算法进行气象分析的数据集中，哪些特征是必不可少的？",
+        "AnswerEn": "numerous automatic weather stations, assimilation algorithms like STMAS, adjustment for terrain, variable diagnostics, temperature, pressure, humidity, wind speed, precipitation, accessible formats like .dbf and .txt",
+        "AnswerCn": "众多自动气象站、STMAS等同化算法、地形调整、变量诊断、温度、气压、湿度、风速、降水、可访问格式如.dbf和.txt。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the atmospheric data collected in the CMADS V1.1 dataset for the SWAT model?",
+        "QuestionCn": "CMADS V1.1 数据集中收集的气象数据的空间分辨率是多少？",
+        "AnswerEn": "1/4°",
+        "AnswerCn": "1/4°",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Over how many years does the CMADS V1.1 dataset provide meteorological data for East Asia?",
+        "QuestionCn": "CMADS V1.1 数据集为东亚提供了多少年的气象数据？",
+        "AnswerEn": "9 years",
+        "AnswerCn": "9年",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "In what ways do the challenges of simulating hydrological processes using the CMADS dataset differ from those encountered when using the CFSR dataset?",
+        "QuestionCn": "使用CMADS数据集模拟水文过程的挑战与使用CFSR数据集时遇到的挑战有哪些不同之处？",
+        "AnswerEn": "The CMADS dataset addresses the challenge of limited meteorological stations in China by integrating data from numerous automatic stations and satellite observations, while the CFSR dataset may lack observational correction and quality control in the region, leading to potential inaccuracies in hydrological simulations.",
+        "AnswerCn": "CMADS 数据集通过整合众多自动气象站和卫星观测数据，解决了中国气象站数量有限的问题，而 CFSR 数据集可能缺乏观测校正和质量控制，导致在水文模拟中可能存在不准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can advancements in atmospheric data assimilation techniques improve the simulation of extreme weather events in regions with limited observational data?",
+        "QuestionCn": "大气数据同化技术的进步如何改善在观测数据有限的地区对极端天气事件的模拟？",
+        "AnswerEn": "Advancements in atmospheric data assimilation techniques, such as the use of three-dimensional variational methods, can improve the simulation of extreme weather events by effectively integrating high-resolution satellite data and ground-based observations. This enables more accurate modeling of weather patterns and enhances the predictive capabilities of hydrological models in regions with limited observational data.",
+        "AnswerCn": "大气数据同化技术的进展，例如三维变分方法的使用，可以通过有效整合高分辨率卫星数据和地面观测，改善极端天气事件的模拟。这使得天气模式的建模更加准确，并增强了在观测数据有限的地区水文模型的预测能力。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors influence the accuracy of atmospheric forcing data used in hydrological simulations within complex terrains like China?",
+        "QuestionCn": "影响在复杂地形（如中国）中进行水文模拟时大气强迫数据准确性的因素有哪些？",
+        "AnswerEn": "The accuracy of atmospheric forcing data in such terrains is influenced by the scarcity of meteorological stations and the complex topography. The CMADS dataset was created to address these challenges by integrating data from multiple sources, including automatic stations and satellite products, and using advanced assimilation techniques like STMAS.",
+        "AnswerCn": "在这种地形中，大气强迫数据的准确性受到气象站稀缺和复杂地形的影响。CMADS 数据集的创建旨在解决这些挑战，通过整合来自多个来源的数据，包括自动气象站和卫星产品，并使用先进的同化技术，如 STMAS。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential impacts on hydrological model accuracy when using atmospheric forcing data from multiple sources compared to a single, consistent data source?",
+        "QuestionCn": "使用来自多个来源的大气强迫数据与使用单一一致的数据源相比，对水文模型准确性的潜在影响是什么？",
+        "AnswerEn": "Using atmospheric forcing data from multiple sources, such as national automatic stations and satellite products, can improve the accuracy of hydrological models by reducing the uncertainty caused by data scarcity and error propagation. The integration of multiple data sources allows for more comprehensive coverage and better representation of spatial and temporal variability, particularly in regions where meteorological stations are sparse.",
+        "AnswerCn": "使用来自多个来源的大气强迫数据，如国家自动气象站和卫星产品，可以通过减少数据稀缺和误差传播造成的不确定性来提高水文模型的准确性。整合多个数据源可以实现更全面的覆盖，更好地表示空间和时间的变化，特别是在气象站稀少的地区。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it essential to model soil temperature distributions using atmospheric surface forcing data in land surface models?",
+        "QuestionCn": "在陆面模型中，使用大气表面强迫数据建模土壤温度分布是至关重要的原因是什么？",
+        "AnswerEn": "Modeling soil temperature distributions using atmospheric surface forcing data in land surface models is essential because soil temperature plays a critical role in land surface processes. It affects the surface water and energy balance and provides feedback to the climate, influencing soil moisture status and thermal properties. Accurate modeling of soil temperature distributions can significantly enhance meteorological research and forecasting models, such as those predicting short-term precipitation.",
+        "AnswerCn": "使用大气表面强迫数据在陆面模型中模拟土壤温度分布是至关重要的，因为土壤温度在陆面过程中发挥着关键作用。它影响表面水分和能量平衡，并对气候产生反馈，影响土壤湿度状态和热特性。准确模拟土壤温度分布可以显著增强气象研究和预测模型，例如那些预测短期降水的模型。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What are the goals of utilizing the CMADS dataset to drive the SWAT model for hydrological simulations, particularly in the context of the Heihe River Basin case study?",
+        "QuestionCn": "利用CMADS数据集驱动SWAT模型进行水文模拟的目标，特别是在黑河流域案例研究的背景下，是什么？",
+        "AnswerEn": "The goals of utilizing the CMADS dataset to drive the SWAT model for hydrological simulations include evaluating the dataset's performance in regions with scarce meteorological stations, comparing it to other datasets like CFSR and traditional weather station data, and demonstrating its advantages in simulating hydrological processes. In the context of the Heihe River Basin case study, the aim is to accurately reproduce the spatial and temporal response characteristics of surface components, such as soil moisture and snow melting, thereby supporting large-scale hydrological and atmospheric coupling.",
+        "AnswerCn": "利用CMADS数据集驱动SWAT模型进行水文模拟的目标包括评估该数据集在气象站稀缺地区的表现，比较其与其他数据集（如CFSR）和传统气象站数据的差异，以及展示其在模拟水文过程中的优势。在黑河流域案例研究中，目标是准确再现表面组分（如土壤湿度和雪融化）的空间和时间响应特征，从而支持大规模水文与大气的耦合。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What steps should be followed to ensure the effective calibration and validation of hydrological models using meteorological assimilation datasets?",
+        "QuestionCn": "为了确保使用气象同化数据集对水文模型进行有效的校准和验证，应遵循哪些步骤？",
+        "AnswerEn": "The steps involve using the meteorological assimilation dataset to drive the SWAT model, calibrating and validating the model using observation data from hydrological control stations, and comparing results with other datasets like CFSR and traditional weather station data to assess performance and accuracy.",
+        "AnswerCn": "这些步骤包括使用气象同化数据集驱动SWAT模型，利用水文控制站的观测数据对模型进行校准和验证，并将结果与其他数据集（如CFSR和传统气象站数据）进行比较，以评估性能和准确性。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "How do specific data collection techniques address the challenge of sparse meteorological stations in large regions like China?",
+        "QuestionCn": "特定的数据收集技术如何应对像中国这样的大区域内气象站稀疏的挑战？",
+        "AnswerEn": "The CMADS V1.1 dataset addresses this challenge by utilizing data from thousands of national and regional automatic stations, combining them with satellite-derived products and assimilation techniques to fill gaps and provide reliable analysis fields over large areas.",
+        "AnswerCn": "CMADS V1.1 数据集通过利用来自数千个国家和地区自动气象站的数据，结合卫星衍生产品和同化技术，填补空白并提供大面积的可靠分析场，来应对这一挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways does the use of satellite-derived data enhance the simulation of hydrological processes in regions with limited ground-based observations?",
+        "QuestionCn": "卫星衍生数据在缺乏地面观测的地区增强水文过程模拟的方式有哪些？",
+        "AnswerEn": "Satellite-derived data are used to complement ground-based observations in the CMADS V1.1 dataset, particularly for precipitation and solar radiation, allowing for improved simulation of hydrological processes by providing consistent and wide-ranging data coverage.",
+        "AnswerCn": "卫星衍生数据用于补充CMADS V1.1数据集中基于地面的观测，特别是在降水和太阳辐射方面，从而通过提供一致且广泛的数据覆盖，改善水文过程的模拟。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "What challenges are expected when using models like CLM3.5 to simulate soil temperatures in regions with extreme temperature variations, such as Xinjiang during July?",
+        "QuestionCn": "在使用像CLM3.5这样的模型模拟极端温度变化地区（如七月的新疆）土壤温度时，预计会面临哪些挑战？",
+        "AnswerEn": "Extreme temperature variations, such as those in Xinjiang during July, present challenges like accurately capturing drastic surface temperature changes. This can lead to discrepancies in simulation results due to limitations in the parameterization of surface parameters in models like CLM3.5.",
+        "AnswerCn": "极端温度变化，例如七月份新疆的情况，给准确捕捉剧烈的地表温度变化带来了挑战。这可能导致模拟结果的差异，因为像CLM3.5这样的模型在地表参数的参数化方面存在局限性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why might datasets like CMADS be expected to perform better in hydrological simulations compared to datasets without observational correction and quality control?",
+        "QuestionCn": "像CMADS这样的数据集在水文模拟中可能表现更好的原因是什么？相比之下，未经观测校正和质量控制的数据集可能存在什么问题？",
+        "AnswerEn": "Datasets like CMADS are expected to perform better because they are based on comprehensive data assimilation systems that incorporate observational corrections and quality control, unlike datasets like CFSR, which may lack these adjustments in certain regions, affecting their accuracy and applicability.",
+        "AnswerCn": "像CMADS这样的数据集预计会表现更好，因为它们基于综合数据同化系统，结合了观测校正和质量控制，而像CFSR这样的数据集可能在某些区域缺乏这些调整，从而影响其准确性和适用性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "What is your evaluation of the effectiveness of using the STMAS assimilation algorithm for integrating data from various sources in atmospheric data collection?",
+        "QuestionCn": "您如何评价使用STMAS同化算法在整合来自不同来源的大气数据收集中的有效性？",
+        "AnswerEn": "The STMAS assimilation algorithm effectively integrates data from multiple sources, such as national and regional automatic stations, to create comprehensive atmospheric analysis fields. Its use in the CMADS dataset allows for improved accuracy and reliability in the data used to drive models like SWAT, addressing challenges of data sparsity and complex terrain.",
+        "AnswerCn": "STMAS同化算法有效地整合来自多个来源的数据，如国家和区域自动站，以创建全面的大气分析场。它在CMADS数据集中的应用提高了用于驱动SWAT等模型的数据的准确性和可靠性，解决了数据稀疏和复杂地形的挑战。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "How do you perceive the potential for improving hydrological simulations in regions with sparse meteorological stations by utilizing datasets like CMADS?",
+        "QuestionCn": "您如何看待利用像CMADS这样的数据集来改善气象站稀少地区的水文模拟的潜力？",
+        "AnswerEn": "Utilizing datasets like CMADS can significantly enhance hydrological simulations in regions with sparse meteorological stations by providing high-resolution, assimilated atmospheric data. The dataset's ability to integrate satellite and ground station data can improve the simulation of water and energy balances, offering advantages over conventional datasets like CFSR and traditional weather station data.",
+        "AnswerCn": "利用像CMADS这样的数据集可以显著增强在气象站稀少地区的水文模拟，因为它提供了高分辨率的同化大气数据。该数据集整合了卫星和地面站的数据，可以改善水和能量平衡的模拟，相较于传统的数据集如CFSR和传统气象站数据具有优势。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In your opinion, what are the challenges and benefits of using multi-source data fusion, such as satellite and ground-based observations, for driving land surface models?",
+        "QuestionCn": "在您看来，使用多源数据融合，例如卫星和地面观测，来驱动陆面模型的挑战和好处是什么？",
+        "AnswerEn": "The challenges of multi-source data fusion include the complexity of accurately merging diverse data types and ensuring consistent quality across different sources. However, the benefits include enhanced spatial coverage and temporal resolution, as seen in the CMADS dataset, which can improve the reliability of land surface models by providing comprehensive atmospheric forcing data, crucial for accurate simulations in regions with limited observational networks.",
+        "AnswerCn": "多源数据融合的挑战包括准确合并不同数据类型的复杂性以及确保不同来源的一致质量。然而，其好处包括增强的空间覆盖和时间分辨率，正如CMADS数据集所示，这可以通过提供全面的大气强迫数据来提高陆面模型的可靠性，这对于在观测网络有限的地区进行准确模拟至关重要。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please explore and summarize the various data collection techniques employed for compiling atmospheric and meteorological datasets for hydrological modeling in East Asia.",
+        "QuestionCn": "请探讨并总结在东亚地区为水文模型编制大气和气象数据集所采用的各种数据收集技术。",
+        "AnswerEn": "Data collection techniques include using STMAS assimilation algorithms, data cycling nesting, and model estimation. Meteorological data are gathered from 2421 national automatic stations and 29452 regional automatic stations, incorporating multi-satellite and ground-station precipitation fusion, and solar radiation data are derived using the DISSORT radiation transmission model with FY2E satellite data.",
+        "AnswerCn": "数据收集技术包括使用STMAS同化算法、数据循环嵌套和模型估计。气象数据来自2421个国家自动站和29452个区域自动站，结合多卫星和地面站降水融合，太阳辐射数据则使用DISSORT辐射传输模型与FY2E卫星数据获得。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Please research and describe potential datasets that can complement the SWAT model driving datasets with additional atmospheric parameters to improve hydrological modeling accuracy.",
+        "QuestionCn": "请研究并描述潜在的数据集，这些数据集可以补充SWAT模型驱动的数据集，提供额外的气象参数，以提高水文建模的准确性。",
+        "AnswerEn": "Potential complementary datasets could include high-resolution soil moisture datasets, enhanced satellite-derived radiation products, and real-time atmospheric pressure data. Utilizing datasets like CMORPH satellite precipitation products and integrating them with local observations could further refine hydrological models by providing more accurate and comprehensive atmospheric inputs.",
+        "AnswerCn": "潜在的互补数据集可以包括高分辨率土壤湿度数据集、增强的卫星辐射产品和实时大气压力数据。利用CMORPH卫星降水产品等数据集，并将其与当地观测数据结合，可以通过提供更准确和全面的大气输入，进一步优化水文模型。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

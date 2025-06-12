@@ -1,203 +1,203 @@
 {
-    "id": "0179716c-d9e0-409e-ae2c-97131dc456d9",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "A dataset of lake-catchment characteristics for the Tibetan Plateau (v1.0) (1979-2018)",
-            "titleCn": "青藏高原湖泊流域属性数据集（v1.0）（1979-2018）",
-            "description": "Lakes collect runoff, sediment and nutrients from upstream watersheds and are an important \"destination\" of material migration at the watershed scale. Therefore, the attributes of lake water and sediment are affected by catchment attributes (e.g. climate, terrain and vegetation conditions) to a large degree. This dataset delineates the watershed boundaries of 1525 Lakes (with an area from 0.2 to 4503 square kilometers) on the Tibetan Plateau, and calculates 721 catchment-scale attributes on the aspects of lake body, terrain, climate, vegetation, soil/geology and anthropogenic activities. This is the first dataset of lake-catchment characteristics on the Tibetan Plateau, which can provide foundamental data for the study of lakes in the Tibetan Plateau.",
-            "descriptionCn": "湖泊汇集上游流域的径流及其携带的泥沙和营养物质，是流域中物质迁移的重要“归宿”，因此湖泊水体和沉积物属性在很大程度上受湖泊流域的属性（如湖泊上游的气候、地形和植被条件）影响。本数据集根据数字高程模型提取青藏高原上1525个湖泊（面积从0.2到4503平方公里）的流域范围，计算了湖泊水体、地形、气候、植被、土壤/地质和人类活动等6方面的721个属性，是首套青藏高原湖泊流域属性数据集，可为青藏高原湖泊（特别是缺资料湖泊）研究提供基础数据。",
-            "instructions": "The LCC-TP v1.0 dataset is stored in shapefile and csv format, and the contents of each file are as following:\n\n1. The spatial_data directory\n   1) lakes.shp: the spatial distribution of lakes;\n   2) full_catchments.shp: the spatial extent of full catchments of lakes;\n   3) inter-lake_catchments.shp: the spatial extent of inter-lake catchments. In this dataset, the inter-lake catchments are obtained by excluding the contributing areas of upstream lakes larger than 0.2 km2 from the full catchments considering that large lakes block the transport of materials from upstream to downstream.\n   4) flowpath.shp: the flow paths among upstream and downstream lakes.\n\n2. LCC-TP_attributes.csv: The attributes of lakes and their lake catchments, which are linked with the spatial data through the \"LakeID\" field. Please refer to the document \"Description of attributes in LCC-TP v1.0.docx\" for the meaning of each field.\n\n3. The time_series directory\n   The time series of daily meteorological data from 1979 to 2018 are stored in the csv files in this directory. Each column in the csv file, except for the first one, corresponds to the data of a lake, and the column name is lake ID. The name of each file consists of two parts, connected by an underscore. The first part specifies the spatial extent which can be lake body (LK), full catchments (FC) and inter-lake catchments (IC). The second part specifies the type of meteorological variable which can be temp (temperature, K), prec (precipitation, mm), wind (wind speed, m/s), pres (air pressure, Pa), LRAD (long wave radiation, W/m2), SRAD (short wave radiation, W/m2) and Shum (specific humidity, kg/kg).",
-            "instructionsCn": "数据以shapefile和csv格式存储，各文件存储的内容为：\n1. spatial_data目录\n   1）lakes.shp: 湖泊的空间范围；\n   2）full_catchments.shp: 湖泊的完整上游流域的空间范围；\n   3）inter-lake_catchments.shp: 湖间流域（Inter-lake catchments）的空间范围。在本数据集中，湖间流域为湖泊的完整上游流域除去面积大于0.2平方千米的上游湖泊的流域范围。计算湖间流域主要是考虑到面积较大的湖泊会拦截其上游的径流及其携带的物质，这部分湖泊的流域属性对下游湖泊的影响较弱；\n   4）flowpath.shp：上下游湖泊之间的流路。\n2. LCC-TP_attributes.csv: 非时间序列的湖泊流域属性，通过LakeID字段与空间数据关联。各字段的含义见\"Description of attributes in LCC-TP v1.0.docx\"。\n3. time_series目录   \n   1979-2018年的逐日气象数据时间序列，按空间范围和变量类型分为多个csv文件存储。从csv文件的第二列开始，每列对应一个湖泊，列名为LakeID。每个文件的名称包括两部分，由下划线连接。名字的前半部分指定空间范围：湖体（Lk），完整流域（FC）和湖间流域（IC）。后半部分指定气象要素的类型：temp（温度，K），prec（降水量，mm），wind（风速，m/s），pres（气压，Pa），lrad（长波辐射，W/m2），srad（短波辐射，W/m2）和shum（比湿,kg/kg）。",
-            "east": 104.0,
-            "west": 73.0,
-            "south": 26.0,
-            "north": 39.0,
-            "startTime": "1979-01-01 00:00:00",
-            "endTime": "2018-12-31 00:00:00",
-            "fileSize": 6046621769.0,
-            "cstr": "18406.11.Terre.tpdc.272026",
-            "doi": "10.11888/Terre.tpdc.272026",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "刘军志",
-                "nameEn": "LIU Junzhi ",
-                "unitEn": "Lanzhou University",
-                "unitCn": "兰州大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A dataset of lake-catchment characteristics for the Tibetan Plateau",
-                "referenceCn": null,
-                "referenceEn": "Liu, J., Fang, P., Que, Y., Zhu, L.-J., Duan, Z., Tang, G., Liu, P., Ji, M., and Liu, Y.(2022). A dataset of lake-catchment characteristics for the Tibetan Plateau. Earth Syst. Sci. Data, 14, 3791–3805, https://doi.org/10.5194/essd-14-3791-2022."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "地表水",
-                "nameEn": "Surface Water"
-            },
-            {
-                "nameCn": "流域水系",
-                "nameEn": "Drainage Basin and River System"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "青藏高原",
-                "keywordEn": "Qinghai-Tibet Plateau"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1979-2018",
-                "keywordEn": "1979-2018",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "日",
-                "keywordEn": "day",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            },
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "0179716c-d9e0-409e-ae2c-97131dc456d9",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "A dataset of lake-catchment characteristics for the Tibetan Plateau (v1.0) (1979-2018)",
+      "titleCn": "青藏高原湖泊流域属性数据集（v1.0）（1979-2018）",
+      "description": "Lakes collect runoff, sediment and nutrients from upstream watersheds and are an important \"destination\" of material migration at the watershed scale. Therefore, the attributes of lake water and sediment are affected by catchment attributes (e.g. climate, terrain and vegetation conditions) to a large degree. This dataset delineates the watershed boundaries of 1525 Lakes (with an area from 0.2 to 4503 square kilometers) on the Tibetan Plateau, and calculates 721 catchment-scale attributes on the aspects of lake body, terrain, climate, vegetation, soil/geology and anthropogenic activities. This is the first dataset of lake-catchment characteristics on the Tibetan Plateau, which can provide foundamental data for the study of lakes in the Tibetan Plateau.",
+      "descriptionCn": "湖泊汇集上游流域的径流及其携带的泥沙和营养物质，是流域中物质迁移的重要“归宿”，因此湖泊水体和沉积物属性在很大程度上受湖泊流域的属性（如湖泊上游的气候、地形和植被条件）影响。本数据集根据数字高程模型提取青藏高原上1525个湖泊（面积从0.2到4503平方公里）的流域范围，计算了湖泊水体、地形、气候、植被、土壤/地质和人类活动等6方面的721个属性，是首套青藏高原湖泊流域属性数据集，可为青藏高原湖泊（特别是缺资料湖泊）研究提供基础数据。",
+      "instructions": "The LCC-TP v1.0 dataset is stored in shapefile and csv format, and the contents of each file are as following:\n\n1. The spatial_data directory\n   1) lakes.shp: the spatial distribution of lakes;\n   2) full_catchments.shp: the spatial extent of full catchments of lakes;\n   3) inter-lake_catchments.shp: the spatial extent of inter-lake catchments. In this dataset, the inter-lake catchments are obtained by excluding the contributing areas of upstream lakes larger than 0.2 km2 from the full catchments considering that large lakes block the transport of materials from upstream to downstream.\n   4) flowpath.shp: the flow paths among upstream and downstream lakes.\n\n2. LCC-TP_attributes.csv: The attributes of lakes and their lake catchments, which are linked with the spatial data through the \"LakeID\" field. Please refer to the document \"Description of attributes in LCC-TP v1.0.docx\" for the meaning of each field.\n\n3. The time_series directory\n   The time series of daily meteorological data from 1979 to 2018 are stored in the csv files in this directory. Each column in the csv file, except for the first one, corresponds to the data of a lake, and the column name is lake ID. The name of each file consists of two parts, connected by an underscore. The first part specifies the spatial extent which can be lake body (LK), full catchments (FC) and inter-lake catchments (IC). The second part specifies the type of meteorological variable which can be temp (temperature, K), prec (precipitation, mm), wind (wind speed, m/s), pres (air pressure, Pa), LRAD (long wave radiation, W/m2), SRAD (short wave radiation, W/m2) and Shum (specific humidity, kg/kg).",
+      "instructionsCn": "数据以shapefile和csv格式存储，各文件存储的内容为：\n1. spatial_data目录\n   1）lakes.shp: 湖泊的空间范围；\n   2）full_catchments.shp: 湖泊的完整上游流域的空间范围；\n   3）inter-lake_catchments.shp: 湖间流域（Inter-lake catchments）的空间范围。在本数据集中，湖间流域为湖泊的完整上游流域除去面积大于0.2平方千米的上游湖泊的流域范围。计算湖间流域主要是考虑到面积较大的湖泊会拦截其上游的径流及其携带的物质，这部分湖泊的流域属性对下游湖泊的影响较弱；\n   4）flowpath.shp：上下游湖泊之间的流路。\n2. LCC-TP_attributes.csv: 非时间序列的湖泊流域属性，通过LakeID字段与空间数据关联。各字段的含义见\"Description of attributes in LCC-TP v1.0.docx\"。\n3. time_series目录   \n   1979-2018年的逐日气象数据时间序列，按空间范围和变量类型分为多个csv文件存储。从csv文件的第二列开始，每列对应一个湖泊，列名为LakeID。每个文件的名称包括两部分，由下划线连接。名字的前半部分指定空间范围：湖体（Lk），完整流域（FC）和湖间流域（IC）。后半部分指定气象要素的类型：temp（温度，K），prec（降水量，mm），wind（风速，m/s），pres（气压，Pa），lrad（长波辐射，W/m2），srad（短波辐射，W/m2）和shum（比湿,kg/kg）。",
+      "east": 104.0,
+      "west": 73.0,
+      "south": 26.0,
+      "north": 39.0,
+      "startTime": "1979-01-01 00:00:00",
+      "endTime": "2018-12-31 00:00:00",
+      "fileSize": 6046621769.0,
+      "cstr": "18406.11.Terre.tpdc.272026",
+      "doi": "10.11888/Terre.tpdc.272026",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the specific attributes of the Qinghai-Tibet Plateau lake basins that are measured to understand sediment and nutrient transport?",
-                "QuestionCn": "青藏高原湖泊盆地的特定属性，包括沉积物和营养物质运输的测量，主要有以下几个方面：湖泊水位变化、沉积物颗粒大小、沉积物沉积速率、营养物质浓度（如氮、磷）、水体流动速度、湖泊面积和深度、湖泊水文特征、气候变化影响、植被覆盖率及人类活动影响等。",
-                "AnswerEn": "lake water bodies, terrain, climate, vegetation, soil/geology, human activities",
-                "AnswerCn": "湖泊水体、地形、气候、植被、土壤/地质、人类活动",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many lakes are included in a dataset focusing on the attributes of lakes on the Tibetan Plateau?",
-                "QuestionCn": "该数据集中包含多少个关于青藏高原湖泊属性的湖泊？",
-                "AnswerEn": "1525",
-                "AnswerCn": "1525",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does the term '流域属性数据集' mean in the context of lake basin studies in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在青藏高原湖泊流域研究中，'流域属性数据集'一词指的是与特定流域相关的各种属性和特征的数据集合。这些数据集通常包括地形、气候、水文、土壤、植被、土地利用等信息，用于分析流域的生态环境、资源管理和水文过程。",
-                "AnswerEn": "'流域属性数据集' refers to a dataset that encompasses attributes related to the lake basins, specifically detailing characteristics of the water body, terrain, climate, vegetation, soil/geology, and human activities within the watershed. It includes properties derived from a digital elevation model for 1525 lakes in the Qinghai-Tibet Plateau, providing critical information for understanding the material migration within the lake basins.",
-                "AnswerCn": "'流域属性数据集'是一个涵盖湖泊流域相关属性的数据集，具体详细描述了水体、地形、气候、植被、土壤/地质以及流域内人类活动的特征。该数据集包含来自青藏高原1525个湖泊的数字高程模型衍生的属性，为理解湖泊流域内的物质迁移提供了重要信息。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential impacts on data accuracy when integrating multiple sources of digital elevation models for extracting lake basin areas in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在整合多个数字高程模型以提取青藏高原湖泊盆地面积时，对数据准确性的潜在影响是什么？",
-                "AnswerEn": "Integrating multiple sources of digital elevation models can enhance the accuracy of delineating the basin areas by providing diverse datasets that could complement each other, leading to more precise calculations of attributes like lake water, terrain, and climate. However, it may introduce challenges such as data inconsistencies or resolution mismatches which need to be carefully managed to maintain the reliability of the dataset, especially in remote regions like the Qinghai-Tibet Plateau.",
-                "AnswerCn": "整合多个数字高程模型来源可以提高流域面积划分的准确性，因为不同的数据集可以相互补充，从而导致湖泊水体、地形和气候等属性的更精确计算。然而，这也可能引入数据不一致或分辨率不匹配等挑战，这需要谨慎管理，以保持数据集的可靠性，特别是在像青藏高原这样的偏远地区。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary goal of compiling a dataset on lake basin attributes in the Qinghai-Tibet Plateau from 1979 to 2018?",
-                "QuestionCn": "编制1979年至2018年青藏高原湖泊流域特征数据集的主要目标是什么？",
-                "AnswerEn": "The primary goal is to provide foundational data for research on the Qinghai-Tibet Plateau lakes, particularly those lacking sufficient data, by analyzing the lake basin attributes. This includes understanding the influence of the basin's climate, topography, vegetation, soil/geology, and human activities on the lakes' water and sediment properties, as lakes are crucial for material migration within a basin.",
-                "AnswerCn": "主要目标是通过分析湖泊流域特征，为青藏高原湖泊的研究提供基础数据，特别是那些缺乏足够数据的湖泊。这包括了解流域的气候、地形、植被、土壤/地质和人类活动对湖泊水体和沉积物特性的影响，因为湖泊在流域内物质迁移中至关重要。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in extracting and calculating the various attributes of lakes and their catchment areas using a digital elevation model in the Qinghai-Tibet Plateau region?",
-                "QuestionCn": "在青藏高原地区，利用数字高程模型提取和计算湖泊及其集水区的各种属性涉及以下程序步骤：",
-                "AnswerEn": "The process involves using a digital elevation model to delineate the catchment areas for 1525 lakes in the Qinghai-Tibet Plateau, which have areas ranging from 0.2 to 4503 square kilometers. The next step is to calculate 721 attributes related to lake water, topography, climate, vegetation, soil/geology, and human activities. These attributes help in understanding how the catchment areas influence the properties of the water bodies and sediments in the lakes.",
-                "AnswerCn": "该过程涉及使用数字高程模型来划定青藏高原1525个湖泊的集水区，这些湖泊的面积范围从0.2到4503平方公里。下一步是计算721个与湖水、地形、气候、植被、土壤/地质和人类活动相关的属性。这些属性有助于理解集水区如何影响湖泊及其沉积物的特性。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What technological advancements enable the extraction and analysis of watershed boundaries from digital elevation models for large-scale lake basin studies?",
-                "QuestionCn": "哪些技术进步使得从数字高程模型中提取和分析流域边界成为可能，以便进行大规模湖泊盆地研究？",
-                "AnswerEn": "The use of digital elevation models (DEMs) allows for the extraction of watershed boundaries, enabling the calculation of various attributes related to lake water bodies, topography, climate, vegetation, soil/geology, and human activities in the Qinghai-Tibet Plateau.",
-                "AnswerCn": "数字高程模型（DEM）的使用可以提取流域边界，从而计算与青藏高原湖泊水体、地形、气候、植被、土壤/地质以及人类活动相关的各种属性。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "刘军志",
+        "nameEn": "LIU Junzhi ",
+        "unitEn": "Lanzhou University",
+        "unitCn": "兰州大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A dataset of lake-catchment characteristics for the Tibetan Plateau",
+        "referenceCn": null,
+        "referenceEn": "Liu, J., Fang, P., Que, Y., Zhu, L.-J., Duan, Z., Tang, G., Liu, P., Ji, M., and Liu, Y.(2022). A dataset of lake-catchment characteristics for the Tibetan Plateau. Earth Syst. Sci. Data, 14, 3791–3805, https://doi.org/10.5194/essd-14-3791-2022."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "地表水",
+        "nameEn": "Surface Water"
+      },
+      {
+        "nameCn": "流域水系",
+        "nameEn": "Drainage Basin and River System"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "青藏高原",
+        "keywordEn": "Qinghai-Tibet Plateau"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1979-2018",
+        "keywordEn": "1979-2018",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "日",
+        "keywordEn": "day",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      },
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the specific attributes of the Qinghai-Tibet Plateau lake basins that are measured to understand sediment and nutrient transport?",
+        "QuestionCn": "青藏高原湖泊流域中用于了解沉积物和养分运输的具体属性是什么？",
+        "AnswerEn": "lake water bodies, terrain, climate, vegetation, soil/geology, human activities",
+        "AnswerCn": "湖泊水体、地形、气候、植被、土壤/地质、人类活动",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many lakes are included in a dataset focusing on the attributes of lakes on the Tibetan Plateau?",
+        "QuestionCn": "该数据集中包含多少个关于青藏高原湖泊属性的湖泊？",
+        "AnswerEn": "1525",
+        "AnswerCn": "1525",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does the term '流域属性数据集' mean in the context of lake basin studies in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在青藏高原湖泊流域研究中，“流域属性数据集”指的是什么？",
+        "AnswerEn": "'流域属性数据集' refers to a dataset that encompasses attributes related to the lake basins, specifically detailing characteristics of the water body, terrain, climate, vegetation, soil/geology, and human activities within the watershed. It includes properties derived from a digital elevation model for 1525 lakes in the Qinghai-Tibet Plateau, providing critical information for understanding the material migration within the lake basins.",
+        "AnswerCn": "'流域属性数据集'是一个涵盖湖泊流域相关属性的数据集，具体详细描述了水体、地形、气候、植被、土壤/地质以及流域内人类活动的特征。该数据集包含来自青藏高原1525个湖泊的数字高程模型衍生的属性，为理解湖泊流域内的物质迁移提供了重要信息。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential impacts on data accuracy when integrating multiple sources of digital elevation models for extracting lake basin areas in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在整合多个数字高程模型以提取青藏高原湖泊盆地面积时，对数据准确性的潜在影响是什么？",
+        "AnswerEn": "Integrating multiple sources of digital elevation models can enhance the accuracy of delineating the basin areas by providing diverse datasets that could complement each other, leading to more precise calculations of attributes like lake water, terrain, and climate. However, it may introduce challenges such as data inconsistencies or resolution mismatches which need to be carefully managed to maintain the reliability of the dataset, especially in remote regions like the Qinghai-Tibet Plateau.",
+        "AnswerCn": "整合多个数字高程模型来源可以提高流域面积划分的准确性，因为不同的数据集可以相互补充，从而导致湖泊水体、地形和气候等属性的更精确计算。然而，这也可能引入数据不一致或分辨率不匹配等挑战，这需要谨慎管理，以保持数据集的可靠性，特别是在像青藏高原这样的偏远地区。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary goal of compiling a dataset on lake basin attributes in the Qinghai-Tibet Plateau from 1979 to 2018?",
+        "QuestionCn": "编制1979年至2018年青藏高原湖泊流域特征数据集的主要目标是什么？",
+        "AnswerEn": "The primary goal is to provide foundational data for research on the Qinghai-Tibet Plateau lakes, particularly those lacking sufficient data, by analyzing the lake basin attributes. This includes understanding the influence of the basin's climate, topography, vegetation, soil/geology, and human activities on the lakes' water and sediment properties, as lakes are crucial for material migration within a basin.",
+        "AnswerCn": "主要目标是通过分析湖泊流域特征，为青藏高原湖泊的研究提供基础数据，特别是那些缺乏足够数据的湖泊。这包括了解流域的气候、地形、植被、土壤/地质和人类活动对湖泊水体和沉积物特性的影响，因为湖泊在流域内物质迁移中至关重要。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in extracting and calculating the various attributes of lakes and their catchment areas using a digital elevation model in the Qinghai-Tibet Plateau region?",
+        "QuestionCn": "在青藏高原地区，使用数字高程模型提取和计算湖泊及其集水区的各种属性涉及哪些程序步骤？",
+        "AnswerEn": "The process involves using a digital elevation model to delineate the catchment areas for 1525 lakes in the Qinghai-Tibet Plateau, which have areas ranging from 0.2 to 4503 square kilometers. The next step is to calculate 721 attributes related to lake water, topography, climate, vegetation, soil/geology, and human activities. These attributes help in understanding how the catchment areas influence the properties of the water bodies and sediments in the lakes.",
+        "AnswerCn": "该过程涉及使用数字高程模型来划定青藏高原1525个湖泊的集水区，这些湖泊的面积范围从0.2到4503平方公里。下一步是计算721个与湖水、地形、气候、植被、土壤/地质和人类活动相关的属性。这些属性有助于理解集水区如何影响湖泊及其沉积物的特性。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What technological advancements enable the extraction and analysis of watershed boundaries from digital elevation models for large-scale lake basin studies?",
+        "QuestionCn": "哪些技术进步使得从数字高程模型中提取和分析流域边界成为可能，以便进行大规模湖泊盆地研究？",
+        "AnswerEn": "The use of digital elevation models (DEMs) allows for the extraction of watershed boundaries, enabling the calculation of various attributes related to lake water bodies, topography, climate, vegetation, soil/geology, and human activities in the Qinghai-Tibet Plateau.",
+        "AnswerCn": "数字高程模型（DEM）的使用可以提取流域边界，从而计算与青藏高原湖泊水体、地形、气候、植被、土壤/地质以及人类活动相关的各种属性。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

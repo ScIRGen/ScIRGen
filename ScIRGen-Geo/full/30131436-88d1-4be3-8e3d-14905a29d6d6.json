@@ -1,221 +1,221 @@
 {
-    "id": "30131436-88d1-4be3-8e3d-14905a29d6d6",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Global daily surface soil moisture dataset at 1-km resolution (2000 - 2020)",
-            "titleCn": "全球1公里分辨率地表土壤水分数据集（2000-2020）",
-            "description": "Soil moisture (SM) is an essential state variable that plays an important role in the terrestrial water cycle, and plays an important role in many research and application fields such as land-atmosphere interactions, regional hydrological process, and water resources management. Global soil moisture products based on current passive microwave remote sensing are suffering from problems of spatiotemporal discontinuity (2-3 days revisit) and coarse spatial resolution (usually ≥ 0.25°), which limits its wider applications. We developed a machine learning based method to generate a global spatiotemporal continuous surface soil moisture (SSM) dataset with 1-km resolution from 2000 to 2020 on the basis of ESA Climate Change Initiative (ESA-CCI) dataset. Firstly, the gaps in the surface soil moisture of ESA-CCI product are filled to obtain the global daily gap-free SSM data at 0.25° resolution by fusing the ESA-CCI SM product with the surface layer SM of the ERA5 reanalysis data. Secondly, a machine learning algorithm (Random Forest) was constructed using in-situ soil moisture observations provided by the International Soil Moisture Network (ISMN) and optical remote sensing data to disaggregate the gap-free SSM at 0.25° resolution to 1 km resolution, and then to generate a global spatiotemporally continuous surface soil moisture dataset at 1-kilometer resolution and daily step from 2000 to 2020. Verified by the in-situ measurements of SM at 2346 ground observation stations around the world, the results show that the product has good accuracy, with high R (0.89) and low ubRMSE (0.045 m3/m3). This is the first seamless 1-km resolution soil moisture dataset with long time-series at the global scale. This dataset has a spatial resolution of 1-km and a temporal resolution of daily/monthly with a unit of m3/m3. The data are stored as integer data type with a scaling factor of 0.001.",
-            "descriptionCn": "土壤水分是陆地水循环中的重要状态变量，在陆-气相互作用、区域水文过程及水资源管理等研究领域具有重要作用。当前主流的被动微波遥感土壤水分产品存在空间分辨率较粗（几十公里）和时间不连续（2-3天重访）等问题，限制了其更为广泛的科学应用。本数据集基于ESA-CCI主被动融合产品进行二次研发，首先融合了ERA5再分析数据以实现粗分辨率（25公里）下时空连续的土壤水分数据集；其次，以国际土壤水分观测网络ISMN提供的全球土壤水分观测数据为训练目标，利用多源光学遥感数据构建机器学习算法，生成了国际首套2000-2020年全球时空连续1公里分辨率地表土壤水分数据集。经全球2346个地面观测站点的验证，结果表明该产品具有较好的精度（相关系数为0.89，无偏均方根误差为0.045 m3/m3）。本数据集为气象、农业、水利等行业应用和全球变化研究领域提供了重要的土壤水分基础数据。\n本发布数据集的属性为：空间分辨率为1km，时间步长为每日/月，单位为m3/m3，数据类型为整数，比例因子为0.001。",
-            "instructions": "The monthly average soil moisture data is stored in GeoTIFF format and the file name is \"SM 1km.Month.YYYYMM.Global. v001.tif\", where \"YYYY\" represents the year and \"MM\" represents the month of the year, such as \"SM.1km.Month.201301.Global.v001.tif\" represents the GeoTIFF document to describe the average global soil moisture information in January 2013.\nThe daily soil moisture data are stored in h5 format with the MODIS grid tiles and projection (Sinusoidal grid projection), and the file name is “SM.1km.Daily.YYYY.tiles.v001. h5”, where “YYYY” represents the year and “tiles” represents the tile number, e.g. the “SM.1km.Daily.2013.h24v04.v001.h5” file contains daily soil moisture data of tile h24v04 in 2013.",
-            "instructionsCn": "月平均土壤水分数据以geotiff格式存储，文件名称为“SM.1km.Month.YYYYMM.Global.v001. tif\"，其中\"YYYY\"代表年，\"MM\"代表当年月份，比如\"SM.1km.Month.201301.Global.v001.tif”就代表该geotiff文件描述2013年1月平均全球土壤水分信息。\n逐日土壤水分数据以h5格式分幅存储，分幅和投影规则与MODIS一致（正弦投影），文件名称为“SM.1km.Daily.YYYY.tiles.v001. h5”，其中“YYYY”代表年，“tiles”代表分幅号，比如“SM.1km. Daily.2013.h24v04.v001.h5”就代表该文件包含2013年逐日h24v04分幅土壤水分数据。\n数据读取方式：遥感软件或计算机语言均可读取该数据，如ArcGIS、ENVI、IDL、python、Matlab等。",
-            "east": 180.0,
-            "west": -180.0,
-            "south": -60.0,
-            "north": 85.0,
-            "startTime": "2000-02-01 00:00:00",
-            "endTime": "2020-12-31 00:00:00",
-            "fileSize": 106849246086.0,
-            "cstr": "18406.11.RemoteSen.tpdc.272760",
-            "doi": "10.11888/RemoteSen.tpdc.272760",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "郑超磊",
-                "nameEn": "ZHENG Chaolei ",
-                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "贾立",
-                "nameEn": "JIA Li ",
-                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "赵天杰",
-                "nameEn": "ZHAO Tianjie",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A 21-year dataset (2000–2020) of gap-free global daily surface soil moisture at 1-km grid resolution",
-                "referenceCn": null,
-                "referenceEn": "Zheng, C.L., Jia, L., & Zhao, T.J. (2023). A 21-year dataset (2000-2020) of gap-free global daily surface soil moisture at 1 km grid resolution. Scientific Data. DOI:10.1038/s41597-023-01991-w. "
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "土壤",
-                "nameEn": "Soil"
-            },
-            {
-                "nameCn": "土壤水分",
-                "nameEn": "Soil moisture"
-            },
-            {
-                "nameCn": "土壤水分产品",
-                "nameEn": "Soil Moisture Product"
-            },
-            {
-                "nameCn": "微波",
-                "nameEn": "microwave"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            },
-            {
-                "nameCn": "降尺度",
-                "nameEn": "Downscaling"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "逐日",
-                "keywordEn": "Daily",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "逐月",
-                "keywordEn": "Monthly",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
-                "titleEn": "Major Research plan of the National Natural Science Foundation of China"
-            },
-            {
-                "titleCn": "一带一路水资源要素监测",
-                "titleEn": "Strategic Priority Research Program (A) of the Chinese Academy of Sciences"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            }
-        ]
+  "id": "30131436-88d1-4be3-8e3d-14905a29d6d6",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Global daily surface soil moisture dataset at 1-km resolution (2000 - 2020)",
+      "titleCn": "全球1公里分辨率地表土壤水分数据集（2000-2020）",
+      "description": "Soil moisture (SM) is an essential state variable that plays an important role in the terrestrial water cycle, and plays an important role in many research and application fields such as land-atmosphere interactions, regional hydrological process, and water resources management. Global soil moisture products based on current passive microwave remote sensing are suffering from problems of spatiotemporal discontinuity (2-3 days revisit) and coarse spatial resolution (usually ≥ 0.25°), which limits its wider applications. We developed a machine learning based method to generate a global spatiotemporal continuous surface soil moisture (SSM) dataset with 1-km resolution from 2000 to 2020 on the basis of ESA Climate Change Initiative (ESA-CCI) dataset. Firstly, the gaps in the surface soil moisture of ESA-CCI product are filled to obtain the global daily gap-free SSM data at 0.25° resolution by fusing the ESA-CCI SM product with the surface layer SM of the ERA5 reanalysis data. Secondly, a machine learning algorithm (Random Forest) was constructed using in-situ soil moisture observations provided by the International Soil Moisture Network (ISMN) and optical remote sensing data to disaggregate the gap-free SSM at 0.25° resolution to 1 km resolution, and then to generate a global spatiotemporally continuous surface soil moisture dataset at 1-kilometer resolution and daily step from 2000 to 2020. Verified by the in-situ measurements of SM at 2346 ground observation stations around the world, the results show that the product has good accuracy, with high R (0.89) and low ubRMSE (0.045 m3/m3). This is the first seamless 1-km resolution soil moisture dataset with long time-series at the global scale. This dataset has a spatial resolution of 1-km and a temporal resolution of daily/monthly with a unit of m3/m3. The data are stored as integer data type with a scaling factor of 0.001.",
+      "descriptionCn": "土壤水分是陆地水循环中的重要状态变量，在陆-气相互作用、区域水文过程及水资源管理等研究领域具有重要作用。当前主流的被动微波遥感土壤水分产品存在空间分辨率较粗（几十公里）和时间不连续（2-3天重访）等问题，限制了其更为广泛的科学应用。本数据集基于ESA-CCI主被动融合产品进行二次研发，首先融合了ERA5再分析数据以实现粗分辨率（25公里）下时空连续的土壤水分数据集；其次，以国际土壤水分观测网络ISMN提供的全球土壤水分观测数据为训练目标，利用多源光学遥感数据构建机器学习算法，生成了国际首套2000-2020年全球时空连续1公里分辨率地表土壤水分数据集。经全球2346个地面观测站点的验证，结果表明该产品具有较好的精度（相关系数为0.89，无偏均方根误差为0.045 m3/m3）。本数据集为气象、农业、水利等行业应用和全球变化研究领域提供了重要的土壤水分基础数据。\n本发布数据集的属性为：空间分辨率为1km，时间步长为每日/月，单位为m3/m3，数据类型为整数，比例因子为0.001。",
+      "instructions": "The monthly average soil moisture data is stored in GeoTIFF format and the file name is \"SM 1km.Month.YYYYMM.Global. v001.tif\", where \"YYYY\" represents the year and \"MM\" represents the month of the year, such as \"SM.1km.Month.201301.Global.v001.tif\" represents the GeoTIFF document to describe the average global soil moisture information in January 2013.\nThe daily soil moisture data are stored in h5 format with the MODIS grid tiles and projection (Sinusoidal grid projection), and the file name is “SM.1km.Daily.YYYY.tiles.v001. h5”, where “YYYY” represents the year and “tiles” represents the tile number, e.g. the “SM.1km.Daily.2013.h24v04.v001.h5” file contains daily soil moisture data of tile h24v04 in 2013.",
+      "instructionsCn": "月平均土壤水分数据以geotiff格式存储，文件名称为“SM.1km.Month.YYYYMM.Global.v001. tif\"，其中\"YYYY\"代表年，\"MM\"代表当年月份，比如\"SM.1km.Month.201301.Global.v001.tif”就代表该geotiff文件描述2013年1月平均全球土壤水分信息。\n逐日土壤水分数据以h5格式分幅存储，分幅和投影规则与MODIS一致（正弦投影），文件名称为“SM.1km.Daily.YYYY.tiles.v001. h5”，其中“YYYY”代表年，“tiles”代表分幅号，比如“SM.1km. Daily.2013.h24v04.v001.h5”就代表该文件包含2013年逐日h24v04分幅土壤水分数据。\n数据读取方式：遥感软件或计算机语言均可读取该数据，如ArcGIS、ENVI、IDL、python、Matlab等。",
+      "east": 180.0,
+      "west": -180.0,
+      "south": -60.0,
+      "north": 85.0,
+      "startTime": "2000-02-01 00:00:00",
+      "endTime": "2020-12-31 00:00:00",
+      "fileSize": 106849246086.0,
+      "cstr": "18406.11.RemoteSen.tpdc.272760",
+      "doi": "10.11888/RemoteSen.tpdc.272760",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the feature specifications of a dataset used for global 1km resolution soil moisture measurements from 2000 to 2020?",
-                "QuestionCn": "用于2000年至2020年全球1公里分辨率土壤湿度测量的数据集的特征规格是什么？",
-                "AnswerEn": "1km spatial resolution, daily/monthly temporal resolution, m3/m3 unit of measurement, integer data type, 0.001 scale factor",
-                "AnswerCn": "1公里空间分辨率，日/月时间分辨率，单位为m3/m3，整数数据类型，0.001比例因子",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What spatial resolution is achieved in the global surface soil moisture dataset spanning from 2000 to 2020?",
-                "QuestionCn": "2000年至2020年间的全球表层土壤湿度数据集实现了什么空间分辨率？",
-                "AnswerEn": "1 kilometer",
-                "AnswerCn": "1公里",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What can be inferred about the effectiveness of integrating multiple remote sensing and reanalysis data sources in generating high-resolution soil moisture datasets?",
-                "QuestionCn": "可以推断出，整合多个遥感和再分析数据源在生成高分辨率土壤湿度数据集方面是有效的。",
-                "AnswerEn": "Integrating multiple remote sensing and reanalysis data sources, such as passive microwave remote sensing and ERA5 reanalysis data, enables the creation of temporally and spatially continuous soil moisture datasets with finer spatial resolution (1 km) and daily/monthly temporal updates. This integration overcomes limitations of coarse spatial resolution and temporal discontinuity found in mainstream products, enhancing the dataset's scientific application potential. The effectiveness of this approach is supported by validation results showing good accuracy with a correlation coefficient of 0.89 and an unbiased root mean square error of 0.045 m3/m3, as verified by 2346 global ground observation sites.",
-                "AnswerCn": "整合多种遥感和再分析数据源，如被动微波遥感和ERA5再分析数据，可以创建具有更细空间分辨率（1公里）和每日/每月时间更新的时空连续土壤湿度数据集。这种整合克服了主流产品中存在的粗空间分辨率和时间不连续性的问题，增强了数据集的科学应用潜力。这种方法的有效性得到了验证结果的支持，显示出良好的准确性，相关系数为0.89，偏差均方根误差为0.045 m3/m3，经过2346个全球地面观测站的验证。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential effects on the accuracy of soil moisture data when incorporating machine learning algorithms with multi-source optical remote sensing data compared to traditional remote sensing methods?",
-                "QuestionCn": "将多源光学遥感数据与机器学习算法结合使用时，对土壤湿度数据准确性的潜在影响与传统遥感方法相比是什么？",
-                "AnswerEn": "Incorporating machine learning algorithms with multi-source optical remote sensing data can significantly enhance the spatial resolution and temporal continuity of soil moisture data, resulting in improved accuracy. This approach can address the limitations of traditional remote sensing methods, which often have coarse spatial resolution and temporal gaps. By using a training target such as the global soil moisture observation data from the International Soil Moisture Network (ISMN), the resulting high-resolution (1 km) global surface soil moisture dataset from 2000 to 2020 demonstrated good accuracy, validated by 2346 ground observation stations with a correlation coefficient of 0.89 and an unbiased root mean square error of 0.045 m3/m3.",
-                "AnswerCn": "将机器学习算法与多源光学遥感数据相结合，可以显著提高土壤湿度数据的空间分辨率和时间连续性，从而提高准确性。这种方法可以解决传统遥感方法的局限性，后者通常具有较粗的空间分辨率和时间间隔。通过使用国际土壤湿度网络（ISMN）的全球土壤湿度观测数据作为训练目标，生成的2000年至2020年的高分辨率（1公里）全球表层土壤湿度数据集显示出良好的准确性，经过2346个地面观测站的验证，相关系数为0.89，偏差均方根误差为0.045 m3/m3。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures are involved in creating a high-resolution global soil moisture dataset using machine learning algorithms applied to multi-source optical remote sensing data?",
-                "QuestionCn": "创建高分辨率全球土壤湿度数据集的程序涉及使用机器学习算法应用于多源光学遥感数据。",
-                "AnswerEn": "The process involves initially merging ERA5 reanalysis data with ESA-CCI passive and active microwave products to develop a temporally and spatially continuous soil moisture dataset at a coarse resolution (25 km). Subsequently, the procedure uses multi-source optical remote sensing data to construct a machine learning algorithm, which is trained with soil moisture observations from the International Soil Moisture Network (ISMN). This results in the generation of a spatially and temporally continuous global 1 km resolution surface soil moisture dataset for the years 2000-2020.",
-                "AnswerCn": "该过程最初将ERA5再分析数据与ESA-CCI被动和主动微波产品合并，以开发一个时空连续的土壤湿度数据集，分辨率为25公里。随后，该程序利用多源光学遥感数据构建机器学习算法，并使用国际土壤湿度网络（ISMN）的土壤湿度观测数据进行训练。最终生成了一个时空连续的全球1公里分辨率表层土壤湿度数据集，覆盖2000年至2020年。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "郑超磊",
+        "nameEn": "ZHENG Chaolei ",
+        "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "贾立",
+        "nameEn": "JIA Li ",
+        "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "赵天杰",
+        "nameEn": "ZHAO Tianjie",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A 21-year dataset (2000–2020) of gap-free global daily surface soil moisture at 1-km grid resolution",
+        "referenceCn": null,
+        "referenceEn": "Zheng, C.L., Jia, L., & Zhao, T.J. (2023). A 21-year dataset (2000-2020) of gap-free global daily surface soil moisture at 1 km grid resolution. Scientific Data. DOI:10.1038/s41597-023-01991-w. "
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "土壤",
+        "nameEn": "Soil"
+      },
+      {
+        "nameCn": "土壤水分",
+        "nameEn": "Soil moisture"
+      },
+      {
+        "nameCn": "土壤水分产品",
+        "nameEn": "Soil Moisture Product"
+      },
+      {
+        "nameCn": "微波",
+        "nameEn": "microwave"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      },
+      {
+        "nameCn": "降尺度",
+        "nameEn": "Downscaling"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "逐日",
+        "keywordEn": "Daily",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "逐月",
+        "keywordEn": "Monthly",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
+        "titleEn": "Major Research plan of the National Natural Science Foundation of China"
+      },
+      {
+        "titleCn": "一带一路水资源要素监测",
+        "titleEn": "Strategic Priority Research Program (A) of the Chinese Academy of Sciences"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the feature specifications of a dataset used for global 1km resolution soil moisture measurements from 2000 to 2020?",
+        "QuestionCn": "用于2000年至2020年全球1公里分辨率土壤湿度测量的数据集的特征规格是什么？",
+        "AnswerEn": "1km spatial resolution, daily/monthly temporal resolution, m3/m3 unit of measurement, integer data type, 0.001 scale factor",
+        "AnswerCn": "1公里空间分辨率，日/月时间分辨率，单位为m3/m3，整数数据类型，0.001比例因子",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What spatial resolution is achieved in the global surface soil moisture dataset spanning from 2000 to 2020?",
+        "QuestionCn": "2000年至2020年间的全球表层土壤湿度数据集实现了什么空间分辨率？",
+        "AnswerEn": "1 kilometer",
+        "AnswerCn": "1公里",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What can be inferred about the effectiveness of integrating multiple remote sensing and reanalysis data sources in generating high-resolution soil moisture datasets?",
+        "QuestionCn": "可以推断出整合多种遥感和再分析数据源在生成高分辨率土壤湿度数据集方面的有效性如何？",
+        "AnswerEn": "Integrating multiple remote sensing and reanalysis data sources, such as passive microwave remote sensing and ERA5 reanalysis data, enables the creation of temporally and spatially continuous soil moisture datasets with finer spatial resolution (1 km) and daily/monthly temporal updates. This integration overcomes limitations of coarse spatial resolution and temporal discontinuity found in mainstream products, enhancing the dataset's scientific application potential. The effectiveness of this approach is supported by validation results showing good accuracy with a correlation coefficient of 0.89 and an unbiased root mean square error of 0.045 m3/m3, as verified by 2346 global ground observation sites.",
+        "AnswerCn": "整合多种遥感和再分析数据源，如被动微波遥感和ERA5再分析数据，可以创建具有更细空间分辨率（1公里）和每日/每月时间更新的时空连续土壤湿度数据集。这种整合克服了主流产品中存在的粗空间分辨率和时间不连续性的问题，增强了数据集的科学应用潜力。这种方法的有效性得到了验证结果的支持，显示出良好的准确性，相关系数为0.89，偏差均方根误差为0.045 m3/m3，经过2346个全球地面观测站的验证。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential effects on the accuracy of soil moisture data when incorporating machine learning algorithms with multi-source optical remote sensing data compared to traditional remote sensing methods?",
+        "QuestionCn": "将多源光学遥感数据与机器学习算法结合使用时，对土壤湿度数据准确性的潜在影响与传统遥感方法相比是什么？",
+        "AnswerEn": "Incorporating machine learning algorithms with multi-source optical remote sensing data can significantly enhance the spatial resolution and temporal continuity of soil moisture data, resulting in improved accuracy. This approach can address the limitations of traditional remote sensing methods, which often have coarse spatial resolution and temporal gaps. By using a training target such as the global soil moisture observation data from the International Soil Moisture Network (ISMN), the resulting high-resolution (1 km) global surface soil moisture dataset from 2000 to 2020 demonstrated good accuracy, validated by 2346 ground observation stations with a correlation coefficient of 0.89 and an unbiased root mean square error of 0.045 m3/m3.",
+        "AnswerCn": "将机器学习算法与多源光学遥感数据相结合，可以显著提高土壤湿度数据的空间分辨率和时间连续性，从而提高准确性。这种方法可以解决传统遥感方法的局限性，后者通常具有较粗的空间分辨率和时间间隔。通过使用国际土壤湿度网络（ISMN）的全球土壤湿度观测数据作为训练目标，生成的2000年至2020年的高分辨率（1公里）全球表层土壤湿度数据集显示出良好的准确性，经过2346个地面观测站的验证，相关系数为0.89，偏差均方根误差为0.045 m3/m3。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures are involved in creating a high-resolution global soil moisture dataset using machine learning algorithms applied to multi-source optical remote sensing data?",
+        "QuestionCn": "使用机器学习算法应用于多源光学遥感数据创建高分辨率全球土壤湿度数据集涉及哪些程序？",
+        "AnswerEn": "The process involves initially merging ERA5 reanalysis data with ESA-CCI passive and active microwave products to develop a temporally and spatially continuous soil moisture dataset at a coarse resolution (25 km). Subsequently, the procedure uses multi-source optical remote sensing data to construct a machine learning algorithm, which is trained with soil moisture observations from the International Soil Moisture Network (ISMN). This results in the generation of a spatially and temporally continuous global 1 km resolution surface soil moisture dataset for the years 2000-2020.",
+        "AnswerCn": "该过程最初将ERA5再分析数据与ESA-CCI被动和主动微波产品合并，以开发一个时空连续的土壤湿度数据集，分辨率为25公里。随后，该程序利用多源光学遥感数据构建机器学习算法，并使用国际土壤湿度网络（ISMN）的土壤湿度观测数据进行训练。最终生成了一个时空连续的全球1公里分辨率表层土壤湿度数据集，覆盖2000年至2020年。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

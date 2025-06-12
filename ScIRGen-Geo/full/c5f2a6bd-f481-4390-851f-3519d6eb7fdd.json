@@ -1,214 +1,214 @@
 {
-    "id": "c5f2a6bd-f481-4390-851f-3519d6eb7fdd",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "China long-sequence surface freeze-thaw dataset——decision tree algorithm (1987-2009)",
-            "titleCn": "中国长序列地表冻融数据集——决策树算法（1987-2009）",
-            "description": "China long-sequence surface freeze-thaw dataset——decision tree algorithm (1987-2009), is derived from the decision tree classification using passive microwave remote sensing SSM / I brightness temperature data.\nThis data set uses the EASE-Grid projection method (equal cut cylindrical projection, standard latitude is ± 30 °), with a spatial resolution of 25.067525km, and provides daily classification results of the surface freeze-thaw state of the main part of mainland China. The data set is stored by year and consists of 23 folders, from 1987 to 2009. Each folder contains the day-to-day surface freeze-thaw classification results for the current year. It is an ASCII file with the naming rule: SSMI-frozenYYYY ***. Txt, where YYYY represents the year and *** represents the Julian date (001 ~ 365 / 366). The freeze-thaw classification result txt file can be opened and viewed directly with a text program, and can also be opened with ArcView + Spatial Analyst extension module or Arcinfo's Asciigrid command.\nThe original frozen and thawed surface data was derived from daily passive microwave data processed by the National Snow and Ice Data Center (NSIDC) since 1987. This data set uses EASE-Grid (equivalent area expandable earth grid) as a standard format .\nChina's surface freeze-thaw long-term sequence data set-The decision tree algorithm (1987-2009) attributes consist of the spatial-temporal resolution, projection information, and data format of the data set.\nSpatio-temporal resolution: the time resolution is day by day, the spatial resolution is 25.067525km, the longitude range is 60 ° ~ 140 ° E, and the latitude is 15 ° ~ 55 ° N.\nProjection information: Global equal-area cylindrical EASE-Grid projection. For more information about EASE-Grid projection, see the description of this projection in data preparation.\nData format: The data set consists of 23 folders from 1987 to 2009. Each folder contains the results of the day-to-day surface freeze-thaw classification of the year, and is stored as a txt file on a daily basis. File naming rules: For example, SMI-frozen1994001.txt represents the surface freeze-thaw classification results on the first day of 1994. The ASCII file of the data set is composed of a header file and a body content. The header file consists of 6 lines of description information such as the number of rows, the number of columns, the coordinates of the lower left point of the x-axis, the coordinates of the lower left point of the y-axis, the grid size, and the value of the data-less area. Array, with columns as the priority. The values ​​are integers, from 1 to 4, 1 for frozen, 2 for melting, 3 for desert, and 4 for precipitation. Because the space described by all ASCII files in this data set is nationwide, the header files of these files are unchanged. The header files are extracted as follows (where xllcenter, yllcenter and cellsize are in m):\nncols 308\nnrows 166\nxllcorner 5778060\nyllcorner 1880060\ncellsize 25067.525\nnodata_value 0\nAll ASCII files in this data set can be opened directly with a text program such as Notepad. Except for the header file, the main content is a numerical representation of the surface freeze-thaw state: 1 for frozen, 2 for melting, 3 for desert, and 4 for precipitation. If you want to display it with an icon, we recommend using ArcView + 3D or Spatial Analyst extension module to read it. During the reading process, a grid format file will be generated. The displayed grid file is the graphic representation of the ASCII code file. Reading method:\n [1] Add 3D or Spatial Analyst extension module in ArcView software, and then create a new View;\n [2] Activate View, click the File menu, select the Import Data Source option, the Import Data Source selection box pops up, select ASCII Raster in Select import file type: in this box, and a dialog box for selecting the source ASCII file automatically pops up Find any ASCII file in the data set and press OK;\n [3] Type the name of the Grid file in the Output Grid dialog box (a meaningful file name is recommended for later viewing), and click the path where the Grid file is stored, press Ok again, and then press Yes (to select an integer) Data), Yes (call the generated grid file into the current view). The generated file can be edited according to the Grid file standard. This completes the process of displaying the ASCII file as a Grid file.\n [4] During batch processing, you can use ARCINFO's ASCIIGRID command to write an AML file, and then use the Run command to complete in the Grid module:\nUsage: ASCIIGRID <in_ascii_file> <out_grid> {INT | FLOAT}",
-            "descriptionCn": "中国长序列地表冻融数据集——决策树算法（1987-2009）是利用被动微波遥感 SSM/I亮度温度资料通过决策树分类提取得到。\n该数据集采用EASE-Grid投影方式（等积割圆柱投影，标准纬线为±30°），空间分辨率25.067525km，提供逐日的中国大陆主体部分的地表冻融状态分类结果。数据集按年份存放，共由23个文件夹组成，从1987到2009。每个文件夹里包含当年的逐日地表冻融分类结果，为ASCII码文件，命名规则为：SSMI-frozenYYYY***.txt，其中YYYY代表年，***代表儒略日（001~365/366）。冻融分类结果txt文件可直接用文本程序打开察看，还可用ArcView + Spatial Analyst扩展模块或者Arcinfo的Asciigrid命令打开。\n提取地表冻融的原始数据来源于由美国国家雪冰数据中心（NSIDC）处理的1987 年以来的逐日被动微波数据，这一数据集采用EASE-Grid（等面积可扩充地球网格）作为标准格式。\n中国地表冻融长时间序列数据集——决策树算法（1987-2009）属性由该数据集的时空分辨率、投影信息、数据格式组成。\n时空分辨率：时间分辨率为逐日，空间分辨率为25.067525km，经度范围为60°～140°E，纬度为15°～55°N。\n投影信息：全球等积圆柱EASE-Grid投影，关于EASE-Grid投影的详细信息见数据准备中关于这种投影的说明。\n数据格式：数据集由1987到2009共23个文件夹组成，每个文件夹里包括当年的逐日地表冻融分类结果，按日存储为txt文件。文件命名规则：例如SMI-frozen1994001.txt代表1994年第1天的地表冻融分类结果。该数据集的ASCII码文件是由头文件和主体内容构成。头文件包括行数、列数、x-轴左下点坐标、y-轴左下点坐标、栅格大小、无数据区标值等6行描述信息组成；主体内容为根据行数列数组成的二维数组，以列为优先进行排列，数值为整数型，从1到4，1代表冻结，2代表融化，3代表沙漠，4代表降水。因为该数据集中的所有ASCII码文件所描述的空间为我国全国范围，所以这些文件的头文件是不变的，现将头文件摘录如下（其中xllcenter， yllcenter和cellsize单位为m）：\nncols 308\nnrows 166\nxllcorner 5778060\nyllcorner 1880060\ncellsize 25067.525\nnodata_value 0\n该数据集中的所有ASCII码文件可以直接用文本程序（如记事本）打开。除了头文件，主体内容为数值表征地表冻融的状态：1代表冻结，2代表融化，3代表沙漠，4代表降水。如果要用图示来显示的话，我们推荐用ArcView + 3D 或 Spatial Analyst 扩展模块来读取，在读取过程中会生成grid格式的文件，所显示的grid文件就是该ASCII码文件的图形表达。读取方法：\n [1]\t在ArcView软件中添加3D或Spatial Analyst扩展模块，然后新建一个View；\n [2]\t将View激活，点击File菜单，选择Import Data Source选项，弹出Import Data Source选择框，在此框中的Select import file type:中选择ASCII Raster，自动弹出选择源ASCII文件的对话框，点击寻找该数据集中的任一个ASCII文件，，然后按OK键；\n [3]\t在Output Grid对话框中键入的Grid文件名字（建议使用有意义的文件名，以便以后自己查看）和点击存放此Grid文件的路径，再次按Ok键，然后按Yes（要选择整型数据），Yes（把生成grid文件调入到当前的view中）。生成的文件可以按照Grid文件标准进行属性编辑。这样就完成了显示将ASCII文件显示成Grid文件的过程。\n [4]\t批处理时，可以使用ARCINFO的ASCIIGRID命令，编写成AML文件，再用Run命令在Grid模块中完成：\nUsage: ASCIIGRID <in_ascii_file> <out_grid> {INT | FLOAT}",
-            "instructions": "ASCII file",
-            "instructionsCn": "ASCII码文件",
-            "east": 135.5,
-            "west": 73.2,
-            "south": 17.8,
-            "north": 53.9,
-            "startTime": "1987-01-11 10:13:00",
-            "endTime": "2010-01-10 10:14:00",
-            "fileSize": 20624607.0,
-            "cstr": "18406.11.Geocry.tpdc.270622",
-            "doi": "10.11888/Geocry.tpdc.270622",
-            "dataFormat": "ASCII Grid",
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "晋锐",
-                "nameEn": "JIN Rui",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "李新",
-                "nameEn": "LI Xin",
-                "unitEn": "Northwest Institute of Eco-Environment and Resources, CAS",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": "SSM/I监测地表冻融状态的决策树算法",
-                "titleEn": null,
-                "referenceCn": "晋锐, 李新, 车涛. 2008. SSM/I监测地表冻融状态的决策树算法. 遥感学报, 12(6): 1017-1027",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A decision tree algorithm for surface soil freeze/thaw classification over China using SSM/I brightness temperature",
-                "referenceCn": null,
-                "referenceEn": "Jin R, Li X and Che T. 2009. A decision tree algorithm for surface soil freeze/thaw classification over China using SSM/I brightness temperature. Remote Sensing of Environment, 113(12): 2651-2660. Doi:10.1016/j.rse.2009.08.003."
-            },
-            {
-                "titleCn": "AMSR-E亮温监测中国近地表冻融循环算法研究",
-                "titleEn": null,
-                "referenceCn": "谢燕梅, 晋锐, & 杨兴国. (2013). Amsr-e亮温监测中国近地表冻融循环算法研究. 遥感技术与应用, Issue(2), 182-191.",
-                "referenceEn": null
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "其他",
-                "nameEn": "Others"
-            },
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            },
-            {
-                "nameCn": "日地空间物理与天文",
-                "nameEn": "Solar-Terrestrial Physics and Astronomy"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "决策树算法",
-                "nameEn": "Decision tree algorithm"
-            },
-            {
-                "nameCn": "冻土",
-                "nameEn": "Frozen Ground"
-            },
-            {
-                "nameCn": "冻融",
-                "nameEn": "Freeze thawing"
-            },
-            {
-                "nameCn": "银河系",
-                "nameEn": "Galactic System"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1987-2009",
-                "keywordEn": null,
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            },
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山地区冰川边界（2018）",
-                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
-            },
-            {
-                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
-                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
-            },
-            {
-                "titleCn": "全球AVHRR遥感植被春季返青期物候（1981-2013）",
-                "titleEn": "The global AVHRR remote sensing vegetation phenology at peturning green stage in spring (1981-2003)"
-            },
-            {
-                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
-                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
-            },
-            {
-                "titleCn": "北半球湖冰物候数据集（1978-2018）",
-                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
-            },
-            {
-                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
-                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
-            },
-            {
-                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
-                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
-            },
-            {
-                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
-                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
-            }
-        ]
+  "id": "c5f2a6bd-f481-4390-851f-3519d6eb7fdd",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "China long-sequence surface freeze-thaw dataset——decision tree algorithm (1987-2009)",
+      "titleCn": "中国长序列地表冻融数据集——决策树算法（1987-2009）",
+      "description": "China long-sequence surface freeze-thaw dataset——decision tree algorithm (1987-2009), is derived from the decision tree classification using passive microwave remote sensing SSM / I brightness temperature data.\nThis data set uses the EASE-Grid projection method (equal cut cylindrical projection, standard latitude is ± 30 °), with a spatial resolution of 25.067525km, and provides daily classification results of the surface freeze-thaw state of the main part of mainland China. The data set is stored by year and consists of 23 folders, from 1987 to 2009. Each folder contains the day-to-day surface freeze-thaw classification results for the current year. It is an ASCII file with the naming rule: SSMI-frozenYYYY ***. Txt, where YYYY represents the year and *** represents the Julian date (001 ~ 365 / 366). The freeze-thaw classification result txt file can be opened and viewed directly with a text program, and can also be opened with ArcView + Spatial Analyst extension module or Arcinfo's Asciigrid command.\nThe original frozen and thawed surface data was derived from daily passive microwave data processed by the National Snow and Ice Data Center (NSIDC) since 1987. This data set uses EASE-Grid (equivalent area expandable earth grid) as a standard format .\nChina's surface freeze-thaw long-term sequence data set-The decision tree algorithm (1987-2009) attributes consist of the spatial-temporal resolution, projection information, and data format of the data set.\nSpatio-temporal resolution: the time resolution is day by day, the spatial resolution is 25.067525km, the longitude range is 60 ° ~ 140 ° E, and the latitude is 15 ° ~ 55 ° N.\nProjection information: Global equal-area cylindrical EASE-Grid projection. For more information about EASE-Grid projection, see the description of this projection in data preparation.\nData format: The data set consists of 23 folders from 1987 to 2009. Each folder contains the results of the day-to-day surface freeze-thaw classification of the year, and is stored as a txt file on a daily basis. File naming rules: For example, SMI-frozen1994001.txt represents the surface freeze-thaw classification results on the first day of 1994. The ASCII file of the data set is composed of a header file and a body content. The header file consists of 6 lines of description information such as the number of rows, the number of columns, the coordinates of the lower left point of the x-axis, the coordinates of the lower left point of the y-axis, the grid size, and the value of the data-less area. Array, with columns as the priority. The values ​​are integers, from 1 to 4, 1 for frozen, 2 for melting, 3 for desert, and 4 for precipitation. Because the space described by all ASCII files in this data set is nationwide, the header files of these files are unchanged. The header files are extracted as follows (where xllcenter, yllcenter and cellsize are in m):\nncols 308\nnrows 166\nxllcorner 5778060\nyllcorner 1880060\ncellsize 25067.525\nnodata_value 0\nAll ASCII files in this data set can be opened directly with a text program such as Notepad. Except for the header file, the main content is a numerical representation of the surface freeze-thaw state: 1 for frozen, 2 for melting, 3 for desert, and 4 for precipitation. If you want to display it with an icon, we recommend using ArcView + 3D or Spatial Analyst extension module to read it. During the reading process, a grid format file will be generated. The displayed grid file is the graphic representation of the ASCII code file. Reading method:\n [1] Add 3D or Spatial Analyst extension module in ArcView software, and then create a new View;\n [2] Activate View, click the File menu, select the Import Data Source option, the Import Data Source selection box pops up, select ASCII Raster in Select import file type: in this box, and a dialog box for selecting the source ASCII file automatically pops up Find any ASCII file in the data set and press OK;\n [3] Type the name of the Grid file in the Output Grid dialog box (a meaningful file name is recommended for later viewing), and click the path where the Grid file is stored, press Ok again, and then press Yes (to select an integer) Data), Yes (call the generated grid file into the current view). The generated file can be edited according to the Grid file standard. This completes the process of displaying the ASCII file as a Grid file.\n [4] During batch processing, you can use ARCINFO's ASCIIGRID command to write an AML file, and then use the Run command to complete in the Grid module:\nUsage: ASCIIGRID <in_ascii_file> <out_grid> {INT | FLOAT}",
+      "descriptionCn": "中国长序列地表冻融数据集——决策树算法（1987-2009）是利用被动微波遥感 SSM/I亮度温度资料通过决策树分类提取得到。\n该数据集采用EASE-Grid投影方式（等积割圆柱投影，标准纬线为±30°），空间分辨率25.067525km，提供逐日的中国大陆主体部分的地表冻融状态分类结果。数据集按年份存放，共由23个文件夹组成，从1987到2009。每个文件夹里包含当年的逐日地表冻融分类结果，为ASCII码文件，命名规则为：SSMI-frozenYYYY***.txt，其中YYYY代表年，***代表儒略日（001~365/366）。冻融分类结果txt文件可直接用文本程序打开察看，还可用ArcView + Spatial Analyst扩展模块或者Arcinfo的Asciigrid命令打开。\n提取地表冻融的原始数据来源于由美国国家雪冰数据中心（NSIDC）处理的1987 年以来的逐日被动微波数据，这一数据集采用EASE-Grid（等面积可扩充地球网格）作为标准格式。\n中国地表冻融长时间序列数据集——决策树算法（1987-2009）属性由该数据集的时空分辨率、投影信息、数据格式组成。\n时空分辨率：时间分辨率为逐日，空间分辨率为25.067525km，经度范围为60°～140°E，纬度为15°～55°N。\n投影信息：全球等积圆柱EASE-Grid投影，关于EASE-Grid投影的详细信息见数据准备中关于这种投影的说明。\n数据格式：数据集由1987到2009共23个文件夹组成，每个文件夹里包括当年的逐日地表冻融分类结果，按日存储为txt文件。文件命名规则：例如SMI-frozen1994001.txt代表1994年第1天的地表冻融分类结果。该数据集的ASCII码文件是由头文件和主体内容构成。头文件包括行数、列数、x-轴左下点坐标、y-轴左下点坐标、栅格大小、无数据区标值等6行描述信息组成；主体内容为根据行数列数组成的二维数组，以列为优先进行排列，数值为整数型，从1到4，1代表冻结，2代表融化，3代表沙漠，4代表降水。因为该数据集中的所有ASCII码文件所描述的空间为我国全国范围，所以这些文件的头文件是不变的，现将头文件摘录如下（其中xllcenter， yllcenter和cellsize单位为m）：\nncols 308\nnrows 166\nxllcorner 5778060\nyllcorner 1880060\ncellsize 25067.525\nnodata_value 0\n该数据集中的所有ASCII码文件可以直接用文本程序（如记事本）打开。除了头文件，主体内容为数值表征地表冻融的状态：1代表冻结，2代表融化，3代表沙漠，4代表降水。如果要用图示来显示的话，我们推荐用ArcView + 3D 或 Spatial Analyst 扩展模块来读取，在读取过程中会生成grid格式的文件，所显示的grid文件就是该ASCII码文件的图形表达。读取方法：\n [1]\t在ArcView软件中添加3D或Spatial Analyst扩展模块，然后新建一个View；\n [2]\t将View激活，点击File菜单，选择Import Data Source选项，弹出Import Data Source选择框，在此框中的Select import file type:中选择ASCII Raster，自动弹出选择源ASCII文件的对话框，点击寻找该数据集中的任一个ASCII文件，，然后按OK键；\n [3]\t在Output Grid对话框中键入的Grid文件名字（建议使用有意义的文件名，以便以后自己查看）和点击存放此Grid文件的路径，再次按Ok键，然后按Yes（要选择整型数据），Yes（把生成grid文件调入到当前的view中）。生成的文件可以按照Grid文件标准进行属性编辑。这样就完成了显示将ASCII文件显示成Grid文件的过程。\n [4]\t批处理时，可以使用ARCINFO的ASCIIGRID命令，编写成AML文件，再用Run命令在Grid模块中完成：\nUsage: ASCIIGRID <in_ascii_file> <out_grid> {INT | FLOAT}",
+      "instructions": "ASCII file",
+      "instructionsCn": "ASCII码文件",
+      "east": 135.5,
+      "west": 73.2,
+      "south": 17.8,
+      "north": 53.9,
+      "startTime": "1987-01-11 10:13:00",
+      "endTime": "2010-01-10 10:14:00",
+      "fileSize": 20624607.0,
+      "cstr": "18406.11.Geocry.tpdc.270622",
+      "doi": "10.11888/Geocry.tpdc.270622",
+      "dataFormat": "ASCII Grid",
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Concept Completion": [
-            {
-                "QuestionEn": "What data collection methods are used to determine surface freeze-thaw states in long-term datasets?",
-                "QuestionCn": "用于确定长期数据集中表面冻融状态的数据收集方法有哪些？",
-                "AnswerEn": "passive microwave remote sensing data",
-                "AnswerCn": "被动微波遥感数据",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method used for obtaining long-term surface freeze-thaw data in China from 1987 to 2009?",
-                "QuestionCn": "您能否提供一个用于获取1987年至2009年中国长期表面冻融数据的数据收集方法的示例？",
-                "AnswerEn": "A data collection method involves utilizing passive microwave remote sensing SSM/I brightness temperature data through decision tree classification to extract surface freeze-thaw states, using EASE-Grid projection with a spatial resolution of 25.067525 km.",
-                "AnswerCn": "一种数据收集方法涉及利用被动微波遥感SSM/I亮温数据，通过决策树分类提取表面冻结-解冻状态，使用EASE-Grid投影，空间分辨率为25.067525公里。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the specific features and spatial resolution of data collected to classify land surface freeze-thaw states using passive microwave remote sensing?",
-                "QuestionCn": "使用被动微波遥感分类地表冻结-解冻状态的数据收集的具体特征和空间分辨率是什么？",
-                "AnswerEn": "25.067525 km spatial resolution, daily data collection, 1987 to 2009, EASE-Grid projection, 60°E to 140°E longitude, 15°N to 55°N latitude",
-                "AnswerCn": "25.067525公里空间分辨率，每日数据收集，1987年至2009年，EASE-Grid投影，东经60°至140°，北纬15°至55°。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution used in a dataset focused on the surface freeze-thaw states of mainland China?",
-                "QuestionCn": "关于中国大陆表面冻融状态的数据集使用的空间分辨率是多少？",
-                "AnswerEn": "25.067525 km",
-                "AnswerCn": "25.067525公里",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does 'EASE-Grid projection' mean in the context of remote sensing data?",
-                "QuestionCn": "'EASE-Grid投影'在遥感数据的上下文中是什么意思。",
-                "AnswerEn": "In the context of remote sensing data, 'EASE-Grid projection' refers to a global cylindrical equal-area grid system used to standardize data formatting. It features a projection with standard parallels of ±30°, and is designed to ensure that each grid cell represents an equal area on the Earth's surface. This projection is used to organize and display data, such as the freeze-thaw classification results, in a consistent manner across the dataset.",
-                "AnswerCn": "在遥感数据的背景下，“EASE-Grid 投影”指的是一种全球圆柱等面积网格系统，用于标准化数据格式。它具有 ±30° 的标准纬线，并旨在确保每个网格单元在地球表面上代表相等的面积。该投影用于以一致的方式组织和显示数据，例如冻融分类结果。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures are involved in classifying surface freeze-thaw states using passive microwave remote sensing data through decision tree algorithms?",
-                "QuestionCn": "通过决策树算法使用被动微波遥感数据对表面冻融状态进行分类涉及哪些程序？",
-                "AnswerEn": "The process involves utilizing passive microwave remote sensing data, specifically SSM/I brightness temperature data, to extract freeze-thaw states using decision tree classification. The dataset is projected using the EASE-Grid method with a spatial resolution of 25.067525 km. The classification results are stored as ASCII text files, with each file representing daily freeze-thaw states for the mainland of China from 1987 to 2009. The ASCII files can be viewed using text programs or GIS software like ArcView with Spatial Analyst extension. The data files contain a header with metadata and a body with numerical values representing different freeze-thaw states: 1 for frozen, 2 for thawed, 3 for desert, and 4 for precipitation.",
-                "AnswerCn": "该过程涉及利用被动微波遥感数据，特别是SSM/I亮温数据，通过决策树分类提取冻融状态。数据集采用EASE-Grid方法投影，空间分辨率为25.067525公里。分类结果以ASCII文本文件的形式存储，每个文件代表1987年至2009年中国大陆的每日冻融状态。这些ASCII文件可以使用文本程序或GIS软件（如带有空间分析扩展的ArcView）查看。数据文件包含一个带有元数据的头部和一个包含数值的主体，这些数值表示不同的冻融状态：1表示冻结，2表示解冻，3表示沙漠，4表示降水。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "晋锐",
+        "nameEn": "JIN Rui",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "李新",
+        "nameEn": "LI Xin",
+        "unitEn": "Northwest Institute of Eco-Environment and Resources, CAS",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": "SSM/I监测地表冻融状态的决策树算法",
+        "titleEn": null,
+        "referenceCn": "晋锐, 李新, 车涛. 2008. SSM/I监测地表冻融状态的决策树算法. 遥感学报, 12(6): 1017-1027",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A decision tree algorithm for surface soil freeze/thaw classification over China using SSM/I brightness temperature",
+        "referenceCn": null,
+        "referenceEn": "Jin R, Li X and Che T. 2009. A decision tree algorithm for surface soil freeze/thaw classification over China using SSM/I brightness temperature. Remote Sensing of Environment, 113(12): 2651-2660. Doi:10.1016/j.rse.2009.08.003."
+      },
+      {
+        "titleCn": "AMSR-E亮温监测中国近地表冻融循环算法研究",
+        "titleEn": null,
+        "referenceCn": "谢燕梅, 晋锐, & 杨兴国. (2013). Amsr-e亮温监测中国近地表冻融循环算法研究. 遥感技术与应用, Issue(2), 182-191.",
+        "referenceEn": null
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "其他",
+        "nameEn": "Others"
+      },
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      },
+      {
+        "nameCn": "日地空间物理与天文",
+        "nameEn": "Solar-Terrestrial Physics and Astronomy"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "决策树算法",
+        "nameEn": "Decision tree algorithm"
+      },
+      {
+        "nameCn": "冻土",
+        "nameEn": "Frozen Ground"
+      },
+      {
+        "nameCn": "冻融",
+        "nameEn": "Freeze thawing"
+      },
+      {
+        "nameCn": "银河系",
+        "nameEn": "Galactic System"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1987-2009",
+        "keywordEn": null,
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      },
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山地区冰川边界（2018）",
+        "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+      },
+      {
+        "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+        "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+      },
+      {
+        "titleCn": "全球AVHRR遥感植被春季返青期物候（1981-2013）",
+        "titleEn": "The global AVHRR remote sensing vegetation phenology at peturning green stage in spring (1981-2003)"
+      },
+      {
+        "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+        "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+      },
+      {
+        "titleCn": "北半球湖冰物候数据集（1978-2018）",
+        "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+      },
+      {
+        "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+        "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+      },
+      {
+        "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+        "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+      },
+      {
+        "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+        "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Concept Completion": [
+      {
+        "QuestionEn": "What data collection methods are used to determine surface freeze-thaw states in long-term datasets?",
+        "QuestionCn": "用于确定长期数据集中表面冻融状态的数据收集方法有哪些？",
+        "AnswerEn": "passive microwave remote sensing data",
+        "AnswerCn": "被动微波遥感数据",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method used for obtaining long-term surface freeze-thaw data in China from 1987 to 2009?",
+        "QuestionCn": "您能否提供一个用于获取1987年至2009年中国长期表面冻融数据的数据收集方法的示例？",
+        "AnswerEn": "A data collection method involves utilizing passive microwave remote sensing SSM/I brightness temperature data through decision tree classification to extract surface freeze-thaw states, using EASE-Grid projection with a spatial resolution of 25.067525 km.",
+        "AnswerCn": "一种数据收集方法涉及利用被动微波遥感SSM/I亮温数据，通过决策树分类提取表面冻结-解冻状态，使用EASE-Grid投影，空间分辨率为25.067525公里。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the specific features and spatial resolution of data collected to classify land surface freeze-thaw states using passive microwave remote sensing?",
+        "QuestionCn": "使用被动微波遥感分类地表冻结-解冻状态的数据收集的具体特征和空间分辨率是什么？",
+        "AnswerEn": "25.067525 km spatial resolution, daily data collection, 1987 to 2009, EASE-Grid projection, 60°E to 140°E longitude, 15°N to 55°N latitude",
+        "AnswerCn": "25.067525公里空间分辨率，每日数据收集，1987年至2009年，EASE-Grid投影，东经60°至140°，北纬15°至55°。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution used in a dataset focused on the surface freeze-thaw states of mainland China?",
+        "QuestionCn": "关于中国大陆表面冻融状态的数据集使用的空间分辨率是多少？",
+        "AnswerEn": "25.067525 km",
+        "AnswerCn": "25.067525公里",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does 'EASE-Grid projection' mean in the context of remote sensing data?",
+        "QuestionCn": "在遥感数据的背景下，“EASE-Grid投影”是什么意思？",
+        "AnswerEn": "In the context of remote sensing data, 'EASE-Grid projection' refers to a global cylindrical equal-area grid system used to standardize data formatting. It features a projection with standard parallels of ±30°, and is designed to ensure that each grid cell represents an equal area on the Earth's surface. This projection is used to organize and display data, such as the freeze-thaw classification results, in a consistent manner across the dataset.",
+        "AnswerCn": "在遥感数据的背景下，“EASE-Grid 投影”指的是一种全球圆柱等面积网格系统，用于标准化数据格式。它具有 ±30° 的标准纬线，并旨在确保每个网格单元在地球表面上代表相等的面积。该投影用于以一致的方式组织和显示数据，例如冻融分类结果。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures are involved in classifying surface freeze-thaw states using passive microwave remote sensing data through decision tree algorithms?",
+        "QuestionCn": "通过决策树算法使用被动微波遥感数据对表面冻融状态进行分类涉及哪些程序？",
+        "AnswerEn": "The process involves utilizing passive microwave remote sensing data, specifically SSM/I brightness temperature data, to extract freeze-thaw states using decision tree classification. The dataset is projected using the EASE-Grid method with a spatial resolution of 25.067525 km. The classification results are stored as ASCII text files, with each file representing daily freeze-thaw states for the mainland of China from 1987 to 2009. The ASCII files can be viewed using text programs or GIS software like ArcView with Spatial Analyst extension. The data files contain a header with metadata and a body with numerical values representing different freeze-thaw states: 1 for frozen, 2 for thawed, 3 for desert, and 4 for precipitation.",
+        "AnswerCn": "该过程涉及利用被动微波遥感数据，特别是SSM/I亮温数据，通过决策树分类提取冻融状态。数据集采用EASE-Grid方法投影，空间分辨率为25.067525公里。分类结果以ASCII文本文件的形式存储，每个文件代表1987年至2009年中国大陆的每日冻融状态。这些ASCII文件可以使用文本程序或GIS软件（如带有空间分析扩展的ArcView）查看。数据文件包含一个带有元数据的头部和一个包含数值的主体，这些数值表示不同的冻融状态：1表示冻结，2表示解冻，3表示沙漠，4表示降水。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

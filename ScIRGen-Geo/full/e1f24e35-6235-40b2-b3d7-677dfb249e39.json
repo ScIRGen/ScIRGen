@@ -1,250 +1,250 @@
 {
-    "id": "e1f24e35-6235-40b2-b3d7-677dfb249e39",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Daily all weather surface soil moisture data set with 1 km resolution in China (2003-2023)",
-            "titleCn": "中国1千米分辨率逐日全天候地表土壤水分数据集（2003-2023）",
-            "description": "(Please notice that we have updated the data (V2.0) in May 2023 to extend the data period as well as gap-filled the vacant period between Oct 2011-June 2012 for the original V1.0  dataset. The V2.0 product has the same estimation error to the V1.0 one. Both versions are equally trusty for their accuracy. For details, please see the attached file \"2023-05-Instruction on update of the data.pdf\".) Surface soil moisture (SSM) is a crucial parameter for understanding the hydrological process of our earth surface. Passive microwave (PM) technique has long been the primary choice for estimating SSM at satellite remote sensing scales, while on the other hand, the coarse resolution (usually >~10 km) of PM observations hampers its applications at finer scales. Although quantitative studies have been proposed for downscaling satellite PM-based SSM, very few products have been available to public that meet the qualification of 1-km resolution and daily revisit cycles under all-weather conditions. In this study, therefore, we have developed one such SSM product in China with all these characteristics.  The product was generated through downscaling of AMSR-E and AMSR-2 based SSM at 36-km, covering all on-orbit time of the two radiometers during 2003-2019. MODIS optical reflectance data and daily thermal infrared land surface temperature (LST) that have been gap-filled for cloudy conditions were the primary data inputs of the downscaling model, in order to achieve the “all-weather” quality for the SSM downscaling outcome. Daily images from this developed SSM product have achieved quasi-complete coverage over the country during April-September. For other months, the national coverage percentage of the developed product is also greatly improved against the original daily PM observations.  We evaluated the product against in situ soil moisture measurements from over 2000 professional meteorological and soil moisture observation stations, and found the accuracy of the product is stable for all weathers from clear sky to cloudy conditions, with station averages of the unbiased RMSE ranging from 0.053 cm3/cm3 to 0.056 cm3/cm3. Moreover, the evaluation results also show that the developed product distinctly outperforms the widely known SMAP-Sentinel (Active-Passive microwave) combined SSM product at 1-km resolution. This indicates potential important benefits that can be brought by our developed product, on improvement of futural investigations related to hydrological processes, agricultural industry, water resource and environment management.\n\n",
-            "descriptionCn": " (1、2024年8月5日对V2.0版本进行了最新更新，本次更新新增了2023年全年数据集。\n2、2023年5月数据更新提示：本数据集的V2.0版本目前已经更新至2022年底，同时填补了2011年10月至2012年6月的空白时段，V2.0版本整体估算结果与V1.0原始版本相同，已下载的V1.0版本数据亦可放心使用，详情请参阅附件\"2023年5月数据更新说明.pdf\"。) \n地表土壤水分（SSM）是了解地球表面水文过程的关键参数。长期以来，被动微波（PM）技术一直是在卫星遥感尺度上估算SSM的主要选择，而另一方面，PM观测的粗分辨率（通常>10 km）阻碍了其在更细尺度上的应用。虽然已经提出了定量研究，以缩小基于卫星PM的SSM的规模，但很少有产品可供公众使用，以满足1km分辨率和全天候条件下每日重访周期的要求。因此，在本研究中，我们在中国开发了一种具有所有这些特征的SSM产品。该产品是通过在36 km处对基于AMSR-E和AMSR-2的SSM进行降尺度生成的，涵盖了2003-2019年间两台辐射计的所有在轨时间。MODIS光学反射率数据和在多云条件下填补空白的每日热红外地表温度（LST）是降尺度模型的主要数据输入，以实现SSM降尺度结果的“全天候”质量。4月至9月期间，这一开发的SSM产品的每日图像在全国范围内实现了准完全覆盖。在其他月份，与最初的每日PM观测值相比，开发产品的全国覆盖率也大大提高。我们根据2000多个专业气象和土壤水分观测站的现场土壤水分测量结果对该产品进行了评估，发现该产品的精度在晴空到多云的所有天气条件下都是稳定的，无偏RMSE的站平均值在0.053 cm3/cm3到0.056 cm3/cm3之间。此外，评估结果还表明，开发的产品在1km分辨率下明显优于广为人知的SMAP Sentinel（主被动微波）组合SSM产品。这表明，我们开发的产品在改善未来水文过程、农业、水资源和环境管理相关调查方面可能带来的潜在重要效益。                                    ",
-            "instructions": "The surface soil moisture data is stored in HDF5. The file name is \"sm_yyyyddd. H5\", where yyyy represents the year and DDD represents Julian date, such as SM_ 2005001.h5 represents the surface soil moisture status in China at about 1:30 A.M. on the first day of 2005. Howeve, all data are stored using Int16 datatypes to save space. In this way, all data saved should be multiplied with 0,001 to obtain the real volumetric soil moisture content. For example, if the value retrieved from this product at one pixel of a day is 327, the corresponding soil moisture content is 0.327 cm3/cm3.",
-            "instructionsCn": "地表土壤水分数据以hdf5存储，文件的名称为“SM_yyyyddd.h5”，其中yyyy代表年，ddd代表Julian日期，比如SM_2005001.h5就代表2005年第一天午夜1:30左右时我国的地表土壤水分状况。数据单位为土壤体积含水量单位（cm3/cm3），但为节省存储空间，数据均以Int16型数据存储，所有存储数据在使用时应乘以0.001以得到真实的地表土壤水分物理量（如某像元某日存储的数据为327，则对应地表土壤水分含量为0.327 cm3/cm3）。",
-            "east": 135.0,
-            "west": 73.0,
-            "south": 17.0,
-            "north": 54.0,
-            "startTime": "2003-01-01 00:00:00",
-            "endTime": "2023-12-31 00:00:00",
-            "fileSize": 140583814088.0,
-            "cstr": "18406.11.Hydro.tpdc.271762",
-            "doi": "10.11888/Hydro.tpdc.271762",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "宋沛林",
-                "nameEn": "SONG Peilin",
-                "unitEn": "",
-                "unitCn": "中国科学院地理科学与资源研究所"
-            },
-            {
-                "nameCn": "张永强",
-                "nameEn": "ZHANG Yongqiang",
-                "unitEn": "",
-                "unitCn": "中国科学院地理科学与资源研究所"
-            },
-            {
-                "nameCn": "姚盼盼",
-                "nameEn": "YAO Panpan",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "赵天杰",
-                "nameEn": "ZHAO Tianjie",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A 1 km daily surface soil moisture dataset of enhanced coverage under all-weather conditions over China in 2003–2019",
-                "referenceCn": null,
-                "referenceEn": "Song, P., Zhang, Y., Guo, J., Shi, J., Zhao, T., and Tong, B. (2022). A 1 km daily surface soil moisture dataset of enhanced coverage under all-weather conditions over China in 2003–2019, Earth Syst. Sci. Data, 14, 2613–2637, https://doi.org/10.5194/essd-14-2613-2022."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Improving Surface Soil Moisture Estimates in Humid Regions by an Enhanced Remote Sensing Technique",
-                "referenceCn": null,
-                "referenceEn": "Song, P., Zhang, Y., & Tian, J. (2021). Improving surface soil moisture estimates in humid regions by an enhanced remote sensing technique. Geophysical Research Letters, 48, e2020GL091459. https://doi.org/10.1029/2020GL091459"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "全天候",
-                "nameEn": "All-weather"
-            },
-            {
-                "nameCn": "冰冻圈遥感",
-                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
-            },
-            {
-                "nameCn": "土壤湿度",
-                "nameEn": "soil moisture"
-            },
-            {
-                "nameCn": "地表土壤水分",
-                "nameEn": "Surface soil moisture"
-            },
-            {
-                "nameCn": "地表水",
-                "nameEn": "Surface Water"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "被动微波遥感",
-                "nameEn": "Passive microwave remote sensing"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "20年",
-                "keywordEn": "20 years",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "午夜",
-                "keywordEn": "Midnight",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "国家自然科学基金青年科学基金项目",
-                "titleEn": "Young Scientists Fund of the National Natural Science Foundation of China"
-            },
-            {
-                "titleCn": "基于多源极轨和静止卫星数据融合的逐小时全天候地表土壤水分估算方法",
-                "titleEn": "the National Natural Science Foundation of China General Program"
-            },
-            {
-                "titleCn": "遥感科学国家重点实验室开放基金",
-                "titleEn": "Open Fund of State Key Laboratory of Remote Sensing Science"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            },
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "e1f24e35-6235-40b2-b3d7-677dfb249e39",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Daily all weather surface soil moisture data set with 1 km resolution in China (2003-2023)",
+      "titleCn": "中国1千米分辨率逐日全天候地表土壤水分数据集（2003-2023）",
+      "description": "(Please notice that we have updated the data (V2.0) in May 2023 to extend the data period as well as gap-filled the vacant period between Oct 2011-June 2012 for the original V1.0  dataset. The V2.0 product has the same estimation error to the V1.0 one. Both versions are equally trusty for their accuracy. For details, please see the attached file \"2023-05-Instruction on update of the data.pdf\".) Surface soil moisture (SSM) is a crucial parameter for understanding the hydrological process of our earth surface. Passive microwave (PM) technique has long been the primary choice for estimating SSM at satellite remote sensing scales, while on the other hand, the coarse resolution (usually >~10 km) of PM observations hampers its applications at finer scales. Although quantitative studies have been proposed for downscaling satellite PM-based SSM, very few products have been available to public that meet the qualification of 1-km resolution and daily revisit cycles under all-weather conditions. In this study, therefore, we have developed one such SSM product in China with all these characteristics.  The product was generated through downscaling of AMSR-E and AMSR-2 based SSM at 36-km, covering all on-orbit time of the two radiometers during 2003-2019. MODIS optical reflectance data and daily thermal infrared land surface temperature (LST) that have been gap-filled for cloudy conditions were the primary data inputs of the downscaling model, in order to achieve the “all-weather” quality for the SSM downscaling outcome. Daily images from this developed SSM product have achieved quasi-complete coverage over the country during April-September. For other months, the national coverage percentage of the developed product is also greatly improved against the original daily PM observations.  We evaluated the product against in situ soil moisture measurements from over 2000 professional meteorological and soil moisture observation stations, and found the accuracy of the product is stable for all weathers from clear sky to cloudy conditions, with station averages of the unbiased RMSE ranging from 0.053 cm3/cm3 to 0.056 cm3/cm3. Moreover, the evaluation results also show that the developed product distinctly outperforms the widely known SMAP-Sentinel (Active-Passive microwave) combined SSM product at 1-km resolution. This indicates potential important benefits that can be brought by our developed product, on improvement of futural investigations related to hydrological processes, agricultural industry, water resource and environment management.\n\n",
+      "descriptionCn": " (1、2024年8月5日对V2.0版本进行了最新更新，本次更新新增了2023年全年数据集。\n2、2023年5月数据更新提示：本数据集的V2.0版本目前已经更新至2022年底，同时填补了2011年10月至2012年6月的空白时段，V2.0版本整体估算结果与V1.0原始版本相同，已下载的V1.0版本数据亦可放心使用，详情请参阅附件\"2023年5月数据更新说明.pdf\"。) \n地表土壤水分（SSM）是了解地球表面水文过程的关键参数。长期以来，被动微波（PM）技术一直是在卫星遥感尺度上估算SSM的主要选择，而另一方面，PM观测的粗分辨率（通常>10 km）阻碍了其在更细尺度上的应用。虽然已经提出了定量研究，以缩小基于卫星PM的SSM的规模，但很少有产品可供公众使用，以满足1km分辨率和全天候条件下每日重访周期的要求。因此，在本研究中，我们在中国开发了一种具有所有这些特征的SSM产品。该产品是通过在36 km处对基于AMSR-E和AMSR-2的SSM进行降尺度生成的，涵盖了2003-2019年间两台辐射计的所有在轨时间。MODIS光学反射率数据和在多云条件下填补空白的每日热红外地表温度（LST）是降尺度模型的主要数据输入，以实现SSM降尺度结果的“全天候”质量。4月至9月期间，这一开发的SSM产品的每日图像在全国范围内实现了准完全覆盖。在其他月份，与最初的每日PM观测值相比，开发产品的全国覆盖率也大大提高。我们根据2000多个专业气象和土壤水分观测站的现场土壤水分测量结果对该产品进行了评估，发现该产品的精度在晴空到多云的所有天气条件下都是稳定的，无偏RMSE的站平均值在0.053 cm3/cm3到0.056 cm3/cm3之间。此外，评估结果还表明，开发的产品在1km分辨率下明显优于广为人知的SMAP Sentinel（主被动微波）组合SSM产品。这表明，我们开发的产品在改善未来水文过程、农业、水资源和环境管理相关调查方面可能带来的潜在重要效益。                                    ",
+      "instructions": "The surface soil moisture data is stored in HDF5. The file name is \"sm_yyyyddd. H5\", where yyyy represents the year and DDD represents Julian date, such as SM_ 2005001.h5 represents the surface soil moisture status in China at about 1:30 A.M. on the first day of 2005. Howeve, all data are stored using Int16 datatypes to save space. In this way, all data saved should be multiplied with 0,001 to obtain the real volumetric soil moisture content. For example, if the value retrieved from this product at one pixel of a day is 327, the corresponding soil moisture content is 0.327 cm3/cm3.",
+      "instructionsCn": "地表土壤水分数据以hdf5存储，文件的名称为“SM_yyyyddd.h5”，其中yyyy代表年，ddd代表Julian日期，比如SM_2005001.h5就代表2005年第一天午夜1:30左右时我国的地表土壤水分状况。数据单位为土壤体积含水量单位（cm3/cm3），但为节省存储空间，数据均以Int16型数据存储，所有存储数据在使用时应乘以0.001以得到真实的地表土壤水分物理量（如某像元某日存储的数据为327，则对应地表土壤水分含量为0.327 cm3/cm3）。",
+      "east": 135.0,
+      "west": 73.0,
+      "south": 17.0,
+      "north": 54.0,
+      "startTime": "2003-01-01 00:00:00",
+      "endTime": "2023-12-31 00:00:00",
+      "fileSize": 140583814088.0,
+      "cstr": "18406.11.Hydro.tpdc.271762",
+      "doi": "10.11888/Hydro.tpdc.271762",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Are passive microwave (PM) techniques used for estimating surface soil moisture (SSM) at satellite remote sensing scales?",
-                "QuestionCn": "被动微波（PM）技术是否用于在卫星遥感尺度上估计表层土壤湿度（SSM）？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What techniques are used to achieve 1km resolution for soil surface moisture data collection?",
-                "QuestionCn": "为了实现1公里分辨率的土壤表层湿度数据收集，使用了哪些技术？",
-                "AnswerEn": "Downscaling SSM from 36 km using AMSR-E and AMSR-2, MODIS optical reflectance data, daily thermal infrared land surface temperature LST",
-                "AnswerCn": "使用AMSR-E和AMSR-2、MODIS光学反射率数据、每日热红外地表温度LST，将SSM从36公里降尺度。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method that overcomes the challenge of coarse resolution in passive microwave remote sensing for soil moisture estimation?",
-                "QuestionCn": "您能否提供一个数据收集方法的例子，以克服被动微波遥感在土壤湿度估计中粗分辨率的挑战？",
-                "AnswerEn": "The data collection method uses a downscaling approach to enhance the resolution of soil surface moisture from a coarse resolution of 36 km to a fine resolution of 1 km. This is achieved by integrating passive microwave data from AMSR-E and AMSR-2 with MODIS optical reflectance data and daily thermal infrared land surface temperature data, even under cloudy conditions, to ensure all-weather quality and daily revisit cycles.",
-                "AnswerCn": "该数据收集方法采用下采样方法，将土壤表面湿度的分辨率从36公里的粗分辨率提升到1公里的细分辨率。这是通过整合来自AMSR-E和AMSR-2的被动微波数据与MODIS光学反射数据以及每日热红外地表温度数据实现的，即使在多云条件下也能确保全天候质量和每日重访周期。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the average resolution of passive microwave (PM) observations used in estimating surface soil moisture before downscaling?",
-                "QuestionCn": "在下采样之前，用于估计表层土壤湿度的被动微波（PM）观测的平均分辨率是多少？",
-                "AnswerEn": "10 km",
-                "AnswerCn": "10公里",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does 'downscaling' mean in the context of estimating surface soil moisture (SSM) from satellite data?",
-                "QuestionCn": "在从卫星数据估计表层土壤湿度（SSM）的背景下，“下尺度化”指的是将卫星观测到的较大尺度的数据转换为较小尺度的过程，以便更准确地反映地面实际的土壤湿度状况。",
-                "AnswerEn": "In the context of estimating surface soil moisture (SSM) from satellite data, 'downscaling' refers to the process of transforming coarse-resolution satellite observations, such as those from passive microwave (PM) technology, which typically have resolutions greater than 10 km, into finer resolutions. This is achieved by integrating additional data sources, like MODIS optical reflectance data and thermal infrared land surface temperature (LST), to fill gaps under cloudy conditions and improve the spatial resolution to meet requirements such as a 1 km resolution with daily revisit cycles under all-weather conditions.",
-                "AnswerCn": "在从卫星数据估计表层土壤湿度（SSM）的背景下，“下采样”指的是将粗分辨率的卫星观测数据（例如，通常分辨率大于10公里的被动微波（PM）技术）转化为更细分辨率的过程。这是通过整合其他数据源（如MODIS光学反射数据和热红外地表温度（LST））来实现的，以填补多云条件下的空白，并提高空间分辨率，以满足如1公里分辨率和全天候条件下每日重访周期等要求。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary objective of developing a soil surface moisture dataset with 1 km resolution and all-weather conditions in China?",
-                "QuestionCn": "在中国开发一个1公里分辨率、适用于各种天气条件的土壤表层湿度数据集的主要目标是什么？",
-                "AnswerEn": "The primary objective is to create a soil surface moisture (SSM) product that meets the requirements for high resolution (1 km) and daily revisit cycles under all weather conditions, to improve understanding and management of hydrological processes, agriculture, water resources, and environmental management in China.",
-                "AnswerCn": "主要目标是创建一个土壤表面湿度（SSM）产品，满足高分辨率（1公里）和每日重访周期的要求，能够在各种天气条件下工作，以改善对水文过程、农业、水资源和环境管理的理解与管理，特别是在中国。",
-                "Level": "C2(Understanding)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "宋沛林",
+        "nameEn": "SONG Peilin",
+        "unitEn": "",
+        "unitCn": "中国科学院地理科学与资源研究所"
+      },
+      {
+        "nameCn": "张永强",
+        "nameEn": "ZHANG Yongqiang",
+        "unitEn": "",
+        "unitCn": "中国科学院地理科学与资源研究所"
+      },
+      {
+        "nameCn": "姚盼盼",
+        "nameEn": "YAO Panpan",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "赵天杰",
+        "nameEn": "ZHAO Tianjie",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A 1 km daily surface soil moisture dataset of enhanced coverage under all-weather conditions over China in 2003–2019",
+        "referenceCn": null,
+        "referenceEn": "Song, P., Zhang, Y., Guo, J., Shi, J., Zhao, T., and Tong, B. (2022). A 1 km daily surface soil moisture dataset of enhanced coverage under all-weather conditions over China in 2003–2019, Earth Syst. Sci. Data, 14, 2613–2637, https://doi.org/10.5194/essd-14-2613-2022."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Improving Surface Soil Moisture Estimates in Humid Regions by an Enhanced Remote Sensing Technique",
+        "referenceCn": null,
+        "referenceEn": "Song, P., Zhang, Y., & Tian, J. (2021). Improving surface soil moisture estimates in humid regions by an enhanced remote sensing technique. Geophysical Research Letters, 48, e2020GL091459. https://doi.org/10.1029/2020GL091459"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "全天候",
+        "nameEn": "All-weather"
+      },
+      {
+        "nameCn": "冰冻圈遥感",
+        "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+      },
+      {
+        "nameCn": "土壤湿度",
+        "nameEn": "soil moisture"
+      },
+      {
+        "nameCn": "地表土壤水分",
+        "nameEn": "Surface soil moisture"
+      },
+      {
+        "nameCn": "地表水",
+        "nameEn": "Surface Water"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "被动微波遥感",
+        "nameEn": "Passive microwave remote sensing"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "20年",
+        "keywordEn": "20 years",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "午夜",
+        "keywordEn": "Midnight",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "国家自然科学基金青年科学基金项目",
+        "titleEn": "Young Scientists Fund of the National Natural Science Foundation of China"
+      },
+      {
+        "titleCn": "基于多源极轨和静止卫星数据融合的逐小时全天候地表土壤水分估算方法",
+        "titleEn": "the National Natural Science Foundation of China General Program"
+      },
+      {
+        "titleCn": "遥感科学国家重点实验室开放基金",
+        "titleEn": "Open Fund of State Key Laboratory of Remote Sensing Science"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      },
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Are passive microwave (PM) techniques used for estimating surface soil moisture (SSM) at satellite remote sensing scales?",
+        "QuestionCn": "被动微波（PM）技术是否用于在卫星遥感尺度上估计表层土壤湿度（SSM）？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What techniques are used to achieve 1km resolution for soil surface moisture data collection?",
+        "QuestionCn": "为了实现1公里分辨率的土壤表层湿度数据收集，使用了哪些技术？",
+        "AnswerEn": "Downscaling SSM from 36 km using AMSR-E and AMSR-2, MODIS optical reflectance data, daily thermal infrared land surface temperature LST",
+        "AnswerCn": "使用AMSR-E和AMSR-2、MODIS光学反射率数据、每日热红外地表温度LST，将SSM从36公里降尺度。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method that overcomes the challenge of coarse resolution in passive microwave remote sensing for soil moisture estimation?",
+        "QuestionCn": "您能否提供一个数据收集方法的例子，以克服被动微波遥感在土壤湿度估计中粗分辨率的挑战？",
+        "AnswerEn": "The data collection method uses a downscaling approach to enhance the resolution of soil surface moisture from a coarse resolution of 36 km to a fine resolution of 1 km. This is achieved by integrating passive microwave data from AMSR-E and AMSR-2 with MODIS optical reflectance data and daily thermal infrared land surface temperature data, even under cloudy conditions, to ensure all-weather quality and daily revisit cycles.",
+        "AnswerCn": "该数据收集方法采用下采样方法，将土壤表面湿度的分辨率从36公里的粗分辨率提升到1公里的细分辨率。这是通过整合来自AMSR-E和AMSR-2的被动微波数据与MODIS光学反射数据以及每日热红外地表温度数据实现的，即使在多云条件下也能确保全天候质量和每日重访周期。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the average resolution of passive microwave (PM) observations used in estimating surface soil moisture before downscaling?",
+        "QuestionCn": "在下采样之前，用于估计表层土壤湿度的被动微波（PM）观测的平均分辨率是多少？",
+        "AnswerEn": "10 km",
+        "AnswerCn": "10公里",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does 'downscaling' mean in the context of estimating surface soil moisture (SSM) from satellite data?",
+        "QuestionCn": "在通过卫星数据估算地表土壤湿度（SSM）的背景下，“降尺度”是什么意思？",
+        "AnswerEn": "In the context of estimating surface soil moisture (SSM) from satellite data, 'downscaling' refers to the process of transforming coarse-resolution satellite observations, such as those from passive microwave (PM) technology, which typically have resolutions greater than 10 km, into finer resolutions. This is achieved by integrating additional data sources, like MODIS optical reflectance data and thermal infrared land surface temperature (LST), to fill gaps under cloudy conditions and improve the spatial resolution to meet requirements such as a 1 km resolution with daily revisit cycles under all-weather conditions.",
+        "AnswerCn": "在从卫星数据估计表层土壤湿度（SSM）的背景下，“下采样”指的是将粗分辨率的卫星观测数据（例如，通常分辨率大于10公里的被动微波（PM）技术）转化为更细分辨率的过程。这是通过整合其他数据源（如MODIS光学反射数据和热红外地表温度（LST））来实现的，以填补多云条件下的空白，并提高空间分辨率，以满足如1公里分辨率和全天候条件下每日重访周期等要求。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary objective of developing a soil surface moisture dataset with 1 km resolution and all-weather conditions in China?",
+        "QuestionCn": "在中国开发一个1公里分辨率、适用于各种天气条件的土壤表层湿度数据集的主要目标是什么？",
+        "AnswerEn": "The primary objective is to create a soil surface moisture (SSM) product that meets the requirements for high resolution (1 km) and daily revisit cycles under all weather conditions, to improve understanding and management of hydrological processes, agriculture, water resources, and environmental management in China.",
+        "AnswerCn": "主要目标是创建一个土壤表面湿度（SSM）产品，满足高分辨率（1公里）和每日重访周期的要求，能够在各种天气条件下工作，以改善对水文过程、农业、水资源和环境管理的理解与管理，特别是在中国。",
+        "Level": "C2(Understanding)"
+      }
+    ]
+  }
 }

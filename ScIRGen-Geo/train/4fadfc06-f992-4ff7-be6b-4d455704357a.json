@@ -1,502 +1,502 @@
 {
-    "id": "4fadfc06-f992-4ff7-be6b-4d455704357a",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "ILSF-RT (2015-2020)：Global satellite-based precipitation fusion-calibration product considering four essential elements",
-            "titleCn": "顾及关键四要素的全球卫星降水融合校正产品ILSF-RT（2015-2020）",
-            "description": "This dataset is a global satellite-based precipitation fusion-calibration product with a spatial-temporal resolution of 25km/3hr, independently developed by Dr. Yong Bin's team at Hohai University. The original data sources include the Global Precipitation Measurement (GPM) IMERG-Early satellite precipitation estimates and ground observation from Climate Prediction Center (CPC). The development process involved establishing error correction models based on the rainfall intensity from IMERG-Early and CPC datasets for different terrains, climatic zones, and seasons during the period of 2010-2014. Subsequently, the models were applied to perform real-time error correction for IMERG-Early (25km/1day, 60°N-60°S) from 2015-2020 years incorporating by terrain information, and climatic zone files. Further steps involved downscaling and resampling to achieve a spatial-temporal resolution of 25km/3hr. Finally, for the high-latitude region (90°N-60°N) and the China region (15°N-59°N, 70°E-140°E), ERA5 data and fusion precipitation data based on random forest were incorporated, respectively. The experiment result shows that the BIAS of the ILSF-RT precipitation dataset is less than 15% at a global scale. The development of the algorithm and the production of this dataset are of significant importance in enhancing the accuracy of mainstream real-time satellite-based precipitation products. It also greatly enhances the potential application of real-time satellite-based precipitation products in natural disaster forecasting and early warning.",
-            "descriptionCn": "该数据集为河海大学雍斌团队自主研发的时空分辨率为25km/3hr的全球卫星降水融合校正产品。原始数据来源为纯卫星降水数据GPM IMERG-Early和地面观测数据CPC。首先利用2010-2014年IMERG-Early和CPC的雨强在不同地形、气候区和季节建立误差校正模型，然后通过实时输入2015-2020年IMERG-Early、地形以及气候区文件，并对应不同季节进行误差校正，获得时空分辨率为50km/1day的全球卫星降水校正数据（60°N-60°S）。然后，进行时空降尺度，重采样至25km/3hr，并在北纬高纬度地区（90°N-60°N）和中国区域（15°N-59°N，70°E-140°E）分别融入了ERA5和基于随机森林的融合降水数据，最终生成高时空分辨率的全球降水数据集。通过CPC数据验证该套降水数据集在全球尺度上的BIAS<15%。该数据集算法的研发以及数据的研制对于进一步提高主流的准实时卫星降水产品的精度具有重要的意义，并将大大提高准实时卫星降水产品在自然灾害事件预警中的应用潜力。",
-            "instructions": "File Naming: The globally integrated and calibrated satellite precipitation fusion product, considering the key four elements, is stored in the NetCDF format. The file is named \"ILSF-RT_Precipitation_Estimates_25km_V001_yyyymmdd-hhH.nc4\". Here, \"ILSF-RT\" represents the algorithm name, \"Precipitation_Estimates\" indicates the element name for rainfall estimation, \"25km\" denotes the spatial resolution, \"V001\" signifies the version number of the algorithm developed by the research team. \"yyyy\" represents the year, \"mm\" represents the month, \"dd\" represents the day, and \"hhH\" represents the hour. For example, \"ILSF-RT_Precipitation_Estimates_25km_V001_20150101-00H.nc4\" represents a NetCDF file describing the 3-hour cumulative rainfall estimates for the global coverage from 0:00 to the following two hours on the first day of 2015.\n\nData Read Method: All NetCDF files in this dataset can be opened directly using programming languages or corresponding software such as Matlab and HDF Explorer. In addition to other information, the main content of these files consists of numerical representations of global rainfall estimates. If visual representation is desired, the files can be opened using ArcGIS, which will display the graphical representation of the NetCDF files.\n",
-            "instructionsCn": "文件命名：顾及关键四要素的全球卫星降水融合校正产品以NetCDF格式存储，文件的名称为“ILSF-RT_Precipitation_Estimates_25km_V001_yyyymmdd-hhH.nc4”，其中ILSF-RT为算法名称，Precipitation_Estimates为要素名称降雨估计，25km为空间分辨率，V001为课题组研发算法的版本号，\nyyyy代表年，mm代表月，dd代表日，hhH代表小时，比如“ILSF-RT_Precipitation_Estimates_25km_V001_20150101-00H.nc4”就代表这个NetCDF文件描述2015年第一天0时-后两个小时的全球范围的3小时累积降雨估计值。\n\n数据读取方式：该数据集中的所有NetCDF文件可以直接用编程程序或对应程序（如Matlab和HDF阅览器）打开，除了其他信息外，主体内容为数值表征全球降雨估计，如果要用图示来显示的话，可用Arcgis直接打开，所显示的内容就是该NetCDF文件的图形表达。\n",
-            "east": 179.875,
-            "west": -179.875,
-            "south": -59.875,
-            "north": 89.875,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 12007968536.0,
-            "cstr": "18406.11.Atmos.tpdc.300588",
-            "doi": "10.11888/Atmos.tpdc.300588",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "雍斌",
-                "nameEn": "YONG Bin ",
-                "unitEn": "Hohai University",
-                "unitCn": "河海大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A Novel Real-Time Error Adjustment Method with Considering Four Factors for Correcting Hourly Multi-Satellite Precipitation Estimates",
-                "referenceCn": null,
-                "referenceEn": "Chen, H.Q., Yong, B., Gourley, J.J., Wen, D.B., Qi, W.Q., & Yang, K. (2022). A Novel Real-Time Error Adjustment Method with Considering Four Factors for Correcting Hourly Multi-Satellite Precipitation Estimates. IEEE Transactions on Geoscience and Remote Sensing, 60, 4105211."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "降水",
-                "nameEn": "Precipitation"
-            },
-            {
-                "nameCn": "降雨强度",
-                "nameEn": "Rainfall rate"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2015-2020",
-                "keywordEn": "2015-2020",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "全球能量循环和水循环关键参数的立体观测与遥感反演",
-                "titleEn": "National Key Research and Development Program of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
-            }
-        ]
+  "id": "4fadfc06-f992-4ff7-be6b-4d455704357a",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "ILSF-RT (2015-2020)：Global satellite-based precipitation fusion-calibration product considering four essential elements",
+      "titleCn": "顾及关键四要素的全球卫星降水融合校正产品ILSF-RT（2015-2020）",
+      "description": "This dataset is a global satellite-based precipitation fusion-calibration product with a spatial-temporal resolution of 25km/3hr, independently developed by Dr. Yong Bin's team at Hohai University. The original data sources include the Global Precipitation Measurement (GPM) IMERG-Early satellite precipitation estimates and ground observation from Climate Prediction Center (CPC). The development process involved establishing error correction models based on the rainfall intensity from IMERG-Early and CPC datasets for different terrains, climatic zones, and seasons during the period of 2010-2014. Subsequently, the models were applied to perform real-time error correction for IMERG-Early (25km/1day, 60°N-60°S) from 2015-2020 years incorporating by terrain information, and climatic zone files. Further steps involved downscaling and resampling to achieve a spatial-temporal resolution of 25km/3hr. Finally, for the high-latitude region (90°N-60°N) and the China region (15°N-59°N, 70°E-140°E), ERA5 data and fusion precipitation data based on random forest were incorporated, respectively. The experiment result shows that the BIAS of the ILSF-RT precipitation dataset is less than 15% at a global scale. The development of the algorithm and the production of this dataset are of significant importance in enhancing the accuracy of mainstream real-time satellite-based precipitation products. It also greatly enhances the potential application of real-time satellite-based precipitation products in natural disaster forecasting and early warning.",
+      "descriptionCn": "该数据集为河海大学雍斌团队自主研发的时空分辨率为25km/3hr的全球卫星降水融合校正产品。原始数据来源为纯卫星降水数据GPM IMERG-Early和地面观测数据CPC。首先利用2010-2014年IMERG-Early和CPC的雨强在不同地形、气候区和季节建立误差校正模型，然后通过实时输入2015-2020年IMERG-Early、地形以及气候区文件，并对应不同季节进行误差校正，获得时空分辨率为50km/1day的全球卫星降水校正数据（60°N-60°S）。然后，进行时空降尺度，重采样至25km/3hr，并在北纬高纬度地区（90°N-60°N）和中国区域（15°N-59°N，70°E-140°E）分别融入了ERA5和基于随机森林的融合降水数据，最终生成高时空分辨率的全球降水数据集。通过CPC数据验证该套降水数据集在全球尺度上的BIAS<15%。该数据集算法的研发以及数据的研制对于进一步提高主流的准实时卫星降水产品的精度具有重要的意义，并将大大提高准实时卫星降水产品在自然灾害事件预警中的应用潜力。",
+      "instructions": "File Naming: The globally integrated and calibrated satellite precipitation fusion product, considering the key four elements, is stored in the NetCDF format. The file is named \"ILSF-RT_Precipitation_Estimates_25km_V001_yyyymmdd-hhH.nc4\". Here, \"ILSF-RT\" represents the algorithm name, \"Precipitation_Estimates\" indicates the element name for rainfall estimation, \"25km\" denotes the spatial resolution, \"V001\" signifies the version number of the algorithm developed by the research team. \"yyyy\" represents the year, \"mm\" represents the month, \"dd\" represents the day, and \"hhH\" represents the hour. For example, \"ILSF-RT_Precipitation_Estimates_25km_V001_20150101-00H.nc4\" represents a NetCDF file describing the 3-hour cumulative rainfall estimates for the global coverage from 0:00 to the following two hours on the first day of 2015.\n\nData Read Method: All NetCDF files in this dataset can be opened directly using programming languages or corresponding software such as Matlab and HDF Explorer. In addition to other information, the main content of these files consists of numerical representations of global rainfall estimates. If visual representation is desired, the files can be opened using ArcGIS, which will display the graphical representation of the NetCDF files.\n",
+      "instructionsCn": "文件命名：顾及关键四要素的全球卫星降水融合校正产品以NetCDF格式存储，文件的名称为“ILSF-RT_Precipitation_Estimates_25km_V001_yyyymmdd-hhH.nc4”，其中ILSF-RT为算法名称，Precipitation_Estimates为要素名称降雨估计，25km为空间分辨率，V001为课题组研发算法的版本号，\nyyyy代表年，mm代表月，dd代表日，hhH代表小时，比如“ILSF-RT_Precipitation_Estimates_25km_V001_20150101-00H.nc4”就代表这个NetCDF文件描述2015年第一天0时-后两个小时的全球范围的3小时累积降雨估计值。\n\n数据读取方式：该数据集中的所有NetCDF文件可以直接用编程程序或对应程序（如Matlab和HDF阅览器）打开，除了其他信息外，主体内容为数值表征全球降雨估计，如果要用图示来显示的话，可用Arcgis直接打开，所显示的内容就是该NetCDF文件的图形表达。\n",
+      "east": 179.875,
+      "west": -179.875,
+      "south": -59.875,
+      "north": 89.875,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 12007968536.0,
+      "cstr": "18406.11.Atmos.tpdc.300588",
+      "doi": "10.11888/Atmos.tpdc.300588",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "High-accuracy near-real-time satellite precipitation estimates (SPEs) provide an opportunity for hydrometeorologists to improve the forecasting of extreme events, such as flood, landslide, tropical cyclone, and other extreme events, at the large scale. However, the currently operational near-real-time SPEs still have larger errors and uncertainties.",
-                "A comprehensive investigation with regard to the relationships between retrieval errors and four factors (i.e., topography, seasonality, climate type, and rain rate) is still lacking. By analyzing the error components of GPM-based passive microwave (PMW) and infrared sensors, for the first time, we comprehensively revealed the dependency of retrieval errors of satellite precipitation on the topography, season, and climate type over mainland China. Furthermore, a power function relationship between retrieval errors and logarithm of rain rates was subsequently proposed in the extended study. In practice, many previous literatures have proposed various correction methods to improve the accuracy of the near-real-time SPPs for enhancing their potentials in natural hazard forecasting. However, these correction methods suffer from different defects: 1) some methods strongly depend on the ground observations in real-time and their effectiveness is also closely related to the observed accuracy; 2) some methods used the satellite-derived soil moisture products to correct SPEs in real-time, but these ways may introduce new error sources and degrade the retrieval quality of original SPPs; 3) others only selected single or few factors but neglected some crucial ones associated with retrieval errors, leading to the fundamental algorithmic defects in establishing the EAMs; and 4) some real-time error correction methods work for only reducing systematic error, but the major error component of current satellite products is random error. Merging different precipitation products is an effective way to enhance the quality of SPPs. However, it cannot correct SPEs in real-time.",
-                "Our previous studies have found that the errors of the satellite-based precipitation estimates are closely related to four crucial factors, i.e., seasonality, topography, climate type, and rain rate. However, the comprehensive relationships between satellite retrieval errors and these four factors are still not investigated, and the expected EAM was also not established. Based on the SPF relationships adaptive for 16 different categories, we proposed a novel bias adjustment method to correct the hourly GSMaP-NRT estimates in real-time.",
-                "With the rapid development of remote sensing technique in the past 20 years, the retrieval information from various satellite sensors becomes a reliable data source of obtaining areal precipitation estimates over large scales and even globe. Although the satellite-based precipitation estimates are indirect, the high frequency and broad coverage make them uniquely complementary to conventional rain gauge networks and weather radars. Also, the satellite-based precipitation estimates provide an opportunity for both hydrologists and meteorologists to improve the forecasting of extreme events, such as flood warning, landslide detection, typhoon monitoring, and drought diagnosis, at the large scale. In practice, the near-real-time satellite precipitation products (SPPs) are more appropriate for these hydrometeorological predictions relative to post-real-time research quality SPPs. However, the near-real-time SPPs normally have larger errors and uncertainties than the post-real-time products. Therefore, it is important to develop effective error correction methods for further improving the data accuracy of mainstream SPPs in real-time, which will significantly enhance their application potentials especially for natural hazard warning. The scientific understanding of error features of satellite precipitation estimates (SPEs) is essential to establish the error adjustment model (EAM) in correction methods."
-            ],
-            "research objective": [
-                "In this study, we found that there exists a clear relationship of spatial plane function (SPF) between retrieval errors of SPEs and four crucial factors including topography, seasonality, climate type, and rain rate.",
-                "This study primarily aims at establishing an effective EAM to correct the hourly near-real-time global satellite mapping of precipitation (GSMaP-NRT) by analyzing the function relationships between satellite retrieval errors and multiple factors in detail. Consequently, here we proposed a novel real-time error adjustment method that considers four impacting factors to precipitation errors to correct for the hourly GSMaP-NRT precipitation estimates in real-time.",
-                "This study attempts to comprehensively consider four crucial factors associated with retrieval errors and effectively correct the near-real-time multi-SPEs by the EAM derived from historical satellite–gauge data pairs. In this study, we systematically investigated the relationships between retrieval errors of SPEs and four crucial factors including topography, seasonality, climate type, and rain rate over mainland China."
-            ],
-            "challenges": [
-                "However, these schemes might introduce the new error sources due to large errors inherent in satellite soil moisture. Despite that the new method shows great advantages for error corrections in real-time relative to the existing real-time error correction methods, it also cannot reduce missed precipitation and its limited improvements in reducing false errors. In addition, this method has another common problem also inherent in the existing algorithms, that is, underestimating the rainfall volume in the rain rates over 1 mm hr−1.",
-                "However, the results of bias score show that the current method seems unsuitable to adjust the rainfall events with higher rain rates (>= 1m mh r −1), which needs to be further improved."
-            ],
-            "methods": [
-                "In our study, the hourly GSMaP-NRT was first corrected by the proposed method to produce a set of new precipitation product ILSF-RT, which was then intercompared with both GSMaP-NRT and GSMaP-Gauge-NRT to validate the new approach.",
-                "In the new correction method, we design a better expression for topography using the standard deviation of elevation [SDE, see Fig. 1(b)] to substitute the original average elevation. The retrieval errors (E) can be simply calculated by satellite rain rate (S) minus ground observations (G). In our numerical experiments, we found that the condition number of matrix A T A is beyond 1000, which causes its determinant close to zero, resulting in matrix AT A seriously ill-conditioned. Therefore, an ILS approach was applied to perform the parameter estimates of X for the 16 EAMs. The procedure of RILS-based outlier elimination mainly includes the following four steps. The ILS method was used to compute the initial parameter estimates of the 16 EAMs [i.e., (2)]. The distances (d) between the selected points and the fitting plane were calculated by substituting parameter estimates, S, SDE, and E into the following equation. Thus, the standard deviation of the distance (σ) could be worked out using the following formula pair. If di < 3σ, the corresponding training sample will be retained to join the following training. Otherwise, it will be eliminated as an outlier. Calculating the errors of satellite estimates. Establishing 16 EAMs based on the analyses of four crucial factors. Removing the outliers. Calibrating the model parameters of EAMs.",
-                "The new method primarily adopts the ILS method to solve the parameter estimates of the EAMs that consider four factors, and then the errors and biases of GSMaP-NRT are reduced based on (4) and (6). Finally, the ILSF-RT product was comprehensively intercompared with GSMaP-NRT and GSMaP-Gauge-NRT over mainland China for validation using various evaluation indices. To quantify the performance of the new proposed method, we used seven statistical indices including correlation coefficient (CC), root mean squared error (RMSE), normalized root mean squared error (NRMSE), relative bias (RBIAS), and three types of error components (hit bias, miss bias, and false bias)."
-            ],
-            "dataset": [
-                "Two GPM-based hourly SPEs, including GSMaP-NRT and GSMaP-Gauge-NRT, were used in this study.",
-                "An observation network of over 30 000 conventional rain gauges covering mainland China [see Fig. 1(a)] was used to calibrate and validate the EAMs in the new method. Here, we selected one complete year of 2015 with GSMaP-NRT and ground observations for calibration and two years of three datasets (two near-real-time GSMaP products and gauged observations), from April 2017 to March 2019, for validation, considering the GSMaP-Gauge-NRT V7 data available starting from April 2017."
-            ],
-            "findings": [
-                "Generally speaking, ILSF-RT product performs the best among three products in terms of RMSE and RBIAS scores (see Table II), meaning that the new proposed method is effective in reducing the rainfall errors of the original GSMaP-NRT. Meanwhile, the new method effectively reduces the errors of GSMaP-NRT associated with seasonality and climate (see Figs. 4 and 5). In particular, this new proposed method evidently improves the data quality over arid areas and cold seasons (spring and winter), which improves the application potentials of GSMaP-NRT in such areas where no ground observations are not available. Overall, the new method proposed in this study considers the relationships between retrieval errors and four crucial factors, and the verification results have proved the effectiveness in reducing the retrieval errors.",
-                "The results show that the proposed method can effectively reduce the retrieval errors of GSMaP-NRT for various terrains and rain rates over different seasons and climate-type areas. The new ILSF-RT even exhibits a general improvement over the GSMaP-Gauge-NRT estimates. One important merit of the new method is that it can perform rather well in validation even when not much historical data were applied as training samples in calibration. Overall, we can conclude that the new proposed method can substantially improve the data accuracy of hourly GSMaP-NRT estimates and even perform better than the gauged adjustment scheme used in GSMaP-Gauge-NRT. The spatial analyses from Fig. 6 demonstrate that the new method effectively reduces the retrieval errors of GSMaP-NRT for various terrains and over different seasons and climate areas and ILSF-RT generally exhibits the best performance among three evaluation products."
-            ],
-            "backgroundCn": [
-                "高精度近实时卫星降水估计（SPEs）为水文气象学家提供了改善极端事件（如洪水、滑坡、热带气旋和其他极端事件）大规模预测的机会。然而，目前运营的近实时SPEs仍然存在较大的误差和不确定性。",
-                "关于检索错误与四个因素（即地形、季节性、气候类型和降雨率）之间关系的综合研究仍然缺乏。通过分析基于GPM的被动微波（PMW）和红外传感器的错误成分，我们首次全面揭示了卫星降水检索错误在中国大陆地区与地形、季节和气候类型的依赖关系。此外，在扩展研究中提出了检索错误与降雨率对数之间的幂函数关系。在实践中，许多先前的文献提出了各种修正方法，以提高近实时卫星降水产品（SPPs）的准确性，从而增强其在自然灾害预报中的潜力。然而，这些修正方法存在不同的缺陷：1）一些方法强烈依赖于实时的地面观测，其有效性也与观测的准确性密切相关；2）一些方法使用卫星衍生的土壤湿度产品来实时修正卫星降水估计（SPEs），但这些方法可能引入新的误差源，降低原始SPPs的检索质量；3）其他方法仅选择单一或少数因素，而忽略了一些与检索错误相关的重要因素，导致在建立误差修正模型（EAMs）时存在根本的算法缺陷；4）一些实时误差修正方法仅能减少系统误差，但当前卫星产品的主要误差成分是随机误差。合并不同的降水产品是提高SPPs质量的有效方法，但无法实时修正SPEs。",
-                "我们之前的研究发现，卫星降水估计的误差与四个关键因素密切相关，即季节性、地形、气候类型和降雨强度。然而，卫星检索误差与这四个因素之间的综合关系仍未得到研究，预期的EAM也尚未建立。基于适用于16个不同类别的SPF关系，我们提出了一种新颖的偏差调整方法，以实时校正每小时的GSMaP-NRT估计值。",
-                "在过去20年中，遥感技术的快速发展使得从各种卫星传感器获取的信息成为获取大范围甚至全球面积降水估计的可靠数据源。尽管基于卫星的降水估计是间接的，但其高频率和广泛覆盖使其在常规雨量计网络和气象雷达中具有独特的互补性。此外，基于卫星的降水估计为水文学家和气象学家提供了改善极端事件预测的机会，例如洪水预警、滑坡检测、台风监测和干旱诊断，尤其是在大尺度上。在实践中，近实时卫星降水产品（SPPs）相对于后实时研究质量SPPs更适合这些水文气象预测。然而，近实时SPPs通常比后实时产品具有更大的误差和不确定性。因此，开发有效的误差修正方法以进一步提高主流SPPs的实时数据准确性非常重要，这将显著增强它们在自然灾害预警中的应用潜力。对卫星降水估计（SPEs）误差特征的科学理解对于建立误差调整模型（EAM）以进行修正方法至关重要。"
-            ],
-            "research objectiveCn": [
-                "在这项研究中，我们发现空间平面功能（SPF）与SPEs的检索错误之间存在明显的关系，这种关系受到四个关键因素的影响，包括地形、季节性、气候类型和降雨率。",
-                "本研究主要旨在建立一个有效的EAM，通过详细分析卫星检索误差与多个因素之间的函数关系，来修正每小时的近实时全球卫星降水映射（GSMaP-NRT）。因此，我们提出了一种新颖的实时误差调整方法，考虑了四个影响降水误差的因素，以实时修正每小时的GSMaP-NRT降水估计值。",
-                "本研究试图全面考虑与检索误差相关的四个关键因素，并通过从历史卫星-雨量计数据对中得出的EAM有效地纠正近实时的多重降水事件（SPEs）。在本研究中，我们系统地调查了大陆中国地区SPEs的检索误差与四个关键因素之间的关系，包括地形、季节性、气候类型和降雨强度。"
-            ],
-            "challengesCn": [
-                "然而，这些方案可能会引入新的误差源，因为卫星土壤湿度本身存在较大的误差。尽管该新方法在实时误差修正方面相较于现有的实时误差修正方法显示出很大的优势，但它仍然无法减少漏报降水，并且在减少虚假错误方面的改善也有限。此外，该方法还存在一个与现有算法共同的问题，即在降雨强度超过1毫米每小时的情况下，低估降雨量。",
-                "然而，偏差评分的结果显示，目前的方法似乎不适合调整降雨量较高（>= 1m mh r −1）的降雨事件，这需要进一步改进。"
-            ],
-            "methodsCn": [
-                "在我们的研究中，首先通过提出的方法对每小时的GSMaP-NRT进行了修正，生成了一组新的降水产品ILSF-RT，然后将其与GSMaP-NRT和GSMaP-Gauge-NRT进行相互比较，以验证新方法的有效性。",
-                "在新的修正方法中，我们设计了一个更好的地形表达式，使用标准差的高程（SDE，见图1(b)）来替代原来的平均高程。检索误差（E）可以通过卫星降雨率（S）减去地面观测值（G）简单计算得出。在我们的数值实验中，我们发现矩阵A^T A的条件数超过1000，这导致其行列式接近零，从而使矩阵A^T A严重病态。因此，采用了ILS方法来对16个EAM的参数进行估计。基于RILS的异常值消除程序主要包括以下四个步骤。首先，使用ILS方法计算16个EAM的初始参数估计（即（2））。然后，通过将参数估计、S、SDE和E代入以下方程，计算所选点与拟合平面之间的距离（d）。因此，可以使用以下公式对距离的标准差（σ）进行计算。如果di < 3σ，相关的训练样本将被保留以参与后续训练。否则，将其作为异常值进行消除。计算卫星估计的误差。基于四个关键因素的分析建立16个EAM。去除异常值。校准EAM的模型参数。",
-                "新方法主要采用ILS方法来解决考虑四个因素的EAMs的参数估计，然后基于（4）和（6）减少GSMaP-NRT的误差和偏差。最后，ILSF-RT产品与GSMaP-NRT和GSMaP-Gauge-NRT在中国大陆进行了全面的相互比较，以使用各种评估指标进行验证。为了量化新提出方法的性能，我们使用了七个统计指标，包括相关系数（CC）、均方根误差（RMSE）、归一化均方根误差（NRMSE）、相对偏差（RBIAS）以及三种类型的误差成分（命中偏差、漏报偏差和误报偏差）。"
-            ],
-            "datasetCn": [
-                "本研究使用了两个基于GPM的每小时降水估计（SPE），包括GSMaP-NRT和GSMaP-Gauge-NRT。",
-                "一个覆盖中国大陆的超过30,000个常规雨量计的观测网络[见图1(a)]被用于校准和验证新方法中的EAMs。在这里，我们选择了2015年完整的一年，使用GSMaP-NRT和地面观测数据进行校准，并从2017年4月到2019年3月的两年时间内使用三组数据（两个近实时GSMaP产品和雨量计观测）进行验证，考虑到GSMaP-Gauge-NRT V7数据从2017年4月开始可用。"
-            ],
-            "findingsCn": [
-                "一般来说，ILSF-RT产品在RMSE和RBIAS评分方面表现最佳（见表II），这意味着新提出的方法在减少原始GSMaP-NRT的降雨误差方面是有效的。同时，该新方法有效减少了与季节性和气候相关的GSMaP-NRT误差（见图4和图5）。特别是，这种新提出的方法明显改善了干旱地区和寒冷季节（春季和冬季）的数据质量，从而提高了GSMaP-NRT在这些没有地面观测的地区的应用潜力。总体而言，本研究中提出的新方法考虑了检索误差与四个关键因素之间的关系，验证结果证明了其在减少检索误差方面的有效性。",
-                "结果表明，所提出的方法能够有效减少GSMaP-NRT在不同地形、降雨率以及不同季节和气候类型区域的检索误差。新的ILSF-RT甚至在总体上表现出对GSMaP-Gauge-NRT估计的改进。该方法的一个重要优点是，即使在校准时没有使用大量历史数据作为训练样本，它仍然能够在验证中表现良好。总体而言，我们可以得出结论，所提出的新方法能够显著提高GSMaP-NRT小时估计的数据准确性，甚至表现得比GSMaP-Gauge-NRT中使用的有测站调整方案更好。图6的空间分析表明，该新方法有效减少了GSMaP-NRT在不同地形、不同季节和气候区域的检索误差，ILSF-RT在三种评估产品中通常表现最佳。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "雍斌",
+        "nameEn": "YONG Bin ",
+        "unitEn": "Hohai University",
+        "unitCn": "河海大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Does a data collection method incorporate error adjustments based on topography, seasonality, climate type, and rain rate?",
-                "QuestionCn": "数据收集方法是否根据地形、季节性、气候类型和降雨率进行误差调整？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Can the ILS method be effectively used to reduce errors in satellite-based precipitation estimates?",
-                "QuestionCn": "ILS方法能有效用于减少卫星降水估计中的误差吗？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is the use of multiple datasets, including satellite and ground observations, beneficial for refining precipitation estimates?",
-                "QuestionCn": "使用多个数据集，包括卫星和地面观测，是否有助于改进降水估计？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "What is the primary error correction method used in satellite precipitation datasets, is it based on ground observations, satellite-derived soil moisture products, or the consideration of multiple factors like topography and seasonality?",
-                "QuestionCn": "卫星降水数据集使用的主要误差修正方法是基于地面观测、卫星衍生的土壤湿度产品，还是考虑多个因素如地形和季节性？",
-                "AnswerEn": "the consideration of multiple factors like topography and seasonality",
-                "AnswerCn": "考虑多个因素，如地形和季节性。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Which datasets are primarily used for calibrating and validating satellite precipitation error adjustment models, conventional rain gauges, GPM-based hourly satellite precipitation estimates, or other observational networks?",
-                "QuestionCn": "用于校准和验证卫星降水误差调整模型的主要数据集是常规雨量计、基于GPM的每小时卫星降水估计或其他观测网络。",
-                "AnswerEn": "conventional rain gauges",
-                "AnswerCn": "常规雨量计",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the crucial factors considered in developing an error adjustment model for satellite precipitation estimates?",
-                "QuestionCn": "在开发卫星降水估计的误差调整模型时，考虑的关键因素包括：",
-                "AnswerEn": "Topography, seasonality, climate type, rain rate",
-                "AnswerCn": "地形、季节性、气候类型、降雨率",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Where does the high spatial and temporal resolution global precipitation dataset integrate additional data sources?",
-                "QuestionCn": "高空间和时间分辨率的全球降水数据集在哪里整合了额外的数据源？",
-                "AnswerEn": "Northern Hemisphere 90°N-60°N China region 15°N-59°N 70°E-140°E",
-                "AnswerCn": "北半球 90°N-60°N 中国地区 15°N-59°N 70°E-140°E",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "When is the temporal resolution of the global satellite precipitation data set adjusted to achieve higher precision?",
-                "QuestionCn": "全球卫星降水数据集的时间分辨率何时被调整以实现更高的精度？",
-                "AnswerEn": "25km/3hr",
-                "AnswerCn": "25公里/3小时",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "What is an example of a challenge faced when merging different satellite precipitation products for real-time applications?",
-                "QuestionCn": "合并不同卫星降水产品以用于实时应用时面临的一个挑战是什么？",
-                "AnswerEn": "A challenge faced when merging different satellite precipitation products for real-time applications is the inability to correct satellite precipitation estimates in real-time due to the presence of random errors. Additionally, existing correction methods may introduce new error sources, such as those from satellite-derived soil moisture products, potentially degrading the retrieval quality.",
-                "AnswerCn": "在实时应用中，合并不同卫星降水产品时面临的一个挑战是由于随机误差的存在，无法实时校正卫星降水估计。此外，现有的校正方法可能引入新的误差源，例如来自卫星衍生的土壤湿度产品，这可能会降低检索质量。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Could you provide an example of a dataset used to validate satellite precipitation estimates over mainland China?",
-                "QuestionCn": "您能否提供一个用于验证中国大陆卫星降水估计的示例数据集？",
-                "AnswerEn": "An example of a dataset used to validate satellite precipitation estimates over mainland China is the observation network of over 30,000 conventional rain gauges. This dataset was used alongside GPM-based hourly satellite precipitation estimates to calibrate and validate error adjustment models, ensuring the accuracy of the estimates.",
-                "AnswerCn": "用于验证中国大陆卫星降水估计的一个数据集是超过30,000个常规雨量计的观测网络。该数据集与基于GPM的每小时卫星降水估计一起使用，以校准和验证误差调整模型，从而确保估计的准确性。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the defining characteristics of a global satellite precipitation fusion correction product with high spatio-temporal resolution?",
-                "QuestionCn": "高时空分辨率的全球卫星降水融合校正产品的定义特征是什么？",
-                "AnswerEn": "integrates satellite-derived precipitation data with ground observations, applies error correction models, accounts for topography, seasonality, climate type, rain rate, involves error modeling, real-time data input, spatio-temporal downscaling, 25km/3hr resolution",
-                "AnswerCn": "集成卫星衍生的降水数据与地面观测数据，应用误差校正模型，考虑地形、季节性、气候类型和降雨率，涉及误差建模、实时数据输入、时空降尺度，25公里/3小时分辨率。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What specific factors are considered crucial in the development of error adjustment models for satellite precipitation estimates?",
-                "QuestionCn": "在卫星降水估计的误差调整模型开发中，考虑的关键因素包括：",
-                "AnswerEn": "topography, seasonality, climate type, rain rate",
-                "AnswerCn": "地形、季节性、气候类型、降雨率",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many geographical categories were used to establish error adjustment models in the data collection method?",
-                "QuestionCn": "在数据收集方法中，用于建立误差调整模型的地理类别有多少个？",
-                "AnswerEn": "16",
-                "AnswerCn": "16",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many conventional rain gauges were used in the observation network for calibrating and validating error adjustment models?",
-                "QuestionCn": "用于校准和验证误差调整模型的观测网络中使用了多少个常规雨量计？",
-                "AnswerEn": "30,000",
-                "AnswerCn": "30,000",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is meant by 'spatial plane function (SPF)' in the correction of satellite precipitation data?",
-                "QuestionCn": "“空间平面函数（SPF）”在卫星降水数据校正中是什么意思？",
-                "AnswerEn": "Spatial plane function (SPF) refers to the mathematical relationship established between the retrieval errors of satellite precipitation estimates and four critical factors: topography, seasonality, climate type, and rain rate. The SPF is used to understand how these factors influence errors and to formulate a correction method to improve the accuracy of the satellite data.",
-                "AnswerCn": "空间平面函数（SPF）是指建立在卫星降水估计的检索误差与四个关键因素之间的数学关系：地形、季节性、气候类型和降水率。SPF用于理解这些因素如何影响误差，并制定校正方法以提高卫星数据的准确性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do data collection methods utilizing ground observations compare to those using satellite-based precipitation estimates in terms of accuracy and error adjustment?",
-                "QuestionCn": "利用地面观测的数据收集方法与使用卫星降水估计的方法在准确性和误差调整方面有何比较？",
-                "AnswerEn": "Ground observations, such as rain gauge networks, provide direct measurements and are often used for calibrating and validating satellite-based precipitation estimates. Satellite estimates, like those from GSMaP-NRT, offer broad coverage and high frequency but are indirect and have larger errors. The new correction methods aim to reduce these errors by considering factors such as topography and climate type, which may not be accounted for in ground observations alone.",
-                "AnswerCn": "地面观测，如雨量计网络，提供直接测量，通常用于校准和验证基于卫星的降水估计。卫星估计，如GSMaP-NRT，提供广泛的覆盖和高频率，但它们是间接的，且误差较大。新的修正方法旨在通过考虑地形和气候类型等因素来减少这些误差，而这些因素可能在单独的地面观测中未被考虑。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the differences in handling retrieval errors when using satellite-based soil moisture products versus traditional satellite precipitation products?",
-                "QuestionCn": "使用基于卫星的土壤湿度产品与传统卫星降水产品在处理检索错误时的区别是什么？",
-                "AnswerEn": "Using satellite-based soil moisture products introduces new error sources due to large inherent errors, potentially degrading retrieval quality. Traditional satellite precipitation products focus on correcting systematic errors, but the major component is random error. The new methods described aim to address these errors by considering multiple factors like seasonality and climate type, which are not typically addressed in soil moisture product corrections.",
-                "AnswerCn": "使用基于卫星的土壤湿度产品引入了新的误差来源，由于固有的较大误差，可能会降低检索质量。传统的卫星降水产品侧重于修正系统误差，但主要成分是随机误差。所描述的新方法旨在通过考虑季节性和气候类型等多个因素来解决这些误差，而这些因素通常在土壤湿度产品的修正中未被考虑。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways do merging precipitation products differ from real-time correction methods in improving satellite precipitation estimates?",
-                "QuestionCn": "合并降水产品与实时校正方法在改善卫星降水估计方面有何不同？",
-                "AnswerEn": "Merging precipitation products can enhance the overall quality but does not adjust errors in real-time. Real-time correction methods, such as those proposed with ILSF-RT, specifically target reducing retrieval errors by considering multiple factors like topography and climate type. These methods provide immediate improvements in data accuracy, which is crucial for applications like natural hazard forecasting.",
-                "AnswerCn": "合并降水产品可以提高整体质量，但并不能实时调整错误。实时校正方法，如ILSF-RT，专门针对通过考虑多种因素（如地形和气候类型）来减少检索错误。这些方法提供了数据准确性的即时改善，这对于自然灾害预报等应用至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can the integration of varying topographical features, climate types, and seasonal variations enhance the accuracy of satellite precipitation estimates?",
-                "QuestionCn": "不同地形特征、气候类型和季节变化的整合如何提高卫星降水估计的准确性？",
-                "AnswerEn": "The integration can enhance accuracy by establishing a relationship between retrieval errors and these factors. By analyzing these relationships, effective error adjustment models can be developed, which consider the influence of topography, seasonality, climate type, and rain rate on satellite precipitation estimates.",
-                "AnswerCn": "集成可以通过建立检索错误与这些因素之间的关系来提高准确性。通过分析这些关系，可以开发有效的错误调整模型，这些模型考虑了地形、季节性、气候类型和降雨率对卫星降水估计的影响。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "In what ways could the development of real-time error correction methods impact the application of satellite precipitation products in natural hazard forecasting?",
-                "QuestionCn": "实时误差修正方法的发展将如何影响卫星降水产品在自然灾害预报中的应用？",
-                "AnswerEn": "Real-time error correction methods could significantly improve the accuracy of satellite precipitation products, making them more reliable for natural hazard forecasting. By reducing errors associated with seasonality, topography, and climate, these methods can enhance the potential for early warning systems for events like floods and landslides, especially in regions with limited ground observations.",
-                "AnswerCn": "实时误差修正方法可以显著提高卫星降水产品的准确性，使其在自然灾害预报中更具可靠性。通过减少与季节性、地形和气候相关的误差，这些方法可以增强早期预警系统在洪水和滑坡等事件中的潜力，特别是在地面观测有限的地区。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors lead to errors in satellite precipitation estimates, particularly in diverse topographic and climatic regions?",
-                "QuestionCn": "导致卫星降水估计错误的因素，特别是在多样的地形和气候区域中，主要包括以下几点：",
-                "AnswerEn": "Errors in satellite precipitation estimates are closely related to four crucial factors: topography, seasonality, climate type, and rain rate. These factors influence the retrieval errors of satellite precipitation, necessitating comprehensive investigation and bias adjustment methods to correct these errors in real-time.",
-                "AnswerCn": "卫星降水估计的误差与四个关键因素密切相关：地形、季节性、气候类型和降水强度。这些因素影响卫星降水的反演误差，因此需要对这些误差进行全面调查和偏差调整方法，以便实时纠正这些误差。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why do existing real-time error correction methods for satellite precipitation products struggle with high rain rates?",
-                "QuestionCn": "现有的卫星降水产品实时误差修正方法为何在高降雨率下表现不佳？",
-                "AnswerEn": "Existing real-time error correction methods often struggle with high rain rates because they primarily address systematic errors and may introduce new error sources. These methods tend to underestimate rainfall volume for rain rates over 1 mm/hr and have limited effectiveness in reducing missed precipitation and false errors.",
-                "AnswerCn": "现有的实时误差修正方法在高降雨率下往往表现不佳，因为它们主要针对系统性误差，可能引入新的误差源。这些方法在降雨率超过1毫米/小时时往往低估降雨量，并且在减少漏报和虚假错误方面效果有限。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What causes the integration of various precipitation datasets to be challenging in real-time applications?",
-                "QuestionCn": "在实时应用中，整合各种降水数据集的挑战原因是什么？",
-                "AnswerEn": "The integration of various precipitation datasets in real-time is challenging due to the inherent large errors and uncertainties in satellite-derived products. Combining datasets requires addressing these errors, often related to retrieval inaccuracies influenced by factors such as topography, seasonality, climate type, and rain rate, which complicates real-time corrections.",
-                "AnswerCn": "实时整合各种降水数据集面临挑战，因为卫星衍生产品固有的大误差和不确定性。结合数据集需要解决这些误差，这些误差通常与受地形、季节性、气候类型和降雨率等因素影响的检索不准确性有关，这使得实时修正变得复杂。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential impacts on satellite precipitation product accuracy when merging data from various sources such as satellite observations and ground-based measurements?",
-                "QuestionCn": "当将卫星观测数据和地面测量数据等各种来源的数据合并时，对卫星降水产品准确性的潜在影响是什么？",
-                "AnswerEn": "Merging different precipitation products is an effective way to enhance the quality of satellite precipitation products (SPPs). This approach can help correct errors in real-time, significantly improving the accuracy and reducing the biases of the original satellite-based estimates. It can also improve the data quality over areas with no ground observations, such as arid regions and during cold seasons.",
-                "AnswerCn": "合并不同的降水产品是一种有效的方法，可以提高卫星降水产品（SPPs）的质量。这种方法可以帮助实时纠正错误，显著提高原始卫星估计的准确性并减少偏差。它还可以改善在没有地面观测的地区（如干旱地区和寒冷季节）的数据质量。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the consequences of using a novel error adjustment method on the performance of satellite precipitation products in regions with sparse ground observation networks?",
-                "QuestionCn": "在地面观测网络稀疏的地区使用新颖的误差调整方法对卫星降水产品性能的影响是什么？",
-                "AnswerEn": "Using a novel error adjustment method can significantly improve the performance of satellite precipitation products in regions with sparse ground observation networks. Such methods effectively reduce retrieval errors associated with varying terrains, seasons, and climate types, thus enhancing the potential application of satellite data in areas where traditional ground observations are lacking.",
-                "AnswerCn": "使用一种新颖的误差调整方法可以显著提高卫星降水产品在观测网络稀疏地区的性能。这些方法有效减少了与不同地形、季节和气候类型相关的检索误差，从而增强了卫星数据在传统地面观测缺乏的区域的潜在应用。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to analyze the relationship between satellite retrieval errors and factors such as topography, seasonality, climate type, and rain rate?",
-                "QuestionCn": "分析卫星获取误差与地形、季节性、气候类型和降雨率等因素之间的关系是重要的原因是什么？",
-                "AnswerEn": "Analyzing these relationships is crucial because it allows for the development of a comprehensive error adjustment model that can effectively correct satellite precipitation estimates, thereby improving their accuracy and making them more useful for hydrometeorological predictions and natural hazard forecasting.",
-                "AnswerCn": "分析这些关系至关重要，因为它可以帮助开发一个全面的误差调整模型，有效地修正卫星降水估计，从而提高其准确性，使其在水文气象预测和自然灾害预报中更具实用性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "How can one systematically investigate the relationships between satellite precipitation retrieval errors and factors like topography, seasonality, and climate type to improve data accuracy?",
-                "QuestionCn": "如何系统地研究卫星降水获取误差与地形、季节性和气候类型等因素之间的关系，以提高数据准确性？",
-                "AnswerEn": "One approach is to analyze the error components of satellite-based precipitation estimates, such as those from GPM-based passive microwave and infrared sensors, by establishing a spatial plane function (SPF) that correlates retrieval errors with topography, season, and climate type. This includes using a power function to propose a bias adjustment method, which aims to correct errors in near-real-time satellite precipitation products by considering these crucial factors over a specified region such as mainland China.",
-                "AnswerCn": "一种方法是通过建立一个空间平面函数（SPF），分析卫星降水估计的误差成分，例如来自GPM的被动微波和红外传感器的估计，来将检索误差与地形、季节和气候类型相关联。这包括使用幂函数提出一种偏差调整方法，旨在通过考虑这些关键因素在指定区域（如中国大陆）内实时修正卫星降水产品的误差。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What procedural steps are involved in creating a high-resolution satellite precipitation dataset that combines multiple data sources, and how is accuracy validated?",
-                "QuestionCn": "创建一个结合多个数据源的高分辨率卫星降水数据集涉及哪些程序步骤，以及如何验证准确性？",
-                "AnswerEn": "The process involves developing an error correction model using historical data from satellite estimates and ground observations to adjust for errors related to topography, seasonality, climate type, and rain rate. This model is applied to near-real-time satellite data, such as the GSMaP-NRT, to produce a corrected dataset. Validation is done by comparing the new dataset with both the original and gauge-adjusted satellite data using statistical indices like RMSE and RBIAS, and by assessing performance across different terrains and climate areas.",
-                "AnswerCn": "该过程涉及使用来自卫星估计和地面观测的历史数据开发误差修正模型，以调整与地形、季节性、气候类型和降雨率相关的误差。该模型应用于近实时卫星数据，如GSMaP-NRT，以生成修正后的数据集。通过使用统计指标如均方根误差（RMSE）和相对偏差指数（RBIAS）比较新数据集与原始数据和经过雨量计调整的卫星数据，进行验证，并评估在不同地形和气候区域的表现。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methods can be employed to integrate ground-based observations with satellite data to enhance the accuracy of satellite precipitation products?",
-                "QuestionCn": "可以采用哪些方法将地面观测与卫星数据结合，以提高卫星降水产品的准确性？",
-                "AnswerEn": "A method involves merging satellite-based precipitation estimates with ground-based observations, such as those from an observation network of over 30,000 rain gauges. This integration requires establishing error adjustment models (EAMs) that consider crucial factors such as topography and seasonality, and applying these models to correct satellite data in real-time. The effectiveness of this integration can be validated by comparing the corrected data against both ground observations and existing satellite products.",
-                "AnswerCn": "一种方法涉及将基于卫星的降水估计与地面观测数据（例如来自超过30,000个雨量计的观测网络）进行合并。这一整合需要建立误差调整模型（EAMs），考虑重要因素如地形和季节性，并将这些模型应用于实时修正卫星数据。通过将修正后的数据与地面观测和现有卫星产品进行比较，可以验证这种整合的有效性。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What data correction methods enable the improvement of near-real-time satellite precipitation estimates in areas with varying topography and climate types?",
-                "QuestionCn": "哪些数据修正方法能够改善在地形和气候类型变化的地区的近实时卫星降水估计？",
-                "AnswerEn": "Data correction methods that consider relationships between retrieval errors and factors such as topography, seasonality, climate type, and rain rate can enable the improvement of near-real-time satellite precipitation estimates. Techniques like the Integrated Least Squares (ILS) method are utilized to adjust errors and biases in satellite data, effectively reducing retrieval errors in varying conditions.",
-                "AnswerCn": "考虑到检索错误与地形、季节性、气候类型和降雨率等因素之间关系的数据修正方法，可以提高近实时卫星降水估计的准确性。像综合最小二乘法（ILS）这样的技术被用来调整卫星数据中的错误和偏差，有效减少在不同条件下的检索错误。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "What technological and methodological advancements enable the reduction of errors in satellite precipitation data for extreme weather event forecasting?",
-                "QuestionCn": "哪些技术和方法上的进展能够减少极端天气事件预报中卫星降水数据的误差？",
-                "AnswerEn": "Technological and methodological advancements such as the development of error adjustment models and the use of spatial plane function relationships enable the reduction of errors in satellite precipitation data. These advancements allow for more accurate forecasting of extreme weather events by addressing the dependency of retrieval errors on various factors like topography, season, and climate.",
-                "AnswerCn": "技术和方法的进步，如误差调整模型的开发和空间平面函数关系的使用，使得卫星降水数据中的误差得以减少。这些进展通过解决检索误差对地形、季节和气候等各种因素的依赖性，从而实现了对极端天气事件的更准确预测。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might a comprehensive error correction method for satellite precipitation estimates involve four factors like topography, seasonality, climate type, and rain rate?",
-                "QuestionCn": "一个全面的卫星降水估计误差修正方法可能涉及四个因素，如地形、季节性、气候类型和降水强度，原因可能包括以下几点：",
-                "AnswerEn": "A comprehensive error correction method that involves factors such as topography, seasonality, climate type, and rain rate is crucial because these elements are closely linked to the retrieval errors of satellite precipitation estimates. Understanding the relationships between these factors and the errors allows for more precise correction models, ultimately enhancing the accuracy of satellite precipitation data, especially in real-time applications.",
-                "AnswerCn": "一个综合的误差修正方法，涉及地形、季节性、气候类型和降雨率等因素是至关重要的，因为这些元素与卫星降水估计的检索误差密切相关。理解这些因素与误差之间的关系可以帮助建立更精确的修正模型，最终提高卫星降水数据的准确性，特别是在实时应用中。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are some anticipated challenges when using real-time error correction methods for satellite precipitation products?",
-                "QuestionCn": "在使用实时误差修正方法处理卫星降水产品时，预期会面临的一些挑战包括：",
-                "AnswerEn": "Some anticipated challenges with real-time error correction methods for satellite precipitation products include the introduction of new error sources due to the large inherent errors in satellite soil moisture, limited improvements in reducing false errors, and underestimating rainfall volumes for higher rain rates. These challenges highlight the ongoing need to refine correction algorithms to address both systematic and random errors effectively.",
-                "AnswerCn": "一些对卫星降水产品实时误差修正方法的预期挑战包括，由于卫星土壤湿度的固有误差较大，可能引入新的误差源；在减少虚假错误方面的改进有限；以及对高降雨率的降雨量低估。这些挑战突显了持续需要完善修正算法，以有效应对系统性和随机性误差。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How do the current data collection methods for satellite precipitation estimates address errors related to topography and climate type?",
-                "QuestionCn": "当前的卫星降水估计数据收集方法如何解决与地形和气候类型相关的误差？",
-                "AnswerEn": "The current data collection methods attempt to address errors related to topography and climate type by establishing a relationship between retrieval errors and four key factors: topography, seasonality, climate type, and rain rate. A novel bias adjustment method is proposed to correct hourly estimates by analyzing these relationships in detail, resulting in improvements over arid areas and cold seasons.",
-                "AnswerCn": "当前的数据收集方法试图通过建立检索误差与四个关键因素之间的关系来解决与地形和气候类型相关的误差：地形、季节性、气候类型和降雨率。提出了一种新颖的偏差调整方法，通过详细分析这些关系来修正小时估计，从而在干旱地区和寒冷季节取得了改进。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the challenges in integrating ground-based and satellite-derived precipitation data for creating a reliable dataset?",
-                "QuestionCn": "将地面观测和卫星获取的降水数据整合以创建可靠数据集面临的挑战有哪些？",
-                "AnswerEn": "Integrating ground-based and satellite-derived precipitation data faces challenges such as introducing new error sources due to large inherent errors in satellite soil moisture and the underestimation of rainfall volumes over certain rain rates. Additionally, real-time correction methods often only reduce systematic errors, while random errors remain a significant challenge.",
-                "AnswerCn": "整合地面和卫星获取的降水数据面临挑战，例如由于卫星土壤湿度的固有误差较大而引入新的误差源，以及在某些降雨强度下降雨量的低估。此外，实时修正方法通常只能减少系统误差，而随机误差仍然是一个重大挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways can future datasets improve by considering the limitations of current satellite soil moisture correction methods?",
-                "QuestionCn": "未来的数据集可以通过考虑当前卫星土壤湿度校正方法的局限性来改善，具体方式包括：",
-                "AnswerEn": "Future datasets can improve by addressing the limitations of current satellite soil moisture correction methods by developing algorithms that account for the comprehensive relationships between retrieval errors and crucial factors such as topography and climate. They can also incorporate advanced techniques to better handle missed precipitation and refine error sources, ultimately enhancing the accuracy and applicability of satellite precipitation products.",
-                "AnswerCn": "未来的数据集可以通过解决当前卫星土壤湿度校正方法的局限性来改进，开发考虑到检索误差与地形和气候等关键因素之间综合关系的算法。它们还可以结合先进技术，更好地处理漏报降水和细化误差来源，从而最终提高卫星降水产品的准确性和适用性。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how the correction of satellite precipitation errors can be achieved in real-time given the complexity of factors like topography and climate.",
-                "QuestionCn": "我不明白如何在实时情况下纠正卫星降水错误，因为地形和气候等因素的复杂性。",
-                "AnswerEn": "The correction of satellite precipitation errors in real-time is achieved by establishing an error adjustment model (EAM) that considers crucial factors such as topography, seasonality, climate type, and rain rate. By analyzing the relationships between these factors and the retrieval errors, the model can adjust the errors effectively using methods like an ILS approach for parameter estimation, which can be applied in real-time.",
-                "AnswerCn": "实时修正卫星降水误差是通过建立一个考虑关键因素如地形、季节性、气候类型和降雨率的误差调整模型（EAM）来实现的。通过分析这些因素与检索误差之间的关系，该模型可以有效地调整误差，采用如ILS方法进行参数估计，这可以在实时中应用。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I can't make sense of why merging different precipitation products is considered effective if it can't correct errors in real-time.",
-                "QuestionCn": "我无法理解为什么合并不同的降水产品被认为是有效的，如果它无法实时纠正错误。",
-                "AnswerEn": "Merging different precipitation products is considered effective because it enhances the overall quality of satellite precipitation products by combining the strengths of various datasets. Although it may not correct errors in real-time, it helps to improve the accuracy and reliability of the datasets by mitigating systematic errors and providing a more comprehensive data set that can be used for further analysis and correction.",
-                "AnswerCn": "合并不同的降水产品被认为是有效的，因为它通过结合各种数据集的优势来增强卫星降水产品的整体质量。尽管它可能无法实时纠正错误，但通过减轻系统性错误并提供更全面的数据集，它有助于提高数据集的准确性和可靠性，这些数据集可以用于进一步的分析和修正。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please summarize the data collection methods and techniques used to develop a global satellite precipitation dataset with high spatiotemporal resolution.",
-                "QuestionCn": "总结用于开发高时空分辨率全球卫星降水数据集的数据收集方法和技术。",
-                "AnswerEn": "The dataset is developed by first utilizing IMERG-Early and CPC data from 2010-2014 to establish an error correction model based on rain intensity across different terrains, climate zones, and seasons. This model is then applied in real-time to correct IMERG-Early data from 2015-2020, resulting in a global corrected satellite precipitation dataset with a spatial resolution of 50km/1day. Further downscaling and resampling to 25km/3hr are conducted, incorporating ERA5 data and random forest-based precipitation data in specific regions to enhance resolution.",
-                "AnswerCn": "该数据集首先利用2010-2014年的IMERG-Early和CPC数据建立了一个基于不同地形、气候区和季节的降雨强度的误差修正模型。然后，该模型被实时应用于修正2015-2020年的IMERG-Early数据，从而生成一个全球修正的卫星降水数据集，空间分辨率为50km/1天。进一步进行下采样和重采样至25km/3小时，结合ERA5数据和基于随机森林的特定区域降水数据，以提高分辨率。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Please analyze the challenges involved in correcting satellite precipitation estimates in real-time, focusing on the factors affecting retrieval errors.",
-                "QuestionCn": "请分析实时修正卫星降水估计中面临的挑战，重点关注影响检索误差的因素。",
-                "AnswerEn": "Challenges in real-time correction of satellite precipitation estimates include the introduction of new error sources through satellite-derived soil moisture products, the dependency on real-time ground observations, and the fundamental algorithmic defects by neglecting crucial factors related to retrieval errors. Current methods may fail to correct for random errors, which are the major component, and struggle with high rain rate events. The relationship between retrieval errors and topography, seasonality, climate type, and rain rate needs detailed analysis to establish effective error adjustment models.",
-                "AnswerCn": "实时修正卫星降水估计面临的挑战包括通过卫星衍生的土壤湿度产品引入新的误差源、对实时地面观测的依赖，以及由于忽视与检索误差相关的关键因素而导致的基本算法缺陷。目前的方法可能无法修正随机误差，而随机误差是主要成分，并且在高降雨率事件中表现不佳。检索误差与地形、季节性、气候类型和降雨率之间的关系需要详细分析，以建立有效的误差调整模型。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A Novel Real-Time Error Adjustment Method with Considering Four Factors for Correcting Hourly Multi-Satellite Precipitation Estimates",
+        "referenceCn": null,
+        "referenceEn": "Chen, H.Q., Yong, B., Gourley, J.J., Wen, D.B., Qi, W.Q., & Yang, K. (2022). A Novel Real-Time Error Adjustment Method with Considering Four Factors for Correcting Hourly Multi-Satellite Precipitation Estimates. IEEE Transactions on Geoscience and Remote Sensing, 60, 4105211."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "降水",
+        "nameEn": "Precipitation"
+      },
+      {
+        "nameCn": "降雨强度",
+        "nameEn": "Rainfall rate"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2015-2020",
+        "keywordEn": "2015-2020",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "全球能量循环和水循环关键参数的立体观测与遥感反演",
+        "titleEn": "National Key Research and Development Program of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "High-accuracy near-real-time satellite precipitation estimates (SPEs) provide an opportunity for hydrometeorologists to improve the forecasting of extreme events, such as flood, landslide, tropical cyclone, and other extreme events, at the large scale. However, the currently operational near-real-time SPEs still have larger errors and uncertainties.",
+        "A comprehensive investigation with regard to the relationships between retrieval errors and four factors (i.e., topography, seasonality, climate type, and rain rate) is still lacking. By analyzing the error components of GPM-based passive microwave (PMW) and infrared sensors, for the first time, we comprehensively revealed the dependency of retrieval errors of satellite precipitation on the topography, season, and climate type over mainland China. Furthermore, a power function relationship between retrieval errors and logarithm of rain rates was subsequently proposed in the extended study. In practice, many previous literatures have proposed various correction methods to improve the accuracy of the near-real-time SPPs for enhancing their potentials in natural hazard forecasting. However, these correction methods suffer from different defects: 1) some methods strongly depend on the ground observations in real-time and their effectiveness is also closely related to the observed accuracy; 2) some methods used the satellite-derived soil moisture products to correct SPEs in real-time, but these ways may introduce new error sources and degrade the retrieval quality of original SPPs; 3) others only selected single or few factors but neglected some crucial ones associated with retrieval errors, leading to the fundamental algorithmic defects in establishing the EAMs; and 4) some real-time error correction methods work for only reducing systematic error, but the major error component of current satellite products is random error. Merging different precipitation products is an effective way to enhance the quality of SPPs. However, it cannot correct SPEs in real-time.",
+        "Our previous studies have found that the errors of the satellite-based precipitation estimates are closely related to four crucial factors, i.e., seasonality, topography, climate type, and rain rate. However, the comprehensive relationships between satellite retrieval errors and these four factors are still not investigated, and the expected EAM was also not established. Based on the SPF relationships adaptive for 16 different categories, we proposed a novel bias adjustment method to correct the hourly GSMaP-NRT estimates in real-time.",
+        "With the rapid development of remote sensing technique in the past 20 years, the retrieval information from various satellite sensors becomes a reliable data source of obtaining areal precipitation estimates over large scales and even globe. Although the satellite-based precipitation estimates are indirect, the high frequency and broad coverage make them uniquely complementary to conventional rain gauge networks and weather radars. Also, the satellite-based precipitation estimates provide an opportunity for both hydrologists and meteorologists to improve the forecasting of extreme events, such as flood warning, landslide detection, typhoon monitoring, and drought diagnosis, at the large scale. In practice, the near-real-time satellite precipitation products (SPPs) are more appropriate for these hydrometeorological predictions relative to post-real-time research quality SPPs. However, the near-real-time SPPs normally have larger errors and uncertainties than the post-real-time products. Therefore, it is important to develop effective error correction methods for further improving the data accuracy of mainstream SPPs in real-time, which will significantly enhance their application potentials especially for natural hazard warning. The scientific understanding of error features of satellite precipitation estimates (SPEs) is essential to establish the error adjustment model (EAM) in correction methods."
+      ],
+      "research objective": [
+        "In this study, we found that there exists a clear relationship of spatial plane function (SPF) between retrieval errors of SPEs and four crucial factors including topography, seasonality, climate type, and rain rate.",
+        "This study primarily aims at establishing an effective EAM to correct the hourly near-real-time global satellite mapping of precipitation (GSMaP-NRT) by analyzing the function relationships between satellite retrieval errors and multiple factors in detail. Consequently, here we proposed a novel real-time error adjustment method that considers four impacting factors to precipitation errors to correct for the hourly GSMaP-NRT precipitation estimates in real-time.",
+        "This study attempts to comprehensively consider four crucial factors associated with retrieval errors and effectively correct the near-real-time multi-SPEs by the EAM derived from historical satellite–gauge data pairs. In this study, we systematically investigated the relationships between retrieval errors of SPEs and four crucial factors including topography, seasonality, climate type, and rain rate over mainland China."
+      ],
+      "challenges": [
+        "However, these schemes might introduce the new error sources due to large errors inherent in satellite soil moisture. Despite that the new method shows great advantages for error corrections in real-time relative to the existing real-time error correction methods, it also cannot reduce missed precipitation and its limited improvements in reducing false errors. In addition, this method has another common problem also inherent in the existing algorithms, that is, underestimating the rainfall volume in the rain rates over 1 mm hr−1.",
+        "However, the results of bias score show that the current method seems unsuitable to adjust the rainfall events with higher rain rates (>= 1m mh r −1), which needs to be further improved."
+      ],
+      "methods": [
+        "In our study, the hourly GSMaP-NRT was first corrected by the proposed method to produce a set of new precipitation product ILSF-RT, which was then intercompared with both GSMaP-NRT and GSMaP-Gauge-NRT to validate the new approach.",
+        "In the new correction method, we design a better expression for topography using the standard deviation of elevation [SDE, see Fig. 1(b)] to substitute the original average elevation. The retrieval errors (E) can be simply calculated by satellite rain rate (S) minus ground observations (G). In our numerical experiments, we found that the condition number of matrix A T A is beyond 1000, which causes its determinant close to zero, resulting in matrix AT A seriously ill-conditioned. Therefore, an ILS approach was applied to perform the parameter estimates of X for the 16 EAMs. The procedure of RILS-based outlier elimination mainly includes the following four steps. The ILS method was used to compute the initial parameter estimates of the 16 EAMs [i.e., (2)]. The distances (d) between the selected points and the fitting plane were calculated by substituting parameter estimates, S, SDE, and E into the following equation. Thus, the standard deviation of the distance (σ) could be worked out using the following formula pair. If di < 3σ, the corresponding training sample will be retained to join the following training. Otherwise, it will be eliminated as an outlier. Calculating the errors of satellite estimates. Establishing 16 EAMs based on the analyses of four crucial factors. Removing the outliers. Calibrating the model parameters of EAMs.",
+        "The new method primarily adopts the ILS method to solve the parameter estimates of the EAMs that consider four factors, and then the errors and biases of GSMaP-NRT are reduced based on (4) and (6). Finally, the ILSF-RT product was comprehensively intercompared with GSMaP-NRT and GSMaP-Gauge-NRT over mainland China for validation using various evaluation indices. To quantify the performance of the new proposed method, we used seven statistical indices including correlation coefficient (CC), root mean squared error (RMSE), normalized root mean squared error (NRMSE), relative bias (RBIAS), and three types of error components (hit bias, miss bias, and false bias)."
+      ],
+      "dataset": [
+        "Two GPM-based hourly SPEs, including GSMaP-NRT and GSMaP-Gauge-NRT, were used in this study.",
+        "An observation network of over 30 000 conventional rain gauges covering mainland China [see Fig. 1(a)] was used to calibrate and validate the EAMs in the new method. Here, we selected one complete year of 2015 with GSMaP-NRT and ground observations for calibration and two years of three datasets (two near-real-time GSMaP products and gauged observations), from April 2017 to March 2019, for validation, considering the GSMaP-Gauge-NRT V7 data available starting from April 2017."
+      ],
+      "findings": [
+        "Generally speaking, ILSF-RT product performs the best among three products in terms of RMSE and RBIAS scores (see Table II), meaning that the new proposed method is effective in reducing the rainfall errors of the original GSMaP-NRT. Meanwhile, the new method effectively reduces the errors of GSMaP-NRT associated with seasonality and climate (see Figs. 4 and 5). In particular, this new proposed method evidently improves the data quality over arid areas and cold seasons (spring and winter), which improves the application potentials of GSMaP-NRT in such areas where no ground observations are not available. Overall, the new method proposed in this study considers the relationships between retrieval errors and four crucial factors, and the verification results have proved the effectiveness in reducing the retrieval errors.",
+        "The results show that the proposed method can effectively reduce the retrieval errors of GSMaP-NRT for various terrains and rain rates over different seasons and climate-type areas. The new ILSF-RT even exhibits a general improvement over the GSMaP-Gauge-NRT estimates. One important merit of the new method is that it can perform rather well in validation even when not much historical data were applied as training samples in calibration. Overall, we can conclude that the new proposed method can substantially improve the data accuracy of hourly GSMaP-NRT estimates and even perform better than the gauged adjustment scheme used in GSMaP-Gauge-NRT. The spatial analyses from Fig. 6 demonstrate that the new method effectively reduces the retrieval errors of GSMaP-NRT for various terrains and over different seasons and climate areas and ILSF-RT generally exhibits the best performance among three evaluation products."
+      ],
+      "backgroundCn": [
+        "高精度近实时卫星降水估计（SPEs）为水文气象学家提供了改善极端事件（如洪水、滑坡、热带气旋和其他极端事件）大规模预测的机会。然而，目前运营的近实时SPEs仍然存在较大的误差和不确定性。",
+        "关于检索错误与四个因素（即地形、季节性、气候类型和降雨率）之间关系的综合研究仍然缺乏。通过分析基于GPM的被动微波（PMW）和红外传感器的错误成分，我们首次全面揭示了卫星降水检索错误在中国大陆地区与地形、季节和气候类型的依赖关系。此外，在扩展研究中提出了检索错误与降雨率对数之间的幂函数关系。在实践中，许多先前的文献提出了各种修正方法，以提高近实时卫星降水产品（SPPs）的准确性，从而增强其在自然灾害预报中的潜力。然而，这些修正方法存在不同的缺陷：1）一些方法强烈依赖于实时的地面观测，其有效性也与观测的准确性密切相关；2）一些方法使用卫星衍生的土壤湿度产品来实时修正卫星降水估计（SPEs），但这些方法可能引入新的误差源，降低原始SPPs的检索质量；3）其他方法仅选择单一或少数因素，而忽略了一些与检索错误相关的重要因素，导致在建立误差修正模型（EAMs）时存在根本的算法缺陷；4）一些实时误差修正方法仅能减少系统误差，但当前卫星产品的主要误差成分是随机误差。合并不同的降水产品是提高SPPs质量的有效方法，但无法实时修正SPEs。",
+        "我们之前的研究发现，卫星降水估计的误差与四个关键因素密切相关，即季节性、地形、气候类型和降雨强度。然而，卫星检索误差与这四个因素之间的综合关系仍未得到研究，预期的EAM也尚未建立。基于适用于16个不同类别的SPF关系，我们提出了一种新颖的偏差调整方法，以实时校正每小时的GSMaP-NRT估计值。",
+        "在过去20年中，遥感技术的快速发展使得从各种卫星传感器获取的信息成为获取大范围甚至全球面积降水估计的可靠数据源。尽管基于卫星的降水估计是间接的，但其高频率和广泛覆盖使其在常规雨量计网络和气象雷达中具有独特的互补性。此外，基于卫星的降水估计为水文学家和气象学家提供了改善极端事件预测的机会，例如洪水预警、滑坡检测、台风监测和干旱诊断，尤其是在大尺度上。在实践中，近实时卫星降水产品（SPPs）相对于后实时研究质量SPPs更适合这些水文气象预测。然而，近实时SPPs通常比后实时产品具有更大的误差和不确定性。因此，开发有效的误差修正方法以进一步提高主流SPPs的实时数据准确性非常重要，这将显著增强它们在自然灾害预警中的应用潜力。对卫星降水估计（SPEs）误差特征的科学理解对于建立误差调整模型（EAM）以进行修正方法至关重要。"
+      ],
+      "research objectiveCn": [
+        "在这项研究中，我们发现空间平面功能（SPF）与SPEs的检索错误之间存在明显的关系，这种关系受到四个关键因素的影响，包括地形、季节性、气候类型和降雨率。",
+        "本研究主要旨在建立一个有效的EAM，通过详细分析卫星检索误差与多个因素之间的函数关系，来修正每小时的近实时全球卫星降水映射（GSMaP-NRT）。因此，我们提出了一种新颖的实时误差调整方法，考虑了四个影响降水误差的因素，以实时修正每小时的GSMaP-NRT降水估计值。",
+        "本研究试图全面考虑与检索误差相关的四个关键因素，并通过从历史卫星-雨量计数据对中得出的EAM有效地纠正近实时的多重降水事件（SPEs）。在本研究中，我们系统地调查了大陆中国地区SPEs的检索误差与四个关键因素之间的关系，包括地形、季节性、气候类型和降雨强度。"
+      ],
+      "challengesCn": [
+        "然而，这些方案可能会引入新的误差源，因为卫星土壤湿度本身存在较大的误差。尽管该新方法在实时误差修正方面相较于现有的实时误差修正方法显示出很大的优势，但它仍然无法减少漏报降水，并且在减少虚假错误方面的改善也有限。此外，该方法还存在一个与现有算法共同的问题，即在降雨强度超过1毫米每小时的情况下，低估降雨量。",
+        "然而，偏差评分的结果显示，目前的方法似乎不适合调整降雨量较高（>= 1m mh r −1）的降雨事件，这需要进一步改进。"
+      ],
+      "methodsCn": [
+        "在我们的研究中，首先通过提出的方法对每小时的GSMaP-NRT进行了修正，生成了一组新的降水产品ILSF-RT，然后将其与GSMaP-NRT和GSMaP-Gauge-NRT进行相互比较，以验证新方法的有效性。",
+        "在新的修正方法中，我们设计了一个更好的地形表达式，使用标准差的高程（SDE，见图1(b)）来替代原来的平均高程。检索误差（E）可以通过卫星降雨率（S）减去地面观测值（G）简单计算得出。在我们的数值实验中，我们发现矩阵A^T A的条件数超过1000，这导致其行列式接近零，从而使矩阵A^T A严重病态。因此，采用了ILS方法来对16个EAM的参数进行估计。基于RILS的异常值消除程序主要包括以下四个步骤。首先，使用ILS方法计算16个EAM的初始参数估计（即（2））。然后，通过将参数估计、S、SDE和E代入以下方程，计算所选点与拟合平面之间的距离（d）。因此，可以使用以下公式对距离的标准差（σ）进行计算。如果di < 3σ，相关的训练样本将被保留以参与后续训练。否则，将其作为异常值进行消除。计算卫星估计的误差。基于四个关键因素的分析建立16个EAM。去除异常值。校准EAM的模型参数。",
+        "新方法主要采用ILS方法来解决考虑四个因素的EAMs的参数估计，然后基于（4）和（6）减少GSMaP-NRT的误差和偏差。最后，ILSF-RT产品与GSMaP-NRT和GSMaP-Gauge-NRT在中国大陆进行了全面的相互比较，以使用各种评估指标进行验证。为了量化新提出方法的性能，我们使用了七个统计指标，包括相关系数（CC）、均方根误差（RMSE）、归一化均方根误差（NRMSE）、相对偏差（RBIAS）以及三种类型的误差成分（命中偏差、漏报偏差和误报偏差）。"
+      ],
+      "datasetCn": [
+        "本研究使用了两个基于GPM的每小时降水估计（SPE），包括GSMaP-NRT和GSMaP-Gauge-NRT。",
+        "一个覆盖中国大陆的超过30,000个常规雨量计的观测网络[见图1(a)]被用于校准和验证新方法中的EAMs。在这里，我们选择了2015年完整的一年，使用GSMaP-NRT和地面观测数据进行校准，并从2017年4月到2019年3月的两年时间内使用三组数据（两个近实时GSMaP产品和雨量计观测）进行验证，考虑到GSMaP-Gauge-NRT V7数据从2017年4月开始可用。"
+      ],
+      "findingsCn": [
+        "一般来说，ILSF-RT产品在RMSE和RBIAS评分方面表现最佳（见表II），这意味着新提出的方法在减少原始GSMaP-NRT的降雨误差方面是有效的。同时，该新方法有效减少了与季节性和气候相关的GSMaP-NRT误差（见图4和图5）。特别是，这种新提出的方法明显改善了干旱地区和寒冷季节（春季和冬季）的数据质量，从而提高了GSMaP-NRT在这些没有地面观测的地区的应用潜力。总体而言，本研究中提出的新方法考虑了检索误差与四个关键因素之间的关系，验证结果证明了其在减少检索误差方面的有效性。",
+        "结果表明，所提出的方法能够有效减少GSMaP-NRT在不同地形、降雨率以及不同季节和气候类型区域的检索误差。新的ILSF-RT甚至在总体上表现出对GSMaP-Gauge-NRT估计的改进。该方法的一个重要优点是，即使在校准时没有使用大量历史数据作为训练样本，它仍然能够在验证中表现良好。总体而言，我们可以得出结论，所提出的新方法能够显著提高GSMaP-NRT小时估计的数据准确性，甚至表现得比GSMaP-Gauge-NRT中使用的有测站调整方案更好。图6的空间分析表明，该新方法有效减少了GSMaP-NRT在不同地形、不同季节和气候区域的检索误差，ILSF-RT在三种评估产品中通常表现最佳。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Does a data collection method incorporate error adjustments based on topography, seasonality, climate type, and rain rate?",
+        "QuestionCn": "数据收集方法是否根据地形、季节性、气候类型和降雨率进行误差调整？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Can the ILS method be effectively used to reduce errors in satellite-based precipitation estimates?",
+        "QuestionCn": "ILS方法能有效用于减少卫星降水估计中的误差吗？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is the use of multiple datasets, including satellite and ground observations, beneficial for refining precipitation estimates?",
+        "QuestionCn": "使用多个数据集，包括卫星和地面观测，是否有助于改进降水估计？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "What is the primary error correction method used in satellite precipitation datasets, is it based on ground observations, satellite-derived soil moisture products, or the consideration of multiple factors like topography and seasonality?",
+        "QuestionCn": "卫星降水数据集使用的主要误差修正方法是基于地面观测、卫星衍生的土壤湿度产品，还是考虑多个因素如地形和季节性？",
+        "AnswerEn": "the consideration of multiple factors like topography and seasonality",
+        "AnswerCn": "考虑多个因素，如地形和季节性。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Which datasets are primarily used for calibrating and validating satellite precipitation error adjustment models, conventional rain gauges, GPM-based hourly satellite precipitation estimates, or other observational networks?",
+        "QuestionCn": "用于校准和验证卫星降水误差调整模型的主要数据集是常规雨量计、基于GPM的逐小时卫星降水估算，还是其他观测网络？",
+        "AnswerEn": "conventional rain gauges",
+        "AnswerCn": "常规雨量计",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the crucial factors considered in developing an error adjustment model for satellite precipitation estimates?",
+        "QuestionCn": "在开发卫星降水估算误差调整模型时需要考虑哪些关键因素？",
+        "AnswerEn": "Topography, seasonality, climate type, rain rate",
+        "AnswerCn": "地形、季节性、气候类型、降雨率",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Where does the high spatial and temporal resolution global precipitation dataset integrate additional data sources?",
+        "QuestionCn": "高空间和时间分辨率的全球降水数据集在哪里整合了额外的数据源？",
+        "AnswerEn": "Northern Hemisphere 90°N-60°N China region 15°N-59°N 70°E-140°E",
+        "AnswerCn": "北半球 90°N-60°N 中国地区 15°N-59°N 70°E-140°E",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "When is the temporal resolution of the global satellite precipitation data set adjusted to achieve higher precision?",
+        "QuestionCn": "全球卫星降水数据集的时间分辨率何时被调整以实现更高的精度？",
+        "AnswerEn": "25km/3hr",
+        "AnswerCn": "25公里/3小时",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "What is an example of a challenge faced when merging different satellite precipitation products for real-time applications?",
+        "QuestionCn": "合并不同卫星降水产品以用于实时应用时面临的一个挑战是什么？",
+        "AnswerEn": "A challenge faced when merging different satellite precipitation products for real-time applications is the inability to correct satellite precipitation estimates in real-time due to the presence of random errors. Additionally, existing correction methods may introduce new error sources, such as those from satellite-derived soil moisture products, potentially degrading the retrieval quality.",
+        "AnswerCn": "在实时应用中，合并不同卫星降水产品时面临的一个挑战是由于随机误差的存在，无法实时校正卫星降水估计。此外，现有的校正方法可能引入新的误差源，例如来自卫星衍生的土壤湿度产品，这可能会降低检索质量。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Could you provide an example of a dataset used to validate satellite precipitation estimates over mainland China?",
+        "QuestionCn": "您能否提供一个用于验证中国大陆卫星降水估计的示例数据集？",
+        "AnswerEn": "An example of a dataset used to validate satellite precipitation estimates over mainland China is the observation network of over 30,000 conventional rain gauges. This dataset was used alongside GPM-based hourly satellite precipitation estimates to calibrate and validate error adjustment models, ensuring the accuracy of the estimates.",
+        "AnswerCn": "用于验证中国大陆卫星降水估计的一个数据集是超过30,000个常规雨量计的观测网络。该数据集与基于GPM的每小时卫星降水估计一起使用，以校准和验证误差调整模型，从而确保估计的准确性。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the defining characteristics of a global satellite precipitation fusion correction product with high spatio-temporal resolution?",
+        "QuestionCn": "高时空分辨率的全球卫星降水融合校正产品的定义特征是什么？",
+        "AnswerEn": "integrates satellite-derived precipitation data with ground observations, applies error correction models, accounts for topography, seasonality, climate type, rain rate, involves error modeling, real-time data input, spatio-temporal downscaling, 25km/3hr resolution",
+        "AnswerCn": "集成卫星衍生的降水数据与地面观测数据，应用误差校正模型，考虑地形、季节性、气候类型和降雨率，涉及误差建模、实时数据输入、时空降尺度，25公里/3小时分辨率。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What specific factors are considered crucial in the development of error adjustment models for satellite precipitation estimates?",
+        "QuestionCn": "在开发卫星降水估算的误差调整模型时，哪些具体因素被认为是关键的？",
+        "AnswerEn": "topography, seasonality, climate type, rain rate",
+        "AnswerCn": "地形、季节性、气候类型、降雨率",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many geographical categories were used to establish error adjustment models in the data collection method?",
+        "QuestionCn": "在数据收集方法中，用于建立误差调整模型的地理类别有多少个？",
+        "AnswerEn": "16",
+        "AnswerCn": "16",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many conventional rain gauges were used in the observation network for calibrating and validating error adjustment models?",
+        "QuestionCn": "用于校准和验证误差调整模型的观测网络中使用了多少个常规雨量计？",
+        "AnswerEn": "30,000",
+        "AnswerCn": "30,000",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is meant by 'spatial plane function (SPF)' in the correction of satellite precipitation data?",
+        "QuestionCn": "“空间平面函数（SPF）”在卫星降水数据校正中是什么意思？",
+        "AnswerEn": "Spatial plane function (SPF) refers to the mathematical relationship established between the retrieval errors of satellite precipitation estimates and four critical factors: topography, seasonality, climate type, and rain rate. The SPF is used to understand how these factors influence errors and to formulate a correction method to improve the accuracy of the satellite data.",
+        "AnswerCn": "空间平面函数（SPF）是指建立在卫星降水估计的检索误差与四个关键因素之间的数学关系：地形、季节性、气候类型和降水率。SPF用于理解这些因素如何影响误差，并制定校正方法以提高卫星数据的准确性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do data collection methods utilizing ground observations compare to those using satellite-based precipitation estimates in terms of accuracy and error adjustment?",
+        "QuestionCn": "利用地面观测的数据收集方法与使用卫星降水估计的方法在准确性和误差调整方面有何比较？",
+        "AnswerEn": "Ground observations, such as rain gauge networks, provide direct measurements and are often used for calibrating and validating satellite-based precipitation estimates. Satellite estimates, like those from GSMaP-NRT, offer broad coverage and high frequency but are indirect and have larger errors. The new correction methods aim to reduce these errors by considering factors such as topography and climate type, which may not be accounted for in ground observations alone.",
+        "AnswerCn": "地面观测，如雨量计网络，提供直接测量，通常用于校准和验证基于卫星的降水估计。卫星估计，如GSMaP-NRT，提供广泛的覆盖和高频率，但它们是间接的，且误差较大。新的修正方法旨在通过考虑地形和气候类型等因素来减少这些误差，而这些因素可能在单独的地面观测中未被考虑。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the differences in handling retrieval errors when using satellite-based soil moisture products versus traditional satellite precipitation products?",
+        "QuestionCn": "使用基于卫星的土壤湿度产品与传统卫星降水产品在处理检索错误时的区别是什么？",
+        "AnswerEn": "Using satellite-based soil moisture products introduces new error sources due to large inherent errors, potentially degrading retrieval quality. Traditional satellite precipitation products focus on correcting systematic errors, but the major component is random error. The new methods described aim to address these errors by considering multiple factors like seasonality and climate type, which are not typically addressed in soil moisture product corrections.",
+        "AnswerCn": "使用基于卫星的土壤湿度产品引入了新的误差来源，由于固有的较大误差，可能会降低检索质量。传统的卫星降水产品侧重于修正系统误差，但主要成分是随机误差。所描述的新方法旨在通过考虑季节性和气候类型等多个因素来解决这些误差，而这些因素通常在土壤湿度产品的修正中未被考虑。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways do merging precipitation products differ from real-time correction methods in improving satellite precipitation estimates?",
+        "QuestionCn": "合并降水产品与实时校正方法在改善卫星降水估计方面有何不同？",
+        "AnswerEn": "Merging precipitation products can enhance the overall quality but does not adjust errors in real-time. Real-time correction methods, such as those proposed with ILSF-RT, specifically target reducing retrieval errors by considering multiple factors like topography and climate type. These methods provide immediate improvements in data accuracy, which is crucial for applications like natural hazard forecasting.",
+        "AnswerCn": "合并降水产品可以提高整体质量，但并不能实时调整错误。实时校正方法，如ILSF-RT，专门针对通过考虑多种因素（如地形和气候类型）来减少检索错误。这些方法提供了数据准确性的即时改善，这对于自然灾害预报等应用至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can the integration of varying topographical features, climate types, and seasonal variations enhance the accuracy of satellite precipitation estimates?",
+        "QuestionCn": "不同地形特征、气候类型和季节变化的整合如何提高卫星降水估计的准确性？",
+        "AnswerEn": "The integration can enhance accuracy by establishing a relationship between retrieval errors and these factors. By analyzing these relationships, effective error adjustment models can be developed, which consider the influence of topography, seasonality, climate type, and rain rate on satellite precipitation estimates.",
+        "AnswerCn": "集成可以通过建立检索错误与这些因素之间的关系来提高准确性。通过分析这些关系，可以开发有效的错误调整模型，这些模型考虑了地形、季节性、气候类型和降雨率对卫星降水估计的影响。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "In what ways could the development of real-time error correction methods impact the application of satellite precipitation products in natural hazard forecasting?",
+        "QuestionCn": "实时误差修正方法的发展将如何影响卫星降水产品在自然灾害预报中的应用？",
+        "AnswerEn": "Real-time error correction methods could significantly improve the accuracy of satellite precipitation products, making them more reliable for natural hazard forecasting. By reducing errors associated with seasonality, topography, and climate, these methods can enhance the potential for early warning systems for events like floods and landslides, especially in regions with limited ground observations.",
+        "AnswerCn": "实时误差修正方法可以显著提高卫星降水产品的准确性，使其在自然灾害预报中更具可靠性。通过减少与季节性、地形和气候相关的误差，这些方法可以增强早期预警系统在洪水和滑坡等事件中的潜力，特别是在地面观测有限的地区。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors lead to errors in satellite precipitation estimates, particularly in diverse topographic and climatic regions?",
+        "QuestionCn": "哪些因素导致卫星降水估计出现错误，特别是在地形和气候多样的地区？",
+        "AnswerEn": "Errors in satellite precipitation estimates are closely related to four crucial factors: topography, seasonality, climate type, and rain rate. These factors influence the retrieval errors of satellite precipitation, necessitating comprehensive investigation and bias adjustment methods to correct these errors in real-time.",
+        "AnswerCn": "卫星降水估计的误差与四个关键因素密切相关：地形、季节性、气候类型和降水强度。这些因素影响卫星降水的反演误差，因此需要对这些误差进行全面调查和偏差调整方法，以便实时纠正这些误差。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why do existing real-time error correction methods for satellite precipitation products struggle with high rain rates?",
+        "QuestionCn": "现有的卫星降水产品实时误差修正方法为何在高降雨率下表现不佳？",
+        "AnswerEn": "Existing real-time error correction methods often struggle with high rain rates because they primarily address systematic errors and may introduce new error sources. These methods tend to underestimate rainfall volume for rain rates over 1 mm/hr and have limited effectiveness in reducing missed precipitation and false errors.",
+        "AnswerCn": "现有的实时误差修正方法在高降雨率下往往表现不佳，因为它们主要针对系统性误差，可能引入新的误差源。这些方法在降雨率超过1毫米/小时时往往低估降雨量，并且在减少漏报和虚假错误方面效果有限。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What causes the integration of various precipitation datasets to be challenging in real-time applications?",
+        "QuestionCn": "在实时应用中，整合各种降水数据集的挑战原因是什么？",
+        "AnswerEn": "The integration of various precipitation datasets in real-time is challenging due to the inherent large errors and uncertainties in satellite-derived products. Combining datasets requires addressing these errors, often related to retrieval inaccuracies influenced by factors such as topography, seasonality, climate type, and rain rate, which complicates real-time corrections.",
+        "AnswerCn": "实时整合各种降水数据集面临挑战，因为卫星衍生产品固有的大误差和不确定性。结合数据集需要解决这些误差，这些误差通常与受地形、季节性、气候类型和降雨率等因素影响的检索不准确性有关，这使得实时修正变得复杂。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential impacts on satellite precipitation product accuracy when merging data from various sources such as satellite observations and ground-based measurements?",
+        "QuestionCn": "当将卫星观测数据和地面测量数据等各种来源的数据合并时，对卫星降水产品准确性的潜在影响是什么？",
+        "AnswerEn": "Merging different precipitation products is an effective way to enhance the quality of satellite precipitation products (SPPs). This approach can help correct errors in real-time, significantly improving the accuracy and reducing the biases of the original satellite-based estimates. It can also improve the data quality over areas with no ground observations, such as arid regions and during cold seasons.",
+        "AnswerCn": "合并不同的降水产品是一种有效的方法，可以提高卫星降水产品（SPPs）的质量。这种方法可以帮助实时纠正错误，显著提高原始卫星估计的准确性并减少偏差。它还可以改善在没有地面观测的地区（如干旱地区和寒冷季节）的数据质量。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the consequences of using a novel error adjustment method on the performance of satellite precipitation products in regions with sparse ground observation networks?",
+        "QuestionCn": "在地面观测网络稀疏的地区使用新颖的误差调整方法对卫星降水产品性能的影响是什么？",
+        "AnswerEn": "Using a novel error adjustment method can significantly improve the performance of satellite precipitation products in regions with sparse ground observation networks. Such methods effectively reduce retrieval errors associated with varying terrains, seasons, and climate types, thus enhancing the potential application of satellite data in areas where traditional ground observations are lacking.",
+        "AnswerCn": "使用一种新颖的误差调整方法可以显著提高卫星降水产品在观测网络稀疏地区的性能。这些方法有效减少了与不同地形、季节和气候类型相关的检索误差，从而增强了卫星数据在传统地面观测缺乏的区域的潜在应用。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to analyze the relationship between satellite retrieval errors and factors such as topography, seasonality, climate type, and rain rate?",
+        "QuestionCn": "分析卫星获取误差与地形、季节性、气候类型和降雨率等因素之间的关系是重要的原因是什么？",
+        "AnswerEn": "Analyzing these relationships is crucial because it allows for the development of a comprehensive error adjustment model that can effectively correct satellite precipitation estimates, thereby improving their accuracy and making them more useful for hydrometeorological predictions and natural hazard forecasting.",
+        "AnswerCn": "分析这些关系至关重要，因为它可以帮助开发一个全面的误差调整模型，有效地修正卫星降水估计，从而提高其准确性，使其在水文气象预测和自然灾害预报中更具实用性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "How can one systematically investigate the relationships between satellite precipitation retrieval errors and factors like topography, seasonality, and climate type to improve data accuracy?",
+        "QuestionCn": "如何系统地研究卫星降水获取误差与地形、季节性和气候类型等因素之间的关系，以提高数据准确性？",
+        "AnswerEn": "One approach is to analyze the error components of satellite-based precipitation estimates, such as those from GPM-based passive microwave and infrared sensors, by establishing a spatial plane function (SPF) that correlates retrieval errors with topography, season, and climate type. This includes using a power function to propose a bias adjustment method, which aims to correct errors in near-real-time satellite precipitation products by considering these crucial factors over a specified region such as mainland China.",
+        "AnswerCn": "一种方法是通过建立一个空间平面函数（SPF），分析卫星降水估计的误差成分，例如来自GPM的被动微波和红外传感器的估计，来将检索误差与地形、季节和气候类型相关联。这包括使用幂函数提出一种偏差调整方法，旨在通过考虑这些关键因素在指定区域（如中国大陆）内实时修正卫星降水产品的误差。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What procedural steps are involved in creating a high-resolution satellite precipitation dataset that combines multiple data sources, and how is accuracy validated?",
+        "QuestionCn": "创建一个结合多个数据源的高分辨率卫星降水数据集涉及哪些程序步骤，以及如何验证准确性？",
+        "AnswerEn": "The process involves developing an error correction model using historical data from satellite estimates and ground observations to adjust for errors related to topography, seasonality, climate type, and rain rate. This model is applied to near-real-time satellite data, such as the GSMaP-NRT, to produce a corrected dataset. Validation is done by comparing the new dataset with both the original and gauge-adjusted satellite data using statistical indices like RMSE and RBIAS, and by assessing performance across different terrains and climate areas.",
+        "AnswerCn": "该过程涉及使用来自卫星估计和地面观测的历史数据开发误差修正模型，以调整与地形、季节性、气候类型和降雨率相关的误差。该模型应用于近实时卫星数据，如GSMaP-NRT，以生成修正后的数据集。通过使用统计指标如均方根误差（RMSE）和相对偏差指数（RBIAS）比较新数据集与原始数据和经过雨量计调整的卫星数据，进行验证，并评估在不同地形和气候区域的表现。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methods can be employed to integrate ground-based observations with satellite data to enhance the accuracy of satellite precipitation products?",
+        "QuestionCn": "可以采用哪些方法将地面观测与卫星数据结合，以提高卫星降水产品的准确性？",
+        "AnswerEn": "A method involves merging satellite-based precipitation estimates with ground-based observations, such as those from an observation network of over 30,000 rain gauges. This integration requires establishing error adjustment models (EAMs) that consider crucial factors such as topography and seasonality, and applying these models to correct satellite data in real-time. The effectiveness of this integration can be validated by comparing the corrected data against both ground observations and existing satellite products.",
+        "AnswerCn": "一种方法涉及将基于卫星的降水估计与地面观测数据（例如来自超过30,000个雨量计的观测网络）进行合并。这一整合需要建立误差调整模型（EAMs），考虑重要因素如地形和季节性，并将这些模型应用于实时修正卫星数据。通过将修正后的数据与地面观测和现有卫星产品进行比较，可以验证这种整合的有效性。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What data correction methods enable the improvement of near-real-time satellite precipitation estimates in areas with varying topography and climate types?",
+        "QuestionCn": "哪些数据修正方法能够改善在地形和气候类型变化的地区的近实时卫星降水估计？",
+        "AnswerEn": "Data correction methods that consider relationships between retrieval errors and factors such as topography, seasonality, climate type, and rain rate can enable the improvement of near-real-time satellite precipitation estimates. Techniques like the Integrated Least Squares (ILS) method are utilized to adjust errors and biases in satellite data, effectively reducing retrieval errors in varying conditions.",
+        "AnswerCn": "考虑到检索错误与地形、季节性、气候类型和降雨率等因素之间关系的数据修正方法，可以提高近实时卫星降水估计的准确性。像综合最小二乘法（ILS）这样的技术被用来调整卫星数据中的错误和偏差，有效减少在不同条件下的检索错误。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "What technological and methodological advancements enable the reduction of errors in satellite precipitation data for extreme weather event forecasting?",
+        "QuestionCn": "哪些技术和方法上的进展能够减少极端天气事件预报中卫星降水数据的误差？",
+        "AnswerEn": "Technological and methodological advancements such as the development of error adjustment models and the use of spatial plane function relationships enable the reduction of errors in satellite precipitation data. These advancements allow for more accurate forecasting of extreme weather events by addressing the dependency of retrieval errors on various factors like topography, season, and climate.",
+        "AnswerCn": "技术和方法的进步，如误差调整模型的开发和空间平面函数关系的使用，使得卫星降水数据中的误差得以减少。这些进展通过解决检索误差对地形、季节和气候等各种因素的依赖性，从而实现了对极端天气事件的更准确预测。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might a comprehensive error correction method for satellite precipitation estimates involve four factors like topography, seasonality, climate type, and rain rate?",
+        "QuestionCn": "为什么卫星降水估算的综合误差校正方法可能涉及地形、季节性、气候类型和降雨率四个因素？",
+        "AnswerEn": "A comprehensive error correction method that involves factors such as topography, seasonality, climate type, and rain rate is crucial because these elements are closely linked to the retrieval errors of satellite precipitation estimates. Understanding the relationships between these factors and the errors allows for more precise correction models, ultimately enhancing the accuracy of satellite precipitation data, especially in real-time applications.",
+        "AnswerCn": "一个综合的误差修正方法，涉及地形、季节性、气候类型和降雨率等因素是至关重要的，因为这些元素与卫星降水估计的检索误差密切相关。理解这些因素与误差之间的关系可以帮助建立更精确的修正模型，最终提高卫星降水数据的准确性，特别是在实时应用中。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are some anticipated challenges when using real-time error correction methods for satellite precipitation products?",
+        "QuestionCn": "使用实时误差校正方法处理卫星降水产品时有哪些预期的挑战？",
+        "AnswerEn": "Some anticipated challenges with real-time error correction methods for satellite precipitation products include the introduction of new error sources due to the large inherent errors in satellite soil moisture, limited improvements in reducing false errors, and underestimating rainfall volumes for higher rain rates. These challenges highlight the ongoing need to refine correction algorithms to address both systematic and random errors effectively.",
+        "AnswerCn": "一些对卫星降水产品实时误差修正方法的预期挑战包括，由于卫星土壤湿度的固有误差较大，可能引入新的误差源；在减少虚假错误方面的改进有限；以及对高降雨率的降雨量低估。这些挑战突显了持续需要完善修正算法，以有效应对系统性和随机性误差。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How do the current data collection methods for satellite precipitation estimates address errors related to topography and climate type?",
+        "QuestionCn": "当前的卫星降水估计数据收集方法如何解决与地形和气候类型相关的误差？",
+        "AnswerEn": "The current data collection methods attempt to address errors related to topography and climate type by establishing a relationship between retrieval errors and four key factors: topography, seasonality, climate type, and rain rate. A novel bias adjustment method is proposed to correct hourly estimates by analyzing these relationships in detail, resulting in improvements over arid areas and cold seasons.",
+        "AnswerCn": "当前的数据收集方法试图通过建立检索误差与四个关键因素之间的关系来解决与地形和气候类型相关的误差：地形、季节性、气候类型和降雨率。提出了一种新颖的偏差调整方法，通过详细分析这些关系来修正小时估计，从而在干旱地区和寒冷季节取得了改进。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the challenges in integrating ground-based and satellite-derived precipitation data for creating a reliable dataset?",
+        "QuestionCn": "将地面观测和卫星获取的降水数据整合以创建可靠数据集面临的挑战有哪些？",
+        "AnswerEn": "Integrating ground-based and satellite-derived precipitation data faces challenges such as introducing new error sources due to large inherent errors in satellite soil moisture and the underestimation of rainfall volumes over certain rain rates. Additionally, real-time correction methods often only reduce systematic errors, while random errors remain a significant challenge.",
+        "AnswerCn": "整合地面和卫星获取的降水数据面临挑战，例如由于卫星土壤湿度的固有误差较大而引入新的误差源，以及在某些降雨强度下降雨量的低估。此外，实时修正方法通常只能减少系统误差，而随机误差仍然是一个重大挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways can future datasets improve by considering the limitations of current satellite soil moisture correction methods?",
+        "QuestionCn": "未来的数据集可以通过考虑当前卫星土壤湿度校正方法的局限性来改进的方式有哪些？",
+        "AnswerEn": "Future datasets can improve by addressing the limitations of current satellite soil moisture correction methods by developing algorithms that account for the comprehensive relationships between retrieval errors and crucial factors such as topography and climate. They can also incorporate advanced techniques to better handle missed precipitation and refine error sources, ultimately enhancing the accuracy and applicability of satellite precipitation products.",
+        "AnswerCn": "未来的数据集可以通过解决当前卫星土壤湿度校正方法的局限性来改进，开发考虑到检索误差与地形和气候等关键因素之间综合关系的算法。它们还可以结合先进技术，更好地处理漏报降水和细化误差来源，从而最终提高卫星降水产品的准确性和适用性。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how the correction of satellite precipitation errors can be achieved in real-time given the complexity of factors like topography and climate.",
+        "QuestionCn": "我不明白如何在实时情况下纠正卫星降水错误，因为地形和气候等因素的复杂性。",
+        "AnswerEn": "The correction of satellite precipitation errors in real-time is achieved by establishing an error adjustment model (EAM) that considers crucial factors such as topography, seasonality, climate type, and rain rate. By analyzing the relationships between these factors and the retrieval errors, the model can adjust the errors effectively using methods like an ILS approach for parameter estimation, which can be applied in real-time.",
+        "AnswerCn": "实时修正卫星降水误差是通过建立一个考虑关键因素如地形、季节性、气候类型和降雨率的误差调整模型（EAM）来实现的。通过分析这些因素与检索误差之间的关系，该模型可以有效地调整误差，采用如ILS方法进行参数估计，这可以在实时中应用。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I can't make sense of why merging different precipitation products is considered effective if it can't correct errors in real-time.",
+        "QuestionCn": "我无法理解为什么合并不同的降水产品被认为是有效的，如果它无法实时纠正错误。",
+        "AnswerEn": "Merging different precipitation products is considered effective because it enhances the overall quality of satellite precipitation products by combining the strengths of various datasets. Although it may not correct errors in real-time, it helps to improve the accuracy and reliability of the datasets by mitigating systematic errors and providing a more comprehensive data set that can be used for further analysis and correction.",
+        "AnswerCn": "合并不同的降水产品被认为是有效的，因为它通过结合各种数据集的优势来增强卫星降水产品的整体质量。尽管它可能无法实时纠正错误，但通过减轻系统性错误并提供更全面的数据集，它有助于提高数据集的准确性和可靠性，这些数据集可以用于进一步的分析和修正。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please summarize the data collection methods and techniques used to develop a global satellite precipitation dataset with high spatiotemporal resolution.",
+        "QuestionCn": "总结用于开发高时空分辨率全球卫星降水数据集的数据收集方法和技术。",
+        "AnswerEn": "The dataset is developed by first utilizing IMERG-Early and CPC data from 2010-2014 to establish an error correction model based on rain intensity across different terrains, climate zones, and seasons. This model is then applied in real-time to correct IMERG-Early data from 2015-2020, resulting in a global corrected satellite precipitation dataset with a spatial resolution of 50km/1day. Further downscaling and resampling to 25km/3hr are conducted, incorporating ERA5 data and random forest-based precipitation data in specific regions to enhance resolution.",
+        "AnswerCn": "该数据集首先利用2010-2014年的IMERG-Early和CPC数据建立了一个基于不同地形、气候区和季节的降雨强度的误差修正模型。然后，该模型被实时应用于修正2015-2020年的IMERG-Early数据，从而生成一个全球修正的卫星降水数据集，空间分辨率为50km/1天。进一步进行下采样和重采样至25km/3小时，结合ERA5数据和基于随机森林的特定区域降水数据，以提高分辨率。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Please analyze the challenges involved in correcting satellite precipitation estimates in real-time, focusing on the factors affecting retrieval errors.",
+        "QuestionCn": "请分析实时修正卫星降水估计中面临的挑战，重点关注影响检索误差的因素。",
+        "AnswerEn": "Challenges in real-time correction of satellite precipitation estimates include the introduction of new error sources through satellite-derived soil moisture products, the dependency on real-time ground observations, and the fundamental algorithmic defects by neglecting crucial factors related to retrieval errors. Current methods may fail to correct for random errors, which are the major component, and struggle with high rain rate events. The relationship between retrieval errors and topography, seasonality, climate type, and rain rate needs detailed analysis to establish effective error adjustment models.",
+        "AnswerCn": "实时修正卫星降水估计面临的挑战包括通过卫星衍生的土壤湿度产品引入新的误差源、对实时地面观测的依赖，以及由于忽视与检索误差相关的关键因素而导致的基本算法缺陷。目前的方法可能无法修正随机误差，而随机误差是主要成分，并且在高降雨率事件中表现不佳。检索误差与地形、季节性、气候类型和降雨率之间的关系需要详细分析，以建立有效的误差调整模型。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

@@ -1,211 +1,211 @@
 {
-    "id": "c3a67628-bb4d-4fb3-9bb2-0a2b88bdb6fe",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Global gridded near-surface wind speed dataset on a monthly scale (1973-2021)",
-            "titleCn": "全球10米风速栅格数据（1973-2021）",
-            "description": "Wind speed data is widely used in many sciences, management, and policy fields to assess renewable energy potential, address wind hazards, investigate biological phenomena, and explore climate change/variability, among other applications. The challenge is obtaining complete and accurate wind datasets, as observations are limited in distribution. Global-scale weather stations suffer from spatial and temporal discontinuities that limit their utility. While reanalysis products and climate model simulations achieve data continuity, they often fail to reproduce significant wind speed trends because few of them assimilate in-situ wind observations on land. Data interpolation helps fill gaps, but the high variability of wind speed data, combined with a low distribution of observations worldwide, prevents standard statistical interpolation methods such as kriging or principal component analysis from being accurate for areas with sparse data. As a result, wind speed data has been the bottleneck in related studies.\n\nHere, based on the partial convolutional neural network, we reconstructed the global near-surface wind speed data during 1973-2021 by assimilating simulation outputs from 34 climate models and the HadISD dataset, which the Met Office Hadley Center creates. Our dataset has a spatial resolution of 1.25°×2.5° and containers observed wind speed trends.",
-            "descriptionCn": "风速数据被广泛用于科学、管理和政策领域，在评估可再生能源潜力、解决风灾、研究生物现象和探索气候变化等方面发挥着重要作用。但现有的风速产品存在很大的局限性：气象观测数据在空间和时间上存在不连续性，再分析产品和气候模型模拟虽然实现了数据的连续性，但大多未能重现观测到的风速趋势。此外，风速数据的高变异性及站点分布的不均匀和稀缺性，使得传统的统计插值方法，如克里金或主成分分析，在重构全球风速上表现不佳。因而，风速数据成为风速研究中“卡脖子”的难题。\n\n在此，研究团队基于部分卷积神经网络算法（the partial convolutional neural network），融合了34个气候模式数据和气象站点观测数据HadISD（由Met Office Hadley Centre提供），重构了1973-2021年间共588个月的全球10米近地风速，空间分辨率为1.25°×2.5°（纬度×经度），该数据集包含了观测到的风速趋势信息。详细的重构过程请见参考文献中的方法部分。",
-            "instructions": "The data is stored in a NetCDF file named GGWS-PCNN wind_ speed-yyyymmyyyymm_ vX.nc. With \"GGWS-PCNN wind_ speed-197301202012_ v312202105p. nc\" as an example, \"GGFS-PCNN\" is the English abbreviation of the dataset (from the global gridded monthly wind speed dataset by the partial volatile neural network), \"wind_ speed\" indicates that the dataset stores wind speed variables, \"197301202012\" denotes that the period of the data is from Jan. 1973 to Dec. 2020, and v312202105p represents that the dataset uses HadISD data with the version of v312202105p. The data can be processed by Matlab, ArcGIS and other software.\n\nNotice: Due to the limitations of existing AI algorithms in reconstructing data with many missing values, our product has a small number of outliers (e.g. wind speeds less than zero or very high), most of which are located in the Antarctic region. We recommend you remove these outliers before using this dataset.",
-            "instructionsCn": "该数据以nc文件储存，文件的名称为GGWS-PCNN-wind_speed-yyyymmyyyymm_vX.nc。以GGWS-PCNN-wind_speed-197301202012_v312202105p.nc为例， GGWS-PCNN为该数据集的英文简称（来自global gridded monthly wind speed dataset by the partial convolutional neural network），wind_speed表示该数据集存储了风速变量，197301202012代表该数据的覆盖时期为1973年1月到2020年12月，v312202105p表示该数据集采用了版本号为v312202105p的HadISD数据。该数据可用Matlab、ArcGIS等软件读取打开。\n\n\n注意事项：由于现有的人工智能算法在重建有许多缺失值的数据方面的局限性，我们的产品存在少量的离群值（如风速小于零或极高的风速），其中大部分位于南极地区的太平洋附近。您在使用这套数据前需要剔除这些离群值。",
-            "east": 180.0,
-            "west": 180.0,
-            "south": 90.0,
-            "north": 90.0,
-            "startTime": "1973-01-01 00:00:00",
-            "endTime": "2021-12-31 00:00:00",
-            "fileSize": 195119348.0,
-            "cstr": "18406.11.Atmos.tpdc.272893",
-            "doi": "10.11888/Atmos.tpdc.272893",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "周俐宏",
-                "nameEn": "ZHOU Lihong ",
-                "unitEn": "Southern University of Science and Technology",
-                "unitCn": "南方科技大学"
-            },
-            {
-                "nameCn": "曾振中",
-                "nameEn": "ZENG Zhenzhong ",
-                "unitEn": "Southern University of Science and Technology",
-                "unitCn": "南方科技大学"
-            },
-            {
-                "nameCn": "江鑫",
-                "nameEn": "JIANG Xin ",
-                "unitEn": "Southern University of Science and Technology",
-                "unitCn": "南方科技大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "An artificial intelligence reconstruction of global gridded surface winds",
-                "referenceCn": null,
-                "referenceEn": "Zhou, L.H., Liu., H.F., Jiang, X., Ziegler, A.D., Azorin-Molina, C., Liu, J., & Zeng, Z.Z. (2022). An artificial intelligence reconstruction of global gridded surface winds. Science Bulletin, online."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "风",
-                "nameEn": "Winds"
-            },
-            {
-                "nameCn": "风速",
-                "nameEn": "wind speed"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "The globe"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1973-2021",
-                "keywordEn": "1973-2021",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "月尺度",
-                "keywordEn": "monthly",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
-            }
-        ]
+  "id": "c3a67628-bb4d-4fb3-9bb2-0a2b88bdb6fe",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Global gridded near-surface wind speed dataset on a monthly scale (1973-2021)",
+      "titleCn": "全球10米风速栅格数据（1973-2021）",
+      "description": "Wind speed data is widely used in many sciences, management, and policy fields to assess renewable energy potential, address wind hazards, investigate biological phenomena, and explore climate change/variability, among other applications. The challenge is obtaining complete and accurate wind datasets, as observations are limited in distribution. Global-scale weather stations suffer from spatial and temporal discontinuities that limit their utility. While reanalysis products and climate model simulations achieve data continuity, they often fail to reproduce significant wind speed trends because few of them assimilate in-situ wind observations on land. Data interpolation helps fill gaps, but the high variability of wind speed data, combined with a low distribution of observations worldwide, prevents standard statistical interpolation methods such as kriging or principal component analysis from being accurate for areas with sparse data. As a result, wind speed data has been the bottleneck in related studies.\n\nHere, based on the partial convolutional neural network, we reconstructed the global near-surface wind speed data during 1973-2021 by assimilating simulation outputs from 34 climate models and the HadISD dataset, which the Met Office Hadley Center creates. Our dataset has a spatial resolution of 1.25°×2.5° and containers observed wind speed trends.",
+      "descriptionCn": "风速数据被广泛用于科学、管理和政策领域，在评估可再生能源潜力、解决风灾、研究生物现象和探索气候变化等方面发挥着重要作用。但现有的风速产品存在很大的局限性：气象观测数据在空间和时间上存在不连续性，再分析产品和气候模型模拟虽然实现了数据的连续性，但大多未能重现观测到的风速趋势。此外，风速数据的高变异性及站点分布的不均匀和稀缺性，使得传统的统计插值方法，如克里金或主成分分析，在重构全球风速上表现不佳。因而，风速数据成为风速研究中“卡脖子”的难题。\n\n在此，研究团队基于部分卷积神经网络算法（the partial convolutional neural network），融合了34个气候模式数据和气象站点观测数据HadISD（由Met Office Hadley Centre提供），重构了1973-2021年间共588个月的全球10米近地风速，空间分辨率为1.25°×2.5°（纬度×经度），该数据集包含了观测到的风速趋势信息。详细的重构过程请见参考文献中的方法部分。",
+      "instructions": "The data is stored in a NetCDF file named GGWS-PCNN wind_ speed-yyyymmyyyymm_ vX.nc. With \"GGWS-PCNN wind_ speed-197301202012_ v312202105p. nc\" as an example, \"GGFS-PCNN\" is the English abbreviation of the dataset (from the global gridded monthly wind speed dataset by the partial volatile neural network), \"wind_ speed\" indicates that the dataset stores wind speed variables, \"197301202012\" denotes that the period of the data is from Jan. 1973 to Dec. 2020, and v312202105p represents that the dataset uses HadISD data with the version of v312202105p. The data can be processed by Matlab, ArcGIS and other software.\n\nNotice: Due to the limitations of existing AI algorithms in reconstructing data with many missing values, our product has a small number of outliers (e.g. wind speeds less than zero or very high), most of which are located in the Antarctic region. We recommend you remove these outliers before using this dataset.",
+      "instructionsCn": "该数据以nc文件储存，文件的名称为GGWS-PCNN-wind_speed-yyyymmyyyymm_vX.nc。以GGWS-PCNN-wind_speed-197301202012_v312202105p.nc为例， GGWS-PCNN为该数据集的英文简称（来自global gridded monthly wind speed dataset by the partial convolutional neural network），wind_speed表示该数据集存储了风速变量，197301202012代表该数据的覆盖时期为1973年1月到2020年12月，v312202105p表示该数据集采用了版本号为v312202105p的HadISD数据。该数据可用Matlab、ArcGIS等软件读取打开。\n\n\n注意事项：由于现有的人工智能算法在重建有许多缺失值的数据方面的局限性，我们的产品存在少量的离群值（如风速小于零或极高的风速），其中大部分位于南极地区的太平洋附近。您在使用这套数据前需要剔除这些离群值。",
+      "east": 180.0,
+      "west": 180.0,
+      "south": 90.0,
+      "north": 90.0,
+      "startTime": "1973-01-01 00:00:00",
+      "endTime": "2021-12-31 00:00:00",
+      "fileSize": 195119348.0,
+      "cstr": "18406.11.Atmos.tpdc.272893",
+      "doi": "10.11888/Atmos.tpdc.272893",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a technique used to overcome the limitations of traditional statistical interpolation methods in reconstructing global wind speed data?",
-                "QuestionCn": "您能否提供一个例子，说明用于克服传统统计插值方法在重建全球风速数据时局限性的技术？",
-                "AnswerEn": "A technique used to overcome the limitations of traditional statistical interpolation methods in reconstructing global wind speed data is the use of a partial convolutional neural network algorithm. This approach integrates 34 climate model data sets with meteorological station observation data from HadISD to reconstruct global 10-meter near-surface wind speed trends over 588 months from 1973 to 2021, with a spatial resolution of 1.25°×2.5° (latitude × longitude).",
-                "AnswerCn": "一种克服传统统计插值方法在重建全球风速数据方面局限性的技术是使用部分卷积神经网络算法。该方法将34个气候模型数据集与HadISD的气象站观测数据相结合，重建了1973年至2021年间588个月的全球10米近地面风速趋势，空间分辨率为1.25°×2.5°（纬度×经度）。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of datasets used to reconstruct global 10-meter wind speed from 1973-2021?",
-                "QuestionCn": "用于重建1973-2021年全球10米风速的数据集的特征是什么？",
-                "AnswerEn": "spatial resolution of 1.25°×2.5° (latitude×longitude), covering 588 months, partial convolutional neural network algorithm, 34 climate mode data, HadISD meteorological station observations",
-                "AnswerCn": "空间分辨率为1.25°×2.5°（纬度×经度），覆盖588个月，部分卷积神经网络算法，34种气候模式数据，HadISD气象站观测数据。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many months of global 10-meter wind speed data were reconstructed using the partial convolutional neural network approach?",
-                "QuestionCn": "使用部分卷积神经网络方法重建了多少个月的全球10米风速数据？",
-                "AnswerEn": "588 months",
-                "AnswerCn": "588个月",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the use of partial convolutional neural network algorithms for reconstructing global wind speed data compare to traditional statistical interpolation methods like kriging in terms of handling data discontinuities and spatial variability?",
-                "QuestionCn": "部分卷积神经网络算法在重建全球风速数据方面与传统的统计插值方法（如克里金法）相比，在处理数据不连续性和空间变异性方面有什么不同？",
-                "AnswerEn": "The use of partial convolutional neural network algorithms for reconstructing global wind speed data offers advantages over traditional statistical interpolation methods like kriging by effectively addressing issues of data discontinuities and high spatial variability. Traditional methods often struggle with the high variability and uneven distribution of meteorological data, while the partial convolutional neural network approach integrates multiple climate model data and observational data to reconstruct wind speeds, capturing observed trends more accurately.",
-                "AnswerCn": "使用部分卷积神经网络算法重建全球风速数据相较于传统的统计插值方法（如克里金法）具有优势，因为它有效地解决了数据不连续性和高空间变异性的问题。传统方法往往难以应对气象数据的高变异性和不均匀分布，而部分卷积神经网络方法则整合了多个气候模型数据和观测数据，以重建风速，更准确地捕捉到观察到的趋势。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the limitations in existing wind speed products when it comes to spatial and temporal continuity, and how do these limitations affect the assessment of renewable energy potential?",
-                "QuestionCn": "现有风速产品在空间和时间连续性方面的限制原因是什么，这些限制如何影响可再生能源潜力的评估？",
-                "AnswerEn": "The limitations in existing wind speed products arise from the discontinuity of meteorological observation data in both space and time. Additionally, while reanalysis products and climate model simulations achieve data continuity, they often fail to reproduce observed wind speed trends. These limitations, along with the high variability of wind speed and uneven and sparse distribution of observation sites, impact the assessment of renewable energy potential by providing an incomplete and potentially inaccurate understanding of wind resources.",
-                "AnswerCn": "现有风速产品的局限性源于气象观测数据在空间和时间上的不连续性。此外，尽管再分析产品和气候模型模拟实现了数据的连续性，但它们往往无法再现观察到的风速趋势。这些局限性，加上风速的高变异性和观测站点的分布不均匀和稀疏，影响了可再生能源潜力的评估，提供了对风资源的不完整和潜在不准确的理解。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential effects on the accuracy and utility of wind speed datasets when using a partial convolutional neural network to integrate multiple climate models and meteorological observations?",
-                "QuestionCn": "使用部分卷积神经网络整合多个气候模型和气象观测数据时，对风速数据集的准确性和实用性可能产生的影响是什么？",
-                "AnswerEn": "By using a partial convolutional neural network to integrate 34 climate model datasets and meteorological observations from HadISD, the wind speed dataset can potentially offer more accurate reconstructions of global wind speed trends from 1973-2021. This approach helps address the limitations of existing products, such as spatial and temporal discontinuities in meteorological data, and the inability of some reanalysis products and climate models to reproduce observed wind speed trends. The method also aims to overcome the challenges posed by high variability in wind speeds and uneven distribution and scarcity of observation sites, which traditional statistical interpolation methods struggle with.",
-                "AnswerCn": "通过使用部分卷积神经网络整合34个气候模型数据集和HadISD的气象观测数据，风速数据集有望提供1973年至2021年全球风速趋势的更准确重建。这种方法有助于解决现有产品的局限性，例如气象数据的空间和时间不连续性，以及一些再分析产品和气候模型无法再现观测风速趋势的问题。该方法还旨在克服风速的高变异性以及观测站点分布不均和稀缺所带来的挑战，而传统的统计插值方法对此难以应对。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to use a partial convolutional neural network algorithm to reconstruct global wind speed data over several decades?",
-                "QuestionCn": "使用部分卷积神经网络算法重建数十年来的全球风速数据是重要的原因是什么？",
-                "AnswerEn": "The use of a partial convolutional neural network algorithm for reconstructing global wind speed data is crucial because traditional methods like kriging or principal component analysis perform poorly due to the high variability of wind speed data and the uneven and sparse distribution of observation sites. Additionally, existing meteorological observation data suffer from spatial and temporal discontinuities, while reanalysis products and climate model simulations, despite achieving data continuity, often fail to replicate observed wind speed trends. Therefore, leveraging the partial convolutional neural network allows for the integration of multiple climate model data and meteorological station observations, capturing observed wind speed trends and overcoming the limitations of traditional methods.",
-                "AnswerCn": "使用部分卷积神经网络算法重建全球风速数据至关重要，因为传统方法如克里金法或主成分分析在风速数据的高变异性和观测站点分布不均匀、稀疏的情况下表现不佳。此外，现有的气象观测数据存在空间和时间的不连续性，而再分析产品和气候模型模拟尽管实现了数据的连续性，但往往无法复制观察到的风速趋势。因此，利用部分卷积神经网络可以整合多种气候模型数据和气象站观测，捕捉观察到的风速趋势，克服传统方法的局限性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in reconstructing global 10-meter wind speed data using partial convolutional neural networks, and how are climate model and meteorological station data integrated in this process?",
-                "QuestionCn": "重建全球10米风速数据的程序步骤包括以下几个方面：首先，收集和预处理气候模型数据和气象站数据，以确保数据的质量和一致性。接下来，设计和构建部分卷积神经网络（Partial Convolutional Neural Networks），该网络能够处理缺失数据并进行有效的特征提取。然后，将气候模型数据和气象站数据结合，作为网络的输入，以便网络能够学习到风速的空间和时间特征。接着，训练网络，使用已知的风速数据进行监督学习，以优化模型参数。最后，利用训练好的模型对缺失的风速数据进行重建，并进行验证和评估，以确保重建结果的准确性和可靠性。",
-                "AnswerEn": "The procedural steps involved in reconstructing global 10-meter wind speed data using partial convolutional neural networks include integrating 34 climate model datasets with meteorological station observational data from HadISD provided by the Met Office Hadley Centre. This integration helps to address the discontinuities in spatial and temporal data and incorporates observed wind speed trends. The process leverages the strengths of partial convolutional neural networks to improve upon traditional statistical interpolation methods, which struggle with high variability and uneven station distribution. Detailed reconstruction methodologies can be found in the methods section of the relevant reference literature.",
-                "AnswerCn": "重建全球10米风速数据的程序步骤包括将34个气候模型数据集与来自英国气象局哈德利中心的HadISD气象站观测数据进行整合。这一整合有助于解决空间和时间数据中的不连续性，并纳入观测到的风速趋势。该过程利用部分卷积神经网络的优势，以改善传统统计插值方法在高变异性和不均匀站点分布方面的不足。详细的重建方法可以在相关文献的方法部分找到。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "周俐宏",
+        "nameEn": "ZHOU Lihong ",
+        "unitEn": "Southern University of Science and Technology",
+        "unitCn": "南方科技大学"
+      },
+      {
+        "nameCn": "曾振中",
+        "nameEn": "ZENG Zhenzhong ",
+        "unitEn": "Southern University of Science and Technology",
+        "unitCn": "南方科技大学"
+      },
+      {
+        "nameCn": "江鑫",
+        "nameEn": "JIANG Xin ",
+        "unitEn": "Southern University of Science and Technology",
+        "unitCn": "南方科技大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "An artificial intelligence reconstruction of global gridded surface winds",
+        "referenceCn": null,
+        "referenceEn": "Zhou, L.H., Liu., H.F., Jiang, X., Ziegler, A.D., Azorin-Molina, C., Liu, J., & Zeng, Z.Z. (2022). An artificial intelligence reconstruction of global gridded surface winds. Science Bulletin, online."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "风",
+        "nameEn": "Winds"
+      },
+      {
+        "nameCn": "风速",
+        "nameEn": "wind speed"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "The globe"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1973-2021",
+        "keywordEn": "1973-2021",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "月尺度",
+        "keywordEn": "monthly",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a technique used to overcome the limitations of traditional statistical interpolation methods in reconstructing global wind speed data?",
+        "QuestionCn": "您能否提供一个例子，说明用于克服传统统计插值方法在重建全球风速数据时局限性的技术？",
+        "AnswerEn": "A technique used to overcome the limitations of traditional statistical interpolation methods in reconstructing global wind speed data is the use of a partial convolutional neural network algorithm. This approach integrates 34 climate model data sets with meteorological station observation data from HadISD to reconstruct global 10-meter near-surface wind speed trends over 588 months from 1973 to 2021, with a spatial resolution of 1.25°×2.5° (latitude × longitude).",
+        "AnswerCn": "一种克服传统统计插值方法在重建全球风速数据方面局限性的技术是使用部分卷积神经网络算法。该方法将34个气候模型数据集与HadISD的气象站观测数据相结合，重建了1973年至2021年间588个月的全球10米近地面风速趋势，空间分辨率为1.25°×2.5°（纬度×经度）。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of datasets used to reconstruct global 10-meter wind speed from 1973-2021?",
+        "QuestionCn": "用于重建1973-2021年全球10米风速的数据集的特征是什么？",
+        "AnswerEn": "spatial resolution of 1.25°×2.5° (latitude×longitude), covering 588 months, partial convolutional neural network algorithm, 34 climate mode data, HadISD meteorological station observations",
+        "AnswerCn": "空间分辨率为1.25°×2.5°（纬度×经度），覆盖588个月，部分卷积神经网络算法，34种气候模式数据，HadISD气象站观测数据。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many months of global 10-meter wind speed data were reconstructed using the partial convolutional neural network approach?",
+        "QuestionCn": "使用部分卷积神经网络方法重建了多少个月的全球10米风速数据？",
+        "AnswerEn": "588 months",
+        "AnswerCn": "588个月",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the use of partial convolutional neural network algorithms for reconstructing global wind speed data compare to traditional statistical interpolation methods like kriging in terms of handling data discontinuities and spatial variability?",
+        "QuestionCn": "部分卷积神经网络算法在重建全球风速数据方面与传统的统计插值方法（如克里金法）相比，在处理数据不连续性和空间变异性方面有什么不同？",
+        "AnswerEn": "The use of partial convolutional neural network algorithms for reconstructing global wind speed data offers advantages over traditional statistical interpolation methods like kriging by effectively addressing issues of data discontinuities and high spatial variability. Traditional methods often struggle with the high variability and uneven distribution of meteorological data, while the partial convolutional neural network approach integrates multiple climate model data and observational data to reconstruct wind speeds, capturing observed trends more accurately.",
+        "AnswerCn": "使用部分卷积神经网络算法重建全球风速数据相较于传统的统计插值方法（如克里金法）具有优势，因为它有效地解决了数据不连续性和高空间变异性的问题。传统方法往往难以应对气象数据的高变异性和不均匀分布，而部分卷积神经网络方法则整合了多个气候模型数据和观测数据，以重建风速，更准确地捕捉到观察到的趋势。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the limitations in existing wind speed products when it comes to spatial and temporal continuity, and how do these limitations affect the assessment of renewable energy potential?",
+        "QuestionCn": "现有风速产品在空间和时间连续性方面的限制原因是什么，这些限制如何影响可再生能源潜力的评估？",
+        "AnswerEn": "The limitations in existing wind speed products arise from the discontinuity of meteorological observation data in both space and time. Additionally, while reanalysis products and climate model simulations achieve data continuity, they often fail to reproduce observed wind speed trends. These limitations, along with the high variability of wind speed and uneven and sparse distribution of observation sites, impact the assessment of renewable energy potential by providing an incomplete and potentially inaccurate understanding of wind resources.",
+        "AnswerCn": "现有风速产品的局限性源于气象观测数据在空间和时间上的不连续性。此外，尽管再分析产品和气候模型模拟实现了数据的连续性，但它们往往无法再现观察到的风速趋势。这些局限性，加上风速的高变异性和观测站点的分布不均匀和稀疏，影响了可再生能源潜力的评估，提供了对风资源的不完整和潜在不准确的理解。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential effects on the accuracy and utility of wind speed datasets when using a partial convolutional neural network to integrate multiple climate models and meteorological observations?",
+        "QuestionCn": "使用部分卷积神经网络整合多个气候模型和气象观测数据时，对风速数据集的准确性和实用性可能产生的影响是什么？",
+        "AnswerEn": "By using a partial convolutional neural network to integrate 34 climate model datasets and meteorological observations from HadISD, the wind speed dataset can potentially offer more accurate reconstructions of global wind speed trends from 1973-2021. This approach helps address the limitations of existing products, such as spatial and temporal discontinuities in meteorological data, and the inability of some reanalysis products and climate models to reproduce observed wind speed trends. The method also aims to overcome the challenges posed by high variability in wind speeds and uneven distribution and scarcity of observation sites, which traditional statistical interpolation methods struggle with.",
+        "AnswerCn": "通过使用部分卷积神经网络整合34个气候模型数据集和HadISD的气象观测数据，风速数据集有望提供1973年至2021年全球风速趋势的更准确重建。这种方法有助于解决现有产品的局限性，例如气象数据的空间和时间不连续性，以及一些再分析产品和气候模型无法再现观测风速趋势的问题。该方法还旨在克服风速的高变异性以及观测站点分布不均和稀缺所带来的挑战，而传统的统计插值方法对此难以应对。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to use a partial convolutional neural network algorithm to reconstruct global wind speed data over several decades?",
+        "QuestionCn": "使用部分卷积神经网络算法重建数十年来的全球风速数据是重要的原因是什么？",
+        "AnswerEn": "The use of a partial convolutional neural network algorithm for reconstructing global wind speed data is crucial because traditional methods like kriging or principal component analysis perform poorly due to the high variability of wind speed data and the uneven and sparse distribution of observation sites. Additionally, existing meteorological observation data suffer from spatial and temporal discontinuities, while reanalysis products and climate model simulations, despite achieving data continuity, often fail to replicate observed wind speed trends. Therefore, leveraging the partial convolutional neural network allows for the integration of multiple climate model data and meteorological station observations, capturing observed wind speed trends and overcoming the limitations of traditional methods.",
+        "AnswerCn": "使用部分卷积神经网络算法重建全球风速数据至关重要，因为传统方法如克里金法或主成分分析在风速数据的高变异性和观测站点分布不均匀、稀疏的情况下表现不佳。此外，现有的气象观测数据存在空间和时间的不连续性，而再分析产品和气候模型模拟尽管实现了数据的连续性，但往往无法复制观察到的风速趋势。因此，利用部分卷积神经网络可以整合多种气候模型数据和气象站观测，捕捉观察到的风速趋势，克服传统方法的局限性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in reconstructing global 10-meter wind speed data using partial convolutional neural networks, and how are climate model and meteorological station data integrated in this process?",
+        "QuestionCn": "使用部分卷积神经网络重建全球10米风速数据涉及哪些程序步骤，以及气候模型和气象站数据如何在此过程中集成？",
+        "AnswerEn": "The procedural steps involved in reconstructing global 10-meter wind speed data using partial convolutional neural networks include integrating 34 climate model datasets with meteorological station observational data from HadISD provided by the Met Office Hadley Centre. This integration helps to address the discontinuities in spatial and temporal data and incorporates observed wind speed trends. The process leverages the strengths of partial convolutional neural networks to improve upon traditional statistical interpolation methods, which struggle with high variability and uneven station distribution. Detailed reconstruction methodologies can be found in the methods section of the relevant reference literature.",
+        "AnswerCn": "重建全球10米风速数据的程序步骤包括将34个气候模型数据集与来自英国气象局哈德利中心的HadISD气象站观测数据进行整合。这一整合有助于解决空间和时间数据中的不连续性，并纳入观测到的风速趋势。该过程利用部分卷积神经网络的优势，以改善传统统计插值方法在高变异性和不均匀站点分布方面的不足。详细的重建方法可以在相关文献的方法部分找到。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

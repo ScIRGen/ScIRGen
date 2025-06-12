@@ -1,201 +1,201 @@
 {
-    "id": "a510780a-1a56-4c5a-99d9-defe3df0c2e3",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Passive microwave SSM/I brightness temperature dataset for China (1987-2007)",
-            "titleCn": "中国地区被动微波SSM/I亮度温度数据集（1987-2007）",
-            "description": "This data set includes the microwave brightness temperatures obtained by the spaceborne microwave radiometer SSM/I carried by the US Defense Meteorological Satellite Program (DMSP) satellite. It contains the twice daily (ascending and descending) brightness temperatures of seven channels, which are 19H, 19V, 22V, 37H, 37V, 85H, and 85V.\nThe Specialized Microwave Imager (SSM/I) was developed by the Hughes Corporation of the United States. In 1987, it was first carried into the space on the Block 5D-/F8 satellite of the US Defense Meteorological Satellite Program (DMSP) to perform a detection mission. In the 10 years from when the DMSP soared to orbit in 1987 to when the TRMM soared to orbit in 1997, the SSM/I was the world's most advanced spaceborne passive microwave remote sensing detection instrument, having the highest spatial resolution in the world. The DMSP satellite is in a near-polar circular solar synchronous orbit; the elevation is approximately 833 km, the inclination is 98.8 degrees, and the orbital period is 102.2 minutes. It passes through the equator at approximately 6:00 local time and covers the whole world once every 24 hours. The SSM/I consists of seven channels set at four frequencies, and the center frequencies are 19.35, 22.24, 37.05, and 85.50 GHz. The instrument actually comprises seven independent, total-power, balanced-mixing, superheterodyne passive microwave radiometer systems, and it can simultaneously measure microwave radiation from Earth and the atmospheric systems. Except for the 22.24 GHz frequency, all the frequencies have both horizontal and vertical polarization states.\nSome Eigenvalues of SSM/I\nChannel Frequency\n(GHz) Polarization Mode (V/H) Spatial Resolution\n(km * km) Footprint Size\n(km)\n19V 19.35 V 25×25 56\n19H 19.35 H 25×25 56\n22V 22.24 V 25×25 45\n37V 37.05 V 25×25 33\n37H 37.05 H 25×25 33\n85V 85.50 V 12.5×12.5 14\n85H 85.50 H 12.5×12.5 14\n1. File Format and Naming:\nEach group of data consists of remote sensing data files, .JPG image files and .met auxiliary information files as well as .TIM time information files and the corresponding .met time information auxiliary files.\nThe data file names and naming rules for each group in the SSMI_Grid_China directory are as follows:\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V (remote sensing data);\nChina-EASE-Fnn -ML/HaaaabbbA/D.ccH/V.jpg (image file);\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V.met (auxiliary information document);\nChina-EASE-Fnn-ML/HaaaabbbA/D.TIM (time information file); and\nChina-EASE- Fnn -ML/HaaaabbbA/D.TIM.met (time information auxiliary file).\nAmong them, EASE stands for EASE-Grid projection mode; Fnn represents carrier satellite number (F08, F11, and F13); ML/H represents multichannel low resolution and multichannel high resolution; A/D stands for ascending (A) and descending (D); aaaa represents the year; bbb represents the Julian day of the year; cc represents the channel number (19H, 19V, 22V, 37H, 37V, 85H, and 85V); and H/V represents horizontal polarization (H) and vertical polarization (V).\n2. Coordinate System and Projection:\nThe projection method is an equal-area secant cylindrical projection, and the double standard latitude is 30 degrees north and south. For more information on EASE-GRID, please refer to http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/. If you need to convert the EASE-Grid projection method into a geographic projection method, please refer to the ease2geo.prj file, which reads as follows.\nInput\nProjection cylindrical\nUnits meters\nParameters 6371228 6371228\n1 /* Enter projection type (1, 2, or 3)\n0 00 00 /* Longitude of central meridian\n30 00 00 /* Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nParameters\nEnd\n3. Data Format:\nStored as binary integers, Row number: 308 *166,each datum occupies 2 bytes. The data that are actually stored in this data set are the brightness temperatures *10, and after reading the data, they need to be divided by 10 to obtain true brightness temperature.\n4. Data Resolution:\nSpatial resolution: 25 km, 12.5 km (SSM/I 85 GHz);\nTime resolution: day by day, from 1978 to 2007.\n5. The Spatial Coverage:\nLongitude: 60°-140° east longitude;\nLatitude: 15°-55° north latitude.\n6. Data Reading:\nEach group of data includes remote sensing image data files, .JPG image files and .met auxiliary information files. The JPG files can be opened with Windows image and fax viewers. The .met auxiliary information files can be opened with notepad, and the remote sensing image data files can be opened in ENVI and ERDAS software.",
-            "descriptionCn": "本数据集中包括:使用美国国防气象卫星计划(DMSP)卫星所携带的星载微波辐射计SSM/I的微波亮度温度。包含1987年-2007年的19H，19V，22V，37H，37V，85H，85V七个通道的每日两次（升轨&降轨）亮度温度。\n专用微波成像仪（Special Sensor Microwave/Image，SSM/I）由美国休斯公司研制，于1987年首次由美国国防气象卫星计划（DMSP）中的Block 5D-/F8卫星载入空间执行探测使命。从1987年DMSP升空到1997年TRMM升空的10年时间内，SSM/I一直是世界上最先进、空间分辨率最高的星载被动微波遥感探测仪器。DMSP卫星为近极地圆形太阳同步轨道，卫星高度约833 km，轨道面倾角98.8°，轨道周期102.2 min，地方时6时左右通过赤道，24h覆盖一次全球。SSM/I由设置在4个频率处的7个通道组成，中心频率分别为19.35、22.24、37.05和85.50 GHz。其仪器实际上是由7个相互独立的全功率型、平衡混频、超外差式接收的被动微波辐射计系统构成，可以同时测量来自地球和大气系统的微波辐射。除22.24 GHz频率外，其它频率均同时具有水平和垂直两种极化状态。\nSSM/I若干特征值\n通道\t频率\n（GHz）\t极化方式（V/H）\t空间分辨率\n（km×km）\t足迹大小\n（km）\n19V\t19.35\tV\t25×25\t56\n19H\t19.35\tH\t25×25\t56\n22V\t22.24\tV\t25×25\t45\n37V\t37.05\tV\t25×25\t33\n37H\t37.05\tH\t25×25\t33\n85V\t85.50\tV\t12.5×12.5\t14\n85H\t85.50\tH\t12.5×12.5\t14\n1、文件格式和命名：\n每组数据均由遥感数据文件，.JPG图像文件和.met辅助信息文件，以及.TIM时间信息文件和相应的.met时间信息辅助文件构成。\nSSMI_Grid_China目录下的每组数据文件名及命名规则如下：\n \nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V（遥感数据）\nChina-EASE-Fnn -ML/HaaaabbbA/D.ccH/V.jpg （图像文件）\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V.met（辅助信息文件）\nChina-EASE-Fnn-ML/HaaaabbbA/D.TIM  （时间信息文件）\nChina-EASE- Fnn -ML/HaaaabbbA/D.TIM.met （时间信息辅助文件） \n其中：EASE代表EASE-Grid投影方式；Fnn代表搭载卫星编号（F08，F11，F13）；ML/H分别代表多通道低分辨率和多通道高分辨率；A/D分别代表升轨（A）和降轨（D）；aaaa代表年份；bbb代表该年的儒略日；cc代表通道号（19H，19V，22V，37H，37V，85H，85V）；H/V分别代表水平极化（H）和垂直极化（V）。\n2、坐标系及投影：\n投影方式为等积割圆柱投影，双标准纬线为南北纬30度。有关EASE-GRID的相关详细信息，请参考http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/。如果需要将EASE-Grid投影方式转换成Geographic投影方式，请参照ease2geo.prj文件，内容如下：\nInput\nprojection cylindrical\nunits meters\nparameters 6371228  6371228\n\n1\t\t/* Enter projection type (1, 2, or 3)\n0 00 00\t/* Longitude of central meridian\n30 00 00\t/* Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nparameters\nend\n3、数据格式： \n以整数形二进制存储，行列号：308*166，每个数据占2个字节。本数据集中实际存储的数据为亮温*10，读出数据后需除以10得到真实亮温。\n4、数据分辨率：\n空间分辨率：25km，12.5km (SSM/I 85GHz)；\n时间分辨率：逐日，从1978年至2007年。\n5、空间范围：\n经度：60°-140°东经；\n纬度：15°-55°北纬。\n6、数据读取：\n每一组数据包括遥感影像数据文件，.JPG图像文件和.met辅助信息文件，其中JPG文件可以用Windows图片和传真查看器打开，.met辅助信息文件可以用记事本打开，遥感影像数据文件可以在ENVI和ERDAS软件中打开。",
-            "instructions": "",
-            "instructionsCn": "",
-            "east": 135.5,
-            "west": 73.2,
-            "south": 17.8,
-            "north": 53.9,
-            "startTime": "1987-01-08 16:00:00",
-            "endTime": "2008-01-07 16:00:00",
-            "fileSize": 11176630331.0,
-            "cstr": null,
-            "doi": "",
-            "dataFormat": "删格",
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "National Snow and Ice Data Center（NSIDC）",
-                "nameEn": "National Snow and Ice Data Center（NSIDC）",
-                "unitEn": "National Snow and Ice Data Center",
-                "unitCn": "National Snow and Ice Data Center"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Bootstrap Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS, Version 3",
-                "referenceCn": null,
-                "referenceEn": "Comiso, J. C. (2017). Bootstrap Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS, Version 3. [Indicate subset used]. Boulder, Colorado USA. NASA National Snow and Ice Data Center Distributed Active Archive Center."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Long Term Analyses on Spatial and Temporal Evaluation of Snow Covers in Northern China by Using RS and Meteorological data",
-                "referenceCn": null,
-                "referenceEn": "Xuemei B, Wanchang Z. Long Term Analyses on Spatial and Temporal Evaluation of Snow Covers in Northern China by Using RS and Meteorological data[C]//International Workshop on Education Technology and Training, 2008. and 2008 International Workshop on Geoscience and Remote Sensing. ETT and GRS 2008. 2008, 2: 368–371. doi:10.1109/ETTandGRS.2008.123"
-            },
-            {
-                "titleCn": "准噶尔盆地积雪储量的遥感反演及变化特征分析",
-                "titleEn": null,
-                "referenceCn": "李杨, 顾建丽, 张璞, 刘艳, 马丽云. (2010). 准噶尔盆地积雪储量的遥感反演及变化特征分析. 干旱区地理, 33(4), 623-629.",
-                "referenceEn": null
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "冰冻圈遥感",
-                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
-            },
-            {
-                "nameCn": "微波遥感",
-                "nameEn": "Microwave remote sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1987-2007",
-                "keywordEn": null,
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            },
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山地区冰川边界（2018）",
-                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
-            },
-            {
-                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
-                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
-            },
-            {
-                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
-                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
-            },
-            {
-                "titleCn": "北半球湖冰物候数据集（1978-2018）",
-                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
-            },
-            {
-                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
-                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
-            },
-            {
-                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
-                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
-            },
-            {
-                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
-                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
-            },
-            {
-                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
-                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
-            },
-            {
-                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
-                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
-            }
-        ]
+  "id": "a510780a-1a56-4c5a-99d9-defe3df0c2e3",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Passive microwave SSM/I brightness temperature dataset for China (1987-2007)",
+      "titleCn": "中国地区被动微波SSM/I亮度温度数据集（1987-2007）",
+      "description": "This data set includes the microwave brightness temperatures obtained by the spaceborne microwave radiometer SSM/I carried by the US Defense Meteorological Satellite Program (DMSP) satellite. It contains the twice daily (ascending and descending) brightness temperatures of seven channels, which are 19H, 19V, 22V, 37H, 37V, 85H, and 85V.\nThe Specialized Microwave Imager (SSM/I) was developed by the Hughes Corporation of the United States. In 1987, it was first carried into the space on the Block 5D-/F8 satellite of the US Defense Meteorological Satellite Program (DMSP) to perform a detection mission. In the 10 years from when the DMSP soared to orbit in 1987 to when the TRMM soared to orbit in 1997, the SSM/I was the world's most advanced spaceborne passive microwave remote sensing detection instrument, having the highest spatial resolution in the world. The DMSP satellite is in a near-polar circular solar synchronous orbit; the elevation is approximately 833 km, the inclination is 98.8 degrees, and the orbital period is 102.2 minutes. It passes through the equator at approximately 6:00 local time and covers the whole world once every 24 hours. The SSM/I consists of seven channels set at four frequencies, and the center frequencies are 19.35, 22.24, 37.05, and 85.50 GHz. The instrument actually comprises seven independent, total-power, balanced-mixing, superheterodyne passive microwave radiometer systems, and it can simultaneously measure microwave radiation from Earth and the atmospheric systems. Except for the 22.24 GHz frequency, all the frequencies have both horizontal and vertical polarization states.\nSome Eigenvalues of SSM/I\nChannel Frequency\n(GHz) Polarization Mode (V/H) Spatial Resolution\n(km * km) Footprint Size\n(km)\n19V 19.35 V 25×25 56\n19H 19.35 H 25×25 56\n22V 22.24 V 25×25 45\n37V 37.05 V 25×25 33\n37H 37.05 H 25×25 33\n85V 85.50 V 12.5×12.5 14\n85H 85.50 H 12.5×12.5 14\n1. File Format and Naming:\nEach group of data consists of remote sensing data files, .JPG image files and .met auxiliary information files as well as .TIM time information files and the corresponding .met time information auxiliary files.\nThe data file names and naming rules for each group in the SSMI_Grid_China directory are as follows:\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V (remote sensing data);\nChina-EASE-Fnn -ML/HaaaabbbA/D.ccH/V.jpg (image file);\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V.met (auxiliary information document);\nChina-EASE-Fnn-ML/HaaaabbbA/D.TIM (time information file); and\nChina-EASE- Fnn -ML/HaaaabbbA/D.TIM.met (time information auxiliary file).\nAmong them, EASE stands for EASE-Grid projection mode; Fnn represents carrier satellite number (F08, F11, and F13); ML/H represents multichannel low resolution and multichannel high resolution; A/D stands for ascending (A) and descending (D); aaaa represents the year; bbb represents the Julian day of the year; cc represents the channel number (19H, 19V, 22V, 37H, 37V, 85H, and 85V); and H/V represents horizontal polarization (H) and vertical polarization (V).\n2. Coordinate System and Projection:\nThe projection method is an equal-area secant cylindrical projection, and the double standard latitude is 30 degrees north and south. For more information on EASE-GRID, please refer to http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/. If you need to convert the EASE-Grid projection method into a geographic projection method, please refer to the ease2geo.prj file, which reads as follows.\nInput\nProjection cylindrical\nUnits meters\nParameters 6371228 6371228\n1 /* Enter projection type (1, 2, or 3)\n0 00 00 /* Longitude of central meridian\n30 00 00 /* Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nParameters\nEnd\n3. Data Format:\nStored as binary integers, Row number: 308 *166,each datum occupies 2 bytes. The data that are actually stored in this data set are the brightness temperatures *10, and after reading the data, they need to be divided by 10 to obtain true brightness temperature.\n4. Data Resolution:\nSpatial resolution: 25 km, 12.5 km (SSM/I 85 GHz);\nTime resolution: day by day, from 1978 to 2007.\n5. The Spatial Coverage:\nLongitude: 60°-140° east longitude;\nLatitude: 15°-55° north latitude.\n6. Data Reading:\nEach group of data includes remote sensing image data files, .JPG image files and .met auxiliary information files. The JPG files can be opened with Windows image and fax viewers. The .met auxiliary information files can be opened with notepad, and the remote sensing image data files can be opened in ENVI and ERDAS software.",
+      "descriptionCn": "本数据集中包括:使用美国国防气象卫星计划(DMSP)卫星所携带的星载微波辐射计SSM/I的微波亮度温度。包含1987年-2007年的19H，19V，22V，37H，37V，85H，85V七个通道的每日两次（升轨&降轨）亮度温度。\n专用微波成像仪（Special Sensor Microwave/Image，SSM/I）由美国休斯公司研制，于1987年首次由美国国防气象卫星计划（DMSP）中的Block 5D-/F8卫星载入空间执行探测使命。从1987年DMSP升空到1997年TRMM升空的10年时间内，SSM/I一直是世界上最先进、空间分辨率最高的星载被动微波遥感探测仪器。DMSP卫星为近极地圆形太阳同步轨道，卫星高度约833 km，轨道面倾角98.8°，轨道周期102.2 min，地方时6时左右通过赤道，24h覆盖一次全球。SSM/I由设置在4个频率处的7个通道组成，中心频率分别为19.35、22.24、37.05和85.50 GHz。其仪器实际上是由7个相互独立的全功率型、平衡混频、超外差式接收的被动微波辐射计系统构成，可以同时测量来自地球和大气系统的微波辐射。除22.24 GHz频率外，其它频率均同时具有水平和垂直两种极化状态。\nSSM/I若干特征值\n通道\t频率\n（GHz）\t极化方式（V/H）\t空间分辨率\n（km×km）\t足迹大小\n（km）\n19V\t19.35\tV\t25×25\t56\n19H\t19.35\tH\t25×25\t56\n22V\t22.24\tV\t25×25\t45\n37V\t37.05\tV\t25×25\t33\n37H\t37.05\tH\t25×25\t33\n85V\t85.50\tV\t12.5×12.5\t14\n85H\t85.50\tH\t12.5×12.5\t14\n1、文件格式和命名：\n每组数据均由遥感数据文件，.JPG图像文件和.met辅助信息文件，以及.TIM时间信息文件和相应的.met时间信息辅助文件构成。\nSSMI_Grid_China目录下的每组数据文件名及命名规则如下：\n \nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V（遥感数据）\nChina-EASE-Fnn -ML/HaaaabbbA/D.ccH/V.jpg （图像文件）\nChina-EASE-Fnn-ML/HaaaabbbA/D.ccH/V.met（辅助信息文件）\nChina-EASE-Fnn-ML/HaaaabbbA/D.TIM  （时间信息文件）\nChina-EASE- Fnn -ML/HaaaabbbA/D.TIM.met （时间信息辅助文件） \n其中：EASE代表EASE-Grid投影方式；Fnn代表搭载卫星编号（F08，F11，F13）；ML/H分别代表多通道低分辨率和多通道高分辨率；A/D分别代表升轨（A）和降轨（D）；aaaa代表年份；bbb代表该年的儒略日；cc代表通道号（19H，19V，22V，37H，37V，85H，85V）；H/V分别代表水平极化（H）和垂直极化（V）。\n2、坐标系及投影：\n投影方式为等积割圆柱投影，双标准纬线为南北纬30度。有关EASE-GRID的相关详细信息，请参考http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/。如果需要将EASE-Grid投影方式转换成Geographic投影方式，请参照ease2geo.prj文件，内容如下：\nInput\nprojection cylindrical\nunits meters\nparameters 6371228  6371228\n\n1\t\t/* Enter projection type (1, 2, or 3)\n0 00 00\t/* Longitude of central meridian\n30 00 00\t/* Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nparameters\nend\n3、数据格式： \n以整数形二进制存储，行列号：308*166，每个数据占2个字节。本数据集中实际存储的数据为亮温*10，读出数据后需除以10得到真实亮温。\n4、数据分辨率：\n空间分辨率：25km，12.5km (SSM/I 85GHz)；\n时间分辨率：逐日，从1978年至2007年。\n5、空间范围：\n经度：60°-140°东经；\n纬度：15°-55°北纬。\n6、数据读取：\n每一组数据包括遥感影像数据文件，.JPG图像文件和.met辅助信息文件，其中JPG文件可以用Windows图片和传真查看器打开，.met辅助信息文件可以用记事本打开，遥感影像数据文件可以在ENVI和ERDAS软件中打开。",
+      "instructions": "",
+      "instructionsCn": "",
+      "east": 135.5,
+      "west": 73.2,
+      "south": 17.8,
+      "north": 53.9,
+      "startTime": "1987-01-08 16:00:00",
+      "endTime": "2008-01-07 16:00:00",
+      "fileSize": 11176630331.0,
+      "cstr": null,
+      "doi": "",
+      "dataFormat": "删格",
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the properties of passive microwave brightness temperature data collected over China between 1987 and 2007?",
-                "QuestionCn": "1987年至2007年间在中国收集的被动微波亮温数据的特性是什么？",
-                "AnswerEn": "19.35 GHz, 22.24 GHz, 37.05 GHz, 85.50 GHz, vertical polarization, horizontal polarization, spatial resolutions 25×25 km, spatial resolutions 12.5×12.5 km, twice daily, ascending orbits, descending orbits, geographic range 60° to 140°E longitude, geographic range 15° to 55°N latitude, binary format, grid size 308x166, brightness temperature multiplied by 10",
-                "AnswerCn": "19.35 GHz，22.24 GHz，37.05 GHz，85.50 GHz，垂直极化，水平极化，空间分辨率25×25公里，空间分辨率12.5×12.5公里，每日两次，上升轨道，下降轨道，地理范围东经60°至140°，地理范围北纬15°至55°，二进制格式，网格大小308x166，亮温乘以10。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the role of the Special Sensor Microwave/Image (SSM/I) in passive microwave remote sensing?",
-                "QuestionCn": "特殊传感器微波/图像（SSM/I）在被动微波遥感中的作用是什么？",
-                "AnswerEn": "The Special Sensor Microwave/Image (SSM/I) is a starborne passive microwave radiometer developed by the United States Hughes Company, first used in 1987 by the Defense Meteorological Satellite Program (DMSP). It was the most advanced and highest spatial resolution passive microwave remote sensing instrument globally from 1987 until 1997. The SSM/I measures microwave radiation from the Earth and atmospheric systems using seven channels at four frequency centers (19.35, 22.24, 37.05, and 85.50 GHz), with horizontal and vertical polarization, except at 22.24 GHz. It operates on a near-polar, sun-synchronous orbit at an altitude of approximately 833 km, providing global coverage every 24 hours.",
-                "AnswerCn": "特殊传感器微波/图像仪（SSM/I）是由美国休斯公司开发的一种星载被动微波辐射计，首次于1987年由国防气象卫星计划（DMSP）使用。它是1987年至1997年间全球最先进、空间分辨率最高的被动微波遥感仪器。SSM/I通过七个通道在四个频率中心（19.35、22.24、37.05和85.50 GHz）上测量来自地球和大气系统的微波辐射，具有水平和垂直极化，除了22.24 GHz频率。它在近极地、太阳同步轨道上运行，轨道高度约为833公里，每24小时提供全球覆盖。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the spatial resolution and polarization modes of passive microwave radiometers compare across different frequency channels in a dataset derived from the DMSP satellites?",
-                "QuestionCn": "被动微波辐射计在不同频率通道中的空间分辨率和极化模式在DMSP卫星衍生的数据集中是如何比较的？",
-                "AnswerEn": "The spatial resolution and polarization modes of the passive microwave radiometers in a dataset derived from DMSP satellites vary across frequency channels. For example, at 19.35 GHz and 22.24 GHz, the spatial resolution is 25 km x 25 km, whereas at 85.50 GHz, it is 12.5 km x 12.5 km. Additionally, channels at 19.35 GHz and 37.05 GHz have both horizontal (H) and vertical (V) polarization modes, while the channel at 22.24 GHz only has a vertical (V) polarization mode.",
-                "AnswerCn": "来自DMSP卫星的数据集中，被动微波辐射计的空间分辨率和极化模式在不同频率通道之间有所不同。例如，在19.35 GHz和22.24 GHz频率下，空间分辨率为25 km x 25 km，而在85.50 GHz频率下，空间分辨率为12.5 km x 12.5 km。此外，19.35 GHz和37.05 GHz通道具有水平（H）和垂直（V）极化模式，而22.24 GHz通道仅具有垂直（V）极化模式。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors have contributed to the challenges in collecting and processing passive microwave brightness temperature data from the SSM/I sensor over China's region between 1987 and 2007?",
-                "QuestionCn": "在1987年至2007年期间，导致在中国地区收集和处理SSM/I传感器的被动微波亮温数据面临挑战的因素有哪些？",
-                "AnswerEn": "The challenges in collecting and processing passive microwave brightness temperature data from the SSM/I sensor over China's region between 1987 and 2007 could include the complexity of operating advanced spaceborne passive microwave radiometers like the SSM/I, which was among the most advanced of its time, requiring precise calibration and handling. The data involves multiple frequency channels and polarizations (19H, 19V, 22V, 37H, 37V, 85H, 85V), which necessitates intricate data processing techniques to ensure accuracy. Additionally, the need to manage various data formats (remote sensing data files, JPG image files, and .met auxiliary information files) and convert projections from EASE-Grid to Geographic could also pose significant challenges. The spatial and temporal resolutions, alongside the wide spatial coverage required, further complicate data collection and processing efforts.",
-                "AnswerCn": "收集和处理1987年至2007年间中国地区SSM/I传感器的被动微波亮温数据所面临的挑战包括操作先进的空间被动微波辐射计（如SSM/I）的复杂性，该传感器在其时代是最先进的之一，需要精确的校准和处理。数据涉及多个频率通道和极化（19H、19V、22V、37H、37V、85H、85V），这需要复杂的数据处理技术以确保准确性。此外，管理各种数据格式（遥感数据文件、JPG图像文件和.met辅助信息文件）以及将投影从EASE-Grid转换为地理坐标也可能带来重大挑战。空间和时间分辨率，以及所需的广泛空间覆盖，进一步复杂化了数据收集和处理工作。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential effects on data accuracy and completeness when utilizing multiple channels and polarizations for passive microwave remote sensing data collection over China from 1987 to 2007?",
-                "QuestionCn": "在1987年至2007年期间，利用多通道和极化进行被动微波遥感数据收集对数据准确性和完整性的潜在影响是什么？",
-                "AnswerEn": "Utilizing multiple channels and polarizations in passive microwave remote sensing data collection can enhance the accuracy and completeness of the dataset by providing varied perspectives on brightness temperatures, which can improve the characterization of surface and atmospheric conditions. Each channel and polarization offers unique data that can be combined to give a more comprehensive understanding of the observed area. However, this complexity can also introduce challenges in data processing and interpretation, requiring advanced algorithms to effectively integrate and analyze the diverse data points.",
-                "AnswerCn": "利用多通道和极化的被动微波遥感数据收集可以提高数据集的准确性和完整性，因为它提供了对亮温的多样化视角，从而改善了对地表和大气条件的表征。每个通道和极化提供独特的数据，可以结合起来更全面地理解所观察的区域。然而，这种复杂性也可能在数据处理和解释中引入挑战，需要先进的算法来有效整合和分析这些多样化的数据点。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to collect passive microwave brightness temperature data for the region using multiple channels and polarizations over a long period?",
-                "QuestionCn": "收集该地区的被动微波亮温数据，使用多个通道和极化，并持续较长时间，这一点重要的原因是什么？",
-                "AnswerEn": "Collecting passive microwave brightness temperature data using multiple channels and polarizations over a long period is crucial for monitoring and understanding changes in the Earth's atmospheric and surface conditions. The data provides insights into various environmental and climatic processes by capturing different frequency responses and polarizations, allowing for comprehensive analysis of phenomena such as precipitation, snow cover, and sea ice extent. The long-term data also supports trend analysis and the assessment of temporal changes, which are vital for climate modeling and prediction efforts.",
-                "AnswerCn": "收集多个通道和极化的被动微波亮温数据，长期监测和理解地球大气和表面条件的变化至关重要。这些数据通过捕捉不同频率响应和极化，提供对各种环境和气候过程的洞察，允许对降水、雪盖和海冰范围等现象进行全面分析。长期数据还支持趋势分析和时间变化的评估，这对气候建模和预测工作至关重要。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures are followed to collect and process passive microwave brightness temperature data using spaceborne microwave radiometers like SSM/I for regions in China from 1987 to 2007?",
-                "QuestionCn": "使用像SSM/I这样的空间微波辐射计收集和处理1987年至2007年中国地区的被动微波亮温数据的程序包括哪些步骤？",
-                "AnswerEn": "The data collection involves using spaceborne microwave radiometers, specifically the Special Sensor Microwave/Imager (SSM/I), mounted on DMSP satellites. These satellites orbit in a near-polar, sun-synchronous orbit at approximately 833 km altitude with a 98.8° inclination. The instrument collects data across seven channels at four frequencies (19.35, 22.24, 37.05, and 85.50 GHz) with both horizontal and vertical polarization, resulting in daily coverage of the globe. The data is stored in integer binary format with a spatial resolution of 25 km and 12.5 km for the 85 GHz channel, and a temporal resolution of daily measurements. The brightness temperatures are stored as 10 times the actual value and need to be divided by 10 to obtain the real brightness temperature. Data files are organized in a specific naming convention based on satellite number, resolution, orbital pass, year, Julian day, channel, and polarization. The EASE-Grid projection is used, which can be converted to Geographic projection using specified parameters.",
-                "AnswerCn": "数据收集涉及使用空间微波辐射计，特别是安装在DMSP卫星上的特殊传感器微波/成像仪（SSM/I）。这些卫星以近极地、太阳同步轨道运行，轨道高度约为833公里，倾角为98.8°。该仪器在四个频率（19.35、22.24、37.05和85.50 GHz）下的七个通道收集数据，具有水平和垂直极化，从而实现全球的每日覆盖。数据以整数二进制格式存储，空间分辨率为25公里，85 GHz通道的空间分辨率为12.5公里，时间分辨率为每日测量。亮温以实际值的10倍存储，需要除以10以获得真实的亮温。数据文件按照特定的命名约定组织，基于卫星编号、分辨率、轨道经过、年份、儒略日、通道和极化。使用EASE-Grid投影，可以使用指定参数转换为地理投影。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "National Snow and Ice Data Center（NSIDC）",
+        "nameEn": "National Snow and Ice Data Center（NSIDC）",
+        "unitEn": "National Snow and Ice Data Center",
+        "unitCn": "National Snow and Ice Data Center"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Bootstrap Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS, Version 3",
+        "referenceCn": null,
+        "referenceEn": "Comiso, J. C. (2017). Bootstrap Sea Ice Concentrations from Nimbus-7 SMMR and DMSP SSM/I-SSMIS, Version 3. [Indicate subset used]. Boulder, Colorado USA. NASA National Snow and Ice Data Center Distributed Active Archive Center."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Long Term Analyses on Spatial and Temporal Evaluation of Snow Covers in Northern China by Using RS and Meteorological data",
+        "referenceCn": null,
+        "referenceEn": "Xuemei B, Wanchang Z. Long Term Analyses on Spatial and Temporal Evaluation of Snow Covers in Northern China by Using RS and Meteorological data[C]//International Workshop on Education Technology and Training, 2008. and 2008 International Workshop on Geoscience and Remote Sensing. ETT and GRS 2008. 2008, 2: 368–371. doi:10.1109/ETTandGRS.2008.123"
+      },
+      {
+        "titleCn": "准噶尔盆地积雪储量的遥感反演及变化特征分析",
+        "titleEn": null,
+        "referenceCn": "李杨, 顾建丽, 张璞, 刘艳, 马丽云. (2010). 准噶尔盆地积雪储量的遥感反演及变化特征分析. 干旱区地理, 33(4), 623-629.",
+        "referenceEn": null
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "冰冻圈遥感",
+        "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+      },
+      {
+        "nameCn": "微波遥感",
+        "nameEn": "Microwave remote sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1987-2007",
+        "keywordEn": null,
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      },
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山地区冰川边界（2018）",
+        "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+      },
+      {
+        "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+        "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+      },
+      {
+        "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+        "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+      },
+      {
+        "titleCn": "北半球湖冰物候数据集（1978-2018）",
+        "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+      },
+      {
+        "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+        "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+      },
+      {
+        "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+        "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+      },
+      {
+        "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+        "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+      },
+      {
+        "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+        "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+      },
+      {
+        "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+        "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the properties of passive microwave brightness temperature data collected over China between 1987 and 2007?",
+        "QuestionCn": "1987年至2007年间在中国收集的被动微波亮温数据的特性是什么？",
+        "AnswerEn": "19.35 GHz, 22.24 GHz, 37.05 GHz, 85.50 GHz, vertical polarization, horizontal polarization, spatial resolutions 25×25 km, spatial resolutions 12.5×12.5 km, twice daily, ascending orbits, descending orbits, geographic range 60° to 140°E longitude, geographic range 15° to 55°N latitude, binary format, grid size 308x166, brightness temperature multiplied by 10",
+        "AnswerCn": "19.35 GHz，22.24 GHz，37.05 GHz，85.50 GHz，垂直极化，水平极化，空间分辨率25×25公里，空间分辨率12.5×12.5公里，每日两次，上升轨道，下降轨道，地理范围东经60°至140°，地理范围北纬15°至55°，二进制格式，网格大小308x166，亮温乘以10。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the role of the Special Sensor Microwave/Image (SSM/I) in passive microwave remote sensing?",
+        "QuestionCn": "特殊传感器微波/图像（SSM/I）在被动微波遥感中的作用是什么？",
+        "AnswerEn": "The Special Sensor Microwave/Image (SSM/I) is a starborne passive microwave radiometer developed by the United States Hughes Company, first used in 1987 by the Defense Meteorological Satellite Program (DMSP). It was the most advanced and highest spatial resolution passive microwave remote sensing instrument globally from 1987 until 1997. The SSM/I measures microwave radiation from the Earth and atmospheric systems using seven channels at four frequency centers (19.35, 22.24, 37.05, and 85.50 GHz), with horizontal and vertical polarization, except at 22.24 GHz. It operates on a near-polar, sun-synchronous orbit at an altitude of approximately 833 km, providing global coverage every 24 hours.",
+        "AnswerCn": "特殊传感器微波/图像仪（SSM/I）是由美国休斯公司开发的一种星载被动微波辐射计，首次于1987年由国防气象卫星计划（DMSP）使用。它是1987年至1997年间全球最先进、空间分辨率最高的被动微波遥感仪器。SSM/I通过七个通道在四个频率中心（19.35、22.24、37.05和85.50 GHz）上测量来自地球和大气系统的微波辐射，具有水平和垂直极化，除了22.24 GHz频率。它在近极地、太阳同步轨道上运行，轨道高度约为833公里，每24小时提供全球覆盖。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the spatial resolution and polarization modes of passive microwave radiometers compare across different frequency channels in a dataset derived from the DMSP satellites?",
+        "QuestionCn": "被动微波辐射计在不同频率通道中的空间分辨率和极化模式在DMSP卫星衍生的数据集中是如何比较的？",
+        "AnswerEn": "The spatial resolution and polarization modes of the passive microwave radiometers in a dataset derived from DMSP satellites vary across frequency channels. For example, at 19.35 GHz and 22.24 GHz, the spatial resolution is 25 km x 25 km, whereas at 85.50 GHz, it is 12.5 km x 12.5 km. Additionally, channels at 19.35 GHz and 37.05 GHz have both horizontal (H) and vertical (V) polarization modes, while the channel at 22.24 GHz only has a vertical (V) polarization mode.",
+        "AnswerCn": "来自DMSP卫星的数据集中，被动微波辐射计的空间分辨率和极化模式在不同频率通道之间有所不同。例如，在19.35 GHz和22.24 GHz频率下，空间分辨率为25 km x 25 km，而在85.50 GHz频率下，空间分辨率为12.5 km x 12.5 km。此外，19.35 GHz和37.05 GHz通道具有水平（H）和垂直（V）极化模式，而22.24 GHz通道仅具有垂直（V）极化模式。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors have contributed to the challenges in collecting and processing passive microwave brightness temperature data from the SSM/I sensor over China's region between 1987 and 2007?",
+        "QuestionCn": "在1987年至2007年期间，导致在中国地区收集和处理SSM/I传感器的被动微波亮温数据面临挑战的因素有哪些？",
+        "AnswerEn": "The challenges in collecting and processing passive microwave brightness temperature data from the SSM/I sensor over China's region between 1987 and 2007 could include the complexity of operating advanced spaceborne passive microwave radiometers like the SSM/I, which was among the most advanced of its time, requiring precise calibration and handling. The data involves multiple frequency channels and polarizations (19H, 19V, 22V, 37H, 37V, 85H, 85V), which necessitates intricate data processing techniques to ensure accuracy. Additionally, the need to manage various data formats (remote sensing data files, JPG image files, and .met auxiliary information files) and convert projections from EASE-Grid to Geographic could also pose significant challenges. The spatial and temporal resolutions, alongside the wide spatial coverage required, further complicate data collection and processing efforts.",
+        "AnswerCn": "收集和处理1987年至2007年间中国地区SSM/I传感器的被动微波亮温数据所面临的挑战包括操作先进的空间被动微波辐射计（如SSM/I）的复杂性，该传感器在其时代是最先进的之一，需要精确的校准和处理。数据涉及多个频率通道和极化（19H、19V、22V、37H、37V、85H、85V），这需要复杂的数据处理技术以确保准确性。此外，管理各种数据格式（遥感数据文件、JPG图像文件和.met辅助信息文件）以及将投影从EASE-Grid转换为地理坐标也可能带来重大挑战。空间和时间分辨率，以及所需的广泛空间覆盖，进一步复杂化了数据收集和处理工作。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential effects on data accuracy and completeness when utilizing multiple channels and polarizations for passive microwave remote sensing data collection over China from 1987 to 2007?",
+        "QuestionCn": "在1987年至2007年期间，利用多通道和极化进行被动微波遥感数据收集对数据准确性和完整性的潜在影响是什么？",
+        "AnswerEn": "Utilizing multiple channels and polarizations in passive microwave remote sensing data collection can enhance the accuracy and completeness of the dataset by providing varied perspectives on brightness temperatures, which can improve the characterization of surface and atmospheric conditions. Each channel and polarization offers unique data that can be combined to give a more comprehensive understanding of the observed area. However, this complexity can also introduce challenges in data processing and interpretation, requiring advanced algorithms to effectively integrate and analyze the diverse data points.",
+        "AnswerCn": "利用多通道和极化的被动微波遥感数据收集可以提高数据集的准确性和完整性，因为它提供了对亮温的多样化视角，从而改善了对地表和大气条件的表征。每个通道和极化提供独特的数据，可以结合起来更全面地理解所观察的区域。然而，这种复杂性也可能在数据处理和解释中引入挑战，需要先进的算法来有效整合和分析这些多样化的数据点。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to collect passive microwave brightness temperature data for the region using multiple channels and polarizations over a long period?",
+        "QuestionCn": "收集该地区的被动微波亮温数据，使用多个通道和极化，并持续较长时间，这一点重要的原因是什么？",
+        "AnswerEn": "Collecting passive microwave brightness temperature data using multiple channels and polarizations over a long period is crucial for monitoring and understanding changes in the Earth's atmospheric and surface conditions. The data provides insights into various environmental and climatic processes by capturing different frequency responses and polarizations, allowing for comprehensive analysis of phenomena such as precipitation, snow cover, and sea ice extent. The long-term data also supports trend analysis and the assessment of temporal changes, which are vital for climate modeling and prediction efforts.",
+        "AnswerCn": "收集多个通道和极化的被动微波亮温数据，长期监测和理解地球大气和表面条件的变化至关重要。这些数据通过捕捉不同频率响应和极化，提供对各种环境和气候过程的洞察，允许对降水、雪盖和海冰范围等现象进行全面分析。长期数据还支持趋势分析和时间变化的评估，这对气候建模和预测工作至关重要。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures are followed to collect and process passive microwave brightness temperature data using spaceborne microwave radiometers like SSM/I for regions in China from 1987 to 2007?",
+        "QuestionCn": "使用像SSM/I这样的空间微波辐射计收集和处理1987年至2007年中国地区的被动微波亮温数据的程序包括哪些步骤？",
+        "AnswerEn": "The data collection involves using spaceborne microwave radiometers, specifically the Special Sensor Microwave/Imager (SSM/I), mounted on DMSP satellites. These satellites orbit in a near-polar, sun-synchronous orbit at approximately 833 km altitude with a 98.8° inclination. The instrument collects data across seven channels at four frequencies (19.35, 22.24, 37.05, and 85.50 GHz) with both horizontal and vertical polarization, resulting in daily coverage of the globe. The data is stored in integer binary format with a spatial resolution of 25 km and 12.5 km for the 85 GHz channel, and a temporal resolution of daily measurements. The brightness temperatures are stored as 10 times the actual value and need to be divided by 10 to obtain the real brightness temperature. Data files are organized in a specific naming convention based on satellite number, resolution, orbital pass, year, Julian day, channel, and polarization. The EASE-Grid projection is used, which can be converted to Geographic projection using specified parameters.",
+        "AnswerCn": "数据收集涉及使用空间微波辐射计，特别是安装在DMSP卫星上的特殊传感器微波/成像仪（SSM/I）。这些卫星以近极地、太阳同步轨道运行，轨道高度约为833公里，倾角为98.8°。该仪器在四个频率（19.35、22.24、37.05和85.50 GHz）下的七个通道收集数据，具有水平和垂直极化，从而实现全球的每日覆盖。数据以整数二进制格式存储，空间分辨率为25公里，85 GHz通道的空间分辨率为12.5公里，时间分辨率为每日测量。亮温以实际值的10倍存储，需要除以10以获得真实的亮温。数据文件按照特定的命名约定组织，基于卫星编号、分辨率、轨道经过、年份、儒略日、通道和极化。使用EASE-Grid投影，可以使用指定参数转换为地理投影。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

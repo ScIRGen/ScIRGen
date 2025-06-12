@@ -1,357 +1,357 @@
 {
-    "id": "eb7746e6-23e3-4e5f-8e99-e5b5950638b3",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "China Daily snow albedo product data set (2000-2020)",
-            "titleCn": "中国逐日积雪反照率产品数据集（2000-2020）",
-            "description": "ChinaSA is raster data with a geospatial extent of 72 - 142E, 16 - 56N, using an equal latitude and longitude projection and a spatial resolution of 0.005°. The dataset covers the period from 1 January 2000 to 31 December 2020 with a temporal resolution of 1 day. The data contains six elements: black sky albedo (Black_Sky_Albedo), white sky albedo (White_Sky_Albedo), solar zenith angle (Solar_Zenith_Angle), pixel-level cloud label (Cloud_Mask), pixel-level forest pixel (Forest_Mask) and pixel-level retrieval label (Abnormal_Mask). Black_Sky_Albedo records the black sky albedo calculated by retrieved, with as a calculation factor of 0.0001 and a data range of 0-10000. White_Sky_Albedo records the white sky albedo calculated by retrieved, with as a calculation factor of 0.0001 and a data range of 0-10000. Cloud_Mask records whether the pixel is cloud type, with a value of 0 indicating non-cloud and 1 indicating cloud. Forest_Mask records whether the pixel has been corrected as a forest type, with a value of 0 indicating that it has not been corrected and 1 indicating that it has been corrected. Abnormal_Mask records whether the retrieval of the black sky albedo and white sky albedo of the pixel is an anomaly of less than 0 or greater than 10000, with a value of 0 indicating a non-anomaly and 1 indicating an anomaly. ChinaSA was retrieved based on the MODIS land surface reflectance product MOD09GA, the snow cover product MOD10A1/MYD10A1 and the global digital elevation model SRTM. The snow albedo retrieval model was developed based on the ART model and produced using the GEE and local side interactions. To assess the retrieval quality of ChinaSA, the accuracy of the snow albedo product was verified using observations from in-situ meteorological stations and the sample observation validation method, and compared with the accuracy of four commonly used albedo products (GLASS, GlobAlbedo, MCD43A3 and SAD). The validation results show that ChinaSA outperforms the other products in all validations, with a root mean square error (RMSE) of less than 0.12, and can achieve a RMSE of 0.021 in forest areas.",
-            "descriptionCn": "中国2000-2020年逐日积雪反照率产品数据集地理空间范围为72 - 142E，16 - 56N，采用等经纬度投影，空间分辨率0.005°。数据集时间范围覆盖2000年1月1日至2020年12月31日，时间分辨率为1天。数据包含6个要素：黑空反照率（Black_Sky_Albedo）、白空反照率（White_Sky_Albedo）、太阳天顶角（Solar_Zenith_Angle）、云标识（Cloud_Mask）、林区校正标识（Forest_Mask）和反演情况标识（Abnormal_Mask）。黑空反照率要素记录了反演得到的黑空反照率，计算因子为0.0001，数据范围为0-10000。白空反照率要素记录了反演得到的白空反照率，计算因子为0.0001，数据范围为0-10000。太阳天顶角要素记录了太阳天顶角度，计算因子为0.01，数据范围为0-9000。云标识要素记录了像元是否为云，值为0表示非云，值为1表示为云。林区校正标识要素记录了像元是否作为森林类型像元被校正过，值为0表示未校正，值为1表示已校正。反演情况标识要素记录了像元所对应的黑空反照率及白空反照率的反演结果是否为小于0或大于10000的异常值，值为0表示非异常值，值为1表示为异常值。数据集基于MODIS地表反射率产品MOD09GA，积雪产品MOD10A1/MYD10A1和全球数字高程模型SRTM数据，在ART模型基础上发展了积雪反照率反演模型，并利用GEE和本地端交互生产而来。为了评估ChinaSA的反演质量，利用地面台站的观测数据提出了样方观测验证方法，验证了积雪反照率产品的精度，并与常用的四种反照率产品（GLASS、GlobAlbedo、MCD43A3和SAD）进行了精度对比。验证结果表明，ChinaSA在所有验证中精度都优于其他产品，均方根误差小于0.12，在森林区域的均方根误差能达到0.021。",
-            "instructions": "File name: Snow albedo data is stored in HDF format, the file name is \"PLT_SENSO_SAB_YYYYMMDD_DAILY_500M_V03.HDF\", where PLT stands for satellite platform, SENSO stands for sensor, SAB stands for snow albedo, YYYY stands for year, MM stands for month, DD stands for date, DAILY stands for temporal resolution of 1 day, V03 stands for version 03. For example, TER_MODIS_SAB_20020101_DAILY_500M_V03.HDF stands for this hdf file describing the snow black sky albedo, white sky albedo, solar zenith angle, pixel-level cloud label, pixel-level forest label and pixel-level retrieval label for January 1, 2002 in the extent 72 - 142E, 16 - 56N, which is retrieved by using of the MODIS sensor Terra satellite for conditions.\nHow to read the data: All HDF files in this dataset can be opened using software that can open HDF format files.",
-            "instructionsCn": "文件命名：积雪反照率数据以HDF格式存储，文件名称为“PLT_SENSO_SAB_YYYYMMDD_DAILY_500M_V03.HDF”，其中PLT代表卫星平台，SENSO代表传感器，SAB代表积雪反照率，YYYY代表年，MM代表月，DD代表日期，DAILY代表时间分辨率为一天，500M代表空间分辨率为500m，V03代表版本为03，比如TER_MODIS_SAB_20020101_DAILY_500M_V03.HDF就代表这个hdf文件描述使用MODIS传感器Terra卫星数据反演得到的2002年1月1日在72 - 142E，16 - 56N范围内的积雪黑空反照率、白空反照率、太阳天顶角、云标识、林区校正标识和反演情况标识状况。\n数据读取方式：该数据集中的所有HDF文件可使用能打开HDF格式文件的软件打开。",
-            "east": 142.0,
-            "west": 72.0,
-            "south": 16.0,
-            "north": 56.0,
-            "startTime": "2000-01-01 00:00:00",
-            "endTime": "2021-12-31 00:00:00",
-            "fileSize": 364295268430.0,
-            "cstr": "18406.11.Cryos.tpdc.272312",
-            "doi": "10.11888/Cryos.tpdc.272312",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "肖鹏峰",
-                "nameEn": "XIAO Pengfeng ",
-                "unitEn": "Nanjing University",
-                "unitCn": "南京大学"
-            },
-            {
-                "nameCn": "胡瑞",
-                "nameEn": "HU Rui ",
-                "unitEn": "Nanjing University",
-                "unitCn": "南京大学"
-            },
-            {
-                "nameCn": "张正",
-                "nameEn": "ZHANG Zheng ",
-                "unitEn": "Nanjing University",
-                "unitCn": "南京大学"
-            },
-            {
-                "nameCn": "秦棽",
-                "nameEn": "QIN Shen ",
-                "unitEn": "Nanjing University",
-                "unitCn": "南京大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Evaluating Snow Bidirectional Reflectance of Models Using Multiangle Remote Sensing Data and Field Measurements",
-                "referenceCn": null,
-                "referenceEn": "Ye, L.Z., Xiao, P.F., Zhang, X.L., Feng, X.Z., Hu, R., Ma, W., Li, H.X., Song, Y.N., & Ma, T.Y. (2020). Evaluating Snow Bidirectional Reflectance of Models Using Multiangle Remote Sensing Data and Field Measurements. IEEE Geoscience and Remote Sensing Letters,  PP(99), 1-5."
-            },
-            {
-                "titleCn": "新疆天山及北疆地区积雪反照率差异",
-                "titleEn": null,
-                "referenceCn": "盛光伟, 肖鹏峰, 张学良, 冯学智, 杨永可, 胡瑞, 刘豪, 张正. (2019). 新疆天山及北疆地区积雪反照率差异. 干旱区地理, 42(4), 774-781.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "东北地区积雪反照率特性",
-                "titleEn": null,
-                "referenceCn": "刘豪, 肖鹏峰, 张学良, 冯学智, 杨永可, 胡瑞, 张正, 盛光伟. (2019). 东北地区积雪反照率特性. 冰川冻土, 41(03), 554-562.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "青藏高原融雪期积雪反照率特性分析",
-                "titleEn": null,
-                "referenceCn": "张正, 肖鹏峰, 张学良, 冯学智, 杨永可, 胡瑞, 盛光伟, 刘豪. (2019). 青藏高原融雪期积雪反照率特性分析. 遥感技术与应用, 34(6), 1146-1154.",
-                "referenceEn": null
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            },
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "MODIS",
-                "nameEn": "MODIS"
-            },
-            {
-                "nameCn": "反照率反演",
-                "nameEn": "Albedo retrieval"
-            },
-            {
-                "nameCn": "太阳天顶角",
-                "nameEn": "Solar Zenith Angle"
-            },
-            {
-                "nameCn": "白空反照率",
-                "nameEn": "White Sky Albedo"
-            },
-            {
-                "nameCn": "积雪",
-                "nameEn": "Snow"
-            },
-            {
-                "nameCn": "积雪反照率",
-                "nameEn": "Snow Albedo"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            },
-            {
-                "nameCn": "黑空反照率",
-                "nameEn": "Black Sky Albedo"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国陆域",
-                "keywordEn": "Chinese landmass"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2000",
-                "keywordEn": "2000",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2001",
-                "keywordEn": "2001",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2002",
-                "keywordEn": "2002",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2003",
-                "keywordEn": "2003",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2004",
-                "keywordEn": "2004",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2005",
-                "keywordEn": "2005",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2006",
-                "keywordEn": "2006",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2007",
-                "keywordEn": "2007",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2008",
-                "keywordEn": "2008",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2009",
-                "keywordEn": "2009",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2010",
-                "keywordEn": "2010",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2011",
-                "keywordEn": "2011",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2012",
-                "keywordEn": "2012",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2013",
-                "keywordEn": "2013",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2014",
-                "keywordEn": "2014",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2015",
-                "keywordEn": "2015",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2016",
-                "keywordEn": "2016",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2017",
-                "keywordEn": "2017",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2018",
-                "keywordEn": "2018",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2019",
-                "keywordEn": "2019",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2020",
-                "keywordEn": "2020",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            }
-        ]
+  "id": "eb7746e6-23e3-4e5f-8e99-e5b5950638b3",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "China Daily snow albedo product data set (2000-2020)",
+      "titleCn": "中国逐日积雪反照率产品数据集（2000-2020）",
+      "description": "ChinaSA is raster data with a geospatial extent of 72 - 142E, 16 - 56N, using an equal latitude and longitude projection and a spatial resolution of 0.005°. The dataset covers the period from 1 January 2000 to 31 December 2020 with a temporal resolution of 1 day. The data contains six elements: black sky albedo (Black_Sky_Albedo), white sky albedo (White_Sky_Albedo), solar zenith angle (Solar_Zenith_Angle), pixel-level cloud label (Cloud_Mask), pixel-level forest pixel (Forest_Mask) and pixel-level retrieval label (Abnormal_Mask). Black_Sky_Albedo records the black sky albedo calculated by retrieved, with as a calculation factor of 0.0001 and a data range of 0-10000. White_Sky_Albedo records the white sky albedo calculated by retrieved, with as a calculation factor of 0.0001 and a data range of 0-10000. Cloud_Mask records whether the pixel is cloud type, with a value of 0 indicating non-cloud and 1 indicating cloud. Forest_Mask records whether the pixel has been corrected as a forest type, with a value of 0 indicating that it has not been corrected and 1 indicating that it has been corrected. Abnormal_Mask records whether the retrieval of the black sky albedo and white sky albedo of the pixel is an anomaly of less than 0 or greater than 10000, with a value of 0 indicating a non-anomaly and 1 indicating an anomaly. ChinaSA was retrieved based on the MODIS land surface reflectance product MOD09GA, the snow cover product MOD10A1/MYD10A1 and the global digital elevation model SRTM. The snow albedo retrieval model was developed based on the ART model and produced using the GEE and local side interactions. To assess the retrieval quality of ChinaSA, the accuracy of the snow albedo product was verified using observations from in-situ meteorological stations and the sample observation validation method, and compared with the accuracy of four commonly used albedo products (GLASS, GlobAlbedo, MCD43A3 and SAD). The validation results show that ChinaSA outperforms the other products in all validations, with a root mean square error (RMSE) of less than 0.12, and can achieve a RMSE of 0.021 in forest areas.",
+      "descriptionCn": "中国2000-2020年逐日积雪反照率产品数据集地理空间范围为72 - 142E，16 - 56N，采用等经纬度投影，空间分辨率0.005°。数据集时间范围覆盖2000年1月1日至2020年12月31日，时间分辨率为1天。数据包含6个要素：黑空反照率（Black_Sky_Albedo）、白空反照率（White_Sky_Albedo）、太阳天顶角（Solar_Zenith_Angle）、云标识（Cloud_Mask）、林区校正标识（Forest_Mask）和反演情况标识（Abnormal_Mask）。黑空反照率要素记录了反演得到的黑空反照率，计算因子为0.0001，数据范围为0-10000。白空反照率要素记录了反演得到的白空反照率，计算因子为0.0001，数据范围为0-10000。太阳天顶角要素记录了太阳天顶角度，计算因子为0.01，数据范围为0-9000。云标识要素记录了像元是否为云，值为0表示非云，值为1表示为云。林区校正标识要素记录了像元是否作为森林类型像元被校正过，值为0表示未校正，值为1表示已校正。反演情况标识要素记录了像元所对应的黑空反照率及白空反照率的反演结果是否为小于0或大于10000的异常值，值为0表示非异常值，值为1表示为异常值。数据集基于MODIS地表反射率产品MOD09GA，积雪产品MOD10A1/MYD10A1和全球数字高程模型SRTM数据，在ART模型基础上发展了积雪反照率反演模型，并利用GEE和本地端交互生产而来。为了评估ChinaSA的反演质量，利用地面台站的观测数据提出了样方观测验证方法，验证了积雪反照率产品的精度，并与常用的四种反照率产品（GLASS、GlobAlbedo、MCD43A3和SAD）进行了精度对比。验证结果表明，ChinaSA在所有验证中精度都优于其他产品，均方根误差小于0.12，在森林区域的均方根误差能达到0.021。",
+      "instructions": "File name: Snow albedo data is stored in HDF format, the file name is \"PLT_SENSO_SAB_YYYYMMDD_DAILY_500M_V03.HDF\", where PLT stands for satellite platform, SENSO stands for sensor, SAB stands for snow albedo, YYYY stands for year, MM stands for month, DD stands for date, DAILY stands for temporal resolution of 1 day, V03 stands for version 03. For example, TER_MODIS_SAB_20020101_DAILY_500M_V03.HDF stands for this hdf file describing the snow black sky albedo, white sky albedo, solar zenith angle, pixel-level cloud label, pixel-level forest label and pixel-level retrieval label for January 1, 2002 in the extent 72 - 142E, 16 - 56N, which is retrieved by using of the MODIS sensor Terra satellite for conditions.\nHow to read the data: All HDF files in this dataset can be opened using software that can open HDF format files.",
+      "instructionsCn": "文件命名：积雪反照率数据以HDF格式存储，文件名称为“PLT_SENSO_SAB_YYYYMMDD_DAILY_500M_V03.HDF”，其中PLT代表卫星平台，SENSO代表传感器，SAB代表积雪反照率，YYYY代表年，MM代表月，DD代表日期，DAILY代表时间分辨率为一天，500M代表空间分辨率为500m，V03代表版本为03，比如TER_MODIS_SAB_20020101_DAILY_500M_V03.HDF就代表这个hdf文件描述使用MODIS传感器Terra卫星数据反演得到的2002年1月1日在72 - 142E，16 - 56N范围内的积雪黑空反照率、白空反照率、太阳天顶角、云标识、林区校正标识和反演情况标识状况。\n数据读取方式：该数据集中的所有HDF文件可使用能打开HDF格式文件的软件打开。",
+      "east": 142.0,
+      "west": 72.0,
+      "south": 16.0,
+      "north": 56.0,
+      "startTime": "2000-01-01 00:00:00",
+      "endTime": "2021-12-31 00:00:00",
+      "fileSize": 364295268430.0,
+      "cstr": "18406.11.Cryos.tpdc.272312",
+      "doi": "10.11888/Cryos.tpdc.272312",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the specific characteristics of the data elements used in a dataset focusing on daily snow albedo in China between 2000 and 2020?",
-                "QuestionCn": "一个关注2000年至2020年中国每日雪反照率的数据集的具体数据元素特征包括：",
-                "AnswerEn": "Black_Sky_Albedo, White_Sky_Albedo, Solar_Zenith_Angle, Cloud_Mask, Forest_Mask, Abnormal_Mask, calculation factor of 0.0001, data range of 0-10000, calculation factor of 0.01, data range of 0-9000, 0 for non-cloud, 1 for cloud, 0 for not corrected, 1 for corrected, 0 for non-abnormal, 1 for abnormal",
-                "AnswerCn": "黑天反照率、白天反照率、太阳天顶角、云掩膜、森林掩膜、异常掩膜，计算因子为0.0001，数据范围为0-10000，计算因子为0.01，数据范围为0-9000，0表示无云，1表示有云，0表示未校正，1表示已校正，0表示非异常，1表示异常。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does '反照率产品' (Albedo Product) mean in the context of remote sensing data collection?",
-                "QuestionCn": "'反照率产品'（Albedo Product）在遥感数据收集的上下文中指的是通过遥感技术获取的地表反照率的相关数据产品。反照率是指地表反射太阳辐射的能力，通常以比例或百分比表示。",
-                "AnswerEn": "In the context of remote sensing data collection, '反照率产品' (Albedo Product) refers to a dataset that quantifies the reflectivity of a surface, specifically snow in this case, as measured by satellite sensors. The dataset includes measurements of both black-sky albedo and white-sky albedo, which are derived using remote sensing data from MODIS surface reflectance products, snow products, and digital elevation models. The albedo values are adjusted for factors such as solar zenith angle, cloud cover, and forest correction, and are used to assess surface reflectance with high spatial and temporal resolution.",
-                "AnswerCn": "在遥感数据收集的背景下，“反照率产品”指的是一个量化表面反射率的数据集，特别是在这种情况下是雪，数据是通过卫星传感器测量的。该数据集包括黑天反照率和白天反照率的测量，这些测量是利用MODIS表面反射率产品、雪产品和数字高程模型得出的。反照率值经过调整，以考虑太阳天顶角、云覆盖和森林修正等因素，并用于以高空间和时间分辨率评估表面反射率。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the snow albedo retrieval model based on MODIS data compare to other common albedo products like GLASS, GlobAlbedo, MCD43A3, and SAD in terms of accuracy across various land cover types?",
-                "QuestionCn": "基于MODIS数据的雪反照率检索模型与其他常见的反照率产品如GLASS、GlobAlbedo、MCD43A3和SAD在不同土地覆盖类型上的准确性比较如何？",
-                "AnswerEn": "The snow albedo retrieval model developed from MODIS data demonstrates superior accuracy compared to other common albedo products such as GLASS, GlobAlbedo, MCD43A3, and SAD. Validation results show that the model's root mean square error (RMSE) is consistently lower than 0.12, and in forest areas, it achieves an RMSE as low as 0.021, indicating higher precision in snow albedo estimation across different land cover types.",
-                "AnswerCn": "从MODIS数据开发的雪反照率检索模型显示出比其他常见反照率产品（如GLASS、GlobAlbedo、MCD43A3和SAD）更高的准确性。验证结果表明，该模型的均方根误差（RMSE）始终低于0.12，在森林地区，RMSE低至0.021，表明在不同土地覆盖类型中雪反照率估计的精度更高。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the development of accurate snow albedo retrieval models in geospatial datasets?",
-                "QuestionCn": "影响地理空间数据中准确雪反照率检索模型发展的因素有哪些？",
-                "AnswerEn": "The development of accurate snow albedo retrieval models in geospatial datasets is influenced by factors such as the integration of MODIS surface reflectance products, snow products like MOD10A1/MYD10A1, and global digital elevation model data like SRTM. The use of the ART model and the application of platforms like Google Earth Engine (GEE) for data processing are crucial. Additionally, validation methods using ground station observations and comparison with other albedo products like GLASS, GlobAlbedo, MCD43A3, and SAD are important for ensuring precision and reliability.",
-                "AnswerCn": "准确的雪反照率检索模型在地理空间数据集中的开发受到多个因素的影响，例如MODIS表面反射率产品、雪产品如MOD10A1/MYD10A1的整合，以及全球数字高程模型数据如SRTM的使用。ART模型的应用和像Google Earth Engine（GEE）这样的平台在数据处理中的重要性不容忽视。此外，使用地面站观测进行验证的方法，以及与其他反照率产品如GLASS、GlobAlbedo、MCD43A3和SAD的比较，对于确保精确性和可靠性也至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the consequences of using a multi-faceted data collection approach, incorporating MODIS surface reflectance products and global digital elevation models, on the accuracy and reliability of daily snow albedo products over a two-decade period?",
-                "QuestionCn": "使用多元数据收集方法，结合MODIS表面反射率产品和全球数字高程模型，对二十年期间每日雪反射率产品的准确性和可靠性有什么影响？",
-                "AnswerEn": "By integrating MODIS surface reflectance products and global digital elevation models, the data collection method develops a snow albedo inversion model that significantly improves the accuracy and reliability of daily snow albedo products. The validation process, using ground station observations and comparison with four common albedo products, shows that this approach leads to superior accuracy, with a root mean square error of less than 0.12, and as low as 0.021 in forest regions, indicating enhanced precision over a two-decade period.",
-                "AnswerCn": "通过整合MODIS表面反射率产品和全球数字高程模型，该数据收集方法开发了一种雪反照率反演模型，显著提高了每日雪反照率产品的准确性和可靠性。验证过程使用地面站观测数据，并与四种常见反照率产品进行比较，结果表明该方法具有更优的准确性，均方根误差低于0.12，在森林地区甚至低至0.021，表明在二十年期间的精确度得到了增强。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary objective of developing a dataset to measure snow albedo in China from 2000 to 2020, and what methodologies are employed to ensure its accuracy and reliability?",
-                "QuestionCn": "开发一个测量中国2000年至2020年雪反照率的数据集的主要目标是什么？采用了哪些方法来确保其准确性和可靠性？",
-                "AnswerEn": "The primary objective of developing a dataset to measure snow albedo in China from 2000 to 2020 is to accurately quantify and analyze snow reflectivity over time and across regions within China. This is achieved by using a combination of MODIS surface reflectance products, snow products, and SRTM elevation data. Additionally, an albedo retrieval model based on the ART model is developed, and the dataset is produced using both Google Earth Engine (GEE) and local interactive processing. The accuracy and reliability are ensured through validation methods using ground station observations and comparison with other albedo products like GLASS, GlobAlbedo, MCD43A3, and SAD, wherein the ChinaSA product showed superior accuracy with a root mean square error of less than 0.12, and as low as 0.021 in forest areas.",
-                "AnswerCn": "开发一个测量中国2000年至2020年雪地反照率的数据集的主要目标是准确量化和分析中国各地区的雪反射率。通过结合MODIS地表反射率产品、雪产品和SRTM高程数据来实现这一目标。此外，基于ART模型开发了一个反照率检索模型，并通过Google Earth Engine（GEE）和本地交互处理生成数据集。通过使用地面站观测和与其他反照率产品（如GLASS、GlobAlbedo、MCD43A3和SAD）的比较，确保了数据集的准确性和可靠性，其中ChinaSA产品显示出优越的准确性，均方根误差低于0.12，在森林地区甚至低至0.021。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures are used to integrate MODIS surface reflectance products and SRTM data to develop a snow albedo retrieval model?",
-                "QuestionCn": "用于整合MODIS表面反射率产品和SRTM数据以开发雪反射率检索模型的程序有哪些？",
-                "AnswerEn": "The integration of MODIS surface reflectance products (MOD09GA) with SRTM data is utilized to develop a snow albedo retrieval model based on the ART model. This involves the use of MODIS snow products (MOD10A1/MYD10A1) and is facilitated by Google Earth Engine (GEE) and local interaction. The process includes the development of a snow albedo inversion model, which is further verified for accuracy using ground-based observation data.",
-                "AnswerCn": "MODIS表面反射率产品（MOD09GA）与SRTM数据的集成用于基于ART模型开发雪反射率检索模型。这涉及使用MODIS雪产品（MOD10A1/MYD10A1），并通过Google Earth Engine（GEE）和本地互动进行支持。该过程包括开发雪反射率反演模型，并通过地面观测数据进一步验证其准确性。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "肖鹏峰",
+        "nameEn": "XIAO Pengfeng ",
+        "unitEn": "Nanjing University",
+        "unitCn": "南京大学"
+      },
+      {
+        "nameCn": "胡瑞",
+        "nameEn": "HU Rui ",
+        "unitEn": "Nanjing University",
+        "unitCn": "南京大学"
+      },
+      {
+        "nameCn": "张正",
+        "nameEn": "ZHANG Zheng ",
+        "unitEn": "Nanjing University",
+        "unitCn": "南京大学"
+      },
+      {
+        "nameCn": "秦棽",
+        "nameEn": "QIN Shen ",
+        "unitEn": "Nanjing University",
+        "unitCn": "南京大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Evaluating Snow Bidirectional Reflectance of Models Using Multiangle Remote Sensing Data and Field Measurements",
+        "referenceCn": null,
+        "referenceEn": "Ye, L.Z., Xiao, P.F., Zhang, X.L., Feng, X.Z., Hu, R., Ma, W., Li, H.X., Song, Y.N., & Ma, T.Y. (2020). Evaluating Snow Bidirectional Reflectance of Models Using Multiangle Remote Sensing Data and Field Measurements. IEEE Geoscience and Remote Sensing Letters,  PP(99), 1-5."
+      },
+      {
+        "titleCn": "新疆天山及北疆地区积雪反照率差异",
+        "titleEn": null,
+        "referenceCn": "盛光伟, 肖鹏峰, 张学良, 冯学智, 杨永可, 胡瑞, 刘豪, 张正. (2019). 新疆天山及北疆地区积雪反照率差异. 干旱区地理, 42(4), 774-781.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "东北地区积雪反照率特性",
+        "titleEn": null,
+        "referenceCn": "刘豪, 肖鹏峰, 张学良, 冯学智, 杨永可, 胡瑞, 张正, 盛光伟. (2019). 东北地区积雪反照率特性. 冰川冻土, 41(03), 554-562.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "青藏高原融雪期积雪反照率特性分析",
+        "titleEn": null,
+        "referenceCn": "张正, 肖鹏峰, 张学良, 冯学智, 杨永可, 胡瑞, 盛光伟, 刘豪. (2019). 青藏高原融雪期积雪反照率特性分析. 遥感技术与应用, 34(6), 1146-1154.",
+        "referenceEn": null
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      },
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "MODIS",
+        "nameEn": "MODIS"
+      },
+      {
+        "nameCn": "反照率反演",
+        "nameEn": "Albedo retrieval"
+      },
+      {
+        "nameCn": "太阳天顶角",
+        "nameEn": "Solar Zenith Angle"
+      },
+      {
+        "nameCn": "白空反照率",
+        "nameEn": "White Sky Albedo"
+      },
+      {
+        "nameCn": "积雪",
+        "nameEn": "Snow"
+      },
+      {
+        "nameCn": "积雪反照率",
+        "nameEn": "Snow Albedo"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      },
+      {
+        "nameCn": "黑空反照率",
+        "nameEn": "Black Sky Albedo"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国陆域",
+        "keywordEn": "Chinese landmass"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2000",
+        "keywordEn": "2000",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2001",
+        "keywordEn": "2001",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2002",
+        "keywordEn": "2002",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2003",
+        "keywordEn": "2003",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2004",
+        "keywordEn": "2004",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2005",
+        "keywordEn": "2005",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2006",
+        "keywordEn": "2006",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2007",
+        "keywordEn": "2007",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2008",
+        "keywordEn": "2008",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2009",
+        "keywordEn": "2009",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2010",
+        "keywordEn": "2010",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2011",
+        "keywordEn": "2011",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2012",
+        "keywordEn": "2012",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2013",
+        "keywordEn": "2013",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2014",
+        "keywordEn": "2014",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2015",
+        "keywordEn": "2015",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2016",
+        "keywordEn": "2016",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2017",
+        "keywordEn": "2017",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2018",
+        "keywordEn": "2018",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2019",
+        "keywordEn": "2019",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2020",
+        "keywordEn": "2020",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the specific characteristics of the data elements used in a dataset focusing on daily snow albedo in China between 2000 and 2020?",
+        "QuestionCn": "在2000年至2020年间关注中国每日雪反照率的数据集中使用的数据元素的具体特征是什么？",
+        "AnswerEn": "Black_Sky_Albedo, White_Sky_Albedo, Solar_Zenith_Angle, Cloud_Mask, Forest_Mask, Abnormal_Mask, calculation factor of 0.0001, data range of 0-10000, calculation factor of 0.01, data range of 0-9000, 0 for non-cloud, 1 for cloud, 0 for not corrected, 1 for corrected, 0 for non-abnormal, 1 for abnormal",
+        "AnswerCn": "黑天反照率、白天反照率、太阳天顶角、云掩膜、森林掩膜、异常掩膜，计算因子为0.0001，数据范围为0-10000，计算因子为0.01，数据范围为0-9000，0表示无云，1表示有云，0表示未校正，1表示已校正，0表示非异常，1表示异常。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does '反照率产品' (Albedo Product) mean in the context of remote sensing data collection?",
+        "QuestionCn": "在遥感数据收集的背景下，“反照率产品”指的是什么？",
+        "AnswerEn": "In the context of remote sensing data collection, '反照率产品' (Albedo Product) refers to a dataset that quantifies the reflectivity of a surface, specifically snow in this case, as measured by satellite sensors. The dataset includes measurements of both black-sky albedo and white-sky albedo, which are derived using remote sensing data from MODIS surface reflectance products, snow products, and digital elevation models. The albedo values are adjusted for factors such as solar zenith angle, cloud cover, and forest correction, and are used to assess surface reflectance with high spatial and temporal resolution.",
+        "AnswerCn": "在遥感数据收集的背景下，“反照率产品”指的是一个量化表面反射率的数据集，特别是在这种情况下是雪，数据是通过卫星传感器测量的。该数据集包括黑天反照率和白天反照率的测量，这些测量是利用MODIS表面反射率产品、雪产品和数字高程模型得出的。反照率值经过调整，以考虑太阳天顶角、云覆盖和森林修正等因素，并用于以高空间和时间分辨率评估表面反射率。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the snow albedo retrieval model based on MODIS data compare to other common albedo products like GLASS, GlobAlbedo, MCD43A3, and SAD in terms of accuracy across various land cover types?",
+        "QuestionCn": "基于MODIS数据的雪反照率检索模型与其他常见的反照率产品如GLASS、GlobAlbedo、MCD43A3和SAD在不同土地覆盖类型上的准确性比较如何？",
+        "AnswerEn": "The snow albedo retrieval model developed from MODIS data demonstrates superior accuracy compared to other common albedo products such as GLASS, GlobAlbedo, MCD43A3, and SAD. Validation results show that the model's root mean square error (RMSE) is consistently lower than 0.12, and in forest areas, it achieves an RMSE as low as 0.021, indicating higher precision in snow albedo estimation across different land cover types.",
+        "AnswerCn": "从MODIS数据开发的雪反照率检索模型显示出比其他常见反照率产品（如GLASS、GlobAlbedo、MCD43A3和SAD）更高的准确性。验证结果表明，该模型的均方根误差（RMSE）始终低于0.12，在森林地区，RMSE低至0.021，表明在不同土地覆盖类型中雪反照率估计的精度更高。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the development of accurate snow albedo retrieval models in geospatial datasets?",
+        "QuestionCn": "影响地理空间数据中准确雪反照率检索模型发展的因素有哪些？",
+        "AnswerEn": "The development of accurate snow albedo retrieval models in geospatial datasets is influenced by factors such as the integration of MODIS surface reflectance products, snow products like MOD10A1/MYD10A1, and global digital elevation model data like SRTM. The use of the ART model and the application of platforms like Google Earth Engine (GEE) for data processing are crucial. Additionally, validation methods using ground station observations and comparison with other albedo products like GLASS, GlobAlbedo, MCD43A3, and SAD are important for ensuring precision and reliability.",
+        "AnswerCn": "准确的雪反照率检索模型在地理空间数据集中的开发受到多个因素的影响，例如MODIS表面反射率产品、雪产品如MOD10A1/MYD10A1的整合，以及全球数字高程模型数据如SRTM的使用。ART模型的应用和像Google Earth Engine（GEE）这样的平台在数据处理中的重要性不容忽视。此外，使用地面站观测进行验证的方法，以及与其他反照率产品如GLASS、GlobAlbedo、MCD43A3和SAD的比较，对于确保精确性和可靠性也至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the consequences of using a multi-faceted data collection approach, incorporating MODIS surface reflectance products and global digital elevation models, on the accuracy and reliability of daily snow albedo products over a two-decade period?",
+        "QuestionCn": "使用多元数据收集方法，结合MODIS表面反射率产品和全球数字高程模型，对二十年期间每日雪反射率产品的准确性和可靠性有什么影响？",
+        "AnswerEn": "By integrating MODIS surface reflectance products and global digital elevation models, the data collection method develops a snow albedo inversion model that significantly improves the accuracy and reliability of daily snow albedo products. The validation process, using ground station observations and comparison with four common albedo products, shows that this approach leads to superior accuracy, with a root mean square error of less than 0.12, and as low as 0.021 in forest regions, indicating enhanced precision over a two-decade period.",
+        "AnswerCn": "通过整合MODIS表面反射率产品和全球数字高程模型，该数据收集方法开发了一种雪反照率反演模型，显著提高了每日雪反照率产品的准确性和可靠性。验证过程使用地面站观测数据，并与四种常见反照率产品进行比较，结果表明该方法具有更优的准确性，均方根误差低于0.12，在森林地区甚至低至0.021，表明在二十年期间的精确度得到了增强。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary objective of developing a dataset to measure snow albedo in China from 2000 to 2020, and what methodologies are employed to ensure its accuracy and reliability?",
+        "QuestionCn": "开发一个测量中国2000年至2020年雪反照率的数据集的主要目标是什么？采用了哪些方法来确保其准确性和可靠性？",
+        "AnswerEn": "The primary objective of developing a dataset to measure snow albedo in China from 2000 to 2020 is to accurately quantify and analyze snow reflectivity over time and across regions within China. This is achieved by using a combination of MODIS surface reflectance products, snow products, and SRTM elevation data. Additionally, an albedo retrieval model based on the ART model is developed, and the dataset is produced using both Google Earth Engine (GEE) and local interactive processing. The accuracy and reliability are ensured through validation methods using ground station observations and comparison with other albedo products like GLASS, GlobAlbedo, MCD43A3, and SAD, wherein the ChinaSA product showed superior accuracy with a root mean square error of less than 0.12, and as low as 0.021 in forest areas.",
+        "AnswerCn": "开发一个测量中国2000年至2020年雪地反照率的数据集的主要目标是准确量化和分析中国各地区的雪反射率。通过结合MODIS地表反射率产品、雪产品和SRTM高程数据来实现这一目标。此外，基于ART模型开发了一个反照率检索模型，并通过Google Earth Engine（GEE）和本地交互处理生成数据集。通过使用地面站观测和与其他反照率产品（如GLASS、GlobAlbedo、MCD43A3和SAD）的比较，确保了数据集的准确性和可靠性，其中ChinaSA产品显示出优越的准确性，均方根误差低于0.12，在森林地区甚至低至0.021。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures are used to integrate MODIS surface reflectance products and SRTM data to develop a snow albedo retrieval model?",
+        "QuestionCn": "用于整合MODIS表面反射率产品和SRTM数据以开发雪反射率检索模型的程序有哪些？",
+        "AnswerEn": "The integration of MODIS surface reflectance products (MOD09GA) with SRTM data is utilized to develop a snow albedo retrieval model based on the ART model. This involves the use of MODIS snow products (MOD10A1/MYD10A1) and is facilitated by Google Earth Engine (GEE) and local interaction. The process includes the development of a snow albedo inversion model, which is further verified for accuracy using ground-based observation data.",
+        "AnswerCn": "MODIS表面反射率产品（MOD09GA）与SRTM数据的集成用于基于ART模型开发雪反射率检索模型。这涉及使用MODIS雪产品（MOD10A1/MYD10A1），并通过Google Earth Engine（GEE）和本地互动进行支持。该过程包括开发雪反射率反演模型，并通过地面观测数据进一步验证其准确性。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

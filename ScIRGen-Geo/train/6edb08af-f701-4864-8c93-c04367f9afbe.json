@@ -1,584 +1,584 @@
 {
-    "id": "6edb08af-f701-4864-8c93-c04367f9afbe",
-    "relatedPaper": 4,
-    "context": {
-        "metadata": {
-            "titleEn": "An RFI-suppressed SMOS L-band multi-angular brightness temperature dataset (2010-2021)",
-            "titleCn": "射频干扰抑制的SMOS卫星 L波段多角度亮温产品（2010-2021）",
-            "description": "SMOS is the first L-band satellite that observes multi-angular brightness temperature at the globe. It’s very important for monitoring the spatial-temporal distribution of soil moisture. Due to the widespread existence of L-band radio frequency interference (RFI) and the influence of field aliasing caused by two-dimensional synthetic aperture technology, the multi-angular brightness temperatures of SMOS satellite are missing or abnormal to varying degrees. \nThis data set is based on the Level-1C brightness temperature product SCLF1C officially released by ESA, which is stored in a discrete global grid (DGG) with 15-km interval and Icosahedral Snyder Equal Area projection (ISEA) projection mode. The two-step regression method proposed by Zhao et al. was used to optimize or reconstruct the multi-angular brightness temperature data affected by field aliasing and RFI. Then the refined results in DGGs were resampled to the EASE-GRID 2.0 projection (including two grid sizes of 25 km and 36 km) with hamming window approach using a footprint of 43 km.\nWhen applying this dataset to the multi-temporal and multi-angular soil moisture retrieval algorithm, it was found that the accuracy of soil moisture inversion in this dataset is superior to other SMOS brightness temperature products in multiple soil moisture dense observation networks, especially in areas with RFI such as China, where the count of effective retrievals has significantly increased. This dataset will provide more reliable data support for the research and development of L-band land surface parameter products with long time series, such as soil moisture, freeze-thaw state, vegetation moisture, aboveground biomass, snow density, etc.",
-            "descriptionCn": "SMOS是全球首颗具备多角度L波段亮温观测能力的卫星，是监测全球土壤水分时空分布的重要工具。由于L波段射频干扰（Radio frequency interference, RFI）的广泛存在，以及二维综合孔径技术引起的视场混叠（Aliasing）影响，SMOS卫星的多角度亮温数据存在不同程度的缺失或者异常情况。\n本数据集基于欧空局官方发布的Level-1C级亮温产品SCLF1C，该产品按照15 km间隔、二十面体斯奈德等积（Icosahedral Snyder Equal Area projection，ISEA）投影方式的DGG（discrete global grid）网格存储，使用赵天杰等人提出的双步回归方法（Two-Step Regression）优化或重建受视场混叠和射频干扰影响的多角度亮温数据，并重采样至EASE-GRID 2.0 投影方式（含25 km和36 km两种网格分辨率）。\n将本数据集应用于多时相多角度土壤水分反演算法，发现在全球多个土壤水分密集观测站网内，本数据集反演的土壤水分精度优于其他SMOS亮温产品，尤其在中国地区等射频干扰严重地区的有效反演数据量显著增多。本数据集将为土壤水分、冻融状态、植被水分、地上生物量、积雪密度等长时序的L波段陆表参数产品研发提供更为可靠的数据支撑。\n",
-            "instructions": "Data file naming method: Regarding data in the projection of ISEA4H9, the file names were inherited from the SMOS SCLF1C orbit file with ascending or descending flag added to the file name. In terms of data in the projection of EASE-GRID 2.0, the file names were inherited from the file in ISEA4H9, with resample function and grid size added, for example: in the name of ”SM_REPR_MIR_SCLF1C_A_20210101T002520_20210101T011839_724_320_1_Hamming_25KM.nc”, ”Hamming” represents the resample function name, and “25KM” denotes the grid size. More details can be found in section 4.2 of the user guide. \nUsage method: Data can be read in various programming languages such as MATLAB, Python and IDL, and can also be visualized in hdfview and panoply. We provide python code (in \"Code\" folder) to read and plot the data file.",
-            "instructionsCn": "数据文件命名方式：对于ISEA4H9投影的15公里格网大小的数据，文件名继承自原始SCLF1C的轨道数据，只是在此基础上增加了升/降轨标识；对于EASE-GRID 2.0 25公里和36公里的投影数据，文件名继承自ISEA4H9数据，在最后增加了重采样的函数和格网大小，具体可参考说明文档里的4.2小节。\n 使用方法： 数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在HDFView，Panoply中实现可视化，我们在Code文件夹里提供了数据的读取和画图的python代码。",
-            "east": 180.0,
-            "west": 180.0,
-            "south": 90.0,
-            "north": 90.0,
-            "startTime": "2010-01-10 16:59:59",
-            "endTime": "2021-12-31 23:59:59",
-            "fileSize": 8376296396731.0,
-            "cstr": "18406.11.Terre.tpdc.300406",
-            "doi": "10.11888/Terre.tpdc.300406",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "彭志晴",
-                "nameEn": "PENG Zhiqing ",
-                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "赵天杰",
-                "nameEn": "ZHAO Tianjie",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "施建成",
-                "nameEn": "SHI Jiancheng",
-                "unitEn": "",
-                "unitCn": "中国科学院国家空间科学中心"
-            },
-            {
-                "nameCn": "车涛",
-                "nameEn": "CHE Tao",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Refinement of SMOS Multiangular Brightness Temperature Toward Soil Moisture Retrieval and Its Analysis Over Reference Targets",
-                "referenceCn": null,
-                "referenceEn": "Zhao, T. J., Shi, J. C., Bindlish, R., Jackson, T. J., Kerr, Y. H., Cosh, M. H.,  Cui, Q., Li, Y. Q., Xiong, C. & Che, T. (2014). Refinement of SMOS Multiangular Brightness Temperature Toward Soil Moisture Retrieval and Its Analysis Over Reference Targets. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 8(2), 589-603. doi:10.1109/JSTARS.2014.2336664"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A multi-temporal and multi-angular approach for systematically retrieving soil moisture and vegetation optical depth from SMOS data",
-                "referenceCn": null,
-                "referenceEn": "Bai, Y., Zhao, T. J., Jia, L., Cosh, M. H., Shi, J. C., Peng, Z. Q., Li, X. J., Wigneron, J.-P. (2022). A multi-temporal and multi-angular approach for systematically retrieving soil moisture and vegetation optical depth from SMOS data. Remote Sensing of Environment, 280, 113190. doi:https://doi.org/10.1016/j.rse.2022.113190"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Snow Density Retrieval in Quebec using Space-borne SMOS Observations",
-                "referenceCn": null,
-                "referenceEn": "Gao, X. W., Pan, J. M., Peng, Z. Q., Zhao, T. J., Bai, Y., Yang, J. W., Jiang, L. M., Shi, J. C. & Husi, L. (2023). Snow Density Retrieval in Quebec using Space-borne SMOS Observations. Remote Sensing, 15(8). doi:10.3390/rs15082065"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "An RFI-suppressed SMOS L-band multi-angular brightness temperature dataset spanning over a decade (since 2010)",
-                "referenceCn": null,
-                "referenceEn": "Peng, Z., Zhao, T., Shi, J. Kerr, Y., Rodríguez-Fernández, N., Yao, P., & Che, T. (2023).  An RFI-suppressed SMOS L-band multi-angular brightness temperature dataset spanning over a decade (since 2010). Scientific Data, 10, 599. https://doi.org/10.1038/s41597-023-02499-z."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "卫星影像",
-                "nameEn": "Satelite images"
-            },
-            {
-                "nameCn": "土壤湿度",
-                "nameEn": "soil moisture"
-            },
-            {
-                "nameCn": "植被",
-                "nameEn": "Vegetation"
-            },
-            {
-                "nameCn": "植被光学厚度",
-                "nameEn": "vegetation optical depth"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "被动微波遥感",
-                "nameEn": "Passive Microwave Remote Sensing"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Globe"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2010-2021",
-                "keywordEn": "2010-2021",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            }
-        ]
+  "id": "6edb08af-f701-4864-8c93-c04367f9afbe",
+  "relatedPaper": 4,
+  "context": {
+    "metadata": {
+      "titleEn": "An RFI-suppressed SMOS L-band multi-angular brightness temperature dataset (2010-2021)",
+      "titleCn": "射频干扰抑制的SMOS卫星 L波段多角度亮温产品（2010-2021）",
+      "description": "SMOS is the first L-band satellite that observes multi-angular brightness temperature at the globe. It’s very important for monitoring the spatial-temporal distribution of soil moisture. Due to the widespread existence of L-band radio frequency interference (RFI) and the influence of field aliasing caused by two-dimensional synthetic aperture technology, the multi-angular brightness temperatures of SMOS satellite are missing or abnormal to varying degrees. \nThis data set is based on the Level-1C brightness temperature product SCLF1C officially released by ESA, which is stored in a discrete global grid (DGG) with 15-km interval and Icosahedral Snyder Equal Area projection (ISEA) projection mode. The two-step regression method proposed by Zhao et al. was used to optimize or reconstruct the multi-angular brightness temperature data affected by field aliasing and RFI. Then the refined results in DGGs were resampled to the EASE-GRID 2.0 projection (including two grid sizes of 25 km and 36 km) with hamming window approach using a footprint of 43 km.\nWhen applying this dataset to the multi-temporal and multi-angular soil moisture retrieval algorithm, it was found that the accuracy of soil moisture inversion in this dataset is superior to other SMOS brightness temperature products in multiple soil moisture dense observation networks, especially in areas with RFI such as China, where the count of effective retrievals has significantly increased. This dataset will provide more reliable data support for the research and development of L-band land surface parameter products with long time series, such as soil moisture, freeze-thaw state, vegetation moisture, aboveground biomass, snow density, etc.",
+      "descriptionCn": "SMOS是全球首颗具备多角度L波段亮温观测能力的卫星，是监测全球土壤水分时空分布的重要工具。由于L波段射频干扰（Radio frequency interference, RFI）的广泛存在，以及二维综合孔径技术引起的视场混叠（Aliasing）影响，SMOS卫星的多角度亮温数据存在不同程度的缺失或者异常情况。\n本数据集基于欧空局官方发布的Level-1C级亮温产品SCLF1C，该产品按照15 km间隔、二十面体斯奈德等积（Icosahedral Snyder Equal Area projection，ISEA）投影方式的DGG（discrete global grid）网格存储，使用赵天杰等人提出的双步回归方法（Two-Step Regression）优化或重建受视场混叠和射频干扰影响的多角度亮温数据，并重采样至EASE-GRID 2.0 投影方式（含25 km和36 km两种网格分辨率）。\n将本数据集应用于多时相多角度土壤水分反演算法，发现在全球多个土壤水分密集观测站网内，本数据集反演的土壤水分精度优于其他SMOS亮温产品，尤其在中国地区等射频干扰严重地区的有效反演数据量显著增多。本数据集将为土壤水分、冻融状态、植被水分、地上生物量、积雪密度等长时序的L波段陆表参数产品研发提供更为可靠的数据支撑。\n",
+      "instructions": "Data file naming method: Regarding data in the projection of ISEA4H9, the file names were inherited from the SMOS SCLF1C orbit file with ascending or descending flag added to the file name. In terms of data in the projection of EASE-GRID 2.0, the file names were inherited from the file in ISEA4H9, with resample function and grid size added, for example: in the name of ”SM_REPR_MIR_SCLF1C_A_20210101T002520_20210101T011839_724_320_1_Hamming_25KM.nc”, ”Hamming” represents the resample function name, and “25KM” denotes the grid size. More details can be found in section 4.2 of the user guide. \nUsage method: Data can be read in various programming languages such as MATLAB, Python and IDL, and can also be visualized in hdfview and panoply. We provide python code (in \"Code\" folder) to read and plot the data file.",
+      "instructionsCn": "数据文件命名方式：对于ISEA4H9投影的15公里格网大小的数据，文件名继承自原始SCLF1C的轨道数据，只是在此基础上增加了升/降轨标识；对于EASE-GRID 2.0 25公里和36公里的投影数据，文件名继承自ISEA4H9数据，在最后增加了重采样的函数和格网大小，具体可参考说明文档里的4.2小节。\n 使用方法： 数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在HDFView，Panoply中实现可视化，我们在Code文件夹里提供了数据的读取和画图的python代码。",
+      "east": 180.0,
+      "west": 180.0,
+      "south": 90.0,
+      "north": 90.0,
+      "startTime": "2010-01-10 16:59:59",
+      "endTime": "2021-12-31 23:59:59",
+      "fileSize": 8376296396731.0,
+      "cstr": "18406.11.Terre.tpdc.300406",
+      "doi": "10.11888/Terre.tpdc.300406",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Soil moisture acts as a boundary condition for controls on land–atmosphere fluxes of energy and water, and must be accurately represented in hydrology and land surface models. The European Space Agency’s Soil Moisture Ocean Salinity (SMOS) satellite that was launched in November 2009 is the first spaceborne synthetic aperture passive microwave instrument. It relies on the new 2-D interferometry concept, and could provide global L-band brightness temperature for a range of incidence angles (from 0° to 60°) at a resolution of about 43 km. SMOS provides a unique way for measuring the moisture content at the first few centimeters of soil over land and surface salinity in the ocean. The SMOS soil moisture algorithm is primarily based on the L-band microwave emission of the biosphere (L-MEB) forward model. It uses a decision tree method to select appropriate model elements and parameters according to the auxiliary information that includes land use types. An iterative algorithm is then employed to minimize the difference between the L-MEB model simulations and SMOS multiangle observations. Several surface parameters including vegetation optical depth and soil moisture are retrieved. SMOS algorithm has produced reliable soil moisture based upon several validation studies using sparse networks or extensive field measurements. One of the issues is the uncertainty of the SMOS brightness temperature that is attributed to the radio-frequency interference (RFI) from varied sources and aliasing errors in the Fourier imaging process. Like most microwave sensors, SMOS is also susceptible to RFI, which has significantly affected the quality of brightness temperatures in some regions of the world. Another complicating factor is that the brightness temperature data from the lower look angles are less reliable due to aliasing, which is an inherent problem in interferometry. Another complicating factor when using the brightness temperature data is that the multiple incidence angle observations are not obtained at fixed values. Generally, the case within the sensitivity of the instrument is that the V-pol brightness temperature should be greater than that of the H-pol, and the V-pol brightness temperature generally increases with the incident angle while the H-pol brightness temperature decreases with the incidence angle."
-            ],
-            "research objective": [
-                "The objective is to study whether it is possible to reduce the uncertainties in the SMOS brightness temperature and to develop a potential postprocessing approach that will improve the data quality and soil moisture retrieval. In this study, we present a two-step regression approach for processing/refining the SMOS L1c brightness temperature. This approach also provides a unique chance to compare the SMOS with WindSat observations over external reference targets."
-            ],
-            "challenges": [
-                "Noisy data have become one of the crucial factors limiting SMOS data applications. Currently, the issue of RFI/noisy data is still a limiting factor for applications in many regions of Europe and Asia. Another complicating factor is that the brightness temperature data from the lower look angles are less reliable due to aliasing, which is an inherent problem in interferometry."
-            ],
-            "methods": [
-                "In this study, we proposed a two-step regression approach that uses a mixed objective function based on SMOS L1c data products to refine characteristics of multiangular observations. The reﬁned brightness temperatures were analyzed over three external targets: Antarctic ice sheet, Amazon rainforest, and Sahara desert, by comparing with WindSat observations. The results are found to be more consistent with theoretical expectations when compared with intensive simulations based on the radiative transfer modeling. The refined brightness temperatures are verified by the implementation in soil moisture retrieval. A considerable improvement was found over two watershed networks in the United States."
-            ],
-            "dataset": [
-                "Brightness temperature data at six DGG nodes (locations are shown in Fig. 3) were extracted and processed on July 1, 2010. The CA TDS L3 product is based on the Equal-Area Scalable Earth Grid with a spatial resolution of 25 km."
-            ],
-            "findings": [
-                "The approach was found to be robust by validation using simulations from a radiative transfer model, and valuable in improving soil moisture estimates from SMOS. A considerable improvement was found over two watershed networks in the United States."
-            ],
-            "backgroundCn": [
-                "土壤湿度作为陆地-大气能量和水分通量控制的边界条件，必须在水文学和陆面模型中准确表示。欧洲航天局于2009年11月发射的土壤湿度海洋盐度（SMOS）卫星是首个空间合成孔径被动微波仪器。它依赖于新的二维干涉测量概念，能够在约43公里的分辨率下提供全球L波段亮温，观测角度范围从0°到60°。SMOS提供了一种独特的方法来测量陆地表层几厘米的土壤湿度和海洋表面盐度。SMOS土壤湿度算法主要基于生物圈的L波段微波发射（L-MEB）前向模型。该算法使用决策树方法，根据包括土地利用类型在内的辅助信息选择适当的模型元素和参数。然后，采用迭代算法最小化L-MEB模型模拟与SMOS多角度观测之间的差异。多个表面参数，包括植被光学深度和土壤湿度被提取。SMOS算法在使用稀疏网络或广泛的现场测量进行的多项验证研究中产生了可靠的土壤湿度。然而，SMOS亮温的不确定性是一个问题，这归因于来自不同来源的射频干扰（RFI）和傅里叶成像过程中的混叠误差。与大多数微波传感器一样，SMOS也容易受到RFI的影响，这在世界某些地区显著影响了亮温的质量。另一个复杂因素是，由于混叠，低观测角度的亮温数据可靠性较差，这是干涉测量固有的问题。使用亮温数据时的另一个复杂因素是，多个入射角观测并不是在固定值下获得的。通常，在仪器的敏感性范围内，V极化亮温应大于H极化亮温，并且V极化亮温通常随着入射角的增加而增加，而H极化亮温则随着入射角的增加而减少。"
-            ],
-            "research objectiveCn": [
-                "本研究的目标是研究是否可以减少SMOS亮温度的不确定性，并开发一种潜在的后处理方法，以提高数据质量和土壤湿度的提取。在本研究中，我们提出了一种两步回归方法，用于处理/精炼SMOS L1c亮温度。这种方法还提供了一个独特的机会，可以在外部参考目标上比较SMOS与WindSat观测结果。"
-            ],
-            "challengesCn": [
-                "噪声数据已成为限制SMOS数据应用的关键因素之一。目前，RFI/噪声数据的问题仍然是许多欧洲和亚洲地区应用的限制因素。另一个复杂因素是，由于混叠，来自较低观测角度的亮温数据可靠性较差，这是干涉测量中的一个固有问题。"
-            ],
-            "methodsCn": [
-                "在本研究中，我们提出了一种两步回归方法，该方法基于SMOS L1c数据产品使用混合目标函数来细化多角度观测的特征。经过细化的亮温在三个外部目标上进行了分析：南极冰盖、亚马逊雨林和撒哈拉沙漠，并与WindSat观测进行了比较。结果发现，与基于辐射传输模型的密集模拟相比，结果与理论预期更加一致。通过在土壤湿度提取中的应用验证了细化后的亮温。在美国的两个流域网络中发现了显著的改善。"
-            ],
-            "datasetCn": [
-                "在2010年7月1日，从六个DGG节点提取并处理了亮温数据（位置如图3所示）。CA TDS L3产品基于等面积可缩放地球网格，空间分辨率为25公里。"
-            ],
-            "findingsCn": [
-                "该方法通过使用辐射传输模型的模拟进行验证，发现其具有良好的稳健性，并在改善SMOS的土壤湿度估计方面具有重要价值。在美国的两个流域网络中发现了显著的改善。"
-            ]
-        },
-        {
-            "background": [
-                "The Soil Moisture Ocean Salinity (SMOS) was the first mission providing L-band multi-angular brightness temperature (TB) at the global scale. However, radio frequency interferences (RFI) and aliasing effects degrade, when present SMOS TBs, and thus affect the retrieval of land parameters."
-            ],
-            "research objective": [
-                "To alleviate this, a refined SMOS multi-angular TB dataset was generated based on a two-step regression approach."
-            ],
-            "challenges": [
-                "Like other satellites, SMOS suffers from RFI contamination in certain areas of the world. Being the first L-band radiometer, problems were not expected in the protected band, so no filtering approaches were implemented in the receivers. This leads to data loss or meaningless retrievals of SMOS TBs. Great success was obtained in reducing RFI problems since the SMOS launch, but many RFI sources still need to be located, filtered, or canceled, and new RFI sources also appear every day."
-            ],
-            "methods": [
-                "The ESA SMOS Level-1C Full Polarization (SCLF1C) product from 2010 to 2021 (version 724) was refined using the two-step regression approach. Firstly, TB observations at the antenna frame were filtered with various criteria. As there is no complete dataset for any epoch, a simple first-order spline interpolation was employed to fill the missing acquisitions. Then TBs at antenna level (X, Y) were converted to horizontal (H-) or vertical (V-) polarized TBs at the ground reference frame. Thirdly, a further filter procedure was applied to address potential outliers introduced during the interpolation procedure. The final procedure involves the implementation of the two-step regression approach proposed by Zhao. Following the above procedure, the refined TBs at any incidence angle ranging from 0° to 65° can be calculated with reduced RFI and aliasing effects. Various statistical metrics were computed at different steps, as illustrated in the yellow rhomboids in Fig. 1."
-            ],
-            "dataset": [
-                "This RFI-suppressed SMOS TB dataset, spanning more than a decade (since 2010), is expected to provide opportunities for better retrieval of land parameters and scientific applications."
-            ],
-            "findings": [
-                "The results indicate that the two-step regression refined SMOS TB may outperform CATDS RE07 TB in most cases for soil moisture retrieval because the R values (negative) between emissivity and soil moisture of refined TB are stronger compared to CATDS L3 TB, indicating a better relationship between emissivity and soil moisture. The two-step regression refined SMOS TB showed a smaller ubRMSD compared to SMAP with a value of 3.762 (3.497) K than CATDS TB with ubRMSD value of 6.81 (6.897) K at H-polarization (and V-polarization). The difference in the ubRMSD performance is primarily attributed to the RFI suppression in the refined SMOS TB, indicating its technical reliability in handling RFI-contaminated data."
-            ],
-            "backgroundCn": [
-                "土壤湿度海洋盐度（SMOS）是第一个在全球范围内提供L波段多角度亮温（TB）数据的任务。然而，射频干扰（RFI）和混叠效应会降低现有SMOS亮温的质量，从而影响陆地参数的提取。"
-            ],
-            "research objectiveCn": [
-                "为了解决这个问题，基于两步回归方法生成了精细化的SMOS多角度TB数据集。"
-            ],
-            "challengesCn": [
-                "与其他卫星一样，SMOS在世界某些地区也受到射频干扰（RFI）的影响。作为首个L波段辐射计，原本不期望在受保护频段出现问题，因此接收器中没有实施过滤方法。这导致了SMOS天线温度（TB）数据的丢失或无意义的检索。自SMOS发射以来，在减少RFI问题方面取得了很大成功，但仍需定位、过滤或消除许多RFI源，并且每天还会出现新的RFI源。"
-            ],
-            "methodsCn": [
-                "ESA SMOS Level-1C全极化(SCLF1C)产品从2010年到2021年（版本724）经过了两步回归方法的精细化处理。首先，使用各种标准对天线框架下的TB观测值进行了过滤。由于没有任何时期的完整数据集，因此采用简单的一阶样条插值法填补缺失的采集数据。然后，将天线水平（X，Y）的TB转换为地面参考框架下的水平（H-）或垂直（V-）极化TB。第三，应用进一步的过滤程序以处理在插值过程中引入的潜在异常值。最后的程序涉及实施赵提出的两步回归方法。通过上述程序，可以计算出在0°到65°的任何入射角下的精细化TB，减少了RFI和混叠效应。在不同步骤中计算了各种统计指标，如图1中的黄色菱形所示。"
-            ],
-            "datasetCn": [
-                "这个经过RFI抑制的SMOS TB数据集跨越了十多年（自2010年以来），预计将为更好地获取土地参数和科学应用提供机会。"
-            ],
-            "findingsCn": [
-                "结果表明，经过两步回归处理的SMOS TB在大多数情况下优于CATDS RE07 TB进行土壤湿度提取，因为经过处理的TB与土壤湿度之间的负相关R值比CATDS L3 TB更强，表明其与土壤湿度之间的关系更好。经过两步回归处理的SMOS TB在H极化（和V极化）下的ubRMSD值为3.762（3.497）K，较SMAP的ubRMSD值小，而CATDS TB的ubRMSD值为6.81（6.897）K。ubRMSD性能的差异主要归因于经过处理的SMOS TB在抑制RFI方面的表现，表明其在处理RFI污染数据时的技术可靠性。"
-            ]
-        },
-        {
-            "background": [
-                "Surface soil moisture (SM) usually refers to the soil moisture in the upper soil layer of 0 – 5 cm, and plays a key role in governing the exchanges of water and energy between the land and the atmosphere. Currently, microwave L-band radiometer is considered an appropriate tool for spatial SM mapping from space due to its strong penetration of vegetation covers and sensitivity to surface SM conditions. Launched by the ESA in 2009, SMOS was the first satellite to operate with a L-band (1.4 GHz) radiometer. Numerous validation/evaluation studies of SMOS L2/L3 SM products have been carried out during the last decade and some of them show that the SMOS L2/L3 SM products might present underestimation when compared with ground measurements. Considering the above mentioned issues, the SMOS-IC algorithm was developed by the activities funded by ESA- and CNES aiming at improving SMOS algorithms. Both the SMOS L2/L3 and SMOS-IC algorithms are based on fixed empirical/theoretical parameters of ωp eff and soil roughness. Soil roughness also affects the microwave emission of land surface, and the roughness effects vary with frequencies, angles of incidence and polarizations."
-            ],
-            "research objective": [
-                "To fill this gap and further improve the performance of the SM and VOD retrievals using the SMOS data, a multi-temporal and multi-angular approach, MTMA, is proposed in this paper to systematically retrieve four parameters including VOD, SM, effective scattering albedo and surface roughness. The proposed MTMA method presented in this study is different from the SMOS and SMOS-IC algorithms in several aspects and the main ones are: (1) four parameters (vegetation optical depth VODp, effective scattering albedo ωp eff, soil surface roughness Zp s, and surface soil moisture SMp) are retrieved systematically."
-            ],
-            "challenges": [
-                "The major challenge for accurate retrieval of SM is to decouple the soil and vegetation contributions, which is also the main difference between existing retrieval algorithms."
-            ],
-            "methods": [
-                "In this study, a multi-temporal and multi-angular (MTMA) approach is proposed using SMOS (Soil Moisture and Ocean Salinity) satellite L-band data for retrieving vegetation optical depth (VODp, p indicates the polarization with H for horizontal and V for vertical)), effective scattering albedo (ωp eff), soil surface roughness (Zp s), and soil moisture (SMp). In this study, the refined SMOS Level 1C (SMOS L1C) and the original Level 3 (L3) TB data are applied to the MTMA algorithm for retrievals."
-            ],
-            "dataset": [
-                "In this study, the refined SMOS Level 1C (SMOS L1C) and the original Level 3 (L3) TB data are applied to the MTMA algorithm for retrievals. In-situ SM data are collected from 11 SM observation networks from the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network to verify the retrieval results of the MTMA algorithm."
-            ],
-            "findings": [
-                "The MTMA VOD retrievals are found to have a reasonable global spatial distribution, which is generally consistent with the VOD retrievals obtained from the SMOS Level 3 (SMOS-L3) and SMOS-IC Version 2 (V2) (referred to as SMOS-IC), except for showing relatively lower values over densely vegetated areas compared with the other two SMOS products. The retrieved MTMA SM shows generally high correlations with in-situ measurements (11 dense observation networks) with overall correlation coefficients of > 0.75. Therefore, it is concluded that by incorporating multi-temporal SMOS data, the proposed method of MTMA can be used to systematically retrieve SM, VOD and additional surface parameters (effective scattering albedo and surface roughness) with comparable or better performance of SM than that of SMOS-IC and SMOS-L3. Moreover, this paper for the first time produced a polarization-dependent SMOS VOD product at a global scale."
-            ],
-            "backgroundCn": [
-                "表层土壤湿度（SM）通常指的是0-5厘米上层土壤中的土壤湿度，它在调节陆地与大气之间的水分和能量交换中起着关键作用。目前，微波L波段辐射计被认为是从太空进行空间土壤湿度映射的合适工具，因为它对植被覆盖的强穿透能力和对表层土壤湿度状况的敏感性。2009年由欧洲航天局（ESA）发射的SMOS是第一颗使用L波段（1.4 GHz）辐射计的卫星。在过去十年中，已经进行了大量对SMOS L2/L3土壤湿度产品的验证/评估研究，其中一些研究表明，与地面测量相比，SMOS L2/L3土壤湿度产品可能存在低估的问题。考虑到上述问题，SMOS-IC算法是在ESA和法国国家空间研究中心（CNES）资助的活动中开发的，旨在改进SMOS算法。SMOS L2/L3和SMOS-IC算法均基于固定的经验/理论参数ωp eff和土壤粗糙度。土壤粗糙度也会影响陆地表面的微波辐射，且粗糙度效应会随频率、入射角和极化方式的不同而变化。"
-            ],
-            "research objectiveCn": [
-                "为了填补这一空白并进一步提高使用SMOS数据的土壤湿度（SM）和植被光学深度（VOD）检索性能，本文提出了一种多时相多角度方法（MTMA），系统地检索四个参数，包括VOD、SM、有效散射反照率和地表粗糙度。本文提出的MTMA方法与SMOS和SMOS-IC算法在多个方面有所不同，主要包括：（1）系统地检索四个参数（植被光学深度VODp、有效散射反照率ωp eff、土壤表面粗糙度Zp s和表层土壤湿度SMp）。"
-            ],
-            "challengesCn": [
-                "准确获取土壤湿度的主要挑战是将土壤和植被的贡献解耦，这也是现有检索算法之间的主要区别。"
-            ],
-            "methodsCn": [
-                "在本研究中，提出了一种多时相和多角度（MTMA）的方法，利用SMOS（土壤湿度和海洋盐度）卫星L波段数据来获取植被光学深度（VODp，p表示极化，H表示水平，V表示垂直）、有效散射反照率（ωp eff）、土壤表面粗糙度（Zp s）和土壤湿度（SMp）。本研究中，采用了经过精细处理的SMOS Level 1C（SMOS L1C）和原始的Level 3（L3）TB数据来应用于MTMA算法进行反演。"
-            ],
-            "datasetCn": [
-                "在本研究中，精细化的SMOS一级C（SMOS L1C）和原始的三级（L3）TB数据被应用于MTMA算法进行反演。来自国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的11个土壤湿度观测网络收集的现场土壤湿度数据用于验证MTMA算法的反演结果。"
-            ],
-            "findingsCn": [
-                "MTMA VOD 检索结果显示出合理的全球空间分布，通常与从 SMOS Level 3 (SMOS-L3) 和 SMOS-IC 版本 2 (V2)（称为 SMOS-IC）获得的 VOD 检索结果一致，但在密集植被区域的值相对较低，与其他两个 SMOS 产品相比。检索到的 MTMA SM 与 11 个密集观测网络的现场测量结果普遍具有较高的相关性，整体相关系数超过 0.75。因此，可以得出结论，通过结合多时相 SMOS 数据，所提出的 MTMA 方法可以系统地检索 SM、VOD 及其他表面参数（有效散射反照率和表面粗糙度），其 SM 的性能与 SMOS-IC 和 SMOS-L3 相比具有可比或更好的表现。此外，本文首次在全球范围内生成了依赖于极化的 SMOS VOD 产品。"
-            ]
-        },
-        {
-            "background": [
-                "Snow density varies spatially, temporally, and vertically within the snowpack and is the key to converting snow depth to snow water equivalent. Snow cover plays a critical role in terrestrial hydrological, climatological, and ecological processes. It influences the energy balance on the land surface, based on its high albedo and low thermal conductivity. However, when there have been multiple continental or large-scale snow depth remote sensing products, the corresponding snow density product required to convert snow depth to SWE is still limited. At a high frequency, snow volume scattering cannot be neglected. The influences of the snow depth and snow grain size on the brightness temperature (TB) are much higher than that of snow density. Therefore, to estimate snow density, the lower-frequency channel is better suited for its retrieval as it is more sensitive to snow refraction rather than snow volume scattering. The use of a fixed snow density (for example, 240 kg/m3) will result in an overestimated SWE in the early snow season and an underestimated SWE in the late snow season. In recent years, with the development of full-polarized SAR, surface and volume scattering components were extracted from different signal decomposition methods to establish empirical or physical relationships with snow density. After the launch of the Soil Moisture Ocean Salinity (SMOS) satellite for soil moisture observation purposes in November 2009, the multiple-angle L-band radiometer became an additional type of sensor applicable for snow density estimation. Preliminary studies on the physical and the practical feasibility of snow density retrieval using ground-based radiometer observations have been conducted. However, if the snow density retrieval algorithm is moved from ground-based to space-borne instruments, it will be challenged by stronger observation noise, emission from other land surface types, and the Radio Frequency Interference (RFI) from human activities."
-            ],
-            "research objective": [
-                "Therefore, the scientific goal of this article is to retrieve the snow density from SMOS satellite observations, according to the theory in previous studies."
-            ],
-            "challenges": [
-                "However, if the snow density retrieval algorithm is moved from ground-based to space-borne instruments, it will be challenged by stronger observation noise, emission from other land surface types, and the Radio Frequency Interference (RFI) from human activities."
-            ],
-            "methods": [
-                "In this study, the snow density was retrieved using the Soil Moisture Ocean Salinity (SMOS) satellite radiometer observations at 43 stations in Quebec, Canada. We used a one-layer snow radiative transfer model and added a τ − ω vegetation model over the snow to consider the forest influence. We developed an objective method to estimate the forest parameters (τ, ω) and soil roughness (SD) from SMOS measurements during the snow-free period and applied them to estimate snow density. Prior knowledge of soil permittivity was used in the entire process, which was calculated from the Global Land Data Assimilation System (GLDAS) soil simulations using a frozen soil dielectric model."
-            ],
-            "dataset": [
-                "The SMOS Level 1C (L1C) product is provided in the ISEA-4H9 grid (icosahedral Snyder equal area earth fixed) with a spatial resolution of 43 km on average. The in-situ snow measurements come from the Canadian historical Snow Water Equivalent dataset (CanSWEv3.0), which contains both the snow depth and snow water equivalent at the same station. In our study area and period, there are 43 stations with elevation < 1000 m."
-            ],
-            "findings": [
-                "Results showed that the retrieved snow density had an overall root-mean-squared error (RMSE) of 83 kg/m3 for all stations, with a mean bias of 9.4 kg/m3. The remote sensing retrieved snow density outperforms the reanalysis snow density from GLDAS in terms of bias and temporal variation characteristics."
-            ],
-            "backgroundCn": [
-                "雪密度在空间、时间和雪层的垂直方向上变化，是将雪深转换为雪水当量的关键。雪盖在陆地水文、气候和生态过程中的作用至关重要。由于其高反照率和低热导率，雪盖影响着地表的能量平衡。然而，尽管已有多个大陆或大规模的雪深遥感产品，但相应的雪密度产品仍然有限。在高频率下，雪体积散射不可忽视。雪深和雪晶粒大小对亮温（TB）的影响远高于雪密度。因此，低频通道更适合用于雪密度的提取，因为它对雪的折射更敏感，而不是雪的体积散射。使用固定的雪密度（例如，240 kg/m³）会导致在早期雪季高估雪水当量，而在晚期雪季低估雪水当量。近年来，随着全极化合成孔径雷达（SAR）的发展，通过不同的信号分解方法提取了表面和体积散射成分，以建立与雪密度的经验或物理关系。在2009年11月发射的土壤湿度海洋盐度（SMOS）卫星用于土壤湿度观测后，多角度L波段辐射计成为适用于雪密度估计的另一种传感器。关于使用地面辐射计观测进行雪密度提取的物理和实际可行性的初步研究已经开展。然而，如果将雪密度提取算法从地面仪器转移到空间仪器，将面临更强的观测噪声、其他地表类型的辐射以及人类活动造成的射频干扰（RFI）的挑战。"
-            ],
-            "research objectiveCn": [
-                "因此，本文的科学目标是根据之前研究的理论，从SMOS卫星观测中获取雪密度。"
-            ],
-            "challengesCn": [
-                "然而，如果将雪密度检索算法从地面仪器转移到空间仪器，将面临更强的观测噪声、其他地表类型的辐射以及人类活动造成的射频干扰（RFI）的挑战。"
-            ],
-            "methodsCn": [
-                "在本研究中，利用土壤湿度海洋盐度（SMOS）卫星辐射计观测数据，在加拿大魁北克的43个站点获取了雪密度。我们使用了一层雪的辐射传输模型，并在雪上添加了τ−ω植被模型，以考虑森林的影响。我们开发了一种客观方法，从SMOS测量中估计森林参数（τ，ω）和土壤粗糙度（SD），这些测量是在无雪期进行的，并将其应用于雪密度的估算。在整个过程中，使用了土壤介电常数的先验知识，该介电常数是通过全球陆地数据同化系统（GLDAS）土壤模拟计算得出的，采用了冻土介电模型。"
-            ],
-            "datasetCn": [
-                "SMOS Level 1C (L1C) 产品以 ISEA-4H9 网格（等面积地球固定的二十面体 Snyder 网格）提供，平均空间分辨率为 43 公里。现场雪测量数据来自加拿大历史雪水当量数据集（CanSWEv3.0），该数据集包含同一站点的雪深和雪水当量。在我们的研究区域和时间段内，有 43 个站点的海拔低于 1000 米。"
-            ],
-            "findingsCn": [
-                "结果显示，检索到的雪密度在所有站点的总体均方根误差（RMSE）为83 kg/m3，平均偏差为9.4 kg/m3。与GLDAS的再分析雪密度相比，遥感获取的雪密度在偏差和时间变化特征方面表现更优。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "彭志晴",
+        "nameEn": "PENG Zhiqing ",
+        "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "赵天杰",
+        "nameEn": "ZHAO Tianjie",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "施建成",
+        "nameEn": "SHI Jiancheng",
+        "unitEn": "",
+        "unitCn": "中国科学院国家空间科学中心"
+      },
+      {
+        "nameCn": "车涛",
+        "nameEn": "CHE Tao",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Can a two-step regression approach effectively reduce the uncertainties in L-band brightness temperature data affected by radio frequency interference and aliasing?",
-                "QuestionCn": "两步回归方法是否能有效减少受无线电频率干扰和混叠影响的L波段亮温数据的不确定性？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the main challenges associated with data collection in radio frequency interference (RFI) impacted regions?",
-                "QuestionCn": "在受到射频干扰（RFI）影响的地区，数据收集面临的主要挑战有哪些？",
-                "AnswerEn": "RFI from varied sources",
-                "AnswerCn": "来自不同来源的信息请求",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Where can researchers find datasets for validating soil moisture retrievals from satellite data?",
-                "QuestionCn": "研究人员可以在哪里找到用于验证卫星数据土壤湿度提取的数据库？",
-                "AnswerEn": "International Soil Moisture Network",
-                "AnswerCn": "国际土壤湿度网络",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What data collection method can be used to address the issue of radio frequency interference in multi-angular brightness temperature datasets?",
-                "QuestionCn": "可以使用哪种数据收集方法来解决多角度亮温数据集中无线电频率干扰的问题？",
-                "AnswerEn": "Two-step regression approach",
-                "AnswerCn": "两步回归方法",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method used to address radio frequency interference (RFI) in satellite brightness temperature datasets?",
-                "QuestionCn": "您能否提供一个用于解决卫星亮温数据集中的射频干扰（RFI）数据收集方法的示例？",
-                "AnswerEn": "An example of a data collection method used to address RFI in satellite brightness temperature datasets is the two-step regression approach applied to the SMOS Level-1C brightness temperature data. This method involves filtering TB observations at the antenna frame, interpolating missing acquisitions, converting TBs to horizontal and vertical polarizations, and applying further filters for outlier removal, ultimately refining the brightness temperatures to reduce RFI and aliasing effects.",
-                "AnswerCn": "用于解决卫星亮温数据集中RFI的数据收集方法的一个例子是应用于SMOS Level-1C亮温数据的两步回归方法。该方法涉及在天线框架下过滤TB观测，插值缺失的采集，将TB转换为水平和垂直极化，并应用进一步的过滤器以去除异常值，最终精炼亮温以减少RFI和混叠效应。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Could you provide an example of a dataset used in multi-temporal and multi-angular retrieval approaches for vegetation and soil moisture parameters?",
-                "QuestionCn": "您能否提供一个用于多时相和多角度检索植被和土壤湿度参数的数据集示例？",
-                "AnswerEn": "An example of a dataset used in multi-temporal and multi-angular retrieval approaches is the refined SMOS Level 1C and the original Level 3 TB data, which are applied to the MTMA algorithm to systematically retrieve parameters such as vegetation optical depth, effective scattering albedo, soil surface roughness, and soil moisture.",
-                "AnswerCn": "一个用于多时相和多角度检索方法的数据集示例是精细化的SMOS Level 1C和原始的Level 3 TB数据，这些数据被应用于MTMA算法，以系统地检索诸如植被光学深度、有效散射反照率、土壤表面粗糙度和土壤湿度等参数。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What features should be considered when developing a postprocessing approach to enhance brightness temperature data quality for soil moisture retrieval?",
-                "QuestionCn": "在开发后处理方法以增强土壤湿度检索的亮温数据质量时，应考虑哪些特征？",
-                "AnswerEn": "filtering noisy data, addressing aliasing errors, employing regression techniques, validation with theoretical models, comparison with other external observations",
-                "AnswerCn": "过滤噪声数据，解决混叠误差，采用回归技术，用理论模型进行验证，与其他外部观测进行比较。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What are the essential qualities of a dataset intended for the retrieval of land surface parameters such as soil moisture and snow density from satellite observations?",
-                "QuestionCn": "用于从卫星观测中检索土地表面参数（如土壤湿度和雪密度）的数据集的基本特征是什么？",
-                "AnswerEn": "refined brightness temperatures, minimized noise from RFI, accurate spatial resolution, validated retrieval algorithms, comprehensive metadata about observation conditions, incidence angles, polarization",
-                "AnswerCn": "精炼的亮温、最小化的射频干扰噪声、准确的空间分辨率、验证的检索算法、关于观测条件的全面元数据、入射角、极化。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the refined SMOS TB dataset used for retrieving soil moisture?",
-                "QuestionCn": "用于获取土壤湿度的精细化SMOS TB数据集的空间分辨率是多少？",
-                "AnswerEn": "25 km",
-                "AnswerCn": "25公里",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many stations in Quebec, Canada, were used to retrieve snow density using the SMOS satellite radiometer observations?",
-                "QuestionCn": "在加拿大魁北克省，有多少个站点用于通过SMOS卫星辐射计观测获取雪密度？",
-                "AnswerEn": "43",
-                "AnswerCn": "43",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the two-step regression approach in the context of refining satellite brightness temperature data?",
-                "QuestionCn": "在精炼卫星亮温数据的背景下，双步回归方法是什么？",
-                "AnswerEn": "The two-step regression approach is a method used to process and refine SMOS L1c brightness temperature data. It involves filtering TB observations at the antenna frame, converting them to horizontal or vertical polarized TBs at the ground reference frame, and applying further filtering to address outliers. The approach aims to reduce uncertainties such as RFI and aliasing effects, improving the data quality for soil moisture retrieval.",
-                "AnswerCn": "两步回归方法是一种用于处理和精炼SMOS L1c亮温数据的方法。该方法涉及在天线框架下过滤TB观测，将其转换为地面参考框架下的水平或垂直极化TB，并应用进一步的过滤以处理异常值。该方法旨在减少诸如射频干扰（RFI）和混叠效应等不确定性，从而提高土壤湿度提取的数据质量。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the significance of the ISEA projection in storing satellite data?",
-                "QuestionCn": "ISEA投影在存储卫星数据中的重要性是什么？",
-                "AnswerEn": "The ISEA projection, or Icosahedral Snyder Equal Area projection, is a method used to store satellite data on a discrete global grid (DGG). It is significant because it allows for the equal area representation of data points, which is crucial for consistent global coverage and analysis in satellite missions like SMOS, particularly for observing variables such as soil moisture over vast geographical areas.",
-                "AnswerCn": "ISEA投影，即正二十面体斯奈德等面积投影，是一种用于在离散全球网格（DGG）上存储卫星数据的方法。它的重要性在于能够实现数据点的等面积表示，这对于在像SMOS这样的卫星任务中进行一致的全球覆盖和分析至关重要，特别是在观察土壤湿度等变量时，涵盖广泛的地理区域。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "In what ways do the challenges of RFI and aliasing affect the data quality of SMOS brightness temperatures in different regions, and how do the proposed methods address these challenges?",
-                "QuestionCn": "RFI（无线电频率干扰）和混叠对SMOS（土壤湿度和海洋盐度）亮温数据质量的影响在不同地区表现出不同的挑战，而提出的方法旨在解决这些挑战。",
-                "AnswerEn": "RFI contamination and aliasing reduce the reliability of SMOS brightness temperatures, particularly affecting regions with high RFI sources. The two-step regression approach reduces RFI effects and improves data quality through filtering and interpolation. The MTMA approach enhances retrievals by incorporating refined data and addressing vegetation and surface roughness effects.",
-                "AnswerCn": "RFI污染和混叠降低了SMOS亮温的可靠性，特别是在高RFI源的区域。两步回归方法通过过滤和插值减少了RFI影响，提高了数据质量。MTMA方法通过结合精细数据并解决植被和表面粗糙度效应来增强检索结果。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the similarities and differences in data collection and processing methods between retrieving snow density using SMOS satellite observations and soil moisture retrieval in terms of handling observation noise and RFI?",
-                "QuestionCn": "在使用SMOS卫星观测获取雪密度和土壤湿度检索的数据收集和处理方法之间，处理观测噪声和射频干扰（RFI）方面的相似性和差异是什么？",
-                "AnswerEn": "Both snow density and soil moisture retrievals using SMOS data face challenges of observation noise and RFI. For snow density, a one-layer snow radiative transfer model is used, considering forest influence and soil roughness. For soil moisture, methods like two-step regression refine brightness temperatures to reduce RFI. Both approaches use additional models and datasets to mitigate noise and improve retrieval accuracy.",
-                "AnswerCn": "使用SMOS数据进行雪密度和土壤湿度反演面临观测噪声和射频干扰（RFI）的挑战。对于雪密度，采用了一层雪辐射传输模型，考虑了森林影响和土壤粗糙度。对于土壤湿度，采用了两步回归等方法来精炼亮温，以减少RFI。这两种方法都使用了额外的模型和数据集来减轻噪声并提高反演精度。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What implications do the methodological approaches used in refining SMOS datasets have for the development of new datasets aimed at retrieving land parameters such as soil moisture or snow density?",
-                "QuestionCn": "在精炼SMOS数据集所采用的方法论对开发旨在获取土壤湿度或雪密度等地面参数的新数据集有什么影响？",
-                "AnswerEn": "The methodological approaches used, such as the two-step regression and MTMA algorithms, imply that new datasets could benefit from multi-angular and multi-temporal analysis techniques. These methods enhance the accuracy of land parameter retrievals by systematically addressing noise and interference, suggesting that future datasets might continue to leverage such advanced computational techniques to improve the reliability and precision of remote sensing data.",
-                "AnswerCn": "所使用的方法论，如两步回归和MTMA算法，暗示新的数据集可以从多角度和多时相分析技术中受益。这些方法通过系统地处理噪声和干扰，提高了土地参数提取的准确性，这表明未来的数据集可能会继续利用这些先进的计算技术，以提高遥感数据的可靠性和精确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What are the underlying causes that contribute to the presence of radio frequency interference (RFI) in L-band brightness temperature measurements?",
-                "QuestionCn": "导致L波段亮温测量中存在射频干扰（RFI）的潜在原因是什么？",
-                "AnswerEn": "The presence of radio frequency interference (RFI) in L-band brightness temperature measurements is primarily due to varied sources of interference from human activities and technical limitations. The SMOS satellite, being the first L-band radiometer, did not initially implement filtering approaches in its receivers, leading to RFI affecting data quality. Moreover, the aliasing effects in the Fourier imaging process further degrade the data quality.",
-                "AnswerCn": "L波段亮温测量中存在的射频干扰（RFI）主要是由于人类活动和技术限制的多种干扰源。SMOS卫星作为首个L波段辐射计，最初在其接收器中并未实施过滤方法，导致RFI影响数据质量。此外，傅里叶成像过程中的混叠效应进一步降低了数据质量。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why do multi-angular brightness temperature datasets face challenges in ensuring data reliability for soil moisture retrieval?",
-                "QuestionCn": "多角度亮温数据集在确保土壤湿度提取的数据可靠性方面面临挑战的原因是什么？",
-                "AnswerEn": "Multi-angular brightness temperature datasets face challenges in data reliability due to the inherent issues of aliasing in interferometry and the inconsistent nature of multi-incidence angle observations. Additionally, the susceptibility to RFI significantly affects brightness temperatures, particularly at lower look angles, leading to unreliable data for accurate soil moisture retrieval.",
-                "AnswerCn": "多角度亮温数据集面临数据可靠性挑战，主要由于干涉测量中的混叠问题和多入射角观测的不一致性。此外，低视角下对射频干扰（RFI）的敏感性显著影响亮温，导致土壤湿度提取的可靠数据不足。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What factors necessitate the development of refined data processing methods like the two-step regression approach for L-band satellite data?",
-                "QuestionCn": "哪些因素促使了像两步回归方法这样的精细数据处理方法的发展，以处理L波段卫星数据？",
-                "AnswerEn": "The development of refined data processing methods like the two-step regression approach is necessitated by the need to reduce uncertainties caused by noisy data, RFI, and aliasing effects. These factors limit the applicability of SMOS data in various regions, necessitating enhanced processing techniques to improve data quality and ensure accurate retrievals of parameters such as soil moisture.",
-                "AnswerCn": "精细数据处理方法的发展，如两步回归方法，是为了减少噪声数据、射频干扰（RFI）和混叠效应所造成的不确定性。这些因素限制了SMOS数据在各个区域的适用性，因此需要增强处理技术以提高数据质量，确保准确获取土壤湿度等参数。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the key objectives for refining L-band brightness temperature data in the context of soil moisture retrieval?",
-                "QuestionCn": "在土壤湿度提取的背景下，精炼L波段亮温数据的关键目标是什么？",
-                "AnswerEn": "The key objectives include reducing uncertainties in brightness temperature data by mitigating radio-frequency interference (RFI) and aliasing errors. This refinement aims to improve soil moisture retrieval accuracy and data quality, thereby enhancing the reliability of soil moisture estimates from SMOS satellite observations.",
-                "AnswerCn": "关键目标包括通过减轻射频干扰（RFI）和混叠误差来减少亮温数据的不确定性。这一改进旨在提高土壤湿度反演的准确性和数据质量，从而增强从SMOS卫星观测中获得的土壤湿度估计的可靠性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in refining L-band multi-angular brightness temperature data to address radio frequency interference and aliasing effects?",
-                "QuestionCn": "精炼L波段多角度亮温数据以解决射频干扰和混叠效应的程序步骤包括以下几个方面：",
-                "AnswerEn": "The procedure involves using a two-step regression approach. Initially, brightness temperature (TB) observations at the antenna frame are filtered with various criteria, and missing acquisitions are filled using first-order spline interpolation. Then, TBs at the antenna level are converted to horizontal or vertical polarized TBs at the ground reference frame. A further filter is applied to address outliers introduced during interpolation. The two-step regression approach is then implemented to calculate refined TBs at any incidence angle, reducing RFI and aliasing effects.",
-                "AnswerCn": "该程序涉及使用两步回归方法。首先，对天线框架下的亮温（TB）观测值进行各种标准的过滤，并使用一阶样条插值填补缺失的采集数据。然后，将天线水平或垂直极化的TB转换为地面参考框架下的TB。进一步应用过滤器以处理插值过程中引入的异常值。随后实施两步回归方法，以计算在任何入射角下的精细TB，从而减少RFI和混叠效应。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How is the snow density retrieved using satellite radiometer observations, and what models are applied to account for external influences such as forest cover?",
-                "QuestionCn": "如何通过卫星辐射计观测获取雪密度，并应用哪些模型来考虑森林覆盖等外部影响？",
-                "AnswerEn": "Snow density is retrieved using the SMOS satellite radiometer observations with a one-layer snow radiative transfer model combined with a τ − ω vegetation model over the snow to consider forest influence. Forest parameters and soil roughness are estimated from SMOS measurements during the snow-free period. Prior knowledge of soil permittivity is used throughout the process, derived from GLDAS soil simulations using a frozen soil dielectric model.",
-                "AnswerCn": "雪密度是通过使用SMOS卫星辐射计观测数据，结合单层雪辐射传输模型和τ−ω植被模型来检索的，以考虑森林的影响。森林参数和土壤粗糙度是在无雪期通过SMOS测量估计的。在整个过程中，使用了土壤介电常数的先验知识，该知识来源于使用冻结土壤介电模型的GLDAS土壤模拟。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methodological strategies are employed to systematically retrieve soil moisture and vegetation parameters from L-band data, and how do they differ from existing algorithms?",
-                "QuestionCn": "采用哪些方法论策略来系统地从L波段数据中检索土壤湿度和植被参数，这些策略与现有算法有何不同？",
-                "AnswerEn": "A multi-temporal and multi-angular approach (MTMA) is used to systematically retrieve parameters like vegetation optical depth, effective scattering albedo, soil surface roughness, and soil moisture from SMOS L-band data. This method differs from existing algorithms by retrieving four parameters systematically and incorporating multi-temporal data, which improves performance compared to SMOS-IC and SMOS-L3 algorithms.",
-                "AnswerCn": "多时相多角度方法（MTMA）用于系统地从SMOS L波段数据中提取植被光学深度、有效散射反照率、土壤表面粗糙度和土壤湿度等参数。该方法与现有算法不同，能够系统地提取四个参数，并结合多时相数据，相较于SMOS-IC和SMOS-L3算法，性能得到了提升。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What techniques enable the refinement of L-band brightness temperature data to reduce radio frequency interference and improve soil moisture retrieval?",
-                "QuestionCn": "哪些技术可以用于精炼L波段亮温数据，以减少射频干扰并改善土壤湿度提取？",
-                "AnswerEn": "A two-step regression approach is used to refine L-band brightness temperature data. This approach involves filtering data at the antenna frame, interpolating missing data, converting to polarized brightness temperatures, and addressing potential outliers. The refined data can be analyzed over reference targets and used to improve soil moisture retrieval by reducing RFI and aliasing effects.",
-                "AnswerCn": "一种两步回归方法用于精炼L波段亮温数据。该方法涉及在天线帧下过滤数据、插值缺失数据、转换为极化亮温，并处理潜在的异常值。精炼后的数据可以在参考目标上进行分析，并用于通过减少RFI和混叠效应来改善土壤湿度提取。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the integration of multi-angular and multi-temporal brightness temperature data enhance the retrieval of soil moisture and other land parameters?",
-                "QuestionCn": "多角度和多时相亮温数据的集成如何增强土壤湿度和其他土地参数的获取？",
-                "AnswerEn": "The integration of multi-angular and multi-temporal brightness temperature data through approaches like the MTMA allows systematic retrieval of parameters such as vegetation optical depth, effective scattering albedo, soil roughness, and soil moisture. This method enhances retrieval accuracy by leveraging the temporal and angular variability in brightness temperature observations.",
-                "AnswerCn": "通过像MTMA这样的多角度和多时相亮温数据的集成，可以系统地提取诸如植被光学深度、有效散射反照率、土壤粗糙度和土壤湿度等参数。这种方法通过利用亮温观测中的时间和角度变化，提高了提取的准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methods facilitate the assessment and mitigation of the impact of radio frequency interference on satellite-derived brightness temperature data?",
-                "QuestionCn": "哪些方法可以促进评估和减轻射频干扰对卫星衍生亮温数据的影响？",
-                "AnswerEn": "The two-step regression approach facilitates the assessment and mitigation of radio frequency interference by refining brightness temperature data through filtering, interpolation, and conversion processes. This approach has demonstrated success in reducing RFI issues, thereby enabling more reliable retrieval of soil moisture and other land parameters.",
-                "AnswerCn": "两步回归方法通过过滤、插值和转换过程，促进了对射频干扰的评估和缓解，精炼了亮温数据。该方法在减少射频干扰问题方面取得了成功，从而使土壤湿度和其他土地参数的获取更加可靠。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "What are the anticipated challenges in using a multi-angular approach for retrieving soil moisture and vegetation parameters from satellite data, and how might these challenges affect the expected outcomes?",
-                "QuestionCn": "使用多角度方法从卫星数据中获取土壤湿度和植被参数所面临的预期挑战是什么，这些挑战可能如何影响预期结果？",
-                "AnswerEn": "The major challenge for accurate retrieval of soil moisture is to decouple the soil and vegetation contributions, which is the main difference between existing retrieval algorithms. Using multi-angular data can help address this by providing multiple perspectives of the same area, but it also requires sophisticated models to accurately interpret the data. The expected outcome is to achieve higher accuracy in soil moisture and vegetation parameter retrievals, but challenges such as radio frequency interference, aliasing effects, and noise in the data can complicate this process.",
-                "AnswerCn": "准确获取土壤湿度的主要挑战在于分离土壤和植被的贡献，这是现有检索算法之间的主要区别。使用多角度数据可以通过提供同一区域的多个视角来帮助解决这个问题，但这也需要复杂的模型来准确解释数据。预期的结果是实现土壤湿度和植被参数检索的更高准确性，但诸如射频干扰、混叠效应和数据噪声等挑战可能会使这一过程复杂化。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how data collection methods in the field of SMOS brightness temperature can address the issue of radio frequency interference and aliasing?",
-                "QuestionCn": "我不明白在SMOS亮温领域的数据收集方法如何解决无线电频率干扰和混叠的问题。",
-                "AnswerEn": "In the field of SMOS brightness temperature, the two-step regression approach is used to refine the data by filtering the TB observations at the antenna frame and addressing potential outliers through interpolation and conversion of TBs at antenna level to horizontal or vertical polarized TBs at the ground reference frame. This method effectively reduces radio frequency interference and aliasing effects, thereby improving data quality.",
-                "AnswerCn": "在SMOS亮温度领域，采用两步回归方法来精炼数据，通过在天线框架下过滤TB观测值，并通过插值处理和将天线级别的TB转换为地面参考框架下的水平或垂直极化TB来解决潜在的异常值。该方法有效减少了射频干扰和混叠效应，从而提高了数据质量。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I'm unsure about the challenges faced in collecting reliable soil moisture data using SMOS satellite observations.",
-                "QuestionCn": "我对使用SMOS卫星观测收集可靠土壤湿度数据所面临的挑战感到不确定。",
-                "AnswerEn": "The challenges in collecting reliable soil moisture data using SMOS satellite observations include dealing with noisy data due to radio frequency interference, which affects data quality in certain regions, and issues related to aliasing errors in the Fourier imaging process. These factors complicate the retrieval of accurate land parameters, especially in areas with severe RFI contamination.",
-                "AnswerCn": "使用SMOS卫星观测收集可靠土壤湿度数据的挑战包括处理由于无线电频率干扰（RFI）导致的噪声数据，这在某些地区影响数据质量，以及与傅里叶成像过程中的混叠误差相关的问题。这些因素使得在严重RFI污染区域准确提取土地参数变得复杂。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please explore and describe the data collection methods used for acquiring multi-angular brightness temperature data in the context of mitigating radio frequency interference and aliasing effects.",
-                "QuestionCn": "请探讨和描述在减轻射频干扰和混叠效应的背景下，获取多角度亮温数据所使用的数据收集方法。",
-                "AnswerEn": "The data collection methods involve using the European Space Agency’s Soil Moisture Ocean Salinity (SMOS) satellite, which provides L-band brightness temperature for a range of incidence angles. A two-step regression approach is used to refine the Level-1C brightness temperature data, addressing radio frequency interference and aliasing effects. This involves filtering, interpolation, and conversion of antenna-level observations to ground reference frame, followed by further filtering procedures to mitigate outliers.",
-                "AnswerCn": "数据收集方法涉及使用欧洲空间局的土壤湿度海洋盐度（SMOS）卫星，该卫星提供一系列入射角的L波段亮温数据。采用两步回归方法对Level-1C亮温数据进行精细化处理，以解决射频干扰和混叠效应。这包括过滤、插值以及将天线级观测数据转换为地面参考框架，随后进行进一步的过滤程序以减轻异常值的影响。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Please identify potential datasets for improving the retrieval of land parameters and discuss the strategies used to enhance data quality in the context of SMOS satellite observations.",
-                "QuestionCn": "请识别潜在的数据集，以改善土地参数的检索，并讨论在SMOS卫星观测的背景下提高数据质量的策略。",
-                "AnswerEn": "Potential datasets include the refined SMOS brightness temperature data, which spans over a decade, and is processed through a two-step regression approach to suppress radio frequency interference. Strategies to enhance data quality involve employing filtering criteria, spline interpolation for missing data, and converting antenna-level observations to horizontal or vertical polarized brightness temperatures. These refined datasets are used for better retrieval of land parameters such as soil moisture, vegetation optical depth, and snow density.",
-                "AnswerCn": "潜在的数据集包括经过处理的SMOS亮温数据，该数据跨越十多年，并通过两步回归方法来抑制射频干扰。提高数据质量的策略包括采用过滤标准、对缺失数据进行样条插值，以及将天线级观测值转换为水平或垂直极化的亮温。这些精炼的数据集用于更好地获取土地参数，如土壤湿度、植被光学深度和雪密度。",
-                "Level": "C6(Creating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Refinement of SMOS Multiangular Brightness Temperature Toward Soil Moisture Retrieval and Its Analysis Over Reference Targets",
+        "referenceCn": null,
+        "referenceEn": "Zhao, T. J., Shi, J. C., Bindlish, R., Jackson, T. J., Kerr, Y. H., Cosh, M. H.,  Cui, Q., Li, Y. Q., Xiong, C. & Che, T. (2014). Refinement of SMOS Multiangular Brightness Temperature Toward Soil Moisture Retrieval and Its Analysis Over Reference Targets. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 8(2), 589-603. doi:10.1109/JSTARS.2014.2336664"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A multi-temporal and multi-angular approach for systematically retrieving soil moisture and vegetation optical depth from SMOS data",
+        "referenceCn": null,
+        "referenceEn": "Bai, Y., Zhao, T. J., Jia, L., Cosh, M. H., Shi, J. C., Peng, Z. Q., Li, X. J., Wigneron, J.-P. (2022). A multi-temporal and multi-angular approach for systematically retrieving soil moisture and vegetation optical depth from SMOS data. Remote Sensing of Environment, 280, 113190. doi:https://doi.org/10.1016/j.rse.2022.113190"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Snow Density Retrieval in Quebec using Space-borne SMOS Observations",
+        "referenceCn": null,
+        "referenceEn": "Gao, X. W., Pan, J. M., Peng, Z. Q., Zhao, T. J., Bai, Y., Yang, J. W., Jiang, L. M., Shi, J. C. & Husi, L. (2023). Snow Density Retrieval in Quebec using Space-borne SMOS Observations. Remote Sensing, 15(8). doi:10.3390/rs15082065"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "An RFI-suppressed SMOS L-band multi-angular brightness temperature dataset spanning over a decade (since 2010)",
+        "referenceCn": null,
+        "referenceEn": "Peng, Z., Zhao, T., Shi, J. Kerr, Y., Rodríguez-Fernández, N., Yao, P., & Che, T. (2023).  An RFI-suppressed SMOS L-band multi-angular brightness temperature dataset spanning over a decade (since 2010). Scientific Data, 10, 599. https://doi.org/10.1038/s41597-023-02499-z."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "卫星影像",
+        "nameEn": "Satelite images"
+      },
+      {
+        "nameCn": "土壤湿度",
+        "nameEn": "soil moisture"
+      },
+      {
+        "nameCn": "植被",
+        "nameEn": "Vegetation"
+      },
+      {
+        "nameCn": "植被光学厚度",
+        "nameEn": "vegetation optical depth"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "被动微波遥感",
+        "nameEn": "Passive Microwave Remote Sensing"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Globe"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2010-2021",
+        "keywordEn": "2010-2021",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Soil moisture acts as a boundary condition for controls on land–atmosphere fluxes of energy and water, and must be accurately represented in hydrology and land surface models. The European Space Agency’s Soil Moisture Ocean Salinity (SMOS) satellite that was launched in November 2009 is the first spaceborne synthetic aperture passive microwave instrument. It relies on the new 2-D interferometry concept, and could provide global L-band brightness temperature for a range of incidence angles (from 0° to 60°) at a resolution of about 43 km. SMOS provides a unique way for measuring the moisture content at the first few centimeters of soil over land and surface salinity in the ocean. The SMOS soil moisture algorithm is primarily based on the L-band microwave emission of the biosphere (L-MEB) forward model. It uses a decision tree method to select appropriate model elements and parameters according to the auxiliary information that includes land use types. An iterative algorithm is then employed to minimize the difference between the L-MEB model simulations and SMOS multiangle observations. Several surface parameters including vegetation optical depth and soil moisture are retrieved. SMOS algorithm has produced reliable soil moisture based upon several validation studies using sparse networks or extensive field measurements. One of the issues is the uncertainty of the SMOS brightness temperature that is attributed to the radio-frequency interference (RFI) from varied sources and aliasing errors in the Fourier imaging process. Like most microwave sensors, SMOS is also susceptible to RFI, which has significantly affected the quality of brightness temperatures in some regions of the world. Another complicating factor is that the brightness temperature data from the lower look angles are less reliable due to aliasing, which is an inherent problem in interferometry. Another complicating factor when using the brightness temperature data is that the multiple incidence angle observations are not obtained at fixed values. Generally, the case within the sensitivity of the instrument is that the V-pol brightness temperature should be greater than that of the H-pol, and the V-pol brightness temperature generally increases with the incident angle while the H-pol brightness temperature decreases with the incidence angle."
+      ],
+      "research objective": [
+        "The objective is to study whether it is possible to reduce the uncertainties in the SMOS brightness temperature and to develop a potential postprocessing approach that will improve the data quality and soil moisture retrieval. In this study, we present a two-step regression approach for processing/refining the SMOS L1c brightness temperature. This approach also provides a unique chance to compare the SMOS with WindSat observations over external reference targets."
+      ],
+      "challenges": [
+        "Noisy data have become one of the crucial factors limiting SMOS data applications. Currently, the issue of RFI/noisy data is still a limiting factor for applications in many regions of Europe and Asia. Another complicating factor is that the brightness temperature data from the lower look angles are less reliable due to aliasing, which is an inherent problem in interferometry."
+      ],
+      "methods": [
+        "In this study, we proposed a two-step regression approach that uses a mixed objective function based on SMOS L1c data products to refine characteristics of multiangular observations. The reﬁned brightness temperatures were analyzed over three external targets: Antarctic ice sheet, Amazon rainforest, and Sahara desert, by comparing with WindSat observations. The results are found to be more consistent with theoretical expectations when compared with intensive simulations based on the radiative transfer modeling. The refined brightness temperatures are verified by the implementation in soil moisture retrieval. A considerable improvement was found over two watershed networks in the United States."
+      ],
+      "dataset": [
+        "Brightness temperature data at six DGG nodes (locations are shown in Fig. 3) were extracted and processed on July 1, 2010. The CA TDS L3 product is based on the Equal-Area Scalable Earth Grid with a spatial resolution of 25 km."
+      ],
+      "findings": [
+        "The approach was found to be robust by validation using simulations from a radiative transfer model, and valuable in improving soil moisture estimates from SMOS. A considerable improvement was found over two watershed networks in the United States."
+      ],
+      "backgroundCn": [
+        "土壤湿度作为陆地-大气能量和水分通量控制的边界条件，必须在水文学和陆面模型中准确表示。欧洲航天局于2009年11月发射的土壤湿度海洋盐度（SMOS）卫星是首个空间合成孔径被动微波仪器。它依赖于新的二维干涉测量概念，能够在约43公里的分辨率下提供全球L波段亮温，观测角度范围从0°到60°。SMOS提供了一种独特的方法来测量陆地表层几厘米的土壤湿度和海洋表面盐度。SMOS土壤湿度算法主要基于生物圈的L波段微波发射（L-MEB）前向模型。该算法使用决策树方法，根据包括土地利用类型在内的辅助信息选择适当的模型元素和参数。然后，采用迭代算法最小化L-MEB模型模拟与SMOS多角度观测之间的差异。多个表面参数，包括植被光学深度和土壤湿度被提取。SMOS算法在使用稀疏网络或广泛的现场测量进行的多项验证研究中产生了可靠的土壤湿度。然而，SMOS亮温的不确定性是一个问题，这归因于来自不同来源的射频干扰（RFI）和傅里叶成像过程中的混叠误差。与大多数微波传感器一样，SMOS也容易受到RFI的影响，这在世界某些地区显著影响了亮温的质量。另一个复杂因素是，由于混叠，低观测角度的亮温数据可靠性较差，这是干涉测量固有的问题。使用亮温数据时的另一个复杂因素是，多个入射角观测并不是在固定值下获得的。通常，在仪器的敏感性范围内，V极化亮温应大于H极化亮温，并且V极化亮温通常随着入射角的增加而增加，而H极化亮温则随着入射角的增加而减少。"
+      ],
+      "research objectiveCn": [
+        "本研究的目标是研究是否可以减少SMOS亮温度的不确定性，并开发一种潜在的后处理方法，以提高数据质量和土壤湿度的提取。在本研究中，我们提出了一种两步回归方法，用于处理/精炼SMOS L1c亮温度。这种方法还提供了一个独特的机会，可以在外部参考目标上比较SMOS与WindSat观测结果。"
+      ],
+      "challengesCn": [
+        "噪声数据已成为限制SMOS数据应用的关键因素之一。目前，RFI/噪声数据的问题仍然是许多欧洲和亚洲地区应用的限制因素。另一个复杂因素是，由于混叠，来自较低观测角度的亮温数据可靠性较差，这是干涉测量中的一个固有问题。"
+      ],
+      "methodsCn": [
+        "在本研究中，我们提出了一种两步回归方法，该方法基于SMOS L1c数据产品使用混合目标函数来细化多角度观测的特征。经过细化的亮温在三个外部目标上进行了分析：南极冰盖、亚马逊雨林和撒哈拉沙漠，并与WindSat观测进行了比较。结果发现，与基于辐射传输模型的密集模拟相比，结果与理论预期更加一致。通过在土壤湿度提取中的应用验证了细化后的亮温。在美国的两个流域网络中发现了显著的改善。"
+      ],
+      "datasetCn": [
+        "在2010年7月1日，从六个DGG节点提取并处理了亮温数据（位置如图3所示）。CA TDS L3产品基于等面积可缩放地球网格，空间分辨率为25公里。"
+      ],
+      "findingsCn": [
+        "该方法通过使用辐射传输模型的模拟进行验证，发现其具有良好的稳健性，并在改善SMOS的土壤湿度估计方面具有重要价值。在美国的两个流域网络中发现了显著的改善。"
+      ]
+    },
+    {
+      "background": [
+        "The Soil Moisture Ocean Salinity (SMOS) was the first mission providing L-band multi-angular brightness temperature (TB) at the global scale. However, radio frequency interferences (RFI) and aliasing effects degrade, when present SMOS TBs, and thus affect the retrieval of land parameters."
+      ],
+      "research objective": [
+        "To alleviate this, a refined SMOS multi-angular TB dataset was generated based on a two-step regression approach."
+      ],
+      "challenges": [
+        "Like other satellites, SMOS suffers from RFI contamination in certain areas of the world. Being the first L-band radiometer, problems were not expected in the protected band, so no filtering approaches were implemented in the receivers. This leads to data loss or meaningless retrievals of SMOS TBs. Great success was obtained in reducing RFI problems since the SMOS launch, but many RFI sources still need to be located, filtered, or canceled, and new RFI sources also appear every day."
+      ],
+      "methods": [
+        "The ESA SMOS Level-1C Full Polarization (SCLF1C) product from 2010 to 2021 (version 724) was refined using the two-step regression approach. Firstly, TB observations at the antenna frame were filtered with various criteria. As there is no complete dataset for any epoch, a simple first-order spline interpolation was employed to fill the missing acquisitions. Then TBs at antenna level (X, Y) were converted to horizontal (H-) or vertical (V-) polarized TBs at the ground reference frame. Thirdly, a further filter procedure was applied to address potential outliers introduced during the interpolation procedure. The final procedure involves the implementation of the two-step regression approach proposed by Zhao. Following the above procedure, the refined TBs at any incidence angle ranging from 0° to 65° can be calculated with reduced RFI and aliasing effects. Various statistical metrics were computed at different steps, as illustrated in the yellow rhomboids in Fig. 1."
+      ],
+      "dataset": [
+        "This RFI-suppressed SMOS TB dataset, spanning more than a decade (since 2010), is expected to provide opportunities for better retrieval of land parameters and scientific applications."
+      ],
+      "findings": [
+        "The results indicate that the two-step regression refined SMOS TB may outperform CATDS RE07 TB in most cases for soil moisture retrieval because the R values (negative) between emissivity and soil moisture of refined TB are stronger compared to CATDS L3 TB, indicating a better relationship between emissivity and soil moisture. The two-step regression refined SMOS TB showed a smaller ubRMSD compared to SMAP with a value of 3.762 (3.497) K than CATDS TB with ubRMSD value of 6.81 (6.897) K at H-polarization (and V-polarization). The difference in the ubRMSD performance is primarily attributed to the RFI suppression in the refined SMOS TB, indicating its technical reliability in handling RFI-contaminated data."
+      ],
+      "backgroundCn": [
+        "土壤湿度海洋盐度（SMOS）是第一个在全球范围内提供L波段多角度亮温（TB）数据的任务。然而，射频干扰（RFI）和混叠效应会降低现有SMOS亮温的质量，从而影响陆地参数的提取。"
+      ],
+      "research objectiveCn": [
+        "为了解决这个问题，基于两步回归方法生成了精细化的SMOS多角度TB数据集。"
+      ],
+      "challengesCn": [
+        "与其他卫星一样，SMOS在世界某些地区也受到射频干扰（RFI）的影响。作为首个L波段辐射计，原本不期望在受保护频段出现问题，因此接收器中没有实施过滤方法。这导致了SMOS天线温度（TB）数据的丢失或无意义的检索。自SMOS发射以来，在减少RFI问题方面取得了很大成功，但仍需定位、过滤或消除许多RFI源，并且每天还会出现新的RFI源。"
+      ],
+      "methodsCn": [
+        "ESA SMOS Level-1C全极化(SCLF1C)产品从2010年到2021年（版本724）经过了两步回归方法的精细化处理。首先，使用各种标准对天线框架下的TB观测值进行了过滤。由于没有任何时期的完整数据集，因此采用简单的一阶样条插值法填补缺失的采集数据。然后，将天线水平（X，Y）的TB转换为地面参考框架下的水平（H-）或垂直（V-）极化TB。第三，应用进一步的过滤程序以处理在插值过程中引入的潜在异常值。最后的程序涉及实施赵提出的两步回归方法。通过上述程序，可以计算出在0°到65°的任何入射角下的精细化TB，减少了RFI和混叠效应。在不同步骤中计算了各种统计指标，如图1中的黄色菱形所示。"
+      ],
+      "datasetCn": [
+        "这个经过RFI抑制的SMOS TB数据集跨越了十多年（自2010年以来），预计将为更好地获取土地参数和科学应用提供机会。"
+      ],
+      "findingsCn": [
+        "结果表明，经过两步回归处理的SMOS TB在大多数情况下优于CATDS RE07 TB进行土壤湿度提取，因为经过处理的TB与土壤湿度之间的负相关R值比CATDS L3 TB更强，表明其与土壤湿度之间的关系更好。经过两步回归处理的SMOS TB在H极化（和V极化）下的ubRMSD值为3.762（3.497）K，较SMAP的ubRMSD值小，而CATDS TB的ubRMSD值为6.81（6.897）K。ubRMSD性能的差异主要归因于经过处理的SMOS TB在抑制RFI方面的表现，表明其在处理RFI污染数据时的技术可靠性。"
+      ]
+    },
+    {
+      "background": [
+        "Surface soil moisture (SM) usually refers to the soil moisture in the upper soil layer of 0 – 5 cm, and plays a key role in governing the exchanges of water and energy between the land and the atmosphere. Currently, microwave L-band radiometer is considered an appropriate tool for spatial SM mapping from space due to its strong penetration of vegetation covers and sensitivity to surface SM conditions. Launched by the ESA in 2009, SMOS was the first satellite to operate with a L-band (1.4 GHz) radiometer. Numerous validation/evaluation studies of SMOS L2/L3 SM products have been carried out during the last decade and some of them show that the SMOS L2/L3 SM products might present underestimation when compared with ground measurements. Considering the above mentioned issues, the SMOS-IC algorithm was developed by the activities funded by ESA- and CNES aiming at improving SMOS algorithms. Both the SMOS L2/L3 and SMOS-IC algorithms are based on fixed empirical/theoretical parameters of ωp eff and soil roughness. Soil roughness also affects the microwave emission of land surface, and the roughness effects vary with frequencies, angles of incidence and polarizations."
+      ],
+      "research objective": [
+        "To fill this gap and further improve the performance of the SM and VOD retrievals using the SMOS data, a multi-temporal and multi-angular approach, MTMA, is proposed in this paper to systematically retrieve four parameters including VOD, SM, effective scattering albedo and surface roughness. The proposed MTMA method presented in this study is different from the SMOS and SMOS-IC algorithms in several aspects and the main ones are: (1) four parameters (vegetation optical depth VODp, effective scattering albedo ωp eff, soil surface roughness Zp s, and surface soil moisture SMp) are retrieved systematically."
+      ],
+      "challenges": [
+        "The major challenge for accurate retrieval of SM is to decouple the soil and vegetation contributions, which is also the main difference between existing retrieval algorithms."
+      ],
+      "methods": [
+        "In this study, a multi-temporal and multi-angular (MTMA) approach is proposed using SMOS (Soil Moisture and Ocean Salinity) satellite L-band data for retrieving vegetation optical depth (VODp, p indicates the polarization with H for horizontal and V for vertical)), effective scattering albedo (ωp eff), soil surface roughness (Zp s), and soil moisture (SMp). In this study, the refined SMOS Level 1C (SMOS L1C) and the original Level 3 (L3) TB data are applied to the MTMA algorithm for retrievals."
+      ],
+      "dataset": [
+        "In this study, the refined SMOS Level 1C (SMOS L1C) and the original Level 3 (L3) TB data are applied to the MTMA algorithm for retrievals. In-situ SM data are collected from 11 SM observation networks from the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network to verify the retrieval results of the MTMA algorithm."
+      ],
+      "findings": [
+        "The MTMA VOD retrievals are found to have a reasonable global spatial distribution, which is generally consistent with the VOD retrievals obtained from the SMOS Level 3 (SMOS-L3) and SMOS-IC Version 2 (V2) (referred to as SMOS-IC), except for showing relatively lower values over densely vegetated areas compared with the other two SMOS products. The retrieved MTMA SM shows generally high correlations with in-situ measurements (11 dense observation networks) with overall correlation coefficients of > 0.75. Therefore, it is concluded that by incorporating multi-temporal SMOS data, the proposed method of MTMA can be used to systematically retrieve SM, VOD and additional surface parameters (effective scattering albedo and surface roughness) with comparable or better performance of SM than that of SMOS-IC and SMOS-L3. Moreover, this paper for the first time produced a polarization-dependent SMOS VOD product at a global scale."
+      ],
+      "backgroundCn": [
+        "表层土壤湿度（SM）通常指的是0-5厘米上层土壤中的土壤湿度，它在调节陆地与大气之间的水分和能量交换中起着关键作用。目前，微波L波段辐射计被认为是从太空进行空间土壤湿度映射的合适工具，因为它对植被覆盖的强穿透能力和对表层土壤湿度状况的敏感性。2009年由欧洲航天局（ESA）发射的SMOS是第一颗使用L波段（1.4 GHz）辐射计的卫星。在过去十年中，已经进行了大量对SMOS L2/L3土壤湿度产品的验证/评估研究，其中一些研究表明，与地面测量相比，SMOS L2/L3土壤湿度产品可能存在低估的问题。考虑到上述问题，SMOS-IC算法是在ESA和法国国家空间研究中心（CNES）资助的活动中开发的，旨在改进SMOS算法。SMOS L2/L3和SMOS-IC算法均基于固定的经验/理论参数ωp eff和土壤粗糙度。土壤粗糙度也会影响陆地表面的微波辐射，且粗糙度效应会随频率、入射角和极化方式的不同而变化。"
+      ],
+      "research objectiveCn": [
+        "为了填补这一空白并进一步提高使用SMOS数据的土壤湿度（SM）和植被光学深度（VOD）检索性能，本文提出了一种多时相多角度方法（MTMA），系统地检索四个参数，包括VOD、SM、有效散射反照率和地表粗糙度。本文提出的MTMA方法与SMOS和SMOS-IC算法在多个方面有所不同，主要包括：（1）系统地检索四个参数（植被光学深度VODp、有效散射反照率ωp eff、土壤表面粗糙度Zp s和表层土壤湿度SMp）。"
+      ],
+      "challengesCn": [
+        "准确获取土壤湿度的主要挑战是将土壤和植被的贡献解耦，这也是现有检索算法之间的主要区别。"
+      ],
+      "methodsCn": [
+        "在本研究中，提出了一种多时相和多角度（MTMA）的方法，利用SMOS（土壤湿度和海洋盐度）卫星L波段数据来获取植被光学深度（VODp，p表示极化，H表示水平，V表示垂直）、有效散射反照率（ωp eff）、土壤表面粗糙度（Zp s）和土壤湿度（SMp）。本研究中，采用了经过精细处理的SMOS Level 1C（SMOS L1C）和原始的Level 3（L3）TB数据来应用于MTMA算法进行反演。"
+      ],
+      "datasetCn": [
+        "在本研究中，精细化的SMOS一级C（SMOS L1C）和原始的三级（L3）TB数据被应用于MTMA算法进行反演。来自国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的11个土壤湿度观测网络收集的现场土壤湿度数据用于验证MTMA算法的反演结果。"
+      ],
+      "findingsCn": [
+        "MTMA VOD 检索结果显示出合理的全球空间分布，通常与从 SMOS Level 3 (SMOS-L3) 和 SMOS-IC 版本 2 (V2)（称为 SMOS-IC）获得的 VOD 检索结果一致，但在密集植被区域的值相对较低，与其他两个 SMOS 产品相比。检索到的 MTMA SM 与 11 个密集观测网络的现场测量结果普遍具有较高的相关性，整体相关系数超过 0.75。因此，可以得出结论，通过结合多时相 SMOS 数据，所提出的 MTMA 方法可以系统地检索 SM、VOD 及其他表面参数（有效散射反照率和表面粗糙度），其 SM 的性能与 SMOS-IC 和 SMOS-L3 相比具有可比或更好的表现。此外，本文首次在全球范围内生成了依赖于极化的 SMOS VOD 产品。"
+      ]
+    },
+    {
+      "background": [
+        "Snow density varies spatially, temporally, and vertically within the snowpack and is the key to converting snow depth to snow water equivalent. Snow cover plays a critical role in terrestrial hydrological, climatological, and ecological processes. It influences the energy balance on the land surface, based on its high albedo and low thermal conductivity. However, when there have been multiple continental or large-scale snow depth remote sensing products, the corresponding snow density product required to convert snow depth to SWE is still limited. At a high frequency, snow volume scattering cannot be neglected. The influences of the snow depth and snow grain size on the brightness temperature (TB) are much higher than that of snow density. Therefore, to estimate snow density, the lower-frequency channel is better suited for its retrieval as it is more sensitive to snow refraction rather than snow volume scattering. The use of a fixed snow density (for example, 240 kg/m3) will result in an overestimated SWE in the early snow season and an underestimated SWE in the late snow season. In recent years, with the development of full-polarized SAR, surface and volume scattering components were extracted from different signal decomposition methods to establish empirical or physical relationships with snow density. After the launch of the Soil Moisture Ocean Salinity (SMOS) satellite for soil moisture observation purposes in November 2009, the multiple-angle L-band radiometer became an additional type of sensor applicable for snow density estimation. Preliminary studies on the physical and the practical feasibility of snow density retrieval using ground-based radiometer observations have been conducted. However, if the snow density retrieval algorithm is moved from ground-based to space-borne instruments, it will be challenged by stronger observation noise, emission from other land surface types, and the Radio Frequency Interference (RFI) from human activities."
+      ],
+      "research objective": [
+        "Therefore, the scientific goal of this article is to retrieve the snow density from SMOS satellite observations, according to the theory in previous studies."
+      ],
+      "challenges": [
+        "However, if the snow density retrieval algorithm is moved from ground-based to space-borne instruments, it will be challenged by stronger observation noise, emission from other land surface types, and the Radio Frequency Interference (RFI) from human activities."
+      ],
+      "methods": [
+        "In this study, the snow density was retrieved using the Soil Moisture Ocean Salinity (SMOS) satellite radiometer observations at 43 stations in Quebec, Canada. We used a one-layer snow radiative transfer model and added a τ − ω vegetation model over the snow to consider the forest influence. We developed an objective method to estimate the forest parameters (τ, ω) and soil roughness (SD) from SMOS measurements during the snow-free period and applied them to estimate snow density. Prior knowledge of soil permittivity was used in the entire process, which was calculated from the Global Land Data Assimilation System (GLDAS) soil simulations using a frozen soil dielectric model."
+      ],
+      "dataset": [
+        "The SMOS Level 1C (L1C) product is provided in the ISEA-4H9 grid (icosahedral Snyder equal area earth fixed) with a spatial resolution of 43 km on average. The in-situ snow measurements come from the Canadian historical Snow Water Equivalent dataset (CanSWEv3.0), which contains both the snow depth and snow water equivalent at the same station. In our study area and period, there are 43 stations with elevation < 1000 m."
+      ],
+      "findings": [
+        "Results showed that the retrieved snow density had an overall root-mean-squared error (RMSE) of 83 kg/m3 for all stations, with a mean bias of 9.4 kg/m3. The remote sensing retrieved snow density outperforms the reanalysis snow density from GLDAS in terms of bias and temporal variation characteristics."
+      ],
+      "backgroundCn": [
+        "雪密度在空间、时间和雪层的垂直方向上变化，是将雪深转换为雪水当量的关键。雪盖在陆地水文、气候和生态过程中的作用至关重要。由于其高反照率和低热导率，雪盖影响着地表的能量平衡。然而，尽管已有多个大陆或大规模的雪深遥感产品，但相应的雪密度产品仍然有限。在高频率下，雪体积散射不可忽视。雪深和雪晶粒大小对亮温（TB）的影响远高于雪密度。因此，低频通道更适合用于雪密度的提取，因为它对雪的折射更敏感，而不是雪的体积散射。使用固定的雪密度（例如，240 kg/m³）会导致在早期雪季高估雪水当量，而在晚期雪季低估雪水当量。近年来，随着全极化合成孔径雷达（SAR）的发展，通过不同的信号分解方法提取了表面和体积散射成分，以建立与雪密度的经验或物理关系。在2009年11月发射的土壤湿度海洋盐度（SMOS）卫星用于土壤湿度观测后，多角度L波段辐射计成为适用于雪密度估计的另一种传感器。关于使用地面辐射计观测进行雪密度提取的物理和实际可行性的初步研究已经开展。然而，如果将雪密度提取算法从地面仪器转移到空间仪器，将面临更强的观测噪声、其他地表类型的辐射以及人类活动造成的射频干扰（RFI）的挑战。"
+      ],
+      "research objectiveCn": [
+        "因此，本文的科学目标是根据之前研究的理论，从SMOS卫星观测中获取雪密度。"
+      ],
+      "challengesCn": [
+        "然而，如果将雪密度检索算法从地面仪器转移到空间仪器，将面临更强的观测噪声、其他地表类型的辐射以及人类活动造成的射频干扰（RFI）的挑战。"
+      ],
+      "methodsCn": [
+        "在本研究中，利用土壤湿度海洋盐度（SMOS）卫星辐射计观测数据，在加拿大魁北克的43个站点获取了雪密度。我们使用了一层雪的辐射传输模型，并在雪上添加了τ−ω植被模型，以考虑森林的影响。我们开发了一种客观方法，从SMOS测量中估计森林参数（τ，ω）和土壤粗糙度（SD），这些测量是在无雪期进行的，并将其应用于雪密度的估算。在整个过程中，使用了土壤介电常数的先验知识，该介电常数是通过全球陆地数据同化系统（GLDAS）土壤模拟计算得出的，采用了冻土介电模型。"
+      ],
+      "datasetCn": [
+        "SMOS Level 1C (L1C) 产品以 ISEA-4H9 网格（等面积地球固定的二十面体 Snyder 网格）提供，平均空间分辨率为 43 公里。现场雪测量数据来自加拿大历史雪水当量数据集（CanSWEv3.0），该数据集包含同一站点的雪深和雪水当量。在我们的研究区域和时间段内，有 43 个站点的海拔低于 1000 米。"
+      ],
+      "findingsCn": [
+        "结果显示，检索到的雪密度在所有站点的总体均方根误差（RMSE）为83 kg/m3，平均偏差为9.4 kg/m3。与GLDAS的再分析雪密度相比，遥感获取的雪密度在偏差和时间变化特征方面表现更优。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Can a two-step regression approach effectively reduce the uncertainties in L-band brightness temperature data affected by radio frequency interference and aliasing?",
+        "QuestionCn": "两步回归方法是否能有效减少受无线电频率干扰和混叠影响的L波段亮温数据的不确定性？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the main challenges associated with data collection in radio frequency interference (RFI) impacted regions?",
+        "QuestionCn": "在受到射频干扰（RFI）影响的地区，数据收集面临的主要挑战有哪些？",
+        "AnswerEn": "RFI from varied sources",
+        "AnswerCn": "来自不同来源的信息请求",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Where can researchers find datasets for validating soil moisture retrievals from satellite data?",
+        "QuestionCn": "研究人员可以在哪里找到用于验证卫星数据土壤湿度提取的数据库？",
+        "AnswerEn": "International Soil Moisture Network",
+        "AnswerCn": "国际土壤湿度网络",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What data collection method can be used to address the issue of radio frequency interference in multi-angular brightness temperature datasets?",
+        "QuestionCn": "可以使用哪种数据收集方法来解决多角度亮温数据集中无线电频率干扰的问题？",
+        "AnswerEn": "Two-step regression approach",
+        "AnswerCn": "两步回归方法",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method used to address radio frequency interference (RFI) in satellite brightness temperature datasets?",
+        "QuestionCn": "您能否提供一个用于解决卫星亮温数据集中的射频干扰（RFI）数据收集方法的示例？",
+        "AnswerEn": "An example of a data collection method used to address RFI in satellite brightness temperature datasets is the two-step regression approach applied to the SMOS Level-1C brightness temperature data. This method involves filtering TB observations at the antenna frame, interpolating missing acquisitions, converting TBs to horizontal and vertical polarizations, and applying further filters for outlier removal, ultimately refining the brightness temperatures to reduce RFI and aliasing effects.",
+        "AnswerCn": "用于解决卫星亮温数据集中RFI的数据收集方法的一个例子是应用于SMOS Level-1C亮温数据的两步回归方法。该方法涉及在天线框架下过滤TB观测，插值缺失的采集，将TB转换为水平和垂直极化，并应用进一步的过滤器以去除异常值，最终精炼亮温以减少RFI和混叠效应。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Could you provide an example of a dataset used in multi-temporal and multi-angular retrieval approaches for vegetation and soil moisture parameters?",
+        "QuestionCn": "您能否提供一个用于多时相和多角度检索植被和土壤湿度参数的数据集示例？",
+        "AnswerEn": "An example of a dataset used in multi-temporal and multi-angular retrieval approaches is the refined SMOS Level 1C and the original Level 3 TB data, which are applied to the MTMA algorithm to systematically retrieve parameters such as vegetation optical depth, effective scattering albedo, soil surface roughness, and soil moisture.",
+        "AnswerCn": "一个用于多时相和多角度检索方法的数据集示例是精细化的SMOS Level 1C和原始的Level 3 TB数据，这些数据被应用于MTMA算法，以系统地检索诸如植被光学深度、有效散射反照率、土壤表面粗糙度和土壤湿度等参数。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What features should be considered when developing a postprocessing approach to enhance brightness temperature data quality for soil moisture retrieval?",
+        "QuestionCn": "在开发后处理方法以增强土壤湿度检索的亮温数据质量时，应考虑哪些特征？",
+        "AnswerEn": "filtering noisy data, addressing aliasing errors, employing regression techniques, validation with theoretical models, comparison with other external observations",
+        "AnswerCn": "过滤噪声数据，解决混叠误差，采用回归技术，用理论模型进行验证，与其他外部观测进行比较。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What are the essential qualities of a dataset intended for the retrieval of land surface parameters such as soil moisture and snow density from satellite observations?",
+        "QuestionCn": "用于从卫星观测中检索土地表面参数（如土壤湿度和雪密度）的数据集的基本特征是什么？",
+        "AnswerEn": "refined brightness temperatures, minimized noise from RFI, accurate spatial resolution, validated retrieval algorithms, comprehensive metadata about observation conditions, incidence angles, polarization",
+        "AnswerCn": "精炼的亮温、最小化的射频干扰噪声、准确的空间分辨率、验证的检索算法、关于观测条件的全面元数据、入射角、极化。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the refined SMOS TB dataset used for retrieving soil moisture?",
+        "QuestionCn": "用于获取土壤湿度的精细化SMOS TB数据集的空间分辨率是多少？",
+        "AnswerEn": "25 km",
+        "AnswerCn": "25公里",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many stations in Quebec, Canada, were used to retrieve snow density using the SMOS satellite radiometer observations?",
+        "QuestionCn": "在加拿大魁北克省，有多少个站点用于通过SMOS卫星辐射计观测获取雪密度？",
+        "AnswerEn": "43",
+        "AnswerCn": "43",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the two-step regression approach in the context of refining satellite brightness temperature data?",
+        "QuestionCn": "在精炼卫星亮温数据的背景下，双步回归方法是什么？",
+        "AnswerEn": "The two-step regression approach is a method used to process and refine SMOS L1c brightness temperature data. It involves filtering TB observations at the antenna frame, converting them to horizontal or vertical polarized TBs at the ground reference frame, and applying further filtering to address outliers. The approach aims to reduce uncertainties such as RFI and aliasing effects, improving the data quality for soil moisture retrieval.",
+        "AnswerCn": "两步回归方法是一种用于处理和精炼SMOS L1c亮温数据的方法。该方法涉及在天线框架下过滤TB观测，将其转换为地面参考框架下的水平或垂直极化TB，并应用进一步的过滤以处理异常值。该方法旨在减少诸如射频干扰（RFI）和混叠效应等不确定性，从而提高土壤湿度提取的数据质量。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the significance of the ISEA projection in storing satellite data?",
+        "QuestionCn": "ISEA投影在存储卫星数据中的重要性是什么？",
+        "AnswerEn": "The ISEA projection, or Icosahedral Snyder Equal Area projection, is a method used to store satellite data on a discrete global grid (DGG). It is significant because it allows for the equal area representation of data points, which is crucial for consistent global coverage and analysis in satellite missions like SMOS, particularly for observing variables such as soil moisture over vast geographical areas.",
+        "AnswerCn": "ISEA投影，即正二十面体斯奈德等面积投影，是一种用于在离散全球网格（DGG）上存储卫星数据的方法。它的重要性在于能够实现数据点的等面积表示，这对于在像SMOS这样的卫星任务中进行一致的全球覆盖和分析至关重要，特别是在观察土壤湿度等变量时，涵盖广泛的地理区域。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "In what ways do the challenges of RFI and aliasing affect the data quality of SMOS brightness temperatures in different regions, and how do the proposed methods address these challenges?",
+        "QuestionCn": "RFI和混叠的挑战如何影响不同地区SMOS亮度温度的数据质量，以及提出的方法如何解决这些挑战？",
+        "AnswerEn": "RFI contamination and aliasing reduce the reliability of SMOS brightness temperatures, particularly affecting regions with high RFI sources. The two-step regression approach reduces RFI effects and improves data quality through filtering and interpolation. The MTMA approach enhances retrievals by incorporating refined data and addressing vegetation and surface roughness effects.",
+        "AnswerCn": "RFI污染和混叠降低了SMOS亮温的可靠性，特别是在高RFI源的区域。两步回归方法通过过滤和插值减少了RFI影响，提高了数据质量。MTMA方法通过结合精细数据并解决植被和表面粗糙度效应来增强检索结果。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the similarities and differences in data collection and processing methods between retrieving snow density using SMOS satellite observations and soil moisture retrieval in terms of handling observation noise and RFI?",
+        "QuestionCn": "在使用SMOS卫星观测获取雪密度和土壤湿度检索的数据收集和处理方法之间，处理观测噪声和射频干扰（RFI）方面的相似性和差异是什么？",
+        "AnswerEn": "Both snow density and soil moisture retrievals using SMOS data face challenges of observation noise and RFI. For snow density, a one-layer snow radiative transfer model is used, considering forest influence and soil roughness. For soil moisture, methods like two-step regression refine brightness temperatures to reduce RFI. Both approaches use additional models and datasets to mitigate noise and improve retrieval accuracy.",
+        "AnswerCn": "使用SMOS数据进行雪密度和土壤湿度反演面临观测噪声和射频干扰（RFI）的挑战。对于雪密度，采用了一层雪辐射传输模型，考虑了森林影响和土壤粗糙度。对于土壤湿度，采用了两步回归等方法来精炼亮温，以减少RFI。这两种方法都使用了额外的模型和数据集来减轻噪声并提高反演精度。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What implications do the methodological approaches used in refining SMOS datasets have for the development of new datasets aimed at retrieving land parameters such as soil moisture or snow density?",
+        "QuestionCn": "在精炼SMOS数据集所采用的方法论对开发旨在获取土壤湿度或雪密度等地面参数的新数据集有什么影响？",
+        "AnswerEn": "The methodological approaches used, such as the two-step regression and MTMA algorithms, imply that new datasets could benefit from multi-angular and multi-temporal analysis techniques. These methods enhance the accuracy of land parameter retrievals by systematically addressing noise and interference, suggesting that future datasets might continue to leverage such advanced computational techniques to improve the reliability and precision of remote sensing data.",
+        "AnswerCn": "所使用的方法论，如两步回归和MTMA算法，暗示新的数据集可以从多角度和多时相分析技术中受益。这些方法通过系统地处理噪声和干扰，提高了土地参数提取的准确性，这表明未来的数据集可能会继续利用这些先进的计算技术，以提高遥感数据的可靠性和精确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What are the underlying causes that contribute to the presence of radio frequency interference (RFI) in L-band brightness temperature measurements?",
+        "QuestionCn": "导致L波段亮温测量中存在射频干扰（RFI）的潜在原因是什么？",
+        "AnswerEn": "The presence of radio frequency interference (RFI) in L-band brightness temperature measurements is primarily due to varied sources of interference from human activities and technical limitations. The SMOS satellite, being the first L-band radiometer, did not initially implement filtering approaches in its receivers, leading to RFI affecting data quality. Moreover, the aliasing effects in the Fourier imaging process further degrade the data quality.",
+        "AnswerCn": "L波段亮温测量中存在的射频干扰（RFI）主要是由于人类活动和技术限制的多种干扰源。SMOS卫星作为首个L波段辐射计，最初在其接收器中并未实施过滤方法，导致RFI影响数据质量。此外，傅里叶成像过程中的混叠效应进一步降低了数据质量。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why do multi-angular brightness temperature datasets face challenges in ensuring data reliability for soil moisture retrieval?",
+        "QuestionCn": "多角度亮温数据集在确保土壤湿度提取的数据可靠性方面面临挑战的原因是什么？",
+        "AnswerEn": "Multi-angular brightness temperature datasets face challenges in data reliability due to the inherent issues of aliasing in interferometry and the inconsistent nature of multi-incidence angle observations. Additionally, the susceptibility to RFI significantly affects brightness temperatures, particularly at lower look angles, leading to unreliable data for accurate soil moisture retrieval.",
+        "AnswerCn": "多角度亮温数据集面临数据可靠性挑战，主要由于干涉测量中的混叠问题和多入射角观测的不一致性。此外，低视角下对射频干扰（RFI）的敏感性显著影响亮温，导致土壤湿度提取的可靠数据不足。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What factors necessitate the development of refined data processing methods like the two-step regression approach for L-band satellite data?",
+        "QuestionCn": "哪些因素促使了像两步回归方法这样的精细数据处理方法的发展，以处理L波段卫星数据？",
+        "AnswerEn": "The development of refined data processing methods like the two-step regression approach is necessitated by the need to reduce uncertainties caused by noisy data, RFI, and aliasing effects. These factors limit the applicability of SMOS data in various regions, necessitating enhanced processing techniques to improve data quality and ensure accurate retrievals of parameters such as soil moisture.",
+        "AnswerCn": "精细数据处理方法的发展，如两步回归方法，是为了减少噪声数据、射频干扰（RFI）和混叠效应所造成的不确定性。这些因素限制了SMOS数据在各个区域的适用性，因此需要增强处理技术以提高数据质量，确保准确获取土壤湿度等参数。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the key objectives for refining L-band brightness temperature data in the context of soil moisture retrieval?",
+        "QuestionCn": "在土壤湿度提取的背景下，精炼L波段亮温数据的关键目标是什么？",
+        "AnswerEn": "The key objectives include reducing uncertainties in brightness temperature data by mitigating radio-frequency interference (RFI) and aliasing errors. This refinement aims to improve soil moisture retrieval accuracy and data quality, thereby enhancing the reliability of soil moisture estimates from SMOS satellite observations.",
+        "AnswerCn": "关键目标包括通过减轻射频干扰（RFI）和混叠误差来减少亮温数据的不确定性。这一改进旨在提高土壤湿度反演的准确性和数据质量，从而增强从SMOS卫星观测中获得的土壤湿度估计的可靠性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in refining L-band multi-angular brightness temperature data to address radio frequency interference and aliasing effects?",
+        "QuestionCn": "精炼L波段多角度亮度温度数据以解决射频干扰和混叠效应涉及哪些程序步骤？",
+        "AnswerEn": "The procedure involves using a two-step regression approach. Initially, brightness temperature (TB) observations at the antenna frame are filtered with various criteria, and missing acquisitions are filled using first-order spline interpolation. Then, TBs at the antenna level are converted to horizontal or vertical polarized TBs at the ground reference frame. A further filter is applied to address outliers introduced during interpolation. The two-step regression approach is then implemented to calculate refined TBs at any incidence angle, reducing RFI and aliasing effects.",
+        "AnswerCn": "该程序涉及使用两步回归方法。首先，对天线框架下的亮温（TB）观测值进行各种标准的过滤，并使用一阶样条插值填补缺失的采集数据。然后，将天线水平或垂直极化的TB转换为地面参考框架下的TB。进一步应用过滤器以处理插值过程中引入的异常值。随后实施两步回归方法，以计算在任何入射角下的精细TB，从而减少RFI和混叠效应。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How is the snow density retrieved using satellite radiometer observations, and what models are applied to account for external influences such as forest cover?",
+        "QuestionCn": "如何通过卫星辐射计观测获取雪密度，并应用哪些模型来考虑森林覆盖等外部影响？",
+        "AnswerEn": "Snow density is retrieved using the SMOS satellite radiometer observations with a one-layer snow radiative transfer model combined with a τ − ω vegetation model over the snow to consider forest influence. Forest parameters and soil roughness are estimated from SMOS measurements during the snow-free period. Prior knowledge of soil permittivity is used throughout the process, derived from GLDAS soil simulations using a frozen soil dielectric model.",
+        "AnswerCn": "雪密度是通过使用SMOS卫星辐射计观测数据，结合单层雪辐射传输模型和τ−ω植被模型来检索的，以考虑森林的影响。森林参数和土壤粗糙度是在无雪期通过SMOS测量估计的。在整个过程中，使用了土壤介电常数的先验知识，该知识来源于使用冻结土壤介电模型的GLDAS土壤模拟。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methodological strategies are employed to systematically retrieve soil moisture and vegetation parameters from L-band data, and how do they differ from existing algorithms?",
+        "QuestionCn": "采用哪些方法论策略来系统地从L波段数据中检索土壤湿度和植被参数，这些策略与现有算法有何不同？",
+        "AnswerEn": "A multi-temporal and multi-angular approach (MTMA) is used to systematically retrieve parameters like vegetation optical depth, effective scattering albedo, soil surface roughness, and soil moisture from SMOS L-band data. This method differs from existing algorithms by retrieving four parameters systematically and incorporating multi-temporal data, which improves performance compared to SMOS-IC and SMOS-L3 algorithms.",
+        "AnswerCn": "多时相多角度方法（MTMA）用于系统地从SMOS L波段数据中提取植被光学深度、有效散射反照率、土壤表面粗糙度和土壤湿度等参数。该方法与现有算法不同，能够系统地提取四个参数，并结合多时相数据，相较于SMOS-IC和SMOS-L3算法，性能得到了提升。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What techniques enable the refinement of L-band brightness temperature data to reduce radio frequency interference and improve soil moisture retrieval?",
+        "QuestionCn": "哪些技术可以用于精炼L波段亮温数据，以减少射频干扰并改善土壤湿度提取？",
+        "AnswerEn": "A two-step regression approach is used to refine L-band brightness temperature data. This approach involves filtering data at the antenna frame, interpolating missing data, converting to polarized brightness temperatures, and addressing potential outliers. The refined data can be analyzed over reference targets and used to improve soil moisture retrieval by reducing RFI and aliasing effects.",
+        "AnswerCn": "一种两步回归方法用于精炼L波段亮温数据。该方法涉及在天线帧下过滤数据、插值缺失数据、转换为极化亮温，并处理潜在的异常值。精炼后的数据可以在参考目标上进行分析，并用于通过减少RFI和混叠效应来改善土壤湿度提取。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the integration of multi-angular and multi-temporal brightness temperature data enhance the retrieval of soil moisture and other land parameters?",
+        "QuestionCn": "多角度和多时相亮温数据的集成如何增强土壤湿度和其他土地参数的获取？",
+        "AnswerEn": "The integration of multi-angular and multi-temporal brightness temperature data through approaches like the MTMA allows systematic retrieval of parameters such as vegetation optical depth, effective scattering albedo, soil roughness, and soil moisture. This method enhances retrieval accuracy by leveraging the temporal and angular variability in brightness temperature observations.",
+        "AnswerCn": "通过像MTMA这样的多角度和多时相亮温数据的集成，可以系统地提取诸如植被光学深度、有效散射反照率、土壤粗糙度和土壤湿度等参数。这种方法通过利用亮温观测中的时间和角度变化，提高了提取的准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methods facilitate the assessment and mitigation of the impact of radio frequency interference on satellite-derived brightness temperature data?",
+        "QuestionCn": "哪些方法可以促进评估和减轻射频干扰对卫星衍生亮温数据的影响？",
+        "AnswerEn": "The two-step regression approach facilitates the assessment and mitigation of radio frequency interference by refining brightness temperature data through filtering, interpolation, and conversion processes. This approach has demonstrated success in reducing RFI issues, thereby enabling more reliable retrieval of soil moisture and other land parameters.",
+        "AnswerCn": "两步回归方法通过过滤、插值和转换过程，促进了对射频干扰的评估和缓解，精炼了亮温数据。该方法在减少射频干扰问题方面取得了成功，从而使土壤湿度和其他土地参数的获取更加可靠。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "What are the anticipated challenges in using a multi-angular approach for retrieving soil moisture and vegetation parameters from satellite data, and how might these challenges affect the expected outcomes?",
+        "QuestionCn": "使用多角度方法从卫星数据中获取土壤湿度和植被参数所面临的预期挑战是什么，这些挑战可能如何影响预期结果？",
+        "AnswerEn": "The major challenge for accurate retrieval of soil moisture is to decouple the soil and vegetation contributions, which is the main difference between existing retrieval algorithms. Using multi-angular data can help address this by providing multiple perspectives of the same area, but it also requires sophisticated models to accurately interpret the data. The expected outcome is to achieve higher accuracy in soil moisture and vegetation parameter retrievals, but challenges such as radio frequency interference, aliasing effects, and noise in the data can complicate this process.",
+        "AnswerCn": "准确获取土壤湿度的主要挑战在于分离土壤和植被的贡献，这是现有检索算法之间的主要区别。使用多角度数据可以通过提供同一区域的多个视角来帮助解决这个问题，但这也需要复杂的模型来准确解释数据。预期的结果是实现土壤湿度和植被参数检索的更高准确性，但诸如射频干扰、混叠效应和数据噪声等挑战可能会使这一过程复杂化。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how data collection methods in the field of SMOS brightness temperature can address the issue of radio frequency interference and aliasing?",
+        "QuestionCn": "我不明白在SMOS亮温领域的数据收集方法如何解决无线电频率干扰和混叠的问题。",
+        "AnswerEn": "In the field of SMOS brightness temperature, the two-step regression approach is used to refine the data by filtering the TB observations at the antenna frame and addressing potential outliers through interpolation and conversion of TBs at antenna level to horizontal or vertical polarized TBs at the ground reference frame. This method effectively reduces radio frequency interference and aliasing effects, thereby improving data quality.",
+        "AnswerCn": "在SMOS亮温度领域，采用两步回归方法来精炼数据，通过在天线框架下过滤TB观测值，并通过插值处理和将天线级别的TB转换为地面参考框架下的水平或垂直极化TB来解决潜在的异常值。该方法有效减少了射频干扰和混叠效应，从而提高了数据质量。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I'm unsure about the challenges faced in collecting reliable soil moisture data using SMOS satellite observations.",
+        "QuestionCn": "我对使用SMOS卫星观测收集可靠土壤湿度数据所面临的挑战感到不确定。",
+        "AnswerEn": "The challenges in collecting reliable soil moisture data using SMOS satellite observations include dealing with noisy data due to radio frequency interference, which affects data quality in certain regions, and issues related to aliasing errors in the Fourier imaging process. These factors complicate the retrieval of accurate land parameters, especially in areas with severe RFI contamination.",
+        "AnswerCn": "使用SMOS卫星观测收集可靠土壤湿度数据的挑战包括处理由于无线电频率干扰（RFI）导致的噪声数据，这在某些地区影响数据质量，以及与傅里叶成像过程中的混叠误差相关的问题。这些因素使得在严重RFI污染区域准确提取土地参数变得复杂。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please explore and describe the data collection methods used for acquiring multi-angular brightness temperature data in the context of mitigating radio frequency interference and aliasing effects.",
+        "QuestionCn": "请探讨和描述在减轻射频干扰和混叠效应的背景下，获取多角度亮温数据所使用的数据收集方法。",
+        "AnswerEn": "The data collection methods involve using the European Space Agency’s Soil Moisture Ocean Salinity (SMOS) satellite, which provides L-band brightness temperature for a range of incidence angles. A two-step regression approach is used to refine the Level-1C brightness temperature data, addressing radio frequency interference and aliasing effects. This involves filtering, interpolation, and conversion of antenna-level observations to ground reference frame, followed by further filtering procedures to mitigate outliers.",
+        "AnswerCn": "数据收集方法涉及使用欧洲空间局的土壤湿度海洋盐度（SMOS）卫星，该卫星提供一系列入射角的L波段亮温数据。采用两步回归方法对Level-1C亮温数据进行精细化处理，以解决射频干扰和混叠效应。这包括过滤、插值以及将天线级观测数据转换为地面参考框架，随后进行进一步的过滤程序以减轻异常值的影响。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Please identify potential datasets for improving the retrieval of land parameters and discuss the strategies used to enhance data quality in the context of SMOS satellite observations.",
+        "QuestionCn": "请识别潜在的数据集，以改善土地参数的检索，并讨论在SMOS卫星观测的背景下提高数据质量的策略。",
+        "AnswerEn": "Potential datasets include the refined SMOS brightness temperature data, which spans over a decade, and is processed through a two-step regression approach to suppress radio frequency interference. Strategies to enhance data quality involve employing filtering criteria, spline interpolation for missing data, and converting antenna-level observations to horizontal or vertical polarized brightness temperatures. These refined datasets are used for better retrieval of land parameters such as soil moisture, vegetation optical depth, and snow density.",
+        "AnswerCn": "潜在的数据集包括经过处理的SMOS亮温数据，该数据跨越十多年，并通过两步回归方法来抑制射频干扰。提高数据质量的策略包括采用过滤标准、对缺失数据进行样条插值，以及将天线级观测值转换为水平或垂直极化的亮温。这些精炼的数据集用于更好地获取土地参数，如土壤湿度、植被光学深度和雪密度。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

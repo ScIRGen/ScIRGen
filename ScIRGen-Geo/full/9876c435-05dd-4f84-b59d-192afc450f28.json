@@ -1,606 +1,606 @@
 {
-    "id": "9876c435-05dd-4f84-b59d-192afc450f28",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": "Dataset of Heihe integrated observatory network: Cosmic-ray observation system of soil moisture of Arou Superstation, 2022",
-            "titleCn": "黑河流域地表过程综合观测网：阿柔超级站宇宙射线观测系统（2022）",
-            "description": "This dataset includes data recorded by the Heihe integrated observatory network obtained from a Cosmic-ray Soil Moisture Observing System of soil moisture of Arou Superstation from January 1 to December 31, 2022. The site (100.4643° E, 38.0473° N) was located in the Caodaban Village, near Qilian County in Qinghai Province. The elevation is 3033 m. The bottom of the probe was 0.5 m above the ground; the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, C), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour), thermal neutron counts (N2C, counts per hour), sample time of fast neutrons (N1ET, s), and sample time of thermal neutrons (N2ET, s). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Data were removed and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity was greater than 80% inside the probe box, (c) the counting data were not of one-hour duration and (d) neutron count differed from the previous value by more than 20%; 2) An air pressure correction was applied to the quality-controlled raw data according to the equation contained in the equipment manual; 3) After the quality control and corrections were applied, soil moisture was calculated using the equation in Zreda et al. (2012), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 was calibrated using the in situ observed soil moisture by SoilNET within the footprint; 4) Based on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation from the equipment manual. Moreover, suspicious data were marked in red.\nFor more information, please refer to Liu et al. (2018) (for sites information), Zhu et al. (2015) for data processing) in the Citation section.",
-            "descriptionCn": "该数据集包含了2022年1月1日至2022年12月31日黑河流域地表过程综合观测网上游阿柔超级站宇宙射线观测系统数据。站点位于青海省祁连县阿柔乡草达坂村，下垫面是亚高山山地草甸。观测点的经纬度是100.4643° E, 38.0473° N，海拔3033m。仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）、热中子数N2C（个/小时）、快中子采样时间N1ET（s）及热中子采样时间N2ET（s）。发布的数据为经过处理计算后的数据，数据表头包括：Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。剔除及缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor。\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再通过公式反求得到N0。\n黑河综合观测网或站点信息请参考Liu et al. (2018)，观测数据处理请参考Zhu et al. (2015)。",
-            "instructions": "Year+** observatory network+ site+ COSMOS",
-            "instructionsCn": "年份+**观测网+站点名称+ COSMOS",
-            "east": 100.4643,
-            "west": 100.4643,
-            "south": 38.0473,
-            "north": 38.0473,
-            "startTime": "2022-01-01 00:00:00",
-            "endTime": "2022-12-31 00:00:00",
-            "fileSize": 468602.0,
-            "cstr": "18406.11.Terre.tpdc.300627",
-            "doi": "10.11888/Terre.tpdc.300627",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "刘绍民",
-                "nameEn": "LIU Shaomin",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "车涛",
-                "nameEn": "CHE Tao",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "朱忠礼",
-                "nameEn": "ZHU Zhongli",
-                "unitEn": "",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "徐自为",
-                "nameEn": "XU Ziwei",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "任志国",
-                "nameEn": "REN Zhiguo",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "谭俊磊",
-                "nameEn": "TAN Junlei",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "张阳",
-                "nameEn": "ZHANG Yang",
-                "unitEn": "",
-                "unitCn": "中国科学院西北生态环境资源研究院"
-            },
-            {
-                "nameCn": "李新",
-                "nameEn": "LI Xin",
-                "unitEn": "",
-                "unitCn": "中国科学院青藏高原研究所"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "The Heihe Integrated Observatory Network: A basin-scale land surface processes observatory in China",
-                "referenceCn": null,
-                "referenceEn": "Liu, S.M., Li, X., Xu, Z.W., Che, T., Xiao, Q., Ma, M.G., Liu, Q.H., Jin, R., Guo, J.W., Wang, L.X., Wang, W.Z., Qi, Y., Li, H.Y., Xu, T.R., Ran, Y.H., Hu, X.L., Shi, S.J., Zhu, Z.L., Tan, J.L., Zhang, Y., & Ren, Z.G. (2018). The Heihe Integrated Observatory Network: A basin-scale land surface processes observatory in China. Vadose Zone Journal, 17, 180072. doi:10.2136/vzj2018.04.0072."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Integrated hydrometeorological, snow and frozen-ground observations in the alpine region of the Heihe River Basin, China",
-                "referenceCn": null,
-                "referenceEn": "Che, T., Li, X., Liu, S., Li, H., Xu, Z., Tan, J., Zhang, Y., Ren, Z., Xiao, L., Deng, J., Jin, R., Ma, M., Wang, J., & Yang, X. (2019). Integrated hydrometeorological, snow and frozen-ground observations in the alpine region of the Heihe River Basin, China. Earth System Science Data, 11, 1483-1499"
-            },
-            {
-                "titleCn": "宇宙射线快中子法在农田土壤水分测量中的研究与应用",
-                "titleEn": null,
-                "referenceCn": "焦其顺, 朱忠礼, 刘绍民, 晋锐, 杜帆. (2013). 宇宙射线快中子法在农田土壤水分测量中的研究与应用. 地球科学进展, 28(10), 1136-1143.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
-                "referenceCn": null,
-                "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "冻土",
-                "nameEn": "Frozen Ground"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "阿柔超级站",
-                "keywordEn": "Arou superstation"
-            },
-            {
-                "keywordCn": "黑河流域上游",
-                "keywordEn": "Upper reaches of the Heihe River"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2022",
-                "keywordEn": "2022",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
-                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "9876c435-05dd-4f84-b59d-192afc450f28",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": "Dataset of Heihe integrated observatory network: Cosmic-ray observation system of soil moisture of Arou Superstation, 2022",
+      "titleCn": "黑河流域地表过程综合观测网：阿柔超级站宇宙射线观测系统（2022）",
+      "description": "This dataset includes data recorded by the Heihe integrated observatory network obtained from a Cosmic-ray Soil Moisture Observing System of soil moisture of Arou Superstation from January 1 to December 31, 2022. The site (100.4643° E, 38.0473° N) was located in the Caodaban Village, near Qilian County in Qinghai Province. The elevation is 3033 m. The bottom of the probe was 0.5 m above the ground; the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, C), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour), thermal neutron counts (N2C, counts per hour), sample time of fast neutrons (N1ET, s), and sample time of thermal neutrons (N2ET, s). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Data were removed and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity was greater than 80% inside the probe box, (c) the counting data were not of one-hour duration and (d) neutron count differed from the previous value by more than 20%; 2) An air pressure correction was applied to the quality-controlled raw data according to the equation contained in the equipment manual; 3) After the quality control and corrections were applied, soil moisture was calculated using the equation in Zreda et al. (2012), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 was calibrated using the in situ observed soil moisture by SoilNET within the footprint; 4) Based on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation from the equipment manual. Moreover, suspicious data were marked in red.\nFor more information, please refer to Liu et al. (2018) (for sites information), Zhu et al. (2015) for data processing) in the Citation section.",
+      "descriptionCn": "该数据集包含了2022年1月1日至2022年12月31日黑河流域地表过程综合观测网上游阿柔超级站宇宙射线观测系统数据。站点位于青海省祁连县阿柔乡草达坂村，下垫面是亚高山山地草甸。观测点的经纬度是100.4643° E, 38.0473° N，海拔3033m。仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）、热中子数N2C（个/小时）、快中子采样时间N1ET（s）及热中子采样时间N2ET（s）。发布的数据为经过处理计算后的数据，数据表头包括：Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。剔除及缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor。\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再通过公式反求得到N0。\n黑河综合观测网或站点信息请参考Liu et al. (2018)，观测数据处理请参考Zhu et al. (2015)。",
+      "instructions": "Year+** observatory network+ site+ COSMOS",
+      "instructionsCn": "年份+**观测网+站点名称+ COSMOS",
+      "east": 100.4643,
+      "west": 100.4643,
+      "south": 38.0473,
+      "north": 38.0473,
+      "startTime": "2022-01-01 00:00:00",
+      "endTime": "2022-12-31 00:00:00",
+      "fileSize": 468602.0,
+      "cstr": "18406.11.Terre.tpdc.300627",
+      "doi": "10.11888/Terre.tpdc.300627",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "The alpine region is important in riverine and watershed ecosystems as a contributor of freshwater, providing and stimulating specific habitats for biodiversity. In parallel, recent climate change, human activities, and other perturbations may disturb hydrological processes and eco-functions, creating the need for next-generation observational and modeling approaches to advance a predictive understanding of such processes in the alpine region. Water resources in the alpine region are headwaters that need to be regulated to sustain downstream ecosystems. However, perturbations induced by nature/climate change and human activities in recent years have significantly reformed hydrological processes and eco-functions. Accurate estimation and prediction of hydrological processes and their key impact factors has since become crucial.",
-                "Unfortunately, the scarcity of observation data in the alpine region, due to the difficulties of access and technological barriers, has hindered alpine hydrological modeling and associated research yet motivated the development of next-generation ecosystem observation networks and experiments. In comparison with the observations, using remote sensing data combined with data assimilation could improve the prediction of hydrological processes. However, due to the complexities of the earth system, there exist various sources of uncertainties in remote sensing data (especially in the alpine region), which have to be validated and calibrated. In summary, to fill the knowledge gap and promote alpine region hydrology research, an integrated, distributed and multiscale observation dataset is essential and expected to provide accurate forcing data for hydrological modeling, validate remote sensing data, allow the evaluation of distributed models and ultimately improve a predictive understanding of alpine hydrological processes and ecosystem functions. In alpine hydrology, in addition to consistent hydrometeorological data obtained from distributed meteorological stations, snow cover and frozen ground are two important indexes and driving forces that manipulate hydrological processes. The maximum snow water equivalent (SWE) before ablation determines the storage of snowmelt – a major source of freshwater in the alpine region, while freeze-thaw cycles (FTCs) and soil moisture within the active layer alter water infiltration and, consequently, surface runoff and groundwater. To promote alpine hydrology research, the International Network for Alpine Research Catchment Hydrology (INARCH) was launched in 2015 by the Global Energy and Water Exchanges (GEWEX) project of the World Climate Research Programme (WCRP), involving 18 catchments around the world. The INARCH has since connected individual observatories into an international network and data-share platform to lead frontier research on alpine region hydrometeorology and snow observation. Another community-based observation network, the Circumpolar Active Layer Monitoring (CALM) network, was initiated in the early 1990s to observe the response of the active layer and near-surface permafrost to climate change. The Heihe River Basin (HRB) is the second largest inland river basin in China and is known for its heterogeneous landscapes, diverse ecosystems, unique geographical characteristics and climate change over recent decades. As a major component of the ecohydrological processes in the arid/semi-arid HRB, the alpine hydrological processes, especially those related to snow cover and frozen ground in the upper reaches, have great impacts on runoff in the mountainous region, which then regulate agricultural development in the middle reaches and the ecosystems of the lower reaches.",
-                "In recent years, with climate warming, permafrost degradation has significantly affected runoff and the carbon cycle (Peng et al., 2016; Gao et al., 2018). Snow cover is widely distributed with unique characteristics in the study area. In the high-altitude mountainous region (elevation > 3800 m), influenced by the local microclimate and low temperature, snowfall could occur in any season. Temporary snow is the major snow cover type in the region at middle and low elevations because strong solar radiation and high air temperature lead to fast melting and sublimation of the snow. Drifting snow is also commonly observed in the region, which may lead to the redistribution of snowpack in high elevation regions (Essery et al., 1999; Li et al., 2014).",
-                "Blowing (drifting) snow is commonly observed in the Qilian mountain due to its high altitude and complex terrain. It is important to estimate the occurrence of blowing snow because it may cause redistributions of the snow cover and influence the sublimation of snow.",
-                "Soil heat conductivity is difficult to analyze because it is a function of soil density, soil moisture content (ice content in frozen ground), and soil temperature, which cannot be easily calculated using a simple formula. Therefore, site observations can be utilized to evaluate the parameterization of alpine hydrologic models."
-            ],
-            "research objective": [
-                "The current study presents a suite of datasets consisting of long-term hydrometeorological, snow cover, and frozen ground data for investigating watershed science and functions from an integrated, distributed, and multiscale observation network in the upper reaches of the Heihe River Basin (HRB) in China.",
-                "This paper introduces the infrastructure of the integrated alpine hydrology observation network in the HRB and the complete datasets collected in recent years.",
-                "The associated open-access datasets include high-quality hydrometeorological data with specific respect to snow and frozen ground observations at the sub-basin and basin scales, which aims to address a variety of scientific questions including but not limited to: (1) how to provide accurate and effective forcing data for alpine hydrological models, (2) how to integrate observation, simulation and the acquired datasets for informative understanding, and (3) how perturbations (climate change and human activities) alter fundamental processes."
-            ],
-            "challenges": [
-                "However, several formidable challenges, including the cold and harsh climate, high altitude, and complex topography, inhibit complete and consistent data collection where/when needed, which hinders the development of remote sensing technologies and alpine hydrological models.",
-                "Unfortunately, the scarcity of observation data in the alpine region, due to the difficulties of access and technological barriers, has hindered alpine hydrological modeling and associated research yet motivated the development of next-generation ecosystem observation networks and experiments. However, the above modeling efforts suffered from 1) the availability of the forcing data (only two weather stations operated by the Chinese Meteorological Administration functioned in the upper reaches of the HRB) and 2) a lack of high-quality snow and frozen ground data for parameterization.",
-                "Unfortunately, this did not work well due to the influence of strong wind. Therefore, snow density data, which can be calculated using snow depth and SWE data, are not available at present."
-            ],
-            "methods": [
-                "Gap-free meteorological and hydrological data were monitored from an observation network connecting a group of automatic meteorological stations (AMSs). In addition, to capture snow accumulation and ablation processes, snow cover properties were collected from a snow observation superstation using state-of-the-art techniques and instruments. High-resolution soil physics datasets were also obtained to capture the freeze-thaw processes from a frozen ground observation superstation.",
-                "Considering the characteristics of the study site, an integrated, distributed and multiscale hydrometeorological – snow – frozen ground observation network has been established with seven automatic meteorological stations (AMSs) and two superstations. At the basin scale, the observation aims to collect data for investigating the meteorological driving forces and for validation of the alpine hydrological models. At the sub-basin scale, small-scale observations and measurements focus on data such as precipitation, soil temperature and moisture, which are used to develop and improve hydrologic models, as well as to validate remote sensing products at medium to coarse resolutions (Jin et al., 2014). At the two superstations for snow cover and frozen ground observations, remote sensing products can be further validated using fine-resolution data. In total, seven AMSs, as well as the frozen ground and snow superstations (also incorporating meteorological observations), were established in the study area during the intensive observation period (IOP: 2013 -2014) to obtain the spatially distributed meteorological variables. After the IOP, four typical AMSs were selected and retained for continuous observation, which is expected to provide long-term datasets. The observed meteorological variables include wind (speed and direction), air temperature, humidity, infrared temperature, air pressure, four-component radiation, and precipitation. Accumulation and depletion processes were measured automatically at the Yakou snow superstation. The observed components included snow depth, snow water equivalent (SWE, measured by GammaMONitor, GMON), albedo of the snow surface and blowing (drifting) snow flux (measured by FlowCapt). Soil temperature and moisture were measured within six layers at each AMS, while evapotranspiration (ET) was observed by eddy covariance (EC) at three AMSs located in permafrost, seasonally frozen ground and a transient zone to observe freeze-thaw (FT) processes. At the sub-basin scale, a wireless sensor network (WSN) with 40 nodes was established to capture seasonal changes in soil temperature and moisture. At the A’rou frozen ground superstation, soil temperature and moisture profiles were intensively measured in eighteen layers to a depth of 3.2 m (in a nested pattern with more layers in the topsoil) to obtain the soil hydrothermal features under freeze-thaw cycles (FTCs). In addition, thermal conductivity and hydraulic conductivity in the topsoil were also measured to observe the dynamic hydrothermal processes within.",
-                "Snow depth was measured by SR50A (Campbell, USA), which determines the distance between the sensor and the target by sending out ultrasonic pulses and listening for the returning echoes reflected from the target. Snow water equivalent (SWE) was measured by GMON (CS725 GammaMONitor, Campbell, USA) from 2014/1/1 to 2017/12/31 at a temporal resolution of 6 hr. FlowCapt (IAV, Switzerland) was used to measure the number of blowing snow grains at 3 heights (0-1 m, 1-2 m, and 2-3 m) every 10 mins."
-            ],
-            "dataset": [
-                "The current study presents a suite of datasets consisting of long-term hydrometeorological, snow cover, and frozen ground data for investigating watershed science and functions from an integrated, distributed, and multiscale observation network in the upper reaches of the Heihe River Basin (HRB) in China. Gap-free meteorological and hydrological data were monitored from an observation network connecting a group of automatic meteorological stations (AMSs). In addition, to capture snow accumulation and ablation processes, snow cover properties were collected from a snow observation superstation using state-of-the-art techniques and instruments. High-resolution soil physics datasets were also obtained to capture the freeze-thaw processes from a frozen ground observation superstation. The updated datasets were released to scientists with multidisciplinary backgrounds (i.e., cryosphere science, hydrology, and meteorology), and they are expected to serve as a testing platform to provide accurate forcing data and validate and evaluate remote sensing products and hydrological models for a broader community.",
-                "This paper introduces the infrastructure of the integrated alpine hydrology observation network in the HRB and the complete datasets collected in recent years. Composed of seven standard hydrometeorological stations, one snow superstation and one frozen ground superstation, the observation network serves as an integrated research platform aiming to provide prominent datasets (e.g., hydrometeorology, snow, and frozen ground) of the hydrometeorological processes in the upper reaches of the HRB, which is expected to support alpine region hydrological model development and simulations along with remote sensing observation.",
-                "A comprehensive snow dataset from the Yakou snow superstation has been updated since the summer of 2013. The observed snow variables included snow depth, snow water equivalent (SWE) and blowing (drifting) snow. Data obtained from 2014/1/1 to 2017/12/31 are summarized in Figure 4, with additional plots for precipitation, ET, soil temperature and moisture. The datasets are available from 2012/12/05 to 2017/12/31, with intermittent loss mostly due to power loss and sensor malfunctions at high altitudes.",
-                "In this paper, a suite of alpine hydrology datasets observed from an integrated, distributed and multiscale hydrometeorological – snow – frozen ground observation network in the upper reaches of the Heihe River Basin (HRB) is presented."
-            ],
-            "findings": [],
-            "backgroundCn": [
-                "阿尔卑斯地区在河流和流域生态系统中具有重要意义，作为淡水的贡献者，提供并刺激特定栖息地的生物多样性。与此同时，近期的气候变化、人类活动和其他扰动可能会干扰水文过程和生态功能，这就需要下一代观测和建模方法来推进对阿尔卑斯地区这些过程的预测理解。阿尔卑斯地区的水资源是需要调节的源头水，以维持下游生态系统。然而，近年来自然/气候变化和人类活动引发的扰动显著改变了水文过程和生态功能。因此，准确估计和预测水文过程及其关键影响因素变得至关重要。",
-                "不幸的是，由于进入困难和技术障碍，阿尔卑斯地区观测数据的稀缺阻碍了阿尔卑斯水文建模和相关研究，但也促使了下一代生态系统观测网络和实验的发展。与观测数据相比，结合遥感数据和数据同化可以改善水文过程的预测。然而，由于地球系统的复杂性，遥感数据（尤其是在阿尔卑斯地区）存在各种不确定性来源，这些不确定性需要进行验证和校准。总之，为了填补知识空白并促进阿尔卑斯地区水文研究，集成的、分布式的和多尺度的观测数据集是必不可少的，预计将为水文建模提供准确的强迫数据，验证遥感数据，评估分布式模型，并最终改善对阿尔卑斯水文过程和生态系统功能的预测理解。在阿尔卑斯水文学中，除了从分布式气象站获得的一致的水文气象数据外，雪盖和冻土是两个重要的指标和驱动因素，它们影响水文过程。融化前的最大雪水当量（SWE）决定了雪融水的储存——这是阿尔卑斯地区淡水的主要来源，而冻融循环（FTC）和活层内的土壤水分则改变了水的渗透，从而影响地表径流和地下水。为了促进阿尔卑斯水文研究，国际阿尔卑斯研究流域水文学网络（INARCH）于2015年由世界气候研究计划（WCRP）的全球能量与水交换（GEWEX）项目发起，涉及全球18个流域。自那时以来，INARCH将各个观测站连接成一个国际网络和数据共享平台，以引领阿尔卑斯地区水文气象和雪观测的前沿研究。另一个基于社区的观测网络，极圈活层监测（CALM）网络，始于1990年代初，旨在观察活层和近地表永久冻土对气候变化的响应。黑河流域（HRB）是中国第二大内陆河流域，以其异质的景观、多样的生态系统、独特的地理特征和近年来的气候变化而闻名。作为干旱/半干旱HRB生态水文过程的主要组成部分，阿尔卑斯水文过程，特别是与上游雪盖和冻土相关的过程，对山区的径流产生重大影响，从而调节中游的农业发展和下游的生态系统。",
-                "近年来，随着气候变暖，永冻土退化显著影响了径流和碳循环（Peng et al., 2016; Gao et al., 2018）。研究区域内雪盖分布广泛，具有独特的特征。在高海拔山区（海拔 > 3800 米），受当地微气候和低温的影响，任何季节都可能出现降雪。临时雪是该地区中低海拔地区的主要雪盖类型，因为强烈的太阳辐射和高气温导致雪的快速融化和升华。漂移雪在该地区也常见，这可能导致高海拔地区雪层的重新分布（Essery et al., 1999; Li et al., 2014）。",
-                "由于祁连山的高海拔和复杂地形，常常观察到吹雪（漂移雪）。估计吹雪的发生非常重要，因为它可能导致雪盖的重新分布，并影响雪的升华。",
-                "土壤热导率的分析比较困难，因为它是土壤密度、土壤水分含量（在冻土中为冰含量）和土壤温度的函数，而这些因素无法通过简单的公式轻易计算。因此，可以利用现场观测来评估高山水文模型的参数化。"
-            ],
-            "research objectiveCn": [
-                "本研究提供了一套数据集，包括长期的水文气象、雪盖和冻土数据，用于从一个综合的、分布式的和多尺度的观测网络中研究中国黑河流域上游的流域科学和功能。",
-                "本文介绍了HRB地区综合阿尔卑斯水文观测网络的基础设施以及近年来收集的完整数据集。",
-                "相关的开放获取数据集包括高质量的水文气象数据，特别是关于雪和冻土观测的子流域和流域尺度的数据，旨在解决多种科学问题，包括但不限于：(1) 如何为高山水文模型提供准确有效的强迫数据，(2) 如何整合观测、模拟和获取的数据集以获得有意义的理解，以及 (3) 如何扰动（气候变化和人类活动）改变基本过程。"
-            ],
-            "challengesCn": [
-                "然而，寒冷和恶劣的气候、高海拔和复杂的地形等几项严峻挑战，阻碍了在需要的地方和时间进行全面和一致的数据收集，这妨碍了遥感技术和高山水文模型的发展。",
-                "不幸的是，由于进入困难和技术障碍，阿尔卑斯地区观测数据的稀缺阻碍了阿尔卑斯水文模型及相关研究的发展，但也促使了下一代生态观测网络和实验的开发。然而，上述建模工作面临着两个主要问题：1）强迫数据的可用性（只有中国气象局在HRB上游运营的两个气象站正常工作）；2）缺乏高质量的雪和冻土数据用于参数化。",
-                "不幸的是，由于强风的影响，这项工作并不顺利。因此，目前无法获得可以通过雪深和雪水当量（SWE）数据计算的雪密度数据。"
-            ],
-            "methodsCn": [
-                "无间断的气象和水文数据通过连接一组自动气象站（AMSs）的观测网络进行监测。此外，为了捕捉雪的积累和融化过程，使用先进的技术和仪器从一个雪观测超级站收集了雪盖特性数据。高分辨率的土壤物理数据集也从一个冻土观测超级站获得，以捕捉冻融过程。",
-                "考虑到研究地点的特征，建立了一个综合的、分布式的多尺度水文气象-雪-冻土观测网络，包含七个自动气象站（AMS）和两个超级站。在流域尺度上，观测旨在收集数据，以研究气象驱动因素并验证阿尔卑斯水文模型。在子流域尺度上，小规模的观测和测量集中在降水、土壤温度和湿度等数据上，这些数据用于开发和改进水文模型，以及验证中等到粗分辨率的遥感产品（Jin et al., 2014）。在两个雪盖和冻土观测的超级站中，可以利用高分辨率数据进一步验证遥感产品。在集中的观测期（IOP：2013-2014）期间，在研究区域建立了七个AMS以及冻土和雪超级站（也包含气象观测），以获取空间分布的气象变量。在IOP之后，选择并保留了四个典型的AMS进行持续观测，预计将提供长期数据集。观测的气象变量包括风速和风向、气温、湿度、红外温度、气压、四分量辐射和降水。积雪和融雪过程在雅口雪超级站自动测量，观测的组成部分包括雪深、雪水当量（SWE，由GammaMONitor测量）、雪面反照率和风吹（飘雪）通量（由FlowCapt测量）。在每个AMS内，土壤温度和湿度在六个层次上进行测量，而蒸散发（ET）则在位于永久冻土、季节性冻土和过渡区的三个AMS上通过涡度协方差（EC）进行观测，以观察冻融（FT）过程。在子流域尺度上，建立了一个包含40个节点的无线传感器网络（WSN），以捕捉土壤温度和湿度的季节变化。在阿柔冻土超级站，土壤温度和湿度剖面在十八个层次上进行密集测量，深度达到3.2米（采用嵌套模式，表层有更多层次），以获取冻融循环（FTC）下的土壤水热特征。此外，还测量了表层土壤的热导率和水力导率，以观察动态水热过程。",
-                "雪深通过SR50A（美国Campbell）测量，该设备通过发出超声波脉冲并监听从目标反射回来的回声来确定传感器与目标之间的距离。雪水当量（SWE）由GMON（CS725 GammaMONitor，美国Campbell）测量，测量时间为2014年1月1日至2017年12月31日，时间分辨率为6小时。FlowCapt（瑞士IAV）用于测量在3个高度（0-1米、1-2米和2-3米）每10分钟的吹雪颗粒数量。"
-            ],
-            "datasetCn": [
-                "本研究提供了一套数据集，包括长期的水文气象、雪盖和冻土数据，用于从综合、分布式和多尺度观测网络研究中国黑河流域上游的流域科学和功能。通过连接一组自动气象站（AMS）的观测网络，监测了无间隙的气象和水文数据。此外，为了捕捉雪的积累和融化过程，采用先进的技术和仪器从雪观测超级站收集了雪盖特性数据。还获得了高分辨率的土壤物理数据集，以捕捉冻融过程，这些数据来自冻土观测超级站。更新的数据集已向具有多学科背景（如冰冻圈科学、水文学和气象学）的科学家发布，预计将作为测试平台，为更广泛的社区提供准确的强迫数据，并验证和评估遥感产品和水文模型。",
-                "本文介绍了HRB地区综合阿尔卑斯水文观测网络的基础设施及近年来收集的完整数据集。该观测网络由七个标准水文气象站、一个雪超级站和一个冻土超级站组成，作为一个综合研究平台，旨在提供HRB上游水文气象过程的显著数据集（如水文气象、雪和冻土），预计将支持阿尔卑斯地区水文模型的开发和模拟以及遥感观测。",
-                "来自Yakou雪超级站的综合雪数据集自2013年夏季以来已更新。观察到的雪变量包括雪深、雪水当量（SWE）和吹雪（漂雪）。2014年1月1日至2017年12月31日的数据在图4中进行了总结，并附有降水、蒸散发、土壤温度和湿度的额外图表。数据集的可用时间为2012年12月5日至2017年12月31日，间歇性丢失主要是由于高海拔地区的电力损失和传感器故障。",
-                "在本文中，展示了一套来自于黑河上游集成的、分布式的多尺度水文气象-雪-冻土观测网络的阿尔卑斯水文数据集。"
-            ],
-            "findingsCn": []
-        },
-        {
-            "background": [
-                "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括: 称重法(烘干法)、中子仪法、电容法、张力计法、时域反射计(Time-Domain Ｒeflectometry，TDＲ)、频域反射计(Frequency-Domain Ｒeflectometry，FDＲ)等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米(航空遥感)到数十公里(航天遥感)之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
-            ],
-            "research objective": [
-                "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
-            ],
-            "challenges": [
-                "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不只存在于土壤水分中，在晶格水、土壤有机质、植被以及水汽中均存在氢原子，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
-            ],
-            "methods": [
-                "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集(Soil-NET部分)和降雨数据集(大满站)。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。"
-            ],
-            "dataset": [
-                "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP(SImple SOil MOisture Probe)土壤水分/温度探头，分别探测4，10，20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集(大满超级站)主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
-            ],
-            "findings": [
-                "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
-            ],
-            "backgroundCn": [
-                "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括：称重法（烘干法）、中子仪法、电容法、张力计法、时域反射计（Time-Domain Reflectometry，TDR）、频域反射计（Frequency-Domain Reflectometry，FDR）等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米（航空遥感）到数十公里（航天遥感）之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
-            ],
-            "research objectiveCn": [
-                "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
-            ],
-            "challengesCn": [
-                "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不仅存在于土壤水分中，还存在于晶格水、土壤有机质、植被以及水汽中，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
-            ],
-            "methodsCn": [
-                "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集（Soil-NET部分）和降雨数据集（大满站）。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。"
-            ],
-            "datasetCn": [
-                "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP(SImple SOil MOisture Probe)土壤水分/温度探头，分别探测4，10，20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集(大满超级站)主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
-            ],
-            "findingsCn": [
-                "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "刘绍民",
+        "nameEn": "LIU Shaomin",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "车涛",
+        "nameEn": "CHE Tao",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "朱忠礼",
+        "nameEn": "ZHU Zhongli",
+        "unitEn": "",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "徐自为",
+        "nameEn": "XU Ziwei",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "任志国",
+        "nameEn": "REN Zhiguo",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "谭俊磊",
+        "nameEn": "TAN Junlei",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "张阳",
+        "nameEn": "ZHANG Yang",
+        "unitEn": "",
+        "unitCn": "中国科学院西北生态环境资源研究院"
+      },
+      {
+        "nameCn": "李新",
+        "nameEn": "LI Xin",
+        "unitEn": "",
+        "unitCn": "中国科学院青藏高原研究所"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Can a dataset using cosmic-ray neutron sensing be effectively used to measure soil moisture at a regional scale?",
-                "QuestionCn": "使用宇宙射线中子传感技术的数据集能否有效用于区域尺度的土壤湿度测量？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is it possible to perform continuous long-term monitoring of soil moisture using cosmic-ray instruments in agricultural areas?",
-                "QuestionCn": "在农业地区使用宇宙射线仪器进行土壤湿度的连续长期监测是否可行？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Are there challenges related to data collection for soil moisture due to factors like high altitude and complex topography?",
-                "QuestionCn": "由于高海拔和复杂地形等因素，土壤湿度的数据收集面临挑战吗？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Does the data collection in the field primarily rely on automatic meteorological stations, wireless sensor networks, or cosmic-ray neutron probes?",
-                "QuestionCn": "现场的数据收集主要依赖于自动气象站、无线传感器网络还是宇宙射线中子探测器？",
-                "AnswerEn": "automatic meteorological stations, wireless sensor networks, cosmic-ray neutron probes",
-                "AnswerCn": "自动气象站、无线传感器网络、宇宙射线中子探测器",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Are the challenges in collecting data mainly related to climate conditions, technological limitations, or geographical access?",
-                "QuestionCn": "收集数据的挑战主要与气候条件、技术限制或地理可达性有关吗？",
-                "AnswerEn": "climate conditions",
-                "AnswerCn": "气候条件",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Is the soil moisture dataset in the field derived from traditional methods, remote sensing, or cosmic-ray neutron techniques?",
-                "QuestionCn": "该领域的土壤湿度数据集是通过传统方法、遥感技术还是宇宙射线中子技术获得的？",
-                "AnswerEn": "cosmic-ray neutron techniques",
-                "AnswerCn": "宇宙射线中子技术",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the primary challenges faced in collecting data for alpine hydrological processes in the Heihe River Basin?",
-                "QuestionCn": "在黑河流域收集高山水文过程数据面临的主要挑战是什么？",
-                "AnswerEn": "cold and harsh climate, high altitude, complex topography",
-                "AnswerCn": "寒冷严酷的气候，高海拔，复杂的地形",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methods are used to validate soil moisture data obtained from cosmic-ray neutron sensing?",
-                "QuestionCn": "用于验证从宇宙射线中子传感器获得的土壤湿度数据的方法有哪些？",
-                "AnswerEn": "wireless sensor network",
-                "AnswerCn": "无线传感器网络",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "What is an example of a dataset that integrates multisource data for hydrological modeling in alpine regions?",
-                "QuestionCn": "一个整合多源数据用于高山地区水文建模的数据集示例是什么？",
-                "AnswerEn": "An example of such a dataset is one that combines long-term hydrometeorological, snow cover, and frozen ground data from an integrated, distributed, and multiscale observation network in the upper reaches of the Heihe River Basin in China. This dataset includes high-quality observations from automatic meteorological stations and superstations, capturing key variables like snow depth, snow water equivalent, and soil temperature and moisture.",
-                "AnswerCn": "这样的数据集的一个例子是结合了来自中国黑河流域上游的一个综合、分布式和多尺度观测网络的长期水文气象、雪盖和冻土数据。该数据集包括来自自动气象站和超级站的高质量观测，捕捉了雪深、雪水当量以及土壤温度和湿度等关键变量。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Can you provide an example of a challenge faced when measuring soil moisture using cosmic-ray neutron sensors?",
-                "QuestionCn": "可以提供一个使用宇宙射线中子传感器测量土壤湿度时面临的挑战的例子吗？",
-                "AnswerEn": "A challenge when using cosmic-ray neutron sensors is the presence of hydrogen atoms in sources other than soil moisture, such as lattice water, soil organic matter, vegetation, and water vapor. These sources can affect the propagation of fast neutrons and therefore the accuracy of soil moisture measurements. Corrections for these influences are necessary, but they can be complex, especially in areas with rapidly growing vegetation or varying atmospheric conditions.",
-                "AnswerCn": "使用宇宙射线中子传感器时，一个挑战是氢原子存在于土壤水分以外的其他来源，例如晶格水、土壤有机质、植被和水蒸气。这些来源会影响快中子的传播，从而影响土壤水分测量的准确性。需要对这些影响进行修正，但在植被快速生长或气候条件变化的地区，这些修正可能会很复杂。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of data collected using cosmic ray neutron sensing for soil moisture measurement?",
-                "QuestionCn": "使用宇宙射线中子传感器收集的土壤湿度测量数据的特征是什么？",
-                "AnswerEn": "fast neutron count, atmospheric pressure, corrected fast neutron count, non-invasive, passive measurement, radius of approximately 300 m, effective depth ranging from 12 to 76 cm, sampled at a frequency of 1 hour",
-                "AnswerCn": "快中子计数、大气压力、校正快中子计数、非侵入式、被动测量、半径约300米、有效深度范围从12到76厘米、采样频率为1小时。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the specific attributes measured in soil moisture datasets collected using wireless sensor networks?",
-                "QuestionCn": "使用无线传感器网络收集的土壤湿度数据集中测量的具体属性有哪些？",
-                "AnswerEn": "soil moisture, temperature at various depths (4 cm, 10 cm, 20 cm, 40 cm), 10-minute frequency",
-                "AnswerCn": "土壤湿度，各深度温度（4厘米、10厘米、20厘米、40厘米），10分钟频率",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the effective measurement depth range of the cosmic-ray neutron soil moisture measurement method?",
-                "QuestionCn": "宇宙射线中子土壤湿度测量方法的有效测量深度范围是多少？",
-                "AnswerEn": "12-76 cm",
-                "AnswerCn": "12-76 厘米",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does 'cosmic-ray neutron method' mean in the context of soil moisture measurement?",
-                "QuestionCn": "在土壤湿度测量的背景下，“宇宙射线中子法”指的是一种利用宇宙射线产生的中子来测量土壤水分含量的方法。",
-                "AnswerEn": "The 'cosmic-ray neutron method' is a non-invasive, passive soil moisture measurement technique that uses cosmic-ray fast neutrons to assess soil moisture over a medium-scale area, typically with a measurement radius of approximately 300 meters and an effective measurement depth of 12 to 76 cm. This method provides soil moisture data that fills the scale gap between traditional point measurements and large-scale remote sensing observations.",
-                "AnswerCn": "“宇宙射线中子法”是一种非侵入性、被动的土壤湿度测量技术，利用宇宙射线快速中子评估土壤湿度，通常测量半径约为300米，有效测量深度为12至76厘米。该方法提供的土壤湿度数据填补了传统点测量与大规模遥感观测之间的尺度差距。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What are 'gap-free meteorological and hydrological data' in the context of observation networks?",
-                "QuestionCn": "在观测网络的背景下，“无间隙的气象和水文数据”指的是没有缺失或中断的气象和水文观测数据。",
-                "AnswerEn": "'Gap-free meteorological and hydrological data' refers to continuous, uninterrupted datasets collected from observation networks, such as automatic meteorological stations (AMSs), which provide comprehensive coverage of meteorological variables and hydrological processes. These datasets are essential for hydrological modeling and validating remote sensing data, particularly in challenging alpine environments where data scarcity is a common issue.",
-                "AnswerCn": "“无间隙的气象和水文数据”是指从观测网络（如自动气象站）收集的连续、不间断的数据集，这些数据集提供了气象变量和水文过程的全面覆盖。这些数据集对于水文建模和验证遥感数据至关重要，特别是在数据稀缺的挑战性高山环境中。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is meant by 'integrated, distributed and multiscale observation network' in hydrological research?",
-                "QuestionCn": "在水文研究中，“集成的、分布式的和多尺度观测网络”是指一种综合性的观测系统，它能够在不同的空间和时间尺度上收集和整合水文数据。这种网络通常包括多个观测站点，分布在不同的地理区域，以便全面监测水文过程和变化。通过集成不同来源的数据，这种网络能够提供更全面的水文信息，支持科学研究和管理决策。",
-                "AnswerEn": "An 'integrated, distributed and multiscale observation network' in hydrological research refers to a system of interconnected observation sites, including automatic meteorological stations and superstations, designed to collect data across multiple spatial scales and various environmental conditions. This approach aims to provide comprehensive datasets for studying hydrometeorological processes, supporting model development, and validating remote sensing products at different resolutions.",
-                "AnswerCn": "“集成的、分布式的多尺度观测网络”在水文研究中指的是一个互联的观测站点系统，包括自动气象站和超级站，旨在跨多个空间尺度和各种环境条件收集数据。这种方法旨在提供全面的数据集，以研究水气象过程，支持模型开发，并在不同分辨率下验证遥感产品。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How does the data collection method using cosmic-ray neutron probes compare to traditional soil moisture measurement techniques in terms of spatial scale and invasiveness?",
-                "QuestionCn": "使用宇宙射线中子探测器的数据收集方法与传统土壤湿度测量技术在空间尺度和侵入性方面有何比较？",
-                "AnswerEn": "The cosmic-ray neutron method is a passive, non-invasive technique that measures soil moisture over a larger spatial scale with a radius of approximately 300 m, filling the gap between traditional point measurement methods like the weighing method and remote sensing. Traditional methods are more invasive and generally limited to smaller scales, providing less spatial representation.",
-                "AnswerCn": "宇宙射线中子法是一种被动的、非侵入性的技术，能够在大约300米的半径范围内测量土壤湿度，填补了传统点测量方法（如称重法）与遥感之间的空白。传统方法更具侵入性，通常限于较小的尺度，提供的空间代表性较差。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can the integration of cosmic ray neutron sensing with traditional soil moisture monitoring methods enhance the accuracy and spatial representation of soil moisture data in alpine regions?",
-                "QuestionCn": "将宇宙射线中子传感技术与传统土壤湿度监测方法相结合，可以提高阿尔卑斯地区土壤湿度数据的准确性和空间表现。",
-                "AnswerEn": "Cosmic ray neutron sensing offers a non-invasive and intermediate-scale measurement method that can bridge the gap between point measurements and large-scale remote sensing. By integrating this method with traditional soil moisture monitoring techniques such as wireless sensor networks and remote sensing, researchers can improve the spatial representation and accuracy of soil moisture data. This integration can provide a more comprehensive understanding of soil moisture dynamics across different scales, particularly in challenging alpine environments where access and consistent data collection are difficult.",
-                "AnswerCn": "宇宙射线中子传感提供了一种非侵入性和中等规模的测量方法，可以弥合点测量与大规模遥感之间的差距。通过将这种方法与传统的土壤湿度监测技术（如无线传感器网络和遥感）相结合，研究人员可以提高土壤湿度数据的空间表现和准确性。这种整合可以更全面地理解不同尺度下的土壤湿度动态，特别是在进入困难且数据收集不一致的高山环境中。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What are the key challenges in using cosmic rays for soil moisture measurement, and how can these challenges be addressed to improve data reliability in varying environmental conditions?",
-                "QuestionCn": "使用宇宙射线测量土壤湿度的关键挑战是什么？如何解决这些挑战，以提高在不同环境条件下的数据可靠性？",
-                "AnswerEn": "Key challenges in using cosmic rays for soil moisture measurement include the influence of hydrogen atoms from sources other than soil moisture, such as lattice water, soil organic matter, vegetation, and atmospheric water vapor. These factors can affect neutron propagation and measurement accuracy. To address these challenges, site-specific calibration using field soil moisture measurements is essential to account for these influences. Additionally, understanding and modeling the impact of vegetation and atmospheric conditions on neutron data can help improve the reliability of soil moisture measurements under varying environmental conditions.",
-                "AnswerCn": "使用宇宙射线测量土壤湿度的主要挑战包括氢原子的影响，这些氢原子来自土壤湿度以外的来源，如晶格水、土壤有机质、植被和大气水蒸气。这些因素可能影响中子传播和测量的准确性。为了解决这些挑战，进行现场土壤湿度测量的特定场地校准是必不可少的，以考虑这些影响。此外，理解和建模植被和大气条件对中子数据的影响，可以帮助提高在不同环境条件下土壤湿度测量的可靠性。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the gap between traditional point measurement and large-scale remote sensing in soil moisture data collection, and how can new methods address this gap?",
-                "QuestionCn": "造成传统点测量与大规模遥感土壤湿度数据收集之间差距的原因是什么？新方法如何解决这一差距？",
-                "AnswerEn": "The gap is caused by the limited spatial representation of traditional point measurement methods and the lack of continuous data in remote sensing, which provides only instantaneous values at large scales. The development of cosmic-ray neutron methods, which offer a non-invasive, medium-scale measurement with a radius of about 300 meters, can address this gap by providing regional soil moisture information effectively.",
-                "AnswerCn": "这个差距是由于传统点测量方法的空间表示有限，以及遥感缺乏连续数据，后者仅在大尺度上提供瞬时值。宇宙射线中子方法的发展，提供了一种非侵入性、中等尺度的测量，半径约为300米，可以有效地通过提供区域土壤湿度信息来填补这一空白。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential consequences of utilizing cosmic-ray neutron sensing for long-term soil moisture monitoring in alpine regions?",
-                "QuestionCn": "利用宇宙射线中子传感技术进行高山地区长期土壤湿度监测的潜在后果是什么？",
-                "AnswerEn": "Utilizing cosmic-ray neutron sensing for long-term soil moisture monitoring in alpine regions can effectively capture regional soil moisture, providing valuable data for hydrological modeling and remote sensing validation. This method fills the gap between point-based and large-scale remote sensing measurements, allowing for more accurate soil moisture information at the regional scale.",
-                "AnswerCn": "利用宇宙射线中子传感技术进行高山地区长期土壤湿度监测，可以有效捕捉区域土壤湿度，为水文模型和遥感验证提供宝贵数据。这种方法填补了基于点的测量与大规模遥感测量之间的空白，使得在区域尺度上获得更准确的土壤湿度信息成为可能。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "How might the integration of a comprehensive observation network with automatic meteorological stations and superstations impact the data quality and modeling of alpine hydrological processes?",
-                "QuestionCn": "综合观测网络与自动气象站和超级站的整合将如何影响阿尔卑斯水文过程的数据质量和建模？",
-                "AnswerEn": "Integrating a comprehensive observation network with automatic meteorological stations and superstations can significantly enhance data quality and modeling of alpine hydrological processes by providing continuous, high-resolution data on snow cover, frozen ground, and meteorological variables. This approach helps in understanding the driving forces of hydrological models and improves the validation of remote sensing products.",
-                "AnswerCn": "整合一个综合观测网络与自动气象站和超级站可以显著提高数据质量和阿尔卑斯水文过程的建模，通过提供关于雪盖、冻土和气象变量的连续高分辨率数据。这种方法有助于理解水文模型的驱动因素，并改善遥感产品的验证。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the potential effects of incorporating wireless sensor networks in conjunction with cosmic-ray neutron data on the reliability of soil moisture observations?",
-                "QuestionCn": "将无线传感器网络与宇宙射线中子数据结合使用，可能对土壤湿度观测的可靠性产生哪些潜在影响？",
-                "AnswerEn": "Incorporating wireless sensor networks alongside cosmic-ray neutron data can improve the reliability of soil moisture observations by providing cross-validation and enhancing the spatial and temporal resolution of the data. This combination allows for a more comprehensive understanding of soil moisture dynamics and contributes to more robust data for model validation and remote sensing applications.",
-                "AnswerCn": "结合无线传感器网络和宇宙射线中子数据可以提高土壤湿度观测的可靠性，通过提供交叉验证并增强数据的空间和时间分辨率。这种组合使我们能够更全面地理解土壤湿度动态，并为模型验证和遥感应用提供更可靠的数据。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to establish an integrated, distributed, and multiscale observation network for studying alpine hydrological processes in the Heihe River Basin?",
-                "QuestionCn": "建立一个综合的、分布式的和多尺度的观测网络对于研究黑河流域的高山水文过程非常重要，原因如下：",
-                "AnswerEn": "An integrated, distributed, and multiscale observation network is crucial for studying alpine hydrological processes in the Heihe River Basin because it provides accurate forcing data for hydrological modeling, validates remote sensing data, and evaluates distributed models. This approach addresses the scarcity of observation data in alpine regions, which is hindered by harsh climates and complex topography. The network facilitates a comprehensive understanding of hydrological and eco-functional processes, particularly in the context of climate change and human-induced perturbations.",
-                "AnswerCn": "一个集成的、分布式的、多尺度的观测网络对于研究黑河流域的高山水文过程至关重要，因为它提供了准确的水文建模强迫数据，验证了遥感数据，并评估了分布式模型。这种方法解决了高山地区观测数据稀缺的问题，而这一问题受到恶劣气候和复杂地形的制约。该网络促进了对水文和生态功能过程的全面理解，特别是在气候变化和人类干扰的背景下。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What is the objective of using cosmic-ray neutron sensing for soil moisture measurement in the Heihe River Basin?",
-                "QuestionCn": "使用宇宙射线中子传感器测量黑河流域土壤湿度的目标是什么？",
-                "AnswerEn": "The objective of using cosmic-ray neutron sensing for soil moisture measurement in the Heihe River Basin is to obtain long-term, continuous monitoring of soil moisture at a regional scale. This method fills the gap between traditional point measurements and large-scale remote sensing, providing a non-invasive, medium-scale measurement that accurately reflects soil moisture dynamics. It also serves as a ground truth for validating remote sensing soil moisture retrievals.",
-                "AnswerCn": "使用宇宙射线中子传感技术在黑河流域进行土壤湿度测量的目的是实现对土壤湿度的长期、连续监测，覆盖区域尺度。该方法填补了传统点测量与大规模遥感之间的空白，提供了一种非侵入性、中等尺度的测量，准确反映土壤湿度动态。同时，它也作为验证遥感土壤湿度反演的地面真值。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What methods are used to ensure the reliability and accuracy of data collected by cosmic ray neutron sensors in alpine regions?",
-                "QuestionCn": "在阿尔卑斯地区，确保宇宙射线中子传感器收集的数据的可靠性和准确性的方法有哪些？",
-                "AnswerEn": "Data reliability is ensured through several steps: data screening based on voltage, relative humidity, and consistency of sampling intervals; pressure correction using specific formulas; and calibration of soil moisture using field samples to derive a parameter called N0. This helps in accurately estimating soil moisture content in the observation area.",
-                "AnswerCn": "数据可靠性通过几个步骤来确保：根据电压、相对湿度和采样间隔的一致性进行数据筛选；使用特定公式进行压力修正；以及通过现场样本校准土壤湿度，以得出一个称为N0的参数。这有助于准确估计观察区域的土壤湿度含量。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How are cosmic ray neutron data and wireless sensor network data integrated to monitor soil moisture in agricultural fields?",
-                "QuestionCn": "宇宙射线中子数据和无线传感器网络数据是如何集成以监测农业田地中的土壤湿度的？",
-                "AnswerEn": "Cosmic ray neutron data are continuously monitored and compared with data from wireless sensor networks to study soil moisture. The integration involves aligning data with similar temporal resolution, such as aggregating 10-minute sensor readings to hourly data to match the neutron data, allowing for a comprehensive analysis of soil moisture trends.",
-                "AnswerCn": "宇宙射线中子数据被持续监测，并与无线传感器网络的数据进行比较，以研究土壤湿度。该整合涉及将数据对齐到相似的时间分辨率，例如将10分钟的传感器读数聚合为每小时的数据，以匹配中子数据，从而允许对土壤湿度趋势进行全面分析。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What conditions and technological advancements enable the effective collection of multiscale hydrometeorological data in alpine regions?",
-                "QuestionCn": "哪些条件和技术进步使得在高山地区有效收集多尺度水文气象数据成为可能？",
-                "AnswerEn": "The effective collection of multiscale hydrometeorological data in alpine regions is enabled by the establishment of an integrated, distributed observation network that includes automatic meteorological stations (AMSs) and superstations for snow cover and frozen ground observations. This network captures a wide range of variables such as wind speed, air temperature, humidity, and snow properties, leveraging state-of-the-art techniques and instruments to overcome challenges like harsh climate and complex topography.",
-                "AnswerCn": "在高山地区，建立一个集成的分布式观测网络，使得多尺度水文气象数据的有效收集成为可能。该网络包括自动气象站（AMS）和用于雪盖和冻土观测的超级站，能够捕捉风速、气温、湿度和雪的特性等多种变量，利用先进的技术和仪器克服恶劣气候和复杂地形带来的挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the use of cosmic-ray neutron sensing enable the measurement of soil moisture across different spatial scales?",
-                "QuestionCn": "宇宙射线中子传感技术如何在不同空间尺度上实现土壤水分的测量。",
-                "AnswerEn": "Cosmic-ray neutron sensing enables the measurement of soil moisture across different spatial scales by providing a non-invasive method that measures the intensity of fast neutrons above the soil surface, which is inversely related to soil moisture content. This approach fills the gap between traditional point measurements and large-scale remote sensing, offering a measurement radius of about 300 meters and an effective depth of 12 to 76 cm.",
-                "AnswerCn": "宇宙射线中子传感技术通过提供一种非侵入性的方法，测量土壤表面上方快中子的强度，从而实现了不同空间尺度的土壤湿度测量，这种强度与土壤湿度含量呈反比关系。这种方法填补了传统点测量与大规模遥感之间的空白，测量半径约为300米，有效深度为12至76厘米。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What challenges and conditions are addressed by utilizing a comprehensive observation network for studying ecohydrological processes in the Heihe River Basin?",
-                "QuestionCn": "利用综合观测网络研究黑河流域生态水文过程所面临的挑战和条件是什么？",
-                "AnswerEn": "Utilizing a comprehensive observation network addresses challenges such as the scarcity of observation data due to harsh alpine conditions and technological barriers. The network, composed of meteorological stations and superstations, allows for the collection of high-quality data on snow cover, frozen ground, and meteorological variables, providing crucial datasets for validating remote sensing products and improving hydrological modeling in the Heihe River Basin.",
-                "AnswerCn": "利用综合观测网络可以解决由于恶劣的高山条件和技术障碍导致的观测数据稀缺问题。该网络由气象站和超级站组成，能够收集关于雪盖、冻土和气象变量的高质量数据，为验证遥感产品和改善黑河流域的水文模型提供了重要的数据集。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might it be challenging to develop accurate hydrological models in alpine regions?",
-                "QuestionCn": "在高山地区开发准确的水文模型可能面临哪些挑战？",
-                "AnswerEn": "Developing accurate hydrological models in alpine regions is challenging due to the scarcity of observation data, technological barriers, and the complex terrain, which hinder data collection and validation of models and remote sensing products.",
-                "AnswerCn": "在高山地区，开发准确的水文模型面临挑战，原因包括观测数据稀缺、技术障碍以及复杂的地形，这些因素阻碍了数据收集和模型及遥感产品的验证。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the expected benefits of using cosmic-ray neutron sensors for soil moisture measurement over traditional methods?",
-                "QuestionCn": "使用宇宙射线中子传感器测量土壤湿度相较于传统方法的预期好处是什么？",
-                "AnswerEn": "Cosmic-ray neutron sensors are expected to fill the gap between traditional point measurements and large-scale remote sensing by providing non-invasive, continuous long-term soil moisture data over a mid-scale area, thus offering better spatial representation and aiding in the validation of remote sensing data.",
-                "AnswerCn": "宇宙射线中子传感器预计将填补传统点测量与大规模遥感之间的空白，通过提供非侵入性、连续的长期土壤湿度数据，覆盖中等规模区域，从而提供更好的空间代表性，并有助于验证遥感数据。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Why is there a need to integrate remote sensing data with ground-based observations for studying alpine hydrological processes?",
-                "QuestionCn": "为什么需要将遥感数据与地面观测相结合，以研究高山水文过程？",
-                "AnswerEn": "Integrating remote sensing data with ground-based observations is necessary due to the complexities and uncertainties associated with remote sensing data in alpine regions, which require validation and calibration through accurate in-situ measurements to improve the predictive understanding of hydrological processes and ecosystem functions.",
-                "AnswerCn": "由于高山地区遥感数据的复杂性和不确定性，需要将遥感数据与地面观测相结合，通过准确的现场测量进行验证和校准，以提高对水文过程和生态系统功能的预测理解。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "What are the perceived challenges in using cosmic-ray neutron sensing for soil moisture measurement in complex terrains, and how might these challenges be addressed?",
-                "QuestionCn": "在复杂地形中使用宇宙射线中子传感器进行土壤湿度测量的感知挑战有哪些，以及这些挑战可能如何得到解决？",
-                "AnswerEn": "Challenges in using cosmic-ray neutron sensing for soil moisture measurement include influences from hydrogen atoms present in soil organic matter, lattice water, vegetation, and water vapor. These can affect neutron propagation and measurement accuracy. Addressing these challenges may involve field soil moisture calibration to account for lattice water and organic matter, while the impact of vegetation might be mitigated in areas with sparse vegetation. However, rapidly growing vegetation remains a challenge without a complete correction method. Water vapor can also affect the measurement radius by up to 10%, requiring adjustments based on conditions.",
-                "AnswerCn": "使用宇宙射线中子传感器测量土壤湿度的挑战包括土壤有机质、晶格水、植被和水蒸气中氢原子的影响，这些因素会影响中子的传播和测量准确性。解决这些挑战可能需要进行现场土壤湿度校准，以考虑晶格水和有机质的影响，而在植被稀疏的地区，植被的影响可能会得到缓解。然而，快速生长的植被仍然是一个挑战，尚无完整的修正方法。水蒸气也可能影响测量半径，影响幅度可达10%，因此需要根据条件进行调整。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "How effective is the integration of wireless sensor networks (WSN) with cosmic-ray neutron sensing in enhancing the reliability of soil moisture datasets?",
-                "QuestionCn": "无线传感器网络（WSN）与宇宙射线中子传感的集成在提高土壤湿度数据集的可靠性方面有多有效？",
-                "AnswerEn": "Integrating wireless sensor networks (WSN) with cosmic-ray neutron sensing has shown to be effective in enhancing the reliability of soil moisture datasets. The comparison between WSN data and cosmic-ray neutron observations indicates that the system can effectively capture regional soil moisture, providing long-term, continuous data at the farmland scale. The combination provides a robust validation method for remote sensing-derived soil moisture data, allowing surface-level verification and improving overall dataset reliability.",
-                "AnswerCn": "将无线传感器网络（WSN）与宇宙射线中子传感相结合，已被证明在增强土壤湿度数据集的可靠性方面有效。WSN数据与宇宙射线中子观测之间的比较表明，该系统能够有效捕捉区域土壤湿度，提供农田尺度上的长期、连续数据。这种结合为遥感衍生的土壤湿度数据提供了强有力的验证方法，允许对表层进行验证，从而提高整体数据集的可靠性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In what ways might the development of next-generation ecosystem observation networks improve the predictability of hydrological processes in alpine regions?",
-                "QuestionCn": "下一代生态系统观测网络的发展可能通过以下方式提高高山地区水文过程的可预测性：",
-                "AnswerEn": "The development of next-generation ecosystem observation networks could significantly improve the predictability of hydrological processes in alpine regions by providing integrated, distributed, and multiscale datasets. These networks can offer consistent hydrometeorological data, as well as detailed observations of snow cover and frozen ground dynamics, which are critical for understanding water infiltration, surface runoff, and groundwater processes. They also facilitate the validation of remote sensing data and enhance the parameterization of hydrological models, ultimately leading to better predictive understanding of how climate change and human activities impact these processes.",
-                "AnswerCn": "下一代生态观察网络的发展可以显著提高高山地区水文过程的可预测性，通过提供综合、分布式和多尺度的数据集。这些网络可以提供一致的水气象数据，以及对雪盖和冻土动态的详细观察，这对于理解水分渗透、地表径流和地下水过程至关重要。它们还促进了遥感数据的验证，并增强了水文模型的参数化，最终导致对气候变化和人类活动如何影响这些过程的更好预测理解。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how cosmic-ray neutron sensors can effectively measure soil moisture over a large area compared to traditional point measurement methods.",
-                "QuestionCn": "我不明白宇宙射线中子传感器如何能够有效地测量大面积的土壤湿度，而传统的点测量方法却无法做到这一点。",
-                "AnswerEn": "Cosmic-ray neutron sensors measure soil moisture by detecting the intensity of fast neutrons above the ground, which is inversely related to the soil moisture content. This method has a measurement radius of approximately 300 meters, filling the scale gap between traditional point measurements and remote sensing, providing regional soil moisture information non-invasively.",
-                "AnswerCn": "宇宙射线中子传感器通过检测地面上方快中子的强度来测量土壤湿度，这与土壤湿度含量呈反比关系。这种方法的测量半径约为300米，填补了传统点测量和遥感之间的尺度差距，提供了区域土壤湿度信息，且不具侵入性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I can't make sense of the challenges faced in collecting accurate data for alpine hydrological models in regions with complex terrain.",
-                "QuestionCn": "我无法理解在复杂地形地区收集准确数据以用于高山水文模型所面临的挑战。",
-                "AnswerEn": "In alpine regions, challenges include the cold climate, high altitude, and complex topography, which inhibit complete and consistent data collection. These factors hinder the availability of high-quality data necessary for parameterizing remote sensing technologies and hydrological models, affecting the accuracy of model predictions and data validation.",
-                "AnswerCn": "在高山地区，寒冷的气候、高海拔和复杂的地形等挑战妨碍了完整和一致的数据收集。这些因素阻碍了高质量数据的获取，而这些数据对于参数化遥感技术和水文模型是必要的，从而影响了模型预测的准确性和数据验证。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please evaluate different data collection methods used for measuring soil moisture and their respective advantages in capturing the spatial distribution of soil moisture in a region.",
-                "QuestionCn": "请评估用于测量土壤湿度的不同数据收集方法及其在捕捉一个地区土壤湿度空间分布方面的各自优点。",
-                "AnswerEn": "Traditional methods for measuring soil moisture, such as gravimetric methods, neutron probe, TDR, and FDR, are point measurement techniques with limited spatial representation. In contrast, the cosmic-ray neutron method provides a non-invasive, passive approach for measuring soil moisture at a mesoscale, covering a radius of approximately 300 m and a depth of 12-76 cm. This method effectively bridges the gap between point-scale measurements and large-scale remote sensing, offering more representative soil moisture data for regional analysis.",
-                "AnswerCn": "传统的土壤湿度测量方法，如重力法、中子探测器、时域反射法（TDR）和频域反射法（FDR），都是点测量技术，具有有限的空间代表性。相比之下，宇宙射线中子法提供了一种非侵入性、被动的土壤湿度测量方法，覆盖半径约为300米，深度为12-76厘米。该方法有效地弥补了点尺度测量与大尺度遥感之间的差距，为区域分析提供了更具代表性的土壤湿度数据。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Please explore the methods used to ensure the reliability and accuracy of soil moisture data obtained through cosmic-ray neutron systems.",
-                "QuestionCn": "请探讨确保通过宇宙射线中子系统获得的土壤湿度数据的可靠性和准确性的方法。",
-                "AnswerEn": "The reliability and accuracy of soil moisture data from cosmic-ray neutron systems can be ensured by calibrating the system with local soil samples to determine N0, the fast neutron count in dry soil conditions. Additionally, data screening criteria are applied to remove unreliable data, such as those with low voltage, high relative humidity, or significant deviations in neutron counts. Pressure correction and site-specific calibration help mitigate the influence of environmental factors, such as vegetation and atmospheric moisture, to produce more accurate soil moisture data.",
-                "AnswerCn": "通过使用当地土壤样本对宇宙射线中子系统进行校准，可以确保土壤湿度数据的可靠性和准确性，以确定干燥土壤条件下的快速中子计数N0。此外，应用数据筛选标准以去除不可靠的数据，例如低电压、高相对湿度或中子计数的显著偏差。压力修正和特定地点的校准有助于减轻环境因素（如植被和大气湿度）的影响，从而生成更准确的土壤湿度数据。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "The Heihe Integrated Observatory Network: A basin-scale land surface processes observatory in China",
+        "referenceCn": null,
+        "referenceEn": "Liu, S.M., Li, X., Xu, Z.W., Che, T., Xiao, Q., Ma, M.G., Liu, Q.H., Jin, R., Guo, J.W., Wang, L.X., Wang, W.Z., Qi, Y., Li, H.Y., Xu, T.R., Ran, Y.H., Hu, X.L., Shi, S.J., Zhu, Z.L., Tan, J.L., Zhang, Y., & Ren, Z.G. (2018). The Heihe Integrated Observatory Network: A basin-scale land surface processes observatory in China. Vadose Zone Journal, 17, 180072. doi:10.2136/vzj2018.04.0072."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Integrated hydrometeorological, snow and frozen-ground observations in the alpine region of the Heihe River Basin, China",
+        "referenceCn": null,
+        "referenceEn": "Che, T., Li, X., Liu, S., Li, H., Xu, Z., Tan, J., Zhang, Y., Ren, Z., Xiao, L., Deng, J., Jin, R., Ma, M., Wang, J., & Yang, X. (2019). Integrated hydrometeorological, snow and frozen-ground observations in the alpine region of the Heihe River Basin, China. Earth System Science Data, 11, 1483-1499"
+      },
+      {
+        "titleCn": "宇宙射线快中子法在农田土壤水分测量中的研究与应用",
+        "titleEn": null,
+        "referenceCn": "焦其顺, 朱忠礼, 刘绍民, 晋锐, 杜帆. (2013). 宇宙射线快中子法在农田土壤水分测量中的研究与应用. 地球科学进展, 28(10), 1136-1143.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
+        "referenceCn": null,
+        "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "冻土",
+        "nameEn": "Frozen Ground"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "阿柔超级站",
+        "keywordEn": "Arou superstation"
+      },
+      {
+        "keywordCn": "黑河流域上游",
+        "keywordEn": "Upper reaches of the Heihe River"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2022",
+        "keywordEn": "2022",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
+        "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "The alpine region is important in riverine and watershed ecosystems as a contributor of freshwater, providing and stimulating specific habitats for biodiversity. In parallel, recent climate change, human activities, and other perturbations may disturb hydrological processes and eco-functions, creating the need for next-generation observational and modeling approaches to advance a predictive understanding of such processes in the alpine region. Water resources in the alpine region are headwaters that need to be regulated to sustain downstream ecosystems. However, perturbations induced by nature/climate change and human activities in recent years have significantly reformed hydrological processes and eco-functions. Accurate estimation and prediction of hydrological processes and their key impact factors has since become crucial.",
+        "Unfortunately, the scarcity of observation data in the alpine region, due to the difficulties of access and technological barriers, has hindered alpine hydrological modeling and associated research yet motivated the development of next-generation ecosystem observation networks and experiments. In comparison with the observations, using remote sensing data combined with data assimilation could improve the prediction of hydrological processes. However, due to the complexities of the earth system, there exist various sources of uncertainties in remote sensing data (especially in the alpine region), which have to be validated and calibrated. In summary, to fill the knowledge gap and promote alpine region hydrology research, an integrated, distributed and multiscale observation dataset is essential and expected to provide accurate forcing data for hydrological modeling, validate remote sensing data, allow the evaluation of distributed models and ultimately improve a predictive understanding of alpine hydrological processes and ecosystem functions. In alpine hydrology, in addition to consistent hydrometeorological data obtained from distributed meteorological stations, snow cover and frozen ground are two important indexes and driving forces that manipulate hydrological processes. The maximum snow water equivalent (SWE) before ablation determines the storage of snowmelt – a major source of freshwater in the alpine region, while freeze-thaw cycles (FTCs) and soil moisture within the active layer alter water infiltration and, consequently, surface runoff and groundwater. To promote alpine hydrology research, the International Network for Alpine Research Catchment Hydrology (INARCH) was launched in 2015 by the Global Energy and Water Exchanges (GEWEX) project of the World Climate Research Programme (WCRP), involving 18 catchments around the world. The INARCH has since connected individual observatories into an international network and data-share platform to lead frontier research on alpine region hydrometeorology and snow observation. Another community-based observation network, the Circumpolar Active Layer Monitoring (CALM) network, was initiated in the early 1990s to observe the response of the active layer and near-surface permafrost to climate change. The Heihe River Basin (HRB) is the second largest inland river basin in China and is known for its heterogeneous landscapes, diverse ecosystems, unique geographical characteristics and climate change over recent decades. As a major component of the ecohydrological processes in the arid/semi-arid HRB, the alpine hydrological processes, especially those related to snow cover and frozen ground in the upper reaches, have great impacts on runoff in the mountainous region, which then regulate agricultural development in the middle reaches and the ecosystems of the lower reaches.",
+        "In recent years, with climate warming, permafrost degradation has significantly affected runoff and the carbon cycle (Peng et al., 2016; Gao et al., 2018). Snow cover is widely distributed with unique characteristics in the study area. In the high-altitude mountainous region (elevation > 3800 m), influenced by the local microclimate and low temperature, snowfall could occur in any season. Temporary snow is the major snow cover type in the region at middle and low elevations because strong solar radiation and high air temperature lead to fast melting and sublimation of the snow. Drifting snow is also commonly observed in the region, which may lead to the redistribution of snowpack in high elevation regions (Essery et al., 1999; Li et al., 2014).",
+        "Blowing (drifting) snow is commonly observed in the Qilian mountain due to its high altitude and complex terrain. It is important to estimate the occurrence of blowing snow because it may cause redistributions of the snow cover and influence the sublimation of snow.",
+        "Soil heat conductivity is difficult to analyze because it is a function of soil density, soil moisture content (ice content in frozen ground), and soil temperature, which cannot be easily calculated using a simple formula. Therefore, site observations can be utilized to evaluate the parameterization of alpine hydrologic models."
+      ],
+      "research objective": [
+        "The current study presents a suite of datasets consisting of long-term hydrometeorological, snow cover, and frozen ground data for investigating watershed science and functions from an integrated, distributed, and multiscale observation network in the upper reaches of the Heihe River Basin (HRB) in China.",
+        "This paper introduces the infrastructure of the integrated alpine hydrology observation network in the HRB and the complete datasets collected in recent years.",
+        "The associated open-access datasets include high-quality hydrometeorological data with specific respect to snow and frozen ground observations at the sub-basin and basin scales, which aims to address a variety of scientific questions including but not limited to: (1) how to provide accurate and effective forcing data for alpine hydrological models, (2) how to integrate observation, simulation and the acquired datasets for informative understanding, and (3) how perturbations (climate change and human activities) alter fundamental processes."
+      ],
+      "challenges": [
+        "However, several formidable challenges, including the cold and harsh climate, high altitude, and complex topography, inhibit complete and consistent data collection where/when needed, which hinders the development of remote sensing technologies and alpine hydrological models.",
+        "Unfortunately, the scarcity of observation data in the alpine region, due to the difficulties of access and technological barriers, has hindered alpine hydrological modeling and associated research yet motivated the development of next-generation ecosystem observation networks and experiments. However, the above modeling efforts suffered from 1) the availability of the forcing data (only two weather stations operated by the Chinese Meteorological Administration functioned in the upper reaches of the HRB) and 2) a lack of high-quality snow and frozen ground data for parameterization.",
+        "Unfortunately, this did not work well due to the influence of strong wind. Therefore, snow density data, which can be calculated using snow depth and SWE data, are not available at present."
+      ],
+      "methods": [
+        "Gap-free meteorological and hydrological data were monitored from an observation network connecting a group of automatic meteorological stations (AMSs). In addition, to capture snow accumulation and ablation processes, snow cover properties were collected from a snow observation superstation using state-of-the-art techniques and instruments. High-resolution soil physics datasets were also obtained to capture the freeze-thaw processes from a frozen ground observation superstation.",
+        "Considering the characteristics of the study site, an integrated, distributed and multiscale hydrometeorological – snow – frozen ground observation network has been established with seven automatic meteorological stations (AMSs) and two superstations. At the basin scale, the observation aims to collect data for investigating the meteorological driving forces and for validation of the alpine hydrological models. At the sub-basin scale, small-scale observations and measurements focus on data such as precipitation, soil temperature and moisture, which are used to develop and improve hydrologic models, as well as to validate remote sensing products at medium to coarse resolutions (Jin et al., 2014). At the two superstations for snow cover and frozen ground observations, remote sensing products can be further validated using fine-resolution data. In total, seven AMSs, as well as the frozen ground and snow superstations (also incorporating meteorological observations), were established in the study area during the intensive observation period (IOP: 2013 -2014) to obtain the spatially distributed meteorological variables. After the IOP, four typical AMSs were selected and retained for continuous observation, which is expected to provide long-term datasets. The observed meteorological variables include wind (speed and direction), air temperature, humidity, infrared temperature, air pressure, four-component radiation, and precipitation. Accumulation and depletion processes were measured automatically at the Yakou snow superstation. The observed components included snow depth, snow water equivalent (SWE, measured by GammaMONitor, GMON), albedo of the snow surface and blowing (drifting) snow flux (measured by FlowCapt). Soil temperature and moisture were measured within six layers at each AMS, while evapotranspiration (ET) was observed by eddy covariance (EC) at three AMSs located in permafrost, seasonally frozen ground and a transient zone to observe freeze-thaw (FT) processes. At the sub-basin scale, a wireless sensor network (WSN) with 40 nodes was established to capture seasonal changes in soil temperature and moisture. At the A’rou frozen ground superstation, soil temperature and moisture profiles were intensively measured in eighteen layers to a depth of 3.2 m (in a nested pattern with more layers in the topsoil) to obtain the soil hydrothermal features under freeze-thaw cycles (FTCs). In addition, thermal conductivity and hydraulic conductivity in the topsoil were also measured to observe the dynamic hydrothermal processes within.",
+        "Snow depth was measured by SR50A (Campbell, USA), which determines the distance between the sensor and the target by sending out ultrasonic pulses and listening for the returning echoes reflected from the target. Snow water equivalent (SWE) was measured by GMON (CS725 GammaMONitor, Campbell, USA) from 2014/1/1 to 2017/12/31 at a temporal resolution of 6 hr. FlowCapt (IAV, Switzerland) was used to measure the number of blowing snow grains at 3 heights (0-1 m, 1-2 m, and 2-3 m) every 10 mins."
+      ],
+      "dataset": [
+        "The current study presents a suite of datasets consisting of long-term hydrometeorological, snow cover, and frozen ground data for investigating watershed science and functions from an integrated, distributed, and multiscale observation network in the upper reaches of the Heihe River Basin (HRB) in China. Gap-free meteorological and hydrological data were monitored from an observation network connecting a group of automatic meteorological stations (AMSs). In addition, to capture snow accumulation and ablation processes, snow cover properties were collected from a snow observation superstation using state-of-the-art techniques and instruments. High-resolution soil physics datasets were also obtained to capture the freeze-thaw processes from a frozen ground observation superstation. The updated datasets were released to scientists with multidisciplinary backgrounds (i.e., cryosphere science, hydrology, and meteorology), and they are expected to serve as a testing platform to provide accurate forcing data and validate and evaluate remote sensing products and hydrological models for a broader community.",
+        "This paper introduces the infrastructure of the integrated alpine hydrology observation network in the HRB and the complete datasets collected in recent years. Composed of seven standard hydrometeorological stations, one snow superstation and one frozen ground superstation, the observation network serves as an integrated research platform aiming to provide prominent datasets (e.g., hydrometeorology, snow, and frozen ground) of the hydrometeorological processes in the upper reaches of the HRB, which is expected to support alpine region hydrological model development and simulations along with remote sensing observation.",
+        "A comprehensive snow dataset from the Yakou snow superstation has been updated since the summer of 2013. The observed snow variables included snow depth, snow water equivalent (SWE) and blowing (drifting) snow. Data obtained from 2014/1/1 to 2017/12/31 are summarized in Figure 4, with additional plots for precipitation, ET, soil temperature and moisture. The datasets are available from 2012/12/05 to 2017/12/31, with intermittent loss mostly due to power loss and sensor malfunctions at high altitudes.",
+        "In this paper, a suite of alpine hydrology datasets observed from an integrated, distributed and multiscale hydrometeorological – snow – frozen ground observation network in the upper reaches of the Heihe River Basin (HRB) is presented."
+      ],
+      "findings": [],
+      "backgroundCn": [
+        "阿尔卑斯地区在河流和流域生态系统中具有重要意义，作为淡水的贡献者，提供并刺激特定栖息地的生物多样性。与此同时，近期的气候变化、人类活动和其他扰动可能会干扰水文过程和生态功能，这就需要下一代观测和建模方法来推进对阿尔卑斯地区这些过程的预测理解。阿尔卑斯地区的水资源是需要调节的源头水，以维持下游生态系统。然而，近年来自然/气候变化和人类活动引发的扰动显著改变了水文过程和生态功能。因此，准确估计和预测水文过程及其关键影响因素变得至关重要。",
+        "不幸的是，由于进入困难和技术障碍，阿尔卑斯地区观测数据的稀缺阻碍了阿尔卑斯水文建模和相关研究，但也促使了下一代生态系统观测网络和实验的发展。与观测数据相比，结合遥感数据和数据同化可以改善水文过程的预测。然而，由于地球系统的复杂性，遥感数据（尤其是在阿尔卑斯地区）存在各种不确定性来源，这些不确定性需要进行验证和校准。总之，为了填补知识空白并促进阿尔卑斯地区水文研究，集成的、分布式的和多尺度的观测数据集是必不可少的，预计将为水文建模提供准确的强迫数据，验证遥感数据，评估分布式模型，并最终改善对阿尔卑斯水文过程和生态系统功能的预测理解。在阿尔卑斯水文学中，除了从分布式气象站获得的一致的水文气象数据外，雪盖和冻土是两个重要的指标和驱动因素，它们影响水文过程。融化前的最大雪水当量（SWE）决定了雪融水的储存——这是阿尔卑斯地区淡水的主要来源，而冻融循环（FTC）和活层内的土壤水分则改变了水的渗透，从而影响地表径流和地下水。为了促进阿尔卑斯水文研究，国际阿尔卑斯研究流域水文学网络（INARCH）于2015年由世界气候研究计划（WCRP）的全球能量与水交换（GEWEX）项目发起，涉及全球18个流域。自那时以来，INARCH将各个观测站连接成一个国际网络和数据共享平台，以引领阿尔卑斯地区水文气象和雪观测的前沿研究。另一个基于社区的观测网络，极圈活层监测（CALM）网络，始于1990年代初，旨在观察活层和近地表永久冻土对气候变化的响应。黑河流域（HRB）是中国第二大内陆河流域，以其异质的景观、多样的生态系统、独特的地理特征和近年来的气候变化而闻名。作为干旱/半干旱HRB生态水文过程的主要组成部分，阿尔卑斯水文过程，特别是与上游雪盖和冻土相关的过程，对山区的径流产生重大影响，从而调节中游的农业发展和下游的生态系统。",
+        "近年来，随着气候变暖，永冻土退化显著影响了径流和碳循环（Peng et al., 2016; Gao et al., 2018）。研究区域内雪盖分布广泛，具有独特的特征。在高海拔山区（海拔 > 3800 米），受当地微气候和低温的影响，任何季节都可能出现降雪。临时雪是该地区中低海拔地区的主要雪盖类型，因为强烈的太阳辐射和高气温导致雪的快速融化和升华。漂移雪在该地区也常见，这可能导致高海拔地区雪层的重新分布（Essery et al., 1999; Li et al., 2014）。",
+        "由于祁连山的高海拔和复杂地形，常常观察到吹雪（漂移雪）。估计吹雪的发生非常重要，因为它可能导致雪盖的重新分布，并影响雪的升华。",
+        "土壤热导率的分析比较困难，因为它是土壤密度、土壤水分含量（在冻土中为冰含量）和土壤温度的函数，而这些因素无法通过简单的公式轻易计算。因此，可以利用现场观测来评估高山水文模型的参数化。"
+      ],
+      "research objectiveCn": [
+        "本研究提供了一套数据集，包括长期的水文气象、雪盖和冻土数据，用于从一个综合的、分布式的和多尺度的观测网络中研究中国黑河流域上游的流域科学和功能。",
+        "本文介绍了HRB地区综合阿尔卑斯水文观测网络的基础设施以及近年来收集的完整数据集。",
+        "相关的开放获取数据集包括高质量的水文气象数据，特别是关于雪和冻土观测的子流域和流域尺度的数据，旨在解决多种科学问题，包括但不限于：(1) 如何为高山水文模型提供准确有效的强迫数据，(2) 如何整合观测、模拟和获取的数据集以获得有意义的理解，以及 (3) 如何扰动（气候变化和人类活动）改变基本过程。"
+      ],
+      "challengesCn": [
+        "然而，寒冷和恶劣的气候、高海拔和复杂的地形等几项严峻挑战，阻碍了在需要的地方和时间进行全面和一致的数据收集，这妨碍了遥感技术和高山水文模型的发展。",
+        "不幸的是，由于进入困难和技术障碍，阿尔卑斯地区观测数据的稀缺阻碍了阿尔卑斯水文模型及相关研究的发展，但也促使了下一代生态观测网络和实验的开发。然而，上述建模工作面临着两个主要问题：1）强迫数据的可用性（只有中国气象局在HRB上游运营的两个气象站正常工作）；2）缺乏高质量的雪和冻土数据用于参数化。",
+        "不幸的是，由于强风的影响，这项工作并不顺利。因此，目前无法获得可以通过雪深和雪水当量（SWE）数据计算的雪密度数据。"
+      ],
+      "methodsCn": [
+        "无间断的气象和水文数据通过连接一组自动气象站（AMSs）的观测网络进行监测。此外，为了捕捉雪的积累和融化过程，使用先进的技术和仪器从一个雪观测超级站收集了雪盖特性数据。高分辨率的土壤物理数据集也从一个冻土观测超级站获得，以捕捉冻融过程。",
+        "考虑到研究地点的特征，建立了一个综合的、分布式的多尺度水文气象-雪-冻土观测网络，包含七个自动气象站（AMS）和两个超级站。在流域尺度上，观测旨在收集数据，以研究气象驱动因素并验证阿尔卑斯水文模型。在子流域尺度上，小规模的观测和测量集中在降水、土壤温度和湿度等数据上，这些数据用于开发和改进水文模型，以及验证中等到粗分辨率的遥感产品（Jin et al., 2014）。在两个雪盖和冻土观测的超级站中，可以利用高分辨率数据进一步验证遥感产品。在集中的观测期（IOP：2013-2014）期间，在研究区域建立了七个AMS以及冻土和雪超级站（也包含气象观测），以获取空间分布的气象变量。在IOP之后，选择并保留了四个典型的AMS进行持续观测，预计将提供长期数据集。观测的气象变量包括风速和风向、气温、湿度、红外温度、气压、四分量辐射和降水。积雪和融雪过程在雅口雪超级站自动测量，观测的组成部分包括雪深、雪水当量（SWE，由GammaMONitor测量）、雪面反照率和风吹（飘雪）通量（由FlowCapt测量）。在每个AMS内，土壤温度和湿度在六个层次上进行测量，而蒸散发（ET）则在位于永久冻土、季节性冻土和过渡区的三个AMS上通过涡度协方差（EC）进行观测，以观察冻融（FT）过程。在子流域尺度上，建立了一个包含40个节点的无线传感器网络（WSN），以捕捉土壤温度和湿度的季节变化。在阿柔冻土超级站，土壤温度和湿度剖面在十八个层次上进行密集测量，深度达到3.2米（采用嵌套模式，表层有更多层次），以获取冻融循环（FTC）下的土壤水热特征。此外，还测量了表层土壤的热导率和水力导率，以观察动态水热过程。",
+        "雪深通过SR50A（美国Campbell）测量，该设备通过发出超声波脉冲并监听从目标反射回来的回声来确定传感器与目标之间的距离。雪水当量（SWE）由GMON（CS725 GammaMONitor，美国Campbell）测量，测量时间为2014年1月1日至2017年12月31日，时间分辨率为6小时。FlowCapt（瑞士IAV）用于测量在3个高度（0-1米、1-2米和2-3米）每10分钟的吹雪颗粒数量。"
+      ],
+      "datasetCn": [
+        "本研究提供了一套数据集，包括长期的水文气象、雪盖和冻土数据，用于从综合、分布式和多尺度观测网络研究中国黑河流域上游的流域科学和功能。通过连接一组自动气象站（AMS）的观测网络，监测了无间隙的气象和水文数据。此外，为了捕捉雪的积累和融化过程，采用先进的技术和仪器从雪观测超级站收集了雪盖特性数据。还获得了高分辨率的土壤物理数据集，以捕捉冻融过程，这些数据来自冻土观测超级站。更新的数据集已向具有多学科背景（如冰冻圈科学、水文学和气象学）的科学家发布，预计将作为测试平台，为更广泛的社区提供准确的强迫数据，并验证和评估遥感产品和水文模型。",
+        "本文介绍了HRB地区综合阿尔卑斯水文观测网络的基础设施及近年来收集的完整数据集。该观测网络由七个标准水文气象站、一个雪超级站和一个冻土超级站组成，作为一个综合研究平台，旨在提供HRB上游水文气象过程的显著数据集（如水文气象、雪和冻土），预计将支持阿尔卑斯地区水文模型的开发和模拟以及遥感观测。",
+        "来自Yakou雪超级站的综合雪数据集自2013年夏季以来已更新。观察到的雪变量包括雪深、雪水当量（SWE）和吹雪（漂雪）。2014年1月1日至2017年12月31日的数据在图4中进行了总结，并附有降水、蒸散发、土壤温度和湿度的额外图表。数据集的可用时间为2012年12月5日至2017年12月31日，间歇性丢失主要是由于高海拔地区的电力损失和传感器故障。",
+        "在本文中，展示了一套来自于黑河上游集成的、分布式的多尺度水文气象-雪-冻土观测网络的阿尔卑斯水文数据集。"
+      ],
+      "findingsCn": []
+    },
+    {
+      "background": [
+        "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括: 称重法(烘干法)、中子仪法、电容法、张力计法、时域反射计(Time-Domain Ｒeflectometry，TDＲ)、频域反射计(Frequency-Domain Ｒeflectometry，FDＲ)等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米(航空遥感)到数十公里(航天遥感)之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
+      ],
+      "research objective": [
+        "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
+      ],
+      "challenges": [
+        "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不只存在于土壤水分中，在晶格水、土壤有机质、植被以及水汽中均存在氢原子，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
+      ],
+      "methods": [
+        "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集(Soil-NET部分)和降雨数据集(大满站)。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据(Wireless Sensor Network，WSN)进行对比分析，以研究宇宙射线观测结果的可靠性。"
+      ],
+      "dataset": [
+        "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP(SImple SOil MOisture Probe)土壤水分/温度探头，分别探测4，10，20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集(大满超级站)主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
+      ],
+      "findings": [
+        "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
+      ],
+      "backgroundCn": [
+        "区域地表土壤水分的获取是长期以来的研究难点。近年来，利用宇宙射线快中子法测量区域地表土壤含水量的研究得到了长足发展。作为一种新型的中尺度土壤水分无损测量方法，宇宙射线快中子法能够获得半径300 m左右源区内的土壤水分，较大的测量源区使其填补了传统点观测和遥感大面积观测尺度之间的空白。传统的测量方法包括：称重法（烘干法）、中子仪法、电容法、张力计法、时域反射计（Time-Domain Reflectometry，TDR）、频域反射计（Frequency-Domain Reflectometry，FDR）等，这些测量方法都属于有损、点测量方式，其测量尺度多为小尺度，空间代表性差，难以得到土壤含水量在区域分布上的信息。遥感监测土壤水分的可行性研究始于20世纪60年代，应用研究在70年代中期开展起来。利用遥感技术可以实现快速、大面积区域土壤水分监测，但遥感获取的土壤含水量是像元尺度的平均值，其空间分辨率一般在数十米（航空遥感）到数十公里（航天遥感）之间，且只是飞机或卫星过境时刻的瞬时值，无法获取连续数据，限制了遥感大尺度测量在实际土壤水分监测中的应用。传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。近年来，利用宇宙射线快中子测量地表土壤含水量的研究逐渐引起人们的重视，地表以上宇宙射线快中子强度与土壤水分含量呈反比关系，通过架设在地表上方的中子探头测量宇宙射线快中子的强度，从而反演地表土壤水分含量。宇宙射线快中子法是一种被动、非侵入式的中尺度土壤水分测量方法，其测量半径在300 m左右，有效测量深度为12 ～ 76 cm。"
+      ],
+      "research objectiveCn": [
+        "本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。本文分析了张掖绿洲农田中开展的区域土壤含水量观测实验结果，表明宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。"
+      ],
+      "challengesCn": [
+        "传统点测量和遥感大尺度监测之间存在一个缺口，即无法获取农田或小流域尺度上的区域土壤水分信息。同样，在验证遥感反演的土壤水分过程中无法获取所需的像元尺度土壤水分数据。宇宙射线源区内的氢原子不仅存在于土壤水分中，还存在于晶格水、土壤有机质、植被以及水汽中，这些氢原子源的存在势必会对快中子的传播产生影响。Zreda等指出晶格水的存在会使得宇宙射线探测深度降低，不过在认为晶格水、土壤有机质不变的情况下，这些影响可以通过一次源区实地土壤水分校正进行消除；在稀疏植被区，植被的影响也可以根据实地土壤水分校正进行消除，但在快速生长植被的下垫面下，植被含水量对观测存在一定的影响，目前还没有完善的方法对此进行校正；水汽的存在会影响宇宙射线的测量源区，MCNPX模拟表明饱和水汽下的探测半径会比干空气下的探测半径下降10%左右。"
+      ],
+      "methodsCn": [
+        "本文使用的数据集均来自2012年“黑河流域生态—水文综合遥感观测试验”，主要包括宇宙射线土壤水分数据集、无线传感器网络数据集（Soil-NET部分）和降雨数据集（大满站）。在进行土壤水分观测时只需要安装快中子探头即可，本试验初期即只安装一个快中子探头进行土壤水分的观测。本文利用宇宙射线仪器对黑河中游张掖地区农田土壤水分进行长时间序列连续监测，并与土壤水分无线传感器数据（Wireless Sensor Network，WSN）进行对比分析，以研究宇宙射线观测结果的可靠性。"
+      ],
+      "datasetCn": [
+        "宇宙射线土壤水分数据集主要包括快中子原始数据、气压原始数据等，采样频率为1小时，利用快中子数据可以反演研究区的土壤水分信息；SoilNET主要包含位于大满超级站的MODIS像元内的50个SoilNET土壤水分/温度节点观测数据，每个节点可以连接4个SISOMOP(SImple SOil MOisture Probe)土壤水分/温度探头，分别探测4，10，20和40 cm土壤水分和温度，其中19个分布在宇宙射线源区内。SoilNET节点的采样频率为10分钟，文中主要使用SoilNET节点土壤水分数据对宇宙射线观测结果进行验证，使用时需将原始10分钟数据聚合为1小时数据，以便与宇宙射线数据同步；降雨数据集(大满超级站)主要包含原始降雨数据，采样频率为10分钟，使用过程中需将原始数据聚合为1小时数据，以便分析宇宙射线土壤水分变化与降雨之间的关系。"
+      ],
+      "findingsCn": [
+        "宇宙射线土壤水分观测系统能够有效地获取区域土壤含水量，不仅可以准确获取长时间序列农田尺度土壤水分，也将为遥感反演的土壤水分提供真正意义上的面状地面验证数据。通过对比可以得出，宇宙射线反映的是一种面上的土壤水分变化值，能够很好地反映出农田下垫面下土壤水分的变化趋势。剔除灌溉期数据后相关系数明显升高，达到0.86，ＲMSE降低为0.028 m3/m3。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Can a dataset using cosmic-ray neutron sensing be effectively used to measure soil moisture at a regional scale?",
+        "QuestionCn": "使用宇宙射线中子传感技术的数据集能否有效用于区域尺度的土壤湿度测量？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is it possible to perform continuous long-term monitoring of soil moisture using cosmic-ray instruments in agricultural areas?",
+        "QuestionCn": "在农业地区使用宇宙射线仪器进行土壤湿度的连续长期监测是否可行？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Are there challenges related to data collection for soil moisture due to factors like high altitude and complex topography?",
+        "QuestionCn": "由于高海拔和复杂地形等因素，土壤湿度的数据收集面临挑战吗？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Does the data collection in the field primarily rely on automatic meteorological stations, wireless sensor networks, or cosmic-ray neutron probes?",
+        "QuestionCn": "现场的数据收集主要依赖于自动气象站、无线传感器网络还是宇宙射线中子探测器？",
+        "AnswerEn": "automatic meteorological stations, wireless sensor networks, cosmic-ray neutron probes",
+        "AnswerCn": "自动气象站、无线传感器网络、宇宙射线中子探测器",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Are the challenges in collecting data mainly related to climate conditions, technological limitations, or geographical access?",
+        "QuestionCn": "收集数据的挑战主要与气候条件、技术限制或地理可达性有关吗？",
+        "AnswerEn": "climate conditions",
+        "AnswerCn": "气候条件",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Is the soil moisture dataset in the field derived from traditional methods, remote sensing, or cosmic-ray neutron techniques?",
+        "QuestionCn": "该领域的土壤湿度数据集是通过传统方法、遥感技术还是宇宙射线中子技术获得的？",
+        "AnswerEn": "cosmic-ray neutron techniques",
+        "AnswerCn": "宇宙射线中子技术",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the primary challenges faced in collecting data for alpine hydrological processes in the Heihe River Basin?",
+        "QuestionCn": "在黑河流域收集高山水文过程数据面临的主要挑战是什么？",
+        "AnswerEn": "cold and harsh climate, high altitude, complex topography",
+        "AnswerCn": "寒冷严酷的气候，高海拔，复杂的地形",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methods are used to validate soil moisture data obtained from cosmic-ray neutron sensing?",
+        "QuestionCn": "用于验证从宇宙射线中子传感器获得的土壤湿度数据的方法有哪些？",
+        "AnswerEn": "wireless sensor network",
+        "AnswerCn": "无线传感器网络",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "What is an example of a dataset that integrates multisource data for hydrological modeling in alpine regions?",
+        "QuestionCn": "一个整合多源数据用于高山地区水文建模的数据集示例是什么？",
+        "AnswerEn": "An example of such a dataset is one that combines long-term hydrometeorological, snow cover, and frozen ground data from an integrated, distributed, and multiscale observation network in the upper reaches of the Heihe River Basin in China. This dataset includes high-quality observations from automatic meteorological stations and superstations, capturing key variables like snow depth, snow water equivalent, and soil temperature and moisture.",
+        "AnswerCn": "这样的数据集的一个例子是结合了来自中国黑河流域上游的一个综合、分布式和多尺度观测网络的长期水文气象、雪盖和冻土数据。该数据集包括来自自动气象站和超级站的高质量观测，捕捉了雪深、雪水当量以及土壤温度和湿度等关键变量。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Can you provide an example of a challenge faced when measuring soil moisture using cosmic-ray neutron sensors?",
+        "QuestionCn": "可以提供一个使用宇宙射线中子传感器测量土壤湿度时面临的挑战的例子吗？",
+        "AnswerEn": "A challenge when using cosmic-ray neutron sensors is the presence of hydrogen atoms in sources other than soil moisture, such as lattice water, soil organic matter, vegetation, and water vapor. These sources can affect the propagation of fast neutrons and therefore the accuracy of soil moisture measurements. Corrections for these influences are necessary, but they can be complex, especially in areas with rapidly growing vegetation or varying atmospheric conditions.",
+        "AnswerCn": "使用宇宙射线中子传感器时，一个挑战是氢原子存在于土壤水分以外的其他来源，例如晶格水、土壤有机质、植被和水蒸气。这些来源会影响快中子的传播，从而影响土壤水分测量的准确性。需要对这些影响进行修正，但在植被快速生长或气候条件变化的地区，这些修正可能会很复杂。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of data collected using cosmic ray neutron sensing for soil moisture measurement?",
+        "QuestionCn": "使用宇宙射线中子传感器收集的土壤湿度测量数据的特征是什么？",
+        "AnswerEn": "fast neutron count, atmospheric pressure, corrected fast neutron count, non-invasive, passive measurement, radius of approximately 300 m, effective depth ranging from 12 to 76 cm, sampled at a frequency of 1 hour",
+        "AnswerCn": "快中子计数、大气压力、校正快中子计数、非侵入式、被动测量、半径约300米、有效深度范围从12到76厘米、采样频率为1小时。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the specific attributes measured in soil moisture datasets collected using wireless sensor networks?",
+        "QuestionCn": "使用无线传感器网络收集的土壤湿度数据集中测量的具体属性有哪些？",
+        "AnswerEn": "soil moisture, temperature at various depths (4 cm, 10 cm, 20 cm, 40 cm), 10-minute frequency",
+        "AnswerCn": "土壤湿度，各深度温度（4厘米、10厘米、20厘米、40厘米），10分钟频率",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the effective measurement depth range of the cosmic-ray neutron soil moisture measurement method?",
+        "QuestionCn": "宇宙射线中子土壤湿度测量方法的有效测量深度范围是多少？",
+        "AnswerEn": "12-76 cm",
+        "AnswerCn": "12-76 厘米",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does 'cosmic-ray neutron method' mean in the context of soil moisture measurement?",
+        "QuestionCn": "在土壤湿度测量的背景下，“宇宙射线中子法”是什么意思？",
+        "AnswerEn": "The 'cosmic-ray neutron method' is a non-invasive, passive soil moisture measurement technique that uses cosmic-ray fast neutrons to assess soil moisture over a medium-scale area, typically with a measurement radius of approximately 300 meters and an effective measurement depth of 12 to 76 cm. This method provides soil moisture data that fills the scale gap between traditional point measurements and large-scale remote sensing observations.",
+        "AnswerCn": "“宇宙射线中子法”是一种非侵入性、被动的土壤湿度测量技术，利用宇宙射线快速中子评估土壤湿度，通常测量半径约为300米，有效测量深度为12至76厘米。该方法提供的土壤湿度数据填补了传统点测量与大规模遥感观测之间的尺度差距。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What are 'gap-free meteorological and hydrological data' in the context of observation networks?",
+        "QuestionCn": "在观测网络的背景下，什么是“无缺口气象和水文数据”？",
+        "AnswerEn": "'Gap-free meteorological and hydrological data' refers to continuous, uninterrupted datasets collected from observation networks, such as automatic meteorological stations (AMSs), which provide comprehensive coverage of meteorological variables and hydrological processes. These datasets are essential for hydrological modeling and validating remote sensing data, particularly in challenging alpine environments where data scarcity is a common issue.",
+        "AnswerCn": "“无间隙的气象和水文数据”是指从观测网络（如自动气象站）收集的连续、不间断的数据集，这些数据集提供了气象变量和水文过程的全面覆盖。这些数据集对于水文建模和验证遥感数据至关重要，特别是在数据稀缺的挑战性高山环境中。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is meant by 'integrated, distributed and multiscale observation network' in hydrological research?",
+        "QuestionCn": "在水文研究中，“集成、分布和多尺度观测网络”是什么意思？",
+        "AnswerEn": "An 'integrated, distributed and multiscale observation network' in hydrological research refers to a system of interconnected observation sites, including automatic meteorological stations and superstations, designed to collect data across multiple spatial scales and various environmental conditions. This approach aims to provide comprehensive datasets for studying hydrometeorological processes, supporting model development, and validating remote sensing products at different resolutions.",
+        "AnswerCn": "“集成的、分布式的多尺度观测网络”在水文研究中指的是一个互联的观测站点系统，包括自动气象站和超级站，旨在跨多个空间尺度和各种环境条件收集数据。这种方法旨在提供全面的数据集，以研究水气象过程，支持模型开发，并在不同分辨率下验证遥感产品。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How does the data collection method using cosmic-ray neutron probes compare to traditional soil moisture measurement techniques in terms of spatial scale and invasiveness?",
+        "QuestionCn": "使用宇宙射线中子探测器的数据收集方法与传统土壤湿度测量技术在空间尺度和侵入性方面有何比较？",
+        "AnswerEn": "The cosmic-ray neutron method is a passive, non-invasive technique that measures soil moisture over a larger spatial scale with a radius of approximately 300 m, filling the gap between traditional point measurement methods like the weighing method and remote sensing. Traditional methods are more invasive and generally limited to smaller scales, providing less spatial representation.",
+        "AnswerCn": "宇宙射线中子法是一种被动的、非侵入性的技术，能够在大约300米的半径范围内测量土壤湿度，填补了传统点测量方法（如称重法）与遥感之间的空白。传统方法更具侵入性，通常限于较小的尺度，提供的空间代表性较差。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can the integration of cosmic ray neutron sensing with traditional soil moisture monitoring methods enhance the accuracy and spatial representation of soil moisture data in alpine regions?",
+        "QuestionCn": "宇宙射线中子传感与传统土壤湿度监测方法的整合如何增强高山地区土壤湿度数据的准确性和空间表示？",
+        "AnswerEn": "Cosmic ray neutron sensing offers a non-invasive and intermediate-scale measurement method that can bridge the gap between point measurements and large-scale remote sensing. By integrating this method with traditional soil moisture monitoring techniques such as wireless sensor networks and remote sensing, researchers can improve the spatial representation and accuracy of soil moisture data. This integration can provide a more comprehensive understanding of soil moisture dynamics across different scales, particularly in challenging alpine environments where access and consistent data collection are difficult.",
+        "AnswerCn": "宇宙射线中子传感提供了一种非侵入性和中等规模的测量方法，可以弥合点测量与大规模遥感之间的差距。通过将这种方法与传统的土壤湿度监测技术（如无线传感器网络和遥感）相结合，研究人员可以提高土壤湿度数据的空间表现和准确性。这种整合可以更全面地理解不同尺度下的土壤湿度动态，特别是在进入困难且数据收集不一致的高山环境中。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What are the key challenges in using cosmic rays for soil moisture measurement, and how can these challenges be addressed to improve data reliability in varying environmental conditions?",
+        "QuestionCn": "使用宇宙射线测量土壤湿度的关键挑战是什么？如何解决这些挑战，以提高在不同环境条件下的数据可靠性？",
+        "AnswerEn": "Key challenges in using cosmic rays for soil moisture measurement include the influence of hydrogen atoms from sources other than soil moisture, such as lattice water, soil organic matter, vegetation, and atmospheric water vapor. These factors can affect neutron propagation and measurement accuracy. To address these challenges, site-specific calibration using field soil moisture measurements is essential to account for these influences. Additionally, understanding and modeling the impact of vegetation and atmospheric conditions on neutron data can help improve the reliability of soil moisture measurements under varying environmental conditions.",
+        "AnswerCn": "使用宇宙射线测量土壤湿度的主要挑战包括氢原子的影响，这些氢原子来自土壤湿度以外的来源，如晶格水、土壤有机质、植被和大气水蒸气。这些因素可能影响中子传播和测量的准确性。为了解决这些挑战，进行现场土壤湿度测量的特定场地校准是必不可少的，以考虑这些影响。此外，理解和建模植被和大气条件对中子数据的影响，可以帮助提高在不同环境条件下土壤湿度测量的可靠性。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the gap between traditional point measurement and large-scale remote sensing in soil moisture data collection, and how can new methods address this gap?",
+        "QuestionCn": "造成传统点测量与大规模遥感土壤湿度数据收集之间差距的原因是什么？新方法如何解决这一差距？",
+        "AnswerEn": "The gap is caused by the limited spatial representation of traditional point measurement methods and the lack of continuous data in remote sensing, which provides only instantaneous values at large scales. The development of cosmic-ray neutron methods, which offer a non-invasive, medium-scale measurement with a radius of about 300 meters, can address this gap by providing regional soil moisture information effectively.",
+        "AnswerCn": "这个差距是由于传统点测量方法的空间表示有限，以及遥感缺乏连续数据，后者仅在大尺度上提供瞬时值。宇宙射线中子方法的发展，提供了一种非侵入性、中等尺度的测量，半径约为300米，可以有效地通过提供区域土壤湿度信息来填补这一空白。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential consequences of utilizing cosmic-ray neutron sensing for long-term soil moisture monitoring in alpine regions?",
+        "QuestionCn": "利用宇宙射线中子传感技术进行高山地区长期土壤湿度监测的潜在后果是什么？",
+        "AnswerEn": "Utilizing cosmic-ray neutron sensing for long-term soil moisture monitoring in alpine regions can effectively capture regional soil moisture, providing valuable data for hydrological modeling and remote sensing validation. This method fills the gap between point-based and large-scale remote sensing measurements, allowing for more accurate soil moisture information at the regional scale.",
+        "AnswerCn": "利用宇宙射线中子传感技术进行高山地区长期土壤湿度监测，可以有效捕捉区域土壤湿度，为水文模型和遥感验证提供宝贵数据。这种方法填补了基于点的测量与大规模遥感测量之间的空白，使得在区域尺度上获得更准确的土壤湿度信息成为可能。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "How might the integration of a comprehensive observation network with automatic meteorological stations and superstations impact the data quality and modeling of alpine hydrological processes?",
+        "QuestionCn": "综合观测网络与自动气象站和超级站的整合将如何影响阿尔卑斯水文过程的数据质量和建模？",
+        "AnswerEn": "Integrating a comprehensive observation network with automatic meteorological stations and superstations can significantly enhance data quality and modeling of alpine hydrological processes by providing continuous, high-resolution data on snow cover, frozen ground, and meteorological variables. This approach helps in understanding the driving forces of hydrological models and improves the validation of remote sensing products.",
+        "AnswerCn": "整合一个综合观测网络与自动气象站和超级站可以显著提高数据质量和阿尔卑斯水文过程的建模，通过提供关于雪盖、冻土和气象变量的连续高分辨率数据。这种方法有助于理解水文模型的驱动因素，并改善遥感产品的验证。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the potential effects of incorporating wireless sensor networks in conjunction with cosmic-ray neutron data on the reliability of soil moisture observations?",
+        "QuestionCn": "将无线传感器网络与宇宙射线中子数据结合使用，可能对土壤湿度观测的可靠性产生哪些潜在影响？",
+        "AnswerEn": "Incorporating wireless sensor networks alongside cosmic-ray neutron data can improve the reliability of soil moisture observations by providing cross-validation and enhancing the spatial and temporal resolution of the data. This combination allows for a more comprehensive understanding of soil moisture dynamics and contributes to more robust data for model validation and remote sensing applications.",
+        "AnswerCn": "结合无线传感器网络和宇宙射线中子数据可以提高土壤湿度观测的可靠性，通过提供交叉验证并增强数据的空间和时间分辨率。这种组合使我们能够更全面地理解土壤湿度动态，并为模型验证和遥感应用提供更可靠的数据。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to establish an integrated, distributed, and multiscale observation network for studying alpine hydrological processes in the Heihe River Basin?",
+        "QuestionCn": "为什么在黑河流域建立一个集成的、分布式的、多尺度的观测网络来研究高山水文过程很重要？",
+        "AnswerEn": "An integrated, distributed, and multiscale observation network is crucial for studying alpine hydrological processes in the Heihe River Basin because it provides accurate forcing data for hydrological modeling, validates remote sensing data, and evaluates distributed models. This approach addresses the scarcity of observation data in alpine regions, which is hindered by harsh climates and complex topography. The network facilitates a comprehensive understanding of hydrological and eco-functional processes, particularly in the context of climate change and human-induced perturbations.",
+        "AnswerCn": "一个集成的、分布式的、多尺度的观测网络对于研究黑河流域的高山水文过程至关重要，因为它提供了准确的水文建模强迫数据，验证了遥感数据，并评估了分布式模型。这种方法解决了高山地区观测数据稀缺的问题，而这一问题受到恶劣气候和复杂地形的制约。该网络促进了对水文和生态功能过程的全面理解，特别是在气候变化和人类干扰的背景下。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What is the objective of using cosmic-ray neutron sensing for soil moisture measurement in the Heihe River Basin?",
+        "QuestionCn": "使用宇宙射线中子传感器测量黑河流域土壤湿度的目标是什么？",
+        "AnswerEn": "The objective of using cosmic-ray neutron sensing for soil moisture measurement in the Heihe River Basin is to obtain long-term, continuous monitoring of soil moisture at a regional scale. This method fills the gap between traditional point measurements and large-scale remote sensing, providing a non-invasive, medium-scale measurement that accurately reflects soil moisture dynamics. It also serves as a ground truth for validating remote sensing soil moisture retrievals.",
+        "AnswerCn": "使用宇宙射线中子传感技术在黑河流域进行土壤湿度测量的目的是实现对土壤湿度的长期、连续监测，覆盖区域尺度。该方法填补了传统点测量与大规模遥感之间的空白，提供了一种非侵入性、中等尺度的测量，准确反映土壤湿度动态。同时，它也作为验证遥感土壤湿度反演的地面真值。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What methods are used to ensure the reliability and accuracy of data collected by cosmic ray neutron sensors in alpine regions?",
+        "QuestionCn": "在阿尔卑斯地区，确保宇宙射线中子传感器收集的数据的可靠性和准确性的方法有哪些？",
+        "AnswerEn": "Data reliability is ensured through several steps: data screening based on voltage, relative humidity, and consistency of sampling intervals; pressure correction using specific formulas; and calibration of soil moisture using field samples to derive a parameter called N0. This helps in accurately estimating soil moisture content in the observation area.",
+        "AnswerCn": "数据可靠性通过几个步骤来确保：根据电压、相对湿度和采样间隔的一致性进行数据筛选；使用特定公式进行压力修正；以及通过现场样本校准土壤湿度，以得出一个称为N0的参数。这有助于准确估计观察区域的土壤湿度含量。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How are cosmic ray neutron data and wireless sensor network data integrated to monitor soil moisture in agricultural fields?",
+        "QuestionCn": "宇宙射线中子数据和无线传感器网络数据是如何集成以监测农业田地中的土壤湿度的？",
+        "AnswerEn": "Cosmic ray neutron data are continuously monitored and compared with data from wireless sensor networks to study soil moisture. The integration involves aligning data with similar temporal resolution, such as aggregating 10-minute sensor readings to hourly data to match the neutron data, allowing for a comprehensive analysis of soil moisture trends.",
+        "AnswerCn": "宇宙射线中子数据被持续监测，并与无线传感器网络的数据进行比较，以研究土壤湿度。该整合涉及将数据对齐到相似的时间分辨率，例如将10分钟的传感器读数聚合为每小时的数据，以匹配中子数据，从而允许对土壤湿度趋势进行全面分析。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What conditions and technological advancements enable the effective collection of multiscale hydrometeorological data in alpine regions?",
+        "QuestionCn": "哪些条件和技术进步使得在高山地区有效收集多尺度水文气象数据成为可能？",
+        "AnswerEn": "The effective collection of multiscale hydrometeorological data in alpine regions is enabled by the establishment of an integrated, distributed observation network that includes automatic meteorological stations (AMSs) and superstations for snow cover and frozen ground observations. This network captures a wide range of variables such as wind speed, air temperature, humidity, and snow properties, leveraging state-of-the-art techniques and instruments to overcome challenges like harsh climate and complex topography.",
+        "AnswerCn": "在高山地区，建立一个集成的分布式观测网络，使得多尺度水文气象数据的有效收集成为可能。该网络包括自动气象站（AMS）和用于雪盖和冻土观测的超级站，能够捕捉风速、气温、湿度和雪的特性等多种变量，利用先进的技术和仪器克服恶劣气候和复杂地形带来的挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the use of cosmic-ray neutron sensing enable the measurement of soil moisture across different spatial scales?",
+        "QuestionCn": "宇宙射线中子感应技术如何实现跨不同空间尺度的土壤湿度测量？",
+        "AnswerEn": "Cosmic-ray neutron sensing enables the measurement of soil moisture across different spatial scales by providing a non-invasive method that measures the intensity of fast neutrons above the soil surface, which is inversely related to soil moisture content. This approach fills the gap between traditional point measurements and large-scale remote sensing, offering a measurement radius of about 300 meters and an effective depth of 12 to 76 cm.",
+        "AnswerCn": "宇宙射线中子传感技术通过提供一种非侵入性的方法，测量土壤表面上方快中子的强度，从而实现了不同空间尺度的土壤湿度测量，这种强度与土壤湿度含量呈反比关系。这种方法填补了传统点测量与大规模遥感之间的空白，测量半径约为300米，有效深度为12至76厘米。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What challenges and conditions are addressed by utilizing a comprehensive observation network for studying ecohydrological processes in the Heihe River Basin?",
+        "QuestionCn": "利用综合观测网络研究黑河流域生态水文过程所面临的挑战和条件是什么？",
+        "AnswerEn": "Utilizing a comprehensive observation network addresses challenges such as the scarcity of observation data due to harsh alpine conditions and technological barriers. The network, composed of meteorological stations and superstations, allows for the collection of high-quality data on snow cover, frozen ground, and meteorological variables, providing crucial datasets for validating remote sensing products and improving hydrological modeling in the Heihe River Basin.",
+        "AnswerCn": "利用综合观测网络可以解决由于恶劣的高山条件和技术障碍导致的观测数据稀缺问题。该网络由气象站和超级站组成，能够收集关于雪盖、冻土和气象变量的高质量数据，为验证遥感产品和改善黑河流域的水文模型提供了重要的数据集。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might it be challenging to develop accurate hydrological models in alpine regions?",
+        "QuestionCn": "在高山地区开发准确的水文模型可能面临哪些挑战？",
+        "AnswerEn": "Developing accurate hydrological models in alpine regions is challenging due to the scarcity of observation data, technological barriers, and the complex terrain, which hinder data collection and validation of models and remote sensing products.",
+        "AnswerCn": "在高山地区，开发准确的水文模型面临挑战，原因包括观测数据稀缺、技术障碍以及复杂的地形，这些因素阻碍了数据收集和模型及遥感产品的验证。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the expected benefits of using cosmic-ray neutron sensors for soil moisture measurement over traditional methods?",
+        "QuestionCn": "使用宇宙射线中子传感器测量土壤湿度相较于传统方法的预期好处是什么？",
+        "AnswerEn": "Cosmic-ray neutron sensors are expected to fill the gap between traditional point measurements and large-scale remote sensing by providing non-invasive, continuous long-term soil moisture data over a mid-scale area, thus offering better spatial representation and aiding in the validation of remote sensing data.",
+        "AnswerCn": "宇宙射线中子传感器预计将填补传统点测量与大规模遥感之间的空白，通过提供非侵入性、连续的长期土壤湿度数据，覆盖中等规模区域，从而提供更好的空间代表性，并有助于验证遥感数据。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Why is there a need to integrate remote sensing data with ground-based observations for studying alpine hydrological processes?",
+        "QuestionCn": "为什么需要将遥感数据与地面观测相结合，以研究高山水文过程？",
+        "AnswerEn": "Integrating remote sensing data with ground-based observations is necessary due to the complexities and uncertainties associated with remote sensing data in alpine regions, which require validation and calibration through accurate in-situ measurements to improve the predictive understanding of hydrological processes and ecosystem functions.",
+        "AnswerCn": "由于高山地区遥感数据的复杂性和不确定性，需要将遥感数据与地面观测相结合，通过准确的现场测量进行验证和校准，以提高对水文过程和生态系统功能的预测理解。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "What are the perceived challenges in using cosmic-ray neutron sensing for soil moisture measurement in complex terrains, and how might these challenges be addressed?",
+        "QuestionCn": "在复杂地形中使用宇宙射线中子传感器进行土壤湿度测量的感知挑战有哪些，以及这些挑战可能如何得到解决？",
+        "AnswerEn": "Challenges in using cosmic-ray neutron sensing for soil moisture measurement include influences from hydrogen atoms present in soil organic matter, lattice water, vegetation, and water vapor. These can affect neutron propagation and measurement accuracy. Addressing these challenges may involve field soil moisture calibration to account for lattice water and organic matter, while the impact of vegetation might be mitigated in areas with sparse vegetation. However, rapidly growing vegetation remains a challenge without a complete correction method. Water vapor can also affect the measurement radius by up to 10%, requiring adjustments based on conditions.",
+        "AnswerCn": "使用宇宙射线中子传感器测量土壤湿度的挑战包括土壤有机质、晶格水、植被和水蒸气中氢原子的影响，这些因素会影响中子的传播和测量准确性。解决这些挑战可能需要进行现场土壤湿度校准，以考虑晶格水和有机质的影响，而在植被稀疏的地区，植被的影响可能会得到缓解。然而，快速生长的植被仍然是一个挑战，尚无完整的修正方法。水蒸气也可能影响测量半径，影响幅度可达10%，因此需要根据条件进行调整。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "How effective is the integration of wireless sensor networks (WSN) with cosmic-ray neutron sensing in enhancing the reliability of soil moisture datasets?",
+        "QuestionCn": "无线传感器网络（WSN）与宇宙射线中子传感的集成在提高土壤湿度数据集的可靠性方面有多有效？",
+        "AnswerEn": "Integrating wireless sensor networks (WSN) with cosmic-ray neutron sensing has shown to be effective in enhancing the reliability of soil moisture datasets. The comparison between WSN data and cosmic-ray neutron observations indicates that the system can effectively capture regional soil moisture, providing long-term, continuous data at the farmland scale. The combination provides a robust validation method for remote sensing-derived soil moisture data, allowing surface-level verification and improving overall dataset reliability.",
+        "AnswerCn": "将无线传感器网络（WSN）与宇宙射线中子传感相结合，已被证明在增强土壤湿度数据集的可靠性方面有效。WSN数据与宇宙射线中子观测之间的比较表明，该系统能够有效捕捉区域土壤湿度，提供农田尺度上的长期、连续数据。这种结合为遥感衍生的土壤湿度数据提供了强有力的验证方法，允许对表层进行验证，从而提高整体数据集的可靠性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In what ways might the development of next-generation ecosystem observation networks improve the predictability of hydrological processes in alpine regions?",
+        "QuestionCn": "下一代生态系统观测网络的发展可能会通过哪些方式改善对高山地区水文过程的可预测性？",
+        "AnswerEn": "The development of next-generation ecosystem observation networks could significantly improve the predictability of hydrological processes in alpine regions by providing integrated, distributed, and multiscale datasets. These networks can offer consistent hydrometeorological data, as well as detailed observations of snow cover and frozen ground dynamics, which are critical for understanding water infiltration, surface runoff, and groundwater processes. They also facilitate the validation of remote sensing data and enhance the parameterization of hydrological models, ultimately leading to better predictive understanding of how climate change and human activities impact these processes.",
+        "AnswerCn": "下一代生态观察网络的发展可以显著提高高山地区水文过程的可预测性，通过提供综合、分布式和多尺度的数据集。这些网络可以提供一致的水气象数据，以及对雪盖和冻土动态的详细观察，这对于理解水分渗透、地表径流和地下水过程至关重要。它们还促进了遥感数据的验证，并增强了水文模型的参数化，最终导致对气候变化和人类活动如何影响这些过程的更好预测理解。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how cosmic-ray neutron sensors can effectively measure soil moisture over a large area compared to traditional point measurement methods.",
+        "QuestionCn": "我不明白宇宙射线中子传感器如何能够有效地测量大面积的土壤湿度，而传统的点测量方法却无法做到这一点。",
+        "AnswerEn": "Cosmic-ray neutron sensors measure soil moisture by detecting the intensity of fast neutrons above the ground, which is inversely related to the soil moisture content. This method has a measurement radius of approximately 300 meters, filling the scale gap between traditional point measurements and remote sensing, providing regional soil moisture information non-invasively.",
+        "AnswerCn": "宇宙射线中子传感器通过检测地面上方快中子的强度来测量土壤湿度，这与土壤湿度含量呈反比关系。这种方法的测量半径约为300米，填补了传统点测量和遥感之间的尺度差距，提供了区域土壤湿度信息，且不具侵入性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I can't make sense of the challenges faced in collecting accurate data for alpine hydrological models in regions with complex terrain.",
+        "QuestionCn": "我无法理解在复杂地形地区收集准确数据以用于高山水文模型所面临的挑战。",
+        "AnswerEn": "In alpine regions, challenges include the cold climate, high altitude, and complex topography, which inhibit complete and consistent data collection. These factors hinder the availability of high-quality data necessary for parameterizing remote sensing technologies and hydrological models, affecting the accuracy of model predictions and data validation.",
+        "AnswerCn": "在高山地区，寒冷的气候、高海拔和复杂的地形等挑战妨碍了完整和一致的数据收集。这些因素阻碍了高质量数据的获取，而这些数据对于参数化遥感技术和水文模型是必要的，从而影响了模型预测的准确性和数据验证。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please evaluate different data collection methods used for measuring soil moisture and their respective advantages in capturing the spatial distribution of soil moisture in a region.",
+        "QuestionCn": "请评估用于测量土壤湿度的不同数据收集方法及其在捕捉一个地区土壤湿度空间分布方面的各自优点。",
+        "AnswerEn": "Traditional methods for measuring soil moisture, such as gravimetric methods, neutron probe, TDR, and FDR, are point measurement techniques with limited spatial representation. In contrast, the cosmic-ray neutron method provides a non-invasive, passive approach for measuring soil moisture at a mesoscale, covering a radius of approximately 300 m and a depth of 12-76 cm. This method effectively bridges the gap between point-scale measurements and large-scale remote sensing, offering more representative soil moisture data for regional analysis.",
+        "AnswerCn": "传统的土壤湿度测量方法，如重力法、中子探测器、时域反射法（TDR）和频域反射法（FDR），都是点测量技术，具有有限的空间代表性。相比之下，宇宙射线中子法提供了一种非侵入性、被动的土壤湿度测量方法，覆盖半径约为300米，深度为12-76厘米。该方法有效地弥补了点尺度测量与大尺度遥感之间的差距，为区域分析提供了更具代表性的土壤湿度数据。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Please explore the methods used to ensure the reliability and accuracy of soil moisture data obtained through cosmic-ray neutron systems.",
+        "QuestionCn": "请探讨确保通过宇宙射线中子系统获得的土壤湿度数据的可靠性和准确性的方法。",
+        "AnswerEn": "The reliability and accuracy of soil moisture data from cosmic-ray neutron systems can be ensured by calibrating the system with local soil samples to determine N0, the fast neutron count in dry soil conditions. Additionally, data screening criteria are applied to remove unreliable data, such as those with low voltage, high relative humidity, or significant deviations in neutron counts. Pressure correction and site-specific calibration help mitigate the influence of environmental factors, such as vegetation and atmospheric moisture, to produce more accurate soil moisture data.",
+        "AnswerCn": "通过使用当地土壤样本对宇宙射线中子系统进行校准，可以确保土壤湿度数据的可靠性和准确性，以确定干燥土壤条件下的快速中子计数N0。此外，应用数据筛选标准以去除不可靠的数据，例如低电压、高相对湿度或中子计数的显著偏差。压力修正和特定地点的校准有助于减轻环境因素（如植被和大气湿度）的影响，从而生成更准确的土壤湿度数据。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

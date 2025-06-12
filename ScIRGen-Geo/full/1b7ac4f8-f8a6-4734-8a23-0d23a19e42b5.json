@@ -1,530 +1,530 @@
 {
-    "id": "1b7ac4f8-f8a6-4734-8a23-0d23a19e42b5",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": "SMAP soil moisture and vegetation optical depth product (9KM) using MCCA (2015-2024)",
-            "titleCn": "SMAP卫星9公里土壤水分与植被光学厚度逐日产品（多通道协同反演算法，2015-2024）",
-            "description": "Soil moisture is an important boundary condition of earth-atmosphere exchanges, and it has been defined as an essential climate variable by GCOS. Vegetation optical depth is a physical variable to measure the attenuation of vegetation in microwave radiative transfer model, and it has been proved to be a good indicator of vegetation water content and biomass.\nThis dataset uses the multi-channel collaborative algorithm (MCCA) to retrieve both soil moisture and polarized vegetation optical depth with SMAP brightness temperature. The algorithm uses a self-constraint relationship between land parameters and an analytical relationship between brightness temperature at different channels to perform the retrieval process. The MCCA does not depend on other auxiliary data on vegetation properties and can be applied to a variety of satellites. The soil moisture product from this dataset includes the soil moisture content in the unfrozen period and the liquid water content in the frozen period. Both horizontal- and vertical-polarization vegetation optical depth are retrieved. So far as we know, it is the first polarization-dependent vegetation optical depth product at L-band.\nThis dataset was validated by 19 dense soil moisture observation networks (9 core validation sites used by SMAP team and 13 sites not used by them), and the widely used soil climate analysis network (SCAN). It was found that ubRMSE (unbiased root mean square error) of MCCA retrieved soil moisture is generally smaller than that of other SMAP products.",
-            "descriptionCn": "土壤水分是地气交互作用的重要边界条件，是全球观测系统提出的关键气候变量之一；植被光学厚度是微波辐射传输过程中衡量植被衰减特性的物理量，在表征植被水分与生物量动态变化中具有重要作用。\n本数据集使用多通道协同反演算法获取SMAP观测的土壤水分与植被光学厚度。该算法利用参数间的自约束关系与通道间的理论转换关系进行地表参数反演，反演过程不依赖于其他辅助数据，并适用于多种不同载荷配置。本数据集的土壤水分反演结果包含了融化期的土壤水分含量与冻结期的液态水含量；同时反演了水平和垂直两个极化的植被光学厚度，是全球第一套具有极化差异的L波段植被光学厚度产品。\n本数据集基于国际土壤水分观测网络、美国农业部及研究室自建发布的共19个土壤水分密集观测站网（其中包含9个SMAP核心验证站点以及SMAP尚未使用的10个密集观测站点）以及被广泛使用的土壤气候分析网络SCAN进行验证，结果发现MCCA土壤水分反演结果精度优于其它SMAP产品。\n",
-            "instructions": "Data file naming method: <MCCA_SMAP_xxKM_CCFP_VSM_VOD_YYYYMMDD_V1.nc>, MCCA represents the multi-channel collaborative algorithm, SMAP represents the SMAP satellite, <xxKM> represents the grid size of ease grid 2.0 projection, <CCFP> indicates F-band (F is frequency) brightness temperature of P polarization was used as the core channel in MCCA, VSM_VOD is the product of soil moisture and vegetation optical thickness, <YYYYMMDD> is the date of the data in year, month and date format, and V1 represents the data version, which will be updated according to your valuable suggestions.\nUsage method: Data can be read in various programming languages such as MATLAB, Python and IDL, and can also be visualized in hdfview and panoply. Please refer to the description document for details. We provide Python and Matlab code to read and plot data.",
-            "instructionsCn": "文件命名：<MCCA_SMAP_xxKM_CCFP_VSM_VOD_YYYYMMDD_V1.nc>, MCCA代表多通道协同反演算法，SMAP代表SMAP卫星，<xxKM>代表EASE GRID 2.0投影的格网大小，<CCFP>表示多通道协同反演算法使用是F波段（频率）的P极化作为主通道（Core channel, CC），VSM_VOD表示土壤水分和植被光学厚度产品，<YYYYMMDD>是数据的日期（年月日的形式），V1代表数据版本，之后会根据大家的宝贵建议不断更新。\n使用方法： 数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在HDFView，Panoply中实现可视化，详细信息请参见说明文档。我们提供了用Python和Matlab读取数据和画图的代码。",
-            "east": 180.0,
-            "west": 180.0,
-            "south": 84.65641879714312,
-            "north": 84.65641879714312,
-            "startTime": "2015-03-31 00:00:00",
-            "endTime": "2024-10-06 23:59:59",
-            "fileSize": 120354328107.0,
-            "cstr": "18406.11.Terre.tpdc.300486",
-            "doi": "10.11888/Terre.tpdc.300486",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "彭志晴",
-                "nameEn": "PENG Zhiqing ",
-                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "赵天杰",
-                "nameEn": "ZHAO Tianjie",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "姚盼盼",
-                "nameEn": "YAO Panpan",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "施建成",
-                "nameEn": "SHI Jiancheng",
-                "unitEn": "",
-                "unitCn": "中国科学院国家空间科学中心"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry",
-                "referenceCn": null,
-                "referenceEn": "Peng, Z., Zhao, T., Shi, J., Hu, L., Rodríguez-Fernández, N., Wigneron, J., Jackson, T., Walker, J., Cosh, M., Yang, K., Lu, H., Bai, Y., Yao, P., Zheng, J., & Wei, Z. (2024). First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry. Remote Sensing of Environment, 302, 113970, https://doi.org/10.1016/j.rse.2023.113970."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm",
-                "referenceCn": null,
-                "referenceEn": "Zhao, T., Shi, J., Entekhabi, D., Jackson, T. J., Hu, L., Peng, Z., Yao, P., Li, S., and Kang, C. S. (2021). Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm, Remote Sensing of Environment, 257, 112321, https://doi.org/10.1016/j.rse.2021.112321."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "SMAP",
-                "nameEn": "SMAP"
-            },
-            {
-                "nameCn": "其他",
-                "nameEn": "Others"
-            },
-            {
-                "nameCn": "土壤湿度",
-                "nameEn": "soil moisture"
-            },
-            {
-                "nameCn": "植被",
-                "nameEn": "Vegetation"
-            },
-            {
-                "nameCn": "植被光学厚度",
-                "nameEn": "vegetation optical depth"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            },
-            {
-                "nameCn": "被动微波遥感",
-                "nameEn": "Passive Microwave Remote Sensing"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2015-2024年",
-                "keywordEn": "2015-2024",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "1b7ac4f8-f8a6-4734-8a23-0d23a19e42b5",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": "SMAP soil moisture and vegetation optical depth product (9KM) using MCCA (2015-2024)",
+      "titleCn": "SMAP卫星9公里土壤水分与植被光学厚度逐日产品（多通道协同反演算法，2015-2024）",
+      "description": "Soil moisture is an important boundary condition of earth-atmosphere exchanges, and it has been defined as an essential climate variable by GCOS. Vegetation optical depth is a physical variable to measure the attenuation of vegetation in microwave radiative transfer model, and it has been proved to be a good indicator of vegetation water content and biomass.\nThis dataset uses the multi-channel collaborative algorithm (MCCA) to retrieve both soil moisture and polarized vegetation optical depth with SMAP brightness temperature. The algorithm uses a self-constraint relationship between land parameters and an analytical relationship between brightness temperature at different channels to perform the retrieval process. The MCCA does not depend on other auxiliary data on vegetation properties and can be applied to a variety of satellites. The soil moisture product from this dataset includes the soil moisture content in the unfrozen period and the liquid water content in the frozen period. Both horizontal- and vertical-polarization vegetation optical depth are retrieved. So far as we know, it is the first polarization-dependent vegetation optical depth product at L-band.\nThis dataset was validated by 19 dense soil moisture observation networks (9 core validation sites used by SMAP team and 13 sites not used by them), and the widely used soil climate analysis network (SCAN). It was found that ubRMSE (unbiased root mean square error) of MCCA retrieved soil moisture is generally smaller than that of other SMAP products.",
+      "descriptionCn": "土壤水分是地气交互作用的重要边界条件，是全球观测系统提出的关键气候变量之一；植被光学厚度是微波辐射传输过程中衡量植被衰减特性的物理量，在表征植被水分与生物量动态变化中具有重要作用。\n本数据集使用多通道协同反演算法获取SMAP观测的土壤水分与植被光学厚度。该算法利用参数间的自约束关系与通道间的理论转换关系进行地表参数反演，反演过程不依赖于其他辅助数据，并适用于多种不同载荷配置。本数据集的土壤水分反演结果包含了融化期的土壤水分含量与冻结期的液态水含量；同时反演了水平和垂直两个极化的植被光学厚度，是全球第一套具有极化差异的L波段植被光学厚度产品。\n本数据集基于国际土壤水分观测网络、美国农业部及研究室自建发布的共19个土壤水分密集观测站网（其中包含9个SMAP核心验证站点以及SMAP尚未使用的10个密集观测站点）以及被广泛使用的土壤气候分析网络SCAN进行验证，结果发现MCCA土壤水分反演结果精度优于其它SMAP产品。\n",
+      "instructions": "Data file naming method: <MCCA_SMAP_xxKM_CCFP_VSM_VOD_YYYYMMDD_V1.nc>, MCCA represents the multi-channel collaborative algorithm, SMAP represents the SMAP satellite, <xxKM> represents the grid size of ease grid 2.0 projection, <CCFP> indicates F-band (F is frequency) brightness temperature of P polarization was used as the core channel in MCCA, VSM_VOD is the product of soil moisture and vegetation optical thickness, <YYYYMMDD> is the date of the data in year, month and date format, and V1 represents the data version, which will be updated according to your valuable suggestions.\nUsage method: Data can be read in various programming languages such as MATLAB, Python and IDL, and can also be visualized in hdfview and panoply. Please refer to the description document for details. We provide Python and Matlab code to read and plot data.",
+      "instructionsCn": "文件命名：<MCCA_SMAP_xxKM_CCFP_VSM_VOD_YYYYMMDD_V1.nc>, MCCA代表多通道协同反演算法，SMAP代表SMAP卫星，<xxKM>代表EASE GRID 2.0投影的格网大小，<CCFP>表示多通道协同反演算法使用是F波段（频率）的P极化作为主通道（Core channel, CC），VSM_VOD表示土壤水分和植被光学厚度产品，<YYYYMMDD>是数据的日期（年月日的形式），V1代表数据版本，之后会根据大家的宝贵建议不断更新。\n使用方法： 数据可以用Matlab、 Python、IDL等各种程序语言读取，也可以在HDFView，Panoply中实现可视化，详细信息请参见说明文档。我们提供了用Python和Matlab读取数据和画图的代码。",
+      "east": 180.0,
+      "west": 180.0,
+      "south": 84.65641879714312,
+      "north": 84.65641879714312,
+      "startTime": "2015-03-31 00:00:00",
+      "endTime": "2024-10-06 23:59:59",
+      "fileSize": 120354328107.0,
+      "cstr": "18406.11.Terre.tpdc.300486",
+      "doi": "10.11888/Terre.tpdc.300486",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Due to the success of the SMOS (Soil Moisture and Ocean Salinity) and SMAP (Soil Moisture Active Passive) missions, new satellite missions are on the horizon. The current and future missions can benefit from investigations that seek to improve retrieval algorithms that quantitatively map global soil moisture and vegetation optical depth (tau) from Earth’s microwave emissions. Soil moisture information is critically important in hydrological processes due to its relationships with land surface evapotranspiration, runoff, precipitation, and infiltration."
-            ],
-            "research objective": [
-                "In this study, we explore multi-angular and multi-frequency approaches for the retrieval of soil moisture and vegetation tau, considering the payload configurations of current and future satellite missions (such as the Copernicus Imaging Microwave Radiometer, the Water Cycle Observation Mission, and the Terrestrial Water Resources Satellite) using a new set of ground observations."
-            ],
-            "challenges": [
-                "It is affirmed that increasing the number of observation channels could make the soil moisture retrieval more robust, but might also limit the retrieval performance, as the probability that the model estimations will not match the observations is increased."
-            ],
-            "methods": [
-                "Two ground-based microwave radiometry datasets collected in Inner Mongolia during the Soil Moisture Experiment in the Luan River from July to August 2017 (cropland) and August to September 2018 (grassland) are used for this study. A multi-channel collaborative algorithm (MCCA) is developed based on the two-component version of the omega-tau model, which utilizes information from collaborative channels expressed as an analytical form of brightness temperature at the core channel to rule out the parameters to be retrieved."
-            ],
-            "dataset": [
-                "Two ground-based microwave radiometry datasets collected in Inner Mongolia during the Soil Moisture Experiment in the Luan River from July to August 2017 (cropland) and August to September 2018 (grassland) are used for this study."
-            ],
-            "findings": [
-                "Results of soil moisture retrieval show that the multi-angular approach used by the MCCA generally has a better performance, unbiased root mean square difference (ubRMSD) varying from 0.028 cm³/cm³ to 0.037 cm³/cm³, than the multi-frequency approach (ubRMSD from 0.028 cm³/cm³ to 0.089 cm³/cm³) for the corn field. Except for in the C- & X-band combination, the multi-frequency approach used by the MCCA performs better (ubRMSD from 0.018 cm³/cm³ to 0.023 cm³/cm³) than the multi-angular version (ubRMSD from 0.026 cm³/cm³ to 0.034 cm³/cm³) for the grass field due to reduced vegetation effects for this type of cover. This study provides new insights into the design of potential satellite missions to improve soil moisture retrieval. A satellite with simultaneous multi-angular and multi-frequency observation capabilities is highly recommended."
-            ],
-            "backgroundCn": [
-                "由于SMOS（土壤湿度和海洋盐度）和SMAP（土壤湿度主动被动）任务的成功，新的卫星任务正在筹备中。目前和未来的任务可以从研究中受益，这些研究旨在改进检索算法，以定量映射地球微波辐射下的全球土壤湿度和植被光学深度（tau）。土壤湿度信息在水文过程中至关重要，因为它与地表蒸散、径流、降水和渗透等过程密切相关。"
-            ],
-            "research objectiveCn": [
-                "在本研究中，我们探讨了多角度和多频率方法用于土壤湿度和植被光学厚度的提取，考虑了当前和未来卫星任务（如哥白尼成像微波辐射计、水循环观测任务和陆地水资源卫星）的有效载荷配置，并使用了一组新的地面观测数据。"
-            ],
-            "challengesCn": [
-                "增加观测通道的数量可以使土壤湿度的检索更加稳健，但也可能限制检索性能，因为模型估计与观测不匹配的概率增加。"
-            ],
-            "methodsCn": [
-                "在2017年7月至8月的土壤湿度实验期间，内蒙古收集了两个基于地面的微波辐射测量数据集（农田），以及在2018年8月至9月的草地数据集。基于两组件版本的omega-tau模型，开发了一种多通道协同算法（MCCA），该算法利用协同通道的信息，以亮度温度的解析形式表达核心通道，从而排除需要检索的参数。"
-            ],
-            "datasetCn": [
-                "在2017年7月至8月的土壤湿度实验期间，在内蒙古收集的两个地面微波辐射计数据集（农田）和2018年8月至9月（草地）用于本研究。"
-            ],
-            "findingsCn": [
-                "土壤湿度检索结果显示，MCCA使用的多角度方法在性能上普遍优于多频率方法，玉米田的无偏根均方差（ubRMSD）范围为0.028 cm³/cm³到0.037 cm³/cm³，而多频率方法的ubRMSD范围为0.028 cm³/cm³到0.089 cm³/cm³。除了C波段和X波段组合外，MCCA使用的多频率方法在草地的表现更好（ubRMSD范围为0.018 cm³/cm³到0.023 cm³/cm³），而多角度版本的ubRMSD范围为0.026 cm³/cm³到0.034 cm³/cm³，这主要是由于这种覆盖类型的植被效应减弱。本研究为潜在卫星任务的设计提供了新的见解，强烈建议设计具备同时多角度和多频率观测能力的卫星。"
-            ]
-        },
-        {
-            "background": [
-                "Soil moisture (SM) is an important boundary condition of land-atmosphere feedbacks, and is identified as an essential climate variable by the Global Climate Observing System. Vegetation optical depth (VOD, τ) is a physical variable that describes the microwave extinction effects caused by vegetation in the microwave radiative transfer models and it provides information on both plant water status and biomass. Microwave remote sensing has good capability to retrieve SM and VOD, especially passive microwave L-band (1 – 2 GHz) because at these wavelengths the vegetation is semi-transparent, and the observed brightness temperature (Tb) is sensitive to the water content of the first few centimeters of the soil surface, and absorption and scattering have lower impacts, compared to shorter wavelengths. Current L-band passive microwave sensors on Earth-orbiting satellites include the European Space Agency's (ESA) Soil Moisture and Ocean Salinity (SMOS) mission, launched in November 2009 with multi-angular and full-polarized observations and the National Aeronautics and Space Administration's (NASA) Soil Moisture Active Passive (SMAP) mission, launched in January 2015 with full-polarized observations at an incidence angle of 40°. Most SM and VOD retrieval algorithms for SMAP are based on the zero-order solution of RTM, also known as the τ-ω model."
-            ],
-            "research objective": [
-                "This study proposed a parameter self-calibrating framework for the multi-channel collaborative algorithm (MCCA) and presented a new SM and the first polarization-dependent VOD product based on the dual-polarized L-band observations at a fixed angle (40°) from the NASA Soil Moisture Active Passive (SMAP) mission."
-            ],
-            "challenges": [
-                "Current retrieval algorithms often ignore the polarization dependence of vegetation effects. The retrieval performance is dependent on the uncertainties introduced by the auxiliary data. Since SMAP provides only two observations during an overpass, the degree of information (DoI) of Tbs can be lower than the number of unknowns (surface parameters, SM, and VOD)."
-            ],
-            "methods": [
-                "To reduce the usage of auxiliary data, the ergodic form of MCCA was implemented in this study, in which a series of SM values from 0.001 (unit: m3/m3) to porosity (the fraction of void space in the soil, unit: m3/m3) were set as input. The self-calibrating of Rou was carried out under two extreme conditions. For the first condition, which was assumed a smooth surface, the following procedure was followed: (1) Rou was initially set to 0 globally. Using the MCCA algorithm, 201 pairs of SM and VOD at H and V polarizations were retrieved for a range of ω from 0 to 0.2 with a step of 0.001. The bin size for DoI calculation was determined using all the 201 pairs of time series SM and H-polarized VOD. The ω value corresponding to the minimum DoI was selected as the result. (2) With the ω value obtained from step (1), 451 pairs of time series SM and VOD were retrieved using MCCA for Rou values ranging from 0 to 4.5 with a step of 0.01. The first initial Rou (Rou_init1) was optimized by minimizing the WDs calculated by SM and VOD at H-polarization."
-            ],
-            "dataset": [
-                "In this study, H- and V-polarized Tb, and the surface temperature included in the SMAP Level-3 Radiometer Global Daily 36 km EASE-Grid Soil Moisture (SPL3SMP) version 8 were used to retrieve SM and VOD. The SPL3SMP is distributed by the National Snow and Ice Data Center (NDISC) and projected to the global Equal-Area Scalable Earth-2 (EASE2) grid with a spatial sampling of 36-km. Due to the heterogeneity of satellite footprints, 19 dense networks and 1 sparse network (the soil climate analysis network, SCAN) were involved to evaluate MCCA and the other five remotely sensed SM estimates, including eight networks sourced from the International Soil Moisture Network (ISMN) database, data for seven networks obtained from the United States Department of Agriculture (USDA), four additional networks accessed from the National Tibetan Plateau Data Center, and the SMN-WDL network built in the Tibet Plateau, focuses on observing soil moisture, soil temperature, and freeze/thaw state. Sand and clay fractions were obtained from the global soil texture database (SoilGrids250m) for use in the dielectric model. Canopy height data were collected from the global ecosystem dynamics investigation (GEDI) Level 3 gridded mean canopy height (version 2), while above-ground biomass (version 4) was sourced from the ESA Climate Change Initiative (CCI) Programme were utilized. Total precipitation data from the ERA5-Land hourly data, converted from hourly to a daily sum, were also used in the analysis. All datasets were aggregated to align with the SMAP pixel grid size."
-            ],
-            "findings": [
-                "The MCCA-derived SM exhibits the lowest unbiased root mean square deviation (ubRMSD, about 0.055 m³/m³), followed by SMAP-IB and DCA (0.061 m³/m³), with an overall Pearson’s correlation coefficient of 0.744 (SMAP-IB performed best with R = 0.764) when evaluated against in-situ observations from 18 dense soil moisture networks. The MCCA generates VOD values for both vertical and horizontal polarization, demonstrating a slight polarization difference of vegetation effect at the satellite scale. Both VODs exhibit a strong linear relationship with above-ground biomass and canopy height. The polarization difference of VODs is primarily observed in densely vegetated and arid areas."
-            ],
-            "backgroundCn": [
-                "土壤湿度（SM）是陆气反馈的重要边界条件，被全球气候观测系统认定为一个重要的气候变量。植被光学深度（VOD，τ）是一个物理变量，描述了植被在微波辐射传输模型中造成的微波消光效应，它提供了植物水分状态和生物量的信息。微波遥感在获取SM和VOD方面具有良好的能力，特别是被动微波L波段（1 – 2 GHz），因为在这些波长下，植被是半透明的，观测到的亮温（Tb）对土壤表层前几厘米的水分含量敏感，且与较短波长相比，吸收和散射的影响较小。目前，地球轨道卫星上的L波段被动微波传感器包括欧洲空间局（ESA）的土壤湿度与海洋盐度（SMOS）任务，该任务于2009年11月发射，具有多角度和全极化观测，以及美国国家航空航天局（NASA）的土壤湿度主动被动（SMAP）任务，该任务于2015年1月发射，具有40°入射角的全极化观测。大多数SM和VOD的反演算法基于RTM的零阶解，也称为τ-ω模型。"
-            ],
-            "research objectiveCn": [
-                "本研究提出了一种多通道协同算法（MCCA）的参数自校准框架，并基于NASA土壤湿度主动被动（SMAP）任务在固定角度（40°）下的双极化L波段观测，呈现了一种新的土壤湿度产品和首个依赖于极化的VOD产品。"
-            ],
-            "challengesCn": [
-                "当前的检索算法通常忽略了植被效应的极化依赖性。检索性能依赖于辅助数据引入的不确定性。由于SMAP在过境期间仅提供两次观测，天线温度（Tbs）的信息量（DoI）可能低于未知数的数量（表面参数、土壤湿度（SM）和植被水分含量（VOD））。"
-            ],
-            "methodsCn": [
-                "为了减少辅助数据的使用，本研究实施了MCCA的遍历形式，其中一系列的土壤水分（SM）值从0.001（单位：m³/m³）到孔隙度（土壤中空隙空间的比例，单位：m³/m³）被设定为输入。Rou的自校准在两种极端条件下进行。对于第一种条件，假设表面光滑，遵循以下程序：（1）Rou最初在全局范围内设置为0。使用MCCA算法，检索了201对在H和V极化下的SM和VOD，ω的范围从0到0.2，步长为0.001。DoI计算的箱体大小是使用所有201对时间序列的SM和H极化VOD确定的。选择对应于最小DoI的ω值作为结果。（2）使用步骤（1）获得的ω值，使用MCCA检索了451对SM和VOD的时间序列，Rou值范围从0到4.5，步长为0.01。通过最小化SM和H极化VOD计算的WDs来优化第一个初始Rou（Rou_init1）。"
-            ],
-            "datasetCn": [
-                "在本研究中，使用了H极化和V极化的Tb数据以及包含在SMAP Level-3 Radiometer Global Daily 36 km EASE-Grid Soil Moisture (SPL3SMP)版本8中的地表温度。SPL3SMP由国家雪和冰数据中心（NDISC）分发，并投影到全球等面积可缩放地球2（EASE2）网格，空间采样为36公里。由于卫星视场的异质性，涉及了19个密集网络和1个稀疏网络（土壤气候分析网络，SCAN）来评估MCCA和其他五种遥感土壤湿度（SM）估计，包括来自国际土壤湿度网络（ISMN）数据库的八个网络、来自美国农业部（USDA）的七个网络、从国家西藏高原数据中心获取的四个额外网络，以及在西藏高原建立的SMN-WDL网络，专注于观察土壤湿度、土壤温度和冻结/融化状态。沙土和粘土的比例数据来自全球土壤纹理数据库（SoilGrids250m），用于介电模型。冠层高度数据来自全球生态系统动态调查（GEDI）第3级网格化平均冠层高度（版本2），而地上生物量（版本4）则来源于欧洲空间局气候变化倡议（CCI）计划。总降水量数据来自ERA5-Land小时数据，已从小时数据转换为每日总和，也用于分析。所有数据集均已聚合以与SMAP像素网格大小对齐。"
-            ],
-            "findingsCn": [
-                "MCCA派生的土壤湿度（SM）表现出最低的无偏根均方差（ubRMSD，约为0.055 m³/m³），其次是SMAP-IB和DCA（0.061 m³/m³），在与18个密集土壤湿度网络的现场观测数据进行评估时，整体皮尔逊相关系数为0.744（SMAP-IB表现最佳，R = 0.764）。MCCA生成了垂直和水平极化的植被光学密度（VOD）值，显示出卫星尺度上植被效应的轻微极化差异。这两种VOD与地上生物量和树冠高度之间存在强线性关系。VOD的极化差异主要在密集植被和干旱地区观察到。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "彭志晴",
+        "nameEn": "PENG Zhiqing ",
+        "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "赵天杰",
+        "nameEn": "ZHAO Tianjie",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "姚盼盼",
+        "nameEn": "YAO Panpan",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "施建成",
+        "nameEn": "SHI Jiancheng",
+        "unitEn": "",
+        "unitCn": "中国科学院国家空间科学中心"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Does the multi-channel collaborative algorithm (MCCA) improve the accuracy of soil moisture retrieval compared to other SMAP products?",
-                "QuestionCn": "多通道协作算法（MCCA）是否提高了土壤湿度检索的准确性，与其他SMAP产品相比？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is the multi-frequency approach generally less effective than the multi-angular approach for soil moisture retrieval in a cornfield?",
-                "QuestionCn": "多频率方法在玉米田土壤湿度提取中通常不如多角度方法有效吗？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is the polarization dependence of vegetation effects usually ignored in current retrieval algorithms for SMAP observations?",
-                "QuestionCn": "植被效应的极化依赖性在当前的SMAP观测反演算法中通常被忽略吗？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which retrieval approach is more effective for soil moisture data collection, multi-angular or multi-frequency methods?",
-                "QuestionCn": "哪种检索方法对于土壤湿度数据收集更有效，角度多样性方法还是频率多样性方法？",
-                "AnswerEn": "multi-angular",
-                "AnswerCn": "多角度",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "For evaluating soil moisture retrieval algorithms, which networks are more commonly used, dense observation networks or sparse networks?",
-                "QuestionCn": "在评估土壤湿度检索算法时，通常使用的是密集观测网络还是稀疏网络？",
-                "AnswerEn": "Dense observation networks",
-                "AnswerCn": "密集观测网络",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the challenges faced in improving soil moisture retrieval algorithms using microwave remote sensing?",
-                "QuestionCn": "利用微波遥感改进土壤湿度检索算法面临的挑战有哪些？",
-                "AnswerEn": "retrieval performance limitations, uncertainties from auxiliary data, polarization dependence of vegetation effects, information availability from SMAP",
-                "AnswerCn": "检索性能限制、辅助数据的不确定性、植被效应的极化依赖性、来自SMAP的信息可用性",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method used to obtain soil moisture and vegetation optical depth in diverse geographic regions?",
-                "QuestionCn": "您能否提供一个数据收集方法的例子，用于获取不同地理区域的土壤湿度和植被光学深度？",
-                "AnswerEn": "One example of a data collection method used to obtain soil moisture and vegetation optical depth is the use of ground-based microwave radiometry datasets collected during the Soil Moisture Experiment in the Luan River in Inner Mongolia, which utilized multi-channel collaborative algorithms for retrieval.",
-                "AnswerCn": "一个用于获取土壤湿度和植被光学深度的数据收集方法的例子是，在内蒙古的 Luan 河进行的土壤湿度实验中，使用了地面微波辐射计数据集，该实验利用多通道协作算法进行反演。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced when collecting soil moisture data using satellite-based observations?",
-                "QuestionCn": "使用卫星观测收集土壤湿度数据时面临的一个挑战是什么？",
-                "AnswerEn": "An example of a challenge is the limitation in retrieval performance due to increasing the number of observation channels, which can increase the probability that model estimations do not match observations, as highlighted in multi-angular and multi-frequency retrieval approaches.",
-                "AnswerCn": "一个挑战的例子是，由于增加观测通道的数量，检索性能受到限制，这可能增加模型估计与观测不匹配的概率，这在多角度和多频率检索方法中得到了强调。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of the multi-channel collaborative algorithm (MCCA) used for retrieving soil moisture and vegetation optical depth?",
-                "QuestionCn": "多通道协同算法（MCCA）用于获取土壤湿度和植被光学深度的特征是什么？",
-                "AnswerEn": "parameter self-calibrating, collaborative channels, does not rely on auxiliary data, suitable for various payload configurations, handles polarization differences, robustness in estimating parameters using the analytical form of brightness temperature",
-                "AnswerCn": "参数自校准、协作通道、不依赖辅助数据、适用于各种有效载荷配置、处理极化差异、在使用亮温解析形式估计参数方面具有鲁棒性。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What specific attributes are measured when evaluating the performance of soil moisture retrieval methods?",
-                "QuestionCn": "在评估土壤湿度检索方法的性能时，测量的具体属性包括哪些？",
-                "AnswerEn": "unbiased root mean square difference, Pearson’s correlation coefficient, polarization differences in vegetation optical depth, relationship with above-ground biomass, canopy height",
-                "AnswerCn": "无偏均方根差，皮尔逊相关系数，植被光学深度的极化差异，与地上生物量的关系，冠层高度",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the global soil moisture and vegetation optical depth dataset collected using the multi-channel collaborative algorithm?",
-                "QuestionCn": "使用多通道协作算法收集的全球土壤湿度和植被光学深度数据集的空间分辨率是多少？",
-                "AnswerEn": "9 kilometers",
-                "AnswerCn": "9公里",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is meant by 'vegetation optical depth (VOD)' in microwave radiative transfer models?",
-                "QuestionCn": "“植被光学深度（VOD）”在微波辐射传输模型中指的是植被对微波辐射的吸收和散射程度的量度。",
-                "AnswerEn": "Vegetation optical depth (VOD) is a physical variable that describes the microwave extinction effects caused by vegetation within microwave radiative transfer models. It provides information on plant water status and biomass by measuring the attenuation of microwave signals as they pass through vegetation.",
-                "AnswerCn": "植被光学深度（VOD）是一个物理变量，描述了在微波辐射传输模型中植被引起的微波衰减效应。通过测量微波信号在通过植被时的衰减，它提供了植物水分状态和生物量的信息。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the data collection methods for soil moisture and vegetation optical depth using ground-based microwave radiometry datasets compare to those using spaceborne L-band passive microwave sensors?",
-                "QuestionCn": "土壤湿度和植被光学深度的数据收集方法，使用地面微波辐射计数据集与使用太空borne L波段被动微波传感器的数据收集方法相比，如何？",
-                "AnswerEn": "Ground-based microwave radiometry datasets, such as those collected during the Soil Moisture Experiment in the Luan River, provide high-resolution observations over specific land covers (e.g., cropland and grassland). In contrast, spaceborne L-band passive microwave sensors, like those used in the SMAP mission, offer global coverage and are designed to retrieve soil moisture and VOD across various terrains and conditions, utilizing multi-angular and dual-polarized observations.",
-                "AnswerCn": "基于地面的微波辐射计数据集，例如在滦河土壤湿度实验期间收集的数据，提供了对特定土地覆盖（如农田和草地）的高分辨率观测。相比之下，空间borne L波段被动微波传感器，如SMAP任务中使用的传感器，提供全球覆盖，旨在利用多角度和双极化观测在各种地形和条件下检索土壤湿度和植被光合有效辐射（VOD）。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the similarities and differences between the multi-channel collaborative algorithm (MCCA) and other soil moisture retrieval algorithms in terms of data requirements and performance?",
-                "QuestionCn": "多通道协同算法（MCCA）与其他土壤湿度反演算法在数据需求和性能方面的相似性和差异是什么？",
-                "AnswerEn": "The MCCA requires fewer auxiliary data and emphasizes self-calibrating techniques, reducing dependency on external data sources. It provides improved performance by incorporating polarization-dependent vegetation effects. Other algorithms might rely more heavily on auxiliary data, which can introduce uncertainties, and often overlook polarization differences, potentially affecting retrieval accuracy.",
-                "AnswerCn": "MCCA要求较少的辅助数据，并强调自校准技术，减少对外部数据源的依赖。通过纳入与极化相关的植被效应，它提供了更好的性能。其他算法可能更依赖于辅助数据，这可能引入不确定性，并且往往忽视极化差异，可能影响检索准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the performance of soil moisture retrieval using multi-angular approaches compare to multi-frequency approaches in varying land cover types?",
-                "QuestionCn": "多角度方法在不同土地覆盖类型下的土壤湿度检索性能与多频率方法相比如何？",
-                "AnswerEn": "In cropland environments, the multi-angular approach of MCCA generally outperforms the multi-frequency approach, offering better performance metrics such as lower ubRMSD. However, for grassland covers, the multi-frequency approach can yield superior results, likely due to reduced vegetation effects, highlighting the need for different approaches based on land cover characteristics.",
-                "AnswerCn": "在农田环境中，多角度的MCCA方法通常优于多频率方法，提供更好的性能指标，如较低的ubRMSD。然而，对于草地覆盖，多频率方法可能会产生更好的结果，这可能是由于植被效应的减少，强调了根据土地覆盖特征需要采用不同的方法。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can the integration of multi-angular and multi-frequency approaches improve the robustness of soil moisture retrieval datasets, and what are the potential trade-offs?",
-                "QuestionCn": "多角度和多频率方法的集成如何提高土壤湿度检索数据集的稳健性，以及可能的权衡是什么？",
-                "AnswerEn": "Integrating multi-angular and multi-frequency approaches can improve the robustness of soil moisture retrieval by increasing the number of observation channels, thus enhancing the dataset's resilience against errors. However, the trade-off may include increased complexity and potential limitations in retrieval performance, as the probability that model estimations will not match observations could rise.",
-                "AnswerCn": "整合多角度和多频率的方法可以通过增加观测通道的数量来提高土壤湿度提取的稳健性，从而增强数据集对错误的抵抗力。然而，权衡可能包括复杂性增加和检索性能的潜在限制，因为模型估计与观测不匹配的概率可能会增加。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In what ways can the heterogeneity of satellite footprints be accounted for when validating soil moisture datasets using dense observation networks?",
-                "QuestionCn": "在使用密集观测网络验证土壤湿度数据集时，如何考虑卫星足迹的异质性？",
-                "AnswerEn": "The heterogeneity of satellite footprints can be accounted for by involving multiple dense networks in the validation process, which helps to align the datasets with the satellite pixel grid size. Using diverse sources, including international soil moisture networks and various remote sensing estimates, can help to capture the spatial variability and improve the accuracy and reliability of soil moisture datasets.",
-                "AnswerCn": "卫星足迹的异质性可以通过在验证过程中涉及多个密集网络来考虑，这有助于将数据集与卫星像素网格大小对齐。利用多种来源，包括国际土壤湿度网络和各种遥感估计，可以帮助捕捉空间变异性，提高土壤湿度数据集的准确性和可靠性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the precision of soil moisture retrieval algorithms to vary across different satellite missions?",
-                "QuestionCn": "导致不同卫星任务的土壤湿度检索算法精度变化的原因是什么？",
-                "AnswerEn": "The precision of soil moisture retrieval algorithms can vary across different satellite missions due to factors such as the number of observation channels, payload configurations, and the retrieval models used. The balance between the number of channels and the robustness of retrievals, as well as the self-calibrating capabilities of algorithms, significantly affects precision.",
-                "AnswerCn": "土壤湿度检索算法的精度因不同卫星任务而异，这与观测通道的数量、载荷配置和检索模型等因素有关。通道数量与检索的稳健性之间的平衡，以及算法的自校准能力，显著影响了精度。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the underlying causes that lead to polarization differences in vegetation optical depth observed at the satellite scale?",
-                "QuestionCn": "导致卫星尺度上观察到的植被光学深度极化差异的潜在原因是什么？",
-                "AnswerEn": "Polarization differences in vegetation optical depth observed at the satellite scale are primarily caused by the varying effects of vegetation density and moisture on microwave emissions. Densely vegetated and arid areas tend to exhibit more pronounced polarization differences due to the interaction of microwave signals with vegetation structure and moisture content.",
-                "AnswerCn": "在卫星尺度上观察到的植被光学深度的极化差异主要是由于植被密度和湿度对微波辐射的影响不同。密集植被和干旱地区往往表现出更明显的极化差异，这是由于微波信号与植被结构和水分含量的相互作用所致。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "How might the inclusion of polarization-dependent vegetation optical depth data affect the development of future satellite missions' data collection strategies?",
-                "QuestionCn": "极化依赖的植被光学深度数据的纳入可能会如何影响未来卫星任务的数据收集策略的发展？",
-                "AnswerEn": "Incorporating polarization-dependent vegetation optical depth data can provide new insights into vegetation effects at the satellite scale, potentially influencing the design of future satellite missions to include capabilities for simultaneous multi-angular and multi-frequency observations. This could lead to more accurate soil moisture and vegetation data retrievals, particularly in densely vegetated and arid areas where polarization differences are more pronounced.",
-                "AnswerCn": "纳入依赖于极化的植被光学深度数据可以为卫星尺度上的植被效应提供新的见解，可能会影响未来卫星任务的设计，以包括同时进行多角度和多频率观测的能力。这可能会导致在植被密集和干旱地区更准确的土壤湿度和植被数据提取，特别是在极化差异更明显的地方。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What are the expected consequences on data accuracy and reliability when utilizing ground-based microwave radiometry datasets in soil moisture experiments?",
-                "QuestionCn": "在土壤湿度实验中利用地面微波辐射计数据集时，预期会对数据的准确性和可靠性产生什么影响？",
-                "AnswerEn": "Utilizing ground-based microwave radiometry datasets in soil moisture experiments can enhance data accuracy and reliability. The datasets provide critical baseline observations for developing and validating algorithms like the MCCA, which have shown better performance in soil moisture retrieval by reducing the effects of vegetation and improving the unbiased root mean square difference (ubRMSD) across different field conditions such as cropland and grassland.",
-                "AnswerCn": "利用地面微波辐射计数据集进行土壤湿度实验可以提高数据的准确性和可靠性。这些数据集为开发和验证算法如MCCA提供了关键的基线观测，这些算法在土壤湿度提取方面表现更好，通过减少植被的影响并改善不同田地条件（如农田和草地）下的无偏根均方差（ubRMSD）。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the objectives of employing a multi-channel collaborative algorithm in the retrieval of soil moisture and vegetation optical depth from satellite observations?",
-                "QuestionCn": "采用多通道协同算法从卫星观测中检索土壤湿度和植被光学深度的目标是什么？",
-                "AnswerEn": "The objective is to improve the retrieval accuracy of soil moisture and vegetation optical depth by using a multi-channel collaborative algorithm that leverages self-constrained relationships between parameters and theoretical conversion relationships between channels, thus eliminating the need for auxiliary data and adapting to various payload configurations.",
-                "AnswerCn": "目标是通过使用多通道协同算法来提高土壤湿度和植被光学深度的检索精度，该算法利用参数之间的自约束关系和通道之间的理论转换关系，从而消除对辅助数据的需求，并适应各种载荷配置。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures are utilized to retrieve soil moisture and vegetation optical depth from satellite microwave emissions, considering the payload configurations of current and future satellite missions?",
-                "QuestionCn": "从卫星微波辐射中获取土壤湿度和植被光学深度的程序，考虑到当前和未来卫星任务的有效载荷配置。",
-                "AnswerEn": "A multi-channel collaborative algorithm (MCCA) is developed, which utilizes information from collaborative channels expressed as an analytical form of brightness temperature at the core channel to rule out the parameters to be retrieved. This approach considers multi-angular and multi-frequency configurations for retrieval, using datasets collected from ground-based microwave radiometry experiments.",
-                "AnswerCn": "开发了一种多通道协作算法（MCCA），该算法利用以核心通道的亮温度分析形式表达的协作通道信息，以排除要检索的参数。该方法考虑了多角度和多频率配置进行检索，使用从地面微波辐射实验中收集的数据集。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can the polarization dependence of vegetation effects be accounted for in soil moisture and vegetation optical depth retrieval algorithms?",
-                "QuestionCn": "如何在土壤湿度和植被光学深度反演算法中考虑植被效应的极化依赖性？",
-                "AnswerEn": "To address the polarization dependence, a parameter self-calibrating framework for the multi-channel collaborative algorithm (MCCA) was proposed, utilizing dual-polarized L-band observations at a fixed angle. This involves self-calibrating parameters under different surface conditions to optimize retrieval performance and minimize uncertainties introduced by auxiliary data.",
-                "AnswerCn": "为了解决极化依赖性，提出了一种多通道协同算法（MCCA）的参数自校准框架，利用固定角度下的双极化L波段观测。这涉及在不同表面条件下自校准参数，以优化检索性能并最小化辅助数据引入的不确定性。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methodologies enable the retrieval of soil moisture and vegetation optical depth using satellite data without relying heavily on auxiliary data?",
-                "QuestionCn": "哪些方法论能够利用卫星数据检索土壤湿度和植被光学深度，而不依赖于大量辅助数据？",
-                "AnswerEn": "In the field, the multi-channel collaborative algorithm (MCCA) is implemented to reduce the usage of auxiliary data by utilizing the self-calibrating framework that allows the retrieval of soil moisture and vegetation optical depth from satellite data. This approach uses the ergodic form of MCCA to set a series of soil moisture values as input and self-calibrates under extreme conditions to optimize retrievals.",
-                "AnswerCn": "在该领域，实施了多通道协作算法（MCCA），通过利用自校准框架来减少辅助数据的使用，从卫星数据中提取土壤湿度和植被光学深度。该方法使用MCCA的遍历形式，将一系列土壤湿度值作为输入，并在极端条件下自校准以优化提取结果。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the integration of ground-based microwave radiometry datasets contribute to improving the accuracy of soil moisture retrieval in satellite missions?",
-                "QuestionCn": "地面微波辐射计数据集的整合如何有助于提高卫星任务中土壤湿度检索的准确性？",
-                "AnswerEn": "The integration of ground-based microwave radiometry datasets, such as those collected during the Soil Moisture Experiment in the Luan River, enables the enhancement of soil moisture retrieval accuracy by providing critical observational data that support the development of the multi-channel collaborative algorithm (MCCA), which is used in satellite missions.",
-                "AnswerCn": "地面微波辐射计数据集的整合，例如在滦河土壤湿度实验期间收集的数据，能够通过提供关键的观测数据来提高土壤湿度检索的准确性，这些数据支持多通道协同算法（MCCA）的开发，该算法用于卫星任务。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might expanding the number of observation channels in satellite missions potentially limit the retrieval performance of soil moisture data?",
-                "QuestionCn": "扩展卫星任务中的观测通道数量可能会限制土壤湿度数据的检索性能的原因是什么？",
-                "AnswerEn": "Increasing the number of observation channels could make the soil moisture retrieval more robust, but might also limit the retrieval performance as it increases the probability that the model estimations will not match the observations.",
-                "AnswerCn": "增加观测通道的数量可能会使土壤湿度的获取更加稳健，但也可能会限制获取性能，因为这增加了模型估计与观测不匹配的概率。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is it important to reduce the usage of auxiliary data in retrieval algorithms for soil moisture and vegetation optical depth?",
-                "QuestionCn": "减少在土壤湿度和植被光学深度检索算法中使用辅助数据的重要性是什么？",
-                "AnswerEn": "Reducing the usage of auxiliary data is important because the retrieval performance is dependent on the uncertainties introduced by such data. Since SMAP provides limited observations during an overpass, minimizing auxiliary data helps to better manage the degree of information and improve the retrieval accuracy of surface parameters, soil moisture, and vegetation optical depth.",
-                "AnswerCn": "减少辅助数据的使用很重要，因为检索性能依赖于此类数据引入的不确定性。由于SMAP在过境期间提供的观测有限，最小化辅助数据有助于更好地管理信息的程度，并提高地表参数、土壤湿度和植被光学深度的检索精度。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How effective do you consider multi-channel collaborative algorithms in improving the accuracy of soil moisture retrieval when compared to traditional methods?",
-                "QuestionCn": "您认为多通道协作算法在提高土壤湿度检索准确性方面与传统方法相比效果如何？",
-                "AnswerEn": "The multi-channel collaborative algorithm (MCCA) is considered effective in improving the accuracy of soil moisture retrieval. It generally shows better performance with an unbiased root mean square difference (ubRMSD) ranging from 0.028 cm³/cm³ to 0.037 cm³/cm³ for certain conditions, outperforming traditional multi-frequency approaches, especially in environments with dense vegetation.",
-                "AnswerCn": "多通道协同算法（MCCA）被认为在提高土壤湿度检索的准确性方面有效。在某些条件下，它通常表现出更好的性能，偏差均方根差（ubRMSD）范围为0.028 cm³/cm³到0.037 cm³/cm³，优于传统的多频率方法，特别是在植被密集的环境中。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the major methodological challenges when integrating multi-angular and multi-frequency observations for soil moisture and vegetation optical depth retrieval?",
-                "QuestionCn": "在整合多角度和多频率观测以获取土壤湿度和植被光学深度时，主要的方法论挑战有哪些？",
-                "AnswerEn": "A major methodological challenge lies in balancing the robustness of soil moisture retrieval with the complexity introduced by increased observation channels, which can limit performance. Additionally, ensuring that the degree of information from observations matches the number of unknown parameters is a challenge, especially since SMAP provides limited observations during an overpass.",
-                "AnswerCn": "一个主要的方法论挑战在于平衡土壤湿度检索的稳健性与增加观测通道所带来的复杂性，这可能会限制性能。此外，确保观测信息的程度与未知参数的数量相匹配也是一个挑战，特别是因为SMAP在过境期间提供的观测有限。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In your opinion, what are potential strategies to enhance dataset validation for soil moisture and vegetation optical depth products on a global scale?",
-                "QuestionCn": "在您看来，有哪些潜在策略可以增强全球范围内土壤湿度和植被光学深度产品的数据集验证？",
-                "AnswerEn": "Enhancing dataset validation can involve expanding the number and diversity of dense observation networks globally. Utilizing data from international networks like the International Soil Moisture Network (ISMN) and integrating auxiliary datasets such as canopy height from GEDI and above-ground biomass from ESA's CCI Programme could improve validation. Additionally, comparing datasets against in-situ observations from diverse climatic and vegetation conditions may also enhance validation.",
-                "AnswerCn": "增强数据集验证可以涉及在全球范围内扩展密集观测网络的数量和多样性。利用国际网络的数据，如国际土壤湿度网络（ISMN），并整合辅助数据集，如来自GEDI的树冠高度和来自ESA CCI计划的地上生物量，可以改善验证。此外，将数据集与来自不同气候和植被条件的现场观测进行比较，也可能增强验证。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don’t understand why utilizing multiple observation channels in satellite missions could potentially limit the retrieval performance for soil moisture.",
-                "QuestionCn": "我不明白为什么在卫星任务中利用多个观测通道可能会限制土壤湿度的提取性能。",
-                "AnswerEn": "The use of multiple observation channels can increase the robustness of soil moisture retrievals by providing more data points, but it also raises the chances that model estimations will not match the observations, thus potentially limiting retrieval performance.",
-                "AnswerCn": "使用多个观测通道可以通过提供更多数据点来提高土壤湿度提取的稳健性，但这也增加了模型估计与观测不匹配的可能性，从而可能限制提取性能。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I'm unsure about how a multi-channel collaborative algorithm can function effectively without relying on auxiliary data.",
-                "QuestionCn": "我不确定一个多通道协作算法如何在不依赖辅助数据的情况下有效运行。",
-                "AnswerEn": "The multi-channel collaborative algorithm leverages the self-constraining relationships between parameters and the theoretical transformation relationships between channels to retrieve surface parameters, minimizing the dependence on auxiliary data.",
-                "AnswerCn": "多通道协同算法利用参数之间的自约束关系和通道之间的理论变换关系来提取表面参数，最小化对辅助数据的依赖。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please analyze the challenges associated with soil moisture retrieval when using multi-angular and multi-frequency approaches in remote sensing.",
-                "QuestionCn": "请分析在使用多角度和多频率方法进行遥感时，与土壤湿度获取相关的挑战。",
-                "AnswerEn": "The challenges in soil moisture retrieval using multi-angular and multi-frequency approaches include the potential limitations in retrieval performance due to an increased number of observation channels, which may lead to model estimations not matching observations. Additionally, the polarization dependence of vegetation effects is often ignored, and there is a dependency on auxiliary data which introduces uncertainties.",
-                "AnswerCn": "使用多角度和多频率方法进行土壤湿度检索的挑战包括由于观测通道数量增加而可能导致的检索性能限制，这可能导致模型估计与观测不匹配。此外，植被效应的极化依赖性通常被忽视，并且对辅助数据的依赖引入了不确定性。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry",
+        "referenceCn": null,
+        "referenceEn": "Peng, Z., Zhao, T., Shi, J., Hu, L., Rodríguez-Fernández, N., Wigneron, J., Jackson, T., Walker, J., Cosh, M., Yang, K., Lu, H., Bai, Y., Yao, P., Zheng, J., & Wei, Z. (2024). First mapping of polarization-dependent vegetation optical depth and soil moisture from SMAP L-band radiometry. Remote Sensing of Environment, 302, 113970, https://doi.org/10.1016/j.rse.2023.113970."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm",
+        "referenceCn": null,
+        "referenceEn": "Zhao, T., Shi, J., Entekhabi, D., Jackson, T. J., Hu, L., Peng, Z., Yao, P., Li, S., and Kang, C. S. (2021). Retrievals of soil moisture and vegetation optical depth using a multi-channel collaborative algorithm, Remote Sensing of Environment, 257, 112321, https://doi.org/10.1016/j.rse.2021.112321."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "SMAP",
+        "nameEn": "SMAP"
+      },
+      {
+        "nameCn": "其他",
+        "nameEn": "Others"
+      },
+      {
+        "nameCn": "土壤湿度",
+        "nameEn": "soil moisture"
+      },
+      {
+        "nameCn": "植被",
+        "nameEn": "Vegetation"
+      },
+      {
+        "nameCn": "植被光学厚度",
+        "nameEn": "vegetation optical depth"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      },
+      {
+        "nameCn": "被动微波遥感",
+        "nameEn": "Passive Microwave Remote Sensing"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2015-2024年",
+        "keywordEn": "2015-2024",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Due to the success of the SMOS (Soil Moisture and Ocean Salinity) and SMAP (Soil Moisture Active Passive) missions, new satellite missions are on the horizon. The current and future missions can benefit from investigations that seek to improve retrieval algorithms that quantitatively map global soil moisture and vegetation optical depth (tau) from Earth’s microwave emissions. Soil moisture information is critically important in hydrological processes due to its relationships with land surface evapotranspiration, runoff, precipitation, and infiltration."
+      ],
+      "research objective": [
+        "In this study, we explore multi-angular and multi-frequency approaches for the retrieval of soil moisture and vegetation tau, considering the payload configurations of current and future satellite missions (such as the Copernicus Imaging Microwave Radiometer, the Water Cycle Observation Mission, and the Terrestrial Water Resources Satellite) using a new set of ground observations."
+      ],
+      "challenges": [
+        "It is affirmed that increasing the number of observation channels could make the soil moisture retrieval more robust, but might also limit the retrieval performance, as the probability that the model estimations will not match the observations is increased."
+      ],
+      "methods": [
+        "Two ground-based microwave radiometry datasets collected in Inner Mongolia during the Soil Moisture Experiment in the Luan River from July to August 2017 (cropland) and August to September 2018 (grassland) are used for this study. A multi-channel collaborative algorithm (MCCA) is developed based on the two-component version of the omega-tau model, which utilizes information from collaborative channels expressed as an analytical form of brightness temperature at the core channel to rule out the parameters to be retrieved."
+      ],
+      "dataset": [
+        "Two ground-based microwave radiometry datasets collected in Inner Mongolia during the Soil Moisture Experiment in the Luan River from July to August 2017 (cropland) and August to September 2018 (grassland) are used for this study."
+      ],
+      "findings": [
+        "Results of soil moisture retrieval show that the multi-angular approach used by the MCCA generally has a better performance, unbiased root mean square difference (ubRMSD) varying from 0.028 cm³/cm³ to 0.037 cm³/cm³, than the multi-frequency approach (ubRMSD from 0.028 cm³/cm³ to 0.089 cm³/cm³) for the corn field. Except for in the C- & X-band combination, the multi-frequency approach used by the MCCA performs better (ubRMSD from 0.018 cm³/cm³ to 0.023 cm³/cm³) than the multi-angular version (ubRMSD from 0.026 cm³/cm³ to 0.034 cm³/cm³) for the grass field due to reduced vegetation effects for this type of cover. This study provides new insights into the design of potential satellite missions to improve soil moisture retrieval. A satellite with simultaneous multi-angular and multi-frequency observation capabilities is highly recommended."
+      ],
+      "backgroundCn": [
+        "由于SMOS（土壤湿度和海洋盐度）和SMAP（土壤湿度主动被动）任务的成功，新的卫星任务正在筹备中。目前和未来的任务可以从研究中受益，这些研究旨在改进检索算法，以定量映射地球微波辐射下的全球土壤湿度和植被光学深度（tau）。土壤湿度信息在水文过程中至关重要，因为它与地表蒸散、径流、降水和渗透等过程密切相关。"
+      ],
+      "research objectiveCn": [
+        "在本研究中，我们探讨了多角度和多频率方法用于土壤湿度和植被光学厚度的提取，考虑了当前和未来卫星任务（如哥白尼成像微波辐射计、水循环观测任务和陆地水资源卫星）的有效载荷配置，并使用了一组新的地面观测数据。"
+      ],
+      "challengesCn": [
+        "增加观测通道的数量可以使土壤湿度的检索更加稳健，但也可能限制检索性能，因为模型估计与观测不匹配的概率增加。"
+      ],
+      "methodsCn": [
+        "在2017年7月至8月的土壤湿度实验期间，内蒙古收集了两个基于地面的微波辐射测量数据集（农田），以及在2018年8月至9月的草地数据集。基于两组件版本的omega-tau模型，开发了一种多通道协同算法（MCCA），该算法利用协同通道的信息，以亮度温度的解析形式表达核心通道，从而排除需要检索的参数。"
+      ],
+      "datasetCn": [
+        "在2017年7月至8月的土壤湿度实验期间，在内蒙古收集的两个地面微波辐射计数据集（农田）和2018年8月至9月（草地）用于本研究。"
+      ],
+      "findingsCn": [
+        "土壤湿度检索结果显示，MCCA使用的多角度方法在性能上普遍优于多频率方法，玉米田的无偏根均方差（ubRMSD）范围为0.028 cm³/cm³到0.037 cm³/cm³，而多频率方法的ubRMSD范围为0.028 cm³/cm³到0.089 cm³/cm³。除了C波段和X波段组合外，MCCA使用的多频率方法在草地的表现更好（ubRMSD范围为0.018 cm³/cm³到0.023 cm³/cm³），而多角度版本的ubRMSD范围为0.026 cm³/cm³到0.034 cm³/cm³，这主要是由于这种覆盖类型的植被效应减弱。本研究为潜在卫星任务的设计提供了新的见解，强烈建议设计具备同时多角度和多频率观测能力的卫星。"
+      ]
+    },
+    {
+      "background": [
+        "Soil moisture (SM) is an important boundary condition of land-atmosphere feedbacks, and is identified as an essential climate variable by the Global Climate Observing System. Vegetation optical depth (VOD, τ) is a physical variable that describes the microwave extinction effects caused by vegetation in the microwave radiative transfer models and it provides information on both plant water status and biomass. Microwave remote sensing has good capability to retrieve SM and VOD, especially passive microwave L-band (1 – 2 GHz) because at these wavelengths the vegetation is semi-transparent, and the observed brightness temperature (Tb) is sensitive to the water content of the first few centimeters of the soil surface, and absorption and scattering have lower impacts, compared to shorter wavelengths. Current L-band passive microwave sensors on Earth-orbiting satellites include the European Space Agency's (ESA) Soil Moisture and Ocean Salinity (SMOS) mission, launched in November 2009 with multi-angular and full-polarized observations and the National Aeronautics and Space Administration's (NASA) Soil Moisture Active Passive (SMAP) mission, launched in January 2015 with full-polarized observations at an incidence angle of 40°. Most SM and VOD retrieval algorithms for SMAP are based on the zero-order solution of RTM, also known as the τ-ω model."
+      ],
+      "research objective": [
+        "This study proposed a parameter self-calibrating framework for the multi-channel collaborative algorithm (MCCA) and presented a new SM and the first polarization-dependent VOD product based on the dual-polarized L-band observations at a fixed angle (40°) from the NASA Soil Moisture Active Passive (SMAP) mission."
+      ],
+      "challenges": [
+        "Current retrieval algorithms often ignore the polarization dependence of vegetation effects. The retrieval performance is dependent on the uncertainties introduced by the auxiliary data. Since SMAP provides only two observations during an overpass, the degree of information (DoI) of Tbs can be lower than the number of unknowns (surface parameters, SM, and VOD)."
+      ],
+      "methods": [
+        "To reduce the usage of auxiliary data, the ergodic form of MCCA was implemented in this study, in which a series of SM values from 0.001 (unit: m3/m3) to porosity (the fraction of void space in the soil, unit: m3/m3) were set as input. The self-calibrating of Rou was carried out under two extreme conditions. For the first condition, which was assumed a smooth surface, the following procedure was followed: (1) Rou was initially set to 0 globally. Using the MCCA algorithm, 201 pairs of SM and VOD at H and V polarizations were retrieved for a range of ω from 0 to 0.2 with a step of 0.001. The bin size for DoI calculation was determined using all the 201 pairs of time series SM and H-polarized VOD. The ω value corresponding to the minimum DoI was selected as the result. (2) With the ω value obtained from step (1), 451 pairs of time series SM and VOD were retrieved using MCCA for Rou values ranging from 0 to 4.5 with a step of 0.01. The first initial Rou (Rou_init1) was optimized by minimizing the WDs calculated by SM and VOD at H-polarization."
+      ],
+      "dataset": [
+        "In this study, H- and V-polarized Tb, and the surface temperature included in the SMAP Level-3 Radiometer Global Daily 36 km EASE-Grid Soil Moisture (SPL3SMP) version 8 were used to retrieve SM and VOD. The SPL3SMP is distributed by the National Snow and Ice Data Center (NDISC) and projected to the global Equal-Area Scalable Earth-2 (EASE2) grid with a spatial sampling of 36-km. Due to the heterogeneity of satellite footprints, 19 dense networks and 1 sparse network (the soil climate analysis network, SCAN) were involved to evaluate MCCA and the other five remotely sensed SM estimates, including eight networks sourced from the International Soil Moisture Network (ISMN) database, data for seven networks obtained from the United States Department of Agriculture (USDA), four additional networks accessed from the National Tibetan Plateau Data Center, and the SMN-WDL network built in the Tibet Plateau, focuses on observing soil moisture, soil temperature, and freeze/thaw state. Sand and clay fractions were obtained from the global soil texture database (SoilGrids250m) for use in the dielectric model. Canopy height data were collected from the global ecosystem dynamics investigation (GEDI) Level 3 gridded mean canopy height (version 2), while above-ground biomass (version 4) was sourced from the ESA Climate Change Initiative (CCI) Programme were utilized. Total precipitation data from the ERA5-Land hourly data, converted from hourly to a daily sum, were also used in the analysis. All datasets were aggregated to align with the SMAP pixel grid size."
+      ],
+      "findings": [
+        "The MCCA-derived SM exhibits the lowest unbiased root mean square deviation (ubRMSD, about 0.055 m³/m³), followed by SMAP-IB and DCA (0.061 m³/m³), with an overall Pearson’s correlation coefficient of 0.744 (SMAP-IB performed best with R = 0.764) when evaluated against in-situ observations from 18 dense soil moisture networks. The MCCA generates VOD values for both vertical and horizontal polarization, demonstrating a slight polarization difference of vegetation effect at the satellite scale. Both VODs exhibit a strong linear relationship with above-ground biomass and canopy height. The polarization difference of VODs is primarily observed in densely vegetated and arid areas."
+      ],
+      "backgroundCn": [
+        "土壤湿度（SM）是陆气反馈的重要边界条件，被全球气候观测系统认定为一个重要的气候变量。植被光学深度（VOD，τ）是一个物理变量，描述了植被在微波辐射传输模型中造成的微波消光效应，它提供了植物水分状态和生物量的信息。微波遥感在获取SM和VOD方面具有良好的能力，特别是被动微波L波段（1 – 2 GHz），因为在这些波长下，植被是半透明的，观测到的亮温（Tb）对土壤表层前几厘米的水分含量敏感，且与较短波长相比，吸收和散射的影响较小。目前，地球轨道卫星上的L波段被动微波传感器包括欧洲空间局（ESA）的土壤湿度与海洋盐度（SMOS）任务，该任务于2009年11月发射，具有多角度和全极化观测，以及美国国家航空航天局（NASA）的土壤湿度主动被动（SMAP）任务，该任务于2015年1月发射，具有40°入射角的全极化观测。大多数SM和VOD的反演算法基于RTM的零阶解，也称为τ-ω模型。"
+      ],
+      "research objectiveCn": [
+        "本研究提出了一种多通道协同算法（MCCA）的参数自校准框架，并基于NASA土壤湿度主动被动（SMAP）任务在固定角度（40°）下的双极化L波段观测，呈现了一种新的土壤湿度产品和首个依赖于极化的VOD产品。"
+      ],
+      "challengesCn": [
+        "当前的检索算法通常忽略了植被效应的极化依赖性。检索性能依赖于辅助数据引入的不确定性。由于SMAP在过境期间仅提供两次观测，天线温度（Tbs）的信息量（DoI）可能低于未知数的数量（表面参数、土壤湿度（SM）和植被水分含量（VOD））。"
+      ],
+      "methodsCn": [
+        "为了减少辅助数据的使用，本研究实施了MCCA的遍历形式，其中一系列的土壤水分（SM）值从0.001（单位：m³/m³）到孔隙度（土壤中空隙空间的比例，单位：m³/m³）被设定为输入。Rou的自校准在两种极端条件下进行。对于第一种条件，假设表面光滑，遵循以下程序：（1）Rou最初在全局范围内设置为0。使用MCCA算法，检索了201对在H和V极化下的SM和VOD，ω的范围从0到0.2，步长为0.001。DoI计算的箱体大小是使用所有201对时间序列的SM和H极化VOD确定的。选择对应于最小DoI的ω值作为结果。（2）使用步骤（1）获得的ω值，使用MCCA检索了451对SM和VOD的时间序列，Rou值范围从0到4.5，步长为0.01。通过最小化SM和H极化VOD计算的WDs来优化第一个初始Rou（Rou_init1）。"
+      ],
+      "datasetCn": [
+        "在本研究中，使用了H极化和V极化的Tb数据以及包含在SMAP Level-3 Radiometer Global Daily 36 km EASE-Grid Soil Moisture (SPL3SMP)版本8中的地表温度。SPL3SMP由国家雪和冰数据中心（NDISC）分发，并投影到全球等面积可缩放地球2（EASE2）网格，空间采样为36公里。由于卫星视场的异质性，涉及了19个密集网络和1个稀疏网络（土壤气候分析网络，SCAN）来评估MCCA和其他五种遥感土壤湿度（SM）估计，包括来自国际土壤湿度网络（ISMN）数据库的八个网络、来自美国农业部（USDA）的七个网络、从国家西藏高原数据中心获取的四个额外网络，以及在西藏高原建立的SMN-WDL网络，专注于观察土壤湿度、土壤温度和冻结/融化状态。沙土和粘土的比例数据来自全球土壤纹理数据库（SoilGrids250m），用于介电模型。冠层高度数据来自全球生态系统动态调查（GEDI）第3级网格化平均冠层高度（版本2），而地上生物量（版本4）则来源于欧洲空间局气候变化倡议（CCI）计划。总降水量数据来自ERA5-Land小时数据，已从小时数据转换为每日总和，也用于分析。所有数据集均已聚合以与SMAP像素网格大小对齐。"
+      ],
+      "findingsCn": [
+        "MCCA派生的土壤湿度（SM）表现出最低的无偏根均方差（ubRMSD，约为0.055 m³/m³），其次是SMAP-IB和DCA（0.061 m³/m³），在与18个密集土壤湿度网络的现场观测数据进行评估时，整体皮尔逊相关系数为0.744（SMAP-IB表现最佳，R = 0.764）。MCCA生成了垂直和水平极化的植被光学密度（VOD）值，显示出卫星尺度上植被效应的轻微极化差异。这两种VOD与地上生物量和树冠高度之间存在强线性关系。VOD的极化差异主要在密集植被和干旱地区观察到。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Does the multi-channel collaborative algorithm (MCCA) improve the accuracy of soil moisture retrieval compared to other SMAP products?",
+        "QuestionCn": "多通道协作算法（MCCA）是否提高了土壤湿度检索的准确性，与其他SMAP产品相比？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is the multi-frequency approach generally less effective than the multi-angular approach for soil moisture retrieval in a cornfield?",
+        "QuestionCn": "多频率方法在玉米田土壤湿度提取中通常不如多角度方法有效吗？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is the polarization dependence of vegetation effects usually ignored in current retrieval algorithms for SMAP observations?",
+        "QuestionCn": "植被效应的极化依赖性在当前的SMAP观测反演算法中通常被忽略吗？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which retrieval approach is more effective for soil moisture data collection, multi-angular or multi-frequency methods?",
+        "QuestionCn": "哪种检索方法对于土壤湿度数据收集更有效，角度多样性方法还是频率多样性方法？",
+        "AnswerEn": "multi-angular",
+        "AnswerCn": "多角度",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "For evaluating soil moisture retrieval algorithms, which networks are more commonly used, dense observation networks or sparse networks?",
+        "QuestionCn": "在评估土壤湿度检索算法时，通常使用的是密集观测网络还是稀疏网络？",
+        "AnswerEn": "Dense observation networks",
+        "AnswerCn": "密集观测网络",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the challenges faced in improving soil moisture retrieval algorithms using microwave remote sensing?",
+        "QuestionCn": "利用微波遥感改进土壤湿度检索算法面临的挑战有哪些？",
+        "AnswerEn": "retrieval performance limitations, uncertainties from auxiliary data, polarization dependence of vegetation effects, information availability from SMAP",
+        "AnswerCn": "检索性能限制、辅助数据的不确定性、植被效应的极化依赖性、来自SMAP的信息可用性",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method used to obtain soil moisture and vegetation optical depth in diverse geographic regions?",
+        "QuestionCn": "您能否提供一个数据收集方法的例子，用于获取不同地理区域的土壤湿度和植被光学深度？",
+        "AnswerEn": "One example of a data collection method used to obtain soil moisture and vegetation optical depth is the use of ground-based microwave radiometry datasets collected during the Soil Moisture Experiment in the Luan River in Inner Mongolia, which utilized multi-channel collaborative algorithms for retrieval.",
+        "AnswerCn": "一个用于获取土壤湿度和植被光学深度的数据收集方法的例子是，在内蒙古的 Luan 河进行的土壤湿度实验中，使用了地面微波辐射计数据集，该实验利用多通道协作算法进行反演。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced when collecting soil moisture data using satellite-based observations?",
+        "QuestionCn": "使用卫星观测收集土壤湿度数据时面临的一个挑战是什么？",
+        "AnswerEn": "An example of a challenge is the limitation in retrieval performance due to increasing the number of observation channels, which can increase the probability that model estimations do not match observations, as highlighted in multi-angular and multi-frequency retrieval approaches.",
+        "AnswerCn": "一个挑战的例子是，由于增加观测通道的数量，检索性能受到限制，这可能增加模型估计与观测不匹配的概率，这在多角度和多频率检索方法中得到了强调。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of the multi-channel collaborative algorithm (MCCA) used for retrieving soil moisture and vegetation optical depth?",
+        "QuestionCn": "多通道协同算法（MCCA）用于获取土壤湿度和植被光学深度的特征是什么？",
+        "AnswerEn": "parameter self-calibrating, collaborative channels, does not rely on auxiliary data, suitable for various payload configurations, handles polarization differences, robustness in estimating parameters using the analytical form of brightness temperature",
+        "AnswerCn": "参数自校准、协作通道、不依赖辅助数据、适用于各种有效载荷配置、处理极化差异、在使用亮温解析形式估计参数方面具有鲁棒性。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What specific attributes are measured when evaluating the performance of soil moisture retrieval methods?",
+        "QuestionCn": "在评估土壤湿度检索方法的性能时，测量的具体属性包括哪些？",
+        "AnswerEn": "unbiased root mean square difference, Pearson’s correlation coefficient, polarization differences in vegetation optical depth, relationship with above-ground biomass, canopy height",
+        "AnswerCn": "无偏均方根差，皮尔逊相关系数，植被光学深度的极化差异，与地上生物量的关系，冠层高度",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the global soil moisture and vegetation optical depth dataset collected using the multi-channel collaborative algorithm?",
+        "QuestionCn": "使用多通道协作算法收集的全球土壤湿度和植被光学深度数据集的空间分辨率是多少？",
+        "AnswerEn": "9 kilometers",
+        "AnswerCn": "9公里",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is meant by 'vegetation optical depth (VOD)' in microwave radiative transfer models?",
+        "QuestionCn": "在微波辐射传输模型中，“植被光学深度（VOD）”是什么意思？",
+        "AnswerEn": "Vegetation optical depth (VOD) is a physical variable that describes the microwave extinction effects caused by vegetation within microwave radiative transfer models. It provides information on plant water status and biomass by measuring the attenuation of microwave signals as they pass through vegetation.",
+        "AnswerCn": "植被光学深度（VOD）是一个物理变量，描述了在微波辐射传输模型中植被引起的微波衰减效应。通过测量微波信号在通过植被时的衰减，它提供了植物水分状态和生物量的信息。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the data collection methods for soil moisture and vegetation optical depth using ground-based microwave radiometry datasets compare to those using spaceborne L-band passive microwave sensors?",
+        "QuestionCn": "土壤湿度和植被光学深度的数据收集方法，使用地面微波辐射计数据集与使用太空borne L波段被动微波传感器的数据收集方法相比，如何？",
+        "AnswerEn": "Ground-based microwave radiometry datasets, such as those collected during the Soil Moisture Experiment in the Luan River, provide high-resolution observations over specific land covers (e.g., cropland and grassland). In contrast, spaceborne L-band passive microwave sensors, like those used in the SMAP mission, offer global coverage and are designed to retrieve soil moisture and VOD across various terrains and conditions, utilizing multi-angular and dual-polarized observations.",
+        "AnswerCn": "基于地面的微波辐射计数据集，例如在滦河土壤湿度实验期间收集的数据，提供了对特定土地覆盖（如农田和草地）的高分辨率观测。相比之下，空间borne L波段被动微波传感器，如SMAP任务中使用的传感器，提供全球覆盖，旨在利用多角度和双极化观测在各种地形和条件下检索土壤湿度和植被光合有效辐射（VOD）。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the similarities and differences between the multi-channel collaborative algorithm (MCCA) and other soil moisture retrieval algorithms in terms of data requirements and performance?",
+        "QuestionCn": "多通道协同算法（MCCA）与其他土壤湿度反演算法在数据需求和性能方面的相似性和差异是什么？",
+        "AnswerEn": "The MCCA requires fewer auxiliary data and emphasizes self-calibrating techniques, reducing dependency on external data sources. It provides improved performance by incorporating polarization-dependent vegetation effects. Other algorithms might rely more heavily on auxiliary data, which can introduce uncertainties, and often overlook polarization differences, potentially affecting retrieval accuracy.",
+        "AnswerCn": "MCCA要求较少的辅助数据，并强调自校准技术，减少对外部数据源的依赖。通过纳入与极化相关的植被效应，它提供了更好的性能。其他算法可能更依赖于辅助数据，这可能引入不确定性，并且往往忽视极化差异，可能影响检索准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the performance of soil moisture retrieval using multi-angular approaches compare to multi-frequency approaches in varying land cover types?",
+        "QuestionCn": "多角度方法在不同土地覆盖类型下的土壤湿度检索性能与多频率方法相比如何？",
+        "AnswerEn": "In cropland environments, the multi-angular approach of MCCA generally outperforms the multi-frequency approach, offering better performance metrics such as lower ubRMSD. However, for grassland covers, the multi-frequency approach can yield superior results, likely due to reduced vegetation effects, highlighting the need for different approaches based on land cover characteristics.",
+        "AnswerCn": "在农田环境中，多角度的MCCA方法通常优于多频率方法，提供更好的性能指标，如较低的ubRMSD。然而，对于草地覆盖，多频率方法可能会产生更好的结果，这可能是由于植被效应的减少，强调了根据土地覆盖特征需要采用不同的方法。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can the integration of multi-angular and multi-frequency approaches improve the robustness of soil moisture retrieval datasets, and what are the potential trade-offs?",
+        "QuestionCn": "多角度和多频率方法的集成如何提高土壤湿度检索数据集的稳健性，以及可能的权衡是什么？",
+        "AnswerEn": "Integrating multi-angular and multi-frequency approaches can improve the robustness of soil moisture retrieval by increasing the number of observation channels, thus enhancing the dataset's resilience against errors. However, the trade-off may include increased complexity and potential limitations in retrieval performance, as the probability that model estimations will not match observations could rise.",
+        "AnswerCn": "整合多角度和多频率的方法可以通过增加观测通道的数量来提高土壤湿度提取的稳健性，从而增强数据集对错误的抵抗力。然而，权衡可能包括复杂性增加和检索性能的潜在限制，因为模型估计与观测不匹配的概率可能会增加。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In what ways can the heterogeneity of satellite footprints be accounted for when validating soil moisture datasets using dense observation networks?",
+        "QuestionCn": "在使用密集观测网络验证土壤湿度数据集时，如何考虑卫星足迹的异质性？",
+        "AnswerEn": "The heterogeneity of satellite footprints can be accounted for by involving multiple dense networks in the validation process, which helps to align the datasets with the satellite pixel grid size. Using diverse sources, including international soil moisture networks and various remote sensing estimates, can help to capture the spatial variability and improve the accuracy and reliability of soil moisture datasets.",
+        "AnswerCn": "卫星足迹的异质性可以通过在验证过程中涉及多个密集网络来考虑，这有助于将数据集与卫星像素网格大小对齐。利用多种来源，包括国际土壤湿度网络和各种遥感估计，可以帮助捕捉空间变异性，提高土壤湿度数据集的准确性和可靠性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the precision of soil moisture retrieval algorithms to vary across different satellite missions?",
+        "QuestionCn": "导致不同卫星任务的土壤湿度检索算法精度变化的原因是什么？",
+        "AnswerEn": "The precision of soil moisture retrieval algorithms can vary across different satellite missions due to factors such as the number of observation channels, payload configurations, and the retrieval models used. The balance between the number of channels and the robustness of retrievals, as well as the self-calibrating capabilities of algorithms, significantly affects precision.",
+        "AnswerCn": "土壤湿度检索算法的精度因不同卫星任务而异，这与观测通道的数量、载荷配置和检索模型等因素有关。通道数量与检索的稳健性之间的平衡，以及算法的自校准能力，显著影响了精度。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the underlying causes that lead to polarization differences in vegetation optical depth observed at the satellite scale?",
+        "QuestionCn": "导致卫星尺度上观察到的植被光学深度极化差异的潜在原因是什么？",
+        "AnswerEn": "Polarization differences in vegetation optical depth observed at the satellite scale are primarily caused by the varying effects of vegetation density and moisture on microwave emissions. Densely vegetated and arid areas tend to exhibit more pronounced polarization differences due to the interaction of microwave signals with vegetation structure and moisture content.",
+        "AnswerCn": "在卫星尺度上观察到的植被光学深度的极化差异主要是由于植被密度和湿度对微波辐射的影响不同。密集植被和干旱地区往往表现出更明显的极化差异，这是由于微波信号与植被结构和水分含量的相互作用所致。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "How might the inclusion of polarization-dependent vegetation optical depth data affect the development of future satellite missions' data collection strategies?",
+        "QuestionCn": "极化依赖的植被光学深度数据的纳入可能会如何影响未来卫星任务的数据收集策略的发展？",
+        "AnswerEn": "Incorporating polarization-dependent vegetation optical depth data can provide new insights into vegetation effects at the satellite scale, potentially influencing the design of future satellite missions to include capabilities for simultaneous multi-angular and multi-frequency observations. This could lead to more accurate soil moisture and vegetation data retrievals, particularly in densely vegetated and arid areas where polarization differences are more pronounced.",
+        "AnswerCn": "纳入依赖于极化的植被光学深度数据可以为卫星尺度上的植被效应提供新的见解，可能会影响未来卫星任务的设计，以包括同时进行多角度和多频率观测的能力。这可能会导致在植被密集和干旱地区更准确的土壤湿度和植被数据提取，特别是在极化差异更明显的地方。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What are the expected consequences on data accuracy and reliability when utilizing ground-based microwave radiometry datasets in soil moisture experiments?",
+        "QuestionCn": "在土壤湿度实验中利用地面微波辐射计数据集时，预期会对数据的准确性和可靠性产生什么影响？",
+        "AnswerEn": "Utilizing ground-based microwave radiometry datasets in soil moisture experiments can enhance data accuracy and reliability. The datasets provide critical baseline observations for developing and validating algorithms like the MCCA, which have shown better performance in soil moisture retrieval by reducing the effects of vegetation and improving the unbiased root mean square difference (ubRMSD) across different field conditions such as cropland and grassland.",
+        "AnswerCn": "利用地面微波辐射计数据集进行土壤湿度实验可以提高数据的准确性和可靠性。这些数据集为开发和验证算法如MCCA提供了关键的基线观测，这些算法在土壤湿度提取方面表现更好，通过减少植被的影响并改善不同田地条件（如农田和草地）下的无偏根均方差（ubRMSD）。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the objectives of employing a multi-channel collaborative algorithm in the retrieval of soil moisture and vegetation optical depth from satellite observations?",
+        "QuestionCn": "采用多通道协同算法从卫星观测中检索土壤湿度和植被光学深度的目标是什么？",
+        "AnswerEn": "The objective is to improve the retrieval accuracy of soil moisture and vegetation optical depth by using a multi-channel collaborative algorithm that leverages self-constrained relationships between parameters and theoretical conversion relationships between channels, thus eliminating the need for auxiliary data and adapting to various payload configurations.",
+        "AnswerCn": "目标是通过使用多通道协同算法来提高土壤湿度和植被光学深度的检索精度，该算法利用参数之间的自约束关系和通道之间的理论转换关系，从而消除对辅助数据的需求，并适应各种载荷配置。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures are utilized to retrieve soil moisture and vegetation optical depth from satellite microwave emissions, considering the payload configurations of current and future satellite missions?",
+        "QuestionCn": "从卫星微波辐射中获取土壤湿度和植被光学深度的程序是什么，考虑到当前和未来卫星任务的有效载荷配置？",
+        "AnswerEn": "A multi-channel collaborative algorithm (MCCA) is developed, which utilizes information from collaborative channels expressed as an analytical form of brightness temperature at the core channel to rule out the parameters to be retrieved. This approach considers multi-angular and multi-frequency configurations for retrieval, using datasets collected from ground-based microwave radiometry experiments.",
+        "AnswerCn": "开发了一种多通道协作算法（MCCA），该算法利用以核心通道的亮温度分析形式表达的协作通道信息，以排除要检索的参数。该方法考虑了多角度和多频率配置进行检索，使用从地面微波辐射实验中收集的数据集。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can the polarization dependence of vegetation effects be accounted for in soil moisture and vegetation optical depth retrieval algorithms?",
+        "QuestionCn": "如何在土壤湿度和植被光学深度反演算法中考虑植被效应的极化依赖性？",
+        "AnswerEn": "To address the polarization dependence, a parameter self-calibrating framework for the multi-channel collaborative algorithm (MCCA) was proposed, utilizing dual-polarized L-band observations at a fixed angle. This involves self-calibrating parameters under different surface conditions to optimize retrieval performance and minimize uncertainties introduced by auxiliary data.",
+        "AnswerCn": "为了解决极化依赖性，提出了一种多通道协同算法（MCCA）的参数自校准框架，利用固定角度下的双极化L波段观测。这涉及在不同表面条件下自校准参数，以优化检索性能并最小化辅助数据引入的不确定性。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methodologies enable the retrieval of soil moisture and vegetation optical depth using satellite data without relying heavily on auxiliary data?",
+        "QuestionCn": "哪些方法论能够利用卫星数据检索土壤湿度和植被光学深度，而不依赖于大量辅助数据？",
+        "AnswerEn": "In the field, the multi-channel collaborative algorithm (MCCA) is implemented to reduce the usage of auxiliary data by utilizing the self-calibrating framework that allows the retrieval of soil moisture and vegetation optical depth from satellite data. This approach uses the ergodic form of MCCA to set a series of soil moisture values as input and self-calibrates under extreme conditions to optimize retrievals.",
+        "AnswerCn": "在该领域，实施了多通道协作算法（MCCA），通过利用自校准框架来减少辅助数据的使用，从卫星数据中提取土壤湿度和植被光学深度。该方法使用MCCA的遍历形式，将一系列土壤湿度值作为输入，并在极端条件下自校准以优化提取结果。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the integration of ground-based microwave radiometry datasets contribute to improving the accuracy of soil moisture retrieval in satellite missions?",
+        "QuestionCn": "地面微波辐射计数据集的整合如何有助于提高卫星任务中土壤湿度检索的准确性？",
+        "AnswerEn": "The integration of ground-based microwave radiometry datasets, such as those collected during the Soil Moisture Experiment in the Luan River, enables the enhancement of soil moisture retrieval accuracy by providing critical observational data that support the development of the multi-channel collaborative algorithm (MCCA), which is used in satellite missions.",
+        "AnswerCn": "地面微波辐射计数据集的整合，例如在滦河土壤湿度实验期间收集的数据，能够通过提供关键的观测数据来提高土壤湿度检索的准确性，这些数据支持多通道协同算法（MCCA）的开发，该算法用于卫星任务。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might expanding the number of observation channels in satellite missions potentially limit the retrieval performance of soil moisture data?",
+        "QuestionCn": "扩展卫星任务中的观测通道数量可能会限制土壤湿度数据的检索性能的原因是什么？",
+        "AnswerEn": "Increasing the number of observation channels could make the soil moisture retrieval more robust, but might also limit the retrieval performance as it increases the probability that the model estimations will not match the observations.",
+        "AnswerCn": "增加观测通道的数量可能会使土壤湿度的获取更加稳健，但也可能会限制获取性能，因为这增加了模型估计与观测不匹配的概率。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is it important to reduce the usage of auxiliary data in retrieval algorithms for soil moisture and vegetation optical depth?",
+        "QuestionCn": "减少在土壤湿度和植被光学深度检索算法中使用辅助数据的重要性是什么？",
+        "AnswerEn": "Reducing the usage of auxiliary data is important because the retrieval performance is dependent on the uncertainties introduced by such data. Since SMAP provides limited observations during an overpass, minimizing auxiliary data helps to better manage the degree of information and improve the retrieval accuracy of surface parameters, soil moisture, and vegetation optical depth.",
+        "AnswerCn": "减少辅助数据的使用很重要，因为检索性能依赖于此类数据引入的不确定性。由于SMAP在过境期间提供的观测有限，最小化辅助数据有助于更好地管理信息的程度，并提高地表参数、土壤湿度和植被光学深度的检索精度。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How effective do you consider multi-channel collaborative algorithms in improving the accuracy of soil moisture retrieval when compared to traditional methods?",
+        "QuestionCn": "您认为多通道协作算法在提高土壤湿度检索准确性方面与传统方法相比效果如何？",
+        "AnswerEn": "The multi-channel collaborative algorithm (MCCA) is considered effective in improving the accuracy of soil moisture retrieval. It generally shows better performance with an unbiased root mean square difference (ubRMSD) ranging from 0.028 cm³/cm³ to 0.037 cm³/cm³ for certain conditions, outperforming traditional multi-frequency approaches, especially in environments with dense vegetation.",
+        "AnswerCn": "多通道协同算法（MCCA）被认为在提高土壤湿度检索的准确性方面有效。在某些条件下，它通常表现出更好的性能，偏差均方根差（ubRMSD）范围为0.028 cm³/cm³到0.037 cm³/cm³，优于传统的多频率方法，特别是在植被密集的环境中。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the major methodological challenges when integrating multi-angular and multi-frequency observations for soil moisture and vegetation optical depth retrieval?",
+        "QuestionCn": "在整合多角度和多频率观测以获取土壤湿度和植被光学深度时，主要的方法论挑战有哪些？",
+        "AnswerEn": "A major methodological challenge lies in balancing the robustness of soil moisture retrieval with the complexity introduced by increased observation channels, which can limit performance. Additionally, ensuring that the degree of information from observations matches the number of unknown parameters is a challenge, especially since SMAP provides limited observations during an overpass.",
+        "AnswerCn": "一个主要的方法论挑战在于平衡土壤湿度检索的稳健性与增加观测通道所带来的复杂性，这可能会限制性能。此外，确保观测信息的程度与未知参数的数量相匹配也是一个挑战，特别是因为SMAP在过境期间提供的观测有限。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In your opinion, what are potential strategies to enhance dataset validation for soil moisture and vegetation optical depth products on a global scale?",
+        "QuestionCn": "在您看来，有哪些潜在策略可以增强全球范围内土壤湿度和植被光学深度产品的数据集验证？",
+        "AnswerEn": "Enhancing dataset validation can involve expanding the number and diversity of dense observation networks globally. Utilizing data from international networks like the International Soil Moisture Network (ISMN) and integrating auxiliary datasets such as canopy height from GEDI and above-ground biomass from ESA's CCI Programme could improve validation. Additionally, comparing datasets against in-situ observations from diverse climatic and vegetation conditions may also enhance validation.",
+        "AnswerCn": "增强数据集验证可以涉及在全球范围内扩展密集观测网络的数量和多样性。利用国际网络的数据，如国际土壤湿度网络（ISMN），并整合辅助数据集，如来自GEDI的树冠高度和来自ESA CCI计划的地上生物量，可以改善验证。此外，将数据集与来自不同气候和植被条件的现场观测进行比较，也可能增强验证。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don’t understand why utilizing multiple observation channels in satellite missions could potentially limit the retrieval performance for soil moisture.",
+        "QuestionCn": "我不明白为什么在卫星任务中利用多个观测通道可能会限制土壤湿度的提取性能。",
+        "AnswerEn": "The use of multiple observation channels can increase the robustness of soil moisture retrievals by providing more data points, but it also raises the chances that model estimations will not match the observations, thus potentially limiting retrieval performance.",
+        "AnswerCn": "使用多个观测通道可以通过提供更多数据点来提高土壤湿度提取的稳健性，但这也增加了模型估计与观测不匹配的可能性，从而可能限制提取性能。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I'm unsure about how a multi-channel collaborative algorithm can function effectively without relying on auxiliary data.",
+        "QuestionCn": "我不确定一个多通道协作算法如何在不依赖辅助数据的情况下有效运行。",
+        "AnswerEn": "The multi-channel collaborative algorithm leverages the self-constraining relationships between parameters and the theoretical transformation relationships between channels to retrieve surface parameters, minimizing the dependence on auxiliary data.",
+        "AnswerCn": "多通道协同算法利用参数之间的自约束关系和通道之间的理论变换关系来提取表面参数，最小化对辅助数据的依赖。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please analyze the challenges associated with soil moisture retrieval when using multi-angular and multi-frequency approaches in remote sensing.",
+        "QuestionCn": "请分析在使用多角度和多频率方法进行遥感时，与土壤湿度获取相关的挑战。",
+        "AnswerEn": "The challenges in soil moisture retrieval using multi-angular and multi-frequency approaches include the potential limitations in retrieval performance due to an increased number of observation channels, which may lead to model estimations not matching observations. Additionally, the polarization dependence of vegetation effects is often ignored, and there is a dependency on auxiliary data which introduces uncertainties.",
+        "AnswerCn": "使用多角度和多频率方法进行土壤湿度检索的挑战包括由于观测通道数量增加而可能导致的检索性能限制，这可能导致模型估计与观测不匹配。此外，植被效应的极化依赖性通常被忽视，并且对辅助数据的依赖引入了不确定性。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

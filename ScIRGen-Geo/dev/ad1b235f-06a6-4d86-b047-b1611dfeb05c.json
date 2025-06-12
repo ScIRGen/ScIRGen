@@ -1,587 +1,587 @@
 {
-    "id": "ad1b235f-06a6-4d86-b047-b1611dfeb05c",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": "SinoLC-1: The first 1-meter resolution national-scale land-cover map of China",
-            "titleCn": "SinoLC-1:中国首幅1米分辨率土地覆盖图",
-            "description": "SinoLC-1: The 1-meter resolution national-scale land cover map of China is the first land-cover product with a national scale coverage in China and a spatial resolution of 1.07 meters. The product is built based on a weakly-supervised deep learning framework. The framework combines existing low-resolution labels (10-meter land cover products),  Open Street Map (OSM) vector data, and very-high-resolution remote sensing data (1-meter Google Earth image) as training data. The framework achieves efficient large-scale land mapping tasks by fully mining reliable annotation information in 10-meter land cover products, combined with the fine texture information of 1-meter images, and processing data of about 73TB. At the same time, it completely gets rid of the manual annotating process. The data has been validated with over 100,000 sample points, and its overall accuracy is 73.61%. Compared with the statistical data of the third national land survey report, the overall misestimation rate of 6.4% is 6.4%.",
-            "descriptionCn": "SinoLC-1：中国1米分辨率土地覆盖图为首个具有中国国家尺度覆盖，空间分辨率1米的土地覆盖专题图。针对大范围高分辨率土地覆盖制图中地物复杂多样、高精度训练样本缺乏、制图方法区域迁移性要求高等关键难题，中国地质大学（武汉）张洪艳教授团队于2022年10月提出了一种基于弱监督深度学习的跨分辨率大规模土地覆盖制图网络（L2HNet），利用低分辨率土地覆盖图作为训练集，实现了高分辨率高精度土地覆盖制图。该方法摆脱了高分辨率土地覆盖制图任务对大规模人工手动标注训练集的依赖，大幅减少了大范围高分辨率土地覆盖制图的人力与时间成本，作为阶段性研究进展发表在遥感科学领域权威期刊《ISPRS Journal of Photogrammetry\n& Remote Sensing》上（链接：https://doi.org/10.1016/j.isprsjprs.2022.08.008）。在此基础上，团队进一步构建了中国全域土地覆盖制图框架，利用现有三种10米土地覆盖图（FROM_GLC10、ESA_WorldCover和ESRI_GLC）、开源道路图（Open Street Map，OSM）数据作为训练标签，基于1米分辨率Google开源遥感数据开展全国高分辨率土地覆盖制图，并采用10万目视解译参考点和第三次全国土地调查数据进行精度验证。最终，用时10个月处理约73TB高分辨率多源数据，成功研制了我国第一幅1米分辨率土地覆盖一张图（SinoLC-1）。目前，该专题图描述论文已在地球科学数据权威期刊《Earth System Science Data》上发表（链接：https://essd.copernicus.org/preprints/essd-2023-87/）。",
-            "instructions": "The product is grouped by city tiles in the GeoTIFF format, which are packaged in provincial administrative region folders and stored as “.zip” files. Each city tile is named “G_P_C.tif,” where “G” explains the geographical region (south, central, east, north, northeast, northwest, and northeast of China) information, “P” explains the provincial administrative region information, and “C” explains the city name. For example, the 1-meter land-cover map for Wuhan City, Hubei Province is named “Central_Hubei_Wuhan.tif”.The dataset contains 11 land-cover types. The corresponding grayscale values for each type are as follows: Tree cover (2), Shrubland (3), Grassland (4), Cropland (5), Building (6), Traffic route (1), Barren and sparse vegetation (7), Snow and ice (8), Water (9), Wetland (10), Moss and lichen(12). ",
-            "instructionsCn": "文件命名与介绍：数据为GeoTIFF栅格格式，每个城市数据的命名方式为“G_P_C.tif”，其中“G”表示地理区域（中国南部、中部、东部、北部、东北部、西北部和东北部）信息，“P”表示省级行政区域信息，“C”表示城市名称。例如，湖北省武汉市的1米土地覆盖地图命名为“Central_Hubei_Wuhan.tif”。数据集包含11个土地覆盖类别，各类别名称与灰度值对应如下：树林（2）、灌丛（3）、草地（4）、耕地（5）、建筑（6）、交通路网（1）、贫瘠与稀疏植被（7）、冰雪（8）、水体（9）、湿地（10）、苔原（12）。\n数据读取方式：可使用Arcgis等软件读取，各土地覆盖类别已按照相应颜色表填色，各类别显示颜色对应如下（R、G、B）：树林（0，100，0）、灌丛（255，190，35）、草地（233，255，190）、耕地（255，235，175）、建筑（255，170，0）、交通路网（255，0，0）、贫瘠与稀疏植被（180，180，180）、冰雪（240，240，240）、水体（0，100，200）、湿地（0，150，160）、苔原（250，230，160）。",
-            "east": 135.05,
-            "west": 73.33,
-            "south": 3.51,
-            "north": 53.33,
-            "startTime": "2002-12-01 14:24:51",
-            "endTime": "2021-12-01 14:24:51",
-            "fileSize": 157220364446.0,
-            "cstr": null,
-            "doi": "10.5281/zenodo.7707461",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "李卓鸿",
-                "nameEn": "LI Zhuohong",
-                "unitEn": "",
-                "unitCn": "武汉大学"
-            },
-            {
-                "nameCn": "张洪艳",
-                "nameEn": "ZHANG Hongyan",
-                "unitEn": "",
-                "unitCn": "中国地质大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "SinoLC-1: the first 1-meter resolution national-scale land-cover map of China created with the deep learning framework and open-access data",
-                "referenceCn": null,
-                "referenceEn": "Li, Z., He, W., Cheng, M., Hu, J., Yang, G., & Zhang, H. (2023). SinoLC-1: the first 1-meter resolution national-scale land-cover map of China created with the deep learning framework and open-access data. Earth System Science Data, 2023, 1-38. https://doi.org/10.5194/essd-2023-87"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Breaking the resolution barrier: A low-to-high network for large-scale high-resolution land-cover mapping using low-resolution labels",
-                "referenceCn": null,
-                "referenceEn": "Li, Z., Zhang, H., Lu, F., Xue, R., Yang, G., & Zhang, L. (2022). Breaking the resolution barrier: A low-to-high network for large-scale high-resolution land-cover mapping using low-resolution labels. ISPRS Journal of Photogrammetry and Remote Sensing, 192, 244-267.https://doi.org/10.1016/j.isprsjprs.2022.08.008"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "Image Processing",
-                "nameEn": "Image Processing"
-            },
-            {
-                "nameCn": "Land Cover",
-                "nameEn": "Land Cover"
-            },
-            {
-                "nameCn": "土地利用/覆盖",
-                "nameEn": "Land Use/Land Cover"
-            },
-            {
-                "nameCn": "土地覆盖",
-                "nameEn": "Land cover"
-            },
-            {
-                "nameCn": "遥感产品",
-                "nameEn": "Remote Sensing Product"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2002-2021",
-                "keywordEn": "2002-2021",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "边海重点区域遥感精准监测和安全预警平台",
-                "titleEn": "Remote sensing precise monitoring and security warning platform for key coastal areas"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "ad1b235f-06a6-4d86-b047-b1611dfeb05c",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": "SinoLC-1: The first 1-meter resolution national-scale land-cover map of China",
+      "titleCn": "SinoLC-1:中国首幅1米分辨率土地覆盖图",
+      "description": "SinoLC-1: The 1-meter resolution national-scale land cover map of China is the first land-cover product with a national scale coverage in China and a spatial resolution of 1.07 meters. The product is built based on a weakly-supervised deep learning framework. The framework combines existing low-resolution labels (10-meter land cover products),  Open Street Map (OSM) vector data, and very-high-resolution remote sensing data (1-meter Google Earth image) as training data. The framework achieves efficient large-scale land mapping tasks by fully mining reliable annotation information in 10-meter land cover products, combined with the fine texture information of 1-meter images, and processing data of about 73TB. At the same time, it completely gets rid of the manual annotating process. The data has been validated with over 100,000 sample points, and its overall accuracy is 73.61%. Compared with the statistical data of the third national land survey report, the overall misestimation rate of 6.4% is 6.4%.",
+      "descriptionCn": "SinoLC-1：中国1米分辨率土地覆盖图为首个具有中国国家尺度覆盖，空间分辨率1米的土地覆盖专题图。针对大范围高分辨率土地覆盖制图中地物复杂多样、高精度训练样本缺乏、制图方法区域迁移性要求高等关键难题，中国地质大学（武汉）张洪艳教授团队于2022年10月提出了一种基于弱监督深度学习的跨分辨率大规模土地覆盖制图网络（L2HNet），利用低分辨率土地覆盖图作为训练集，实现了高分辨率高精度土地覆盖制图。该方法摆脱了高分辨率土地覆盖制图任务对大规模人工手动标注训练集的依赖，大幅减少了大范围高分辨率土地覆盖制图的人力与时间成本，作为阶段性研究进展发表在遥感科学领域权威期刊《ISPRS Journal of Photogrammetry\n& Remote Sensing》上（链接：https://doi.org/10.1016/j.isprsjprs.2022.08.008）。在此基础上，团队进一步构建了中国全域土地覆盖制图框架，利用现有三种10米土地覆盖图（FROM_GLC10、ESA_WorldCover和ESRI_GLC）、开源道路图（Open Street Map，OSM）数据作为训练标签，基于1米分辨率Google开源遥感数据开展全国高分辨率土地覆盖制图，并采用10万目视解译参考点和第三次全国土地调查数据进行精度验证。最终，用时10个月处理约73TB高分辨率多源数据，成功研制了我国第一幅1米分辨率土地覆盖一张图（SinoLC-1）。目前，该专题图描述论文已在地球科学数据权威期刊《Earth System Science Data》上发表（链接：https://essd.copernicus.org/preprints/essd-2023-87/）。",
+      "instructions": "The product is grouped by city tiles in the GeoTIFF format, which are packaged in provincial administrative region folders and stored as “.zip” files. Each city tile is named “G_P_C.tif,” where “G” explains the geographical region (south, central, east, north, northeast, northwest, and northeast of China) information, “P” explains the provincial administrative region information, and “C” explains the city name. For example, the 1-meter land-cover map for Wuhan City, Hubei Province is named “Central_Hubei_Wuhan.tif”.The dataset contains 11 land-cover types. The corresponding grayscale values for each type are as follows: Tree cover (2), Shrubland (3), Grassland (4), Cropland (5), Building (6), Traffic route (1), Barren and sparse vegetation (7), Snow and ice (8), Water (9), Wetland (10), Moss and lichen(12). ",
+      "instructionsCn": "文件命名与介绍：数据为GeoTIFF栅格格式，每个城市数据的命名方式为“G_P_C.tif”，其中“G”表示地理区域（中国南部、中部、东部、北部、东北部、西北部和东北部）信息，“P”表示省级行政区域信息，“C”表示城市名称。例如，湖北省武汉市的1米土地覆盖地图命名为“Central_Hubei_Wuhan.tif”。数据集包含11个土地覆盖类别，各类别名称与灰度值对应如下：树林（2）、灌丛（3）、草地（4）、耕地（5）、建筑（6）、交通路网（1）、贫瘠与稀疏植被（7）、冰雪（8）、水体（9）、湿地（10）、苔原（12）。\n数据读取方式：可使用Arcgis等软件读取，各土地覆盖类别已按照相应颜色表填色，各类别显示颜色对应如下（R、G、B）：树林（0，100，0）、灌丛（255，190，35）、草地（233，255，190）、耕地（255，235，175）、建筑（255，170，0）、交通路网（255，0，0）、贫瘠与稀疏植被（180，180，180）、冰雪（240，240，240）、水体（0，100，200）、湿地（0，150，160）、苔原（250，230，160）。",
+      "east": 135.05,
+      "west": 73.33,
+      "south": 3.51,
+      "north": 53.33,
+      "startTime": "2002-12-01 14:24:51",
+      "endTime": "2021-12-01 14:24:51",
+      "fileSize": 157220364446.0,
+      "cstr": null,
+      "doi": "10.5281/zenodo.7707461",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Large-scale high-resolution land-cover mapping is a way to comprehend the Earth’s surface and resolve the ecological and resource challenges facing humanity. High-resolution (≤1 m) remotely sensed images can now be captured more easily, with wider coverage, as sensors and satellites develop. Nevertheless, the synchronous renewal of land-cover maps is still challenging when using the common land-cover mapping methods, due to the requirement for high-resolution land-cover labels. Abundant low-resolution (∼30 m) land-cover products are available for use as alternative label sources, but the resolution gap between these products and the growing volume of high-resolution imagery is a barrier yet to be overcome. Mapping the land-cover situation can not only provide us with the appearance features of the natural landscape and informative descriptions of human development, but it also allows us to indirectly monitor biodiversity loss, soil degradation, and hydrological changes, thus meeting the urgent demands for the formulation of land-use policies and environmental governance plans. Meanwhile, as an inevitable consequence of construction activities, natural disasters, and climate change acting upon the geomorphic environment, land-cover maps rapidly fall out of date and must be constantly updated. With the maturation and development of airborne and spaceborne remote sensing platforms, growing volumes of up-to-date remotely sensed imagery with a high spatial resolution are now available for mapping the land surface both precisely and periodically. Therefore, exploring the use of appropriate geospatial data and mapping algorithms to efficiently update and refine the large-scale land-cover maps with a high resolution has great significance for the long-term development of human society."
-            ],
-            "research objective": [
-                "In this paper, to break through this obstacle, we propose a low-to-high network (L2HNet) to automatically generate high-resolution land-cover maps from high-resolution images by taking only low-resolution land-cover products as the training labels, thus getting rid of the requirement for finely labeled samples during the large-scale map updating process."
-            ],
-            "challenges": [
-                "Nevertheless, the training process for the common deep learning methods is highly reliant on a lot of high-precision labeled data, which are generally produced for specific needs through laborious and time-consuming manual annotation, thus severely restricting the mapping coverage of these methods. These findings suggest that the existing LR labels cannot easily provide reliable supervision information for the large-scale HR mapping task, and it is still a challenge to directly accomplish this task without using any HR labels or ancillary information. However, this approach requires a non-end-to-end redundant iterative process, which costs a lot of time and requires a large amount of computing resources for the large-scale applications."
-            ],
-            "methods": [
-                "Firstly, to obtain the mapping results with rich details, we propose a resolution-preserving (RP) backbone that contains parallel multi-scale convolutional layers for extracting the high-resolution features from the images. Furthermore, to settle the label noise issue caused by the mismatched resolution, a confident area selection (CAS) module and a low-to-high (L2H) loss function, with weak and unsupervised strategies, are designed for obtaining reliable supervision information from the coarse labels."
-            ],
-            "dataset": [
-                "The datasets used in this study covered two large-scale areas in the United States. Firstly, the Chesapeake Bay watershed, which is the largest bay of the United States, was chosen for conducting the quantitative experiments. As shown in Fig. 1, the watershed covers an area of roughly 160,000 km 2, and contains six administrative states, which are the state of Maryland (ML), Virginia (VA), Pennsylvania (PA), New York (NY), Delaware (DE), and West Virginia (WV). The HR (1 m) aerial images, with the bands of red (R), green (G), blue (B), and near-infrared (NIR), were captured by the U.S. Department of Agriculture’s National Agriculture Imagery Program (NAIP) in 2011/2012. The LR (30 m) land-cover labels for 2011 were obtained from the USGS’s National Land Cover Database (NLCD) (Wickham et al., 2017) in level II classification hierarchy, and were reprojected by nearest-neighbor upsampling to align with the NAIP imagery. The HR (1 m) ground references for the quantitative assessment were provided by the Chesapeake Bay Conservancy Land Cover (CCLC) project, which were created based on 1-m NAIP imagery and LiDAR elevation data with six land-cover classes. Furthermore, the ground references were generated through machine learning methods with manual corrections and reported an average accuracy of 88.5% in each state. In addition, the dataset was organized according to the work of Robinson et al. (2019), where a total of 732 non-overlapping tiles were partially sampled from the six states in the Chesapeake Bay watershed, with each tile covering an area of roughly 6000 m × 7500 m. Secondly, in order to further illustrate the practical performance of the L2HNet framework over an intact area with more detailed land-cover categories, the entire state of Maryland, as the core area of Chesapeake Bay with a coverage of 33,872 km 2, was chosen for conducting the practical HR land-cover mapping application, where the raw 30-m resolution NLCD products with the original level II classification hierarchy were directly employed as the label sources. In more detail, the Maryland dataset, which was provided by the Image Analysis and Data Fusion Technical Committee (IADF TC) of IEEE GRSS in 2021, consists of 2250 non-overlapping tiles, with each tile covering an area of 3880 m × 3880 m. For the Maryland dataset, as shown in Fig. 2, the data sources were aligned pairs of NAIP 1-m resolution images and NLCD 30-m resolution labels captured in the year of 2013."
-            ],
-            "findings": [
-                "The experimental results obtained for six administrative states located in the Chesapeake Bay watershed of the United States show that L2HNet outperforms several of the state-of-the-art methods and the mainstream land-cover mapping methods in creating 1-m resolution land-cover maps by taking 30-m resolution land-cover products as training labels. As a further application, L2HNet was also adopted to produce the first 1-m resolution land-cover map with level II classification hierarchy for the entire state of Maryland in the United States, which covers an area of about 33,872 km²."
-            ],
-            "backgroundCn": [
-                "大规模高分辨率土地覆盖制图是理解地球表面并解决人类面临的生态和资源挑战的一种方式。随着传感器和卫星的发展，现在可以更容易地捕获高分辨率（≤1米）遥感图像，并且覆盖范围更广。然而，使用常见的土地覆盖制图方法同步更新土地覆盖图仍然面临挑战，因为需要高分辨率的土地覆盖标签。虽然有大量低分辨率（约30米）土地覆盖产品可作为替代标签来源，但这些产品与日益增长的高分辨率影像之间的分辨率差距仍然是一个尚未克服的障碍。土地覆盖状况的制图不仅可以为我们提供自然景观的外观特征和人类发展的信息描述，还可以间接监测生物多样性丧失、土壤退化和水文变化，从而满足制定土地利用政策和环境治理计划的紧迫需求。同时，建筑活动、自然灾害和气候变化对地貌环境的不可避免影响，使得土地覆盖图迅速过时，必须不断更新。随着航空和航天遥感平台的成熟与发展，越来越多的高分辨率、最新的遥感影像可用于精确和定期地制图地表。因此，探索使用适当的地理空间数据和制图算法来高效更新和完善大规模高分辨率土地覆盖图，对于人类社会的长期发展具有重要意义。"
-            ],
-            "research objectiveCn": [
-                "在本文中，为了突破这一障碍，我们提出了一种低到高网络（L2HNet），通过仅使用低分辨率土地覆盖产品作为训练标签，自动从高分辨率图像生成高分辨率土地覆盖地图，从而摆脱在大规模地图更新过程中对精细标注样本的需求。"
-            ],
-            "challengesCn": [
-                "然而，常见深度学习方法的训练过程高度依赖于大量高精度的标注数据，这些数据通常是通过繁琐且耗时的人工标注为特定需求而产生的，因此严重限制了这些方法的映射覆盖范围。这些发现表明，现有的低分辨率（LR）标签无法轻易提供可靠的监督信息用于大规模高分辨率（HR）映射任务，并且在不使用任何高分辨率标签或辅助信息的情况下，直接完成这一任务仍然是一个挑战。然而，这种方法需要一个非端到端的冗余迭代过程，这在大规模应用中耗费了大量时间和计算资源。"
-            ],
-            "methodsCn": [
-                "首先，为了获得丰富细节的映射结果，我们提出了一种分辨率保持（RP）骨干网络，该网络包含并行多尺度卷积层，用于从图像中提取高分辨率特征。此外，为了解决由于分辨率不匹配导致的标签噪声问题，我们设计了一个可信区域选择（CAS）模块和一个低到高（L2H）损失函数，采用弱监督和无监督策略，以从粗略标签中获取可靠的监督信息。"
-            ],
-            "datasetCn": [
-                "本研究使用的数据集覆盖了美国两个大规模区域。首先，选择了切萨皮克湾流域作为进行定量实验的区域。正如图1所示，该流域的面积大约为160,000平方公里，包含六个行政州，分别是马里兰州（ML）、弗吉尼亚州（VA）、宾夕法尼亚州（PA）、纽约州（NY）、特拉华州（DE）和西弗吉尼亚州（WV）。高分辨率（1米）航空影像的红（R）、绿（G）、蓝（B）和近红外（NIR）波段由美国农业部国家农业影像计划（NAIP）在2011/2012年拍摄。2011年的低分辨率（30米）土地覆盖标签来自美国地质调查局的国家土地覆盖数据库（NLCD）（Wickham等，2017），并通过最近邻上采样进行重投影，以与NAIP影像对齐。用于定量评估的高分辨率（1米）地面参考数据由切萨皮克湾保护委员会土地覆盖（CCLC）项目提供，这些数据是基于1米NAIP影像和激光雷达高程数据创建的，包含六个土地覆盖类别。此外，地面参考数据是通过机器学习方法生成的，并进行了人工校正，报告的每个州的平均准确率为88.5%。此外，该数据集是根据Robinson等（2019）的工作组织的，共有732个不重叠的瓦片，部分采样自切萨皮克湾流域的六个州，每个瓦片覆盖的面积大约为6000米×7500米。其次，为了进一步说明L2HNet框架在一个完整区域内对更详细土地覆盖类别的实际表现，选择了马里兰州作为切萨皮克湾的核心区域，覆盖面积为33,872平方公里，进行实际的高分辨率土地覆盖制图应用，其中原始的30米分辨率NLCD产品直接作为标签源。更详细地说，马里兰数据集由IEEE GRSS的图像分析与数据融合技术委员会（IADF TC）于2021年提供，包含2250个不重叠的瓦片，每个瓦片覆盖的面积为3880米×3880米。对于马里兰数据集，如图2所示，数据源是2013年捕获的NAIP 1米分辨率影像和NLCD 30米分辨率标签的配对。"
-            ],
-            "findingsCn": [
-                "在美国切萨皮克湾流域的六个行政州进行的实验结果表明，L2HNet在创建1米分辨率的土地覆盖图方面优于多种先进方法和主流土地覆盖映射方法，且以30米分辨率的土地覆盖产品作为训练标签。作为进一步应用，L2HNet还被用于制作美国马里兰州的首个1米分辨率的土地覆盖图，采用的是二级分类层次，覆盖面积约为33,872平方公里。"
-            ]
-        },
-        {
-            "background": [
-                "In China, the demand for a more precise perception of the national land surface has become most urgent given the pace of development and urbanization. Constructing a very-high-resolution (VHR) land-cover dataset for China with national coverage, however, is a non-trivial task and thus, an active area of research impeded by the challenges of image acquisition, manual annotation, and computational complexity. As a basic earth observation application, land-cover mapping enables investigating human and nonhuman activities that shape the national landscape. Researchers and decision makers use the insights from the land-cover maps to assist communities and governments achieve Sustainable Development Goals. The past few decades have witnessed tremendous advancements in the spatial resolution of land-cover mapping products because remote-sensing images with finer spatial resolution can be acquired more easily. Very-high-resolution (VHR) imagery in particular, typically finer than 3 m/pixel, reveals land-cover objects at an ever finer granularity providing a clearer, more detailed picture of the situation on the ground. These VHR land-cover datasets are becoming increasingly ubiquitous in numerous large-scale research and application domains, such as agriculture, urbanization, and ecology. However, the VHR land-cover map with national coverage is still unavailable in China, hindering effective policy formulation and efficient resource allocation. Over the past 40 years, numerous satellite missions have been launched to improve the knowledge of Earth’s resources and monitor natural phenomena. With the continuous updating of airborne and space-borne platforms, the spatial resolution of the available remote-sensing images has undergone rapid increments of change. Nevertheless, due to the low orbit of the VHR image-captured platforms, the corresponding VHR land-cover products generally have a smaller coverage that is insufficient to cover entire China. Furthermore, even if the national-scale VHR imagery can be obtained by combining different image sources, the immense data volumes, laborious annotations, and onerous processes are still the main obstacles for the national-scale VHR land-cover mapping. Thus, current available land-cover datasets for China lack either a fine spatial resolution or nationwide coverage. For global-scale LR, MR, and HR land-cover products, the image sources (i.e., MODIS, Landsat, and Sentinel) are commonly free access and contain massive spectral information but relatively low spatial context than VHR imagery. Therefore, pixel-based machine learning algorithms, for example, support vector machine, decision tree, and random forest (RF), are usually adopted to produce acceptable results. Recently, with the blossoming of deep learning techniques, many studies have conducted deep learning-based models for producing VHR land-cover datasets. However, existing deep learning methods rely on well-labeled data, which are time consuming and laborious to annotate. This limitation has created a large obstacle preventing the production of a national-scale land-cover map."
-            ],
-            "research objective": [
-                "To overcome these limitations, in this paper, a deep learning-based low-cost framework is presented to create the first 1-meter land-cover map for entire China, called SinoLC-1, by using freely available 1-meter Google Earth imagery, open-access 10-meter GLC products, and Open Street Map (OSM) as input data. The produced SinoLC1 dataset is the first 1-meter resolution and currently the highest resolution land-cover product that covers all of China."
-            ],
-            "challenges": [
-                "Constructing a very-high-resolution (VHR) land-cover dataset for China with national coverage, however, is a non-trivial task and thus, an active area of research impeded by the challenges of image acquisition, manual annotation, and computational complexity. The VHR land-cover map with national coverage is still unavailable in China, hindering effective policy formulation and efficient resource allocation. Due to the low orbit of the VHR image-captured platforms, the corresponding VHR land-cover products generally have a smaller coverage that is insufficient to cover entire China. Furthermore, even if the national-scale VHR imagery can be obtained by combining different image sources, the immense data volumes, laborious annotations, and onerous processes are still the main obstacles for the national-scale VHR land-cover mapping. However, existing deep learning methods rely on well-labeled data, which are time consuming and laborious to annotate. This limitation has created a large obstacle preventing the production of a national-scale land-cover map. One of the major limitations to the production of SinoLC-1 was the uneven temporal coverage of Google Earth images. Although Google Earth is a low-cost source to acquire nationwide coverage VHR images, the uneven temporal coverage of the images can affect the uniformity of the land-cover products."
-            ],
-            "methods": [
-                "To construct the image database for producing SinoLC-1, the imagery of the “December 2021” version was collected according to every provincial administrative region border of China and cropped into the size of 6000 × 6000 pixels as the basic storage tile. The total storage size of imagery with the band of red, green, and blue was about 73.25 TB, covering ~9,600,000 km2 land surface area of China. To collect reliable training pairs for the national-scale VHR land-cover mapping process, 98 municipal-level areas were selected from the 34 provincial administrative regions of China. In every selected municipal-level area, the data were cropped into numerous non-overlapped tiles with the size of 6000 ×6000 pixels. In each tile, the training pairs were constructed by five types of data, which included three 10-meter GLC products, the OSM, and the 1.07-meter-resolution Google Earth imagery. To process the resolution-mismatched training pairs and realize automatic national-scale VHR land-cover mapping for China jointly, an low-to-high network (L2HNet) was applied, which has been proposed in our previous work (Li et al., 2022) and has reported state-of-the-art performance compared with the mainstream methods in the low-to-high land-cover mapping task. Based on the procedure, three large computing servers including 8 NVIDIA GeForce RTX 3090 GPUs and a large storage server were employed to conduct the mapping and merging of the SinoLC-1 in parallel. Processing the whole imagery with a total storage size of about 73.25 TB to obtain the final results of the SinoLC-1 land-cover product covering ~9,600,000 km2 area of China took about 10 months."
-            ],
-            "dataset": [
-                "The VHR optical imagery was collected from the open-access Google Earth images at level 18, which approximately corresponds to a 1.07-meter resolution. The total storage size of imagery with the band of red, green, and blue was about 73.25 TB, covering ~9,600,000 km2 land surface area of China. Concretely, the land-cover labeled data were collected from three open-access 10-meter GLC products, namely, FROM_GLC10, ESRI world cover, and ESA_WorldCover v100. FROM_GLC10 was produced by using Sentinel-2A imagery, which reported an overall accuracy of 73% on a global scale. ESRI world cover (abbreviated as ESRI_GLC10) was produced based on Sentinel-2 imagery and reported an overall accuracy of 85%. ESA_WorldCover v100 (abbreviated as ESA_GLC10) was produced by using Sentinel-1 and Sentinel-2 data, and reported an overall accuracy of 74%."
-            ],
-            "findings": [
-                "The validation results showed SinoLC-1 achieved an overall accuracy of 73.61% and a kappa coefficient of 0.6595. Validations for every provincial region further indicated the accuracy of this dataset across whole China. Furthermore, the statistical validation results indicated SinoLC-1 conformed closely to the official survey reports. These results indicated SinoLC-1 had the highest spatial resolution, the most accurate land-cover edges, and the finest landscape details. The produced SinoLC1 dataset is the first 1-meter resolution and currently the highest resolution land-cover product that covers all of China. Qualitative comparisons revealed the SinoLC-1 product with the highest spatial resolution yielded the most accurate land-cover edges, indicating the finest landscape details compared with five other widely used products. Quantitative assessments found the validation results derived from over 100,000 samples indicate SinoLC-1 achieved an O.A. of 73.61% and a kappa coefficient of 0.6595 across China. The validation results of every geographical region indicated an acceptable accuracy distribution all around China. Furthermore, the statistical validation results indicated SinoLC-1 highly conforms to the official survey reports according to the government data."
-            ],
-            "backgroundCn": [
-                "在中国，随着发展和城市化的加速，对国家土地表面的更精确感知的需求变得尤为迫切。然而，构建具有全国覆盖的超高分辨率（VHR）土地覆盖数据集是一项复杂的任务，因此成为了一个活跃的研究领域，受到图像获取、人工标注和计算复杂性等挑战的制约。作为基本的地球观测应用，土地覆盖制图使得研究人类和非人类活动对国家景观的影响成为可能。研究人员和决策者利用土地覆盖图提供的见解，帮助社区和政府实现可持续发展目标。在过去几十年中，土地覆盖制图产品的空间分辨率取得了巨大的进步，因为可以更容易地获取更细空间分辨率的遥感图像。特别是超高分辨率（VHR）影像，通常分辨率小于3米/像素，能够以更细的粒度揭示土地覆盖对象，提供更清晰、更详细的地面情况。这些VHR土地覆盖数据集在农业、城市化和生态等多个大规模研究和应用领域中变得越来越普遍。然而，中国仍然缺乏具有全国覆盖的VHR土地覆盖图，阻碍了有效的政策制定和资源的高效配置。在过去的40年中，许多卫星任务被发射，以提高对地球资源的认识和监测自然现象。随着航空和航天平台的不断更新，现有遥感图像的空间分辨率经历了快速的变化。然而，由于VHR图像捕获平台的低轨道，相应的VHR土地覆盖产品通常覆盖范围较小，无法覆盖整个中国。此外，即使通过结合不同的图像源获得国家级VHR影像，庞大的数据量、繁琐的标注和繁重的处理过程仍然是国家级VHR土地覆盖制图的主要障碍。因此，目前可用的中国土地覆盖数据集要么缺乏细的空间分辨率，要么缺乏全国覆盖。对于全球范围的低分辨率（LR）、中分辨率（MR）和高分辨率（HR）土地覆盖产品，图像源（如MODIS、Landsat和Sentinel）通常是免费访问的，并包含大量光谱信息，但相较于VHR影像，其空间上下文较低。因此，通常采用基于像素的机器学习算法，例如支持向量机、决策树和随机森林（RF），来产生可接受的结果。最近，随着深度学习技术的蓬勃发展，许多研究开展了基于深度学习的模型来生成VHR土地覆盖数据集。然而，现有的深度学习方法依赖于良好标注的数据，这些数据的标注过程耗时且繁琐。这一限制造成了生产国家级土地覆盖图的重大障碍。"
-            ],
-            "research objectiveCn": [
-                "为克服这些局限性，本文提出了一种基于深度学习的低成本框架，利用免费获取的1米谷歌地球影像、开放获取的10米全球土地覆盖（GLC）产品和开放街图（OSM）作为输入数据，创建了中国首个1米土地覆盖图，称为SinoLC-1。生成的SinoLC-1数据集是覆盖整个中国的首个1米分辨率且目前分辨率最高的土地覆盖产品。"
-            ],
-            "challengesCn": [
-                "构建中国的全国覆盖非常高分辨率（VHR）土地覆盖数据集是一项复杂的任务，因此成为了一个活跃的研究领域，受到图像获取、人工标注和计算复杂性等挑战的阻碍。目前，中国尚未有全国范围的VHR土地覆盖图，这妨碍了有效的政策制定和资源的高效配置。由于VHR图像采集平台的低轨道，相关的VHR土地覆盖产品通常覆盖范围较小，无法覆盖整个中国。此外，即使通过组合不同的图像源获得国家级的VHR影像，庞大的数据量、繁琐的标注和繁重的处理过程仍然是国家级VHR土地覆盖制图的主要障碍。然而，现有的深度学习方法依赖于标注良好的数据，而这些数据的标注过程既耗时又繁琐。这一限制造成了生产国家级土地覆盖图的重大障碍。SinoLC-1生产的一个主要限制是Google Earth图像的时间覆盖不均。尽管Google Earth是获取全国范围VHR图像的低成本来源，但图像的时间覆盖不均可能会影响土地覆盖产品的统一性。"
-            ],
-            "methodsCn": [
-                "为了构建SinoLC-1的图像数据库，按照中国每个省级行政区域的边界收集了“2021年12月”版本的影像，并裁剪成6000 × 6000像素的基本存储瓦片。红、绿、蓝三种波段的影像总存储大小约为73.25 TB，覆盖了中国约9,600,000 km²的陆地面积。为了收集可靠的训练对用于国家级高分辨率土地覆盖制图过程，从中国34个省级行政区域中选择了98个市级区域。在每个选定的市级区域中，数据被裁剪成多个不重叠的瓦片，大小为6000 × 6000像素。在每个瓦片中，训练对是通过五种类型的数据构建的，包括三种10米的GLC产品、OSM和1.07米分辨率的Google Earth影像。为了处理分辨率不匹配的训练对，并实现中国的自动国家级高分辨率土地覆盖制图，采用了一种低到高的网络（L2HNet），该网络在我们之前的工作中提出（Li et al., 2022），并在低到高的土地覆盖制图任务中报告了与主流方法相比的最新性能。基于该程序，使用了三台大型计算服务器，包括8个NVIDIA GeForce RTX 3090 GPU和一台大型存储服务器，以并行方式进行SinoLC-1的制图和合并。处理总存储大小约为73.25 TB的整个影像，以获得覆盖中国约9,600,000 km²区域的SinoLC-1土地覆盖产品的最终结果，耗时约10个月。"
-            ],
-            "datasetCn": [
-                "VHR光学影像是从开放访问的Google Earth图像中收集的，级别为18，约对应1.07米的分辨率。影像的总存储大小为73.25 TB，覆盖了中国约9,600,000平方公里的陆地表面积。具体而言，土地覆盖标注数据是从三个开放访问的10米GLC产品中收集的，即FROM_GLC10、ESRI世界覆盖和ESA_WorldCover v100。FROM_GLC10是通过使用Sentinel-2A影像生成的，报告的全球整体准确率为73%。ESRI世界覆盖（简称为ESRI_GLC10）是基于Sentinel-2影像生成的，报告的整体准确率为85%。ESA_WorldCover v100（简称为ESA_GLC10）是通过使用Sentinel-1和Sentinel-2数据生成的，报告的整体准确率为74%。"
-            ],
-            "findingsCn": [
-                "验证结果显示，SinoLC-1的整体准确率为73.61%，Kappa系数为0.6595。对每个省级区域的验证进一步表明，该数据集在整个中国的准确性。此外，统计验证结果表明，SinoLC-1与官方调查报告高度一致。这些结果表明，SinoLC-1具有最高的空间分辨率、最准确的土地覆盖边界和最精细的景观细节。生成的SinoLC-1数据集是第一个1米分辨率的、目前覆盖整个中国的最高分辨率土地覆盖产品。定性比较显示，SinoLC-1产品以最高的空间分辨率产生了最准确的土地覆盖边界，表明与其他五个广泛使用的产品相比，具有最精细的景观细节。定量评估发现，来自超过100,000个样本的验证结果表明，SinoLC-1在中国的整体准确率为73.61%，Kappa系数为0.6595。每个地理区域的验证结果表明，中国各地的准确性分布均可接受。此外，统计验证结果表明，SinoLC-1与政府数据的官方调查报告高度一致。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "李卓鸿",
+        "nameEn": "LI Zhuohong",
+        "unitEn": "",
+        "unitCn": "武汉大学"
+      },
+      {
+        "nameCn": "张洪艳",
+        "nameEn": "ZHANG Hongyan",
+        "unitEn": "",
+        "unitCn": "中国地质大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Is it possible to create a high-resolution land-cover map using only low-resolution land-cover products as training labels?",
-                "QuestionCn": "仅使用低分辨率土地覆盖产品作为训练标签，是否可以创建高分辨率土地覆盖地图？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "Can the application of a low-to-high network overcome the challenges of using resolution-mismatched training pairs in large-scale land-cover mapping?",
-                "QuestionCn": "低到高网络的应用能否克服在大规模土地覆盖制图中使用分辨率不匹配的训练对所带来的挑战？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Are the methods for high-resolution land-cover mapping more reliant on pixel-based machine learning algorithms, deep learning models, or a combination of both?",
-                "QuestionCn": "高分辨率土地覆盖制图的方法更依赖于基于像素的机器学习算法、深度学习模型，还是两者的结合？",
-                "AnswerEn": "deep learning models",
-                "AnswerCn": "深度学习模型",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What data collection methods are used to construct a high-resolution land-cover map of China?",
-                "QuestionCn": "构建中国高分辨率土地覆盖图所使用的数据收集方法有哪些？",
-                "AnswerEn": "Google Earth imagery, GLC products, Open Street Map data",
-                "AnswerCn": "Google Earth影像、GLC产品、Open Street Map数据",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the main challenges faced in creating a very-high-resolution land-cover dataset for China?",
-                "QuestionCn": "创建中国的超高分辨率土地覆盖数据集面临的主要挑战有哪些？",
-                "AnswerEn": "image acquisition difficulties",
-                "AnswerCn": "图像采集困难",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Where are the high-resolution aerial images used in land-cover mapping experiments captured?",
-                "QuestionCn": "用于土地覆盖制图实验的高分辨率航空图像是在哪里捕获的？",
-                "AnswerEn": "Chesapeake Bay watershed",
-                "AnswerCn": "切萨皮克湾流域",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method that addresses the challenge of acquiring high-resolution land-cover labels for large-scale mapping?",
-                "QuestionCn": "您能否提供一个数据收集方法的例子，以解决获取大规模制图的高分辨率土地覆盖标签的挑战？",
-                "AnswerEn": "A notable method involves the use of low-resolution land-cover products as training labels to generate high-resolution land-cover maps. This approach was implemented using a low-to-high network (L2HNet) that eliminates the need for finely labeled samples, thereby facilitating large-scale mapping with high-resolution outputs.",
-                "AnswerCn": "一种显著的方法是使用低分辨率土地覆盖产品作为训练标签，以生成高分辨率土地覆盖地图。该方法采用了低到高网络（L2HNet），消除了对精细标注样本的需求，从而促进了大规模高分辨率输出的制图。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the key characteristics of high-resolution land-cover datasets that make them useful for ecological and resource management challenges?",
-                "QuestionCn": "高分辨率土地覆盖数据集的关键特征使其在生态和资源管理挑战中非常有用，包括：",
-                "AnswerEn": "very-high-resolution imagery, finer than 3 meters per pixel",
-                "AnswerCn": "高于每像素3米的超高分辨率影像",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the primary challenges associated with collecting and processing very-high-resolution land-cover data at a national scale?",
-                "QuestionCn": "在国家层面收集和处理超高分辨率土地覆盖数据的主要挑战是什么？",
-                "AnswerEn": "image acquisition, manual annotation, computational complexity, low orbit, smaller coverage, multiple image sources, immense data volume, labor-intensive annotations, uneven temporal coverage",
-                "AnswerCn": "图像获取、人工标注、计算复杂性、低轨道、较小覆盖范围、多图像来源、海量数据量、劳动密集型标注、不均匀的时间覆盖。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What specific features or methodologies are employed to handle resolution mismatches in large-scale land-cover mapping?",
-                "QuestionCn": "在大规模土地覆盖制图中，处理分辨率不匹配的具体特征或方法包括哪些？",
-                "AnswerEn": "resolution-preserving backbone, multi-scale convolutional layers, confident area selection module, low-to-high loss function, weak and unsupervised strategies",
-                "AnswerCn": "分辨率保持骨干网络，多尺度卷积层，置信区域选择模块，从低到高的损失函数，弱监督和无监督策略。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the total storage size of the imagery used in a large-scale high-resolution land-cover mapping project for a national-scale dataset?",
-                "QuestionCn": "在国家级数据集的大规模高分辨率土地覆盖制图项目中使用的影像总存储大小是多少？",
-                "AnswerEn": "73.25 TB",
-                "AnswerCn": "73.25 TB",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many non-overlapping tiles were used in a dataset for conducting practical high-resolution land-cover mapping in a specific administrative state?",
-                "QuestionCn": "在特定行政州进行高分辨率土地覆盖制图的过程中，使用了多少个不重叠的图块？",
-                "AnswerEn": "2250",
-                "AnswerCn": "2250",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the coverage area of the land surface mapped in a national-scale high-resolution land-cover mapping project?",
-                "QuestionCn": "国家级高分辨率土地覆盖制图项目中映射的陆地表面的覆盖面积是多少？",
-                "AnswerEn": "9,600,000 km²",
-                "AnswerCn": "9,600,000 平方公里",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is meant by 'low-to-high network (L2HNet)' in the context of land-cover mapping?",
-                "QuestionCn": "在土地覆盖制图的背景下，“低到高网络（L2HNet）”指的是一种用于处理和分析土地覆盖数据的网络模型。",
-                "AnswerEn": "In the context of land-cover mapping, a 'low-to-high network (L2HNet)' refers to a deep learning framework designed to generate high-resolution land-cover maps from high-resolution images by using only low-resolution land-cover products as training labels. This approach eliminates the need for finely labeled samples during large-scale map updating, making it more efficient for high-resolution mapping tasks.",
-                "AnswerCn": "在土地覆盖制图的背景下，“低到高网络（L2HNet）”指的是一个深度学习框架，旨在通过仅使用低分辨率土地覆盖产品作为训练标签，从高分辨率图像生成高分辨率土地覆盖地图。这种方法消除了在大规模地图更新过程中对精细标注样本的需求，使高分辨率制图任务更加高效。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What challenges does 'resolution-mismatched training pairs' pose in the process of land-cover mapping?",
-                "QuestionCn": "“分辨率不匹配的训练样本”在土地覆盖制图过程中会带来哪些挑战？",
-                "AnswerEn": "The challenge of 'resolution-mismatched training pairs' in land-cover mapping arises when there is a discrepancy between the resolution of training data and the high-resolution images being used for mapping. This mismatch can lead to label noise, making it difficult to obtain reliable supervision information, which in turn complicates the mapping process and affects the accuracy of the final land-cover maps.",
-                "AnswerCn": "在土地覆盖制图中，“分辨率不匹配的训练对”的挑战出现在训练数据的分辨率与用于制图的高分辨率图像之间存在差异时。这种不匹配可能导致标签噪声，使得获取可靠的监督信息变得困难，从而 complicates 制图过程并影响最终土地覆盖图的准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the data collection methods used in the creation of the SinoLC-1 dataset compare to those used in the Chesapeake Bay watershed study in terms of scale and resolution?",
-                "QuestionCn": "SinoLC-1 数据集的创建所使用的数据收集方法与切萨皮克湾流域研究所使用的方法在规模和分辨率上有何比较？",
-                "AnswerEn": "The SinoLC-1 dataset collection utilized 1-meter resolution imagery from Google Earth, covering approximately 9,600,000 km² of China's land surface, which was processed to create a national-scale land-cover map. In contrast, the Chesapeake Bay watershed study used 1-meter aerial images from the NAIP program, focusing on a specific area of roughly 160,000 km² in the United States. The SinoLC-1 dataset was developed using three 10-meter GLC products and Open Street Map data as training labels, while the Chesapeake Bay study used 30-meter NLCD products for training.",
-                "AnswerCn": "SinoLC-1 数据集收集利用了来自 Google Earth 的 1 米分辨率影像，覆盖了中国约 9,600,000 平方公里的陆地表面，经过处理后创建了国家级土地覆盖图。相比之下，切萨皮克湾流域研究使用了来自 NAIP 计划的 1 米航拍图像，专注于美国约 160,000 平方公里的特定区域。SinoLC-1 数据集是使用三个 10 米的 GLC 产品和 Open Street Map 数据作为训练标签开发的，而切萨皮克湾研究则使用了 30 米的 NLCD 产品进行训练。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "In what ways do the resolution-preserving techniques applied in the SinoLC-1 and Chesapeake Bay watershed datasets differ, and how does this affect the accuracy of the resulting land-cover maps?",
-                "QuestionCn": "在SinoLC-1和切萨皮克湾流域数据集中应用的分辨率保持技术有哪些不同，这如何影响最终土地覆盖地图的准确性？",
-                "AnswerEn": "Both the SinoLC-1 and Chesapeake Bay watershed datasets employed methods to address the resolution mismatch between high-resolution images and low-resolution labels. The SinoLC-1 utilized a low-to-high network (L2HNet) to automatically generate high-resolution maps, achieving an overall accuracy of 73.61%. Similarly, the Chesapeake Bay study used a resolution-preserving backbone to extract high-resolution features, with the resulting maps showing improved accuracy over several state-of-the-art methods. Despite similar approaches, the scale of data and specific methods like confident area selection (CAS) module in the Chesapeake Bay study contributed to different accuracy outcomes and application challenges.",
-                "AnswerCn": "SinoLC-1和切萨皮克湾流域数据集都采用了方法来解决高分辨率图像与低分辨率标签之间的分辨率不匹配问题。SinoLC-1使用了低到高网络（L2HNet）自动生成高分辨率地图，整体准确率达到了73.61%。类似地，切萨皮克湾研究使用了分辨率保持骨干网络提取高分辨率特征，生成的地图在多个先进方法中显示出更高的准确性。尽管采用了类似的方法，但数据规模和切萨皮克湾研究中特有的自信区域选择（CAS）模块等具体方法导致了不同的准确性结果和应用挑战。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can the integration of low-resolution land-cover products as training labels impact the accuracy and efficiency of high-resolution land-cover mapping?",
-                "QuestionCn": "低分辨率土地覆盖产品作为训练标签的整合如何影响高分辨率土地覆盖制图的准确性和效率？",
-                "AnswerEn": "The integration of low-resolution land-cover products as training labels can significantly enhance the efficiency of high-resolution land-cover mapping by reducing the dependency on finely labeled samples, which are often time-consuming and laborious to produce. This approach allows for the automatic generation of high-resolution land-cover maps, overcoming the resolution gap between available low-resolution products and high-resolution imagery, and facilitates large-scale map updating processes.",
-                "AnswerCn": "将低分辨率土地覆盖产品作为训练标签的整合，可以显著提高高分辨率土地覆盖制图的效率，减少对细致标注样本的依赖，而这些样本通常耗时且劳动密集。这种方法允许自动生成高分辨率土地覆盖地图，克服了可用低分辨率产品与高分辨率影像之间的分辨率差距，并促进了大规模地图更新过程。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the implications of using open-access data sources like Google Earth imagery and Open Street Map for developing high-resolution land-cover maps?",
-                "QuestionCn": "使用开放获取数据源，如谷歌地球影像和开放街图，开发高分辨率土地覆盖图的影响是什么？",
-                "AnswerEn": "Using open-access data sources such as Google Earth imagery and Open Street Map provides a low-cost and comprehensive approach to obtaining very-high-resolution imagery for national-scale land-cover mapping. These sources enable researchers to overcome limitations associated with image acquisition and manual annotation, although challenges remain, such as the uneven temporal coverage of the images which can affect product uniformity.",
-                "AnswerCn": "使用开放获取的数据源，如谷歌地球影像和开放街图，提供了一种低成本且全面的方法来获取国家级土地覆盖制图的超高分辨率影像。这些来源使研究人员能够克服与图像获取和手动注释相关的限制，尽管仍然存在一些挑战，例如影像的时间覆盖不均，这可能影响产品的一致性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In what ways do computational resources and processing time influence the scalability of national-scale high-resolution land-cover mapping projects?",
-                "QuestionCn": "计算资源和处理时间如何影响国家级高分辨率土地覆盖制图项目的可扩展性？",
-                "AnswerEn": "Computational resources and processing time are critical factors in the scalability of national-scale high-resolution land-cover mapping projects. The necessity for large computing servers and substantial storage to process immense data volumes, as seen in the processing of approximately 73.25 TB of imagery for nationwide coverage, highlights the challenges of computational complexity. Efficient use of these resources can significantly impact both the feasibility and the duration of such projects, as demonstrated by the 10-month processing timeframe.",
-                "AnswerCn": "计算资源和处理时间是国家级高分辨率土地覆盖制图项目可扩展性的关键因素。处理约73.25 TB的影像以实现全国覆盖所需的大型计算服务器和大量存储，突显了计算复杂性带来的挑战。有效利用这些资源可以显著影响此类项目的可行性和持续时间，正如10个月的处理时间所示。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the complexity and challenges of constructing a very-high-resolution land-cover dataset for national coverage?",
-                "QuestionCn": "构建全国范围内的超高分辨率土地覆盖数据集的复杂性和挑战因素包括哪些？",
-                "AnswerEn": "Constructing a very-high-resolution (VHR) land-cover dataset for national coverage involves challenges such as image acquisition, manual annotation, and computational complexity. The low orbit of VHR image-captured platforms results in smaller coverage insufficient to cover entire regions, and even if national-scale imagery is obtained, immense data volumes and laborious annotations pose significant obstacles.",
-                "AnswerCn": "构建国家覆盖的超高分辨率（VHR）土地覆盖数据集面临着诸多挑战，例如图像获取、人工标注和计算复杂性。VHR图像捕获平台的低轨道导致覆盖范围较小，无法覆盖整个区域，即使获得了国家级别的影像，庞大的数据量和繁琐的标注工作也构成了重大障碍。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is the synchronous renewal of high-resolution land-cover maps challenging when using common mapping methods?",
-                "QuestionCn": "使用常见的制图方法时，高分辨率土地覆盖地图的同步更新面临哪些挑战？",
-                "AnswerEn": "The synchronous renewal of high-resolution land-cover maps is challenging due to the requirement for high-resolution land-cover labels, which are often unavailable or difficult to acquire. The gap between abundant low-resolution land-cover products and high-resolution imagery creates a barrier that common methods struggle to overcome without relying on laborious manual annotation.",
-                "AnswerCn": "高分辨率土地覆盖地图的同步更新面临挑战，因为高分辨率土地覆盖标签的获取往往困难且稀缺。丰富的低分辨率土地覆盖产品与高分辨率影像之间的差距，成为了常见方法难以克服的障碍，而不依赖于繁琐的人工标注。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What causes the reliance on complex computing resources and extended processing times for large-scale high-resolution land-cover mapping?",
-                "QuestionCn": "导致大规模高分辨率土地覆盖制图依赖复杂计算资源和延长处理时间的原因是什么？",
-                "AnswerEn": "Large-scale high-resolution land-cover mapping requires complex computing resources and extended processing times due to the non-end-to-end redundant iterative processes involved in training deep learning methods. These processes demand significant time and computational power, especially when dealing with large-scale applications.",
-                "AnswerCn": "大规模高分辨率土地覆盖制图由于深度学习方法训练中涉及的非端到端冗余迭代过程，需要复杂的计算资源和较长的处理时间。这些过程在处理大规模应用时，尤其需要大量的时间和计算能力。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential consequences of using low-resolution land-cover products as training labels for high-resolution land-cover mapping?",
-                "QuestionCn": "使用低分辨率土地覆盖产品作为高分辨率土地覆盖制图的训练标签可能带来的潜在后果是什么？",
-                "AnswerEn": "Using low-resolution land-cover products as training labels for high-resolution mapping can mitigate the need for finely labeled samples, allowing for large-scale map updates. However, it may introduce the challenge of label noise due to mismatched resolutions, which requires strategies like confident area selection and custom loss functions to obtain reliable supervision.",
-                "AnswerCn": "使用低分辨率土地覆盖产品作为高分辨率制图的训练标签，可以减少对精细标注样本的需求，从而实现大规模地图更新。然而，这可能会引入由于分辨率不匹配而导致的标签噪声，这需要采用如自信区域选择和自定义损失函数等策略，以获得可靠的监督。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the implications of employing a deep learning-based low-cost framework on the production of high-resolution land-cover maps at a national scale?",
-                "QuestionCn": "在国家层面上采用基于深度学习的低成本框架制作高分辨率土地覆盖图的影响是什么？",
-                "AnswerEn": "Employing a deep learning-based low-cost framework can facilitate the creation of high-resolution land-cover maps at a national scale by using freely available imagery and open-access data. This approach can overcome the limitations of manual annotation and improve coverage, but it still faces challenges like ensuring uniformity in the temporal coverage of imagery and managing extensive data processing requirements.",
-                "AnswerCn": "采用基于深度学习的低成本框架，可以利用免费获取的影像和开放获取的数据，在国家尺度上创建高分辨率的土地覆盖图。这种方法可以克服手动标注的局限性并提高覆盖率，但仍面临一些挑战，例如确保影像的时间覆盖一致性和管理大量的数据处理需求。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What objectives drive the development of a deep learning-based framework for generating high-resolution land-cover maps using low-resolution products as training labels?",
-                "QuestionCn": "推动基于深度学习框架开发的目标是利用低分辨率产品作为训练标签生成高分辨率土地覆盖图。",
-                "AnswerEn": "The objective is to overcome the requirement for finely labeled samples during the large-scale map updating process by proposing a low-to-high network (L2HNet) that automatically generates high-resolution land-cover maps from high-resolution images using only low-resolution land-cover products as training labels.",
-                "AnswerCn": "目标是通过提出一个低到高网络（L2HNet），克服在大规模地图更新过程中对精细标注样本的需求，该网络能够仅使用低分辨率土地覆盖产品作为训练标签，从高分辨率图像自动生成高分辨率土地覆盖地图。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What challenges are addressed by employing open-access satellite imagery and weak supervision strategies in the production of nationwide high-resolution land-cover maps?",
-                "QuestionCn": "利用开放获取的卫星影像和弱监督策略在全国范围内生产高分辨率土地覆盖地图时，面临哪些挑战？",
-                "AnswerEn": "The challenges addressed include the immense data volumes, laborious annotations, and computational complexity associated with acquiring and processing very-high-resolution imagery for nationwide coverage. Using open-access satellite imagery and weak supervision strategies reduces reliance on time-consuming manual annotations, facilitating the production of national-scale high-resolution land-cover maps.",
-                "AnswerCn": "所解决的挑战包括与获取和处理全国范围内的超高分辨率影像相关的巨大数据量、繁琐的标注和计算复杂性。使用开放获取的卫星影像和弱监督策略减少了对耗时的人工标注的依赖，从而促进了国家级高分辨率土地覆盖图的制作。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in constructing a very-high-resolution land-cover dataset using low-resolution labels as training data?",
-                "QuestionCn": "构建一个非常高分辨率的土地覆盖数据集，使用低分辨率标签作为训练数据的程序步骤包括：\n\n1. 数据收集：收集低分辨率的土地覆盖数据和高分辨率的遥感影像。\n2. 数据预处理：对低分辨率标签和高分辨率影像进行预处理，包括去噪、标准化和配准。\n3. 特征提取：从高分辨率影像中提取特征，例如光谱特征、纹理特征和形状特征。\n4. 模型选择：选择适合的机器学习或深度学习模型，用于将低分辨率标签映射到高分辨率数据。\n5. 模型训练：使用低分辨率标签和提取的特征对模型进行训练。\n6. 模型验证：使用交叉验证或独立验证集评估模型的性能，调整模型参数以提高准确性。\n7. 高分辨率预测：将训练好的模型应用于高分辨率影像，生成高分辨率的土地覆盖预测。\n8. 后处理：对预测结果进行后处理，包括平滑、去噪和一致性检查。\n9. 结果评估：使用地面真值数据或高分辨率参考数据评估最终的土地覆盖数据集的准确性。\n10. 数据发布：将构建的高分辨率土地覆盖数据集发布，供研究和应用使用。",
-                "AnswerEn": "The procedural steps involve using a deep learning-based low-to-high network (L2HNet) to automatically generate high-resolution land-cover maps from high-resolution images by taking only low-resolution land-cover products as training labels. This includes the use of a resolution-preserving backbone, a confident area selection module, and a low-to-high loss function. The process involves collecting and organizing high-resolution imagery and low-resolution labels, aligning them appropriately, and processing them through the network to achieve high-resolution mapping.",
-                "AnswerCn": "该过程涉及使用基于深度学习的低到高网络（L2HNet）自动生成高分辨率土地覆盖图，利用低分辨率土地覆盖产品作为训练标签。这包括使用分辨率保持的主干网络、置信区域选择模块和低到高损失函数。该过程包括收集和整理高分辨率影像和低分辨率标签，适当地对齐它们，并通过网络处理以实现高分辨率映射。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can national-scale VHR land-cover mapping be conducted efficiently given the challenges of image acquisition and annotation?",
-                "QuestionCn": "如何有效地进行国家级超高分辨率土地覆盖制图，考虑到图像获取和标注的挑战？",
-                "AnswerEn": "National-scale VHR land-cover mapping can be conducted efficiently by using freely available high-resolution imagery, such as Google Earth images, and combining them with open-access low-resolution land-cover products and auxiliary data like Open Street Map. The data are organized into non-overlapping tiles, and a low-to-high network is employed to process these tiles, allowing for automatic mapping without the need for laborious manual annotations. The process leverages parallel computing servers for efficient data handling and processing.",
-                "AnswerCn": "国家级的超高分辨率土地覆盖制图可以通过使用免费的高分辨率影像（如谷歌地球图像）以及结合开放获取的低分辨率土地覆盖产品和辅助数据（如开放街图）来高效进行。这些数据被组织成不重叠的瓦片，并采用低到高的网络来处理这些瓦片，从而实现自动制图，无需繁琐的人工标注。该过程利用并行计算服务器进行高效的数据处理和处理。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What methods are utilized to ensure reliable supervision information when dealing with mismatched resolution labels in large-scale land-cover mapping?",
-                "QuestionCn": "在处理大规模土地覆盖制图中不匹配的分辨率标签时，确保可靠监督信息的方法有哪些？",
-                "AnswerEn": "Methods to ensure reliable supervision information include using a confident area selection module and a low-to-high loss function designed to handle label noise caused by mismatched resolutions. These components work within the low-to-high network framework, allowing the extraction of reliable supervision information from coarse labels. The approach uses weak and unsupervised strategies to manage the resolution mismatch and improve the accuracy of the high-resolution mapping results.",
-                "AnswerCn": "确保可靠监督信息的方法包括使用自信区域选择模块和设计用于处理因分辨率不匹配而导致标签噪声的低到高损失函数。这些组件在低到高网络框架内工作，允许从粗略标签中提取可靠的监督信息。该方法使用弱监督和无监督策略来管理分辨率不匹配，并提高高分辨率映射结果的准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methodologies enable the generation of high-resolution land-cover maps from low-resolution land-cover products without the need for finely labeled samples?",
-                "QuestionCn": "哪些方法论能够在不需要精细标注样本的情况下，从低分辨率土地覆盖产品生成高分辨率土地覆盖地图？",
-                "AnswerEn": "The L2HNet methodology enables the automatic generation of high-resolution land-cover maps from high-resolution images by using only low-resolution land-cover products as training labels. This method eliminates the need for finely labeled samples during the large-scale map updating process.",
-                "AnswerCn": "L2HNet 方法能够通过仅使用低分辨率土地覆盖产品作为训练标签，自动生成高分辨率图像的高分辨率土地覆盖地图。这种方法消除了在大规模地图更新过程中对精细标注样本的需求。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "How does the integration of multi-scale convolutional layers in a deep learning framework facilitate the extraction of high-resolution features for land-cover mapping?",
-                "QuestionCn": "多尺度卷积层在深度学习框架中的集成如何促进高分辨率特征的提取，以便进行土地覆盖制图？",
-                "AnswerEn": "The integration of parallel multi-scale convolutional layers in a deep learning framework, such as the resolution-preserving (RP) backbone, facilitates the extraction of high-resolution features from images, allowing for the generation of mapping results with rich details.",
-                "AnswerCn": "在深度学习框架中，平行多尺度卷积层的集成，例如分辨率保持（RP）主干网络，促进了从图像中提取高分辨率特征，从而允许生成具有丰富细节的映射结果。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What resources and conditions enable the creation of a nationwide very-high-resolution land-cover dataset, considering the challenges of data volume and annotation in large-scale applications?",
-                "QuestionCn": "哪些资源和条件能够支持创建全国范围内的超高分辨率土地覆盖数据集，考虑到大规模应用中数据量和标注的挑战？",
-                "AnswerEn": "The creation of a nationwide very-high-resolution land-cover dataset is enabled by using freely available 1-meter Google Earth imagery, open-access 10-meter GLC products, and Open Street Map (OSM) as input data. This approach overcomes challenges of data volume and manual annotation by utilizing deep learning techniques that do not rely on well-labeled data.",
-                "AnswerCn": "通过使用免费的1米谷歌地球影像、开放获取的10米全球土地覆盖产品和开放街图（OSM）作为输入数据，创建全国范围内的超高分辨率土地覆盖数据集成为可能。这种方法通过利用不依赖于良好标注数据的深度学习技术，克服了数据量和人工标注的挑战。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might the resolution gap between low-resolution land-cover products and high-resolution imagery remain a significant obstacle in creating high-resolution land-cover maps?",
-                "QuestionCn": "低分辨率土地覆盖产品与高分辨率影像之间的分辨率差距，可能仍然是创建高分辨率土地覆盖地图的一个重大障碍。",
-                "AnswerEn": "The resolution gap is a significant obstacle because existing low-resolution land-cover products cannot easily provide reliable supervision information for high-resolution mapping tasks. This gap makes it challenging to directly accomplish the task without using high-resolution labels or ancillary information, which are normally dependent on laborious and time-consuming manual annotation.",
-                "AnswerCn": "分辨率差距是一个重要障碍，因为现有的低分辨率土地覆盖产品无法轻易提供高分辨率制图任务所需的可靠监督信息。这个差距使得在没有高分辨率标签或辅助信息的情况下直接完成任务变得具有挑战性，而这些通常依赖于费时费力的人工标注。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What might be the reasons for the challenges in acquiring a consistent national-scale very-high-resolution land-cover dataset for a country like China?",
-                "QuestionCn": "在像中国这样的大国获取一致的国家级超高分辨率土地覆盖数据集可能面临的挑战包括以下几个方面：",
-                "AnswerEn": "Challenges include the low orbit of VHR image-captured platforms that results in smaller coverage, the immense data volumes, and the laborious annotations required. Even if national-scale VHR imagery is obtained by combining different sources, the uneven temporal coverage of images can affect the uniformity of the land-cover products, which complicates the task of creating a consistent national-scale dataset.",
-                "AnswerCn": "挑战包括高分辨率（VHR）图像捕获平台的低轨道导致覆盖范围较小、数据量巨大以及所需的繁琐注释。即使通过结合不同来源获得国家级高分辨率影像，图像的时间覆盖不均也会影响土地覆盖产品的一致性，从而使得创建一致的国家级数据集变得复杂。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why might existing deep learning methods struggle to efficiently produce national-scale land-cover maps without relying heavily on well-labeled data?",
-                "QuestionCn": "现有的深度学习方法可能在高效生成国家级土地覆盖地图时面临困难，因为它们过于依赖大量标注良好的数据。",
-                "AnswerEn": "Existing deep learning methods struggle because they rely on well-labeled data, which are time-consuming and laborious to annotate. This reliance creates a large obstacle to producing national-scale land-cover maps, as manual annotation is often not feasible for such large-scale datasets. The lack of finely labeled samples during the map updating process further restricts the mapping coverage and efficiency.",
-                "AnswerCn": "现有的深度学习方法面临困难，因为它们依赖于标注良好的数据，而这些数据的标注过程既耗时又费力。这种依赖性为制作国家级土地覆盖地图带来了很大障碍，因为对于如此大规模的数据集，手动标注往往不可行。在地图更新过程中，缺乏精细标注样本进一步限制了映射的覆盖范围和效率。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How would you evaluate the effectiveness of using low-resolution land-cover products as training labels for high-resolution land-cover mapping?",
-                "QuestionCn": "如何评估使用低分辨率土地覆盖产品作为高分辨率土地覆盖制图训练标签的有效性？",
-                "AnswerEn": "The use of low-resolution land-cover products as training labels for high-resolution mapping is seen as an effective approach to overcome the challenge of high-precision labeled data dependency. This method allows for the creation of high-resolution land-cover maps by leveraging existing low-resolution datasets, thus reducing the need for labor-intensive manual annotation. The approach has been validated through successful implementations that achieved high spatial resolutions and accurate land-cover details, indicating its practical efficacy.",
-                "AnswerCn": "使用低分辨率土地覆盖产品作为高分辨率制图的训练标签被视为克服对高精度标注数据依赖的有效方法。这种方法通过利用现有的低分辨率数据集来创建高分辨率土地覆盖图，从而减少了对劳动密集型手动标注的需求。该方法已通过成功实施得到了验证，取得了高空间分辨率和准确的土地覆盖细节，表明其实际有效性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In your opinion, what are the main challenges faced in constructing a very-high-resolution land-cover dataset for a nation-wide scale, and how might these challenges be addressed?",
-                "QuestionCn": "在构建全国范围内的超高分辨率土地覆盖数据集时，面临的主要挑战是什么？这些挑战可能如何得到解决？",
-                "AnswerEn": "The main challenges in constructing a very-high-resolution land-cover dataset for national coverage include the massive data volumes, laborious annotations, computational complexity, and uneven temporal coverage of available imagery. Addressing these challenges may involve the use of deep learning frameworks that rely on available low-resolution data and open-access imagery, coupled with efficient computational strategies such as parallel processing using advanced GPU servers. These methods help manage data complexity and reduce the reliance on extensive manual annotations.",
-                "AnswerCn": "构建国家范围内的超高分辨率土地覆盖数据集的主要挑战包括海量数据量、繁琐的标注工作、计算复杂性以及可用影像的时间覆盖不均。解决这些挑战可能涉及使用深度学习框架，依赖于可用的低分辨率数据和开放获取的影像，结合高效的计算策略，如使用先进的GPU服务器进行并行处理。这些方法有助于管理数据复杂性，并减少对大量人工标注的依赖。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What is your assessment of the potential of using open-access imagery and existing global land-cover products for producing high-resolution land-cover maps?",
-                "QuestionCn": "我对使用开放获取影像和现有全球土地覆盖产品来制作高分辨率土地覆盖地图的潜力的评估是什么？",
-                "AnswerEn": "Open-access imagery and existing global land-cover products hold significant potential for producing high-resolution land-cover maps. They provide a cost-effective means of obtaining extensive coverage with relatively high accuracy. The integration of such data sources with advanced deep learning methods can yield detailed land-cover products with fine spatial resolution. Despite challenges such as resolution mismatches and data volume, the successful creation of national-scale maps with high accuracy underscores their utility and potential.",
-                "AnswerCn": "开放获取的影像和现有的全球土地覆盖产品在生成高分辨率土地覆盖地图方面具有重要潜力。它们提供了一种以相对较高准确性获得广泛覆盖的成本效益手段。将这些数据源与先进的深度学习方法相结合，可以产生具有精细空间分辨率的详细土地覆盖产品。尽管存在分辨率不匹配和数据量大的挑战，但成功创建高准确度的国家级地图凸显了它们的实用性和潜力。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I'm unsure about how low-resolution data can be effectively used to train models for high-resolution land-cover mapping without high-resolution labels.",
-                "QuestionCn": "我不确定如何有效地使用低分辨率数据来训练高分辨率土地覆盖映射模型，而不需要高分辨率标签。",
-                "AnswerEn": "To overcome the resolution gap, a low-to-high network (L2HNet) is proposed, which uses low-resolution land-cover products as training labels to generate high-resolution maps. This approach includes a resolution-preserving backbone and a confident area selection module to handle label noise and extract high-resolution features from images.",
-                "AnswerCn": "为了解决分辨率差距，提出了一种低到高网络（L2HNet），该网络使用低分辨率土地覆盖产品作为训练标签来生成高分辨率地图。该方法包括一个分辨率保持主干网络和一个置信区域选择模块，以处理标签噪声并从图像中提取高分辨率特征。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "I don't understand how such large volumes of image data can be processed efficiently for national-scale land-cover mapping.",
-                "QuestionCn": "我不明白如何能高效处理如此大规模的图像数据以进行国家级土地覆盖制图。",
-                "AnswerEn": "The processing of large volumes of image data for national-scale land-cover mapping is conducted using an efficient deep learning framework, specifically the L2HNet. The process is supported by high-performance computing infrastructure, including multiple NVIDIA GeForce RTX 3090 GPUs, allowing parallel processing to manage the 73.25 TB of data over 10 months.",
-                "AnswerCn": "大规模图像数据处理用于国家级土地覆盖制图，采用高效的深度学习框架，特别是L2HNet。该过程得益于高性能计算基础设施，包括多台NVIDIA GeForce RTX 3090 GPU，能够进行并行处理，以管理73.25 TB的数据，历时10个月。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I can't make sense of how a dataset can ensure accuracy across such a vast and diverse geographic area.",
-                "QuestionCn": "我无法理解一个数据集如何能确保在如此广泛和多样的地理区域内的准确性。",
-                "AnswerEn": "The accuracy of the land-cover dataset across a vast geographic area is ensured through validation against 100,000 samples and official survey reports. The dataset achieved an overall accuracy of 73.61% with a kappa coefficient of 0.6595, supported by qualitative comparisons and statistical validation that reflect its conformity to official data.",
-                "AnswerCn": "该土地覆盖数据集通过与100,000个样本和官方调查报告的验证，确保了其在广泛地理区域内的准确性。该数据集的总体准确率为73.61%，kappa系数为0.6595，得到了定性比较和统计验证的支持，反映了其与官方数据的一致性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please explore various data collection methods that can be used to construct high-resolution land-cover maps and discuss their potential challenges.",
-                "QuestionCn": "请探讨可以用于构建高分辨率土地覆盖地图的各种数据收集方法，并讨论它们可能面临的挑战。",
-                "AnswerEn": "Data collection for high-resolution land-cover maps often involves using high-resolution remote sensing imagery, such as 1-meter resolution images from platforms like Google Earth. Open-access datasets like 10-meter GLC products (FROM_GLC10, ESA_WorldCover, and ESRI_GLC) and Open Street Map (OSM) can serve as training labels. Challenges include the need for manual annotation, computational complexity, and uneven temporal coverage of imagery, which can affect the consistency and accuracy of the land-cover maps.",
-                "AnswerCn": "高分辨率土地覆盖图的数据显示，通常需要使用高分辨率遥感影像，例如来自谷歌地球的1米分辨率影像。开放获取的数据集，如10米分辨率的全球土地覆盖产品（FROM_GLC10、ESA_WorldCover和ESRI_GLC）以及开放街图（OSM），可以作为训练标签。面临的挑战包括需要手动注释、计算复杂性以及影像的时间覆盖不均，这可能会影响土地覆盖图的一致性和准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please analyze the methodological approaches to overcoming the resolution gap between low-resolution land-cover products and high-resolution imagery in large-scale mapping.",
-                "QuestionCn": "请分析克服低分辨率土地覆盖产品与高分辨率影像之间分辨率差距的方法论方法，以进行大规模制图。",
-                "AnswerEn": "One approach to bridging the resolution gap is using a low-to-high network (L2HNet) that automatically generates high-resolution land-cover maps from high-resolution images by utilizing low-resolution land-cover products as training labels. This method alleviates the need for finely labeled samples in large-scale mappings and addresses challenges such as the reliance on high-precision labeled data and computational resource demands.",
-                "AnswerCn": "一种弥补分辨率差距的方法是使用低到高网络（L2HNet），该网络通过利用低分辨率土地覆盖产品作为训练标签，自动生成高分辨率土地覆盖图。这种方法减轻了大规模制图中对精细标注样本的需求，并解决了对高精度标注数据和计算资源需求的挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please discuss potential datasets that can serve as training labels for creating high-resolution land-cover maps and evaluate their effectiveness.",
-                "QuestionCn": "讨论可以作为高分辨率土地覆盖图训练标签的潜在数据集，并评估它们的有效性。",
-                "AnswerEn": "Potential datasets for training labels include open-access 10-meter GLC products such as FROM_GLC10, ESRI world cover, and ESA_WorldCover, which are derived from Sentinel imagery. While these datasets provide a valuable resource, their effectiveness can vary, with reported accuracies of 73% to 85%. They offer a trade-off between accessibility and spatial context, and their resolution mismatch with high-resolution imagery remains a challenge to address.",
-                "AnswerCn": "潜在的训练标签数据集包括开放获取的10米GLC产品，如FROM_GLC10、ESRI世界覆盖和ESA_WorldCover，这些数据集是基于Sentinel影像生成的。虽然这些数据集提供了宝贵的资源，但它们的有效性可能有所不同，报告的准确率在73%到85%之间。它们在可获取性和空间上下文之间提供了权衡，而与高分辨率影像的分辨率不匹配仍然是一个需要解决的挑战。",
-                "Level": "C5(Evaluating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "SinoLC-1: the first 1-meter resolution national-scale land-cover map of China created with the deep learning framework and open-access data",
+        "referenceCn": null,
+        "referenceEn": "Li, Z., He, W., Cheng, M., Hu, J., Yang, G., & Zhang, H. (2023). SinoLC-1: the first 1-meter resolution national-scale land-cover map of China created with the deep learning framework and open-access data. Earth System Science Data, 2023, 1-38. https://doi.org/10.5194/essd-2023-87"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Breaking the resolution barrier: A low-to-high network for large-scale high-resolution land-cover mapping using low-resolution labels",
+        "referenceCn": null,
+        "referenceEn": "Li, Z., Zhang, H., Lu, F., Xue, R., Yang, G., & Zhang, L. (2022). Breaking the resolution barrier: A low-to-high network for large-scale high-resolution land-cover mapping using low-resolution labels. ISPRS Journal of Photogrammetry and Remote Sensing, 192, 244-267.https://doi.org/10.1016/j.isprsjprs.2022.08.008"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "Image Processing",
+        "nameEn": "Image Processing"
+      },
+      {
+        "nameCn": "Land Cover",
+        "nameEn": "Land Cover"
+      },
+      {
+        "nameCn": "土地利用/覆盖",
+        "nameEn": "Land Use/Land Cover"
+      },
+      {
+        "nameCn": "土地覆盖",
+        "nameEn": "Land cover"
+      },
+      {
+        "nameCn": "遥感产品",
+        "nameEn": "Remote Sensing Product"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2002-2021",
+        "keywordEn": "2002-2021",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "边海重点区域遥感精准监测和安全预警平台",
+        "titleEn": "Remote sensing precise monitoring and security warning platform for key coastal areas"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Large-scale high-resolution land-cover mapping is a way to comprehend the Earth’s surface and resolve the ecological and resource challenges facing humanity. High-resolution (≤1 m) remotely sensed images can now be captured more easily, with wider coverage, as sensors and satellites develop. Nevertheless, the synchronous renewal of land-cover maps is still challenging when using the common land-cover mapping methods, due to the requirement for high-resolution land-cover labels. Abundant low-resolution (∼30 m) land-cover products are available for use as alternative label sources, but the resolution gap between these products and the growing volume of high-resolution imagery is a barrier yet to be overcome. Mapping the land-cover situation can not only provide us with the appearance features of the natural landscape and informative descriptions of human development, but it also allows us to indirectly monitor biodiversity loss, soil degradation, and hydrological changes, thus meeting the urgent demands for the formulation of land-use policies and environmental governance plans. Meanwhile, as an inevitable consequence of construction activities, natural disasters, and climate change acting upon the geomorphic environment, land-cover maps rapidly fall out of date and must be constantly updated. With the maturation and development of airborne and spaceborne remote sensing platforms, growing volumes of up-to-date remotely sensed imagery with a high spatial resolution are now available for mapping the land surface both precisely and periodically. Therefore, exploring the use of appropriate geospatial data and mapping algorithms to efficiently update and refine the large-scale land-cover maps with a high resolution has great significance for the long-term development of human society."
+      ],
+      "research objective": [
+        "In this paper, to break through this obstacle, we propose a low-to-high network (L2HNet) to automatically generate high-resolution land-cover maps from high-resolution images by taking only low-resolution land-cover products as the training labels, thus getting rid of the requirement for finely labeled samples during the large-scale map updating process."
+      ],
+      "challenges": [
+        "Nevertheless, the training process for the common deep learning methods is highly reliant on a lot of high-precision labeled data, which are generally produced for specific needs through laborious and time-consuming manual annotation, thus severely restricting the mapping coverage of these methods. These findings suggest that the existing LR labels cannot easily provide reliable supervision information for the large-scale HR mapping task, and it is still a challenge to directly accomplish this task without using any HR labels or ancillary information. However, this approach requires a non-end-to-end redundant iterative process, which costs a lot of time and requires a large amount of computing resources for the large-scale applications."
+      ],
+      "methods": [
+        "Firstly, to obtain the mapping results with rich details, we propose a resolution-preserving (RP) backbone that contains parallel multi-scale convolutional layers for extracting the high-resolution features from the images. Furthermore, to settle the label noise issue caused by the mismatched resolution, a confident area selection (CAS) module and a low-to-high (L2H) loss function, with weak and unsupervised strategies, are designed for obtaining reliable supervision information from the coarse labels."
+      ],
+      "dataset": [
+        "The datasets used in this study covered two large-scale areas in the United States. Firstly, the Chesapeake Bay watershed, which is the largest bay of the United States, was chosen for conducting the quantitative experiments. As shown in Fig. 1, the watershed covers an area of roughly 160,000 km 2, and contains six administrative states, which are the state of Maryland (ML), Virginia (VA), Pennsylvania (PA), New York (NY), Delaware (DE), and West Virginia (WV). The HR (1 m) aerial images, with the bands of red (R), green (G), blue (B), and near-infrared (NIR), were captured by the U.S. Department of Agriculture’s National Agriculture Imagery Program (NAIP) in 2011/2012. The LR (30 m) land-cover labels for 2011 were obtained from the USGS’s National Land Cover Database (NLCD) (Wickham et al., 2017) in level II classification hierarchy, and were reprojected by nearest-neighbor upsampling to align with the NAIP imagery. The HR (1 m) ground references for the quantitative assessment were provided by the Chesapeake Bay Conservancy Land Cover (CCLC) project, which were created based on 1-m NAIP imagery and LiDAR elevation data with six land-cover classes. Furthermore, the ground references were generated through machine learning methods with manual corrections and reported an average accuracy of 88.5% in each state. In addition, the dataset was organized according to the work of Robinson et al. (2019), where a total of 732 non-overlapping tiles were partially sampled from the six states in the Chesapeake Bay watershed, with each tile covering an area of roughly 6000 m × 7500 m. Secondly, in order to further illustrate the practical performance of the L2HNet framework over an intact area with more detailed land-cover categories, the entire state of Maryland, as the core area of Chesapeake Bay with a coverage of 33,872 km 2, was chosen for conducting the practical HR land-cover mapping application, where the raw 30-m resolution NLCD products with the original level II classification hierarchy were directly employed as the label sources. In more detail, the Maryland dataset, which was provided by the Image Analysis and Data Fusion Technical Committee (IADF TC) of IEEE GRSS in 2021, consists of 2250 non-overlapping tiles, with each tile covering an area of 3880 m × 3880 m. For the Maryland dataset, as shown in Fig. 2, the data sources were aligned pairs of NAIP 1-m resolution images and NLCD 30-m resolution labels captured in the year of 2013."
+      ],
+      "findings": [
+        "The experimental results obtained for six administrative states located in the Chesapeake Bay watershed of the United States show that L2HNet outperforms several of the state-of-the-art methods and the mainstream land-cover mapping methods in creating 1-m resolution land-cover maps by taking 30-m resolution land-cover products as training labels. As a further application, L2HNet was also adopted to produce the first 1-m resolution land-cover map with level II classification hierarchy for the entire state of Maryland in the United States, which covers an area of about 33,872 km²."
+      ],
+      "backgroundCn": [
+        "大规模高分辨率土地覆盖制图是理解地球表面并解决人类面临的生态和资源挑战的一种方式。随着传感器和卫星的发展，现在可以更容易地捕获高分辨率（≤1米）遥感图像，并且覆盖范围更广。然而，使用常见的土地覆盖制图方法同步更新土地覆盖图仍然面临挑战，因为需要高分辨率的土地覆盖标签。虽然有大量低分辨率（约30米）土地覆盖产品可作为替代标签来源，但这些产品与日益增长的高分辨率影像之间的分辨率差距仍然是一个尚未克服的障碍。土地覆盖状况的制图不仅可以为我们提供自然景观的外观特征和人类发展的信息描述，还可以间接监测生物多样性丧失、土壤退化和水文变化，从而满足制定土地利用政策和环境治理计划的紧迫需求。同时，建筑活动、自然灾害和气候变化对地貌环境的不可避免影响，使得土地覆盖图迅速过时，必须不断更新。随着航空和航天遥感平台的成熟与发展，越来越多的高分辨率、最新的遥感影像可用于精确和定期地制图地表。因此，探索使用适当的地理空间数据和制图算法来高效更新和完善大规模高分辨率土地覆盖图，对于人类社会的长期发展具有重要意义。"
+      ],
+      "research objectiveCn": [
+        "在本文中，为了突破这一障碍，我们提出了一种低到高网络（L2HNet），通过仅使用低分辨率土地覆盖产品作为训练标签，自动从高分辨率图像生成高分辨率土地覆盖地图，从而摆脱在大规模地图更新过程中对精细标注样本的需求。"
+      ],
+      "challengesCn": [
+        "然而，常见深度学习方法的训练过程高度依赖于大量高精度的标注数据，这些数据通常是通过繁琐且耗时的人工标注为特定需求而产生的，因此严重限制了这些方法的映射覆盖范围。这些发现表明，现有的低分辨率（LR）标签无法轻易提供可靠的监督信息用于大规模高分辨率（HR）映射任务，并且在不使用任何高分辨率标签或辅助信息的情况下，直接完成这一任务仍然是一个挑战。然而，这种方法需要一个非端到端的冗余迭代过程，这在大规模应用中耗费了大量时间和计算资源。"
+      ],
+      "methodsCn": [
+        "首先，为了获得丰富细节的映射结果，我们提出了一种分辨率保持（RP）骨干网络，该网络包含并行多尺度卷积层，用于从图像中提取高分辨率特征。此外，为了解决由于分辨率不匹配导致的标签噪声问题，我们设计了一个可信区域选择（CAS）模块和一个低到高（L2H）损失函数，采用弱监督和无监督策略，以从粗略标签中获取可靠的监督信息。"
+      ],
+      "datasetCn": [
+        "本研究使用的数据集覆盖了美国两个大规模区域。首先，选择了切萨皮克湾流域作为进行定量实验的区域。正如图1所示，该流域的面积大约为160,000平方公里，包含六个行政州，分别是马里兰州（ML）、弗吉尼亚州（VA）、宾夕法尼亚州（PA）、纽约州（NY）、特拉华州（DE）和西弗吉尼亚州（WV）。高分辨率（1米）航空影像的红（R）、绿（G）、蓝（B）和近红外（NIR）波段由美国农业部国家农业影像计划（NAIP）在2011/2012年拍摄。2011年的低分辨率（30米）土地覆盖标签来自美国地质调查局的国家土地覆盖数据库（NLCD）（Wickham等，2017），并通过最近邻上采样进行重投影，以与NAIP影像对齐。用于定量评估的高分辨率（1米）地面参考数据由切萨皮克湾保护委员会土地覆盖（CCLC）项目提供，这些数据是基于1米NAIP影像和激光雷达高程数据创建的，包含六个土地覆盖类别。此外，地面参考数据是通过机器学习方法生成的，并进行了人工校正，报告的每个州的平均准确率为88.5%。此外，该数据集是根据Robinson等（2019）的工作组织的，共有732个不重叠的瓦片，部分采样自切萨皮克湾流域的六个州，每个瓦片覆盖的面积大约为6000米×7500米。其次，为了进一步说明L2HNet框架在一个完整区域内对更详细土地覆盖类别的实际表现，选择了马里兰州作为切萨皮克湾的核心区域，覆盖面积为33,872平方公里，进行实际的高分辨率土地覆盖制图应用，其中原始的30米分辨率NLCD产品直接作为标签源。更详细地说，马里兰数据集由IEEE GRSS的图像分析与数据融合技术委员会（IADF TC）于2021年提供，包含2250个不重叠的瓦片，每个瓦片覆盖的面积为3880米×3880米。对于马里兰数据集，如图2所示，数据源是2013年捕获的NAIP 1米分辨率影像和NLCD 30米分辨率标签的配对。"
+      ],
+      "findingsCn": [
+        "在美国切萨皮克湾流域的六个行政州进行的实验结果表明，L2HNet在创建1米分辨率的土地覆盖图方面优于多种先进方法和主流土地覆盖映射方法，且以30米分辨率的土地覆盖产品作为训练标签。作为进一步应用，L2HNet还被用于制作美国马里兰州的首个1米分辨率的土地覆盖图，采用的是二级分类层次，覆盖面积约为33,872平方公里。"
+      ]
+    },
+    {
+      "background": [
+        "In China, the demand for a more precise perception of the national land surface has become most urgent given the pace of development and urbanization. Constructing a very-high-resolution (VHR) land-cover dataset for China with national coverage, however, is a non-trivial task and thus, an active area of research impeded by the challenges of image acquisition, manual annotation, and computational complexity. As a basic earth observation application, land-cover mapping enables investigating human and nonhuman activities that shape the national landscape. Researchers and decision makers use the insights from the land-cover maps to assist communities and governments achieve Sustainable Development Goals. The past few decades have witnessed tremendous advancements in the spatial resolution of land-cover mapping products because remote-sensing images with finer spatial resolution can be acquired more easily. Very-high-resolution (VHR) imagery in particular, typically finer than 3 m/pixel, reveals land-cover objects at an ever finer granularity providing a clearer, more detailed picture of the situation on the ground. These VHR land-cover datasets are becoming increasingly ubiquitous in numerous large-scale research and application domains, such as agriculture, urbanization, and ecology. However, the VHR land-cover map with national coverage is still unavailable in China, hindering effective policy formulation and efficient resource allocation. Over the past 40 years, numerous satellite missions have been launched to improve the knowledge of Earth’s resources and monitor natural phenomena. With the continuous updating of airborne and space-borne platforms, the spatial resolution of the available remote-sensing images has undergone rapid increments of change. Nevertheless, due to the low orbit of the VHR image-captured platforms, the corresponding VHR land-cover products generally have a smaller coverage that is insufficient to cover entire China. Furthermore, even if the national-scale VHR imagery can be obtained by combining different image sources, the immense data volumes, laborious annotations, and onerous processes are still the main obstacles for the national-scale VHR land-cover mapping. Thus, current available land-cover datasets for China lack either a fine spatial resolution or nationwide coverage. For global-scale LR, MR, and HR land-cover products, the image sources (i.e., MODIS, Landsat, and Sentinel) are commonly free access and contain massive spectral information but relatively low spatial context than VHR imagery. Therefore, pixel-based machine learning algorithms, for example, support vector machine, decision tree, and random forest (RF), are usually adopted to produce acceptable results. Recently, with the blossoming of deep learning techniques, many studies have conducted deep learning-based models for producing VHR land-cover datasets. However, existing deep learning methods rely on well-labeled data, which are time consuming and laborious to annotate. This limitation has created a large obstacle preventing the production of a national-scale land-cover map."
+      ],
+      "research objective": [
+        "To overcome these limitations, in this paper, a deep learning-based low-cost framework is presented to create the first 1-meter land-cover map for entire China, called SinoLC-1, by using freely available 1-meter Google Earth imagery, open-access 10-meter GLC products, and Open Street Map (OSM) as input data. The produced SinoLC1 dataset is the first 1-meter resolution and currently the highest resolution land-cover product that covers all of China."
+      ],
+      "challenges": [
+        "Constructing a very-high-resolution (VHR) land-cover dataset for China with national coverage, however, is a non-trivial task and thus, an active area of research impeded by the challenges of image acquisition, manual annotation, and computational complexity. The VHR land-cover map with national coverage is still unavailable in China, hindering effective policy formulation and efficient resource allocation. Due to the low orbit of the VHR image-captured platforms, the corresponding VHR land-cover products generally have a smaller coverage that is insufficient to cover entire China. Furthermore, even if the national-scale VHR imagery can be obtained by combining different image sources, the immense data volumes, laborious annotations, and onerous processes are still the main obstacles for the national-scale VHR land-cover mapping. However, existing deep learning methods rely on well-labeled data, which are time consuming and laborious to annotate. This limitation has created a large obstacle preventing the production of a national-scale land-cover map. One of the major limitations to the production of SinoLC-1 was the uneven temporal coverage of Google Earth images. Although Google Earth is a low-cost source to acquire nationwide coverage VHR images, the uneven temporal coverage of the images can affect the uniformity of the land-cover products."
+      ],
+      "methods": [
+        "To construct the image database for producing SinoLC-1, the imagery of the “December 2021” version was collected according to every provincial administrative region border of China and cropped into the size of 6000 × 6000 pixels as the basic storage tile. The total storage size of imagery with the band of red, green, and blue was about 73.25 TB, covering ~9,600,000 km2 land surface area of China. To collect reliable training pairs for the national-scale VHR land-cover mapping process, 98 municipal-level areas were selected from the 34 provincial administrative regions of China. In every selected municipal-level area, the data were cropped into numerous non-overlapped tiles with the size of 6000 ×6000 pixels. In each tile, the training pairs were constructed by five types of data, which included three 10-meter GLC products, the OSM, and the 1.07-meter-resolution Google Earth imagery. To process the resolution-mismatched training pairs and realize automatic national-scale VHR land-cover mapping for China jointly, an low-to-high network (L2HNet) was applied, which has been proposed in our previous work (Li et al., 2022) and has reported state-of-the-art performance compared with the mainstream methods in the low-to-high land-cover mapping task. Based on the procedure, three large computing servers including 8 NVIDIA GeForce RTX 3090 GPUs and a large storage server were employed to conduct the mapping and merging of the SinoLC-1 in parallel. Processing the whole imagery with a total storage size of about 73.25 TB to obtain the final results of the SinoLC-1 land-cover product covering ~9,600,000 km2 area of China took about 10 months."
+      ],
+      "dataset": [
+        "The VHR optical imagery was collected from the open-access Google Earth images at level 18, which approximately corresponds to a 1.07-meter resolution. The total storage size of imagery with the band of red, green, and blue was about 73.25 TB, covering ~9,600,000 km2 land surface area of China. Concretely, the land-cover labeled data were collected from three open-access 10-meter GLC products, namely, FROM_GLC10, ESRI world cover, and ESA_WorldCover v100. FROM_GLC10 was produced by using Sentinel-2A imagery, which reported an overall accuracy of 73% on a global scale. ESRI world cover (abbreviated as ESRI_GLC10) was produced based on Sentinel-2 imagery and reported an overall accuracy of 85%. ESA_WorldCover v100 (abbreviated as ESA_GLC10) was produced by using Sentinel-1 and Sentinel-2 data, and reported an overall accuracy of 74%."
+      ],
+      "findings": [
+        "The validation results showed SinoLC-1 achieved an overall accuracy of 73.61% and a kappa coefficient of 0.6595. Validations for every provincial region further indicated the accuracy of this dataset across whole China. Furthermore, the statistical validation results indicated SinoLC-1 conformed closely to the official survey reports. These results indicated SinoLC-1 had the highest spatial resolution, the most accurate land-cover edges, and the finest landscape details. The produced SinoLC1 dataset is the first 1-meter resolution and currently the highest resolution land-cover product that covers all of China. Qualitative comparisons revealed the SinoLC-1 product with the highest spatial resolution yielded the most accurate land-cover edges, indicating the finest landscape details compared with five other widely used products. Quantitative assessments found the validation results derived from over 100,000 samples indicate SinoLC-1 achieved an O.A. of 73.61% and a kappa coefficient of 0.6595 across China. The validation results of every geographical region indicated an acceptable accuracy distribution all around China. Furthermore, the statistical validation results indicated SinoLC-1 highly conforms to the official survey reports according to the government data."
+      ],
+      "backgroundCn": [
+        "在中国，随着发展和城市化的加速，对国家土地表面的更精确感知的需求变得尤为迫切。然而，构建具有全国覆盖的超高分辨率（VHR）土地覆盖数据集是一项复杂的任务，因此成为了一个活跃的研究领域，受到图像获取、人工标注和计算复杂性等挑战的制约。作为基本的地球观测应用，土地覆盖制图使得研究人类和非人类活动对国家景观的影响成为可能。研究人员和决策者利用土地覆盖图提供的见解，帮助社区和政府实现可持续发展目标。在过去几十年中，土地覆盖制图产品的空间分辨率取得了巨大的进步，因为可以更容易地获取更细空间分辨率的遥感图像。特别是超高分辨率（VHR）影像，通常分辨率小于3米/像素，能够以更细的粒度揭示土地覆盖对象，提供更清晰、更详细的地面情况。这些VHR土地覆盖数据集在农业、城市化和生态等多个大规模研究和应用领域中变得越来越普遍。然而，中国仍然缺乏具有全国覆盖的VHR土地覆盖图，阻碍了有效的政策制定和资源的高效配置。在过去的40年中，许多卫星任务被发射，以提高对地球资源的认识和监测自然现象。随着航空和航天平台的不断更新，现有遥感图像的空间分辨率经历了快速的变化。然而，由于VHR图像捕获平台的低轨道，相应的VHR土地覆盖产品通常覆盖范围较小，无法覆盖整个中国。此外，即使通过结合不同的图像源获得国家级VHR影像，庞大的数据量、繁琐的标注和繁重的处理过程仍然是国家级VHR土地覆盖制图的主要障碍。因此，目前可用的中国土地覆盖数据集要么缺乏细的空间分辨率，要么缺乏全国覆盖。对于全球范围的低分辨率（LR）、中分辨率（MR）和高分辨率（HR）土地覆盖产品，图像源（如MODIS、Landsat和Sentinel）通常是免费访问的，并包含大量光谱信息，但相较于VHR影像，其空间上下文较低。因此，通常采用基于像素的机器学习算法，例如支持向量机、决策树和随机森林（RF），来产生可接受的结果。最近，随着深度学习技术的蓬勃发展，许多研究开展了基于深度学习的模型来生成VHR土地覆盖数据集。然而，现有的深度学习方法依赖于良好标注的数据，这些数据的标注过程耗时且繁琐。这一限制造成了生产国家级土地覆盖图的重大障碍。"
+      ],
+      "research objectiveCn": [
+        "为克服这些局限性，本文提出了一种基于深度学习的低成本框架，利用免费获取的1米谷歌地球影像、开放获取的10米全球土地覆盖（GLC）产品和开放街图（OSM）作为输入数据，创建了中国首个1米土地覆盖图，称为SinoLC-1。生成的SinoLC-1数据集是覆盖整个中国的首个1米分辨率且目前分辨率最高的土地覆盖产品。"
+      ],
+      "challengesCn": [
+        "构建中国的全国覆盖非常高分辨率（VHR）土地覆盖数据集是一项复杂的任务，因此成为了一个活跃的研究领域，受到图像获取、人工标注和计算复杂性等挑战的阻碍。目前，中国尚未有全国范围的VHR土地覆盖图，这妨碍了有效的政策制定和资源的高效配置。由于VHR图像采集平台的低轨道，相关的VHR土地覆盖产品通常覆盖范围较小，无法覆盖整个中国。此外，即使通过组合不同的图像源获得国家级的VHR影像，庞大的数据量、繁琐的标注和繁重的处理过程仍然是国家级VHR土地覆盖制图的主要障碍。然而，现有的深度学习方法依赖于标注良好的数据，而这些数据的标注过程既耗时又繁琐。这一限制造成了生产国家级土地覆盖图的重大障碍。SinoLC-1生产的一个主要限制是Google Earth图像的时间覆盖不均。尽管Google Earth是获取全国范围VHR图像的低成本来源，但图像的时间覆盖不均可能会影响土地覆盖产品的统一性。"
+      ],
+      "methodsCn": [
+        "为了构建SinoLC-1的图像数据库，按照中国每个省级行政区域的边界收集了“2021年12月”版本的影像，并裁剪成6000 × 6000像素的基本存储瓦片。红、绿、蓝三种波段的影像总存储大小约为73.25 TB，覆盖了中国约9,600,000 km²的陆地面积。为了收集可靠的训练对用于国家级高分辨率土地覆盖制图过程，从中国34个省级行政区域中选择了98个市级区域。在每个选定的市级区域中，数据被裁剪成多个不重叠的瓦片，大小为6000 × 6000像素。在每个瓦片中，训练对是通过五种类型的数据构建的，包括三种10米的GLC产品、OSM和1.07米分辨率的Google Earth影像。为了处理分辨率不匹配的训练对，并实现中国的自动国家级高分辨率土地覆盖制图，采用了一种低到高的网络（L2HNet），该网络在我们之前的工作中提出（Li et al., 2022），并在低到高的土地覆盖制图任务中报告了与主流方法相比的最新性能。基于该程序，使用了三台大型计算服务器，包括8个NVIDIA GeForce RTX 3090 GPU和一台大型存储服务器，以并行方式进行SinoLC-1的制图和合并。处理总存储大小约为73.25 TB的整个影像，以获得覆盖中国约9,600,000 km²区域的SinoLC-1土地覆盖产品的最终结果，耗时约10个月。"
+      ],
+      "datasetCn": [
+        "VHR光学影像是从开放访问的Google Earth图像中收集的，级别为18，约对应1.07米的分辨率。影像的总存储大小为73.25 TB，覆盖了中国约9,600,000平方公里的陆地表面积。具体而言，土地覆盖标注数据是从三个开放访问的10米GLC产品中收集的，即FROM_GLC10、ESRI世界覆盖和ESA_WorldCover v100。FROM_GLC10是通过使用Sentinel-2A影像生成的，报告的全球整体准确率为73%。ESRI世界覆盖（简称为ESRI_GLC10）是基于Sentinel-2影像生成的，报告的整体准确率为85%。ESA_WorldCover v100（简称为ESA_GLC10）是通过使用Sentinel-1和Sentinel-2数据生成的，报告的整体准确率为74%。"
+      ],
+      "findingsCn": [
+        "验证结果显示，SinoLC-1的整体准确率为73.61%，Kappa系数为0.6595。对每个省级区域的验证进一步表明，该数据集在整个中国的准确性。此外，统计验证结果表明，SinoLC-1与官方调查报告高度一致。这些结果表明，SinoLC-1具有最高的空间分辨率、最准确的土地覆盖边界和最精细的景观细节。生成的SinoLC-1数据集是第一个1米分辨率的、目前覆盖整个中国的最高分辨率土地覆盖产品。定性比较显示，SinoLC-1产品以最高的空间分辨率产生了最准确的土地覆盖边界，表明与其他五个广泛使用的产品相比，具有最精细的景观细节。定量评估发现，来自超过100,000个样本的验证结果表明，SinoLC-1在中国的整体准确率为73.61%，Kappa系数为0.6595。每个地理区域的验证结果表明，中国各地的准确性分布均可接受。此外，统计验证结果表明，SinoLC-1与政府数据的官方调查报告高度一致。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Is it possible to create a high-resolution land-cover map using only low-resolution land-cover products as training labels?",
+        "QuestionCn": "仅使用低分辨率土地覆盖产品作为训练标签，是否可以创建高分辨率土地覆盖地图？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "Can the application of a low-to-high network overcome the challenges of using resolution-mismatched training pairs in large-scale land-cover mapping?",
+        "QuestionCn": "低到高网络的应用能否克服在大规模土地覆盖制图中使用分辨率不匹配的训练对所带来的挑战？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Are the methods for high-resolution land-cover mapping more reliant on pixel-based machine learning algorithms, deep learning models, or a combination of both?",
+        "QuestionCn": "高分辨率土地覆盖制图的方法更依赖于基于像素的机器学习算法、深度学习模型，还是两者的结合？",
+        "AnswerEn": "deep learning models",
+        "AnswerCn": "深度学习模型",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What data collection methods are used to construct a high-resolution land-cover map of China?",
+        "QuestionCn": "构建中国高分辨率土地覆盖图所使用的数据收集方法有哪些？",
+        "AnswerEn": "Google Earth imagery, GLC products, Open Street Map data",
+        "AnswerCn": "Google Earth影像、GLC产品、Open Street Map数据",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the main challenges faced in creating a very-high-resolution land-cover dataset for China?",
+        "QuestionCn": "创建中国的超高分辨率土地覆盖数据集面临的主要挑战有哪些？",
+        "AnswerEn": "image acquisition difficulties",
+        "AnswerCn": "图像采集困难",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Where are the high-resolution aerial images used in land-cover mapping experiments captured?",
+        "QuestionCn": "用于土地覆盖制图实验的高分辨率航空图像是在哪里捕获的？",
+        "AnswerEn": "Chesapeake Bay watershed",
+        "AnswerCn": "切萨皮克湾流域",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method that addresses the challenge of acquiring high-resolution land-cover labels for large-scale mapping?",
+        "QuestionCn": "您能否提供一个数据收集方法的例子，以解决获取大规模制图的高分辨率土地覆盖标签的挑战？",
+        "AnswerEn": "A notable method involves the use of low-resolution land-cover products as training labels to generate high-resolution land-cover maps. This approach was implemented using a low-to-high network (L2HNet) that eliminates the need for finely labeled samples, thereby facilitating large-scale mapping with high-resolution outputs.",
+        "AnswerCn": "一种显著的方法是使用低分辨率土地覆盖产品作为训练标签，以生成高分辨率土地覆盖地图。该方法采用了低到高网络（L2HNet），消除了对精细标注样本的需求，从而促进了大规模高分辨率输出的制图。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the key characteristics of high-resolution land-cover datasets that make them useful for ecological and resource management challenges?",
+        "QuestionCn": "高分辨率土地覆盖数据集的关键特征是什么，使其在生态和资源管理挑战中变得有用？",
+        "AnswerEn": "very-high-resolution imagery, finer than 3 meters per pixel",
+        "AnswerCn": "高于每像素3米的超高分辨率影像",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the primary challenges associated with collecting and processing very-high-resolution land-cover data at a national scale?",
+        "QuestionCn": "在国家层面收集和处理超高分辨率土地覆盖数据的主要挑战是什么？",
+        "AnswerEn": "image acquisition, manual annotation, computational complexity, low orbit, smaller coverage, multiple image sources, immense data volume, labor-intensive annotations, uneven temporal coverage",
+        "AnswerCn": "图像获取、人工标注、计算复杂性、低轨道、较小覆盖范围、多图像来源、海量数据量、劳动密集型标注、不均匀的时间覆盖。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What specific features or methodologies are employed to handle resolution mismatches in large-scale land-cover mapping?",
+        "QuestionCn": "在大规模土地覆盖制图中，处理分辨率不匹配的具体特征或方法包括哪些？",
+        "AnswerEn": "resolution-preserving backbone, multi-scale convolutional layers, confident area selection module, low-to-high loss function, weak and unsupervised strategies",
+        "AnswerCn": "分辨率保持骨干网络，多尺度卷积层，置信区域选择模块，从低到高的损失函数，弱监督和无监督策略。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the total storage size of the imagery used in a large-scale high-resolution land-cover mapping project for a national-scale dataset?",
+        "QuestionCn": "在国家级数据集的大规模高分辨率土地覆盖制图项目中使用的影像总存储大小是多少？",
+        "AnswerEn": "73.25 TB",
+        "AnswerCn": "73.25 TB",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many non-overlapping tiles were used in a dataset for conducting practical high-resolution land-cover mapping in a specific administrative state?",
+        "QuestionCn": "在特定行政州进行高分辨率土地覆盖制图的过程中，使用了多少个不重叠的图块？",
+        "AnswerEn": "2250",
+        "AnswerCn": "2250",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the coverage area of the land surface mapped in a national-scale high-resolution land-cover mapping project?",
+        "QuestionCn": "国家级高分辨率土地覆盖制图项目中映射的陆地表面的覆盖面积是多少？",
+        "AnswerEn": "9,600,000 km²",
+        "AnswerCn": "9,600,000 平方公里",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is meant by 'low-to-high network (L2HNet)' in the context of land-cover mapping?",
+        "QuestionCn": "在土地覆盖制图的背景下，“低到高网络（L2HNet）”是什么意思？",
+        "AnswerEn": "In the context of land-cover mapping, a 'low-to-high network (L2HNet)' refers to a deep learning framework designed to generate high-resolution land-cover maps from high-resolution images by using only low-resolution land-cover products as training labels. This approach eliminates the need for finely labeled samples during large-scale map updating, making it more efficient for high-resolution mapping tasks.",
+        "AnswerCn": "在土地覆盖制图的背景下，“低到高网络（L2HNet）”指的是一个深度学习框架，旨在通过仅使用低分辨率土地覆盖产品作为训练标签，从高分辨率图像生成高分辨率土地覆盖地图。这种方法消除了在大规模地图更新过程中对精细标注样本的需求，使高分辨率制图任务更加高效。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What challenges does 'resolution-mismatched training pairs' pose in the process of land-cover mapping?",
+        "QuestionCn": "“分辨率不匹配的训练样本”在土地覆盖制图过程中会带来哪些挑战？",
+        "AnswerEn": "The challenge of 'resolution-mismatched training pairs' in land-cover mapping arises when there is a discrepancy between the resolution of training data and the high-resolution images being used for mapping. This mismatch can lead to label noise, making it difficult to obtain reliable supervision information, which in turn complicates the mapping process and affects the accuracy of the final land-cover maps.",
+        "AnswerCn": "在土地覆盖制图中，“分辨率不匹配的训练对”的挑战出现在训练数据的分辨率与用于制图的高分辨率图像之间存在差异时。这种不匹配可能导致标签噪声，使得获取可靠的监督信息变得困难，从而 complicates 制图过程并影响最终土地覆盖图的准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the data collection methods used in the creation of the SinoLC-1 dataset compare to those used in the Chesapeake Bay watershed study in terms of scale and resolution?",
+        "QuestionCn": "SinoLC-1 数据集的创建所使用的数据收集方法与切萨皮克湾流域研究所使用的方法在规模和分辨率上有何比较？",
+        "AnswerEn": "The SinoLC-1 dataset collection utilized 1-meter resolution imagery from Google Earth, covering approximately 9,600,000 km² of China's land surface, which was processed to create a national-scale land-cover map. In contrast, the Chesapeake Bay watershed study used 1-meter aerial images from the NAIP program, focusing on a specific area of roughly 160,000 km² in the United States. The SinoLC-1 dataset was developed using three 10-meter GLC products and Open Street Map data as training labels, while the Chesapeake Bay study used 30-meter NLCD products for training.",
+        "AnswerCn": "SinoLC-1 数据集收集利用了来自 Google Earth 的 1 米分辨率影像，覆盖了中国约 9,600,000 平方公里的陆地表面，经过处理后创建了国家级土地覆盖图。相比之下，切萨皮克湾流域研究使用了来自 NAIP 计划的 1 米航拍图像，专注于美国约 160,000 平方公里的特定区域。SinoLC-1 数据集是使用三个 10 米的 GLC 产品和 Open Street Map 数据作为训练标签开发的，而切萨皮克湾研究则使用了 30 米的 NLCD 产品进行训练。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "In what ways do the resolution-preserving techniques applied in the SinoLC-1 and Chesapeake Bay watershed datasets differ, and how does this affect the accuracy of the resulting land-cover maps?",
+        "QuestionCn": "在SinoLC-1和切萨皮克湾流域数据集中应用的分辨率保持技术有哪些不同，这如何影响最终土地覆盖地图的准确性？",
+        "AnswerEn": "Both the SinoLC-1 and Chesapeake Bay watershed datasets employed methods to address the resolution mismatch between high-resolution images and low-resolution labels. The SinoLC-1 utilized a low-to-high network (L2HNet) to automatically generate high-resolution maps, achieving an overall accuracy of 73.61%. Similarly, the Chesapeake Bay study used a resolution-preserving backbone to extract high-resolution features, with the resulting maps showing improved accuracy over several state-of-the-art methods. Despite similar approaches, the scale of data and specific methods like confident area selection (CAS) module in the Chesapeake Bay study contributed to different accuracy outcomes and application challenges.",
+        "AnswerCn": "SinoLC-1和切萨皮克湾流域数据集都采用了方法来解决高分辨率图像与低分辨率标签之间的分辨率不匹配问题。SinoLC-1使用了低到高网络（L2HNet）自动生成高分辨率地图，整体准确率达到了73.61%。类似地，切萨皮克湾研究使用了分辨率保持骨干网络提取高分辨率特征，生成的地图在多个先进方法中显示出更高的准确性。尽管采用了类似的方法，但数据规模和切萨皮克湾研究中特有的自信区域选择（CAS）模块等具体方法导致了不同的准确性结果和应用挑战。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can the integration of low-resolution land-cover products as training labels impact the accuracy and efficiency of high-resolution land-cover mapping?",
+        "QuestionCn": "低分辨率土地覆盖产品作为训练标签的整合如何影响高分辨率土地覆盖制图的准确性和效率？",
+        "AnswerEn": "The integration of low-resolution land-cover products as training labels can significantly enhance the efficiency of high-resolution land-cover mapping by reducing the dependency on finely labeled samples, which are often time-consuming and laborious to produce. This approach allows for the automatic generation of high-resolution land-cover maps, overcoming the resolution gap between available low-resolution products and high-resolution imagery, and facilitates large-scale map updating processes.",
+        "AnswerCn": "将低分辨率土地覆盖产品作为训练标签的整合，可以显著提高高分辨率土地覆盖制图的效率，减少对细致标注样本的依赖，而这些样本通常耗时且劳动密集。这种方法允许自动生成高分辨率土地覆盖地图，克服了可用低分辨率产品与高分辨率影像之间的分辨率差距，并促进了大规模地图更新过程。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the implications of using open-access data sources like Google Earth imagery and Open Street Map for developing high-resolution land-cover maps?",
+        "QuestionCn": "使用开放获取数据源，如谷歌地球影像和开放街图，开发高分辨率土地覆盖图的影响是什么？",
+        "AnswerEn": "Using open-access data sources such as Google Earth imagery and Open Street Map provides a low-cost and comprehensive approach to obtaining very-high-resolution imagery for national-scale land-cover mapping. These sources enable researchers to overcome limitations associated with image acquisition and manual annotation, although challenges remain, such as the uneven temporal coverage of the images which can affect product uniformity.",
+        "AnswerCn": "使用开放获取的数据源，如谷歌地球影像和开放街图，提供了一种低成本且全面的方法来获取国家级土地覆盖制图的超高分辨率影像。这些来源使研究人员能够克服与图像获取和手动注释相关的限制，尽管仍然存在一些挑战，例如影像的时间覆盖不均，这可能影响产品的一致性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In what ways do computational resources and processing time influence the scalability of national-scale high-resolution land-cover mapping projects?",
+        "QuestionCn": "计算资源和处理时间如何影响国家级高分辨率土地覆盖制图项目的可扩展性？",
+        "AnswerEn": "Computational resources and processing time are critical factors in the scalability of national-scale high-resolution land-cover mapping projects. The necessity for large computing servers and substantial storage to process immense data volumes, as seen in the processing of approximately 73.25 TB of imagery for nationwide coverage, highlights the challenges of computational complexity. Efficient use of these resources can significantly impact both the feasibility and the duration of such projects, as demonstrated by the 10-month processing timeframe.",
+        "AnswerCn": "计算资源和处理时间是国家级高分辨率土地覆盖制图项目可扩展性的关键因素。处理约73.25 TB的影像以实现全国覆盖所需的大型计算服务器和大量存储，突显了计算复杂性带来的挑战。有效利用这些资源可以显著影响此类项目的可行性和持续时间，正如10个月的处理时间所示。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the complexity and challenges of constructing a very-high-resolution land-cover dataset for national coverage?",
+        "QuestionCn": "构建全国范围内的超高分辨率土地覆盖数据集的复杂性和挑战因素包括哪些？",
+        "AnswerEn": "Constructing a very-high-resolution (VHR) land-cover dataset for national coverage involves challenges such as image acquisition, manual annotation, and computational complexity. The low orbit of VHR image-captured platforms results in smaller coverage insufficient to cover entire regions, and even if national-scale imagery is obtained, immense data volumes and laborious annotations pose significant obstacles.",
+        "AnswerCn": "构建国家覆盖的超高分辨率（VHR）土地覆盖数据集面临着诸多挑战，例如图像获取、人工标注和计算复杂性。VHR图像捕获平台的低轨道导致覆盖范围较小，无法覆盖整个区域，即使获得了国家级别的影像，庞大的数据量和繁琐的标注工作也构成了重大障碍。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is the synchronous renewal of high-resolution land-cover maps challenging when using common mapping methods?",
+        "QuestionCn": "使用常见的制图方法时，高分辨率土地覆盖地图的同步更新面临哪些挑战？",
+        "AnswerEn": "The synchronous renewal of high-resolution land-cover maps is challenging due to the requirement for high-resolution land-cover labels, which are often unavailable or difficult to acquire. The gap between abundant low-resolution land-cover products and high-resolution imagery creates a barrier that common methods struggle to overcome without relying on laborious manual annotation.",
+        "AnswerCn": "高分辨率土地覆盖地图的同步更新面临挑战，因为高分辨率土地覆盖标签的获取往往困难且稀缺。丰富的低分辨率土地覆盖产品与高分辨率影像之间的差距，成为了常见方法难以克服的障碍，而不依赖于繁琐的人工标注。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What causes the reliance on complex computing resources and extended processing times for large-scale high-resolution land-cover mapping?",
+        "QuestionCn": "导致大规模高分辨率土地覆盖制图依赖复杂计算资源和延长处理时间的原因是什么？",
+        "AnswerEn": "Large-scale high-resolution land-cover mapping requires complex computing resources and extended processing times due to the non-end-to-end redundant iterative processes involved in training deep learning methods. These processes demand significant time and computational power, especially when dealing with large-scale applications.",
+        "AnswerCn": "大规模高分辨率土地覆盖制图由于深度学习方法训练中涉及的非端到端冗余迭代过程，需要复杂的计算资源和较长的处理时间。这些过程在处理大规模应用时，尤其需要大量的时间和计算能力。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential consequences of using low-resolution land-cover products as training labels for high-resolution land-cover mapping?",
+        "QuestionCn": "使用低分辨率土地覆盖产品作为高分辨率土地覆盖制图的训练标签可能带来的潜在后果是什么？",
+        "AnswerEn": "Using low-resolution land-cover products as training labels for high-resolution mapping can mitigate the need for finely labeled samples, allowing for large-scale map updates. However, it may introduce the challenge of label noise due to mismatched resolutions, which requires strategies like confident area selection and custom loss functions to obtain reliable supervision.",
+        "AnswerCn": "使用低分辨率土地覆盖产品作为高分辨率制图的训练标签，可以减少对精细标注样本的需求，从而实现大规模地图更新。然而，这可能会引入由于分辨率不匹配而导致的标签噪声，这需要采用如自信区域选择和自定义损失函数等策略，以获得可靠的监督。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the implications of employing a deep learning-based low-cost framework on the production of high-resolution land-cover maps at a national scale?",
+        "QuestionCn": "在国家层面上采用基于深度学习的低成本框架制作高分辨率土地覆盖图的影响是什么？",
+        "AnswerEn": "Employing a deep learning-based low-cost framework can facilitate the creation of high-resolution land-cover maps at a national scale by using freely available imagery and open-access data. This approach can overcome the limitations of manual annotation and improve coverage, but it still faces challenges like ensuring uniformity in the temporal coverage of imagery and managing extensive data processing requirements.",
+        "AnswerCn": "采用基于深度学习的低成本框架，可以利用免费获取的影像和开放获取的数据，在国家尺度上创建高分辨率的土地覆盖图。这种方法可以克服手动标注的局限性并提高覆盖率，但仍面临一些挑战，例如确保影像的时间覆盖一致性和管理大量的数据处理需求。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What objectives drive the development of a deep learning-based framework for generating high-resolution land-cover maps using low-resolution products as training labels?",
+        "QuestionCn": "开发基于深度学习的框架以使用低分辨率产品作为训练标签生成高分辨率土地覆盖图的目标是什么？",
+        "AnswerEn": "The objective is to overcome the requirement for finely labeled samples during the large-scale map updating process by proposing a low-to-high network (L2HNet) that automatically generates high-resolution land-cover maps from high-resolution images using only low-resolution land-cover products as training labels.",
+        "AnswerCn": "目标是通过提出一个低到高网络（L2HNet），克服在大规模地图更新过程中对精细标注样本的需求，该网络能够仅使用低分辨率土地覆盖产品作为训练标签，从高分辨率图像自动生成高分辨率土地覆盖地图。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What challenges are addressed by employing open-access satellite imagery and weak supervision strategies in the production of nationwide high-resolution land-cover maps?",
+        "QuestionCn": "利用开放获取的卫星影像和弱监督策略在全国范围内生产高分辨率土地覆盖地图时，面临哪些挑战？",
+        "AnswerEn": "The challenges addressed include the immense data volumes, laborious annotations, and computational complexity associated with acquiring and processing very-high-resolution imagery for nationwide coverage. Using open-access satellite imagery and weak supervision strategies reduces reliance on time-consuming manual annotations, facilitating the production of national-scale high-resolution land-cover maps.",
+        "AnswerCn": "所解决的挑战包括与获取和处理全国范围内的超高分辨率影像相关的巨大数据量、繁琐的标注和计算复杂性。使用开放获取的卫星影像和弱监督策略减少了对耗时的人工标注的依赖，从而促进了国家级高分辨率土地覆盖图的制作。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in constructing a very-high-resolution land-cover dataset using low-resolution labels as training data?",
+        "QuestionCn": "使用低分辨率标签作为训练数据构建超高分辨率土地覆盖数据集涉及哪些程序步骤？",
+        "AnswerEn": "The procedural steps involve using a deep learning-based low-to-high network (L2HNet) to automatically generate high-resolution land-cover maps from high-resolution images by taking only low-resolution land-cover products as training labels. This includes the use of a resolution-preserving backbone, a confident area selection module, and a low-to-high loss function. The process involves collecting and organizing high-resolution imagery and low-resolution labels, aligning them appropriately, and processing them through the network to achieve high-resolution mapping.",
+        "AnswerCn": "该过程涉及使用基于深度学习的低到高网络（L2HNet）自动生成高分辨率土地覆盖图，利用低分辨率土地覆盖产品作为训练标签。这包括使用分辨率保持的主干网络、置信区域选择模块和低到高损失函数。该过程包括收集和整理高分辨率影像和低分辨率标签，适当地对齐它们，并通过网络处理以实现高分辨率映射。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can national-scale VHR land-cover mapping be conducted efficiently given the challenges of image acquisition and annotation?",
+        "QuestionCn": "如何有效地进行国家级超高分辨率土地覆盖制图，考虑到图像获取和标注的挑战？",
+        "AnswerEn": "National-scale VHR land-cover mapping can be conducted efficiently by using freely available high-resolution imagery, such as Google Earth images, and combining them with open-access low-resolution land-cover products and auxiliary data like Open Street Map. The data are organized into non-overlapping tiles, and a low-to-high network is employed to process these tiles, allowing for automatic mapping without the need for laborious manual annotations. The process leverages parallel computing servers for efficient data handling and processing.",
+        "AnswerCn": "国家级的超高分辨率土地覆盖制图可以通过使用免费的高分辨率影像（如谷歌地球图像）以及结合开放获取的低分辨率土地覆盖产品和辅助数据（如开放街图）来高效进行。这些数据被组织成不重叠的瓦片，并采用低到高的网络来处理这些瓦片，从而实现自动制图，无需繁琐的人工标注。该过程利用并行计算服务器进行高效的数据处理和处理。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What methods are utilized to ensure reliable supervision information when dealing with mismatched resolution labels in large-scale land-cover mapping?",
+        "QuestionCn": "在处理大规模土地覆盖制图中不匹配的分辨率标签时，确保可靠监督信息的方法有哪些？",
+        "AnswerEn": "Methods to ensure reliable supervision information include using a confident area selection module and a low-to-high loss function designed to handle label noise caused by mismatched resolutions. These components work within the low-to-high network framework, allowing the extraction of reliable supervision information from coarse labels. The approach uses weak and unsupervised strategies to manage the resolution mismatch and improve the accuracy of the high-resolution mapping results.",
+        "AnswerCn": "确保可靠监督信息的方法包括使用自信区域选择模块和设计用于处理因分辨率不匹配而导致标签噪声的低到高损失函数。这些组件在低到高网络框架内工作，允许从粗略标签中提取可靠的监督信息。该方法使用弱监督和无监督策略来管理分辨率不匹配，并提高高分辨率映射结果的准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methodologies enable the generation of high-resolution land-cover maps from low-resolution land-cover products without the need for finely labeled samples?",
+        "QuestionCn": "哪些方法论能够在不需要精细标注样本的情况下，从低分辨率土地覆盖产品生成高分辨率土地覆盖地图？",
+        "AnswerEn": "The L2HNet methodology enables the automatic generation of high-resolution land-cover maps from high-resolution images by using only low-resolution land-cover products as training labels. This method eliminates the need for finely labeled samples during the large-scale map updating process.",
+        "AnswerCn": "L2HNet 方法能够通过仅使用低分辨率土地覆盖产品作为训练标签，自动生成高分辨率图像的高分辨率土地覆盖地图。这种方法消除了在大规模地图更新过程中对精细标注样本的需求。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "How does the integration of multi-scale convolutional layers in a deep learning framework facilitate the extraction of high-resolution features for land-cover mapping?",
+        "QuestionCn": "多尺度卷积层在深度学习框架中的集成如何促进高分辨率特征的提取，以便进行土地覆盖制图？",
+        "AnswerEn": "The integration of parallel multi-scale convolutional layers in a deep learning framework, such as the resolution-preserving (RP) backbone, facilitates the extraction of high-resolution features from images, allowing for the generation of mapping results with rich details.",
+        "AnswerCn": "在深度学习框架中，平行多尺度卷积层的集成，例如分辨率保持（RP）主干网络，促进了从图像中提取高分辨率特征，从而允许生成具有丰富细节的映射结果。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What resources and conditions enable the creation of a nationwide very-high-resolution land-cover dataset, considering the challenges of data volume and annotation in large-scale applications?",
+        "QuestionCn": "哪些资源和条件能够支持创建全国范围内的超高分辨率土地覆盖数据集，考虑到大规模应用中数据量和标注的挑战？",
+        "AnswerEn": "The creation of a nationwide very-high-resolution land-cover dataset is enabled by using freely available 1-meter Google Earth imagery, open-access 10-meter GLC products, and Open Street Map (OSM) as input data. This approach overcomes challenges of data volume and manual annotation by utilizing deep learning techniques that do not rely on well-labeled data.",
+        "AnswerCn": "通过使用免费的1米谷歌地球影像、开放获取的10米全球土地覆盖产品和开放街图（OSM）作为输入数据，创建全国范围内的超高分辨率土地覆盖数据集成为可能。这种方法通过利用不依赖于良好标注数据的深度学习技术，克服了数据量和人工标注的挑战。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might the resolution gap between low-resolution land-cover products and high-resolution imagery remain a significant obstacle in creating high-resolution land-cover maps?",
+        "QuestionCn": "为什么低分辨率土地覆盖产品和高分辨率影像之间的分辨率差距可能仍然是创建高分辨率土地覆盖地图的一个重大障碍？",
+        "AnswerEn": "The resolution gap is a significant obstacle because existing low-resolution land-cover products cannot easily provide reliable supervision information for high-resolution mapping tasks. This gap makes it challenging to directly accomplish the task without using high-resolution labels or ancillary information, which are normally dependent on laborious and time-consuming manual annotation.",
+        "AnswerCn": "分辨率差距是一个重要障碍，因为现有的低分辨率土地覆盖产品无法轻易提供高分辨率制图任务所需的可靠监督信息。这个差距使得在没有高分辨率标签或辅助信息的情况下直接完成任务变得具有挑战性，而这些通常依赖于费时费力的人工标注。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What might be the reasons for the challenges in acquiring a consistent national-scale very-high-resolution land-cover dataset for a country like China?",
+        "QuestionCn": "对于像中国这样的国家来说，获取一致的全国范围内的超高分辨率土地覆盖数据集可能面临哪些挑战？",
+        "AnswerEn": "Challenges include the low orbit of VHR image-captured platforms that results in smaller coverage, the immense data volumes, and the laborious annotations required. Even if national-scale VHR imagery is obtained by combining different sources, the uneven temporal coverage of images can affect the uniformity of the land-cover products, which complicates the task of creating a consistent national-scale dataset.",
+        "AnswerCn": "挑战包括高分辨率（VHR）图像捕获平台的低轨道导致覆盖范围较小、数据量巨大以及所需的繁琐注释。即使通过结合不同来源获得国家级高分辨率影像，图像的时间覆盖不均也会影响土地覆盖产品的一致性，从而使得创建一致的国家级数据集变得复杂。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why might existing deep learning methods struggle to efficiently produce national-scale land-cover maps without relying heavily on well-labeled data?",
+        "QuestionCn": "为什么现有的深度学习方法在不依赖大量标记数据的情况下，可能难以高效地生成全国范围的土地覆盖图？",
+        "AnswerEn": "Existing deep learning methods struggle because they rely on well-labeled data, which are time-consuming and laborious to annotate. This reliance creates a large obstacle to producing national-scale land-cover maps, as manual annotation is often not feasible for such large-scale datasets. The lack of finely labeled samples during the map updating process further restricts the mapping coverage and efficiency.",
+        "AnswerCn": "现有的深度学习方法面临困难，因为它们依赖于标注良好的数据，而这些数据的标注过程既耗时又费力。这种依赖性为制作国家级土地覆盖地图带来了很大障碍，因为对于如此大规模的数据集，手动标注往往不可行。在地图更新过程中，缺乏精细标注样本进一步限制了映射的覆盖范围和效率。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How would you evaluate the effectiveness of using low-resolution land-cover products as training labels for high-resolution land-cover mapping?",
+        "QuestionCn": "如何评估使用低分辨率土地覆盖产品作为高分辨率土地覆盖制图训练标签的有效性？",
+        "AnswerEn": "The use of low-resolution land-cover products as training labels for high-resolution mapping is seen as an effective approach to overcome the challenge of high-precision labeled data dependency. This method allows for the creation of high-resolution land-cover maps by leveraging existing low-resolution datasets, thus reducing the need for labor-intensive manual annotation. The approach has been validated through successful implementations that achieved high spatial resolutions and accurate land-cover details, indicating its practical efficacy.",
+        "AnswerCn": "使用低分辨率土地覆盖产品作为高分辨率制图的训练标签被视为克服对高精度标注数据依赖的有效方法。这种方法通过利用现有的低分辨率数据集来创建高分辨率土地覆盖图，从而减少了对劳动密集型手动标注的需求。该方法已通过成功实施得到了验证，取得了高空间分辨率和准确的土地覆盖细节，表明其实际有效性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In your opinion, what are the main challenges faced in constructing a very-high-resolution land-cover dataset for a nation-wide scale, and how might these challenges be addressed?",
+        "QuestionCn": "在构建全国范围内的超高分辨率土地覆盖数据集时，面临的主要挑战是什么？这些挑战可能如何得到解决？",
+        "AnswerEn": "The main challenges in constructing a very-high-resolution land-cover dataset for national coverage include the massive data volumes, laborious annotations, computational complexity, and uneven temporal coverage of available imagery. Addressing these challenges may involve the use of deep learning frameworks that rely on available low-resolution data and open-access imagery, coupled with efficient computational strategies such as parallel processing using advanced GPU servers. These methods help manage data complexity and reduce the reliance on extensive manual annotations.",
+        "AnswerCn": "构建国家范围内的超高分辨率土地覆盖数据集的主要挑战包括海量数据量、繁琐的标注工作、计算复杂性以及可用影像的时间覆盖不均。解决这些挑战可能涉及使用深度学习框架，依赖于可用的低分辨率数据和开放获取的影像，结合高效的计算策略，如使用先进的GPU服务器进行并行处理。这些方法有助于管理数据复杂性，并减少对大量人工标注的依赖。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What is your assessment of the potential of using open-access imagery and existing global land-cover products for producing high-resolution land-cover maps?",
+        "QuestionCn": "我对使用开放获取影像和现有全球土地覆盖产品来制作高分辨率土地覆盖地图的潜力的评估是什么？",
+        "AnswerEn": "Open-access imagery and existing global land-cover products hold significant potential for producing high-resolution land-cover maps. They provide a cost-effective means of obtaining extensive coverage with relatively high accuracy. The integration of such data sources with advanced deep learning methods can yield detailed land-cover products with fine spatial resolution. Despite challenges such as resolution mismatches and data volume, the successful creation of national-scale maps with high accuracy underscores their utility and potential.",
+        "AnswerCn": "开放获取的影像和现有的全球土地覆盖产品在生成高分辨率土地覆盖地图方面具有重要潜力。它们提供了一种以相对较高准确性获得广泛覆盖的成本效益手段。将这些数据源与先进的深度学习方法相结合，可以产生具有精细空间分辨率的详细土地覆盖产品。尽管存在分辨率不匹配和数据量大的挑战，但成功创建高准确度的国家级地图凸显了它们的实用性和潜力。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I'm unsure about how low-resolution data can be effectively used to train models for high-resolution land-cover mapping without high-resolution labels.",
+        "QuestionCn": "我不确定如何有效地使用低分辨率数据来训练高分辨率土地覆盖映射模型，而不需要高分辨率标签。",
+        "AnswerEn": "To overcome the resolution gap, a low-to-high network (L2HNet) is proposed, which uses low-resolution land-cover products as training labels to generate high-resolution maps. This approach includes a resolution-preserving backbone and a confident area selection module to handle label noise and extract high-resolution features from images.",
+        "AnswerCn": "为了解决分辨率差距，提出了一种低到高网络（L2HNet），该网络使用低分辨率土地覆盖产品作为训练标签来生成高分辨率地图。该方法包括一个分辨率保持主干网络和一个置信区域选择模块，以处理标签噪声并从图像中提取高分辨率特征。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "I don't understand how such large volumes of image data can be processed efficiently for national-scale land-cover mapping.",
+        "QuestionCn": "我不明白如何能高效处理如此大规模的图像数据以进行国家级土地覆盖制图。",
+        "AnswerEn": "The processing of large volumes of image data for national-scale land-cover mapping is conducted using an efficient deep learning framework, specifically the L2HNet. The process is supported by high-performance computing infrastructure, including multiple NVIDIA GeForce RTX 3090 GPUs, allowing parallel processing to manage the 73.25 TB of data over 10 months.",
+        "AnswerCn": "大规模图像数据处理用于国家级土地覆盖制图，采用高效的深度学习框架，特别是L2HNet。该过程得益于高性能计算基础设施，包括多台NVIDIA GeForce RTX 3090 GPU，能够进行并行处理，以管理73.25 TB的数据，历时10个月。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I can't make sense of how a dataset can ensure accuracy across such a vast and diverse geographic area.",
+        "QuestionCn": "我无法理解一个数据集如何能确保在如此广泛和多样的地理区域内的准确性。",
+        "AnswerEn": "The accuracy of the land-cover dataset across a vast geographic area is ensured through validation against 100,000 samples and official survey reports. The dataset achieved an overall accuracy of 73.61% with a kappa coefficient of 0.6595, supported by qualitative comparisons and statistical validation that reflect its conformity to official data.",
+        "AnswerCn": "该土地覆盖数据集通过与100,000个样本和官方调查报告的验证，确保了其在广泛地理区域内的准确性。该数据集的总体准确率为73.61%，kappa系数为0.6595，得到了定性比较和统计验证的支持，反映了其与官方数据的一致性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please explore various data collection methods that can be used to construct high-resolution land-cover maps and discuss their potential challenges.",
+        "QuestionCn": "请探讨可以用于构建高分辨率土地覆盖地图的各种数据收集方法，并讨论它们可能面临的挑战。",
+        "AnswerEn": "Data collection for high-resolution land-cover maps often involves using high-resolution remote sensing imagery, such as 1-meter resolution images from platforms like Google Earth. Open-access datasets like 10-meter GLC products (FROM_GLC10, ESA_WorldCover, and ESRI_GLC) and Open Street Map (OSM) can serve as training labels. Challenges include the need for manual annotation, computational complexity, and uneven temporal coverage of imagery, which can affect the consistency and accuracy of the land-cover maps.",
+        "AnswerCn": "高分辨率土地覆盖图的数据显示，通常需要使用高分辨率遥感影像，例如来自谷歌地球的1米分辨率影像。开放获取的数据集，如10米分辨率的全球土地覆盖产品（FROM_GLC10、ESA_WorldCover和ESRI_GLC）以及开放街图（OSM），可以作为训练标签。面临的挑战包括需要手动注释、计算复杂性以及影像的时间覆盖不均，这可能会影响土地覆盖图的一致性和准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please analyze the methodological approaches to overcoming the resolution gap between low-resolution land-cover products and high-resolution imagery in large-scale mapping.",
+        "QuestionCn": "请分析克服低分辨率土地覆盖产品与高分辨率影像之间分辨率差距的方法论方法，以进行大规模制图。",
+        "AnswerEn": "One approach to bridging the resolution gap is using a low-to-high network (L2HNet) that automatically generates high-resolution land-cover maps from high-resolution images by utilizing low-resolution land-cover products as training labels. This method alleviates the need for finely labeled samples in large-scale mappings and addresses challenges such as the reliance on high-precision labeled data and computational resource demands.",
+        "AnswerCn": "一种弥补分辨率差距的方法是使用低到高网络（L2HNet），该网络通过利用低分辨率土地覆盖产品作为训练标签，自动生成高分辨率土地覆盖图。这种方法减轻了大规模制图中对精细标注样本的需求，并解决了对高精度标注数据和计算资源需求的挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please discuss potential datasets that can serve as training labels for creating high-resolution land-cover maps and evaluate their effectiveness.",
+        "QuestionCn": "讨论可以作为高分辨率土地覆盖图训练标签的潜在数据集，并评估它们的有效性。",
+        "AnswerEn": "Potential datasets for training labels include open-access 10-meter GLC products such as FROM_GLC10, ESRI world cover, and ESA_WorldCover, which are derived from Sentinel imagery. While these datasets provide a valuable resource, their effectiveness can vary, with reported accuracies of 73% to 85%. They offer a trade-off between accessibility and spatial context, and their resolution mismatch with high-resolution imagery remains a challenge to address.",
+        "AnswerCn": "潜在的训练标签数据集包括开放获取的10米GLC产品，如FROM_GLC10、ESRI世界覆盖和ESA_WorldCover，这些数据集是基于Sentinel影像生成的。虽然这些数据集提供了宝贵的资源，但它们的有效性可能有所不同，报告的准确率在73%到85%之间。它们在可获取性和空间上下文之间提供了权衡，而与高分辨率影像的分辨率不匹配仍然是一个需要解决的挑战。",
+        "Level": "C5(Evaluating)"
+      }
+    ]
+  }
 }

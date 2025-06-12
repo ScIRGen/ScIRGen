@@ -1,205 +1,205 @@
 {
-    "id": "e6f2b5f7-28e8-45d7-bd8a-0721aaf29958",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Global urban area 60 meter resolution land cover data (1978-1985 )",
-            "titleCn": "全球城市范围60米分辨率土地覆盖数据（1978-1985）",
-            "description": "The data includes tif data and shp documents of urban land cover based on MSS from 1978 to 1985. The classification system includes 10 types of surface cover: cultivated land (10), forest (20), grassland (30), shrubland (40), wetland (50), water body (60), tundra (70), artificial surface (80), bare land (90), glacier and permanent snow (100) (corresponding raster data values in parentheses). Data production includes four steps: satellite image data preprocessing, sample collection, classification, and post-processing. The first three steps are performed on Google Earth Engine, while the fourth step is performed offline. The preprocessing of data includes determining the T1 level images available in MSS Collection 2 within the classification range, removing cloud pollution data and saturated pixels, and generating annual composite data using the median band values of available pixels. The preparation of training samples is mainly achieved through visual interpretation and sample migration based on Euclidean distance (ED) and spectral angular distance (SAD) methods for training samples from 85 years ago. In classification, the first step is to extract sample feature values, including remote sensing indices such as NDVI, NDWI, MBSI, and the median of band values as inputs. A random forest model is trained on every 3 degree grid, and the trained random forest model is used to classify images. The classification results are processed for quality offline. Use an independent validation sample set to test the classification accuracy. Due to severe data loss, the classification results of the Landsat Global Land Survey 1975 dataset, mainly based on the 1972-1983 and a small amount based on the 1982-1987 MSS data integration, were used to supplement the 78-83 years, and the classification results of the Landsat TM 84 and 85 years were filled in. To maintain consistency, the TM classification results were resampled to 60m. Afterwards, the results were merged into the second level based on the Global Administrative Region Dataset (GADM4.1), which corresponds to the prefecture level administrative regions in China. If there is no second level administrative division, it will be merged at the national level, and then urban boundaries will be generated based on impermeable surfaces. The classification results will be cropped using urban boundaries to generate urban land cover within the administrative region. Test the classification accuracy of the final result based on an independent validation sample set. Data format: raster data.tif. Data projection: WGS1984.",
-            "descriptionCn": "数据包含1978年-1985年基于MSS的城市土地覆盖的tif数据及其范围的shp文档。分类系统包括耕地（10）、森林（20）、草地（30）、灌木地（40）、湿地（50）、水体（60）、苔原（70）、人造地表（80）、裸地（90）、冰川及永久积雪（100）10种地表覆盖类型（括号内为对应的栅格数据值）。数据制作包括卫星图像数据预处理、样本采集、分类和后处理四个步骤。其中前三个步骤在Google Earth Engine上进行，第四个步骤在线下进行。数据的预处理包括确定分类范围内可用的MSS Collection 2中的T1级别影像，删除云污染数据和饱和像元，采用可用像元的波段值中位数生成每年合成数据。训练样本的制备主要是通过目视解译和85年前的训练样本基于欧氏距离（ED），光谱角距离（SAD）方法迁移样本迁移两部分实现。在分类中首先提取样本特征值，包括NDVI、NDWI、MBSI等遥感指数，和波段值中位数一起作为输入，在每3度网格上训练随机森林模型，使用训练好的随机森林模型对图像进行分类。分类结果在线下进行质量处理。采用独立的验证样本集对分类精度进行检验。因数据缺失严重，采用了主要基于1972-1983和少量基于1982-1987年MSS数据集成的Landsat Global Land Survey 1975数据集的分类结果对78-83年进行补充，以及Landat TM84和85年的分类结果对84和85年进行填充，为保持一致，TM分类结果重采样到60m。之后结果基于全球行政区划数据集（GADM4.1）合并到第二级，即对应中国的地级行政区。如果没有第二级行政区划，则在国家尺度上合并，然后基于不透水面生成城市边界，用城市边界对分类结果进行裁剪，生成在行政区范围内的城市土地覆盖。基于独立的验证样本集对最后结果的分类精度进行检验。数据格式：栅格数据.tif。数据投影：WGS1984. 。",
-            "instructions": "File Name: The global city wide 60 meter resolution data contains two datasets, namely the city wide shp document and the city wide land cover tif document. The file name in shp format is \"xxxx. shp\" and the accompanying cpg, dbf, prj, shx documents. The file name in raster format is \"xxxx. tif\", where xxxx represents the administrative division name. The second level administrative division using GADM data is globally unified. If a country does not have a second level administrative division, it is directly named after the country's name. For example, Beijing. tif represents this file that describes the land cover situation in urban areas of Beijing. Beijing. shp represents the determined spatial range. Data reading method: All shp files in this dataset can be opened using programs such as ArcGIS that can read. shp files. Raster files can be opened using ArcGIS and various remote sensing processing software. The mainstream data processing tools Python and R can both read the above files.",
-            "instructionsCn": "文件命名：数据按照年份压缩，压缩方式如1978.zip, 每年的数据中包含两个数据集，分别是城市范围的shp文档和城市范围土地覆盖的tif文档。shp格式的文件名称为\"xxxx.shp\"以及附属的cpg, dbf, prj, shx文档。raster格式的文件名称为\"xxxx.tif\"，其中xxxx代表行政区划名称。全球统一采用GADM数据的第二级行政区划，如该国无第二级行政区划，则直接以该国国名命名。比如Beijing.tif就代表这个文件描述北京城市地区的土地覆盖状况。Beijing.shp代表确定的空间范围。数据读取方式：该数据集中的所有shp文件可以用ArcGIS等能读取.shp文件的程序打开。Raster文件可以用ArcGIS和各种遥感处理软件打开。主流数据处理工具Python和R均可读取上述文件。",
-            "east": 180.0,
-            "west": -180.0,
-            "south": -90.0,
-            "north": 90.0,
-            "startTime": "1978-01-01 15:58:25",
-            "endTime": "1985-12-31 15:58:25",
-            "fileSize": 214944221.0,
-            "cstr": "18406.11.Terre.tpdc.300988",
-            "doi": "10.11888/Terre.tpdc.300988",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "冯泽民",
-                "nameEn": "FENG Zemin",
-                "unitEn": "",
-                "unitCn": "清华大学"
-            },
-            {
-                "nameCn": "魏洪",
-                "nameEn": "WEI Hong",
-                "unitEn": "",
-                "unitCn": "清华大学"
-            },
-            {
-                "nameCn": "杨军",
-                "nameEn": "YANG Jun",
-                "unitEn": "",
-                "unitCn": "清华大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Tracking the historical urban development by classifying Landsat MSS data with training samples migrated across time and space",
-                "referenceCn": null,
-                "referenceEn": "Feng, Z., Liu, Y., Shi, Y., & Yang, J. (2023). Tracking the historical urban development by classifying Landsat MSS data with training samples migrated across time and space. International Journal of Digital Earth, 16(1), 2487-2502. doi:10.1080/17538947.2023.2230951"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "可见光遥感",
-                "nameEn": "Visible remote sensing"
-            },
-            {
-                "nameCn": "土地覆盖",
-                "nameEn": "Land cover"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "长时间序列",
-                "nameEn": "Temporal dynamic"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1978",
-                "keywordEn": "1978",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "1985",
-                "keywordEn": "1985",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "全球城镇化时空格局",
-                "titleEn": "Global spatial-temporal pattern of urbanization "
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            }
-        ]
+  "id": "e6f2b5f7-28e8-45d7-bd8a-0721aaf29958",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Global urban area 60 meter resolution land cover data (1978-1985 )",
+      "titleCn": "全球城市范围60米分辨率土地覆盖数据（1978-1985）",
+      "description": "The data includes tif data and shp documents of urban land cover based on MSS from 1978 to 1985. The classification system includes 10 types of surface cover: cultivated land (10), forest (20), grassland (30), shrubland (40), wetland (50), water body (60), tundra (70), artificial surface (80), bare land (90), glacier and permanent snow (100) (corresponding raster data values in parentheses). Data production includes four steps: satellite image data preprocessing, sample collection, classification, and post-processing. The first three steps are performed on Google Earth Engine, while the fourth step is performed offline. The preprocessing of data includes determining the T1 level images available in MSS Collection 2 within the classification range, removing cloud pollution data and saturated pixels, and generating annual composite data using the median band values of available pixels. The preparation of training samples is mainly achieved through visual interpretation and sample migration based on Euclidean distance (ED) and spectral angular distance (SAD) methods for training samples from 85 years ago. In classification, the first step is to extract sample feature values, including remote sensing indices such as NDVI, NDWI, MBSI, and the median of band values as inputs. A random forest model is trained on every 3 degree grid, and the trained random forest model is used to classify images. The classification results are processed for quality offline. Use an independent validation sample set to test the classification accuracy. Due to severe data loss, the classification results of the Landsat Global Land Survey 1975 dataset, mainly based on the 1972-1983 and a small amount based on the 1982-1987 MSS data integration, were used to supplement the 78-83 years, and the classification results of the Landsat TM 84 and 85 years were filled in. To maintain consistency, the TM classification results were resampled to 60m. Afterwards, the results were merged into the second level based on the Global Administrative Region Dataset (GADM4.1), which corresponds to the prefecture level administrative regions in China. If there is no second level administrative division, it will be merged at the national level, and then urban boundaries will be generated based on impermeable surfaces. The classification results will be cropped using urban boundaries to generate urban land cover within the administrative region. Test the classification accuracy of the final result based on an independent validation sample set. Data format: raster data.tif. Data projection: WGS1984.",
+      "descriptionCn": "数据包含1978年-1985年基于MSS的城市土地覆盖的tif数据及其范围的shp文档。分类系统包括耕地（10）、森林（20）、草地（30）、灌木地（40）、湿地（50）、水体（60）、苔原（70）、人造地表（80）、裸地（90）、冰川及永久积雪（100）10种地表覆盖类型（括号内为对应的栅格数据值）。数据制作包括卫星图像数据预处理、样本采集、分类和后处理四个步骤。其中前三个步骤在Google Earth Engine上进行，第四个步骤在线下进行。数据的预处理包括确定分类范围内可用的MSS Collection 2中的T1级别影像，删除云污染数据和饱和像元，采用可用像元的波段值中位数生成每年合成数据。训练样本的制备主要是通过目视解译和85年前的训练样本基于欧氏距离（ED），光谱角距离（SAD）方法迁移样本迁移两部分实现。在分类中首先提取样本特征值，包括NDVI、NDWI、MBSI等遥感指数，和波段值中位数一起作为输入，在每3度网格上训练随机森林模型，使用训练好的随机森林模型对图像进行分类。分类结果在线下进行质量处理。采用独立的验证样本集对分类精度进行检验。因数据缺失严重，采用了主要基于1972-1983和少量基于1982-1987年MSS数据集成的Landsat Global Land Survey 1975数据集的分类结果对78-83年进行补充，以及Landat TM84和85年的分类结果对84和85年进行填充，为保持一致，TM分类结果重采样到60m。之后结果基于全球行政区划数据集（GADM4.1）合并到第二级，即对应中国的地级行政区。如果没有第二级行政区划，则在国家尺度上合并，然后基于不透水面生成城市边界，用城市边界对分类结果进行裁剪，生成在行政区范围内的城市土地覆盖。基于独立的验证样本集对最后结果的分类精度进行检验。数据格式：栅格数据.tif。数据投影：WGS1984. 。",
+      "instructions": "File Name: The global city wide 60 meter resolution data contains two datasets, namely the city wide shp document and the city wide land cover tif document. The file name in shp format is \"xxxx. shp\" and the accompanying cpg, dbf, prj, shx documents. The file name in raster format is \"xxxx. tif\", where xxxx represents the administrative division name. The second level administrative division using GADM data is globally unified. If a country does not have a second level administrative division, it is directly named after the country's name. For example, Beijing. tif represents this file that describes the land cover situation in urban areas of Beijing. Beijing. shp represents the determined spatial range. Data reading method: All shp files in this dataset can be opened using programs such as ArcGIS that can read. shp files. Raster files can be opened using ArcGIS and various remote sensing processing software. The mainstream data processing tools Python and R can both read the above files.",
+      "instructionsCn": "文件命名：数据按照年份压缩，压缩方式如1978.zip, 每年的数据中包含两个数据集，分别是城市范围的shp文档和城市范围土地覆盖的tif文档。shp格式的文件名称为\"xxxx.shp\"以及附属的cpg, dbf, prj, shx文档。raster格式的文件名称为\"xxxx.tif\"，其中xxxx代表行政区划名称。全球统一采用GADM数据的第二级行政区划，如该国无第二级行政区划，则直接以该国国名命名。比如Beijing.tif就代表这个文件描述北京城市地区的土地覆盖状况。Beijing.shp代表确定的空间范围。数据读取方式：该数据集中的所有shp文件可以用ArcGIS等能读取.shp文件的程序打开。Raster文件可以用ArcGIS和各种遥感处理软件打开。主流数据处理工具Python和R均可读取上述文件。",
+      "east": 180.0,
+      "west": -180.0,
+      "south": -90.0,
+      "north": 90.0,
+      "startTime": "1978-01-01 15:58:25",
+      "endTime": "1985-12-31 15:58:25",
+      "fileSize": 214944221.0,
+      "cstr": "18406.11.Terre.tpdc.300988",
+      "doi": "10.11888/Terre.tpdc.300988",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the urban land cover dataset created from MSS data between 1978 and 1985?",
-                "QuestionCn": "1978年至1985年间利用MSS数据创建的城市土地覆盖数据集的空间分辨率是多少？",
-                "AnswerEn": "60 meters",
-                "AnswerCn": "60米",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can the observed patterns in urban land cover data from 1978 to 1985, derived from satellite imagery, inform our understanding of the challenges in accurately capturing changes in land cover over time?",
-                "QuestionCn": "从1978年到1985年的城市土地覆盖数据中观察到的模式，源自卫星影像，可以帮助我们理解在准确捕捉土地覆盖变化方面面临的挑战。",
-                "AnswerEn": "The urban land cover data from 1978 to 1985 involves several steps to accurately capture changes over time, including satellite image preprocessing, sample collection, classification, and post-processing. Preprocessing involves selecting usable images, removing cloud-contaminated data, and generating annual composite data. Challenges in accurately capturing these changes include dealing with data gaps by supplementing with datasets from other years, ensuring consistency in classification by resampling to a standard resolution, and validating classification accuracy with independent samples. These processes highlight the complexity and the need for rigorous data handling and methodology to reliably interpret land cover changes over time.",
-                "AnswerCn": "1978年至1985年的城市土地覆盖数据涉及多个步骤，以准确捕捉时间变化，包括卫星图像预处理、样本收集、分类和后处理。预处理包括选择可用图像、去除云污染数据以及生成年度合成数据。准确捕捉这些变化的挑战包括通过补充其他年份的数据来处理数据缺口、通过重采样到标准分辨率确保分类的一致性，以及通过独立样本验证分类准确性。这些过程突显了数据处理和方法论的复杂性，以及可靠解读土地覆盖变化所需的严格性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the challenges in ensuring the accuracy and consistency of global urban land cover datasets from 1978 to 1985?",
-                "QuestionCn": "确保1978年至1985年全球城市土地覆盖数据集的准确性和一致性面临的挑战因素有哪些？",
-                "AnswerEn": "The challenges in ensuring accuracy and consistency in global urban land cover datasets from 1978 to 1985 arise from several factors, including data gaps due to missing data and the need to integrate data from different periods. The use of MSS Collection 2 and Landsat Global Land Survey 1975 data to supplement missing data for 1978-1983, and Landsat TM data for 1984 and 1985, pose challenges in maintaining temporal consistency. Additionally, the process involves complex steps such as satellite image data preprocessing, sample collection, classification, and post-processing. The need to resample TM classification results to 60m and merge results based on global administrative boundaries further adds to these challenges.",
-                "AnswerCn": "确保1978年至1985年全球城市土地覆盖数据集的准确性和一致性面临多个挑战，包括由于缺失数据导致的数据空白，以及需要整合不同时间段的数据。使用MSS Collection 2和Landsat Global Land Survey 1975数据来补充1978-1983年的缺失数据，以及1984年和1985年的Landsat TM数据，给保持时间一致性带来了挑战。此外，该过程涉及复杂的步骤，如卫星图像数据预处理、样本收集、分类和后处理。将TM分类结果重采样至60米并根据全球行政边界合并结果的需求进一步增加了这些挑战。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to develop a dataset with 60-meter resolution land cover data for global urban areas between 1978 and 1985, and what are the specific objectives behind the chosen data collection techniques?",
-                "QuestionCn": "为什么开发一个1978年至1985年全球城市地区的60米分辨率土地覆盖数据集很重要，以及选择的数据收集技术背后的具体目标是什么？",
-                "AnswerEn": "The development of a 60-meter resolution land cover dataset for global urban areas between 1978 and 1985 aims to provide high-quality historical land cover information, which is crucial for understanding urban expansion and land use changes over time. The specific objectives behind the chosen data collection techniques, including the use of MSS satellite imagery and the integration of classification systems, are to ensure a consistent and accurate representation of various land cover types. These techniques involve preprocessing satellite images, collecting samples, and classifying land cover using indices like NDVI and NDWI with a random forest model. The goal is to create a reliable dataset that can be used for urban planning, environmental monitoring, and policy-making by offering insights into historical land cover dynamics.",
-                "AnswerCn": "开发一个60米分辨率的全球城市地区土地覆盖数据集，涵盖1978年至1985年，旨在提供高质量的历史土地覆盖信息，这对于理解城市扩张和土地利用变化至关重要。选择的数据收集技术的具体目标，包括使用MSS卫星影像和分类系统的整合，是为了确保对各种土地覆盖类型的一致和准确的表示。这些技术涉及卫星图像的预处理、样本收集以及使用随机森林模型通过NDVI和NDWI等指数进行土地覆盖分类。目标是创建一个可靠的数据集，可用于城市规划、环境监测和政策制定，提供对历史土地覆盖动态的洞察。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in preparing and classifying satellite imagery data for urban land cover analysis with a resolution of 60 meters from 1978 to 1985?",
-                "QuestionCn": "准备和分类1978年至1985年分辨率为60米的卫星影像数据用于城市土地覆盖分析的程序步骤包括以下几个方面：",
-                "AnswerEn": "The procedural steps for preparing and classifying satellite imagery data involve four key stages: satellite image data preprocessing, sample collection, classification, and post-processing. Preprocessing includes selecting available MSS Collection 2 T1 level images within the classification range, removing cloud-contaminated data and saturated pixels, and generating annual composite data using the median of available pixel band values. Sample preparation is achieved through visual interpretation and transferring samples from 85-year-old training samples using Euclidean Distance (ED) and Spectral Angle Distance (SAD) methods. Classification entails extracting sample feature values, such as NDVI, NDWI, and MBSI remote sensing indices, combined with median band values, to train a Random Forest model on a 3-degree grid. This model is then used to classify the images. The classification results undergo offline quality processing, and classification accuracy is assessed using an independent validation sample set. Due to significant data gaps, classification results from MSS data primarily based on 1972-1983 and some from 1982-1987 are supplemented by Landsat Global Land Survey 1975 data for 78-83, and Landsat TM84 and 85 results for 84 and 85 are resampled to 60m for consistency. Finally, results are merged at the second administrative level using the Global Administrative Areas dataset (GADM4.1), or at the national scale if no second-level division exists. Urban boundaries are generated based on impervious surfaces and used to clip classification results, producing urban land cover within administrative boundaries. Classification accuracy of the final results is validated using an independent validation sample set.",
-                "AnswerCn": "准备和分类卫星影像数据的程序步骤包括四个关键阶段：卫星影像数据预处理、样本收集、分类和后处理。预处理包括选择分类范围内可用的MSS Collection 2 T1级影像，去除云污染数据和饱和像素，并使用可用像素波段值的中位数生成年度合成数据。样本准备通过视觉解译和使用欧几里得距离（ED）和光谱角距离（SAD）方法从85年前的训练样本中转移样本来实现。分类涉及提取样本特征值，如NDVI、NDWI和MBSI遥感指数，结合中位数波段值，以在3度网格上训练随机森林模型。然后使用该模型对影像进行分类。分类结果经过离线质量处理，分类准确性使用独立验证样本集进行评估。由于数据缺口显著，MSS数据的分类结果主要基于1972-1983年和1982-1987年的数据，并通过1975年的Landsat全球土地调查数据补充78-83年的数据，Landsat TM84和85的结果在84和85年被重采样至60米以保持一致性。最后，结果在第二行政级别使用全球行政区域数据集（GADM4.1）合并，或者在没有第二级划分的情况下按国家级别合并。城市边界基于不透水表面生成，并用于裁剪分类结果，产生行政边界内的城市土地覆盖。最终结果的分类准确性通过独立验证样本集进行验证。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "冯泽民",
+        "nameEn": "FENG Zemin",
+        "unitEn": "",
+        "unitCn": "清华大学"
+      },
+      {
+        "nameCn": "魏洪",
+        "nameEn": "WEI Hong",
+        "unitEn": "",
+        "unitCn": "清华大学"
+      },
+      {
+        "nameCn": "杨军",
+        "nameEn": "YANG Jun",
+        "unitEn": "",
+        "unitCn": "清华大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Tracking the historical urban development by classifying Landsat MSS data with training samples migrated across time and space",
+        "referenceCn": null,
+        "referenceEn": "Feng, Z., Liu, Y., Shi, Y., & Yang, J. (2023). Tracking the historical urban development by classifying Landsat MSS data with training samples migrated across time and space. International Journal of Digital Earth, 16(1), 2487-2502. doi:10.1080/17538947.2023.2230951"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "可见光遥感",
+        "nameEn": "Visible remote sensing"
+      },
+      {
+        "nameCn": "土地覆盖",
+        "nameEn": "Land cover"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "长时间序列",
+        "nameEn": "Temporal dynamic"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1978",
+        "keywordEn": "1978",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "1985",
+        "keywordEn": "1985",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "全球城镇化时空格局",
+        "titleEn": "Global spatial-temporal pattern of urbanization "
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the urban land cover dataset created from MSS data between 1978 and 1985?",
+        "QuestionCn": "1978年至1985年间利用MSS数据创建的城市土地覆盖数据集的空间分辨率是多少？",
+        "AnswerEn": "60 meters",
+        "AnswerCn": "60米",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can the observed patterns in urban land cover data from 1978 to 1985, derived from satellite imagery, inform our understanding of the challenges in accurately capturing changes in land cover over time?",
+        "QuestionCn": "从1978年到1985年通过卫星影像获得的城市土地覆盖数据中观察到的模式如何帮助我们理解在准确捕捉土地覆盖变化方面的挑战？",
+        "AnswerEn": "The urban land cover data from 1978 to 1985 involves several steps to accurately capture changes over time, including satellite image preprocessing, sample collection, classification, and post-processing. Preprocessing involves selecting usable images, removing cloud-contaminated data, and generating annual composite data. Challenges in accurately capturing these changes include dealing with data gaps by supplementing with datasets from other years, ensuring consistency in classification by resampling to a standard resolution, and validating classification accuracy with independent samples. These processes highlight the complexity and the need for rigorous data handling and methodology to reliably interpret land cover changes over time.",
+        "AnswerCn": "1978年至1985年的城市土地覆盖数据涉及多个步骤，以准确捕捉时间变化，包括卫星图像预处理、样本收集、分类和后处理。预处理包括选择可用图像、去除云污染数据以及生成年度合成数据。准确捕捉这些变化的挑战包括通过补充其他年份的数据来处理数据缺口、通过重采样到标准分辨率确保分类的一致性，以及通过独立样本验证分类准确性。这些过程突显了数据处理和方法论的复杂性，以及可靠解读土地覆盖变化所需的严格性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the challenges in ensuring the accuracy and consistency of global urban land cover datasets from 1978 to 1985?",
+        "QuestionCn": "确保1978年至1985年全球城市土地覆盖数据集的准确性和一致性面临的挑战因素有哪些？",
+        "AnswerEn": "The challenges in ensuring accuracy and consistency in global urban land cover datasets from 1978 to 1985 arise from several factors, including data gaps due to missing data and the need to integrate data from different periods. The use of MSS Collection 2 and Landsat Global Land Survey 1975 data to supplement missing data for 1978-1983, and Landsat TM data for 1984 and 1985, pose challenges in maintaining temporal consistency. Additionally, the process involves complex steps such as satellite image data preprocessing, sample collection, classification, and post-processing. The need to resample TM classification results to 60m and merge results based on global administrative boundaries further adds to these challenges.",
+        "AnswerCn": "确保1978年至1985年全球城市土地覆盖数据集的准确性和一致性面临多个挑战，包括由于缺失数据导致的数据空白，以及需要整合不同时间段的数据。使用MSS Collection 2和Landsat Global Land Survey 1975数据来补充1978-1983年的缺失数据，以及1984年和1985年的Landsat TM数据，给保持时间一致性带来了挑战。此外，该过程涉及复杂的步骤，如卫星图像数据预处理、样本收集、分类和后处理。将TM分类结果重采样至60米并根据全球行政边界合并结果的需求进一步增加了这些挑战。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to develop a dataset with 60-meter resolution land cover data for global urban areas between 1978 and 1985, and what are the specific objectives behind the chosen data collection techniques?",
+        "QuestionCn": "为什么开发一个1978年至1985年全球城市地区的60米分辨率土地覆盖数据集很重要，以及选择的数据收集技术背后的具体目标是什么？",
+        "AnswerEn": "The development of a 60-meter resolution land cover dataset for global urban areas between 1978 and 1985 aims to provide high-quality historical land cover information, which is crucial for understanding urban expansion and land use changes over time. The specific objectives behind the chosen data collection techniques, including the use of MSS satellite imagery and the integration of classification systems, are to ensure a consistent and accurate representation of various land cover types. These techniques involve preprocessing satellite images, collecting samples, and classifying land cover using indices like NDVI and NDWI with a random forest model. The goal is to create a reliable dataset that can be used for urban planning, environmental monitoring, and policy-making by offering insights into historical land cover dynamics.",
+        "AnswerCn": "开发一个60米分辨率的全球城市地区土地覆盖数据集，涵盖1978年至1985年，旨在提供高质量的历史土地覆盖信息，这对于理解城市扩张和土地利用变化至关重要。选择的数据收集技术的具体目标，包括使用MSS卫星影像和分类系统的整合，是为了确保对各种土地覆盖类型的一致和准确的表示。这些技术涉及卫星图像的预处理、样本收集以及使用随机森林模型通过NDVI和NDWI等指数进行土地覆盖分类。目标是创建一个可靠的数据集，可用于城市规划、环境监测和政策制定，提供对历史土地覆盖动态的洞察。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in preparing and classifying satellite imagery data for urban land cover analysis with a resolution of 60 meters from 1978 to 1985?",
+        "QuestionCn": "准备和分类1978年至1985年分辨率为60米的卫星影像数据以进行城市土地覆盖分析涉及哪些程序步骤？",
+        "AnswerEn": "The procedural steps for preparing and classifying satellite imagery data involve four key stages: satellite image data preprocessing, sample collection, classification, and post-processing. Preprocessing includes selecting available MSS Collection 2 T1 level images within the classification range, removing cloud-contaminated data and saturated pixels, and generating annual composite data using the median of available pixel band values. Sample preparation is achieved through visual interpretation and transferring samples from 85-year-old training samples using Euclidean Distance (ED) and Spectral Angle Distance (SAD) methods. Classification entails extracting sample feature values, such as NDVI, NDWI, and MBSI remote sensing indices, combined with median band values, to train a Random Forest model on a 3-degree grid. This model is then used to classify the images. The classification results undergo offline quality processing, and classification accuracy is assessed using an independent validation sample set. Due to significant data gaps, classification results from MSS data primarily based on 1972-1983 and some from 1982-1987 are supplemented by Landsat Global Land Survey 1975 data for 78-83, and Landsat TM84 and 85 results for 84 and 85 are resampled to 60m for consistency. Finally, results are merged at the second administrative level using the Global Administrative Areas dataset (GADM4.1), or at the national scale if no second-level division exists. Urban boundaries are generated based on impervious surfaces and used to clip classification results, producing urban land cover within administrative boundaries. Classification accuracy of the final results is validated using an independent validation sample set.",
+        "AnswerCn": "准备和分类卫星影像数据的程序步骤包括四个关键阶段：卫星影像数据预处理、样本收集、分类和后处理。预处理包括选择分类范围内可用的MSS Collection 2 T1级影像，去除云污染数据和饱和像素，并使用可用像素波段值的中位数生成年度合成数据。样本准备通过视觉解译和使用欧几里得距离（ED）和光谱角距离（SAD）方法从85年前的训练样本中转移样本来实现。分类涉及提取样本特征值，如NDVI、NDWI和MBSI遥感指数，结合中位数波段值，以在3度网格上训练随机森林模型。然后使用该模型对影像进行分类。分类结果经过离线质量处理，分类准确性使用独立验证样本集进行评估。由于数据缺口显著，MSS数据的分类结果主要基于1972-1983年和1982-1987年的数据，并通过1975年的Landsat全球土地调查数据补充78-83年的数据，Landsat TM84和85的结果在84和85年被重采样至60米以保持一致性。最后，结果在第二行政级别使用全球行政区域数据集（GADM4.1）合并，或者在没有第二级划分的情况下按国家级别合并。城市边界基于不透水表面生成，并用于裁剪分类结果，产生行政边界内的城市土地覆盖。最终结果的分类准确性通过独立验证样本集进行验证。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

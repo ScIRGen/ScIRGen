@@ -1,592 +1,592 @@
 {
-    "id": "c280d523-3e82-41a9-a6e7-d36df3292960",
-    "relatedPaper": 2,
-    "context": {
-        "metadata": {
-            "titleEn": " Slope adaptive waveform metrics of the global ecosystem dynamics investigation system (GEDI-SAWA)",
-            "titleCn": "全球生态系统动态调查系统的坡度自适应波形指数产品（GEDI-SAWA，2019-2023）",
-            "description": "The dataset is the slope adaptive waveform index product of the Global Ecosystem Dynamics Investigation (GEDI), abbreviated as GEDI-SAWA, aimed at reducing the impact of terrain slope on the evaluation of forest vertical structure and aboveground carbon storage using a 25 m GEDI large spot laser waveform. The dataset spans from April 18, 2019 to March 16, 2023, with a total storage capacity of 51.0 TB and a total of 73473 tracks of data. The data is organized based on the date of acquisition (in days). The file is stored in hdf5 format and named in the same way as the official products released by GEDI. For example, the GEDI-SAWA file with the file name \"GEDI02-C1_sawa_2019108002012-O01959_1-T03909_202-003_1-V002.h5\" corresponds to the GEDI L1B file with the file name \"GEDI01-B_2019108002012-O01959_1-T03909_2-003_1-V002.h5\". The field name \"RHT\" in GEDI-SAWA refers to the slope adaptive waveform index at different energy percentiles. Each spot records 24 SAWA indices at different energy heights, corresponding to the 5th, 10th, 15th,..., 85th, 90th, 95th, 96th, 97th, 98th, 99th, and 100th energy percentiles. It is worth noting that the RHT field in the SAWA file is in centimeters (cm) and stored in integer format. To convert to a universal unit of meters (m), it needs to be multiplied by a conversion coefficient (0.01).",
-            "descriptionCn": "数据集是全球生态系统动态调查系统（GEDI）的坡度自适应波形指数产品，简称为GEDI-SAWA，旨在降低地形坡度对25 m GEDI大光斑激光波形评估森林垂直结构和地上碳储量的影响。数据集时间跨度为2019/04/18~2023/03/16，数据存储总量为51.0 TB，共计73473轨数据，数据依据获取日期（以天为单位）进行组织。文件采用HDF5格式存储，命名方式和GEDI官方发布的产品一致，如文件名称为“GEDI02_C1_sawa_2019108002012_O01959_01_T03909_02_003_01_V002.h5”的GEDI-SAWA文件，对应的GEDI L1B文件名称为“GEDI01_B_2019108002012_O01959_01_T03909_02_003_01_V002.h5”。GEDI-SAWA中字段名为”RHT“即为不同能量百分位下的坡度自适应波形指数，每个光斑记录了24个不同能量高度的SAWA指数，分别对应5th，10th，15th，……，85th，90th，95th，96th，97th，98th，99th和100th能量百分位。SAWA文件中RHT字段单位是厘米（cm），并采用整型格式存储，转为通用单位米（m)需要乘以转换系数（0.01）。",
-            "instructions": "File Name: GEDI-SAWA is stored in HDF5 format, taking the file \"GEDI02-C1-sawa_2019108002012-O01959_1-T03909_22-003_1V002. h5\" as an example, where GEDI02-C1-sawa is the SAWA data product tag name, 2019 108002012 is the data acquisition time, which is 00:20:12 on the 108th day of 2019, O01959_1-T03909 is the satellite trajectory code, and 02:03_1-V002 is the data version tag. The naming conventions for L1B and L2A released by the GEDI-SAWA and GEDI teams are consistent. For example, the L1B and L2A files corresponding to the above files are \"GEDI01-B_2019108002012-O01959_1-T03909_22-003:001_V002. h5\" and \"GEDI02-A_2019108002012-O01959_1-T03909_22-003:001_V002. h5\" respectively“",
-            "instructionsCn": "文件命名：GEDI-SAWA以HDF5格式存储，以文件“GEDI02_C1_sawa_2019108002012_O01959_01_T03909_02_003_01_V002.h5”为例,其中GEDI02_C1_sawa为SAWA数据产品标记名，2019108002012是数据获取时刻，即2019年第108天00时20分12秒，O01959_01_T03909是卫星轨迹编码，02_003_01_V002是数据版本标记。 GEDI-SAWA和GEDI团队发布的L1B和L2A命名方式是一致的，如上述文件对应的L1B和L2A文件分别为“GEDI01_B_2019108002012_O01959_01_T03909_02_003_01_V002.h5”和”GEDI02_A_2019108002012_O01959_01_T03909_02_003_01_V002.h5“\n数据读取方式：GEDI-SAWA HDF5文件可通过HDFView软件或Matlab等编程软件打开，文件包含多个字段，其中最为核心的存储在sawa_a*文件夹下的RHT字段，即为坡度自适应波形指数。",
-            "east": 180.0,
-            "west": -180.0,
-            "south": 51.6,
-            "north": 51.6,
-            "startTime": "2023-03-16 21:43:55",
-            "endTime": "2023-03-16 21:43:55",
-            "fileSize": 56107732681856.0,
-            "cstr": "18406.11.RemoteSen.tpdc.301241",
-            "doi": "10.11888/RemoteSen.tpdc.301241",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "倪文俭",
-                "nameEn": "NI Wenjian",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            },
-            {
-                "nameCn": "俞天宇",
-                "nameEn": "YU Tianyu",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Slope-adaptive waveform metrics of large footprint lidar for estimation of forest aboveground biomass",
-                "referenceCn": null,
-                "referenceEn": "Wang, Y., Ni, W.J.*, Sun, G.Q., Chi, H., Zhang, Z.Y., Guo, Z.F. (2019). Slope-adaptive waveform metrics of large footprint lidar for estimation of forest aboveground biomass. Remote Sensing of Environment, 224, 386-400"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Assessment of Slope-Adaptive Metrics of GEDI Waveforms for Estimations of Forest Aboveground Biomass over Mountainous Areas",
-                "referenceCn": null,
-                "referenceEn": "Ni, W.J., Zhang, Z.Y., & Sun, G.Q. (2021). Assessment of Slope-Adaptive Metrics of GEDI Waveforms for Estimations of Forest Aboveground Biomass over Mountainous Areas. Journal of Remote Sensing, Volume, Article ID 9805364"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "地上生物量",
-                "nameEn": "AGB"
-            },
-            {
-                "nameCn": "星载激光雷达",
-                "nameEn": "Spaceborne lidar system"
-            },
-            {
-                "nameCn": "森林",
-                "nameEn": "Forest"
-            },
-            {
-                "nameCn": "植被",
-                "nameEn": "Vegetation"
-            },
-            {
-                "nameCn": "碳循环",
-                "nameEn": "Carbon cycle"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地生态系统",
-                "nameEn": "Terrestrial ecosystem"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2019.04.18~2023.03.16",
-                "keywordEn": "2019.04.18~2023.03.16",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "森林植被碳储量遥感",
-                "titleEn": "Forest carbon accounting based on remote sensing dataset"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "c280d523-3e82-41a9-a6e7-d36df3292960",
+  "relatedPaper": 2,
+  "context": {
+    "metadata": {
+      "titleEn": " Slope adaptive waveform metrics of the global ecosystem dynamics investigation system (GEDI-SAWA)",
+      "titleCn": "全球生态系统动态调查系统的坡度自适应波形指数产品（GEDI-SAWA，2019-2023）",
+      "description": "The dataset is the slope adaptive waveform index product of the Global Ecosystem Dynamics Investigation (GEDI), abbreviated as GEDI-SAWA, aimed at reducing the impact of terrain slope on the evaluation of forest vertical structure and aboveground carbon storage using a 25 m GEDI large spot laser waveform. The dataset spans from April 18, 2019 to March 16, 2023, with a total storage capacity of 51.0 TB and a total of 73473 tracks of data. The data is organized based on the date of acquisition (in days). The file is stored in hdf5 format and named in the same way as the official products released by GEDI. For example, the GEDI-SAWA file with the file name \"GEDI02-C1_sawa_2019108002012-O01959_1-T03909_202-003_1-V002.h5\" corresponds to the GEDI L1B file with the file name \"GEDI01-B_2019108002012-O01959_1-T03909_2-003_1-V002.h5\". The field name \"RHT\" in GEDI-SAWA refers to the slope adaptive waveform index at different energy percentiles. Each spot records 24 SAWA indices at different energy heights, corresponding to the 5th, 10th, 15th,..., 85th, 90th, 95th, 96th, 97th, 98th, 99th, and 100th energy percentiles. It is worth noting that the RHT field in the SAWA file is in centimeters (cm) and stored in integer format. To convert to a universal unit of meters (m), it needs to be multiplied by a conversion coefficient (0.01).",
+      "descriptionCn": "数据集是全球生态系统动态调查系统（GEDI）的坡度自适应波形指数产品，简称为GEDI-SAWA，旨在降低地形坡度对25 m GEDI大光斑激光波形评估森林垂直结构和地上碳储量的影响。数据集时间跨度为2019/04/18~2023/03/16，数据存储总量为51.0 TB，共计73473轨数据，数据依据获取日期（以天为单位）进行组织。文件采用HDF5格式存储，命名方式和GEDI官方发布的产品一致，如文件名称为“GEDI02_C1_sawa_2019108002012_O01959_01_T03909_02_003_01_V002.h5”的GEDI-SAWA文件，对应的GEDI L1B文件名称为“GEDI01_B_2019108002012_O01959_01_T03909_02_003_01_V002.h5”。GEDI-SAWA中字段名为”RHT“即为不同能量百分位下的坡度自适应波形指数，每个光斑记录了24个不同能量高度的SAWA指数，分别对应5th，10th，15th，……，85th，90th，95th，96th，97th，98th，99th和100th能量百分位。SAWA文件中RHT字段单位是厘米（cm），并采用整型格式存储，转为通用单位米（m)需要乘以转换系数（0.01）。",
+      "instructions": "File Name: GEDI-SAWA is stored in HDF5 format, taking the file \"GEDI02-C1-sawa_2019108002012-O01959_1-T03909_22-003_1V002. h5\" as an example, where GEDI02-C1-sawa is the SAWA data product tag name, 2019 108002012 is the data acquisition time, which is 00:20:12 on the 108th day of 2019, O01959_1-T03909 is the satellite trajectory code, and 02:03_1-V002 is the data version tag. The naming conventions for L1B and L2A released by the GEDI-SAWA and GEDI teams are consistent. For example, the L1B and L2A files corresponding to the above files are \"GEDI01-B_2019108002012-O01959_1-T03909_22-003:001_V002. h5\" and \"GEDI02-A_2019108002012-O01959_1-T03909_22-003:001_V002. h5\" respectively“",
+      "instructionsCn": "文件命名：GEDI-SAWA以HDF5格式存储，以文件“GEDI02_C1_sawa_2019108002012_O01959_01_T03909_02_003_01_V002.h5”为例,其中GEDI02_C1_sawa为SAWA数据产品标记名，2019108002012是数据获取时刻，即2019年第108天00时20分12秒，O01959_01_T03909是卫星轨迹编码，02_003_01_V002是数据版本标记。 GEDI-SAWA和GEDI团队发布的L1B和L2A命名方式是一致的，如上述文件对应的L1B和L2A文件分别为“GEDI01_B_2019108002012_O01959_01_T03909_02_003_01_V002.h5”和”GEDI02_A_2019108002012_O01959_01_T03909_02_003_01_V002.h5“\n数据读取方式：GEDI-SAWA HDF5文件可通过HDFView软件或Matlab等编程软件打开，文件包含多个字段，其中最为核心的存储在sawa_a*文件夹下的RHT字段，即为坡度自适应波形指数。",
+      "east": 180.0,
+      "west": -180.0,
+      "south": 51.6,
+      "north": 51.6,
+      "startTime": "2023-03-16 21:43:55",
+      "endTime": "2023-03-16 21:43:55",
+      "fileSize": 56107732681856.0,
+      "cstr": "18406.11.RemoteSen.tpdc.301241",
+      "doi": "10.11888/RemoteSen.tpdc.301241",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Waveform broadening effects of large-footprint lidar caused by terrain slopes are still a great challenge limiting the estimation accuracy of forest aboveground biomass (AGB) over mountainous areas. The role of remote sensing in the accounting of global carbon budgets has been widely recognized, and several regional remotely sensed estimations/maps have been released. The limited capability of either the multispectral reflectance or the radar backscattering coefficients on the quantifying of carbon storage has been widely demonstrated due to the lack of physical basis and is always restricted by the sensitivity saturations and terrain effects. The forest carbon storage in vegetation is directly determined by forest spatial structures depicted by tree sizes, stem densities, and forest types. Spaceborne large-footprint lidar plays an important role in the existing global maps as well as the near-future remote sensing schemes of forest carbon storages. However, the biggest challenge limiting the estimation accuracy of forest AGB over mountainous areas is the waveform broadening effect caused by terrain slopes, i.e., the canopy and ground returns tend to be stretched and mixed up over steep topographies."
-            ],
-            "research objective": [
-                "This study made full validation of slope-adaptive metrics using data acquired by the Global Ecosystem Dynamics Investigation (GEDI) mission, meanwhile exploring GEDI waveforms on estimations of forest AGB. In order to make full validation of slope-adaptive metrics using data acquired by the GEDI mission, meanwhile exploring GEDI waveforms on estimations of forest AGB, this study reports the assessment of slope-adaptive metrics of waveforms using GEDI data for estimations of forest aboveground biomass over mountainous areas."
-            ],
-            "challenges": [
-                "However, its validation was limited by the unavailability of enough reference data. It is difficult to collect enough reference data by field measurements, especially over steep terrain conditions."
-            ],
-            "methods": [],
-            "dataset": [
-                "The reference forest AGB was calculated using the normalized points and the prediction model developed by Nelson et al., of which R2 is 0.71, which is acceptable to serve as reference data to make comparisons of the performance of different waveform metrics, although it may not be as accurate as those specifically developed based on the field measurements of forest plots if we have them. The global dataset acquired by GEDI after April 18, 2019, has been released since February 07, 2020. Two GEDI datasets came across the study area as shown by yellow lines in Figure 1(a). The nominal footprint size is about 25 m in diameter."
-            ],
-            "findings": [
-                "The RHT and WP metrics gave the best and the worst estimation accuracy, respectively. RHT further improved R2 to 0.77 and decreased RMSE to 13.0 Mg/ha using terrain slopes extracted from SRTM DEM with a resolution of 1 arc second. R2 of estimation models based on RHT was finally improved to 0.8 with RMSE decreased to 11.7 Mg/ha using exact terrain slopes from ALS data. This study demonstrated the great potential of slope-adaptive metrics of GEDI waveforms on estimations of forest aboveground biomass over mountainous areas."
-            ],
-            "backgroundCn": [
-                "大脚印激光雷达的波形展宽效应由于地形坡度的影响，仍然是限制山区森林地上生物量（AGB）估计精度的重大挑战。遥感在全球碳预算核算中的作用已得到广泛认可，并发布了若干区域遥感估计/地图。由于缺乏物理基础，且常常受到灵敏度饱和和地形效应的限制，光谱反射或雷达后向散射系数在量化碳储存方面的能力有限。植被中的森林碳储存直接由树木大小、树干密度和森林类型等森林空间结构决定。空间大脚印激光雷达在现有全球地图以及未来森林碳储存遥感方案中发挥着重要作用。然而，限制山区森林AGB估计精度的最大挑战是由地形坡度引起的波形展宽效应，即在陡峭地形上，树冠和地面回波往往会被拉伸并混合在一起。"
-            ],
-            "research objectiveCn": [
-                "本研究利用全球生态系统动态调查（GEDI）任务获取的数据，对坡度自适应指标进行了全面验证，同时探讨了GEDI波形在森林地上生物量（AGB）估算中的应用。为了全面验证坡度自适应指标，本研究报告了使用GEDI数据对波形的坡度自适应指标进行评估，以估算山区的森林地上生物量。"
-            ],
-            "challengesCn": [
-                "然而，其验证受到参考数据不足的限制。在陡峭地形条件下，通过实地测量收集足够的参考数据是困难的。"
-            ],
-            "methodsCn": [],
-            "datasetCn": [
-                "参考森林AGB是使用归一化点和Nelson等人开发的预测模型计算得出的，该模型的R²为0.71，这在作为参考数据进行不同波形指标性能比较时是可以接受的，尽管如果有基于森林样地的实地测量专门开发的模型，可能会更准确。自2019年4月18日以来获取的全球数据集已于2020年2月7日发布。两个GEDI数据集经过研究区域，如图1(a)中的黄色线所示。名义足迹大小约为25米直径。"
-            ],
-            "findingsCn": [
-                "RHT和WP指标分别给出了最佳和最差的估计准确性。使用分辨率为1弧秒的SRTM DEM提取的地形坡度，RHT进一步将R²提高到0.77，并将RMSE降低到13.0 Mg/ha。基于RHT的估计模型的R²最终提高到0.8，RMSE降低到11.7 Mg/ha，使用的是来自ALS数据的精确地形坡度。本研究展示了GEDI波形的坡度自适应指标在山区森林地上生物量估计中的巨大潜力。"
-            ]
-        },
-        {
-            "background": [
-                "The effect of terrain slope on large footprint lidar waveforms is still a great challenge to the accurate mapping of forest aboveground biomass (AGB), although previous studies have made significant progress for slopes lower than 15°. Forests are important components of terrestrial ecosystems, containing approximately 80% of aboveground carbon (Dixon et al., 1994). Accurate mapping of forest aboveground biomass (AGB) is essential for research on the global carbon cycle (Brown et al., 1996).",
-                "Methods for measuring forest AGB, such as field measurements, are time-consuming and labor-intensive. Remote sensing methods are feasible for measuring forest AGB at regional and global scales. Multispectral remote sensing and radio detection and ranging (radar) techniques are widely used to estimate AGB. However, signal saturation problems occur when AGB reaches a certain level. The sensitivity of multispectral reflectance or radar backscattering coefficients to forest AGB is combined with uncertainties caused by the diversity of the forest's spatial structure. Lidar can overcome the saturation problem and improve the accuracy of AGB estimation because of its direct detection of the vertical forest structure. The Geoscience Laser Altimeter System (GLAS) was designed to acquire large footprint lidar waveforms with global coverage. Many studies have demonstrated that GLAS data can be used to measure forest canopy height and AGB. However, most previous studies focused on relatively flat terrain conditions. The terrain effect is a major challenge for measuring forest heights and AGB. Many studies have been carried out to reduce the impact of terrain on the retrieval of forest structure using large footprint lidar waveforms.",
-                "The GLAS data used in this study are the GLA01 and GLA14 products acquired from October 2003 to November 2006 and released by the National Snow and Ice Data Center (NSIDC). The study area is located in the Xishuangbanna region (21°08′–22°36′ N, 99°56′–101°50′ E), which is in southern Yunnan Province, China. Most of the region is mountainous. The main forest types include tropical seasonal rainforest and tropical mountain rainforest. The annual precipitation ranges from 1100mm to 2400mm. The GLAS stopped operating in 2009, but it is difficult to obtain better field measurements over the GLAS footprints. The ZELIG model has been well parameterized in the Howland forest in Maine, USA. The outputs of the ZELIG model were recorded at a 5-year interval from 5 years to 200 years for each succession sequence (i.e., 40 forest ages). The terrain slopes have two effects on the waveforms of forest stands. First, the width of the ground return is broadened, and the peak of the ground return decreases and is mixed with that of the forest canopy due to the stretching effect of the terrain slope. The second effect is that the relative vertical positions of trees also change as the slope increases.",
-                "The effect of terrain slope on lidar waveforms is still a challenge to the accurate estimation of forest AGB, especially over steep terrain."
-            ],
-            "research objective": [
-                "A new method was proposed to calculate slope-adaptive waveform metrics for forest AGB mapping over mountainous areas.",
-                "The proposed method is referred to as PIPE because the bare ground waveform is modeled for a Plane Inclined, and the waveforms are aligned by the Point of signal Ending. The results using both simulated waveforms and GLAS data showed that the canopy height metrics extracted by the PIPE method gave the best estimation of forest AGB of the three methods.",
-                "This study proposed the PIPE method to extract canopy height metrics for the estimation of forest AGB considering terrain.",
-                "This study proposed the PIPE method for the estimation of forest AGB using data of lidar waveforms while considering the terrain."
-            ],
-            "challenges": [
-                "The terrain effect is a major challenge for measuring forest heights and AGB. Previous studies have shown that the effects of terrain slope on the estimation of forest AGB have not been thoroughly addressed, although existing research has made significant progress in the use of GLAS waveforms on slopes lower than 15°. The ground peak gradually decreases and finally disappears as the terrain slope increases because the ground returns are stretched and mixed with vegetation returns. It is difficult to accurately extract canopy height metrics due to the difficulty in identifying the ground peak positions.",
-                "The GLAS stopped operating in 2009, but it is difficult to obtain better field measurements over the GLAS footprints. The PIPE method is only applicable to lidar waveforms acquired over areas where an elevation dataset is available. Although the terrain slopes from SRTM were used in the examination of the proposed method with the GLAS data, it must be emphasized that the proposed method is independent of SRTM data.",
-                "The effect of terrain slope on lidar waveforms is still a challenge to the accurate estimation of forest AGB, especially over steep terrain."
-            ],
-            "methods": [
-                "First, a theoretical model was proposed to calculate lidar waveforms of bare ground with known terrain slopes. The forest waveform and its corresponding calculated bare ground waveform were then aligned by the signal ending points. Their energy quartiles were extracted separately by taking the signal ending points as references. The height differences between the corresponding energy quartiles were defined as slope-adaptive waveform metrics, which were then used as independent variables for the estimation of the forest AGB. The proposed method was examined with both simulated lidar waveforms of forest stands and real waveforms acquired by the Geoscience Laser Altimeter System (GLAS).",
-                "A simulated waveform of bare ground with a known slope was used to extract newly defined metrics from the lidar waveform. The newly defined canopy height metrics were used as independent variables for the estimation of forest AGB using both simulated lidar waveforms of forest stands and GLAS data."
-            ],
-            "dataset": [
-                "Two typical footprint sizes (i.e., 25m and 70m in diameter) and 21 terrain slopes (i.e., from 0° to 40° at an interval of 2°) were used in the simulation of the lidar waveforms. The terrain slopes of the GLAS waveforms were between 5.54° and 34.08°.",
-                "The GLAS data used in this study are the GLA01 and GLA14 products acquired from October 2003 to November 2006 and released by the National Snow and Ice Data Center (NSIDC). The study area is located in the Xishuangbanna region (21°08′–22°36′ N, 99°56′–101°50′ E), which is in southern Yunnan Province, China. Field inventories were carried out in October 2010 over 26 GLAS footprints located within the Menglun Nature Reserve and the Xishuangbanna Tropical Botanical Garden of the Chinese Academy of Sciences (XTBG, CAS). The GLAS data used in this study are the product of version 31, which was released in May 2010."
-            ],
-            "findings": [
-                "The results showed that the terrain stretching on the forest waveform could be compensated for by the bare ground waveform. Compared with the Gaussian decomposition and waveform parameter methods, the proposed method gave the best estimation of the forest AGB with R2=0.92 and RMSE=15.95Mg/ha using simulated waveforms with a footprint size of 70m and R2=0.84 and RMSE=34.99Mg/ha using the GLAS waveforms. The results demonstrated that the proposed method had great potential for the estimation of forest AGB using lidar waveforms over mountainous areas.",
-                "The results using both simulated waveforms and GLAS data showed that the canopy height metrics extracted by the PIPE method gave the best estimation of forest AGB of the three methods.",
-                "The proposed PIPE method is not sensitive to the slope. For slopes of 0°–40°, the proposed PIPE method gives the best estimation of forest AGB of all three methods with R2=0.90 and RMSE=18.00Mg/ha. Under these conditions, the performance of the proposed PIPE method is outstanding. Over the full range of slopes of 0°–40°, the proposed PIPE method gives the best estimation of forest AGB, with R2=0.92 and RMSE=15.95Mg/ha. Similar to the results of the simulated waveforms, the PIPE method gives the best estimation of forest AGB with R2=0.84 and RMSE=34.99Mg/ha.",
-                "The performance of the proposed PIPE method was outstanding. The influence of terrain slope on the estimation of forest AGB using the canopy height metrics extracted by the PIPE method was weak or nearly negligible. Over the full range of terrain slopes of 0°–40°, the PIPE method gave the best estimation of forest AGB, with R2=0.92 and RMSE=15.95Mg/ha for a footprint size of 70m. The estimations of forest AGB using GLAS data and field measurements confirm the conclusions from the simulated lidar waveforms. The PIPE method gave the best estimation of forest AGB, with R2=0.84 and RMSE=34.99Mg/ha. The results of this study showed that the proposed method has great potential for the estimation of forest AGB using lidar waveforms while considering terrain."
-            ],
-            "backgroundCn": [
-                "地形坡度对大足迹激光雷达波形的影响仍然是准确测绘森林地上生物量（AGB）的重大挑战，尽管之前的研究在坡度低于15°的情况下取得了显著进展。森林是陆地生态系统的重要组成部分，约含有80%的地上碳（Dixon et al., 1994）。准确测绘森林地上生物量（AGB）对于全球碳循环研究至关重要（Brown et al., 1996）。",
-                "测量森林生物量（AGB）的方法，如实地测量，耗时且劳动密集。遥感方法在区域和全球尺度上测量森林AGB是可行的。多光谱遥感和雷达探测技术被广泛用于估计AGB。然而，当AGB达到一定水平时，会出现信号饱和问题。多光谱反射率或雷达后向散射系数对森林AGB的敏感性与森林空间结构的多样性造成的不确定性相结合。激光雷达（Lidar）可以克服饱和问题，并提高AGB估计的准确性，因为它可以直接检测垂直森林结构。地球科学激光高度计系统（GLAS）旨在获取具有全球覆盖的大足迹激光波形。许多研究表明，GLAS数据可以用于测量森林冠层高度和AGB。然而，以往大多数研究集中在相对平坦的地形条件下。地形效应是测量森林高度和AGB的主要挑战。许多研究已经开展，以减少地形对森林结构提取的影响，使用大足迹激光波形。",
-                "本研究使用的GLAS数据是由国家雪冰数据中心（NSIDC）发布的GLA01和GLA14产品，获取时间为2003年10月至2006年11月。研究区域位于中国云南省南部的西双版纳地区（21°08′–22°36′ N，99°56′–101°50′ E），该地区大部分为山区。主要森林类型包括热带季节性雨林和热带山地雨林。年降水量范围为1100mm至2400mm。GLAS于2009年停止运行，但在GLAS的观测范围内获取更好的实地测量数据较为困难。ZELIG模型在美国缅因州的霍兰德森林中得到了良好的参数化。ZELIG模型的输出记录了从5年到200年的每个演替序列（即40个森林年龄）的5年间隔数据。地形坡度对森林林分的波形有两个影响。首先，地面回波的宽度变宽，地面回波的峰值降低，并与森林冠层的回波混合，这是由于地形坡度的拉伸效应。第二个影响是，随着坡度的增加，树木的相对垂直位置也发生变化。",
-                "地形坡度对激光雷达波形的影响仍然是准确估计森林生物量（AGB）的一大挑战，尤其是在陡峭的地形上。"
-            ],
-            "research objectiveCn": [
-                "提出了一种新的方法，用于在山区计算适应坡度的波形指标，以进行森林生物量（AGB）映射。",
-                "所提方法被称为PIPE，因为裸地波形是针对平面倾斜进行建模的，波形通过信号结束点进行对齐。使用模拟波形和GLAS数据的结果表明，PIPE方法提取的林冠高度指标在三种方法中对森林生物量（AGB）的估计最佳。",
-                "本研究提出了PIPE方法，以提取冠层高度指标用于考虑地形的森林生物量（AGB）估算。",
-                "本研究提出了PIPE方法，通过考虑地形，利用激光雷达波形数据估算森林生物量。"
-            ],
-            "challengesCn": [
-                "地形效应是测量森林高度和生物量（AGB）的主要挑战。以往的研究表明，地形坡度对森林AGB估计的影响尚未得到充分重视，尽管现有研究在使用GLAS波形处理低于15°的坡度方面取得了显著进展。随着地形坡度的增加，地面回波逐渐减弱，最终消失，因为地面回波被拉伸并与植被回波混合。由于难以准确识别地面回波的位置，因此提取冠层高度指标变得困难。",
-                "GLAS于2009年停止运营，但在GLAS的观测区域内获取更好的实地测量数据仍然很困难。PIPE方法仅适用于在有高程数据集的区域获取的激光雷达波形。尽管在对GLAS数据进行研究时使用了SRTM的地形坡度，但必须强调的是，所提议的方法与SRTM数据无关。",
-                "地形坡度对激光雷达波形的影响仍然是准确估计森林生物量（AGB）的一个挑战，尤其是在陡峭的地形上。"
-            ],
-            "methodsCn": [
-                "首先，提出了一个理论模型，用于计算已知地形坡度的裸地激光雷达波形。森林波形及其对应的计算裸地波形通过信号结束点对齐。通过将信号结束点作为参考，分别提取它们的能量四分位数。对应能量四分位数之间的高度差被定义为适应坡度的波形指标，这些指标随后被用作森林生物量（AGB）估计的自变量。所提出的方法通过模拟森林林分的激光雷达波形和由地球科学激光高度计系统（GLAS）获取的真实波形进行了检验。",
-                "一个具有已知坡度的裸地模拟波形被用来从激光雷达波形中提取新定义的指标。这些新定义的林冠高度指标被用作森林生物量（AGB）估计的自变量，使用了森林地块的模拟激光雷达波形和GLAS数据。"
-            ],
-            "datasetCn": [
-                "在激光雷达波形的模拟中使用了两种典型的足迹尺寸（即直径为25米和70米）和21个地形坡度（即从0°到40°，间隔为2°）。GLAS波形的地形坡度在5.54°到34.08°之间。",
-                "本研究使用的GLAS数据是由国家雪冰数据中心（NSIDC）发布的GLA01和GLA14产品，获取时间为2003年10月至2006年11月。研究区域位于中国云南省南部的西双版纳地区（21°08′–22°36′ N，99°56′–101°50′ E）。实地调查于2010年10月在位于孟伦自然保护区和中国科学院西双版纳热带植物园（XTBG, CAS）内的26个GLAS足迹上进行。用于本研究的GLAS数据为2010年5月发布的第31版产品。"
-            ],
-            "findingsCn": [
-                "结果显示，森林波形上的地形可以通过裸地波形进行补偿。与高斯分解和波形参数方法相比，所提出的方法在使用70米的模拟波形时，森林生物量（AGB）的估计效果最佳，R²=0.92，均方根误差（RMSE）=15.95Mg/ha；而使用GLAS波形时，R²=0.84，RMSE=34.99Mg/ha。结果表明，所提出的方法在山区利用激光雷达波形估计森林生物量方面具有很大的潜力。",
-                "使用模拟波形和GLAS数据的结果表明，PIPE方法提取的林冠高度指标在三种方法中对森林生物量（AGB）的估计最佳。",
-                "所提出的PIPE方法对坡度不敏感。在0°–40°的坡度范围内，所提出的PIPE方法在所有三种方法中对森林生物量（AGB）的估计最佳，R²=0.90，均方根误差（RMSE）=18.00Mg/ha。在这些条件下，所提出的PIPE方法表现出色。在0°–40°的全坡度范围内，所提出的PIPE方法对森林AGB的估计最佳，R²=0.92，RMSE=15.95Mg/ha。与模拟波形的结果类似，PIPE方法对森林AGB的估计最佳，R²=0.84，RMSE=34.99Mg/ha。",
-                "所提出的PIPE方法表现出色。地形坡度对使用PIPE方法提取的冠层高度指标估计森林生物量（AGB）的影响较弱或几乎可以忽略不计。在0°–40°的全范围地形坡度下，PIPE方法在70米的探测范围内给出了最佳的森林AGB估计，R²=0.92，RMSE=15.95Mg/ha。使用GLAS数据和实地测量的森林AGB估计结果证实了模拟激光雷达波形的结论。PIPE方法给出的森林AGB估计为R²=0.84，RMSE=34.99Mg/ha。本研究的结果表明，所提出的方法在考虑地形的情况下，具有很大的潜力用于利用激光雷达波形估计森林AGB。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "倪文俭",
+        "nameEn": "NI Wenjian",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      },
+      {
+        "nameCn": "俞天宇",
+        "nameEn": "YU Tianyu",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Is the terrain slope effect a significant challenge in accurately mapping forest AGB using large-footprint lidar waveforms?",
-                "QuestionCn": "地形坡度效应在准确映射森林生物量（AGB）时是否是一个显著挑战，尤其是在使用大足迹激光雷达波形时？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Are simulated lidar waveforms used alongside real data to validate new methods for estimating forest AGB in the presence of varying terrain slopes?",
-                "QuestionCn": "模拟激光雷达波形是否与真实数据一起使用，以验证在不同地形坡度下估计森林生物量的新方法？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which waveform metric is more effective for estimating forest aboveground biomass (AGB) over mountainous areas: RHT, WP, or another metric?",
-                "QuestionCn": "哪个波形指标在估算山区森林地上生物量（AGB）方面更有效：RHT、WP或其他指标？",
-                "AnswerEn": "RHT",
-                "AnswerCn": "RHT",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Are the GEDI datasets more commonly used for estimating forest carbon storage in flat terrain, mountainous terrain, or both?",
-                "QuestionCn": "GEDI 数据集更常用于估算平坦地形还是山区的森林碳储存，还是两者都适用？",
-                "AnswerEn": "both",
-                "AnswerCn": "两者",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What is the purpose of using slope-adaptive waveform metrics in lidar data collection?",
-                "QuestionCn": "使用坡度自适应波形指标在激光雷达数据采集中的目的是为了提高数据的准确性和可靠性。",
-                "AnswerEn": "Reduce the impact of terrain slopes on the accuracy of estimating forest aboveground biomass (AGB)",
-                "AnswerCn": "减少地形坡度对估算森林地上生物量（AGB）准确性的影响。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Where is the data acquired by the Geoscience Laser Altimeter System (GLAS) utilized for forest AGB estimation?",
-                "QuestionCn": "地球科学激光高度计系统（GLAS）获取的数据用于森林生物量（AGB）估计。",
-                "AnswerEn": "Xishuangbanna region in southern Yunnan Province, China",
-                "AnswerCn": "中国云南省南部的西双版纳地区",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "When was the global dataset acquired by the GEDI mission released for public use?",
-                "QuestionCn": "GEDI任务获取的全球数据集何时公开发布供公众使用？",
-                "AnswerEn": "February 07, 2020",
-                "AnswerCn": "2020年2月7日",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method used to address the challenges of terrain slope on lidar waveform estimation of forest aboveground biomass (AGB)?",
-                "QuestionCn": "您能否提供一个数据收集方法的例子，以应对地形坡度对激光雷达波形估计森林地上生物量（AGB）的挑战？",
-                "AnswerEn": "A data collection method used involves the use of slope-adaptive waveform metrics from the Global Ecosystem Dynamics Investigation (GEDI) mission to improve estimation accuracy by compensating for waveform broadening effects caused by terrain slopes.",
-                "AnswerCn": "一种数据收集方法涉及使用全球生态系统动态调查（GEDI）任务的坡度自适应波形指标，以通过补偿地形坡度引起的波形扩展效应来提高估计准确性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Could you give an example of a dataset that has been used to validate slope-adaptive metrics for estimating forest AGB in mountainous areas?",
-                "QuestionCn": "您能否提供一个用于验证坡度适应性指标以估算山区森林生物量（AGB）的数据集的示例？",
-                "AnswerEn": "An example of a dataset is the GEDI data, specifically the global dataset acquired after April 18, 2019, which includes terrain slopes extracted from SRTM DEM and ALS data to validate slope-adaptive metrics for estimating forest aboveground biomass over mountainous regions.",
-                "AnswerCn": "一个数据集的例子是GEDI数据，特别是2019年4月18日之后获取的全球数据集，其中包括从SRTM DEM和ALS数据中提取的地形坡度，用于验证在山区估算森林地上生物量的坡度适应性指标。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced in collecting reference data for validating forest AGB estimation methods over steep terrains?",
-                "QuestionCn": "在陡峭地形上收集参考数据以验证森林生物量（AGB）估算方法时面临的一个挑战是什么。",
-                "AnswerEn": "A challenge in collecting reference data is the difficulty and limitation of acquiring sufficient field measurements over steep terrain conditions, which restricts the availability of reference data for validating estimation methods.",
-                "AnswerCn": "收集参考数据的一大挑战是，在陡峭地形条件下获取足够的现场测量数据的困难和限制，这限制了可用于验证估计方法的参考数据的可用性。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the unique data collection challenges faced when acquiring reference data for lidar waveforms in steep terrain conditions?",
-                "QuestionCn": "在陡峭地形条件下获取激光雷达波形参考数据时面临的独特数据收集挑战是什么？",
-                "AnswerEn": "difficulty of obtaining enough field measurements, unavailability of extensive reference data",
-                "AnswerCn": "获取足够的现场测量数据的难度，缺乏广泛的参考数据。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the characteristics of the global datasets acquired by spaceborne lidar missions like GEDI and GLAS for assessing forest structures?",
-                "QuestionCn": "全球激光雷达任务（如GEDI和GLAS）获取的全球数据集在评估森林结构方面具有以下特征：",
-                "AnswerEn": "large-footprint lidar waveforms, nominal footprint sizes (e.g., 25 m or 70 m), canopy height, slope-adaptive indices",
-                "AnswerCn": "大足迹激光雷达波形，标称足迹大小（例如，25米或70米），冠层高度，坡度自适应指数",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many terrain slopes were used in the simulation of lidar waveforms for data collection?",
-                "QuestionCn": "在激光雷达波形模拟数据收集中使用了多少个地形坡度？",
-                "AnswerEn": "21",
-                "AnswerCn": "21",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the nominal footprint size used in the GEDI dataset for evaluating forest structure and carbon storage?",
-                "QuestionCn": "GEDI数据集中用于评估森林结构和碳储存的名义足迹大小是多少？",
-                "AnswerEn": "25 m",
-                "AnswerCn": "25 米",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many energy percentiles are recorded for each waveform in the GEDI-SAWA dataset?",
-                "QuestionCn": "GEDI-SAWA 数据集中每个波形记录了多少个能量百分位数？",
-                "AnswerEn": "24",
-                "AnswerCn": "24",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the 'slope-adaptive waveform index' in the context of the Global Ecosystem Dynamics Investigation (GEDI)?",
-                "QuestionCn": "在全球生态系统动态调查（GEDI）的背景下，“斜率自适应波形指数”是什么？",
-                "AnswerEn": "The 'slope-adaptive waveform index' refers to a set of metrics designed to reduce the impact of terrain slopes on the assessment of forest vertical structures and aboveground carbon storage using large-footprint lidar waveforms from the Global Ecosystem Dynamics Investigation (GEDI). These indices, particularly the RHT index, record energy height at different percentiles and are adapted to account for terrain-induced waveform broadening.",
-                "AnswerCn": "“坡度自适应波形指数”指的是一组指标，旨在减少地形坡度对森林垂直结构和地上碳储量评估的影响，这些评估使用来自全球生态系统动态调查（GEDI）的大足迹激光雷达波形。这些指数，特别是RHT指数，记录不同百分位数的能量高度，并经过调整以考虑地形引起的波形扩展。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How is 'forest aboveground biomass (AGB) estimation' affected by terrain slopes in large-footprint lidar measurements?",
-                "QuestionCn": "“森林地上生物量（AGB）估计”是如何受到大范围激光雷达测量中地形坡度的影响的？",
-                "AnswerEn": "Terrain slopes affect 'forest aboveground biomass (AGB) estimation' by causing waveform broadening in large-footprint lidar measurements. This broadening effect stretches the canopy and ground returns, making it difficult to accurately distinguish and measure forest structures, particularly in mountainous areas.",
-                "AnswerCn": "地形坡度通过导致大足迹激光雷达测量中的波形扩展，影响森林地上生物量（AGB）的估计。这种扩展效应拉伸了树冠和地面回波，使得在山区准确区分和测量森林结构变得困难。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What is the significance of simulation in developing data collection methods for lidar-based forest AGB estimation?",
-                "QuestionCn": "模拟在开发基于激光雷达的森林生物量（AGB）估计的数据收集方法中的重要性是什么？",
-                "AnswerEn": "Simulation plays a significant role in developing data collection methods for lidar-based forest AGB estimation by allowing researchers to model and test the effects of various terrain slopes on lidar waveforms. Simulated lidar waveforms help in refining slope-adaptive metrics and methods, such as the PIPE method, which improve the accuracy of AGB estimation over complex terrains.",
-                "AnswerCn": "模拟在开发基于激光雷达的森林生物量（AGB）估计的数据收集方法中发挥了重要作用，因为它允许研究人员模拟和测试各种地形坡度对激光雷达波形的影响。模拟的激光雷达波形有助于优化坡度自适应指标和方法，例如PIPE方法，从而提高在复杂地形上AGB估计的准确性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do slope-adaptive waveform indices from the GEDI-SAWA dataset compare to traditional multispectral reflectance or radar backscattering coefficients in estimating forest aboveground biomass (AGB) in terms of accuracy and terrain adaptability?",
-                "QuestionCn": "GEDI-SAWA数据集中的坡度自适应波形指数在估计森林地上生物量（AGB）方面与传统的多光谱反射率或雷达后向散射系数相比，在准确性和地形适应性方面如何？",
-                "AnswerEn": "Slope-adaptive waveform indices from the GEDI-SAWA dataset are designed to address terrain slope effects which are challenging for multispectral reflectance or radar backscattering coefficients due to their sensitivity saturations and terrain effects. The GEDI-SAWA indices, particularly the RHT metric, have shown improved accuracy in estimating forest AGB over mountainous areas by mitigating waveform broadening effects caused by slopes.",
-                "AnswerCn": "坡度自适应波形指数来自GEDI-SAWA数据集，旨在解决由于多光谱反射率或雷达后向散射系数对饱和度和地形效应的敏感性而带来的地形坡度影响。GEDI-SAWA指数，特别是RHT指标，已显示出在估计山区森林生物量（AGB）方面的准确性有所提高，能够减轻由于坡度引起的波形扩展效应。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the differences between using the GEDI and GLAS datasets for estimating forest aboveground biomass (AGB) in mountainous regions, considering the challenges posed by terrain slopes?",
-                "QuestionCn": "使用GEDI和GLAS数据集估算山区森林地上生物量（AGB）时，考虑到地形坡度带来的挑战，两者之间的差异是什么？",
-                "AnswerEn": "The GEDI dataset, equipped with slope-adaptive metrics, aims to reduce the impact of terrain slopes on waveform assessments, whereas the GLAS dataset, previously used for similar purposes, faced challenges with terrain effects, especially on slopes greater than 15°. The GEDI dataset has shown improved estimation accuracy in mountainous areas, while the GLAS dataset's performance was limited by terrain stretching effects and the difficulty of accurately identifying ground peak positions.",
-                "AnswerCn": "GEDI 数据集配备了适应坡度的指标，旨在减少地形坡度对波形评估的影响，而 GLAS 数据集在类似用途上面临挑战，尤其是在坡度超过 15° 的情况下。GEDI 数据集在山区显示出更高的估计准确性，而 GLAS 数据集的表现受到地形拉伸效应的限制，并且准确识别地面峰值位置的难度较大。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can slope-adaptive waveform metrics be utilized to improve the accuracy of estimating forest aboveground biomass (AGB) in mountainous areas?",
-                "QuestionCn": "坡度自适应波形指标如何用于提高山区森林地上生物量（AGB）估计的准确性？",
-                "AnswerEn": "Slope-adaptive waveform metrics, such as those derived from the GEDI mission, can be used to counteract the waveform broadening effects caused by terrain slopes. This improves the accuracy of forest AGB estimation by effectively distinguishing between canopy and ground returns, even over steep topographies, enhancing the reliability of remote sensing data in assessing forest carbon storage.",
-                "AnswerCn": "坡度自适应波形指标，例如来自GEDI任务的指标，可以用来抵消地形坡度引起的波形扩展效应。这提高了森林生物量（AGB）估计的准确性，能够有效区分树冠和地面回波，即使在陡峭的地形上，也增强了遥感数据在评估森林碳储存方面的可靠性。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What challenges do researchers face when collecting reference data for validating slope-adaptive metrics in forest AGB estimation, and how might these challenges be addressed?",
-                "QuestionCn": "研究人员在收集用于验证坡度适应性指标的森林生物量（AGB）估计的参考数据时面临哪些挑战，这些挑战可能如何得到解决？",
-                "AnswerEn": "Researchers face challenges in collecting enough reference data through field measurements, particularly in steep terrain conditions. One approach to address this is to use alternative data sources like terrain slopes extracted from high-resolution digital elevation models (e.g., SRTM DEM) or airborne lidar data to validate and refine slope-adaptive metrics, thereby enhancing their application in diverse terrains.",
-                "AnswerCn": "研究人员在陡峭地形条件下收集足够的参考数据进行现场测量时面临挑战。解决这一问题的一种方法是利用高分辨率数字高程模型（例如SRTM DEM）或航空激光雷达数据提取的地形坡度等替代数据源，以验证和完善坡度自适应指标，从而增强其在多样地形中的应用。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What potential benefits can be inferred from using large-footprint lidar datasets in the context of global carbon budget accounting?",
-                "QuestionCn": "在全球碳预算核算的背景下，使用大范围激光雷达数据集可以推断出哪些潜在好处？",
-                "AnswerEn": "Large-footprint lidar datasets, such as those from the GLAS and GEDI missions, offer the potential to accurately depict forest spatial structures and aboveground biomass by overcoming limitations like signal saturation and terrain effects found in other remote sensing methods. This capability significantly contributes to global carbon budget accounting by providing detailed insights into forest carbon storage across varied landscapes.",
-                "AnswerCn": "大型足迹激光雷达数据集，如GLAS和GEDI任务的数据，能够准确描绘森林空间结构和地上生物量，克服了其他遥感方法中信号饱和和地形效应等限制。这一能力显著促进了全球碳预算核算，通过提供对不同景观中森林碳储存的详细洞察。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What are the primary reasons that terrain slopes impact the accuracy of waveform data collected by large-footprint lidar?",
-                "QuestionCn": "地形坡度对大脚印激光雷达收集的波形数据准确性的影响主要有以下几个原因：",
-                "AnswerEn": "The primary reasons that terrain slopes impact the accuracy of waveform data collected by large-footprint lidar include the stretching and mixing of canopy and ground returns over steep topographies. This waveform broadening effect makes it challenging to accurately estimate forest aboveground biomass, especially in mountainous areas.",
-                "AnswerCn": "地形坡度对大型足迹激光雷达收集的波形数据准确性影响的主要原因包括在陡峭地形上，树冠和地面回波的拉伸和混合。这种波形扩展效应使得在山区准确估计森林地上生物量变得具有挑战性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why is it challenging to collect sufficient reference data for validating forest aboveground biomass estimation models in steep terrain conditions?",
-                "QuestionCn": "在陡峭地形条件下，收集足够的参考数据以验证森林地上生物量估计模型是具有挑战性的，原因如下：",
-                "AnswerEn": "It is challenging to collect sufficient reference data in steep terrain conditions because field measurements are difficult to conduct in such environments. The unavailability of enough reference data limits the validation of estimation models, necessitating alternative or enhanced data collection methods.",
-                "AnswerCn": "在陡峭地形条件下收集足够的参考数据是具有挑战性的，因为在这种环境中进行现场测量非常困难。参考数据的不足限制了估计模型的验证，因此需要替代或增强的数据收集方法。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What causes the limitations in using multispectral reflectance and radar backscattering coefficients for quantifying carbon storage in forest ecosystems?",
-                "QuestionCn": "使用多光谱反射率和雷达后向散射系数量化森林生态系统碳储存的限制原因是什么？",
-                "AnswerEn": "The limitations in using multispectral reflectance and radar backscattering coefficients for quantifying carbon storage arise from their lack of a physical basis and issues with sensitivity saturations and terrain effects. These factors restrict their capability to accurately estimate carbon storage, especially compared to lidar, which can directly detect vertical forest structures.",
-                "AnswerCn": "使用多光谱反射率和雷达后向散射系数来量化碳储存的局限性在于它们缺乏物理基础，并且存在灵敏度饱和和地形效应的问题。这些因素限制了它们准确估计碳储存的能力，尤其是与激光雷达相比，激光雷达可以直接探测垂直森林结构。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What impact does the availability of elevation datasets have on the applicability of lidar-based methods for forest AGB estimation over steep terrains?",
-                "QuestionCn": "高程数据集的可用性对基于激光雷达的方法在陡峭地形上估算森林生物量（AGB）的适用性有何影响？",
-                "AnswerEn": "The availability of elevation datasets is crucial as it allows for the application of methods like the PIPE method that rely on known terrain slopes to calculate slope-adaptive waveform metrics. Without such datasets, it becomes challenging to accurately estimate forest aboveground biomass using lidar waveforms over steep terrains.",
-                "AnswerCn": "高程数据集的可用性至关重要，因为它允许应用像PIPE方法这样的技术，这些方法依赖已知的地形坡度来计算坡度自适应波形指标。如果没有这些数据集，就很难在陡峭地形上准确估计森林地上生物量使用激光雷达波形。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "Why is it important to validate slope-adaptive metrics using data from spaceborne lidar systems?",
-                "QuestionCn": "为什么使用来自空间激光雷达系统的数据验证斜率自适应指标是重要的？",
-                "AnswerEn": "It is important to validate slope-adaptive metrics to ensure the accuracy of forest aboveground biomass estimations, as these metrics help account for the waveform broadening effects caused by terrain slopes, which is a significant challenge in mountainous regions.",
-                "AnswerCn": "验证坡度适应性指标以确保森林地上生物量估算的准确性是重要的，因为这些指标有助于考虑由于地形坡度引起的波形扩展效应，而这在山区是一个重大挑战。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures can be followed to mitigate the effects of terrain slope on the accuracy of lidar waveform data when estimating forest aboveground biomass?",
-                "QuestionCn": "可以采取哪些程序来减轻地形坡度对激光雷达波形数据在估计森林地上生物量时的影响？",
-                "AnswerEn": "A proposed method involves calculating slope-adaptive waveform metrics for forest AGB mapping by using lidar waveforms over mountainous areas. This includes modeling bare ground waveforms for a plane inclined and aligning them by the point of signal ending. By extracting energy quartiles separately using the signal ending points as references, the height differences between corresponding energy quartiles are used as slope-adaptive waveform metrics for AGB estimation.",
-                "AnswerCn": "一种提议的方法涉及通过使用激光雷达波形在山区计算坡度自适应波形指标，以进行森林生物量（AGB）映射。这包括对倾斜平面的裸地波形进行建模，并通过信号结束点进行对齐。通过将能量四分位数分别提取，以信号结束点作为参考，使用相应能量四分位数之间的高度差作为坡度自适应波形指标，用于AGB估计。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can researchers ensure the validation of slope-adaptive metrics when using global ecosystem dynamics data for forest biomass estimation?",
-                "QuestionCn": "研究人员如何确保在使用全球生态系统动态数据进行森林生物量估算时，坡度自适应指标的验证？",
-                "AnswerEn": "Validation can be achieved by using reference forest AGB calculated through normalized points and prediction models, such as those developed by Nelson et al. With an R2 value of 0.71, these models provide a basis for comparison, though they may not be as accurate as metrics specifically developed from field measurements. Using terrain slopes extracted from SRTM DEM or ALS data can further improve the estimation models.",
-                "AnswerCn": "验证可以通过使用通过标准化点计算的参考森林生物量（AGB）和预测模型来实现，例如Nelson等人开发的模型。这些模型的R²值为0.71，提供了比较的基础，尽管它们可能不如专门从实地测量中开发的指标准确。使用从SRTM DEM或ALS数据提取的地形坡度可以进一步改善估计模型。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What steps should be taken to simulate lidar waveforms for different terrain slopes to improve the estimation of forest structure?",
-                "QuestionCn": "为了改善森林结构的估计，应采取以下步骤来模拟不同地形坡度的激光雷达波形：",
-                "AnswerEn": "To simulate lidar waveforms, researchers can use typical footprint sizes and a range of terrain slopes. A theoretical model can be used to calculate lidar waveforms of bare ground with known terrain slopes. The forest waveform and its corresponding calculated bare ground waveform are then aligned by the signal ending points, and the slope-adaptive waveform metrics are extracted to serve as independent variables for estimating forest AGB.",
-                "AnswerCn": "为了模拟激光雷达波形，研究人员可以使用典型的光斑大小和一系列地形坡度。可以使用理论模型计算已知地形坡度的裸地激光雷达波形。森林波形及其对应的计算裸地波形通过信号结束点对齐，然后提取坡度自适应波形指标，以作为估计森林生物量（AGB）的自变量。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methods enable the accurate estimation of forest aboveground biomass (AGB) over steep terrain using lidar data?",
-                "QuestionCn": "哪些方法能够利用激光雷达数据准确估计陡峭地形上的森林地上生物量（AGB）？",
-                "AnswerEn": "Slope-adaptive waveform metrics and methods like the PIPE technique can be used to address the terrain effect on lidar waveforms, enabling more accurate estimation of forest AGB over steep terrain by compensating for the waveform broadening effects caused by slopes.",
-                "AnswerCn": "坡度自适应波形指标和方法，如PIPE技术，可以用来解决激光雷达波形的地形效应，从而通过补偿坡度引起的波形扩展效应，更准确地估计陡峭地形上的森林生物量。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How do slope-adaptive metrics facilitate the reduction of terrain-induced errors in lidar-based forest structure assessments?",
-                "QuestionCn": "坡度自适应指标如何促进减少激光雷达森林结构评估中的地形引起的误差？",
-                "AnswerEn": "Slope-adaptive metrics are designed to account for waveform broadening effects due to terrain slopes, thus improving estimation accuracy by providing a more precise assessment of forest vertical structure and aboveground biomass, especially in mountainous areas.",
-                "AnswerCn": "坡度自适应指标旨在考虑由于地形坡度引起的波形扩展效应，从而提高估计准确性，通过提供对森林垂直结构和地上生物量的更精确评估，特别是在山区。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What conditions are necessary for implementing a slope-adaptive approach in the analysis of lidar datasets for forest biomass mapping?",
-                "QuestionCn": "在激光雷达数据集分析中实施坡度自适应方法以进行森林生物量映射所需的条件是什么？",
-                "AnswerEn": "Implementing a slope-adaptive approach requires the availability of accurate terrain slope data, such as those extracted from SRTM DEM or ALS data, to adjust waveform metrics and improve the estimation of forest aboveground biomass over varying topographies.",
-                "AnswerCn": "实施坡度自适应方法需要准确的地形坡度数据，例如从SRTM DEM或ALS数据中提取的数据，以调整波形指标并改善对不同地形上森林地上生物量的估计。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why is it challenging to obtain enough reference data for validating slope-adaptive metrics using field measurements, especially in steep terrain conditions?",
-                "QuestionCn": "在陡峭地形条件下，获取足够的参考数据以验证坡度适应性指标的现场测量结果是具有挑战性的，原因如下：",
-                "AnswerEn": "It is difficult to collect enough reference data by field measurements over steep terrain conditions, which limits validation efforts.",
-                "AnswerCn": "在陡峭地形条件下，通过现场测量收集足够的参考数据是困难的，这限制了验证工作的开展。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the anticipated reasons for the challenges associated with accurately extracting canopy height metrics from lidar waveforms over steep terrain?",
-                "QuestionCn": "从陡峭地形的激光雷达波形中准确提取冠层高度指标所面临的挑战的预期原因是什么？",
-                "AnswerEn": "The challenges arise from terrain effects such as the broadening of waveforms, stretching and mixing of canopy and ground returns, and the difficulty in identifying ground peak positions.",
-                "AnswerCn": "挑战来自地形效应，例如波形的扩展、树冠和地面回波的拉伸与混合，以及识别地面峰值位置的困难。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why might the existing global dataset acquired after a certain date be inadequate for validating the estimation models of forest aboveground biomass in mountainous areas?",
-                "QuestionCn": "为什么在某个日期之后获得的现有全球数据集可能不足以验证山区森林地上生物量估计模型？",
-                "AnswerEn": "The existing dataset may be inadequate due to the limited availability of reference data specifically developed based on field measurements of forest plots, which affects the accuracy of comparisons.",
-                "AnswerCn": "现有的数据集可能不够充分，因为基于森林样地的实地测量开发的参考数据有限，这影响了比较的准确性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "What are the potential limitations of using large-footprint lidar data for forest AGB estimation in steep terrain areas?",
-                "QuestionCn": "在陡峭地形区域使用大范围激光雷达数据进行森林生物量（AGB）估计的潜在局限性是什么？",
-                "AnswerEn": "A major limitation is the waveform broadening effect where canopy and ground returns are mixed over steep terrains, which can affect the accuracy of AGB estimation. Additionally, collecting sufficient reference data for validation remains a challenge, especially over steep terrain conditions.",
-                "AnswerCn": "一个主要的限制是波形展宽效应，在陡峭地形上，树冠和地面回波混合，这可能影响生物量（AGB）估计的准确性。此外，收集足够的参考数据进行验证仍然是一个挑战，尤其是在陡峭的地形条件下。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In what ways could future datasets be expanded or refined to improve the estimation of forest AGB using remote sensing methods?",
-                "QuestionCn": "未来的数据集可以通过以下方式扩展或精炼，以改善使用遥感方法估算森林生物量（AGB）的效果：\n\n1. 增加多时相数据：收集不同时间点的遥感数据，以捕捉森林生长和变化的动态过程。\n\n2. 提高空间分辨率：使用高分辨率遥感影像，以更准确地识别和分类森林类型及其结构。\n\n3. 融合多源数据：结合光学、雷达和激光雷达（LiDAR）等不同类型的遥感数据，以获取更全面的信息。\n\n4. 增强地面验证：增加地面实测数据的数量和多样性，以提高模型的准确性和可靠性。\n\n5. 引入气候和土壤数据：整合气候变化和土壤特征数据，以考虑环境因素对森林生物量的影响。\n\n6. 应用机器学习和人工智能：利用先进的算法处理和分析大规模遥感数据，以提高估算的精度。\n\n7. 关注特定生态系统：针对特定类型的森林生态系统进行深入研究，以获得更具针对性的估算结果。\n\n8. 开展国际合作：共享全球范围内的遥感数据和研究成果，以促进更广泛的应用和比较研究。",
-                "AnswerEn": "Future datasets could be expanded by incorporating more detailed and accurate terrain slope data, possibly from higher-resolution elevation datasets or advanced lidar systems. Additionally, integrating field measurements where feasible could enhance validation efforts and refine the estimation models.",
-                "AnswerCn": "未来的数据集可以通过整合更详细和准确的地形坡度数据来扩展，可能来自更高分辨率的高程数据集或先进的激光雷达系统。此外，在可行的情况下整合实地测量数据可以增强验证工作并改进估计模型。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how data collection methods can effectively address the challenges posed by terrain slopes in estimating forest aboveground biomass.",
-                "QuestionCn": "我不明白数据收集方法如何有效应对地形坡度带来的挑战，以估算森林地上生物量。",
-                "AnswerEn": "Terrain slopes can significantly affect the accuracy of large-footprint lidar waveforms, stretching and mixing canopy and ground returns. To address this, slope-adaptive metrics have been developed, such as the GEDI-SAWA product, which uses a slope-adaptive waveform index to improve estimation accuracy. These metrics consider terrain effects and adjust the waveform data accordingly, enhancing the accuracy of forest aboveground biomass estimations over mountainous areas.",
-                "AnswerCn": "地形坡度会显著影响大足迹激光雷达波形的准确性，导致树冠和地面回波的拉伸和混合。为了解决这个问题，开发了坡度自适应指标，例如GEDI-SAWA产品，它使用坡度自适应波形指数来提高估计的准确性。这些指标考虑了地形效应，并相应调整波形数据，从而提高了对山区森林地上生物量估计的准确性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I can't make sense of the techniques used to validate the accuracy of forest aboveground biomass estimation over steep terrains.",
-                "QuestionCn": "我无法理解用于验证陡峭地形上森林地上生物量估计准确性的技术。",
-                "AnswerEn": "Validation of forest aboveground biomass estimation over steep terrains is challenging due to the difficulty in collecting sufficient reference data from field measurements. However, techniques such as using normalized points and prediction models, as well as slope-adaptive waveform metrics like RHT, have been developed to improve estimation accuracy. These methods have been validated using datasets from the GEDI mission and compared with reference data to assess their performance.",
-                "AnswerCn": "在陡峭地形上验证森林地上生物量估计是具有挑战性的，因为从实地测量中收集足够的参考数据很困难。然而，已经开发了使用归一化点和预测模型以及坡度自适应波形指标（如RHT）等技术，以提高估计的准确性。这些方法已使用GEDI任务的数据集进行了验证，并与参考数据进行了比较，以评估其性能。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please investigate the data collection methods used for acquiring lidar waveforms for forest aboveground biomass estimation and their adaptations to terrain effects.",
-                "QuestionCn": "请调查用于获取激光雷达波形以估算森林地上生物量的数据收集方法及其对地形影响的适应性。",
-                "AnswerEn": "Spaceborne large-footprint lidar, such as that from the GEDI mission, is used for acquiring global lidar waveforms. These waveforms are sensitive to terrain slopes, which can cause broadening effects that mix canopy and ground returns. Methods like the PIPE approach model bare ground waveforms for inclined planes and align waveforms using signal ending points to extract slope-adaptive metrics, addressing the challenges posed by terrain effects.",
-                "AnswerCn": "空间borne大足迹激光雷达，如GEDI任务中的激光雷达，用于获取全球激光雷达波形。这些波形对地形坡度敏感，可能导致宽化效应，从而混合树冠和地面回波。像PIPE方法这样的技术为倾斜平面建模裸露地面波形，并通过信号结束点对齐波形，以提取适应坡度的指标，从而应对地形效应带来的挑战。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Slope-adaptive waveform metrics of large footprint lidar for estimation of forest aboveground biomass",
+        "referenceCn": null,
+        "referenceEn": "Wang, Y., Ni, W.J.*, Sun, G.Q., Chi, H., Zhang, Z.Y., Guo, Z.F. (2019). Slope-adaptive waveform metrics of large footprint lidar for estimation of forest aboveground biomass. Remote Sensing of Environment, 224, 386-400"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Assessment of Slope-Adaptive Metrics of GEDI Waveforms for Estimations of Forest Aboveground Biomass over Mountainous Areas",
+        "referenceCn": null,
+        "referenceEn": "Ni, W.J., Zhang, Z.Y., & Sun, G.Q. (2021). Assessment of Slope-Adaptive Metrics of GEDI Waveforms for Estimations of Forest Aboveground Biomass over Mountainous Areas. Journal of Remote Sensing, Volume, Article ID 9805364"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "地上生物量",
+        "nameEn": "AGB"
+      },
+      {
+        "nameCn": "星载激光雷达",
+        "nameEn": "Spaceborne lidar system"
+      },
+      {
+        "nameCn": "森林",
+        "nameEn": "Forest"
+      },
+      {
+        "nameCn": "植被",
+        "nameEn": "Vegetation"
+      },
+      {
+        "nameCn": "碳循环",
+        "nameEn": "Carbon cycle"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地生态系统",
+        "nameEn": "Terrestrial ecosystem"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2019.04.18~2023.03.16",
+        "keywordEn": "2019.04.18~2023.03.16",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "森林植被碳储量遥感",
+        "titleEn": "Forest carbon accounting based on remote sensing dataset"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Waveform broadening effects of large-footprint lidar caused by terrain slopes are still a great challenge limiting the estimation accuracy of forest aboveground biomass (AGB) over mountainous areas. The role of remote sensing in the accounting of global carbon budgets has been widely recognized, and several regional remotely sensed estimations/maps have been released. The limited capability of either the multispectral reflectance or the radar backscattering coefficients on the quantifying of carbon storage has been widely demonstrated due to the lack of physical basis and is always restricted by the sensitivity saturations and terrain effects. The forest carbon storage in vegetation is directly determined by forest spatial structures depicted by tree sizes, stem densities, and forest types. Spaceborne large-footprint lidar plays an important role in the existing global maps as well as the near-future remote sensing schemes of forest carbon storages. However, the biggest challenge limiting the estimation accuracy of forest AGB over mountainous areas is the waveform broadening effect caused by terrain slopes, i.e., the canopy and ground returns tend to be stretched and mixed up over steep topographies."
+      ],
+      "research objective": [
+        "This study made full validation of slope-adaptive metrics using data acquired by the Global Ecosystem Dynamics Investigation (GEDI) mission, meanwhile exploring GEDI waveforms on estimations of forest AGB. In order to make full validation of slope-adaptive metrics using data acquired by the GEDI mission, meanwhile exploring GEDI waveforms on estimations of forest AGB, this study reports the assessment of slope-adaptive metrics of waveforms using GEDI data for estimations of forest aboveground biomass over mountainous areas."
+      ],
+      "challenges": [
+        "However, its validation was limited by the unavailability of enough reference data. It is difficult to collect enough reference data by field measurements, especially over steep terrain conditions."
+      ],
+      "methods": [],
+      "dataset": [
+        "The reference forest AGB was calculated using the normalized points and the prediction model developed by Nelson et al., of which R2 is 0.71, which is acceptable to serve as reference data to make comparisons of the performance of different waveform metrics, although it may not be as accurate as those specifically developed based on the field measurements of forest plots if we have them. The global dataset acquired by GEDI after April 18, 2019, has been released since February 07, 2020. Two GEDI datasets came across the study area as shown by yellow lines in Figure 1(a). The nominal footprint size is about 25 m in diameter."
+      ],
+      "findings": [
+        "The RHT and WP metrics gave the best and the worst estimation accuracy, respectively. RHT further improved R2 to 0.77 and decreased RMSE to 13.0 Mg/ha using terrain slopes extracted from SRTM DEM with a resolution of 1 arc second. R2 of estimation models based on RHT was finally improved to 0.8 with RMSE decreased to 11.7 Mg/ha using exact terrain slopes from ALS data. This study demonstrated the great potential of slope-adaptive metrics of GEDI waveforms on estimations of forest aboveground biomass over mountainous areas."
+      ],
+      "backgroundCn": [
+        "大脚印激光雷达的波形展宽效应由于地形坡度的影响，仍然是限制山区森林地上生物量（AGB）估计精度的重大挑战。遥感在全球碳预算核算中的作用已得到广泛认可，并发布了若干区域遥感估计/地图。由于缺乏物理基础，且常常受到灵敏度饱和和地形效应的限制，光谱反射或雷达后向散射系数在量化碳储存方面的能力有限。植被中的森林碳储存直接由树木大小、树干密度和森林类型等森林空间结构决定。空间大脚印激光雷达在现有全球地图以及未来森林碳储存遥感方案中发挥着重要作用。然而，限制山区森林AGB估计精度的最大挑战是由地形坡度引起的波形展宽效应，即在陡峭地形上，树冠和地面回波往往会被拉伸并混合在一起。"
+      ],
+      "research objectiveCn": [
+        "本研究利用全球生态系统动态调查（GEDI）任务获取的数据，对坡度自适应指标进行了全面验证，同时探讨了GEDI波形在森林地上生物量（AGB）估算中的应用。为了全面验证坡度自适应指标，本研究报告了使用GEDI数据对波形的坡度自适应指标进行评估，以估算山区的森林地上生物量。"
+      ],
+      "challengesCn": [
+        "然而，其验证受到参考数据不足的限制。在陡峭地形条件下，通过实地测量收集足够的参考数据是困难的。"
+      ],
+      "methodsCn": [],
+      "datasetCn": [
+        "参考森林AGB是使用归一化点和Nelson等人开发的预测模型计算得出的，该模型的R²为0.71，这在作为参考数据进行不同波形指标性能比较时是可以接受的，尽管如果有基于森林样地的实地测量专门开发的模型，可能会更准确。自2019年4月18日以来获取的全球数据集已于2020年2月7日发布。两个GEDI数据集经过研究区域，如图1(a)中的黄色线所示。名义足迹大小约为25米直径。"
+      ],
+      "findingsCn": [
+        "RHT和WP指标分别给出了最佳和最差的估计准确性。使用分辨率为1弧秒的SRTM DEM提取的地形坡度，RHT进一步将R²提高到0.77，并将RMSE降低到13.0 Mg/ha。基于RHT的估计模型的R²最终提高到0.8，RMSE降低到11.7 Mg/ha，使用的是来自ALS数据的精确地形坡度。本研究展示了GEDI波形的坡度自适应指标在山区森林地上生物量估计中的巨大潜力。"
+      ]
+    },
+    {
+      "background": [
+        "The effect of terrain slope on large footprint lidar waveforms is still a great challenge to the accurate mapping of forest aboveground biomass (AGB), although previous studies have made significant progress for slopes lower than 15°. Forests are important components of terrestrial ecosystems, containing approximately 80% of aboveground carbon (Dixon et al., 1994). Accurate mapping of forest aboveground biomass (AGB) is essential for research on the global carbon cycle (Brown et al., 1996).",
+        "Methods for measuring forest AGB, such as field measurements, are time-consuming and labor-intensive. Remote sensing methods are feasible for measuring forest AGB at regional and global scales. Multispectral remote sensing and radio detection and ranging (radar) techniques are widely used to estimate AGB. However, signal saturation problems occur when AGB reaches a certain level. The sensitivity of multispectral reflectance or radar backscattering coefficients to forest AGB is combined with uncertainties caused by the diversity of the forest's spatial structure. Lidar can overcome the saturation problem and improve the accuracy of AGB estimation because of its direct detection of the vertical forest structure. The Geoscience Laser Altimeter System (GLAS) was designed to acquire large footprint lidar waveforms with global coverage. Many studies have demonstrated that GLAS data can be used to measure forest canopy height and AGB. However, most previous studies focused on relatively flat terrain conditions. The terrain effect is a major challenge for measuring forest heights and AGB. Many studies have been carried out to reduce the impact of terrain on the retrieval of forest structure using large footprint lidar waveforms.",
+        "The GLAS data used in this study are the GLA01 and GLA14 products acquired from October 2003 to November 2006 and released by the National Snow and Ice Data Center (NSIDC). The study area is located in the Xishuangbanna region (21°08′–22°36′ N, 99°56′–101°50′ E), which is in southern Yunnan Province, China. Most of the region is mountainous. The main forest types include tropical seasonal rainforest and tropical mountain rainforest. The annual precipitation ranges from 1100mm to 2400mm. The GLAS stopped operating in 2009, but it is difficult to obtain better field measurements over the GLAS footprints. The ZELIG model has been well parameterized in the Howland forest in Maine, USA. The outputs of the ZELIG model were recorded at a 5-year interval from 5 years to 200 years for each succession sequence (i.e., 40 forest ages). The terrain slopes have two effects on the waveforms of forest stands. First, the width of the ground return is broadened, and the peak of the ground return decreases and is mixed with that of the forest canopy due to the stretching effect of the terrain slope. The second effect is that the relative vertical positions of trees also change as the slope increases.",
+        "The effect of terrain slope on lidar waveforms is still a challenge to the accurate estimation of forest AGB, especially over steep terrain."
+      ],
+      "research objective": [
+        "A new method was proposed to calculate slope-adaptive waveform metrics for forest AGB mapping over mountainous areas.",
+        "The proposed method is referred to as PIPE because the bare ground waveform is modeled for a Plane Inclined, and the waveforms are aligned by the Point of signal Ending. The results using both simulated waveforms and GLAS data showed that the canopy height metrics extracted by the PIPE method gave the best estimation of forest AGB of the three methods.",
+        "This study proposed the PIPE method to extract canopy height metrics for the estimation of forest AGB considering terrain.",
+        "This study proposed the PIPE method for the estimation of forest AGB using data of lidar waveforms while considering the terrain."
+      ],
+      "challenges": [
+        "The terrain effect is a major challenge for measuring forest heights and AGB. Previous studies have shown that the effects of terrain slope on the estimation of forest AGB have not been thoroughly addressed, although existing research has made significant progress in the use of GLAS waveforms on slopes lower than 15°. The ground peak gradually decreases and finally disappears as the terrain slope increases because the ground returns are stretched and mixed with vegetation returns. It is difficult to accurately extract canopy height metrics due to the difficulty in identifying the ground peak positions.",
+        "The GLAS stopped operating in 2009, but it is difficult to obtain better field measurements over the GLAS footprints. The PIPE method is only applicable to lidar waveforms acquired over areas where an elevation dataset is available. Although the terrain slopes from SRTM were used in the examination of the proposed method with the GLAS data, it must be emphasized that the proposed method is independent of SRTM data.",
+        "The effect of terrain slope on lidar waveforms is still a challenge to the accurate estimation of forest AGB, especially over steep terrain."
+      ],
+      "methods": [
+        "First, a theoretical model was proposed to calculate lidar waveforms of bare ground with known terrain slopes. The forest waveform and its corresponding calculated bare ground waveform were then aligned by the signal ending points. Their energy quartiles were extracted separately by taking the signal ending points as references. The height differences between the corresponding energy quartiles were defined as slope-adaptive waveform metrics, which were then used as independent variables for the estimation of the forest AGB. The proposed method was examined with both simulated lidar waveforms of forest stands and real waveforms acquired by the Geoscience Laser Altimeter System (GLAS).",
+        "A simulated waveform of bare ground with a known slope was used to extract newly defined metrics from the lidar waveform. The newly defined canopy height metrics were used as independent variables for the estimation of forest AGB using both simulated lidar waveforms of forest stands and GLAS data."
+      ],
+      "dataset": [
+        "Two typical footprint sizes (i.e., 25m and 70m in diameter) and 21 terrain slopes (i.e., from 0° to 40° at an interval of 2°) were used in the simulation of the lidar waveforms. The terrain slopes of the GLAS waveforms were between 5.54° and 34.08°.",
+        "The GLAS data used in this study are the GLA01 and GLA14 products acquired from October 2003 to November 2006 and released by the National Snow and Ice Data Center (NSIDC). The study area is located in the Xishuangbanna region (21°08′–22°36′ N, 99°56′–101°50′ E), which is in southern Yunnan Province, China. Field inventories were carried out in October 2010 over 26 GLAS footprints located within the Menglun Nature Reserve and the Xishuangbanna Tropical Botanical Garden of the Chinese Academy of Sciences (XTBG, CAS). The GLAS data used in this study are the product of version 31, which was released in May 2010."
+      ],
+      "findings": [
+        "The results showed that the terrain stretching on the forest waveform could be compensated for by the bare ground waveform. Compared with the Gaussian decomposition and waveform parameter methods, the proposed method gave the best estimation of the forest AGB with R2=0.92 and RMSE=15.95Mg/ha using simulated waveforms with a footprint size of 70m and R2=0.84 and RMSE=34.99Mg/ha using the GLAS waveforms. The results demonstrated that the proposed method had great potential for the estimation of forest AGB using lidar waveforms over mountainous areas.",
+        "The results using both simulated waveforms and GLAS data showed that the canopy height metrics extracted by the PIPE method gave the best estimation of forest AGB of the three methods.",
+        "The proposed PIPE method is not sensitive to the slope. For slopes of 0°–40°, the proposed PIPE method gives the best estimation of forest AGB of all three methods with R2=0.90 and RMSE=18.00Mg/ha. Under these conditions, the performance of the proposed PIPE method is outstanding. Over the full range of slopes of 0°–40°, the proposed PIPE method gives the best estimation of forest AGB, with R2=0.92 and RMSE=15.95Mg/ha. Similar to the results of the simulated waveforms, the PIPE method gives the best estimation of forest AGB with R2=0.84 and RMSE=34.99Mg/ha.",
+        "The performance of the proposed PIPE method was outstanding. The influence of terrain slope on the estimation of forest AGB using the canopy height metrics extracted by the PIPE method was weak or nearly negligible. Over the full range of terrain slopes of 0°–40°, the PIPE method gave the best estimation of forest AGB, with R2=0.92 and RMSE=15.95Mg/ha for a footprint size of 70m. The estimations of forest AGB using GLAS data and field measurements confirm the conclusions from the simulated lidar waveforms. The PIPE method gave the best estimation of forest AGB, with R2=0.84 and RMSE=34.99Mg/ha. The results of this study showed that the proposed method has great potential for the estimation of forest AGB using lidar waveforms while considering terrain."
+      ],
+      "backgroundCn": [
+        "地形坡度对大足迹激光雷达波形的影响仍然是准确测绘森林地上生物量（AGB）的重大挑战，尽管之前的研究在坡度低于15°的情况下取得了显著进展。森林是陆地生态系统的重要组成部分，约含有80%的地上碳（Dixon et al., 1994）。准确测绘森林地上生物量（AGB）对于全球碳循环研究至关重要（Brown et al., 1996）。",
+        "测量森林生物量（AGB）的方法，如实地测量，耗时且劳动密集。遥感方法在区域和全球尺度上测量森林AGB是可行的。多光谱遥感和雷达探测技术被广泛用于估计AGB。然而，当AGB达到一定水平时，会出现信号饱和问题。多光谱反射率或雷达后向散射系数对森林AGB的敏感性与森林空间结构的多样性造成的不确定性相结合。激光雷达（Lidar）可以克服饱和问题，并提高AGB估计的准确性，因为它可以直接检测垂直森林结构。地球科学激光高度计系统（GLAS）旨在获取具有全球覆盖的大足迹激光波形。许多研究表明，GLAS数据可以用于测量森林冠层高度和AGB。然而，以往大多数研究集中在相对平坦的地形条件下。地形效应是测量森林高度和AGB的主要挑战。许多研究已经开展，以减少地形对森林结构提取的影响，使用大足迹激光波形。",
+        "本研究使用的GLAS数据是由国家雪冰数据中心（NSIDC）发布的GLA01和GLA14产品，获取时间为2003年10月至2006年11月。研究区域位于中国云南省南部的西双版纳地区（21°08′–22°36′ N，99°56′–101°50′ E），该地区大部分为山区。主要森林类型包括热带季节性雨林和热带山地雨林。年降水量范围为1100mm至2400mm。GLAS于2009年停止运行，但在GLAS的观测范围内获取更好的实地测量数据较为困难。ZELIG模型在美国缅因州的霍兰德森林中得到了良好的参数化。ZELIG模型的输出记录了从5年到200年的每个演替序列（即40个森林年龄）的5年间隔数据。地形坡度对森林林分的波形有两个影响。首先，地面回波的宽度变宽，地面回波的峰值降低，并与森林冠层的回波混合，这是由于地形坡度的拉伸效应。第二个影响是，随着坡度的增加，树木的相对垂直位置也发生变化。",
+        "地形坡度对激光雷达波形的影响仍然是准确估计森林生物量（AGB）的一大挑战，尤其是在陡峭的地形上。"
+      ],
+      "research objectiveCn": [
+        "提出了一种新的方法，用于在山区计算适应坡度的波形指标，以进行森林生物量（AGB）映射。",
+        "所提方法被称为PIPE，因为裸地波形是针对平面倾斜进行建模的，波形通过信号结束点进行对齐。使用模拟波形和GLAS数据的结果表明，PIPE方法提取的林冠高度指标在三种方法中对森林生物量（AGB）的估计最佳。",
+        "本研究提出了PIPE方法，以提取冠层高度指标用于考虑地形的森林生物量（AGB）估算。",
+        "本研究提出了PIPE方法，通过考虑地形，利用激光雷达波形数据估算森林生物量。"
+      ],
+      "challengesCn": [
+        "地形效应是测量森林高度和生物量（AGB）的主要挑战。以往的研究表明，地形坡度对森林AGB估计的影响尚未得到充分重视，尽管现有研究在使用GLAS波形处理低于15°的坡度方面取得了显著进展。随着地形坡度的增加，地面回波逐渐减弱，最终消失，因为地面回波被拉伸并与植被回波混合。由于难以准确识别地面回波的位置，因此提取冠层高度指标变得困难。",
+        "GLAS于2009年停止运营，但在GLAS的观测区域内获取更好的实地测量数据仍然很困难。PIPE方法仅适用于在有高程数据集的区域获取的激光雷达波形。尽管在对GLAS数据进行研究时使用了SRTM的地形坡度，但必须强调的是，所提议的方法与SRTM数据无关。",
+        "地形坡度对激光雷达波形的影响仍然是准确估计森林生物量（AGB）的一个挑战，尤其是在陡峭的地形上。"
+      ],
+      "methodsCn": [
+        "首先，提出了一个理论模型，用于计算已知地形坡度的裸地激光雷达波形。森林波形及其对应的计算裸地波形通过信号结束点对齐。通过将信号结束点作为参考，分别提取它们的能量四分位数。对应能量四分位数之间的高度差被定义为适应坡度的波形指标，这些指标随后被用作森林生物量（AGB）估计的自变量。所提出的方法通过模拟森林林分的激光雷达波形和由地球科学激光高度计系统（GLAS）获取的真实波形进行了检验。",
+        "一个具有已知坡度的裸地模拟波形被用来从激光雷达波形中提取新定义的指标。这些新定义的林冠高度指标被用作森林生物量（AGB）估计的自变量，使用了森林地块的模拟激光雷达波形和GLAS数据。"
+      ],
+      "datasetCn": [
+        "在激光雷达波形的模拟中使用了两种典型的足迹尺寸（即直径为25米和70米）和21个地形坡度（即从0°到40°，间隔为2°）。GLAS波形的地形坡度在5.54°到34.08°之间。",
+        "本研究使用的GLAS数据是由国家雪冰数据中心（NSIDC）发布的GLA01和GLA14产品，获取时间为2003年10月至2006年11月。研究区域位于中国云南省南部的西双版纳地区（21°08′–22°36′ N，99°56′–101°50′ E）。实地调查于2010年10月在位于孟伦自然保护区和中国科学院西双版纳热带植物园（XTBG, CAS）内的26个GLAS足迹上进行。用于本研究的GLAS数据为2010年5月发布的第31版产品。"
+      ],
+      "findingsCn": [
+        "结果显示，森林波形上的地形可以通过裸地波形进行补偿。与高斯分解和波形参数方法相比，所提出的方法在使用70米的模拟波形时，森林生物量（AGB）的估计效果最佳，R²=0.92，均方根误差（RMSE）=15.95Mg/ha；而使用GLAS波形时，R²=0.84，RMSE=34.99Mg/ha。结果表明，所提出的方法在山区利用激光雷达波形估计森林生物量方面具有很大的潜力。",
+        "使用模拟波形和GLAS数据的结果表明，PIPE方法提取的林冠高度指标在三种方法中对森林生物量（AGB）的估计最佳。",
+        "所提出的PIPE方法对坡度不敏感。在0°–40°的坡度范围内，所提出的PIPE方法在所有三种方法中对森林生物量（AGB）的估计最佳，R²=0.90，均方根误差（RMSE）=18.00Mg/ha。在这些条件下，所提出的PIPE方法表现出色。在0°–40°的全坡度范围内，所提出的PIPE方法对森林AGB的估计最佳，R²=0.92，RMSE=15.95Mg/ha。与模拟波形的结果类似，PIPE方法对森林AGB的估计最佳，R²=0.84，RMSE=34.99Mg/ha。",
+        "所提出的PIPE方法表现出色。地形坡度对使用PIPE方法提取的冠层高度指标估计森林生物量（AGB）的影响较弱或几乎可以忽略不计。在0°–40°的全范围地形坡度下，PIPE方法在70米的探测范围内给出了最佳的森林AGB估计，R²=0.92，RMSE=15.95Mg/ha。使用GLAS数据和实地测量的森林AGB估计结果证实了模拟激光雷达波形的结论。PIPE方法给出的森林AGB估计为R²=0.84，RMSE=34.99Mg/ha。本研究的结果表明，所提出的方法在考虑地形的情况下，具有很大的潜力用于利用激光雷达波形估计森林AGB。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Is the terrain slope effect a significant challenge in accurately mapping forest AGB using large-footprint lidar waveforms?",
+        "QuestionCn": "地形坡度效应在准确映射森林生物量（AGB）时是否是一个显著挑战，尤其是在使用大足迹激光雷达波形时？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Are simulated lidar waveforms used alongside real data to validate new methods for estimating forest AGB in the presence of varying terrain slopes?",
+        "QuestionCn": "模拟激光雷达波形是否与真实数据一起使用，以验证在不同地形坡度下估计森林生物量的新方法？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which waveform metric is more effective for estimating forest aboveground biomass (AGB) over mountainous areas: RHT, WP, or another metric?",
+        "QuestionCn": "哪个波形指标在估算山区森林地上生物量（AGB）方面更有效：RHT、WP或其他指标？",
+        "AnswerEn": "RHT",
+        "AnswerCn": "RHT",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Are the GEDI datasets more commonly used for estimating forest carbon storage in flat terrain, mountainous terrain, or both?",
+        "QuestionCn": "GEDI 数据集更常用于估算平坦地形还是山区的森林碳储存，还是两者都适用？",
+        "AnswerEn": "both",
+        "AnswerCn": "两者",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What is the purpose of using slope-adaptive waveform metrics in lidar data collection?",
+        "QuestionCn": "在激光雷达数据收集中使用坡度自适应波形指标的目的是什么？",
+        "AnswerEn": "Reduce the impact of terrain slopes on the accuracy of estimating forest aboveground biomass (AGB)",
+        "AnswerCn": "减少地形坡度对估算森林地上生物量（AGB）准确性的影响。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Where is the data acquired by the Geoscience Laser Altimeter System (GLAS) utilized for forest AGB estimation?",
+        "QuestionCn": "Geoscience Laser Altimeter System (GLAS) 获取的数据用于森林 AGB 估算的地方在哪里？",
+        "AnswerEn": "Xishuangbanna region in southern Yunnan Province, China",
+        "AnswerCn": "中国云南省南部的西双版纳地区",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "When was the global dataset acquired by the GEDI mission released for public use?",
+        "QuestionCn": "GEDI任务获取的全球数据集何时公开发布供公众使用？",
+        "AnswerEn": "February 07, 2020",
+        "AnswerCn": "2020年2月7日",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method used to address the challenges of terrain slope on lidar waveform estimation of forest aboveground biomass (AGB)?",
+        "QuestionCn": "您能否提供一个数据收集方法的例子，以应对地形坡度对激光雷达波形估计森林地上生物量（AGB）的挑战？",
+        "AnswerEn": "A data collection method used involves the use of slope-adaptive waveform metrics from the Global Ecosystem Dynamics Investigation (GEDI) mission to improve estimation accuracy by compensating for waveform broadening effects caused by terrain slopes.",
+        "AnswerCn": "一种数据收集方法涉及使用全球生态系统动态调查（GEDI）任务的坡度自适应波形指标，以通过补偿地形坡度引起的波形扩展效应来提高估计准确性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Could you give an example of a dataset that has been used to validate slope-adaptive metrics for estimating forest AGB in mountainous areas?",
+        "QuestionCn": "您能否提供一个用于验证坡度适应性指标以估算山区森林生物量（AGB）的数据集的示例？",
+        "AnswerEn": "An example of a dataset is the GEDI data, specifically the global dataset acquired after April 18, 2019, which includes terrain slopes extracted from SRTM DEM and ALS data to validate slope-adaptive metrics for estimating forest aboveground biomass over mountainous regions.",
+        "AnswerCn": "一个数据集的例子是GEDI数据，特别是2019年4月18日之后获取的全球数据集，其中包括从SRTM DEM和ALS数据中提取的地形坡度，用于验证在山区估算森林地上生物量的坡度适应性指标。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced in collecting reference data for validating forest AGB estimation methods over steep terrains?",
+        "QuestionCn": "在陡峭地形上收集用于验证森林生物量估算方法的参考数据时面临的挑战是什么例子？",
+        "AnswerEn": "A challenge in collecting reference data is the difficulty and limitation of acquiring sufficient field measurements over steep terrain conditions, which restricts the availability of reference data for validating estimation methods.",
+        "AnswerCn": "收集参考数据的一大挑战是，在陡峭地形条件下获取足够的现场测量数据的困难和限制，这限制了可用于验证估计方法的参考数据的可用性。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the unique data collection challenges faced when acquiring reference data for lidar waveforms in steep terrain conditions?",
+        "QuestionCn": "在陡峭地形条件下获取激光雷达波形参考数据时面临的独特数据收集挑战是什么？",
+        "AnswerEn": "difficulty of obtaining enough field measurements, unavailability of extensive reference data",
+        "AnswerCn": "获取足够的现场测量数据的难度，缺乏广泛的参考数据。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the characteristics of the global datasets acquired by spaceborne lidar missions like GEDI and GLAS for assessing forest structures?",
+        "QuestionCn": "像GEDI和GLAS这样的星载激光雷达任务获取的全球数据集用于评估森林结构的特征是什么？",
+        "AnswerEn": "large-footprint lidar waveforms, nominal footprint sizes (e.g., 25 m or 70 m), canopy height, slope-adaptive indices",
+        "AnswerCn": "大足迹激光雷达波形，标称足迹大小（例如，25米或70米），冠层高度，坡度自适应指数",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many terrain slopes were used in the simulation of lidar waveforms for data collection?",
+        "QuestionCn": "在激光雷达波形模拟数据收集中使用了多少个地形坡度？",
+        "AnswerEn": "21",
+        "AnswerCn": "21",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the nominal footprint size used in the GEDI dataset for evaluating forest structure and carbon storage?",
+        "QuestionCn": "GEDI数据集中用于评估森林结构和碳储存的名义足迹大小是多少？",
+        "AnswerEn": "25 m",
+        "AnswerCn": "25 米",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many energy percentiles are recorded for each waveform in the GEDI-SAWA dataset?",
+        "QuestionCn": "GEDI-SAWA 数据集中每个波形记录了多少个能量百分位数？",
+        "AnswerEn": "24",
+        "AnswerCn": "24",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the 'slope-adaptive waveform index' in the context of the Global Ecosystem Dynamics Investigation (GEDI)?",
+        "QuestionCn": "在全球生态系统动态调查（GEDI）的背景下，“斜率自适应波形指数”是什么？",
+        "AnswerEn": "The 'slope-adaptive waveform index' refers to a set of metrics designed to reduce the impact of terrain slopes on the assessment of forest vertical structures and aboveground carbon storage using large-footprint lidar waveforms from the Global Ecosystem Dynamics Investigation (GEDI). These indices, particularly the RHT index, record energy height at different percentiles and are adapted to account for terrain-induced waveform broadening.",
+        "AnswerCn": "“坡度自适应波形指数”指的是一组指标，旨在减少地形坡度对森林垂直结构和地上碳储量评估的影响，这些评估使用来自全球生态系统动态调查（GEDI）的大足迹激光雷达波形。这些指数，特别是RHT指数，记录不同百分位数的能量高度，并经过调整以考虑地形引起的波形扩展。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How is 'forest aboveground biomass (AGB) estimation' affected by terrain slopes in large-footprint lidar measurements?",
+        "QuestionCn": "“森林地上生物量（AGB）估计”是如何受到大范围激光雷达测量中地形坡度的影响的？",
+        "AnswerEn": "Terrain slopes affect 'forest aboveground biomass (AGB) estimation' by causing waveform broadening in large-footprint lidar measurements. This broadening effect stretches the canopy and ground returns, making it difficult to accurately distinguish and measure forest structures, particularly in mountainous areas.",
+        "AnswerCn": "地形坡度通过导致大足迹激光雷达测量中的波形扩展，影响森林地上生物量（AGB）的估计。这种扩展效应拉伸了树冠和地面回波，使得在山区准确区分和测量森林结构变得困难。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What is the significance of simulation in developing data collection methods for lidar-based forest AGB estimation?",
+        "QuestionCn": "模拟在开发基于激光雷达的森林生物量（AGB）估计的数据收集方法中的重要性是什么？",
+        "AnswerEn": "Simulation plays a significant role in developing data collection methods for lidar-based forest AGB estimation by allowing researchers to model and test the effects of various terrain slopes on lidar waveforms. Simulated lidar waveforms help in refining slope-adaptive metrics and methods, such as the PIPE method, which improve the accuracy of AGB estimation over complex terrains.",
+        "AnswerCn": "模拟在开发基于激光雷达的森林生物量（AGB）估计的数据收集方法中发挥了重要作用，因为它允许研究人员模拟和测试各种地形坡度对激光雷达波形的影响。模拟的激光雷达波形有助于优化坡度自适应指标和方法，例如PIPE方法，从而提高在复杂地形上AGB估计的准确性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do slope-adaptive waveform indices from the GEDI-SAWA dataset compare to traditional multispectral reflectance or radar backscattering coefficients in estimating forest aboveground biomass (AGB) in terms of accuracy and terrain adaptability?",
+        "QuestionCn": "GEDI-SAWA数据集中的坡度自适应波形指数在估计森林地上生物量（AGB）方面与传统的多光谱反射率或雷达后向散射系数相比，在准确性和地形适应性方面如何？",
+        "AnswerEn": "Slope-adaptive waveform indices from the GEDI-SAWA dataset are designed to address terrain slope effects which are challenging for multispectral reflectance or radar backscattering coefficients due to their sensitivity saturations and terrain effects. The GEDI-SAWA indices, particularly the RHT metric, have shown improved accuracy in estimating forest AGB over mountainous areas by mitigating waveform broadening effects caused by slopes.",
+        "AnswerCn": "坡度自适应波形指数来自GEDI-SAWA数据集，旨在解决由于多光谱反射率或雷达后向散射系数对饱和度和地形效应的敏感性而带来的地形坡度影响。GEDI-SAWA指数，特别是RHT指标，已显示出在估计山区森林生物量（AGB）方面的准确性有所提高，能够减轻由于坡度引起的波形扩展效应。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the differences between using the GEDI and GLAS datasets for estimating forest aboveground biomass (AGB) in mountainous regions, considering the challenges posed by terrain slopes?",
+        "QuestionCn": "使用GEDI和GLAS数据集估算山区森林地上生物量（AGB）时，考虑到地形坡度带来的挑战，两者之间的差异是什么？",
+        "AnswerEn": "The GEDI dataset, equipped with slope-adaptive metrics, aims to reduce the impact of terrain slopes on waveform assessments, whereas the GLAS dataset, previously used for similar purposes, faced challenges with terrain effects, especially on slopes greater than 15°. The GEDI dataset has shown improved estimation accuracy in mountainous areas, while the GLAS dataset's performance was limited by terrain stretching effects and the difficulty of accurately identifying ground peak positions.",
+        "AnswerCn": "GEDI 数据集配备了适应坡度的指标，旨在减少地形坡度对波形评估的影响，而 GLAS 数据集在类似用途上面临挑战，尤其是在坡度超过 15° 的情况下。GEDI 数据集在山区显示出更高的估计准确性，而 GLAS 数据集的表现受到地形拉伸效应的限制，并且准确识别地面峰值位置的难度较大。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can slope-adaptive waveform metrics be utilized to improve the accuracy of estimating forest aboveground biomass (AGB) in mountainous areas?",
+        "QuestionCn": "坡度自适应波形指标如何用于提高山区森林地上生物量（AGB）估计的准确性？",
+        "AnswerEn": "Slope-adaptive waveform metrics, such as those derived from the GEDI mission, can be used to counteract the waveform broadening effects caused by terrain slopes. This improves the accuracy of forest AGB estimation by effectively distinguishing between canopy and ground returns, even over steep topographies, enhancing the reliability of remote sensing data in assessing forest carbon storage.",
+        "AnswerCn": "坡度自适应波形指标，例如来自GEDI任务的指标，可以用来抵消地形坡度引起的波形扩展效应。这提高了森林生物量（AGB）估计的准确性，能够有效区分树冠和地面回波，即使在陡峭的地形上，也增强了遥感数据在评估森林碳储存方面的可靠性。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What challenges do researchers face when collecting reference data for validating slope-adaptive metrics in forest AGB estimation, and how might these challenges be addressed?",
+        "QuestionCn": "研究人员在收集用于验证坡度适应性指标的森林生物量（AGB）估计的参考数据时面临哪些挑战，这些挑战可能如何得到解决？",
+        "AnswerEn": "Researchers face challenges in collecting enough reference data through field measurements, particularly in steep terrain conditions. One approach to address this is to use alternative data sources like terrain slopes extracted from high-resolution digital elevation models (e.g., SRTM DEM) or airborne lidar data to validate and refine slope-adaptive metrics, thereby enhancing their application in diverse terrains.",
+        "AnswerCn": "研究人员在陡峭地形条件下收集足够的参考数据进行现场测量时面临挑战。解决这一问题的一种方法是利用高分辨率数字高程模型（例如SRTM DEM）或航空激光雷达数据提取的地形坡度等替代数据源，以验证和完善坡度自适应指标，从而增强其在多样地形中的应用。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What potential benefits can be inferred from using large-footprint lidar datasets in the context of global carbon budget accounting?",
+        "QuestionCn": "在全球碳预算核算的背景下，使用大范围激光雷达数据集可以推断出哪些潜在好处？",
+        "AnswerEn": "Large-footprint lidar datasets, such as those from the GLAS and GEDI missions, offer the potential to accurately depict forest spatial structures and aboveground biomass by overcoming limitations like signal saturation and terrain effects found in other remote sensing methods. This capability significantly contributes to global carbon budget accounting by providing detailed insights into forest carbon storage across varied landscapes.",
+        "AnswerCn": "大型足迹激光雷达数据集，如GLAS和GEDI任务的数据，能够准确描绘森林空间结构和地上生物量，克服了其他遥感方法中信号饱和和地形效应等限制。这一能力显著促进了全球碳预算核算，通过提供对不同景观中森林碳储存的详细洞察。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What are the primary reasons that terrain slopes impact the accuracy of waveform data collected by large-footprint lidar?",
+        "QuestionCn": "地形坡度影响大足迹激光雷达收集的波形数据准确性的主要原因是什么？",
+        "AnswerEn": "The primary reasons that terrain slopes impact the accuracy of waveform data collected by large-footprint lidar include the stretching and mixing of canopy and ground returns over steep topographies. This waveform broadening effect makes it challenging to accurately estimate forest aboveground biomass, especially in mountainous areas.",
+        "AnswerCn": "地形坡度对大型足迹激光雷达收集的波形数据准确性影响的主要原因包括在陡峭地形上，树冠和地面回波的拉伸和混合。这种波形扩展效应使得在山区准确估计森林地上生物量变得具有挑战性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why is it challenging to collect sufficient reference data for validating forest aboveground biomass estimation models in steep terrain conditions?",
+        "QuestionCn": "为什么在陡峭地形条件下收集足够的参考数据以验证森林地上生物量估算模型具有挑战性？",
+        "AnswerEn": "It is challenging to collect sufficient reference data in steep terrain conditions because field measurements are difficult to conduct in such environments. The unavailability of enough reference data limits the validation of estimation models, necessitating alternative or enhanced data collection methods.",
+        "AnswerCn": "在陡峭地形条件下收集足够的参考数据是具有挑战性的，因为在这种环境中进行现场测量非常困难。参考数据的不足限制了估计模型的验证，因此需要替代或增强的数据收集方法。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What causes the limitations in using multispectral reflectance and radar backscattering coefficients for quantifying carbon storage in forest ecosystems?",
+        "QuestionCn": "使用多光谱反射率和雷达后向散射系数量化森林生态系统碳储存的限制原因是什么？",
+        "AnswerEn": "The limitations in using multispectral reflectance and radar backscattering coefficients for quantifying carbon storage arise from their lack of a physical basis and issues with sensitivity saturations and terrain effects. These factors restrict their capability to accurately estimate carbon storage, especially compared to lidar, which can directly detect vertical forest structures.",
+        "AnswerCn": "使用多光谱反射率和雷达后向散射系数来量化碳储存的局限性在于它们缺乏物理基础，并且存在灵敏度饱和和地形效应的问题。这些因素限制了它们准确估计碳储存的能力，尤其是与激光雷达相比，激光雷达可以直接探测垂直森林结构。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What impact does the availability of elevation datasets have on the applicability of lidar-based methods for forest AGB estimation over steep terrains?",
+        "QuestionCn": "高程数据集的可用性对基于激光雷达的方法在陡峭地形上估算森林生物量（AGB）的适用性有何影响？",
+        "AnswerEn": "The availability of elevation datasets is crucial as it allows for the application of methods like the PIPE method that rely on known terrain slopes to calculate slope-adaptive waveform metrics. Without such datasets, it becomes challenging to accurately estimate forest aboveground biomass using lidar waveforms over steep terrains.",
+        "AnswerCn": "高程数据集的可用性至关重要，因为它允许应用像PIPE方法这样的技术，这些方法依赖已知的地形坡度来计算坡度自适应波形指标。如果没有这些数据集，就很难在陡峭地形上准确估计森林地上生物量使用激光雷达波形。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "Why is it important to validate slope-adaptive metrics using data from spaceborne lidar systems?",
+        "QuestionCn": "为什么使用来自空间激光雷达系统的数据验证斜率自适应指标是重要的？",
+        "AnswerEn": "It is important to validate slope-adaptive metrics to ensure the accuracy of forest aboveground biomass estimations, as these metrics help account for the waveform broadening effects caused by terrain slopes, which is a significant challenge in mountainous regions.",
+        "AnswerCn": "验证坡度适应性指标以确保森林地上生物量估算的准确性是重要的，因为这些指标有助于考虑由于地形坡度引起的波形扩展效应，而这在山区是一个重大挑战。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures can be followed to mitigate the effects of terrain slope on the accuracy of lidar waveform data when estimating forest aboveground biomass?",
+        "QuestionCn": "可以采取哪些程序来减轻地形坡度对激光雷达波形数据在估计森林地上生物量时的影响？",
+        "AnswerEn": "A proposed method involves calculating slope-adaptive waveform metrics for forest AGB mapping by using lidar waveforms over mountainous areas. This includes modeling bare ground waveforms for a plane inclined and aligning them by the point of signal ending. By extracting energy quartiles separately using the signal ending points as references, the height differences between corresponding energy quartiles are used as slope-adaptive waveform metrics for AGB estimation.",
+        "AnswerCn": "一种提议的方法涉及通过使用激光雷达波形在山区计算坡度自适应波形指标，以进行森林生物量（AGB）映射。这包括对倾斜平面的裸地波形进行建模，并通过信号结束点进行对齐。通过将能量四分位数分别提取，以信号结束点作为参考，使用相应能量四分位数之间的高度差作为坡度自适应波形指标，用于AGB估计。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can researchers ensure the validation of slope-adaptive metrics when using global ecosystem dynamics data for forest biomass estimation?",
+        "QuestionCn": "研究人员如何确保在使用全球生态系统动态数据进行森林生物量估算时，坡度自适应指标的验证？",
+        "AnswerEn": "Validation can be achieved by using reference forest AGB calculated through normalized points and prediction models, such as those developed by Nelson et al. With an R2 value of 0.71, these models provide a basis for comparison, though they may not be as accurate as metrics specifically developed from field measurements. Using terrain slopes extracted from SRTM DEM or ALS data can further improve the estimation models.",
+        "AnswerCn": "验证可以通过使用通过标准化点计算的参考森林生物量（AGB）和预测模型来实现，例如Nelson等人开发的模型。这些模型的R²值为0.71，提供了比较的基础，尽管它们可能不如专门从实地测量中开发的指标准确。使用从SRTM DEM或ALS数据提取的地形坡度可以进一步改善估计模型。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What steps should be taken to simulate lidar waveforms for different terrain slopes to improve the estimation of forest structure?",
+        "QuestionCn": "为了改进森林结构估算，应采取哪些步骤来模拟不同地形坡度的激光雷达波形？",
+        "AnswerEn": "To simulate lidar waveforms, researchers can use typical footprint sizes and a range of terrain slopes. A theoretical model can be used to calculate lidar waveforms of bare ground with known terrain slopes. The forest waveform and its corresponding calculated bare ground waveform are then aligned by the signal ending points, and the slope-adaptive waveform metrics are extracted to serve as independent variables for estimating forest AGB.",
+        "AnswerCn": "为了模拟激光雷达波形，研究人员可以使用典型的光斑大小和一系列地形坡度。可以使用理论模型计算已知地形坡度的裸地激光雷达波形。森林波形及其对应的计算裸地波形通过信号结束点对齐，然后提取坡度自适应波形指标，以作为估计森林生物量（AGB）的自变量。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methods enable the accurate estimation of forest aboveground biomass (AGB) over steep terrain using lidar data?",
+        "QuestionCn": "哪些方法能够利用激光雷达数据准确估计陡峭地形上的森林地上生物量（AGB）？",
+        "AnswerEn": "Slope-adaptive waveform metrics and methods like the PIPE technique can be used to address the terrain effect on lidar waveforms, enabling more accurate estimation of forest AGB over steep terrain by compensating for the waveform broadening effects caused by slopes.",
+        "AnswerCn": "坡度自适应波形指标和方法，如PIPE技术，可以用来解决激光雷达波形的地形效应，从而通过补偿坡度引起的波形扩展效应，更准确地估计陡峭地形上的森林生物量。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How do slope-adaptive metrics facilitate the reduction of terrain-induced errors in lidar-based forest structure assessments?",
+        "QuestionCn": "坡度自适应指标如何促进减少激光雷达森林结构评估中的地形引起的误差？",
+        "AnswerEn": "Slope-adaptive metrics are designed to account for waveform broadening effects due to terrain slopes, thus improving estimation accuracy by providing a more precise assessment of forest vertical structure and aboveground biomass, especially in mountainous areas.",
+        "AnswerCn": "坡度自适应指标旨在考虑由于地形坡度引起的波形扩展效应，从而提高估计准确性，通过提供对森林垂直结构和地上生物量的更精确评估，特别是在山区。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What conditions are necessary for implementing a slope-adaptive approach in the analysis of lidar datasets for forest biomass mapping?",
+        "QuestionCn": "在激光雷达数据集分析中实施坡度自适应方法以进行森林生物量映射所需的条件是什么？",
+        "AnswerEn": "Implementing a slope-adaptive approach requires the availability of accurate terrain slope data, such as those extracted from SRTM DEM or ALS data, to adjust waveform metrics and improve the estimation of forest aboveground biomass over varying topographies.",
+        "AnswerCn": "实施坡度自适应方法需要准确的地形坡度数据，例如从SRTM DEM或ALS数据中提取的数据，以调整波形指标并改善对不同地形上森林地上生物量的估计。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why is it challenging to obtain enough reference data for validating slope-adaptive metrics using field measurements, especially in steep terrain conditions?",
+        "QuestionCn": "为什么在陡峭地形条件下使用现场测量验证坡度自适应指标时获得足够的参考数据具有挑战性？",
+        "AnswerEn": "It is difficult to collect enough reference data by field measurements over steep terrain conditions, which limits validation efforts.",
+        "AnswerCn": "在陡峭地形条件下，通过现场测量收集足够的参考数据是困难的，这限制了验证工作的开展。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the anticipated reasons for the challenges associated with accurately extracting canopy height metrics from lidar waveforms over steep terrain?",
+        "QuestionCn": "从陡峭地形的激光雷达波形中准确提取冠层高度指标所面临的挑战的预期原因是什么？",
+        "AnswerEn": "The challenges arise from terrain effects such as the broadening of waveforms, stretching and mixing of canopy and ground returns, and the difficulty in identifying ground peak positions.",
+        "AnswerCn": "挑战来自地形效应，例如波形的扩展、树冠和地面回波的拉伸与混合，以及识别地面峰值位置的困难。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why might the existing global dataset acquired after a certain date be inadequate for validating the estimation models of forest aboveground biomass in mountainous areas?",
+        "QuestionCn": "为什么在某个日期之后获得的现有全球数据集可能不足以验证山区森林地上生物量估计模型？",
+        "AnswerEn": "The existing dataset may be inadequate due to the limited availability of reference data specifically developed based on field measurements of forest plots, which affects the accuracy of comparisons.",
+        "AnswerCn": "现有的数据集可能不够充分，因为基于森林样地的实地测量开发的参考数据有限，这影响了比较的准确性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "What are the potential limitations of using large-footprint lidar data for forest AGB estimation in steep terrain areas?",
+        "QuestionCn": "在陡峭地形区域使用大范围激光雷达数据进行森林生物量（AGB）估计的潜在局限性是什么？",
+        "AnswerEn": "A major limitation is the waveform broadening effect where canopy and ground returns are mixed over steep terrains, which can affect the accuracy of AGB estimation. Additionally, collecting sufficient reference data for validation remains a challenge, especially over steep terrain conditions.",
+        "AnswerCn": "一个主要的限制是波形展宽效应，在陡峭地形上，树冠和地面回波混合，这可能影响生物量（AGB）估计的准确性。此外，收集足够的参考数据进行验证仍然是一个挑战，尤其是在陡峭的地形条件下。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In what ways could future datasets be expanded or refined to improve the estimation of forest AGB using remote sensing methods?",
+        "QuestionCn": "未来可以通过哪些方式扩展或优化数据集，以改进使用遥感方法估算森林地上生物量？",
+        "AnswerEn": "Future datasets could be expanded by incorporating more detailed and accurate terrain slope data, possibly from higher-resolution elevation datasets or advanced lidar systems. Additionally, integrating field measurements where feasible could enhance validation efforts and refine the estimation models.",
+        "AnswerCn": "未来的数据集可以通过整合更详细和准确的地形坡度数据来扩展，可能来自更高分辨率的高程数据集或先进的激光雷达系统。此外，在可行的情况下整合实地测量数据可以增强验证工作并改进估计模型。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how data collection methods can effectively address the challenges posed by terrain slopes in estimating forest aboveground biomass.",
+        "QuestionCn": "我不明白数据收集方法如何有效应对地形坡度带来的挑战，以估算森林地上生物量。",
+        "AnswerEn": "Terrain slopes can significantly affect the accuracy of large-footprint lidar waveforms, stretching and mixing canopy and ground returns. To address this, slope-adaptive metrics have been developed, such as the GEDI-SAWA product, which uses a slope-adaptive waveform index to improve estimation accuracy. These metrics consider terrain effects and adjust the waveform data accordingly, enhancing the accuracy of forest aboveground biomass estimations over mountainous areas.",
+        "AnswerCn": "地形坡度会显著影响大足迹激光雷达波形的准确性，导致树冠和地面回波的拉伸和混合。为了解决这个问题，开发了坡度自适应指标，例如GEDI-SAWA产品，它使用坡度自适应波形指数来提高估计的准确性。这些指标考虑了地形效应，并相应调整波形数据，从而提高了对山区森林地上生物量估计的准确性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I can't make sense of the techniques used to validate the accuracy of forest aboveground biomass estimation over steep terrains.",
+        "QuestionCn": "我无法理解用于验证陡峭地形上森林地上生物量估计准确性的技术。",
+        "AnswerEn": "Validation of forest aboveground biomass estimation over steep terrains is challenging due to the difficulty in collecting sufficient reference data from field measurements. However, techniques such as using normalized points and prediction models, as well as slope-adaptive waveform metrics like RHT, have been developed to improve estimation accuracy. These methods have been validated using datasets from the GEDI mission and compared with reference data to assess their performance.",
+        "AnswerCn": "在陡峭地形上验证森林地上生物量估计是具有挑战性的，因为从实地测量中收集足够的参考数据很困难。然而，已经开发了使用归一化点和预测模型以及坡度自适应波形指标（如RHT）等技术，以提高估计的准确性。这些方法已使用GEDI任务的数据集进行了验证，并与参考数据进行了比较，以评估其性能。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please investigate the data collection methods used for acquiring lidar waveforms for forest aboveground biomass estimation and their adaptations to terrain effects.",
+        "QuestionCn": "请调查用于获取激光雷达波形以估算森林地上生物量的数据收集方法及其对地形影响的适应性。",
+        "AnswerEn": "Spaceborne large-footprint lidar, such as that from the GEDI mission, is used for acquiring global lidar waveforms. These waveforms are sensitive to terrain slopes, which can cause broadening effects that mix canopy and ground returns. Methods like the PIPE approach model bare ground waveforms for inclined planes and align waveforms using signal ending points to extract slope-adaptive metrics, addressing the challenges posed by terrain effects.",
+        "AnswerCn": "空间borne大足迹激光雷达，如GEDI任务中的激光雷达，用于获取全球激光雷达波形。这些波形对地形坡度敏感，可能导致宽化效应，从而混合树冠和地面回波。像PIPE方法这样的技术为倾斜平面建模裸露地面波形，并通过信号结束点对齐波形，以提取适应坡度的指标，从而应对地形效应带来的挑战。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

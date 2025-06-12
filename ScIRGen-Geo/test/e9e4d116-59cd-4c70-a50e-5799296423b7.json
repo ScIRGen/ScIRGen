@@ -1,527 +1,527 @@
 {
-    "id": "e9e4d116-59cd-4c70-a50e-5799296423b7",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "Data set of driving factors of ecological assets in Qinghai Tibet Plateau from 2000 to 2020",
-            "titleCn": "四期青藏高原生态资产驱动要素数据集（2000-2020）",
-            "description": "Data set of driving factors of ecological assets in Qinghai Tibet Plateau from 2000 to 2020 contains six categories of ecological asset drivers: topography, climate, soil, vegetation, human activities, and land use types.The NPP of vegetation from the year 2000 to 2015 was obtained from the MOD17A3H dataset, available at https://lpdaac.usgs.gov/, and the spatial and temporal resolutions are 1 km and 1 a, respectively. The datasets utilized for digital elevation model (DEM) were acquired from the Resource and Environmental Science Data Center of the Chinese Academy of Sciences (http://www.resdc.cn/data.aspx) ( G u o e t a l . 2019). The data of 229 meteorological stations in the Qinghai-Tibet Plateau and its surrounding areas, including parameters like daily precipitation, average daily temperature, daily sunshine hours, etc., was obtained from the China Meteorological Data Network (http://data.cma.cn/). The annual average temperature, annual precipitation, solar radiation, and accumulated temperature were interpolated into grids maintaining the spatial resolution at 1 × 1 km by employing the Cokriging method of ArcGIS 10.3 (Adhikary et al. 2017). The natural breaks method was implemented to classify  different factors, and the average annual precipitation, accumulated temperature, annual average temperature, solar radiation, and elevation were divided into 6 levels, and the slope and aspect were divided into 9 and 10 levels, respectively; population and GDP data were divided into 5 levels. Microsoft Excel was used to remove outliers and to compare and analyze various ecological subregions and different periods.This dataset can be used to support the research on the ecological environment and ecological assets of the Qinghai Tibet Plateau.",
-            "descriptionCn": "2000-2020四期青藏高原生态资产驱动要素数据集包含地形、气候、土壤、植被、人类活动、土地利用类型6类生态资产驱动要素。2000年至2015年的植被净值来自MOD17A3H数据集（https://lpdaac.usgs.gov/），空间和时间分辨率分别为1km和1a。数字高程模型（DEM）来自中国科学院资源与环境科学数据中心（http://www.resdc.cn/data.aspx）。青藏高原及周边地区229个气象站的数据，包括日降水量、日平均气温、日照时数等参数，均来自中国气象资料网（http://data.cma.cn/）。采用ArcGIS 10.3的Cokriging方法对年平均气温、年降水量、日照时数和积温进行插值，空间分辨率保持在1×1 km。用自然断点法将年平均降水量、积温、年平均温度、太阳辐射、海拔分为6级，将坡度和长宽分别分为9级和10级；将人口和GDP数据分为5级。使用Microsoft Excel去除异常值。此数据集可用于支持青藏高原地区生态环境、生态资产的研究。",
-            "instructions": "File name: \nTerrain factor: It is stored in tif format, and the name of the file is the corresponding terrain factor. For example, Dem.tif means that this file is the elevation data of the study area. \n1.Aspect, aspect, format .tif, resolution is 1km, no unit. \n2.Slope, slope, format .tif, resolution is 1km, unit °. \n3.Dem, altitude, format .tif, resolution is 1km, unit m. \n\nClimate factors: stored in adf format, the name of the folder is \"yyyyxxx\", where yyyy represents the year, and xxx represents different climate factors. For example, 2000rainc represents the adf file in this folder to describe the total annual precipitation in the study area in 2000. \n4.jw10c, accumulated temperature>10℃, format.Grid, resolution of 1km, unit of °C, year 2000, 2005, 2010, 2015. \n5.rainc, total annual precipitation, format.Grid, resolution of 1km, unit of mm , year 2000, 2005, 2010, 2015. \n6.tempc, annual average temperature, format.Grid, resolution of 1km, unit ℃, year 2000, 2005, 2010, 2015. \n7.Sunc, sunshine hours, format.Grid , The resolution is 1km, the unit is hour, and the year is 2000, 2005, 2010, 2015. \n\nHuman activity interference factor: stored in tif format, the file names are \"GDPyyyy.tif\" and \"POPyyyy.tif\", where yyyy represents year, GDP represents gross domestic product, and POP represents population density, such as GDP2000.tif represents this The file describes the gross product of the 1km grid of the study area in 2000. \n8. GDP, grid data of gross domestic product in kilometers, format.tif, resolution of 1km, unit 10,000 yuan/km2, year 2000, 2005, 2010, 2015. \n9.POP, grid data of population density in kilometers, format. tif, resolution is 1km, unit person/km2, year 2000, 2005, 2010, 2015. \n\nLand use type: Stored in tif format, the file name is \"ldyyyy.tif\", where yyyy represents the year, for example, ld2000 represents the file describing the land use type in the study area in 2000. \n10.Ld, land use type, format .tif, resolution 1km, no unit, year 2000, 2005, 2010, 2015, land type refers to the classification system of land use type of Chinese Academy of Sciences. \n\nSoil: Stored as a tif, the file name is \"Soiltype.tif\", this file describes the soil type of the study area. \n11.Soiltype, soil type, format .tif, unit no, digitally generated according to the \"1:1 million Soil Map of the People's Republic of China\" compiled and published by the National Soil Census Office in 1995, using the traditional \"soil occurrence classification\" system, The basic cartographic unit is a subcategory, with 12 soil classes, 61 soil categories and 227 subcategories. The soil attribute database has 2647 records and 16 attribute data items. \n\nVegetation: Stored in tif format, the file name is \"yyyyfvc.tif\", where yyyy represents the year, for example, 2000fvc.tif represents this file to describe the vegetation coverage in the study area in 2000.\n 12. FVC, vegetation coverage, format .tif, resolution 1km, no unit, year 2000, 2005, 2010, 2015. \n\nData reading method: All files in the dataset can be directly opened with digital image processing software such as ArcGIS, data The format is tif.",
-            "instructionsCn": "文件命名：\n地形因子：以tif格式存储，文件的名称为对应的地形因子，比如Dem.tif就代表这个文件是研究区海拔数据。\n1.Aspect, 坡向，格式.tif , 分辨率为1km，单位 无。\n2.Slope，坡度，格式.tif , 分辨率为1km，单位 °。\n3.Dem，海拔，格式.tif , 分辨率为1km，单位 m。\n\n气候因子：以adf格式存储，文件夹的名称为“yyyyxxx”，其中yyyy代表年，xxx代表不同的气候因子，比如2000rainc就代表这个文件夹中的adf文件描述2000年研究区年总降水量。\n4.jw10c, 积温>10℃，格式.Grid , 分辨率为1km，单位 ℃，年份2000， 2005,2010,2015。\n5.rainc，年总降水量，格式.Grid , 分辨率为1km，单位 mm，年份2000, 2005,2010,2015。\n6.tempc，年均温，格式.Grid , 分辨率为1km，单位 ℃，年份2000, 2005,2010,2015。\n7.Sunc, 日照时数，格式.Grid , 分辨率为1km，单位 hour，年份2000, 2005,2010,2015。\n\n人类活动干扰因子：以tif格式存储，文件的名称为“GDPyyyy.tif”和“POPyyyy.tif”，其中yyyy代表年，GDP代表国内生产总值，POP代表人口密度，比如GDP2000.tif就代表这个文件描述2000年研究区1km格网的生产总值。\n8.GDP, 国内生产总值公里格网数据，格式.tif, 分辨率为1km，单位 万元/km2，年份2000, 2005,2010,2015。\n9.POP,人口密度公里格网数据，格式.tif,分辨率为1km，单位 人/km2，年份2000, 2005,2010,2015。\n\n土地利用类型：以tif格式存储，文件的名称为“ldyyyy.tif”，其中yyyy代表年，比如ld2000就代表这个文件描述2000年研究区土地利用类型。\n10.Ld， 土地利用类型，格式.tif, 分辨率1km, 单位 无， 年份2000, 2005,2010,2015, 土地类型参照中国科学院土地利用类型分类体系。\n\n土壤：以tif存储，文件的名称为“Soiltype.tif”，此文件描述研究区土壤类型。\n11.Soiltype，土壤类型，格式.tif，单位 无， 根据全国土壤普查办公室1995年编制并出版的《1：100万中华人民共和国土壤图》数字化生成， 采用了传统的“土壤发生分类”系统，基本制图单元为亚类，共分出12土纲，61个土类，227个亚类。土壤属性数据库记录数达2647条，属性数据项16个。\n\n植被：以tif格式存储，文件的名称为“yyyyfvc.tif”，其中yyyy代表年，比如2000fvc.tif就代表这个文件描述2000年研究区植被覆盖度。\n12.FVC，植被覆盖度，格式.tif，分辨率1km，单位 无，年份 2000，2005,2010,2015.\n\n数据读取方式：数据集中的所有文件可以直接用Arcgis等数字图像处理软件打开，数据格式为tif。",
-            "east": 104.7833,
-            "west": 79.3167,
-            "south": 26.0,
-            "north": 39.7833,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 182997546.0,
-            "cstr": "18406.11.Terre.tpdc.272400",
-            "doi": "10.11888/Terre.tpdc.272400",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "杨飞",
-                "nameEn": "YANG Fei",
-                "unitEn": "Institute of Geographical Sciences and Natural Resource Research, CAS",
-                "unitCn": "中国科学院地理科学与资源研究所"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Cokriging for enhanced spatial interpolation of rainfall in two Australian catchments",
-                "referenceCn": null,
-                "referenceEn": "Adhikary, S.K., Muttil, N., & Yilmaz, A.G. (2017). Cokriging for enhanced spatial interpolation of rainfall in two Australian catchments. Hydrological Processes, 31(12), 2143–2161."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Determining the contributions of climate change and human activities to the vegetation NPP dynamics in the Qinghai-Tibet Plateau, China, from 2000 to 2015",
-                "referenceCn": null,
-                "referenceEn": "Guo, B., Han, B.M., Yang, F., Chen, S.T., Liu, Y., & Yang, W.N. (2020). Determining the contributions of climate change and human activities to the vegetation NPP dynamics in the Qinghai-Tibet Plateau, China, from 2000 to 2015.Environ Monit Assess, 192(10), 663–. doi:10.1007/s10661-020-08606-6"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Spatial and temporal change patterns of net primary productivity and its response to climate change in the Qinghai–Tibet Plateau of China from 2000 to 2015",
-                "referenceCn": null,
-                "referenceEn": "Guo, B., Yang, F., Han, B. M., Chen, S. T., Liu, Y., Yang, X., He, T. L., Chen, X., Liu, C. T., & Gong, R. (2019). Spatial and temporal change patterns of net primary productivity and its response to climate change in the Qinghai–Tibet Plateau of China from 2000 to 2015. Journal of Arid Land, 12(1), 1–17."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "DEM",
-                "nameEn": "Digital elevation model"
-            },
-            {
-                "nameCn": "土地利用/覆盖",
-                "nameEn": "Land Use/Land Cover"
-            },
-            {
-                "nameCn": "土地利用格局",
-                "nameEn": "Land use pattern"
-            },
-            {
-                "nameCn": "土壤",
-                "nameEn": "Soil"
-            },
-            {
-                "nameCn": "土壤类型",
-                "nameEn": "Soil classification"
-            },
-            {
-                "nameCn": "地形",
-                "nameEn": "Topography"
-            },
-            {
-                "nameCn": "坡向",
-                "nameEn": "Aspect"
-            },
-            {
-                "nameCn": "坡度",
-                "nameEn": "Slope"
-            },
-            {
-                "nameCn": "平均气温",
-                "nameEn": "Mean temperature"
-            },
-            {
-                "nameCn": "日照",
-                "nameEn": "Sunshine"
-            },
-            {
-                "nameCn": "日照时数",
-                "nameEn": "Sunshine duration"
-            },
-            {
-                "nameCn": "植被",
-                "nameEn": "Vegetation"
-            },
-            {
-                "nameCn": "植被覆盖",
-                "nameEn": "vegetation coverage"
-            },
-            {
-                "nameCn": "温度",
-                "nameEn": "Temperature"
-            },
-            {
-                "nameCn": "降水",
-                "nameEn": "Precipitation"
-            },
-            {
-                "nameCn": "降水量",
-                "nameEn": "Precipitation amount"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "青藏高原",
-                "keywordEn": "The Tibetan Plateau"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2000-2020年",
-                "keywordEn": "2000-2020",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
-                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "e9e4d116-59cd-4c70-a50e-5799296423b7",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "Data set of driving factors of ecological assets in Qinghai Tibet Plateau from 2000 to 2020",
+      "titleCn": "四期青藏高原生态资产驱动要素数据集（2000-2020）",
+      "description": "Data set of driving factors of ecological assets in Qinghai Tibet Plateau from 2000 to 2020 contains six categories of ecological asset drivers: topography, climate, soil, vegetation, human activities, and land use types.The NPP of vegetation from the year 2000 to 2015 was obtained from the MOD17A3H dataset, available at https://lpdaac.usgs.gov/, and the spatial and temporal resolutions are 1 km and 1 a, respectively. The datasets utilized for digital elevation model (DEM) were acquired from the Resource and Environmental Science Data Center of the Chinese Academy of Sciences (http://www.resdc.cn/data.aspx) ( G u o e t a l . 2019). The data of 229 meteorological stations in the Qinghai-Tibet Plateau and its surrounding areas, including parameters like daily precipitation, average daily temperature, daily sunshine hours, etc., was obtained from the China Meteorological Data Network (http://data.cma.cn/). The annual average temperature, annual precipitation, solar radiation, and accumulated temperature were interpolated into grids maintaining the spatial resolution at 1 × 1 km by employing the Cokriging method of ArcGIS 10.3 (Adhikary et al. 2017). The natural breaks method was implemented to classify  different factors, and the average annual precipitation, accumulated temperature, annual average temperature, solar radiation, and elevation were divided into 6 levels, and the slope and aspect were divided into 9 and 10 levels, respectively; population and GDP data were divided into 5 levels. Microsoft Excel was used to remove outliers and to compare and analyze various ecological subregions and different periods.This dataset can be used to support the research on the ecological environment and ecological assets of the Qinghai Tibet Plateau.",
+      "descriptionCn": "2000-2020四期青藏高原生态资产驱动要素数据集包含地形、气候、土壤、植被、人类活动、土地利用类型6类生态资产驱动要素。2000年至2015年的植被净值来自MOD17A3H数据集（https://lpdaac.usgs.gov/），空间和时间分辨率分别为1km和1a。数字高程模型（DEM）来自中国科学院资源与环境科学数据中心（http://www.resdc.cn/data.aspx）。青藏高原及周边地区229个气象站的数据，包括日降水量、日平均气温、日照时数等参数，均来自中国气象资料网（http://data.cma.cn/）。采用ArcGIS 10.3的Cokriging方法对年平均气温、年降水量、日照时数和积温进行插值，空间分辨率保持在1×1 km。用自然断点法将年平均降水量、积温、年平均温度、太阳辐射、海拔分为6级，将坡度和长宽分别分为9级和10级；将人口和GDP数据分为5级。使用Microsoft Excel去除异常值。此数据集可用于支持青藏高原地区生态环境、生态资产的研究。",
+      "instructions": "File name: \nTerrain factor: It is stored in tif format, and the name of the file is the corresponding terrain factor. For example, Dem.tif means that this file is the elevation data of the study area. \n1.Aspect, aspect, format .tif, resolution is 1km, no unit. \n2.Slope, slope, format .tif, resolution is 1km, unit °. \n3.Dem, altitude, format .tif, resolution is 1km, unit m. \n\nClimate factors: stored in adf format, the name of the folder is \"yyyyxxx\", where yyyy represents the year, and xxx represents different climate factors. For example, 2000rainc represents the adf file in this folder to describe the total annual precipitation in the study area in 2000. \n4.jw10c, accumulated temperature>10℃, format.Grid, resolution of 1km, unit of °C, year 2000, 2005, 2010, 2015. \n5.rainc, total annual precipitation, format.Grid, resolution of 1km, unit of mm , year 2000, 2005, 2010, 2015. \n6.tempc, annual average temperature, format.Grid, resolution of 1km, unit ℃, year 2000, 2005, 2010, 2015. \n7.Sunc, sunshine hours, format.Grid , The resolution is 1km, the unit is hour, and the year is 2000, 2005, 2010, 2015. \n\nHuman activity interference factor: stored in tif format, the file names are \"GDPyyyy.tif\" and \"POPyyyy.tif\", where yyyy represents year, GDP represents gross domestic product, and POP represents population density, such as GDP2000.tif represents this The file describes the gross product of the 1km grid of the study area in 2000. \n8. GDP, grid data of gross domestic product in kilometers, format.tif, resolution of 1km, unit 10,000 yuan/km2, year 2000, 2005, 2010, 2015. \n9.POP, grid data of population density in kilometers, format. tif, resolution is 1km, unit person/km2, year 2000, 2005, 2010, 2015. \n\nLand use type: Stored in tif format, the file name is \"ldyyyy.tif\", where yyyy represents the year, for example, ld2000 represents the file describing the land use type in the study area in 2000. \n10.Ld, land use type, format .tif, resolution 1km, no unit, year 2000, 2005, 2010, 2015, land type refers to the classification system of land use type of Chinese Academy of Sciences. \n\nSoil: Stored as a tif, the file name is \"Soiltype.tif\", this file describes the soil type of the study area. \n11.Soiltype, soil type, format .tif, unit no, digitally generated according to the \"1:1 million Soil Map of the People's Republic of China\" compiled and published by the National Soil Census Office in 1995, using the traditional \"soil occurrence classification\" system, The basic cartographic unit is a subcategory, with 12 soil classes, 61 soil categories and 227 subcategories. The soil attribute database has 2647 records and 16 attribute data items. \n\nVegetation: Stored in tif format, the file name is \"yyyyfvc.tif\", where yyyy represents the year, for example, 2000fvc.tif represents this file to describe the vegetation coverage in the study area in 2000.\n 12. FVC, vegetation coverage, format .tif, resolution 1km, no unit, year 2000, 2005, 2010, 2015. \n\nData reading method: All files in the dataset can be directly opened with digital image processing software such as ArcGIS, data The format is tif.",
+      "instructionsCn": "文件命名：\n地形因子：以tif格式存储，文件的名称为对应的地形因子，比如Dem.tif就代表这个文件是研究区海拔数据。\n1.Aspect, 坡向，格式.tif , 分辨率为1km，单位 无。\n2.Slope，坡度，格式.tif , 分辨率为1km，单位 °。\n3.Dem，海拔，格式.tif , 分辨率为1km，单位 m。\n\n气候因子：以adf格式存储，文件夹的名称为“yyyyxxx”，其中yyyy代表年，xxx代表不同的气候因子，比如2000rainc就代表这个文件夹中的adf文件描述2000年研究区年总降水量。\n4.jw10c, 积温>10℃，格式.Grid , 分辨率为1km，单位 ℃，年份2000， 2005,2010,2015。\n5.rainc，年总降水量，格式.Grid , 分辨率为1km，单位 mm，年份2000, 2005,2010,2015。\n6.tempc，年均温，格式.Grid , 分辨率为1km，单位 ℃，年份2000, 2005,2010,2015。\n7.Sunc, 日照时数，格式.Grid , 分辨率为1km，单位 hour，年份2000, 2005,2010,2015。\n\n人类活动干扰因子：以tif格式存储，文件的名称为“GDPyyyy.tif”和“POPyyyy.tif”，其中yyyy代表年，GDP代表国内生产总值，POP代表人口密度，比如GDP2000.tif就代表这个文件描述2000年研究区1km格网的生产总值。\n8.GDP, 国内生产总值公里格网数据，格式.tif, 分辨率为1km，单位 万元/km2，年份2000, 2005,2010,2015。\n9.POP,人口密度公里格网数据，格式.tif,分辨率为1km，单位 人/km2，年份2000, 2005,2010,2015。\n\n土地利用类型：以tif格式存储，文件的名称为“ldyyyy.tif”，其中yyyy代表年，比如ld2000就代表这个文件描述2000年研究区土地利用类型。\n10.Ld， 土地利用类型，格式.tif, 分辨率1km, 单位 无， 年份2000, 2005,2010,2015, 土地类型参照中国科学院土地利用类型分类体系。\n\n土壤：以tif存储，文件的名称为“Soiltype.tif”，此文件描述研究区土壤类型。\n11.Soiltype，土壤类型，格式.tif，单位 无， 根据全国土壤普查办公室1995年编制并出版的《1：100万中华人民共和国土壤图》数字化生成， 采用了传统的“土壤发生分类”系统，基本制图单元为亚类，共分出12土纲，61个土类，227个亚类。土壤属性数据库记录数达2647条，属性数据项16个。\n\n植被：以tif格式存储，文件的名称为“yyyyfvc.tif”，其中yyyy代表年，比如2000fvc.tif就代表这个文件描述2000年研究区植被覆盖度。\n12.FVC，植被覆盖度，格式.tif，分辨率1km，单位 无，年份 2000，2005,2010,2015.\n\n数据读取方式：数据集中的所有文件可以直接用Arcgis等数字图像处理软件打开，数据格式为tif。",
+      "east": 104.7833,
+      "west": 79.3167,
+      "south": 26.0,
+      "north": 39.7833,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 182997546.0,
+      "cstr": "18406.11.Terre.tpdc.272400",
+      "doi": "10.11888/Terre.tpdc.272400",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Net primary productivity (NPP) denotes the total amount of organic dry matter accumulated by green plants with respect to the unit time and area. NPP is the residual part of the total amount of organic matter produced by photosynthesis after the elimination of autotrophic respiration. As the core content of the carbon budget and climate change research, NPP serves as an important indicator to determine the ecosystem health and sustainable development level. Therefore, analyzing and discussing the spatial-temporal change patterns and the driving mechanisms of NPP in a regional vegetation ecosystem not only are of significance to understand the response of this ecosystem to climate change, but also can provide a scientific basis for ecological environment protection, plant yield estimation, resource exploitation, effective management of natural resources, and formulation of the corresponding social and economic development strategies. The unique geographical location, altitude, climate and geomorphological conditions of the Qinghai–Tibet Plateau in China result in various climatic and ecosystem types. As a special geographic unit, the Qinghai–Tibet Plateau exhibits an important role in regulating and indicating global change; it is considered to be the ''natural laboratory'' for studies of climate change in the world."
-            ],
-            "research objective": [
-                "Therefore, in this study, a gravity center model was introduced to analyze the spatial and temporal change patterns and the driving mechanisms of NPP in the Qinghai–Tibet Plateau from 2000 to 2015 in combination with the conventional analysis methods. Furthermore, the relative effects of climate change and human activities on the NPP changes were also quantitatively distinguished. This study provides data and theoretical support to reveal the evolution patterns of the ecosystems in the Qinghai–Tibet Plateau and the response mechanisms of the ecosystems to global change."
-            ],
-            "challenges": [
-                "Although some previous studies have used conventional analysis methods (such as the correlation analysis model) to investigate the NPP change patterns in the Qinghai–Tibet Plateau, the relationships between NPP and climate factors and the relative effects of climate change and human activities on the NPP changes remain unclear."
-            ],
-            "methods": [],
-            "dataset": [
-                "The NPP during 2000–2015 obtained from the MOD17A3 dataset is available at https://lpdaac.usgs.gov/. The spatial and temporal resolutions were 1 km and 1 a, respectively. The data (including the daily precipitation and mean daily temperature) of 229 meteorological stations in the Qinghai–Tibet Plateau and its surrounding areas, were obtained from the China Meteorological Data Network (http://data.cma.cn/)."
-            ],
-            "findings": [
-                "The average annual NPP in the Qinghai–Tibet Plateau showed a decreasing trend from the southeast to the northwest during 2000–2015. With respect to the inter-annual changes, the average annual NPP exhibited a fluctuating upward trend from 2000 to 2015, with a steep increase observed in 2005 and a high fluctuation observed from 2005 to 2015. In the Qinghai–Tibet Plateau, the regions with the increase in NPP (change rate higher than 10%) were mainly concentrated in the Three-River Source Region, the northern Hengduan Mountains, the middle and lower reaches of the Yarlung Zangbo River, and the eastern parts of the North Tibet Plateau, whereas the regions with the decrease in NPP (change rate lower than –10%) were mainly concentrated in the upper reaches of the Yarlung Zangbo River and the Ali Plateau. The gravity center of NPP in the Qinghai–Tibet Plateau has moved southwestward during 2000–2015, indicating that the increment and growth rate of NPP in the southwestern part is greater than those of NPP in the northeastern part. Further, a significant correlation was observed between NPP and climate factors in the Qinghai–Tibet Plateau. The regions exhibiting a significant correlation between NPP and precipitation were mainly located in the central and eastern Qinghai–Tibet Plateau, and the regions exhibiting a significant correlation between NPP and temperature were mainly located in the southern and eastern Qinghai–Tibet Plateau. Furthermore, the relative effects of climate change and human activities on the NPP changes in the Qinghai–Tibet Plateau exhibited significant spatial differences in three types of zones, i.e., the climate change-dominant zone, the human activity-dominant zone, and the climate change and human activity interaction zone."
-            ],
-            "backgroundCn": [
-                "净初级生产力（NPP）指的是绿色植物在单位时间和单位面积内积累的有机干物质的总量。NPP是通过光合作用产生的有机物总量减去自养呼吸后剩余的部分。作为碳预算和气候变化研究的核心内容，NPP是衡量生态系统健康和可持续发展水平的重要指标。因此，分析和讨论区域植被生态系统中NPP的时空变化模式及其驱动机制，不仅对理解该生态系统对气候变化的响应具有重要意义，还可以为生态环境保护、植物产量估算、资源开发、自然资源有效管理以及相应的社会经济发展战略的制定提供科学依据。中国青藏高原独特的地理位置、海拔、气候和地貌条件导致了多种气候和生态系统类型。作为一个特殊的地理单元，青藏高原在调节和指示全球变化方面发挥着重要作用，被认为是全球气候变化研究的“自然实验室”。"
-            ],
-            "research objectiveCn": [
-                "因此，在本研究中，引入了重心模型来分析2000年至2015年青藏高原NPP的时空变化模式及其驱动机制，并结合传统分析方法。此外，还定量区分了气候变化和人类活动对NPP变化的相对影响。本研究为揭示青藏高原生态系统的演变模式及其对全球变化的响应机制提供了数据和理论支持。"
-            ],
-            "challengesCn": [
-                "尽管一些先前的研究使用了传统分析方法（如相关分析模型）来研究青藏高原的NPP变化模式，但NPP与气候因素之间的关系以及气候变化和人类活动对NPP变化的相对影响仍不清楚。"
-            ],
-            "methodsCn": [],
-            "datasetCn": [
-                "2000年至2015年期间的净初级生产力（NPP）数据来自MOD17A3数据集，网址为https://lpdaac.usgs.gov/。该数据的空间分辨率为1公里，时间分辨率为1年。此外，青藏高原及其周边地区229个气象站的日降水量和日均气温数据来自中国气象数据网（http://data.cma.cn/）。"
-            ],
-            "findingsCn": [
-                "青藏 Plateau 的年均 NPP 在 2000 年至 2015 年期间呈现出从东南向西北递减的趋势。就年际变化而言，年均 NPP 从 2000 年到 2015 年表现出波动上升的趋势，2005 年出现了急剧增加，而 2005 年至 2015 年期间则观察到较大的波动。在青藏 Plateau，NPP 增加的区域（变化率高于 10%）主要集中在三江源地区、北横断山脉、雅鲁藏布江中下游以及北藏 Plateau 的东部，而 NPP 减少的区域（变化率低于 -10%）主要集中在雅鲁藏布江上游和阿里 Plateau。2000 年至 2015 年间，青藏 Plateau 的 NPP 重心向西南移动，表明西南部的 NPP 增长量和增长率大于东北部的 NPP。此外，青藏 Plateau 的 NPP 与气候因素之间存在显著相关性。与降水量显著相关的区域主要位于青藏 Plateau 的中部和东部，而与温度显著相关的区域主要位于青藏 Plateau 的南部和东部。此外，气候变化和人类活动对青藏 Plateau NPP 变化的相对影响在三种类型的区域中表现出显著的空间差异，即气候变化主导区、人类活动主导区以及气候变化与人类活动相互作用区。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "杨飞",
+        "nameEn": "YANG Fei",
+        "unitEn": "Institute of Geographical Sciences and Natural Resource Research, CAS",
+        "unitCn": "中国科学院地理科学与资源研究所"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Does the use of ArcGIS 10.3's Cokriging method ensure the spatial resolution of 1x1 km for interpolated climate data?",
-                "QuestionCn": "使用ArcGIS 10.3的协同克里金方法是否确保插值气候数据的空间分辨率为1x1公里？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the key ecological asset driving factors included in a dataset for the Qinghai-Tibet Plateau?",
-                "QuestionCn": "青藏高原生态资产驱动因素的关键要素包括哪些？",
-                "AnswerEn": "topography, climate, soil, vegetation, human activities, land use types",
-                "AnswerCn": "地形、气候、土壤、植被、人类活动、土地利用类型",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Where is the digital elevation model (DEM) data used in a dataset for the Qinghai-Tibet Plateau sourced from?",
-                "QuestionCn": "青藏高原数据集中使用的数字高程模型（DEM）数据来源于哪里？",
-                "AnswerEn": "Chinese Academy of Sciences Resource and Environment Science Data Center",
-                "AnswerCn": "中国科学院资源环境科学数据中心",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What data collection method is used to interpolate annual average temperature and precipitation data in a dataset for the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在青藏高原的数据集中，用于插值年平均气温和降水量数据的数据收集方法是什么？",
-                "AnswerEn": "Cokriging method",
-                "AnswerCn": "协同克里金方法",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a dataset that includes both climate data and human activity factors for the Qinghai–Tibet Plateau?",
-                "QuestionCn": "您能否提供一个包含青藏高原气候数据和人类活动因素的示例数据集？",
-                "AnswerEn": "A dataset that includes both climate data and human activity factors for the Qinghai–Tibet Plateau is the dataset containing information from 229 meteorological stations in the region, which includes daily precipitation, mean daily temperature, and data on human activities such as population and GDP, categorized into levels.",
-                "AnswerCn": "一个包含气候数据和人类活动因素的数据集是来自青藏高原229个气象站的信息，该数据集包括每日降水量、日均气温以及人类活动的数据，如人口和GDP，按级别分类。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a data interpolation method used to process climatic data for ecological studies in the Qinghai–Tibet Plateau?",
-                "QuestionCn": "在青藏高原的生态研究中，用于处理气候数据的一个数据插值方法的例子是什么？",
-                "AnswerEn": "An example of a data interpolation method used to process climatic data for ecological studies in the Qinghai–Tibet Plateau is the Cokriging method, utilized to interpolate annual average temperature, precipitation, sunshine hours, and accumulated temperature, maintaining a spatial resolution of 1×1 km.",
-                "AnswerCn": "在青藏高原的生态研究中，用于处理气候数据的一种数据插值方法是协同克里金法（Cokriging），该方法用于插值年平均气温、降水量、日照时数和积温，保持1×1公里的空间分辨率。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Could you provide an example of how vegetation data is sourced and its temporal resolution for studies on the Qinghai–Tibet Plateau?",
-                "QuestionCn": "您能否提供一个关于青藏高原植被数据来源及其时间分辨率的例子？",
-                "AnswerEn": "An example of how vegetation data is sourced for studies on the Qinghai–Tibet Plateau is the use of the MOD17A3H dataset, which provides net primary productivity (NPP) data with a temporal resolution of 1 year and a spatial resolution of 1 km.",
-                "AnswerCn": "一个关于青藏高原植被数据来源的例子是使用MOD17A3H数据集，该数据集提供了净初级生产力（NPP）数据，时间分辨率为1年，空间分辨率为1公里。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the key characteristics of the ecological asset driving factors dataset for the Qinghai–Tibet Plateau from 2000 to 2020?",
-                "QuestionCn": "青藏高原2000年至2020年的生态资产驱动因素数据集的关键特征是什么？",
-                "AnswerEn": "terrain, climate, soil, vegetation, human activities, land use types, spatial resolution of 1 km, temporal resolution of 1 year, digital elevation model (DEM), daily precipitation, average temperature, sunshine duration, Cokriging interpolation, ArcGIS 10.3, spatial resolution of 1×1 km, annual precipitation levels, temperature levels, population levels, GDP levels",
-                "AnswerCn": "地形、气候、土壤、植被、人类活动、土地利用类型、空间分辨率1公里、时间分辨率1年、数字高程模型（DEM）、每日降水量、平均气温、日照时长、协同克里金插值、ArcGIS 10.3、空间分辨率1×1公里、年降水量水平、温度水平、人口水平、GDP水平。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the characteristics of the methods used to interpolate climate data in the Qinghai–Tibet Plateau ecological asset dataset?",
-                "QuestionCn": "青藏高原生态资产数据集中用于插值气候数据的方法的特点是什么？",
-                "AnswerEn": "Cokriging method, ArcGIS 10.3, spatial resolution of 1×1 km, climate parameters divided into levels",
-                "AnswerCn": "协同克里金方法，ArcGIS 10.3，空间分辨率为1×1公里，气候参数分为多个层级。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the specific features of the Net Primary Productivity (NPP) dataset used in studies concerning the Qinghai–Tibet Plateau?",
-                "QuestionCn": "在关于青藏高原的研究中使用的初级净生产力（NPP）数据集的具体特征是什么？",
-                "AnswerEn": "1 km spatial resolution, 1 year temporal resolution",
-                "AnswerCn": "1公里空间分辨率，1年时间分辨率",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the meteorological data collected from the Qinghai-Tibet Plateau?",
-                "QuestionCn": "青藏高原收集的气象数据的空间分辨率是多少？",
-                "AnswerEn": "1 km",
-                "AnswerCn": "1公里",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many meteorological stations provided data for the Qinghai-Tibet Plateau and its surrounding areas?",
-                "QuestionCn": "有多少个气象站为青藏高原及其周边地区提供数据？",
-                "AnswerEn": "229",
-                "AnswerCn": "229",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Over how many years does the NPP data from the MOD17A3 dataset span?",
-                "QuestionCn": "MOD17A3数据集的NPP数据跨度多少年？",
-                "AnswerEn": "16 years",
-                "AnswerCn": "16年",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does 'interpolation method' mean in the context of climate data collection?",
-                "QuestionCn": "在气候数据收集的上下文中，“插值方法”指的是一种用于估算在已知数据点之间的未知值的技术。这种方法通常用于填补气候数据中的空白或提高数据的空间分辨率，以便更好地理解和分析气候变化和趋势。",
-                "AnswerEn": "In the context of climate data collection, 'interpolation method' refers to a mathematical technique used to estimate unknown values that fall within the range of a discrete set of known data points. Specifically, the Cokriging method is a type of interpolation used to estimate spatial variables like annual average temperature, annual precipitation, sunshine hours, and accumulated temperature, maintaining a spatial resolution of 1x1 km.",
-                "AnswerCn": "在气候数据收集的背景下，“插值方法”是指一种数学技术，用于估计落在离散已知数据点范围内的未知值。具体而言，Cokriging方法是一种插值技术，用于估计空间变量，如年平均温度、年降水量、日照小时数和积温，保持1x1公里的空间分辨率。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is meant by 'removing outliers' in data preprocessing?",
-                "QuestionCn": "在数据预处理过程中，“去除异常值”是指识别并删除那些与其他数据点显著不同的值。这些异常值可能会影响数据分析的结果，导致模型的性能下降，因此在分析之前通常需要将其移除。",
-                "AnswerEn": "'Removing outliers' in data preprocessing refers to the process of identifying and eliminating data points that significantly deviate from the rest of the dataset. This is done to improve data quality and analysis accuracy, as outliers can skew results and lead to incorrect conclusions. In this context, Microsoft Excel is used to remove outliers from population and GDP data, categorizing them into five levels.",
-                "AnswerCn": "“去除异常值”在数据预处理中的意思是识别并消除与数据集其余部分显著偏离的数据点。这样做是为了提高数据质量和分析准确性，因为异常值可能会扭曲结果并导致错误的结论。在这种情况下，使用Microsoft Excel从人口和GDP数据中去除异常值，并将其分类为五个级别。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What does 'natural breaks method' mean in classifying environmental data?",
-                "QuestionCn": "“自然断点法”在环境数据分类中是什么意思？",
-                "AnswerEn": "The 'natural breaks method' in classifying environmental data involves dividing continuous data into distinct categories or classes where there are significant jumps in the data values. This method is used to classify annual average precipitation, accumulated temperature, annual average temperature, solar radiation, and elevation into six levels, and slope and aspect into nine and ten levels, respectively.",
-                "AnswerCn": "“自然断裂法”在分类环境数据时涉及将连续数据划分为明显的类别或等级，其中数据值存在显著的跳跃。该方法用于将年平均降水量、积温、年平均气温、太阳辐射和海拔划分为六个等级，而坡度和方位则分别划分为九个和十个等级。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the data collection methods for climate factors in the Qinghai–Tibet Plateau compare to those used for vegetation data collection in terms of spatial and temporal resolution?",
-                "QuestionCn": "青藏高原气候因素的数据收集方法与植被数据收集方法在空间和时间分辨率方面有何比较？",
-                "AnswerEn": "The data collection methods for climate factors involve using data from 229 meteorological stations, which are then interpolated using Cokriging to maintain a spatial resolution of 1 km. In contrast, the vegetation data collection uses the MOD17A3 dataset, which directly provides NPP data with a spatial resolution of 1 km and a temporal resolution of 1 year.",
-                "AnswerCn": "气候因素的数据收集方法涉及使用229个气象站的数据，然后通过协克里金插值法进行插值，以保持1公里的空间分辨率。相比之下，植被数据收集使用MOD17A3数据集，该数据集直接提供1公里空间分辨率和1年时间分辨率的NPP数据。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What does the spatial distribution pattern of net primary productivity (NPP) from 2000 to 2015 suggest about the ecological variations across the Qinghai–Tibet Plateau?",
-                "QuestionCn": "2000年至2015年间，净初级生产力（NPP）的空间分布模式对青藏高原的生态变化有什么启示？",
-                "AnswerEn": "The average annual NPP in the Qinghai–Tibet Plateau showed a decreasing trend from the southeast to the northwest during 2000–2015. This pattern suggests ecological variations, with some regions experiencing an increase in NPP mainly concentrated in the Three-River Source Region, the northern Hengduan Mountains, and the middle and lower reaches of the Yarlung Zangbo River. Conversely, regions with a decrease in NPP were concentrated in the upper reaches of the Yarlung Zangbo River and the Ali Plateau.",
-                "AnswerCn": "青藏 Plateau 的年均 NPP 在 2000-2015 年间呈现出从东南向西北递减的趋势。这一模式表明生态变化，一些地区的 NPP 主要集中在三江源地区、北横断山脉以及雅鲁藏布江中下游地区出现了增加。相反，NPP 下降的地区则集中在雅鲁藏布江上游和阿里高原。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What can the movement of the gravity center of NPP from 2000 to 2015 reveal about the relative impact of climate change versus human activities on the Qinghai–Tibet Plateau?",
-                "QuestionCn": "2000年至2015年间，重心的移动可以揭示气候变化与人类活动对青藏高原的相对影响。",
-                "AnswerEn": "The southwestward movement of the gravity center of NPP from 2000 to 2015 indicates that the increment and growth rate of NPP in the southwestern part is greater than in the northeastern part. This movement suggests significant spatial differences in the relative effects of climate change and human activities on NPP changes, revealing zones where climate change dominates, where human activity is dominant, and where both factors interact.",
-                "AnswerCn": "从2000年到2015年，NPP重心向西南方向移动，表明西南地区的NPP增量和增长率大于东北地区。这一移动表明气候变化和人类活动对NPP变化的相对影响存在显著的空间差异，揭示了气候变化主导的区域、人类活动主导的区域以及两者相互作用的区域。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "Why is there a focus on distinguishing between the effects of climate change and human activities on NPP changes in the Qinghai–Tibet Plateau?",
-                "QuestionCn": "为什么要重点区分气候变化和人类活动对青藏高原净初级生产力变化的影响？",
-                "AnswerEn": "Distinguishing between the effects of climate change and human activities on NPP changes is crucial due to the significant spatial differences observed across the Qinghai–Tibet Plateau. This differentiation helps in understanding the ecosystem's response mechanisms and provides a scientific basis for ecological environment protection and resource management.",
-                "AnswerCn": "区分气候变化和人类活动对净初级生产力（NPP）变化的影响至关重要，因为在青藏高原上观察到显著的空间差异。这种区分有助于理解生态系统的响应机制，并为生态环境保护和资源管理提供科学依据。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What leads to the use of natural breakpoint classification in categorizing ecological factors like precipitation and elevation in the Qinghai–Tibet Plateau?",
-                "QuestionCn": "自然断点分类法在对青藏高原的生态因素如降水和海拔进行分类时的使用原因是什么？",
-                "AnswerEn": "The use of natural breakpoint classification is driven by the need to handle the complex and varied ecological factors such as precipitation and elevation across the Qinghai–Tibet Plateau. This method allows for the categorization of these factors into meaningful classes, facilitating more accurate analysis and interpretation of ecological data.",
-                "AnswerCn": "自然断点分类的使用是为了应对青藏高原上复杂多样的生态因素，如降水和海拔。这种方法允许将这些因素分类为有意义的类别，从而促进对生态数据的更准确分析和解释。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the implications of using interpolation methods like Cokriging with a 1×1 km spatial resolution on the accuracy and utility of datasets for climate change studies in the Qinghai–Tibet Plateau?",
-                "QuestionCn": "使用像Cokriging这样的插值方法，结合1×1公里的空间分辨率，对青藏高原气候变化研究中的数据集的准确性和实用性有什么影响？",
-                "AnswerEn": "Using interpolation methods like Cokriging with a 1×1 km spatial resolution helps in maintaining consistency and precision in spatial data representation. It allows for a detailed analysis of climatic variables such as temperature, precipitation, and solar radiation across the Qinghai–Tibet Plateau. This can enhance the understanding of spatial-temporal change patterns and the driving mechanisms of ecological assets, thus providing a robust dataset for climate change studies and ecological research.",
-                "AnswerCn": "使用像协克里金（Cokriging）这样的插值方法，结合1×1公里的空间分辨率，有助于保持空间数据表示的一致性和精确性。它允许对青藏高原的气候变量，如温度、降水和太阳辐射进行详细分析。这可以增强对时空变化模式及生态资产驱动机制的理解，从而为气候变化研究和生态研究提供一个强有力的数据集。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What consequences arise from removing outliers using tools like Microsoft Excel when preparing datasets for assessing ecosystem health on the Qinghai–Tibet Plateau?",
-                "QuestionCn": "在使用像Microsoft Excel这样的工具去除异常值时，评估青藏高原生态系统健康的数据集可能会产生哪些后果？",
-                "AnswerEn": "Removing outliers using tools like Microsoft Excel can lead to cleaner and more reliable datasets, potentially reducing noise and improving the accuracy of analysis regarding ecosystem health. However, it might also result in the loss of valuable data that could indicate rare or extreme events. This balance is crucial for ensuring that the dataset accurately reflects the ecosystem's conditions and supports robust ecological assessments and predictions in the Qinghai–Tibet Plateau.",
-                "AnswerCn": "使用像Microsoft Excel这样的工具去除异常值可以使数据集更加干净和可靠，从而减少噪声，提高关于生态系统健康的分析准确性。然而，这也可能导致有价值数据的丢失，这些数据可能指示稀有或极端事件。这种平衡对于确保数据集准确反映生态系统的状况并支持青藏高原的稳健生态评估和预测至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the objectives behind collecting meteorological data from 229 stations in the Qinghai–Tibet Plateau, and how does this contribute to understanding ecosystem changes?",
-                "QuestionCn": "收集来自青藏高原229个气象站的气象数据的目标是什么，这如何有助于理解生态系统变化？",
-                "AnswerEn": "The objective of collecting meteorological data from 229 stations in the Qinghai–Tibet Plateau is to analyze and understand the response of the regional vegetation ecosystem to climate change. This data helps provide a scientific basis for ecological environment protection, plant yield estimation, and resource exploitation by examining the spatial-temporal change patterns and driving mechanisms of NPP.",
-                "AnswerCn": "收集来自青藏高原229个气象站的气象数据的目的是分析和理解区域植被生态系统对气候变化的响应。这些数据通过研究净初级生产力（NPP）的时空变化模式和驱动机制，为生态环境保护、植物产量估算和资源开发提供科学依据。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "How can ArcGIS 10.3's Cokriging method be utilized to interpolate climate data for ecological asset studies in the Qinghai–Tibet Plateau?",
-                "QuestionCn": "ArcGIS 10.3的协同克里金方法如何用于青藏高原生态资产研究中的气候数据插值。",
-                "AnswerEn": "ArcGIS 10.3's Cokriging method is applied to interpolate climate data such as annual average temperature, annual precipitation, sunshine hours, and accumulated temperature. The spatial resolution is maintained at 1×1 km, allowing for detailed spatial analysis of climatic factors impacting the ecological assets in the Qinghai–Tibet Plateau.",
-                "AnswerCn": "ArcGIS 10.3的协同克里金法被应用于插值气候数据，如年平均气温、年降水量、日照小时数和积温。空间分辨率保持在1×1公里，允许对影响青藏高原生态资产的气候因素进行详细的空间分析。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "What procedures are followed to classify and grade ecological asset driving factors like precipitation, temperature, and elevation in the Qinghai–Tibet Plateau?",
-                "QuestionCn": "在青藏高原，对生态资产驱动因素如降水、温度和海拔的分类和分级遵循哪些程序？",
-                "AnswerEn": "The natural breaks method is used to classify and grade annual average precipitation, accumulated temperature, annual average temperature, solar radiation, and elevation into six levels. Slope and aspect are divided into nine and ten levels, respectively, and population and GDP data are graded into five levels, facilitating a nuanced analysis of ecological asset driving factors.",
-                "AnswerCn": "自然断裂法用于将年平均降水量、积温、年平均气温、太阳辐射和海拔分为六个等级。坡度和坡向分别分为九个和十个等级，而人口和GDP数据则分为五个等级，从而促进对生态资产驱动因素的细致分析。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "What data preprocessing techniques are used to ensure the reliability of datasets collected from various sources related to the Qinghai–Tibet Plateau?",
-                "QuestionCn": "为了确保从与青藏高原相关的各种来源收集的数据集的可靠性，使用了哪些数据预处理技术？",
-                "AnswerEn": "Microsoft Excel is utilized to remove outliers from datasets, ensuring the reliability of data collected from various sources, including meteorological stations and ecological datasets. This preprocessing step is crucial for maintaining data quality and accuracy in the analysis of ecological assets and climatic factors.",
-                "AnswerCn": "Microsoft Excel被用于从数据集中去除异常值，以确保从各种来源（包括气象站和生态数据集）收集的数据的可靠性。这个预处理步骤对于维护生态资产和气候因素分析中的数据质量和准确性至关重要。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "How do methods like Cokriging enable the interpolation of meteorological data for ecological research?",
-                "QuestionCn": "Cokriging等方法如何使气象数据的插值能够用于生态研究？",
-                "AnswerEn": "Cokriging methods are used in conjunction with ArcGIS to interpolate meteorological data such as annual average temperature, precipitation, and solar radiation. This enables the creation of spatially resolved climate datasets that maintain a resolution of 1x1 km, which is crucial for analyzing ecological changes and patterns in regions like the Qinghai–Tibet Plateau.",
-                "AnswerCn": "Cokriging 方法与 ArcGIS 结合使用，以插值气象数据，如年平均温度、降水量和太阳辐射。这使得能够创建空间分辨率为 1x1 公里的气候数据集，这对于分析像青藏高原这样的地区的生态变化和模式至关重要。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Which conditions and methods are necessary to ensure the removal of anomalies in ecological datasets?",
-                "QuestionCn": "确保生态数据集中去除异常值所需的条件和方法是什么？",
-                "AnswerEn": "To ensure the removal of anomalies, the use of data processing tools like Microsoft Excel is necessary. These tools are used to filter and clean datasets, such as those related to population and GDP, by identifying and removing outliers to maintain data integrity for ecological research.",
-                "AnswerCn": "为了确保去除异常值，使用数据处理工具如Microsoft Excel是必要的。这些工具用于过滤和清理数据集，例如与人口和GDP相关的数据，通过识别和去除离群值来维护生态研究的数据完整性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might spatial interpolation methods like Cokriging be expected to improve the accuracy of climate data collection in complex terrains such as the Qinghai–Tibet Plateau?",
-                "QuestionCn": "空间插值方法如协克里金（Cokriging）可能被期望在复杂地形如青藏高原的气候数据收集中提高准确性的原因是什么？",
-                "AnswerEn": "The unique geographical location, altitude, and geomorphological conditions of the Qinghai–Tibet Plateau result in various climatic and ecosystem types. Using spatial interpolation methods like Cokriging helps account for these complex spatial patterns by providing a more detailed and accurate representation of climate data across the plateau's diverse terrain.",
-                "AnswerCn": "青藏高原独特的地理位置、海拔和地貌条件导致了多种气候和生态系统类型。使用克里金等空间插值方法有助于考虑这些复杂的空间模式，通过提供更详细和准确的气候数据表示，适应高原多样的地形。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Why might the Qinghai–Tibet Plateau's role as a 'natural laboratory' for climate change studies lead to expectations for high variability in collected dataset outcomes?",
-                "QuestionCn": "青藏高原作为气候变化研究的“自然实验室”，其作用可能导致对收集数据集结果的高变异性预期。",
-                "AnswerEn": "The Qinghai–Tibet Plateau's unique geographical and climatic conditions make it a significant area for studying global change. As a 'natural laboratory,' it encompasses diverse climatic and ecosystem types, leading to expectations of high variability in dataset outcomes due to the complex interactions between climate change, human activities, and ecosystem responses across different regions of the plateau.",
-                "AnswerCn": "青藏高原独特的地理和气候条件使其成为研究全球变化的重要区域。作为一个“自然实验室”，它涵盖了多样的气候和生态系统类型，因此预计由于气候变化、人类活动和生态系统响应在高原不同区域之间的复杂相互作用，数据集结果会有很高的变异性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How do you evaluate the effectiveness of the Cokriging method used for interpolating meteorological data in terms of spatial resolution and accuracy within the Qinghai-Tibet Plateau?",
-                "QuestionCn": "如何评估在青藏高原上使用Cokriging方法插值气象数据的空间分辨率和准确性？",
-                "AnswerEn": "The Cokriging method is used with a spatial resolution of 1x1 km for interpolating meteorological data like annual average temperature, precipitation, and solar radiation. This method is suitable for maintaining consistent spatial resolution, but its effectiveness in terms of accuracy would depend on the density and distribution of the 229 meteorological stations across the Qinghai-Tibet Plateau and surrounding areas.",
-                "AnswerCn": "Cokriging 方法用于以 1x1 公里的空间分辨率插值气象数据，如年平均温度、降水量和太阳辐射。该方法适合保持一致的空间分辨率，但其在准确性方面的有效性将取决于 229 个气象站在青藏高原及周边地区的密度和分布。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I'm unsure how data interpolation methods, like Cokriging, are effectively applied to meteorological data in geographical studies.",
-                "QuestionCn": "我不确定数据插值方法，如协克里金法，如何有效地应用于地理研究中的气象数据。",
-                "AnswerEn": "In the field, Cokriging is used within ArcGIS 10.3 to interpolate annual average temperature, annual precipitation, sunshine duration, and accumulated temperature data. This method helps maintain spatial resolution at 1×1 km, allowing researchers to analyze climate patterns across the Qinghai–Tibet Plateau.",
-                "AnswerCn": "在该领域，Cokriging方法在ArcGIS 10.3中用于插值年平均气温、年降水量、日照时长和积温数据。该方法有助于保持1×1公里的空间分辨率，使研究人员能够分析青藏高原的气候模式。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "I can't make sense of how the classification of climate and geographical variables is determined for ecological data analysis.",
-                "QuestionCn": "我无法理解气候和地理变量在生态数据分析中的分类是如何确定的。",
-                "AnswerEn": "In ecological data analysis, climate and geographical variables such as annual precipitation, temperature, solar radiation, and elevation are classified into different levels using natural breakpoint methods. This classification helps in understanding the ecological impacts and variations across different regions of the Qinghai–Tibet Plateau.",
-                "AnswerCn": "在生态数据分析中，气候和地理变量如年降水量、温度、太阳辐射和海拔通过自然断点法进行分类。这种分类有助于理解青藏高原不同地区的生态影响和变化。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please investigate the data collection methods used for acquiring climatic data and their interpolation techniques for enhancing spatial resolution in ecological studies.",
-                "QuestionCn": "请调查用于获取气候数据的数据收集方法及其插值技术，以提高生态研究中的空间分辨率。",
-                "AnswerEn": "The climatic data for the Qinghai–Tibet Plateau, such as daily precipitation, daily average temperature, and sunshine duration, were obtained from 229 meteorological stations in the region and its surrounding areas, sourced from the China Meteorological Data Network. The data were interpolated using the Cokriging method in ArcGIS 10.3 to enhance their spatial resolution to 1 km². This method involved interpolating annual average temperature, annual precipitation, sunshine duration, and accumulated temperature.",
-                "AnswerCn": "青藏高原的气候数据，如日降水量、日平均气温和日照时长，来自该地区及周边的229个气象站，数据来源于中国气象数据网。为了提高数据的空间分辨率至1 km²，采用了ArcGIS 10.3中的协克里金法进行插值。该方法涉及插值年平均气温、年降水量、日照时长和积温。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please explore the challenges faced in differentiating the impact of climate change and human activities on regional Net Primary Productivity (NPP) changes.",
-                "QuestionCn": "请探讨在区分气候变化和人类活动对区域净初级生产力（NPP）变化影响时所面临的挑战。",
-                "AnswerEn": "Distinguishing the relative effects of climate change and human activities on NPP changes poses challenges, as conventional analysis methods, such as correlation analysis models, often leave the relationships between NPP and climate factors unclear. The study employs a gravity center model to analyze spatial and temporal patterns of NPP in the Qinghai–Tibet Plateau, aiming to quantitatively distinguish these effects and reveal ecosystem response mechanisms.",
-                "AnswerCn": "区分气候变化和人类活动对净初级生产力（NPP）变化的相对影响面临挑战，因为传统的分析方法，如相关分析模型，往往使NPP与气候因素之间的关系不明确。本研究采用重心模型分析青藏高原NPP的时空模式，旨在定量区分这些影响并揭示生态系统响应机制。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please identify potential datasets that could be integrated to study the spatial-temporal changes in ecosystem health indicators other than NPP on the Qinghai–Tibet Plateau.",
-                "QuestionCn": "请识别潜在的数据集，这些数据集可以整合用于研究青藏高原生态系统健康指标的时空变化，除了净初级生产力（NPP）之外。",
-                "AnswerEn": "In addition to the MOD17A3 dataset used for studying NPP, potential datasets include digital elevation models (DEM) from the Chinese Academy of Sciences, demographic and GDP data categorized into five levels, and various layers representing terrain, climate, soil, vegetation, and human activities. These datasets can be used to study other indicators of ecosystem health, as they provide comprehensive information on the driving factors of ecological assets on the Qinghai–Tibet Plateau.",
-                "AnswerCn": "除了用于研究净初级生产力（NPP）的MOD17A3数据集外，潜在的数据集还包括中国科学院的数字高程模型（DEM）、分为五个级别的人口和GDP数据，以及代表地形、气候、土壤、植被和人类活动的各种层。这些数据集可以用于研究生态系统健康的其他指标，因为它们提供了关于青藏高原生态资产驱动因素的全面信息。",
-                "Level": "C6(Creating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Cokriging for enhanced spatial interpolation of rainfall in two Australian catchments",
+        "referenceCn": null,
+        "referenceEn": "Adhikary, S.K., Muttil, N., & Yilmaz, A.G. (2017). Cokriging for enhanced spatial interpolation of rainfall in two Australian catchments. Hydrological Processes, 31(12), 2143–2161."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Determining the contributions of climate change and human activities to the vegetation NPP dynamics in the Qinghai-Tibet Plateau, China, from 2000 to 2015",
+        "referenceCn": null,
+        "referenceEn": "Guo, B., Han, B.M., Yang, F., Chen, S.T., Liu, Y., & Yang, W.N. (2020). Determining the contributions of climate change and human activities to the vegetation NPP dynamics in the Qinghai-Tibet Plateau, China, from 2000 to 2015.Environ Monit Assess, 192(10), 663–. doi:10.1007/s10661-020-08606-6"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Spatial and temporal change patterns of net primary productivity and its response to climate change in the Qinghai–Tibet Plateau of China from 2000 to 2015",
+        "referenceCn": null,
+        "referenceEn": "Guo, B., Yang, F., Han, B. M., Chen, S. T., Liu, Y., Yang, X., He, T. L., Chen, X., Liu, C. T., & Gong, R. (2019). Spatial and temporal change patterns of net primary productivity and its response to climate change in the Qinghai–Tibet Plateau of China from 2000 to 2015. Journal of Arid Land, 12(1), 1–17."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "DEM",
+        "nameEn": "Digital elevation model"
+      },
+      {
+        "nameCn": "土地利用/覆盖",
+        "nameEn": "Land Use/Land Cover"
+      },
+      {
+        "nameCn": "土地利用格局",
+        "nameEn": "Land use pattern"
+      },
+      {
+        "nameCn": "土壤",
+        "nameEn": "Soil"
+      },
+      {
+        "nameCn": "土壤类型",
+        "nameEn": "Soil classification"
+      },
+      {
+        "nameCn": "地形",
+        "nameEn": "Topography"
+      },
+      {
+        "nameCn": "坡向",
+        "nameEn": "Aspect"
+      },
+      {
+        "nameCn": "坡度",
+        "nameEn": "Slope"
+      },
+      {
+        "nameCn": "平均气温",
+        "nameEn": "Mean temperature"
+      },
+      {
+        "nameCn": "日照",
+        "nameEn": "Sunshine"
+      },
+      {
+        "nameCn": "日照时数",
+        "nameEn": "Sunshine duration"
+      },
+      {
+        "nameCn": "植被",
+        "nameEn": "Vegetation"
+      },
+      {
+        "nameCn": "植被覆盖",
+        "nameEn": "vegetation coverage"
+      },
+      {
+        "nameCn": "温度",
+        "nameEn": "Temperature"
+      },
+      {
+        "nameCn": "降水",
+        "nameEn": "Precipitation"
+      },
+      {
+        "nameCn": "降水量",
+        "nameEn": "Precipitation amount"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "青藏高原",
+        "keywordEn": "The Tibetan Plateau"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2000-2020年",
+        "keywordEn": "2000-2020",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
+        "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Net primary productivity (NPP) denotes the total amount of organic dry matter accumulated by green plants with respect to the unit time and area. NPP is the residual part of the total amount of organic matter produced by photosynthesis after the elimination of autotrophic respiration. As the core content of the carbon budget and climate change research, NPP serves as an important indicator to determine the ecosystem health and sustainable development level. Therefore, analyzing and discussing the spatial-temporal change patterns and the driving mechanisms of NPP in a regional vegetation ecosystem not only are of significance to understand the response of this ecosystem to climate change, but also can provide a scientific basis for ecological environment protection, plant yield estimation, resource exploitation, effective management of natural resources, and formulation of the corresponding social and economic development strategies. The unique geographical location, altitude, climate and geomorphological conditions of the Qinghai–Tibet Plateau in China result in various climatic and ecosystem types. As a special geographic unit, the Qinghai–Tibet Plateau exhibits an important role in regulating and indicating global change; it is considered to be the ''natural laboratory'' for studies of climate change in the world."
+      ],
+      "research objective": [
+        "Therefore, in this study, a gravity center model was introduced to analyze the spatial and temporal change patterns and the driving mechanisms of NPP in the Qinghai–Tibet Plateau from 2000 to 2015 in combination with the conventional analysis methods. Furthermore, the relative effects of climate change and human activities on the NPP changes were also quantitatively distinguished. This study provides data and theoretical support to reveal the evolution patterns of the ecosystems in the Qinghai–Tibet Plateau and the response mechanisms of the ecosystems to global change."
+      ],
+      "challenges": [
+        "Although some previous studies have used conventional analysis methods (such as the correlation analysis model) to investigate the NPP change patterns in the Qinghai–Tibet Plateau, the relationships between NPP and climate factors and the relative effects of climate change and human activities on the NPP changes remain unclear."
+      ],
+      "methods": [],
+      "dataset": [
+        "The NPP during 2000–2015 obtained from the MOD17A3 dataset is available at https://lpdaac.usgs.gov/. The spatial and temporal resolutions were 1 km and 1 a, respectively. The data (including the daily precipitation and mean daily temperature) of 229 meteorological stations in the Qinghai–Tibet Plateau and its surrounding areas, were obtained from the China Meteorological Data Network (http://data.cma.cn/)."
+      ],
+      "findings": [
+        "The average annual NPP in the Qinghai–Tibet Plateau showed a decreasing trend from the southeast to the northwest during 2000–2015. With respect to the inter-annual changes, the average annual NPP exhibited a fluctuating upward trend from 2000 to 2015, with a steep increase observed in 2005 and a high fluctuation observed from 2005 to 2015. In the Qinghai–Tibet Plateau, the regions with the increase in NPP (change rate higher than 10%) were mainly concentrated in the Three-River Source Region, the northern Hengduan Mountains, the middle and lower reaches of the Yarlung Zangbo River, and the eastern parts of the North Tibet Plateau, whereas the regions with the decrease in NPP (change rate lower than –10%) were mainly concentrated in the upper reaches of the Yarlung Zangbo River and the Ali Plateau. The gravity center of NPP in the Qinghai–Tibet Plateau has moved southwestward during 2000–2015, indicating that the increment and growth rate of NPP in the southwestern part is greater than those of NPP in the northeastern part. Further, a significant correlation was observed between NPP and climate factors in the Qinghai–Tibet Plateau. The regions exhibiting a significant correlation between NPP and precipitation were mainly located in the central and eastern Qinghai–Tibet Plateau, and the regions exhibiting a significant correlation between NPP and temperature were mainly located in the southern and eastern Qinghai–Tibet Plateau. Furthermore, the relative effects of climate change and human activities on the NPP changes in the Qinghai–Tibet Plateau exhibited significant spatial differences in three types of zones, i.e., the climate change-dominant zone, the human activity-dominant zone, and the climate change and human activity interaction zone."
+      ],
+      "backgroundCn": [
+        "净初级生产力（NPP）指的是绿色植物在单位时间和单位面积内积累的有机干物质的总量。NPP是通过光合作用产生的有机物总量减去自养呼吸后剩余的部分。作为碳预算和气候变化研究的核心内容，NPP是衡量生态系统健康和可持续发展水平的重要指标。因此，分析和讨论区域植被生态系统中NPP的时空变化模式及其驱动机制，不仅对理解该生态系统对气候变化的响应具有重要意义，还可以为生态环境保护、植物产量估算、资源开发、自然资源有效管理以及相应的社会经济发展战略的制定提供科学依据。中国青藏高原独特的地理位置、海拔、气候和地貌条件导致了多种气候和生态系统类型。作为一个特殊的地理单元，青藏高原在调节和指示全球变化方面发挥着重要作用，被认为是全球气候变化研究的“自然实验室”。"
+      ],
+      "research objectiveCn": [
+        "因此，在本研究中，引入了重心模型来分析2000年至2015年青藏高原NPP的时空变化模式及其驱动机制，并结合传统分析方法。此外，还定量区分了气候变化和人类活动对NPP变化的相对影响。本研究为揭示青藏高原生态系统的演变模式及其对全球变化的响应机制提供了数据和理论支持。"
+      ],
+      "challengesCn": [
+        "尽管一些先前的研究使用了传统分析方法（如相关分析模型）来研究青藏高原的NPP变化模式，但NPP与气候因素之间的关系以及气候变化和人类活动对NPP变化的相对影响仍不清楚。"
+      ],
+      "methodsCn": [],
+      "datasetCn": [
+        "2000年至2015年期间的净初级生产力（NPP）数据来自MOD17A3数据集，网址为https://lpdaac.usgs.gov/。该数据的空间分辨率为1公里，时间分辨率为1年。此外，青藏高原及其周边地区229个气象站的日降水量和日均气温数据来自中国气象数据网（http://data.cma.cn/）。"
+      ],
+      "findingsCn": [
+        "青藏 Plateau 的年均 NPP 在 2000 年至 2015 年期间呈现出从东南向西北递减的趋势。就年际变化而言，年均 NPP 从 2000 年到 2015 年表现出波动上升的趋势，2005 年出现了急剧增加，而 2005 年至 2015 年期间则观察到较大的波动。在青藏 Plateau，NPP 增加的区域（变化率高于 10%）主要集中在三江源地区、北横断山脉、雅鲁藏布江中下游以及北藏 Plateau 的东部，而 NPP 减少的区域（变化率低于 -10%）主要集中在雅鲁藏布江上游和阿里 Plateau。2000 年至 2015 年间，青藏 Plateau 的 NPP 重心向西南移动，表明西南部的 NPP 增长量和增长率大于东北部的 NPP。此外，青藏 Plateau 的 NPP 与气候因素之间存在显著相关性。与降水量显著相关的区域主要位于青藏 Plateau 的中部和东部，而与温度显著相关的区域主要位于青藏 Plateau 的南部和东部。此外，气候变化和人类活动对青藏 Plateau NPP 变化的相对影响在三种类型的区域中表现出显著的空间差异，即气候变化主导区、人类活动主导区以及气候变化与人类活动相互作用区。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Does the use of ArcGIS 10.3's Cokriging method ensure the spatial resolution of 1x1 km for interpolated climate data?",
+        "QuestionCn": "使用ArcGIS 10.3的协同克里金方法是否确保插值气候数据的空间分辨率为1x1公里？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the key ecological asset driving factors included in a dataset for the Qinghai-Tibet Plateau?",
+        "QuestionCn": "青藏高原生态资产驱动因素的关键要素包括哪些？",
+        "AnswerEn": "topography, climate, soil, vegetation, human activities, land use types",
+        "AnswerCn": "地形、气候、土壤、植被、人类活动、土地利用类型",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Where is the digital elevation model (DEM) data used in a dataset for the Qinghai-Tibet Plateau sourced from?",
+        "QuestionCn": "青藏高原数据集中使用的数字高程模型（DEM）数据来源于哪里？",
+        "AnswerEn": "Chinese Academy of Sciences Resource and Environment Science Data Center",
+        "AnswerCn": "中国科学院资源环境科学数据中心",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What data collection method is used to interpolate annual average temperature and precipitation data in a dataset for the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在青藏高原的数据集中，用于插值年平均气温和降水量数据的数据收集方法是什么？",
+        "AnswerEn": "Cokriging method",
+        "AnswerCn": "协同克里金方法",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a dataset that includes both climate data and human activity factors for the Qinghai–Tibet Plateau?",
+        "QuestionCn": "您能否提供一个包含青藏高原气候数据和人类活动因素的示例数据集？",
+        "AnswerEn": "A dataset that includes both climate data and human activity factors for the Qinghai–Tibet Plateau is the dataset containing information from 229 meteorological stations in the region, which includes daily precipitation, mean daily temperature, and data on human activities such as population and GDP, categorized into levels.",
+        "AnswerCn": "一个包含气候数据和人类活动因素的数据集是来自青藏高原229个气象站的信息，该数据集包括每日降水量、日均气温以及人类活动的数据，如人口和GDP，按级别分类。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a data interpolation method used to process climatic data for ecological studies in the Qinghai–Tibet Plateau?",
+        "QuestionCn": "在青藏高原的生态研究中，用于处理气候数据的一个数据插值方法的例子是什么？",
+        "AnswerEn": "An example of a data interpolation method used to process climatic data for ecological studies in the Qinghai–Tibet Plateau is the Cokriging method, utilized to interpolate annual average temperature, precipitation, sunshine hours, and accumulated temperature, maintaining a spatial resolution of 1×1 km.",
+        "AnswerCn": "在青藏高原的生态研究中，用于处理气候数据的一种数据插值方法是协同克里金法（Cokriging），该方法用于插值年平均气温、降水量、日照时数和积温，保持1×1公里的空间分辨率。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Could you provide an example of how vegetation data is sourced and its temporal resolution for studies on the Qinghai–Tibet Plateau?",
+        "QuestionCn": "您能否提供一个关于青藏高原植被数据来源及其时间分辨率的例子？",
+        "AnswerEn": "An example of how vegetation data is sourced for studies on the Qinghai–Tibet Plateau is the use of the MOD17A3H dataset, which provides net primary productivity (NPP) data with a temporal resolution of 1 year and a spatial resolution of 1 km.",
+        "AnswerCn": "一个关于青藏高原植被数据来源的例子是使用MOD17A3H数据集，该数据集提供了净初级生产力（NPP）数据，时间分辨率为1年，空间分辨率为1公里。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the key characteristics of the ecological asset driving factors dataset for the Qinghai–Tibet Plateau from 2000 to 2020?",
+        "QuestionCn": "青藏高原2000年至2020年的生态资产驱动因素数据集的关键特征是什么？",
+        "AnswerEn": "terrain, climate, soil, vegetation, human activities, land use types, spatial resolution of 1 km, temporal resolution of 1 year, digital elevation model (DEM), daily precipitation, average temperature, sunshine duration, Cokriging interpolation, ArcGIS 10.3, spatial resolution of 1×1 km, annual precipitation levels, temperature levels, population levels, GDP levels",
+        "AnswerCn": "地形、气候、土壤、植被、人类活动、土地利用类型、空间分辨率1公里、时间分辨率1年、数字高程模型（DEM）、每日降水量、平均气温、日照时长、协同克里金插值、ArcGIS 10.3、空间分辨率1×1公里、年降水量水平、温度水平、人口水平、GDP水平。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the characteristics of the methods used to interpolate climate data in the Qinghai–Tibet Plateau ecological asset dataset?",
+        "QuestionCn": "青藏高原生态资产数据集中用于插值气候数据的方法的特点是什么？",
+        "AnswerEn": "Cokriging method, ArcGIS 10.3, spatial resolution of 1×1 km, climate parameters divided into levels",
+        "AnswerCn": "协同克里金方法，ArcGIS 10.3，空间分辨率为1×1公里，气候参数分为多个层级。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the specific features of the Net Primary Productivity (NPP) dataset used in studies concerning the Qinghai–Tibet Plateau?",
+        "QuestionCn": "在关于青藏高原的研究中使用的初级净生产力（NPP）数据集的具体特征是什么？",
+        "AnswerEn": "1 km spatial resolution, 1 year temporal resolution",
+        "AnswerCn": "1公里空间分辨率，1年时间分辨率",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the meteorological data collected from the Qinghai-Tibet Plateau?",
+        "QuestionCn": "青藏高原收集的气象数据的空间分辨率是多少？",
+        "AnswerEn": "1 km",
+        "AnswerCn": "1公里",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many meteorological stations provided data for the Qinghai-Tibet Plateau and its surrounding areas?",
+        "QuestionCn": "有多少个气象站为青藏高原及其周边地区提供数据？",
+        "AnswerEn": "229",
+        "AnswerCn": "229",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Over how many years does the NPP data from the MOD17A3 dataset span?",
+        "QuestionCn": "MOD17A3数据集的NPP数据跨度多少年？",
+        "AnswerEn": "16 years",
+        "AnswerCn": "16年",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does 'interpolation method' mean in the context of climate data collection?",
+        "QuestionCn": "在气候数据收集的背景下，“插值方法”是什么意思？",
+        "AnswerEn": "In the context of climate data collection, 'interpolation method' refers to a mathematical technique used to estimate unknown values that fall within the range of a discrete set of known data points. Specifically, the Cokriging method is a type of interpolation used to estimate spatial variables like annual average temperature, annual precipitation, sunshine hours, and accumulated temperature, maintaining a spatial resolution of 1x1 km.",
+        "AnswerCn": "在气候数据收集的背景下，“插值方法”是指一种数学技术，用于估计落在离散已知数据点范围内的未知值。具体而言，Cokriging方法是一种插值技术，用于估计空间变量，如年平均温度、年降水量、日照小时数和积温，保持1x1公里的空间分辨率。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is meant by 'removing outliers' in data preprocessing?",
+        "QuestionCn": "在数据预处理中，“去除异常值”是什么意思？",
+        "AnswerEn": "'Removing outliers' in data preprocessing refers to the process of identifying and eliminating data points that significantly deviate from the rest of the dataset. This is done to improve data quality and analysis accuracy, as outliers can skew results and lead to incorrect conclusions. In this context, Microsoft Excel is used to remove outliers from population and GDP data, categorizing them into five levels.",
+        "AnswerCn": "“去除异常值”在数据预处理中的意思是识别并消除与数据集其余部分显著偏离的数据点。这样做是为了提高数据质量和分析准确性，因为异常值可能会扭曲结果并导致错误的结论。在这种情况下，使用Microsoft Excel从人口和GDP数据中去除异常值，并将其分类为五个级别。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What does 'natural breaks method' mean in classifying environmental data?",
+        "QuestionCn": "“自然断点法”在环境数据分类中是什么意思？",
+        "AnswerEn": "The 'natural breaks method' in classifying environmental data involves dividing continuous data into distinct categories or classes where there are significant jumps in the data values. This method is used to classify annual average precipitation, accumulated temperature, annual average temperature, solar radiation, and elevation into six levels, and slope and aspect into nine and ten levels, respectively.",
+        "AnswerCn": "“自然断裂法”在分类环境数据时涉及将连续数据划分为明显的类别或等级，其中数据值存在显著的跳跃。该方法用于将年平均降水量、积温、年平均气温、太阳辐射和海拔划分为六个等级，而坡度和方位则分别划分为九个和十个等级。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the data collection methods for climate factors in the Qinghai–Tibet Plateau compare to those used for vegetation data collection in terms of spatial and temporal resolution?",
+        "QuestionCn": "青藏高原气候因素的数据收集方法与植被数据收集方法在空间和时间分辨率方面有何比较？",
+        "AnswerEn": "The data collection methods for climate factors involve using data from 229 meteorological stations, which are then interpolated using Cokriging to maintain a spatial resolution of 1 km. In contrast, the vegetation data collection uses the MOD17A3 dataset, which directly provides NPP data with a spatial resolution of 1 km and a temporal resolution of 1 year.",
+        "AnswerCn": "气候因素的数据收集方法涉及使用229个气象站的数据，然后通过协克里金插值法进行插值，以保持1公里的空间分辨率。相比之下，植被数据收集使用MOD17A3数据集，该数据集直接提供1公里空间分辨率和1年时间分辨率的NPP数据。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What does the spatial distribution pattern of net primary productivity (NPP) from 2000 to 2015 suggest about the ecological variations across the Qinghai–Tibet Plateau?",
+        "QuestionCn": "2000年至2015年间，净初级生产力（NPP）的空间分布模式对青藏高原的生态变化有什么启示？",
+        "AnswerEn": "The average annual NPP in the Qinghai–Tibet Plateau showed a decreasing trend from the southeast to the northwest during 2000–2015. This pattern suggests ecological variations, with some regions experiencing an increase in NPP mainly concentrated in the Three-River Source Region, the northern Hengduan Mountains, and the middle and lower reaches of the Yarlung Zangbo River. Conversely, regions with a decrease in NPP were concentrated in the upper reaches of the Yarlung Zangbo River and the Ali Plateau.",
+        "AnswerCn": "青藏 Plateau 的年均 NPP 在 2000-2015 年间呈现出从东南向西北递减的趋势。这一模式表明生态变化，一些地区的 NPP 主要集中在三江源地区、北横断山脉以及雅鲁藏布江中下游地区出现了增加。相反，NPP 下降的地区则集中在雅鲁藏布江上游和阿里高原。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What can the movement of the gravity center of NPP from 2000 to 2015 reveal about the relative impact of climate change versus human activities on the Qinghai–Tibet Plateau?",
+        "QuestionCn": "2000年至2015年间NPP重心的移动可以揭示气候变化与人类活动对青藏高原的相对影响吗？",
+        "AnswerEn": "The southwestward movement of the gravity center of NPP from 2000 to 2015 indicates that the increment and growth rate of NPP in the southwestern part is greater than in the northeastern part. This movement suggests significant spatial differences in the relative effects of climate change and human activities on NPP changes, revealing zones where climate change dominates, where human activity is dominant, and where both factors interact.",
+        "AnswerCn": "从2000年到2015年，NPP重心向西南方向移动，表明西南地区的NPP增量和增长率大于东北地区。这一移动表明气候变化和人类活动对NPP变化的相对影响存在显著的空间差异，揭示了气候变化主导的区域、人类活动主导的区域以及两者相互作用的区域。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "Why is there a focus on distinguishing between the effects of climate change and human activities on NPP changes in the Qinghai–Tibet Plateau?",
+        "QuestionCn": "为什么要重点区分气候变化和人类活动对青藏高原净初级生产力变化的影响？",
+        "AnswerEn": "Distinguishing between the effects of climate change and human activities on NPP changes is crucial due to the significant spatial differences observed across the Qinghai–Tibet Plateau. This differentiation helps in understanding the ecosystem's response mechanisms and provides a scientific basis for ecological environment protection and resource management.",
+        "AnswerCn": "区分气候变化和人类活动对净初级生产力（NPP）变化的影响至关重要，因为在青藏高原上观察到显著的空间差异。这种区分有助于理解生态系统的响应机制，并为生态环境保护和资源管理提供科学依据。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What leads to the use of natural breakpoint classification in categorizing ecological factors like precipitation and elevation in the Qinghai–Tibet Plateau?",
+        "QuestionCn": "自然断点分类法在对青藏高原的生态因素如降水和海拔进行分类时的使用原因是什么？",
+        "AnswerEn": "The use of natural breakpoint classification is driven by the need to handle the complex and varied ecological factors such as precipitation and elevation across the Qinghai–Tibet Plateau. This method allows for the categorization of these factors into meaningful classes, facilitating more accurate analysis and interpretation of ecological data.",
+        "AnswerCn": "自然断点分类的使用是为了应对青藏高原上复杂多样的生态因素，如降水和海拔。这种方法允许将这些因素分类为有意义的类别，从而促进对生态数据的更准确分析和解释。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the implications of using interpolation methods like Cokriging with a 1×1 km spatial resolution on the accuracy and utility of datasets for climate change studies in the Qinghai–Tibet Plateau?",
+        "QuestionCn": "使用像Cokriging这样的插值方法，结合1×1公里的空间分辨率，对青藏高原气候变化研究中的数据集的准确性和实用性有什么影响？",
+        "AnswerEn": "Using interpolation methods like Cokriging with a 1×1 km spatial resolution helps in maintaining consistency and precision in spatial data representation. It allows for a detailed analysis of climatic variables such as temperature, precipitation, and solar radiation across the Qinghai–Tibet Plateau. This can enhance the understanding of spatial-temporal change patterns and the driving mechanisms of ecological assets, thus providing a robust dataset for climate change studies and ecological research.",
+        "AnswerCn": "使用像协克里金（Cokriging）这样的插值方法，结合1×1公里的空间分辨率，有助于保持空间数据表示的一致性和精确性。它允许对青藏高原的气候变量，如温度、降水和太阳辐射进行详细分析。这可以增强对时空变化模式及生态资产驱动机制的理解，从而为气候变化研究和生态研究提供一个强有力的数据集。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What consequences arise from removing outliers using tools like Microsoft Excel when preparing datasets for assessing ecosystem health on the Qinghai–Tibet Plateau?",
+        "QuestionCn": "在使用像Microsoft Excel这样的工具去除异常值时，评估青藏高原生态系统健康的数据集可能会产生哪些后果？",
+        "AnswerEn": "Removing outliers using tools like Microsoft Excel can lead to cleaner and more reliable datasets, potentially reducing noise and improving the accuracy of analysis regarding ecosystem health. However, it might also result in the loss of valuable data that could indicate rare or extreme events. This balance is crucial for ensuring that the dataset accurately reflects the ecosystem's conditions and supports robust ecological assessments and predictions in the Qinghai–Tibet Plateau.",
+        "AnswerCn": "使用像Microsoft Excel这样的工具去除异常值可以使数据集更加干净和可靠，从而减少噪声，提高关于生态系统健康的分析准确性。然而，这也可能导致有价值数据的丢失，这些数据可能指示稀有或极端事件。这种平衡对于确保数据集准确反映生态系统的状况并支持青藏高原的稳健生态评估和预测至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the objectives behind collecting meteorological data from 229 stations in the Qinghai–Tibet Plateau, and how does this contribute to understanding ecosystem changes?",
+        "QuestionCn": "收集来自青藏高原229个气象站的气象数据的目标是什么，这如何有助于理解生态系统变化？",
+        "AnswerEn": "The objective of collecting meteorological data from 229 stations in the Qinghai–Tibet Plateau is to analyze and understand the response of the regional vegetation ecosystem to climate change. This data helps provide a scientific basis for ecological environment protection, plant yield estimation, and resource exploitation by examining the spatial-temporal change patterns and driving mechanisms of NPP.",
+        "AnswerCn": "收集来自青藏高原229个气象站的气象数据的目的是分析和理解区域植被生态系统对气候变化的响应。这些数据通过研究净初级生产力（NPP）的时空变化模式和驱动机制，为生态环境保护、植物产量估算和资源开发提供科学依据。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "How can ArcGIS 10.3's Cokriging method be utilized to interpolate climate data for ecological asset studies in the Qinghai–Tibet Plateau?",
+        "QuestionCn": "如何利用ArcGIS 10.3的协同克里金方法插值青藏高原生态资产研究的气候数据？",
+        "AnswerEn": "ArcGIS 10.3's Cokriging method is applied to interpolate climate data such as annual average temperature, annual precipitation, sunshine hours, and accumulated temperature. The spatial resolution is maintained at 1×1 km, allowing for detailed spatial analysis of climatic factors impacting the ecological assets in the Qinghai–Tibet Plateau.",
+        "AnswerCn": "ArcGIS 10.3的协同克里金法被应用于插值气候数据，如年平均气温、年降水量、日照小时数和积温。空间分辨率保持在1×1公里，允许对影响青藏高原生态资产的气候因素进行详细的空间分析。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "What procedures are followed to classify and grade ecological asset driving factors like precipitation, temperature, and elevation in the Qinghai–Tibet Plateau?",
+        "QuestionCn": "在青藏高原，对生态资产驱动因素如降水、温度和海拔的分类和分级遵循哪些程序？",
+        "AnswerEn": "The natural breaks method is used to classify and grade annual average precipitation, accumulated temperature, annual average temperature, solar radiation, and elevation into six levels. Slope and aspect are divided into nine and ten levels, respectively, and population and GDP data are graded into five levels, facilitating a nuanced analysis of ecological asset driving factors.",
+        "AnswerCn": "自然断裂法用于将年平均降水量、积温、年平均气温、太阳辐射和海拔分为六个等级。坡度和坡向分别分为九个和十个等级，而人口和GDP数据则分为五个等级，从而促进对生态资产驱动因素的细致分析。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "What data preprocessing techniques are used to ensure the reliability of datasets collected from various sources related to the Qinghai–Tibet Plateau?",
+        "QuestionCn": "为了确保从与青藏高原相关的各种来源收集的数据集的可靠性，使用了哪些数据预处理技术？",
+        "AnswerEn": "Microsoft Excel is utilized to remove outliers from datasets, ensuring the reliability of data collected from various sources, including meteorological stations and ecological datasets. This preprocessing step is crucial for maintaining data quality and accuracy in the analysis of ecological assets and climatic factors.",
+        "AnswerCn": "Microsoft Excel被用于从数据集中去除异常值，以确保从各种来源（包括气象站和生态数据集）收集的数据的可靠性。这个预处理步骤对于维护生态资产和气候因素分析中的数据质量和准确性至关重要。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "How do methods like Cokriging enable the interpolation of meteorological data for ecological research?",
+        "QuestionCn": "Cokriging等方法如何使气象数据的插值能够用于生态研究？",
+        "AnswerEn": "Cokriging methods are used in conjunction with ArcGIS to interpolate meteorological data such as annual average temperature, precipitation, and solar radiation. This enables the creation of spatially resolved climate datasets that maintain a resolution of 1x1 km, which is crucial for analyzing ecological changes and patterns in regions like the Qinghai–Tibet Plateau.",
+        "AnswerCn": "Cokriging 方法与 ArcGIS 结合使用，以插值气象数据，如年平均温度、降水量和太阳辐射。这使得能够创建空间分辨率为 1x1 公里的气候数据集，这对于分析像青藏高原这样的地区的生态变化和模式至关重要。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Which conditions and methods are necessary to ensure the removal of anomalies in ecological datasets?",
+        "QuestionCn": "确保生态数据集中去除异常值所需的条件和方法是什么？",
+        "AnswerEn": "To ensure the removal of anomalies, the use of data processing tools like Microsoft Excel is necessary. These tools are used to filter and clean datasets, such as those related to population and GDP, by identifying and removing outliers to maintain data integrity for ecological research.",
+        "AnswerCn": "为了确保去除异常值，使用数据处理工具如Microsoft Excel是必要的。这些工具用于过滤和清理数据集，例如与人口和GDP相关的数据，通过识别和去除离群值来维护生态研究的数据完整性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might spatial interpolation methods like Cokriging be expected to improve the accuracy of climate data collection in complex terrains such as the Qinghai–Tibet Plateau?",
+        "QuestionCn": "空间插值方法如协克里金（Cokriging）可能被期望在复杂地形如青藏高原的气候数据收集中提高准确性的原因是什么？",
+        "AnswerEn": "The unique geographical location, altitude, and geomorphological conditions of the Qinghai–Tibet Plateau result in various climatic and ecosystem types. Using spatial interpolation methods like Cokriging helps account for these complex spatial patterns by providing a more detailed and accurate representation of climate data across the plateau's diverse terrain.",
+        "AnswerCn": "青藏高原独特的地理位置、海拔和地貌条件导致了多种气候和生态系统类型。使用克里金等空间插值方法有助于考虑这些复杂的空间模式，通过提供更详细和准确的气候数据表示，适应高原多样的地形。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Why might the Qinghai–Tibet Plateau's role as a 'natural laboratory' for climate change studies lead to expectations for high variability in collected dataset outcomes?",
+        "QuestionCn": "为什么青藏高原作为气候变化研究的“天然实验室”可能导致对收集的数据集结果的高变异性预期？",
+        "AnswerEn": "The Qinghai–Tibet Plateau's unique geographical and climatic conditions make it a significant area for studying global change. As a 'natural laboratory,' it encompasses diverse climatic and ecosystem types, leading to expectations of high variability in dataset outcomes due to the complex interactions between climate change, human activities, and ecosystem responses across different regions of the plateau.",
+        "AnswerCn": "青藏高原独特的地理和气候条件使其成为研究全球变化的重要区域。作为一个“自然实验室”，它涵盖了多样的气候和生态系统类型，因此预计由于气候变化、人类活动和生态系统响应在高原不同区域之间的复杂相互作用，数据集结果会有很高的变异性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How do you evaluate the effectiveness of the Cokriging method used for interpolating meteorological data in terms of spatial resolution and accuracy within the Qinghai-Tibet Plateau?",
+        "QuestionCn": "如何评估在青藏高原上使用Cokriging方法插值气象数据的空间分辨率和准确性？",
+        "AnswerEn": "The Cokriging method is used with a spatial resolution of 1x1 km for interpolating meteorological data like annual average temperature, precipitation, and solar radiation. This method is suitable for maintaining consistent spatial resolution, but its effectiveness in terms of accuracy would depend on the density and distribution of the 229 meteorological stations across the Qinghai-Tibet Plateau and surrounding areas.",
+        "AnswerCn": "Cokriging 方法用于以 1x1 公里的空间分辨率插值气象数据，如年平均温度、降水量和太阳辐射。该方法适合保持一致的空间分辨率，但其在准确性方面的有效性将取决于 229 个气象站在青藏高原及周边地区的密度和分布。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I'm unsure how data interpolation methods, like Cokriging, are effectively applied to meteorological data in geographical studies.",
+        "QuestionCn": "我不确定数据插值方法，如协克里金法，如何有效地应用于地理研究中的气象数据。",
+        "AnswerEn": "In the field, Cokriging is used within ArcGIS 10.3 to interpolate annual average temperature, annual precipitation, sunshine duration, and accumulated temperature data. This method helps maintain spatial resolution at 1×1 km, allowing researchers to analyze climate patterns across the Qinghai–Tibet Plateau.",
+        "AnswerCn": "在该领域，Cokriging方法在ArcGIS 10.3中用于插值年平均气温、年降水量、日照时长和积温数据。该方法有助于保持1×1公里的空间分辨率，使研究人员能够分析青藏高原的气候模式。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "I can't make sense of how the classification of climate and geographical variables is determined for ecological data analysis.",
+        "QuestionCn": "我无法理解气候和地理变量在生态数据分析中的分类是如何确定的。",
+        "AnswerEn": "In ecological data analysis, climate and geographical variables such as annual precipitation, temperature, solar radiation, and elevation are classified into different levels using natural breakpoint methods. This classification helps in understanding the ecological impacts and variations across different regions of the Qinghai–Tibet Plateau.",
+        "AnswerCn": "在生态数据分析中，气候和地理变量如年降水量、温度、太阳辐射和海拔通过自然断点法进行分类。这种分类有助于理解青藏高原不同地区的生态影响和变化。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please investigate the data collection methods used for acquiring climatic data and their interpolation techniques for enhancing spatial resolution in ecological studies.",
+        "QuestionCn": "请调查用于获取气候数据的数据收集方法及其插值技术，以提高生态研究中的空间分辨率。",
+        "AnswerEn": "The climatic data for the Qinghai–Tibet Plateau, such as daily precipitation, daily average temperature, and sunshine duration, were obtained from 229 meteorological stations in the region and its surrounding areas, sourced from the China Meteorological Data Network. The data were interpolated using the Cokriging method in ArcGIS 10.3 to enhance their spatial resolution to 1 km². This method involved interpolating annual average temperature, annual precipitation, sunshine duration, and accumulated temperature.",
+        "AnswerCn": "青藏高原的气候数据，如日降水量、日平均气温和日照时长，来自该地区及周边的229个气象站，数据来源于中国气象数据网。为了提高数据的空间分辨率至1 km²，采用了ArcGIS 10.3中的协克里金法进行插值。该方法涉及插值年平均气温、年降水量、日照时长和积温。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please explore the challenges faced in differentiating the impact of climate change and human activities on regional Net Primary Productivity (NPP) changes.",
+        "QuestionCn": "请探讨在区分气候变化和人类活动对区域净初级生产力（NPP）变化影响时所面临的挑战。",
+        "AnswerEn": "Distinguishing the relative effects of climate change and human activities on NPP changes poses challenges, as conventional analysis methods, such as correlation analysis models, often leave the relationships between NPP and climate factors unclear. The study employs a gravity center model to analyze spatial and temporal patterns of NPP in the Qinghai–Tibet Plateau, aiming to quantitatively distinguish these effects and reveal ecosystem response mechanisms.",
+        "AnswerCn": "区分气候变化和人类活动对净初级生产力（NPP）变化的相对影响面临挑战，因为传统的分析方法，如相关分析模型，往往使NPP与气候因素之间的关系不明确。本研究采用重心模型分析青藏高原NPP的时空模式，旨在定量区分这些影响并揭示生态系统响应机制。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please identify potential datasets that could be integrated to study the spatial-temporal changes in ecosystem health indicators other than NPP on the Qinghai–Tibet Plateau.",
+        "QuestionCn": "请识别潜在的数据集，这些数据集可以整合用于研究青藏高原生态系统健康指标的时空变化，除了净初级生产力（NPP）之外。",
+        "AnswerEn": "In addition to the MOD17A3 dataset used for studying NPP, potential datasets include digital elevation models (DEM) from the Chinese Academy of Sciences, demographic and GDP data categorized into five levels, and various layers representing terrain, climate, soil, vegetation, and human activities. These datasets can be used to study other indicators of ecosystem health, as they provide comprehensive information on the driving factors of ecological assets on the Qinghai–Tibet Plateau.",
+        "AnswerCn": "除了用于研究净初级生产力（NPP）的MOD17A3数据集外，潜在的数据集还包括中国科学院的数字高程模型（DEM）、分为五个级别的人口和GDP数据，以及代表地形、气候、土壤、植被和人类活动的各种层。这些数据集可以用于研究生态系统健康的其他指标，因为它们提供了关于青藏高原生态资产驱动因素的全面信息。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

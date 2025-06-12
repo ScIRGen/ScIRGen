@@ -1,757 +1,757 @@
 {
-    "id": "1cad1a63-ca8d-431a-b2b2-45d9916d860d",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "Long-term serial GIMMS vegetation index dataset in China (1981-2006)",
-            "titleCn": "中国地区长时间序列GIMMS植被指数数据集（1981-2006）",
-            "description": "GIMMS (glaobal inventory modelling and mapping studies) NDVI data is the latest global vegetation index change data released by NASA C-J-Tucker and others in November 2003.\nThe dataset includes the global vegetation index changes from 1981 to 2006, the format is ENVI standard format, the projection is ALBERS, and its time resolution is 15 days and its spatial resolution is 8km. GIMMS NDVI data recorded the changes of vegetation in 22a area in the format of satellite data.\n1. File format:\nThe GIMMS-NDVI dataset contains all rar compressed files with a 15-day interval from July 1981 to 2006. After decompression, it includes an XML file, an .HDR header file, an .IMG file, and a .JPG image file. \n2. File naming:\nThe naming rules for compressed files in the NOAA / AVHRR-NDVI data set are: YYMMM15a (b) .n **-VIg_data_envi.rar, where YY-year, MMM-abbreviated English month letters, 15a-synthesized in the first half of the month, 15b-synthesized in the second half of the month, **-Satellite. After decompression, there are 4 files with the same file name, and the attributes are: XML document, header file (suffix: .HDF), remote sensing image file (suffix: .IMG), and JPEG image file. In this data set, the user uses the remote sensing image file with the suffix .IMG to analyze the vegetation index.\nRemote sensing image files with suffix of .IMG and .HDF used by users to analyze vegetation indices can be opened in ENVI and ERDAS software.\n3. The data header file information is as follows:\nCoordinate System is:\n    PROJECTION [\"Albers_Conic_Equal_Area\"],\n    PARAMETER [\"standard_parallel_1\", 25],\n    PARAMETER [\"standard_parallel_2\", 47],\n    PARAMETER [\"latitude_of_center\", 0],\n    PARAMETER [\"longitude_of_center\", 105],\n    PARAMETER [\"false_easting\", 0],\n    PARAMETER [\"false_northing\", 0],\n    UNIT [\"Meter\", 1]]\nPixel Size = (8000.000000000000000, -8000.000000000000000)\nCorner Coordinates:\nUpper Left (-3922260.739, 6100362.950) (51d20'23.06 \"E, 46d21'21.43\" N)\nLower Left (-3922260.739, 1540362.950) (71d16'1.22 \"E, 8d41'42.21\" N)\nUpper Right (3277739.261, 6100362.950) (151d 8'57.22 \"E, 49d 9'35.37\" N)\nLower Right (3277739.261, 1540362.950) (133d30'58.46 \"E, 10d37'13.35\" N)\nCenter (-322260.739, 3820362.950) (101d22'21.08 \"E, 35d42'18.02\" N)\nBand 1 Block = 900x1 Type = Int16, ColorInterp = Undefined\n    Computed Min / Max = -16066.000,11231.000\n4. Conversion relationship between DN value and NDVI\n NDVI = DN / 1000, divided by 10000 after 2003\n  The NDVI value should be between [-1,1]. Data outside this interval represent other features, such as water bodies.",
-            "descriptionCn": "GIMMS（glaobal inventory modelling and mapping studies)NDVI数据是美国国家航天航空局（NASA)C-J-Tucker等人于2003年11月推出的最新全球植被指数变化数据。\n该数据集包括了1981－2006年间的全球植被指数变化，格式为ENVI标准格式，投影为ALBERS,其时间分辨率是15天，空间分辨率8km。GIMMS NDVI数据采用卫星数据的格式记录了22a区域植被的变化情况。\n1、文件格式：\nGIMMS-NDVI数据集中包含了从1981年7月至2006年间隔为15天的所有.rar压缩文件，解压以后包括1个XML文档、一个.HDR头文件、一个.IMG文件和一个.JPG图像文件。\n2、文件命名：\nNOAA/AVHRR-NDVI数据集中的压缩文件命名规则为：YYMMM15a(b).n**-VIg_data_envi.rar，其中YY-年，MMM-简写的英文月份字母，15a-上半月份合成，15b-下半月份合成，**-卫星号。解压之后有4个文件，文件名不变，属性分别为：XML文档，头文件（后缀名为：.HDF），遥感影像文件（后缀名为：.IMG）和JPEG图像文件。这个数据集中，用户用来分析植被指数的是后缀名为.IMG的遥感影像文件文件。\n用户用来分析植被指数的后缀名为.IMG和.HDF的遥感影像文件文件，都可以在ENVI和ERDAS软件中打开。\n3、数据头文件信息如下：\nCoordinate System is:\n    PROJECTION[\"Albers_Conic_Equal_Area\"],\n    PARAMETER[\"standard_parallel_1\",25],\n    PARAMETER[\"standard_parallel_2\",47],\n    PARAMETER[\"latitude_of_center\",0],\n    PARAMETER[\"longitude_of_center\",105],\n    PARAMETER[\"false_easting\",0],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"Meter\",1]]\nPixel Size = (8000.000000000000000,-8000.000000000000000)\nCorner Coordinates:\nUpper Left  (-3922260.739, 6100362.950) ( 51d20'23.06\"E, 46d21'21.43\"N)\nLower Left  (-3922260.739, 1540362.950) ( 71d16'1.22\"E,  8d41'42.21\"N)\nUpper Right ( 3277739.261, 6100362.950) (151d 8'57.22\"E, 49d 9'35.37\"N)\nLower Right ( 3277739.261, 1540362.950) (133d30'58.46\"E, 10d37'13.35\"N)\nCenter      ( -322260.739, 3820362.950) (101d22'21.08\"E, 35d42'18.02\"N)\nBand 1 Block=900x1 Type=Int16, ColorInterp=Undefined\n    Computed Min/Max=-16066.000,11231.000\n4.DN值与NDVI的转换关系\n NDVI= DN/1000 ,2003年之后除以10000\n  NDVI值应在[-1,1]之间，此区间以外数据代表其他地物，如水体等。",
-            "instructions": "The naming rules of compressed files in NOAA / avhrr-ndvi dataset are yymmm15a (b). N * * - vig_data_envi.rar, where YY - year, mmm - simplified English month letter, 15A - first half month synthesis, 15b - second half month synthesis, and * * - satellite. After decompression, there are four files with the same file name. The attributes are: XML document, header file (suffix:. HDF), remote sensing image file (suffix:. IMG) and JPEG image file. In this dataset, the remote sensing image file with suffix of. Img is used by users to analyze vegetation index.\nRemote sensing image files with suffixes of. Img and. HDF used by users to analyze vegetation index can be opened in ENVI and ERDAS software.",
-            "instructionsCn": "NOAA/AVHRR-NDVI数据集中的压缩文件命名规则为：YYMMM15a(b).n**-VIg_data_envi.rar，其中YY-年，MMM-简写的英文月份字母，15a-上半月份合成，15b-下半月份合成，**-卫星号。解压之后有4个文件，文件名不变，属性分别为：XML文档，头文件（后缀名为：.HDF），遥感影像文件（后缀名为：.IMG）和JPEG图像文件。这个数据集中，用户用来分析植被指数的是后缀名为.IMG的遥感影像文件文件。\n用户用来分析植被指数的后缀名为.IMG和.HDF的遥感影像文件文件，都可以在ENVI和ERDAS软件中打开。",
-            "east": 135.5,
-            "west": 73.2,
-            "south": 17.8,
-            "north": 53.9,
-            "startTime": "1981-07-21 17:00:00",
-            "endTime": "2007-01-21 04:14:00",
-            "fileSize": 1955423386.0,
-            "cstr": null,
-            "doi": "",
-            "dataFormat": "栅格",
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "Tucker, C.J., J.E.Pinzon, M.E.Brown",
-                "nameEn": "Tucker, C.J., J.E.Pinzon, M.E.Brown",
-                "unitEn": "",
-                "unitCn": "Global Land Cover Facility, University of Maryland"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Global Inventory Modeling and Mapping Studies",
-                "referenceCn": null,
-                "referenceEn": "Tucker,C.J,J.E.Pinzon,and M.E.Brown(2004),Global Inventory Modeling and Mapping Studies,NA94apr15b.n11-VIg,2.0,Global Land Cover Facility,University of Maryland,College Park,Maryland,04/15/1994."
-            },
-            {
-                "titleCn": "黄土高原地区归一化植被指数时空动态变化及其与气候因子的关系",
-                "titleEn": null,
-                "referenceCn": "徐茜, 任志远, & 杨忍. (2012). 黄土高原地区归一化植被指数时空动态变化及其与气候因子的关系. 陕西师范大学学报（自科版）, 40(1), 82-87.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "黄土高原水蚀风蚀交错带植被覆盖动态变化及其与气候因子的关系",
-                "titleEn": null,
-                "referenceCn": "孙艳萍. 黄土高原水蚀风蚀交错带植被覆盖动态变化及其与气候因子的关系[D]. 西北农林科技大学, 2012.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Effects of ENSO-linked climate and vegetation on population dynamics of sympatric rodent species in semiarid grasslands of Inner Mongolia, China",
-                "referenceCn": null,
-                "referenceEn": "Jiang G, Zhao T, Liu J, Xu L, Yu G, He H, Krebs C J, Zhang Z. Effects of ENSO-linked climate and vegetation on population dynamics of sympatric rodent species in semiarid grasslands of Inner Mongolia, China[J]. Canadian Journal of Zoology, 2011, 89(8): 678–691. doi:10.1139/z11-048"
-            },
-            {
-                "titleCn": "生态地理分区框架下的大兴安岭植被动态研究",
-                "titleEn": null,
-                "referenceCn": "郭笑怡，张洪岩. 生态地理分区框架下的大兴安岭植被动态研究[J]. 地理科学. 2013(02): 181-188.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于遥感和GIS的中国西北植被动态研究",
-                "titleEn": null,
-                "referenceCn": "李珍存. (2007). 基于遥感和GIS的中国西北植被动态研究. (Doctoral dissertation, 甘肃农业大学).",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "长江流域的陆气耦合模拟及径流变化分析",
-                "titleEn": null,
-                "referenceCn": "高冰. 长江流域的陆气耦合模拟及径流变化分析[D]. 清华大学, 2012.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Spatial distributions and temporal variations of atmospheric aerosols and the affecting factors: a case study for a region in central China",
-                "referenceCn": null,
-                "referenceEn": "Guo, Yangjie, Hong, Song, Feng, Nan, Zhuang, Yanhua, Zhang, Liang. Spatial distributions and temporal variations of atmospheric aerosols and the affecting factors: a case study for a region in central China. International Journal of Remote Sensing, 2012, 33(12):3672-3692. doi:10.1080/01431161.2011.631951"
-            },
-            {
-                "titleCn": "基于GIS和RS的中国西北NDVI变化特征及其与气候变化的耦合性",
-                "titleEn": null,
-                "referenceCn": "王海军, 靳晓华, 李海龙, 张勃, 戴声佩. 基于GIS和RS的中国西北NDVI变化特征及其与气候变化的耦合性. 农业工程学报, 2010, (11):194-203",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "吉林西部地表植被归一化植被指数的时空分布特征",
-                "titleEn": null,
-                "referenceCn": "杨淑杰, 李晓东, 王兰芸, 韩智平, 陈剑. 吉林西部地表植被归一化植被指数的时空分布特征. 东北林业大学学报, 2010, (11):80-81+121",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "长江流域NDVI对气候变化响应的时滞效应",
-                "titleEn": null,
-                "referenceCn": "白淑英, 王莉, 史建桥. 长江流域NDVI对气候变化响应的时滞效应. 中国农业气象, 2012, (04):579-586",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "中国东北部地区植被与气候因子相关关系研究",
-                "titleEn": null,
-                "referenceCn": "何慧娟, 史学丽. 中国东北部地区植被与气候因子相关关系研究. 安徽农业科学, 2012, (32):15829-15832",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Response of vegetation coverage on climate change in arid mountain of Northwest China",
-                "referenceCn": null,
-                "referenceEn": "Zhou L, Yang G, Ding Y, Wang J. Response of vegetation coverage on climate change in arid mountain of Northwest China[C]//Geoscience and Remote Sensing Symposium,2009 IEEE International,IGARSS 2009. 2009, 3: III–569–III–572. doi:10.1109/IGARSS.2009.5417821"
-            },
-            {
-                "titleCn": "中国西北地区植被时空演变特征及其对气候变化的响应",
-                "titleEn": null,
-                "referenceCn": "戴声佩, 张勃, 王海军, 郭玲霞, 王亚敏. 中国西北地区植被时空演变特征及其对气候变化的响应. 遥感技术与应用, 2010, (01):69-76",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "The Long-Term Relationship between Population Growth and Vegetation Cover: An Empirical Analysis Based on the Panel Data of 21 Cities in Guangdong Province, China",
-                "referenceCn": null,
-                "referenceEn": "Li C, Kuang Y, Huang N, et al. The Long-Term Relationship between Population Growth and Vegetation Cover: An Empirical Analysis Based on the Panel Data of 21 Cities in Guangdong Province, China[J]. International journal of environmental research and public health. 2013, 10(2): 660-677."
-            },
-            {
-                "titleCn": "基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化研究",
-                "titleEn": null,
-                "referenceCn": "王强, 张勃, 戴声佩. 基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化研究. 资源环境与发展, 2011, (02):12-19",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于GIS的黄土高原地区退耕还林绩效分析",
-                "titleEn": null,
-                "referenceCn": "王雪平, 魏伟, 王永梅, 张飞, 康健. 基于GIS的黄土高原地区退耕还林绩效分析. 人民黄河, 2012, (08):88-91",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "黄土高原与安塞县植被变化及其气候响应特征",
-                "titleEn": null,
-                "referenceCn": "韩新辉，杨改河，刘志超. 黄土高原与安塞县植被变化及其气候响应特征[J]. 西北植物学报. 2009(03): 593-600.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "On the Variation of NDVI with the Principal Climatic Elements in the Tibetan Plateau",
-                "referenceCn": null,
-                "referenceEn": "Sun J, Cheng G, Li W, et al. On the Variation of NDVI with the Principal Climatic Elements in the Tibetan Plateau[J]. Remote Sensing. 2013, 5(4): 1894-1911."
-            },
-            {
-                "titleCn": "宁夏盐池县人地关系的演变及调适对策",
-                "titleEn": null,
-                "referenceCn": "王磊, 宋乃平. 宁夏盐池县人地关系的演变及调适对策. 资源科学, 2007, 29(6): 138–145.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "诺敏河流域植被覆盖时空演变及其与径流的关系研究",
-                "titleEn": null,
-                "referenceCn": "史晓亮，李颖，赵凯，等. 诺敏河流域植被覆盖时空演变及其与径流的关系研究[J]. 干旱区资源与环境. 2013(06): 54-60.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "秦岭南北地区植被覆盖对区域环境变化的响应",
-                "titleEn": null,
-                "referenceCn": "孙华, 白红英, 张清雨, 雒新萍, 张善红. 秦岭南北地区植被覆盖对区域环境变化的响应. 环境科学学报, 2009, (12):2635-2641",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "全球变化下松辽平原生态环境变迁研究",
-                "titleEn": null,
-                "referenceCn": "陈凤臻. 全球变化下松辽平原生态环境变迁研究[D]. 吉林大学, 2009",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A statistical analysis of relationship between climatic factors and the Normalized Difference Vegetation Index in China",
-                "referenceCn": null,
-                "referenceEn": "Song Y, Ma MG. A statistical analysis of relationship between climatic factors and the Normalized Difference Vegetation Index in China. International Journal of Remote Sensing, 2011, 32(14): 3947-3965, DOI: 10.1080/01431161003801336."
-            },
-            {
-                "titleCn": "气候变化和干扰对河西走廊北部风沙源区NDVI的影响",
-                "titleEn": null,
-                "referenceCn": "花立民, 杨思维, 周建伟, 王巧玲, 左松涛. 气候变化和干扰对河西走廊北部风沙源区NDVI的影响. 草地学报, 2012, (06):995-1003",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化",
-                "titleEn": null,
-                "referenceCn": "王强, 张勃, 戴声佩, 邹悦, 马中华, 张亚宁. 基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化. 资源科学, 2011, (08):1613-1620",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "内蒙古地区极端气候事件时空变化及其与NDVI的相关性",
-                "titleEn": null,
-                "referenceCn": "杨方兴. 内蒙古地区极端气候事件时空变化及其与NDVI的相关性[D]. 长安大学, 2012.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Vegetation dynamics and their response to hydroclimatic factors in the Tarim River Basin, China",
-                "referenceCn": null,
-                "referenceEn": "Wang Y, Shen Y, Chen Y, Guo Y. Vegetation dynamics and their response to hydroclimatic factors in the Tarim River Basin, China[J]. Ecohydrology, 2012: n/a–n/a. doi:10.1002/eco.1255"
-            },
-            {
-                "titleCn": "内蒙古植被NDVI变化特征分析",
-                "titleEn": null,
-                "referenceCn": "张超，苗峻峰，何宇良. 内蒙古植被NDVI变化特征分析[J]. 内蒙古气象. 2013(02): 23-27.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "A study on the effects of the surrounding faults on water loss in the Zoige Wetland, China",
-                "referenceCn": null,
-                "referenceEn": "Li M, Xu R, Huang W, Sun H, Luo L. A study on the effects of the surrounding faults on water loss in the Zoige Wetland, China[J]. Journal of Mountain Science, 2011, 8(4): 518–524. doi:10.1007/s11629-011-2060-4"
-            },
-            {
-                "titleCn": "渭河流域相对湿度与植被覆盖变化及其响应关系",
-                "titleEn": null,
-                "referenceCn": "蒋冲, 王飞, 穆兴民. 渭河流域相对湿度与植被覆盖变化及其响应关系. 水土保持通报, 2012, (05):122-127",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Integrating models to evaluate and map grassland fire risk zones in Hulunbuir of Inner Mongolia, China",
-                "referenceCn": null,
-                "referenceEn": "Bian, Hongfeng, Zhang, Hongyan, Zhou, Daowei, Xu, Jiawei, Zhang, Zhengxiang. Integrating models to evaluate and map grassland fire risk zones in Hulunbuir of Inner Mongolia, China. Fire Safety Journal, 2013, 61:207-216. doi:10.1016/j.firesaf.2013.09.004"
-            },
-            {
-                "titleCn": "基于遥感的榆林地区生态脆弱性研究",
-                "titleEn": null,
-                "referenceCn": "杨强. 基于遥感的榆林地区生态脆弱性研究[D]. 南京大学, 2012.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "中国西北地区植被覆盖变化驱动因子分析",
-                "titleEn": null,
-                "referenceCn": "戴声佩, 张勃, 王海军, 王亚敏, 郭玲霞, 王兴梅, 李丹. 中国西北地区植被覆盖变化驱动因子分析. 干旱区地理, 2010, (04):636-643",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于CASA模型的东北地区农田净初级生产力（NPP）研究",
-                "titleEn": null,
-                "referenceCn": "朱锋. 基于CASA模型的东北地区农田净初级生产力（NPP）研究[D]. 东北师范大学, 2011.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Probability Models of Fire Risk Based on Forest Fire Indices in Contrasting Climates over China",
-                "referenceCn": null,
-                "referenceEn": "Xiaowei, Li, Guobin, Fu, Zeppel, Melanie J. B., Xiubo, Yu, Gang, Zhao, Eamus, Derek, Qiang, Yu. Probability Models of Fire Risk Based on Forest Fire Indices in Contrasting Climates over China. Journal of Resources and Ecology, 2012, 3(2):105-117. doi:10.5814/j.issn.1674-764x.2012.02.002"
-            },
-            {
-                "titleCn": "黄土高原水蚀风蚀交错带植被覆盖时空演变分析",
-                "titleEn": null,
-                "referenceCn": "孙艳萍, 张晓萍, 徐金鹏, 马瞳宇, 马芹, 雷泳南. 黄土高原水蚀风蚀交错带植被覆盖时空演变分析. 西北农林科技大学学报(自然科学版), 2012, (02):143-150+156",
-                "referenceEn": null
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Regional effects of vegetation restoration on water yield across the Loess Plateau, China",
-                "referenceCn": null,
-                "referenceEn": "Feng, X.M., Sun, G., Fu, B.J., Su, C.H., Liu, Y., & Lamparski, H. (2012). Regional effects of vegetation restoration on water yield across the Loess Plateau, China. Hydrol. Earth Syst. Sci., 16(8), 2617-2628. doi:10.5194/hess-16-2617-2012"
-            },
-            {
-                "titleCn": "玛曲县草地退化遥感监测及驱动力研究",
-                "titleEn": null,
-                "referenceCn": "吕志邦. 玛曲县草地退化遥感监测及驱动力研究[D]. 兰州大学, 2012.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "1997—2004年浙江省金衢盆地湿地动态变化分析和生态健康评价",
-                "titleEn": null,
-                "referenceCn": "虞湘. 1997—2004年浙江省金衢盆地湿地动态变化分析和生态健康评价[D]. 浙江大学, 2011.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "中国陆地生态系统服务功能的时空变化分析",
-                "titleEn": null,
-                "referenceCn": "石垚, 王如松, 黄锦楼, 阳文锐. 中国陆地生态系统服务功能的时空变化分析. 科学通报, 2012, (09):720-731",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "1982年至2003年藏北高原草地生态系统NDVI与气候因子的相关分析",
-                "titleEn": null,
-                "referenceCn": "赵玉萍，张宪洲，王景升，等. 1982年至2003年藏北高原草地生态系统NDVI与气候因子的相关分析[J]. 资源科学. 2009(11): 1988-1998.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "黄河下游大型引黄灌区蒸散发长期变化特性",
-                "titleEn": null,
-                "referenceCn": "雷慧闽, 蔡建峰, 杨大文, 王凤娇. 黄河下游大型引黄灌区蒸散发长期变化特性. 水利水电科技进展, 2012, (01):13-17",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "基于NDVI的锡盟苏尼特左旗地表植被生物量的趋势分析和空间格局",
-                "titleEn": null,
-                "referenceCn": "李昌凌, 李文军. 基于NDVI的锡盟苏尼特左旗地表植被生物量的趋势分析和空间格局. 干旱区资源与环境, 2010, (03):147-152",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "大兴安岭NDVI时间序列的长程相关性特征分析",
-                "titleEn": null,
-                "referenceCn": "郭笑怡，刘德赢，张洪岩. 大兴安岭NDVI时间序列的长程相关性特征分析[J]. 地球信息科学学报. 2013(01): 152-158.",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "近30年内蒙古自治区植被变化趋势及影响因素分析",
-                "titleEn": null,
-                "referenceCn": "王娟, 李宝林, 余万里. 近30年内蒙古自治区植被变化趋势及影响因素分析. 干旱区资源与环境, 2012, (02):132-138",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "三北防护林工程区土地退化的时空变化和驱动力分析",
-                "titleEn": null,
-                "referenceCn": "黄森旺. 三北防护林工程区土地退化的时空变化和驱动力分析[D]. 辽宁工程技术大学, 2012.",
-                "referenceEn": null
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "归一化植被指数",
-                "nameEn": "NDVI"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国",
-                "keywordEn": "China"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1981-2006",
-                "keywordEn": "1981-2006",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            },
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "1cad1a63-ca8d-431a-b2b2-45d9916d860d",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "Long-term serial GIMMS vegetation index dataset in China (1981-2006)",
+      "titleCn": "中国地区长时间序列GIMMS植被指数数据集（1981-2006）",
+      "description": "GIMMS (glaobal inventory modelling and mapping studies) NDVI data is the latest global vegetation index change data released by NASA C-J-Tucker and others in November 2003.\nThe dataset includes the global vegetation index changes from 1981 to 2006, the format is ENVI standard format, the projection is ALBERS, and its time resolution is 15 days and its spatial resolution is 8km. GIMMS NDVI data recorded the changes of vegetation in 22a area in the format of satellite data.\n1. File format:\nThe GIMMS-NDVI dataset contains all rar compressed files with a 15-day interval from July 1981 to 2006. After decompression, it includes an XML file, an .HDR header file, an .IMG file, and a .JPG image file. \n2. File naming:\nThe naming rules for compressed files in the NOAA / AVHRR-NDVI data set are: YYMMM15a (b) .n **-VIg_data_envi.rar, where YY-year, MMM-abbreviated English month letters, 15a-synthesized in the first half of the month, 15b-synthesized in the second half of the month, **-Satellite. After decompression, there are 4 files with the same file name, and the attributes are: XML document, header file (suffix: .HDF), remote sensing image file (suffix: .IMG), and JPEG image file. In this data set, the user uses the remote sensing image file with the suffix .IMG to analyze the vegetation index.\nRemote sensing image files with suffix of .IMG and .HDF used by users to analyze vegetation indices can be opened in ENVI and ERDAS software.\n3. The data header file information is as follows:\nCoordinate System is:\n    PROJECTION [\"Albers_Conic_Equal_Area\"],\n    PARAMETER [\"standard_parallel_1\", 25],\n    PARAMETER [\"standard_parallel_2\", 47],\n    PARAMETER [\"latitude_of_center\", 0],\n    PARAMETER [\"longitude_of_center\", 105],\n    PARAMETER [\"false_easting\", 0],\n    PARAMETER [\"false_northing\", 0],\n    UNIT [\"Meter\", 1]]\nPixel Size = (8000.000000000000000, -8000.000000000000000)\nCorner Coordinates:\nUpper Left (-3922260.739, 6100362.950) (51d20'23.06 \"E, 46d21'21.43\" N)\nLower Left (-3922260.739, 1540362.950) (71d16'1.22 \"E, 8d41'42.21\" N)\nUpper Right (3277739.261, 6100362.950) (151d 8'57.22 \"E, 49d 9'35.37\" N)\nLower Right (3277739.261, 1540362.950) (133d30'58.46 \"E, 10d37'13.35\" N)\nCenter (-322260.739, 3820362.950) (101d22'21.08 \"E, 35d42'18.02\" N)\nBand 1 Block = 900x1 Type = Int16, ColorInterp = Undefined\n    Computed Min / Max = -16066.000,11231.000\n4. Conversion relationship between DN value and NDVI\n NDVI = DN / 1000, divided by 10000 after 2003\n  The NDVI value should be between [-1,1]. Data outside this interval represent other features, such as water bodies.",
+      "descriptionCn": "GIMMS（glaobal inventory modelling and mapping studies)NDVI数据是美国国家航天航空局（NASA)C-J-Tucker等人于2003年11月推出的最新全球植被指数变化数据。\n该数据集包括了1981－2006年间的全球植被指数变化，格式为ENVI标准格式，投影为ALBERS,其时间分辨率是15天，空间分辨率8km。GIMMS NDVI数据采用卫星数据的格式记录了22a区域植被的变化情况。\n1、文件格式：\nGIMMS-NDVI数据集中包含了从1981年7月至2006年间隔为15天的所有.rar压缩文件，解压以后包括1个XML文档、一个.HDR头文件、一个.IMG文件和一个.JPG图像文件。\n2、文件命名：\nNOAA/AVHRR-NDVI数据集中的压缩文件命名规则为：YYMMM15a(b).n**-VIg_data_envi.rar，其中YY-年，MMM-简写的英文月份字母，15a-上半月份合成，15b-下半月份合成，**-卫星号。解压之后有4个文件，文件名不变，属性分别为：XML文档，头文件（后缀名为：.HDF），遥感影像文件（后缀名为：.IMG）和JPEG图像文件。这个数据集中，用户用来分析植被指数的是后缀名为.IMG的遥感影像文件文件。\n用户用来分析植被指数的后缀名为.IMG和.HDF的遥感影像文件文件，都可以在ENVI和ERDAS软件中打开。\n3、数据头文件信息如下：\nCoordinate System is:\n    PROJECTION[\"Albers_Conic_Equal_Area\"],\n    PARAMETER[\"standard_parallel_1\",25],\n    PARAMETER[\"standard_parallel_2\",47],\n    PARAMETER[\"latitude_of_center\",0],\n    PARAMETER[\"longitude_of_center\",105],\n    PARAMETER[\"false_easting\",0],\n    PARAMETER[\"false_northing\",0],\n    UNIT[\"Meter\",1]]\nPixel Size = (8000.000000000000000,-8000.000000000000000)\nCorner Coordinates:\nUpper Left  (-3922260.739, 6100362.950) ( 51d20'23.06\"E, 46d21'21.43\"N)\nLower Left  (-3922260.739, 1540362.950) ( 71d16'1.22\"E,  8d41'42.21\"N)\nUpper Right ( 3277739.261, 6100362.950) (151d 8'57.22\"E, 49d 9'35.37\"N)\nLower Right ( 3277739.261, 1540362.950) (133d30'58.46\"E, 10d37'13.35\"N)\nCenter      ( -322260.739, 3820362.950) (101d22'21.08\"E, 35d42'18.02\"N)\nBand 1 Block=900x1 Type=Int16, ColorInterp=Undefined\n    Computed Min/Max=-16066.000,11231.000\n4.DN值与NDVI的转换关系\n NDVI= DN/1000 ,2003年之后除以10000\n  NDVI值应在[-1,1]之间，此区间以外数据代表其他地物，如水体等。",
+      "instructions": "The naming rules of compressed files in NOAA / avhrr-ndvi dataset are yymmm15a (b). N * * - vig_data_envi.rar, where YY - year, mmm - simplified English month letter, 15A - first half month synthesis, 15b - second half month synthesis, and * * - satellite. After decompression, there are four files with the same file name. The attributes are: XML document, header file (suffix:. HDF), remote sensing image file (suffix:. IMG) and JPEG image file. In this dataset, the remote sensing image file with suffix of. Img is used by users to analyze vegetation index.\nRemote sensing image files with suffixes of. Img and. HDF used by users to analyze vegetation index can be opened in ENVI and ERDAS software.",
+      "instructionsCn": "NOAA/AVHRR-NDVI数据集中的压缩文件命名规则为：YYMMM15a(b).n**-VIg_data_envi.rar，其中YY-年，MMM-简写的英文月份字母，15a-上半月份合成，15b-下半月份合成，**-卫星号。解压之后有4个文件，文件名不变，属性分别为：XML文档，头文件（后缀名为：.HDF），遥感影像文件（后缀名为：.IMG）和JPEG图像文件。这个数据集中，用户用来分析植被指数的是后缀名为.IMG的遥感影像文件文件。\n用户用来分析植被指数的后缀名为.IMG和.HDF的遥感影像文件文件，都可以在ENVI和ERDAS软件中打开。",
+      "east": 135.5,
+      "west": 73.2,
+      "south": 17.8,
+      "north": 53.9,
+      "startTime": "1981-07-21 17:00:00",
+      "endTime": "2007-01-21 04:14:00",
+      "fileSize": 1955423386.0,
+      "cstr": null,
+      "doi": "",
+      "dataFormat": "栅格",
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Earth observation-based long-term global vegetation index products are used by scientists from a wide range of disciplines concerned with global change. The normalized difference vegetation index (NDVI) is defined as (ρNIR −ρRED)/(ρNIR +ρRED), where ρNIR and ρRED are surface reflectance in the near infrared (NIR; 0.725–1.10 µm) and visible red (0.58–0.68 µm), respectively. As plants become more photoactive, they absorb more visible red light due to the chlorophyll content of leaves and stems, and scatter more in the near infrared due to the alignment of cell walls. This relationship, detected by remote sensing instruments at the canopy scale, has the effect of making the index increase (decrease) as the density of the canopy increases (decreases). As such, NDVI has been used widely in global change research with Earth observation remote sensing for three general purposes: (1) the estimation of canopy properties related to light-use efficiency, such as the leaf area index (LAI) and fraction of photosynthetically active radiation intercepted by the canopy (FPAR), (2) representation of vegetation climatology in soil–vegetation–atmosphere transfer models, and (3) detection of trends in vegetation and phenology. Although NDVI is widely used, it is sensitive to atmospheric effects, soil background, and saturates at high LAI. The enhanced vegetation index (EVI) was introduced to overcome these limitations, as it includes a visible blue band to reduce atmospheric effects, calibration terms to reduce the effects of soil background, and does not saturate as severely as NDVI at high LAI. The Advanced Very High Resolution Radiometer (AVHRR) is the most commonly used sensor for long-term (i.e. pre-MODIS) global change studies, because it began retrieving visible red and NIR reflectance needed to estimate NDVI from 1981. Reflectance data collected from the earlier AVHRR sensors were difficult to process and synthesize, because they lacked onboard calibration; the NIR channel was sensitive to water, sun glint, glaciers at high latitudes, and clouds; and of orbital drift. These issues were rectified with the launch of the AVHRR sensors onboard NOAA 16, 17, 18, and 19, but have resulted in radiometric and spectral inconsistencies across sensors that can significantly bias global change analyses. Various methods have been developed to make these data continuous and consistent through time, but take different approaches and are frequently updated, necessitating new accuracy assessments to inform the user community as they evolve. The Global Inventory Modeling and Mapping Studies (GIMMS) and Vegetation Index and Phenology Lab (VIP) AVHRR products are actively used and frequently updated, but represent fundamentally different approaches to synthesis. Both GIMMS and VIP are aggregated to a 15-day time step from daily data and are calibrated with higher spatial resolution sensors in the period that overlaps NOAA 7, 9, 11, and 14 and NOAA 16, 17, 18, and 19."
-            ],
-            "research objective": [
-                "The aim of this study was to perform a global assessment of the latest version of GIMMS and VIP over a 30-year period (January 1982 to December 2011) in order to aid the user (global change) community in interpreting results that involve these data. In doing so, we helped resolve the superiority of one product over another. The assessment was performed with three experiments that address the three major themes of global change research that involve Earth observation remote sensing."
-            ],
-            "challenges": [
-                "Reflectance data collected from the earlier AVHRR sensors were difficult to process and synthesize, because they lacked onboard calibration; the NIR channel was sensitive to water, sun glint, glaciers at high latitudes, and clouds; and of orbital drift. These issues were rectified with the launch of the AVHRR sensors onboard NOAA 16, 17, 18, and 19, but have resulted in radiometric and spectral inconsistencies across sensors that can significantly bias global change analyses. Bias in inter-calibration of the VIP record at northernmost latitudes was suspected to contribute most to these discrepancies."
-            ],
-            "methods": [
-                "After the filter was applied, NDVI3g was resampled to NDVI3v/EVI3v resolution using the gdalwarp utility (http://www.gdal.org/gdalwarp.html) with default parameters. The data sets were then resampled back to the native NDVI3g spatial resolution for evaluation. FPAR derived from Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM +) 30 m resolution surface reflectance data was used intermediately to downscale NDVI3g, NDVI3v, and EVI3v to 30 m resolution to facilitate the comparison. The Landsat TM/ETM+surface reflectance and in situ LAI data were extracted from a database that was developed to determine the ability of Landsat-based NDVI, EVI2, and other vegetation indices to predict LAI for field crops around the world. NDVI and EVI2 were computed using the equations above. Downscaling was performed by converting AVHRR and Landsat vegetation indices to FPAR. In this study, on a per pixel basis, most of the in situ LAI was retrieved only once, so using a ratio-based approach was not feasible. Therefore, the AVHRR vegetation indices were downscaled to 30 m spatial resolution by regressing (linearly) Landsat FPAR and NDVI3g, NDIV3v, and EVI3v FPAR. Once NDVI3g, NDVI3v, and EVI3v FPAR were downscaled to corresponding Landsat data, their performance was evaluated by regressing them (linearly) with the in situ LAI data. The performance of the final model selected in each case was characterized by the coefficient of determination (R2), significance tests, and root mean square error (RMSE)."
-            ],
-            "dataset": [
-                "Unlike previous global studies, a unique Landsat 30 m spatial resolution and in situ LAI database for major crop types on five continents was used to evaluate the performance of not only NDVI3g and NDVI3v but also EVI3v."
-            ],
-            "findings": [
-                "The performance of NDVI3v and EVI3v was worse than NDVI3g using the in situ data, which was attributed to the fusion of GIMMS and MODIS data in the VIP record. EVI3v has the potential to contribute biophysical information beyond NDVI3g and NDVI3v to global change studies, but we caution its use due to the poor performance of EVI3v in this study. Overall, the records were most consistent at northern latitudes during the primary growing season and southern latitudes and the tropics throughout much of the year, while the records were less consistent at northern latitudes during green-up and senescence, and in the great deserts of the world throughout much of the year. These patterns led to general agreement (disagreement) between trends in the magnitude (timing) of NDVI over the study period."
-            ],
-            "backgroundCn": [
-                "基于地球观测的长期全球植被指数产品被来自广泛学科的科学家用于全球变化研究。归一化差异植被指数（NDVI）定义为 (ρNIR − ρRED)/(ρNIR + ρRED)，其中 ρNIR 和 ρRED 分别是近红外（NIR；0.725–1.10 µm）和可见红光（0.58–0.68 µm）的表面反射率。随着植物光合活性的增强，由于叶子和茎的叶绿素含量，它们吸收更多的可见红光，并由于细胞壁的排列而散射更多的近红外光。这种关系在树冠尺度上通过遥感仪器被检测到，导致当树冠密度增加（减少）时，指数增加（减少）。因此，NDVI在全球变化研究中被广泛使用，主要有三个目的：（1）估算与光利用效率相关的树冠特性，如叶面积指数（LAI）和被树冠截获的光合有效辐射的比例（FPAR）；（2）在土壤-植被-大气传输模型中表示植被气候学；（3）检测植被和物候的趋势。尽管NDVI被广泛使用，但它对大气效应、土壤背景敏感，并且在高LAI时会饱和。增强植被指数（EVI）被引入以克服这些限制，因为它包括一个可见蓝光波段以减少大气效应，校准项以减少土壤背景的影响，并且在高LAI时不会像NDVI那样严重饱和。先进非常高分辨率辐射计（AVHRR）是长期（即前MODIS）全球变化研究中最常用的传感器，因为它自1981年开始获取估算NDVI所需的可见红光和NIR反射率。早期AVHRR传感器收集的反射率数据难以处理和合成，因为它们缺乏机载校准；NIR通道对水、太阳镜、极地的冰川和云敏感；以及轨道漂移。这些问题在NOAA 16、17、18和19号卫星上搭载的AVHRR传感器发射后得到了纠正，但导致了传感器之间的辐射和光谱不一致，这可能显著偏倚全球变化分析。已经开发出各种方法使这些数据在时间上连续和一致，但采取不同的方法并且经常更新， necessitating新的准确性评估以告知用户社区随着它们的发展。全球清单建模和制图研究（GIMMS）和植被指数与物候实验室（VIP）AVHRR产品被积极使用并频繁更新，但代表了根本不同的合成方法。GIMMS和VIP都从每日数据聚合到15天的时间步长，并在与NOAA 7、9、11、14和NOAA 16、17、18、19重叠的时期与更高空间分辨率的传感器进行校准。"
-            ],
-            "research objectiveCn": [
-                "本研究的目的是对最新版本的GIMMS和VIP进行全球评估，时间跨度为30年（1982年1月到2011年12月），以帮助全球变化研究社区解读涉及这些数据的结果。在此过程中，我们帮助解决了一个产品相对于另一个产品的优越性问题。评估通过三个实验进行，涉及全球变化研究的三个主要主题，这些主题与地球观测遥感相关。"
-            ],
-            "challengesCn": [
-                "早期AVHRR传感器收集的反射率数据处理和综合困难，因为它们缺乏在轨校准；近红外通道对水体、太阳镜、极高纬度的冰川和云层敏感；以及轨道漂移。这些问题在NOAA 16、17、18和19号卫星上搭载的AVHRR传感器发射后得到了改善，但导致了传感器之间的辐射和光谱不一致，这可能会显著影响全球变化分析。怀疑在北极地区VIP记录的互校偏差是导致这些差异的主要原因。"
-            ],
-            "methodsCn": [
-                "在应用滤波器后，NDVI3g使用gdalwarp工具（http://www.gdal.org/gdalwarp.html）以默认参数重采样到NDVI3v/EVI3v的分辨率。然后，这些数据集被重新采样回原始的NDVI3g空间分辨率以进行评估。利用Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM+) 30米分辨率的表面反射率数据中间导出的FPAR被用来将NDVI3g、NDVI3v和EVI3v降尺度到30米分辨率，以便进行比较。Landsat TM/ETM+的表面反射率和现场LAI数据是从一个数据库中提取的，该数据库旨在确定基于Landsat的NDVI、EVI2和其他植被指数预测全球农作物LAI的能力。NDVI和EVI2是使用上述公式计算的。降尺度是通过将AVHRR和Landsat植被指数转换为FPAR来进行的。在本研究中，基于每个像素，大多数现场LAI仅提取一次，因此使用基于比率的方法不可行。因此，AVHRR植被指数通过与Landsat FPAR及NDVI3g、NDVI3v和EVI3v FPAR进行线性回归降尺度到30米空间分辨率。一旦NDVI3g、NDVI3v和EVI3v FPAR被降尺度到相应的Landsat数据，它们的性能通过与现场LAI数据进行线性回归进行评估。每种情况下最终选择模型的性能通过决定系数（R2）、显著性检验和均方根误差（RMSE）来表征。"
-            ],
-            "datasetCn": [
-                "与以往的全球研究不同，本研究使用了独特的Landsat 30米空间分辨率和五大洲主要作物类型的现场LAI数据库，以评估不仅是NDVI3g和NDVI3v的性能，还有EVI3v的性能。"
-            ],
-            "findingsCn": [
-                "NDVI3v和EVI3v的性能在使用现场数据时不如NDVI3g，这归因于VIP记录中GIMMS和MODIS数据的融合。EVI3v有潜力为全球变化研究提供超越NDVI3g和NDVI3v的生物物理信息，但由于本研究中EVI3v的表现不佳，我们对其使用表示谨慎。总体而言，这些记录在主要生长季节的北半球和南半球及热带地区的一年大部分时间内最为一致，而在北半球的绿芽和衰退期间以及世界上大部分时间的广阔沙漠地区则一致性较差。这些模式导致了研究期间NDVI在幅度（时机）上的趋势总体一致（不一致）。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "Tucker, C.J., J.E.Pinzon, M.E.Brown",
+        "nameEn": "Tucker, C.J., J.E.Pinzon, M.E.Brown",
+        "unitEn": "",
+        "unitCn": "Global Land Cover Facility, University of Maryland"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Is the GIMMS NDVI data set collected using the AVHRR sensors?",
-                "QuestionCn": "GIMMS NDVI 数据集是使用 AVHRR 传感器收集的吗？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Are NDVI values outside the range of [-1,1] indicative of non-vegetative land features?",
-                "QuestionCn": "NDVI值超出[-1,1]范围的情况是否表明非植被土地特征？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Which data collection method is more prone to atmospheric effects and soil background interference, NDVI or EVI?",
-                "QuestionCn": "哪种数据收集方法更容易受到大气影响和土壤背景干扰，NDVI还是EVI？",
-                "AnswerEn": "NDVI",
-                "AnswerCn": "NDVI",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Are datasets like GIMMS and VIP typically aggregated from daily data to a 15-day time step, a monthly time step, or an annual time step?",
-                "QuestionCn": "像GIMMS和VIP这样的数据集通常是从日数据聚合到15天时间步、月时间步还是年时间步？",
-                "AnswerEn": "15-day time step",
-                "AnswerCn": "15天时间步长",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What is a common method used to process and synthesize reflectance data from earlier AVHRR sensors?",
-                "QuestionCn": "处理和合成早期AVHRR传感器反射率数据的常用方法是什么？",
-                "AnswerEn": "Calibration with higher spatial resolution sensors",
-                "AnswerCn": "使用更高空间分辨率传感器进行校准",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "Where can NDVI and EVI2 be computed using reflectance data?",
-                "QuestionCn": "NDVI和EVI2可以使用反射率数据进行计算。",
-                "AnswerEn": "Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM+)",
-                "AnswerCn": "Landsat主题制图仪/增强型主题制图仪Plus (TM/ETM+)",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What challenges are associated with using AVHRR sensors for global change analysis?",
-                "QuestionCn": "使用AVHRR传感器进行全球变化分析面临哪些挑战？",
-                "AnswerEn": "Radiometric and spectral inconsistencies",
-                "AnswerCn": "辐射和光谱不一致",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Could you illustrate a methodological approach to downscale global vegetation index data to a higher spatial resolution for detailed analysis?",
-                "QuestionCn": "您能否阐述一种方法论，以将全球植被指数数据降尺度到更高的空间分辨率，以便进行详细分析？",
-                "AnswerEn": "An example methodological approach involves downscaling NDVI3g, NDVI3v, and EVI3v data to a 30 m resolution by using Landsat Thematic Mapper/Enhanced Thematic Mapper Plus (TM/ETM+) surface reflectance data. This is done by converting AVHRR and Landsat vegetation indices to FPAR and then linearly regressing the FPAR data with in situ LAI data.",
-                "AnswerCn": "一种方法论方法涉及将NDVI3g、NDVI3v和EVI3v数据降尺度到30米分辨率，使用Landsat主题制图仪/增强主题制图仪（TM/ETM+）的表面反射率数据。这是通过将AVHRR和Landsat植被指数转换为FPAR，然后将FPAR数据与现场LAI数据进行线性回归来实现的。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced in inter-calibrating datasets for global vegetation studies, particularly related to different satellite sensors?",
-                "QuestionCn": "在全球植被研究中，特别是与不同卫星传感器相关的情况下，进行数据集间标定时面临的一个挑战是什么？",
-                "AnswerEn": "A significant challenge in inter-calibrating datasets is the presence of radiometric and spectral inconsistencies across different AVHRR sensors, which can bias global change analyses. This is particularly problematic at northernmost latitudes, where bias in inter-calibration of the VIP record is suspected to contribute to discrepancies.",
-                "AnswerCn": "在数据集之间进行互校准时，一个显著的挑战是不同AVHRR传感器之间存在辐射和光谱不一致性，这可能会对全球变化分析产生偏差。这在最北纬度地区尤其成问题，因为VIP记录的互校准偏差被怀疑会导致差异。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of the pixel size and coordinate system used in a dataset related to long-term global vegetation index products?",
-                "QuestionCn": "与长期全球植被指数产品相关的数据集中的像素大小和坐标系统的特征是什么？",
-                "AnswerEn": "8000x8000 meters, Albers Conic Equal Area projection, standard parallels at 25 and 47 degrees, latitude of center at 0 degrees, longitude of center at 105 degrees",
-                "AnswerCn": "8000x8000 米，阿尔伯斯等积圆锥投影，标准纬线为 25 度和 47 度，中心纬度为 0 度，中心经度为 105 度。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the features of the file formats and naming conventions used for storing satellite data in a dataset?",
-                "QuestionCn": "卫星数据集存储的文件格式和命名约定的特征是什么？",
-                "AnswerEn": "XML, HDR, IMG, JPG, YYMMM15a(b).n**-VIg_data_envi.rar, vegetation index analysis, year, month, half-month period, satellite number",
-                "AnswerCn": "XML, HDR, IMG, JPG, YYMMM15a(b).n**-VIg_data_envi.rar, 植被指数分析, 年, 月, 半月期, 卫星编号",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What specific data transformation is required to convert DN values to NDVI values in a dataset involving vegetation indices?",
-                "QuestionCn": "将DN值转换为NDVI值所需的具体数据转换是什么？",
-                "AnswerEn": "divide DN by 1000 for data before 2003, divide DN by 10000 for data after 2003, NDVI values range [-1,1]",
-                "AnswerCn": "在2003年之前的数据中，将DN除以1000；在2003年之后的数据中，将DN除以10000。NDVI值的范围是[-1,1]。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of the NDVI dataset, and how does it compare when resampling to match Landsat resolution for detailed analysis?",
-                "QuestionCn": "NDVI数据集的空间分辨率是多少？在重采样以匹配Landsat分辨率进行详细分析时，它的比较如何？",
-                "AnswerEn": "8 km, 30 m",
-                "AnswerCn": "8公里，30米",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the meaning of 'Normalized Difference Vegetation Index (NDVI)' in the context of satellite data analysis?",
-                "QuestionCn": "归一化差异植被指数（NDVI）在卫星数据分析中的含义是什么？",
-                "AnswerEn": "The Normalized Difference Vegetation Index (NDVI) is defined as (ρNIR − ρRED)/(ρNIR + ρRED), where ρNIR and ρRED are surface reflectance in the near infrared (NIR; 0.725–1.10 µm) and visible red (0.58–0.68 µm), respectively. It is used to measure vegetation density and health by assessing the difference in reflectance between these bands, with higher NDVI values indicating denser and healthier vegetation.",
-                "AnswerCn": "归一化植被指数（NDVI）定义为（ρNIR − ρRED）/(ρNIR + ρRED)，其中ρNIR和ρRED分别是近红外（NIR；0.725–1.10 µm）和可见红光（0.58–0.68 µm）的表面反射率。它用于通过评估这两个波段之间的反射率差异来测量植被的密度和健康状况，NDVI值越高，表示植被越密集、越健康。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the challenges of processing and synthesizing reflectance data from earlier AVHRR sensors compare to those encountered with the newer sensors used in vegetation index datasets?",
-                "QuestionCn": "早期AVHRR传感器处理和合成反射率数据的挑战与用于植被指数数据集的新传感器所遇到的挑战相比，如何？",
-                "AnswerEn": "Reflectance data from earlier AVHRR sensors were difficult to process due to the lack of onboard calibration and sensitivity to various atmospheric and environmental factors, resulting in radiometric and spectral inconsistencies. These issues were rectified in newer sensors with improved calibration and reduced sensitivity to environmental factors, although inter-sensor biases still pose challenges.",
-                "AnswerCn": "早期的AVHRR传感器的反射率数据由于缺乏机载校准以及对各种大气和环境因素的敏感性，处理起来非常困难，导致了辐射和光谱的不一致。这些问题在新型传感器中得到了改善，具有更好的校准和对环境因素的敏感性降低，尽管传感器之间的偏差仍然带来挑战。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways do the approaches to synthesizing vegetation index data differ between the GIMMS and VIP products, and how might these differences impact their application in global change research?",
-                "QuestionCn": "GIMMS和VIP产品在合成植被指数数据的方法上有哪些不同，这些差异可能如何影响它们在全球变化研究中的应用？",
-                "AnswerEn": "GIMMS and VIP products use fundamentally different approaches to synthesize vegetation index data. Both are aggregated to a 15-day time step, but differ in calibration methods and the integration of data from higher spatial resolution sensors. These differences can impact their consistency and applicability in global change research, especially in terms of trend detection and canopy property estimation.",
-                "AnswerCn": "GIMMS和VIP产品在合成植被指数数据的方法上有根本性的不同。两者都被聚合到15天的时间步长，但在校准方法和高空间分辨率传感器数据的整合上存在差异。这些差异可能会影响它们在全球变化研究中的一致性和适用性，特别是在趋势检测和冠层属性估计方面。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the differences in the performance of NDVI3g, NDVI3v, and EVI3v vegetation indices when evaluated using a unique Landsat 30 m spatial resolution and in situ LAI database, and how might these differences influence their use in studies of biophysical information?",
-                "QuestionCn": "在使用独特的Landsat 30米空间分辨率和现场LAI数据库评估时，NDVI3g、NDVI3v和EVI3v植被指数的性能差异是什么，这些差异可能如何影响它们在生物物理信息研究中的应用？",
-                "AnswerEn": "The performance of NDVI3v and EVI3v was worse than NDVI3g when evaluated with the in situ data, attributed to the fusion of GIMMS and MODIS data in the VIP record. While EVI3v has potential to contribute additional biophysical information, its poor performance in this study suggests caution in its application for global change studies.",
-                "AnswerCn": "NDVI3v和EVI3v的表现比NDVI3g在与现场数据评估时更差，这归因于VIP记录中GIMMS和MODIS数据的融合。虽然EVI3v有潜力提供额外的生物物理信息，但在本研究中的表现不佳，建议在全球变化研究中谨慎应用。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How do the atmospheric effects and soil background influence the interpretation of NDVI data and what methodologies can be applied to mitigate these influences in data collection?",
-                "QuestionCn": "大气效应和土壤背景如何影响NDVI数据的解释，以及在数据收集过程中可以应用哪些方法来减轻这些影响。",
-                "AnswerEn": "NDVI is sensitive to atmospheric effects and soil background, which can distort the data interpretation. To mitigate these influences, the enhanced vegetation index (EVI) was introduced as it includes a visible blue band to reduce atmospheric effects and calibration terms to reduce soil background effects, thus providing more reliable data for interpretation.",
-                "AnswerCn": "NDVI对大气影响和土壤背景敏感，这可能会扭曲数据解释。为了减轻这些影响，增强植被指数（EVI）被引入，因为它包含一个可见的蓝色波段以减少大气影响，并且包含校准项以减少土壤背景影响，从而提供更可靠的数据用于解释。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "Why is there a need for continuous and consistent data in global vegetation index products, and what approaches are taken to achieve this consistency?",
-                "QuestionCn": "为什么全球植被指数产品需要持续和一致的数据？为了实现这种一致性采取了哪些方法？",
-                "AnswerEn": "Continuous and consistent data are needed to avoid biases in global change analyses caused by radiometric and spectral inconsistencies across sensors. Various methods are developed to make these data continuous and consistent through time, often involving calibration with higher spatial resolution sensors and frequent updates, necessitating new accuracy assessments.",
-                "AnswerCn": "为了避免由于传感器之间的辐射和光谱不一致而导致的全球变化分析中的偏差，需要连续和一致的数据。为使这些数据在时间上连续和一致，已经开发了各种方法，通常涉及与更高空间分辨率传感器的校准和频繁更新，这需要新的准确性评估。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What motivates the development of alternative indices like the Enhanced Vegetation Index (EVI) in addition to NDVI for vegetation monitoring?",
-                "QuestionCn": "开发替代指数如增强植被指数（EVI）而不仅仅依赖于归一化植被指数（NDVI）进行植被监测的动机是什么？",
-                "AnswerEn": "NDVI, while widely used, is sensitive to atmospheric effects, soil background, and saturates at high LAI. The Enhanced Vegetation Index (EVI) was introduced to overcome these limitations, as it includes a visible blue band to reduce atmospheric effects, calibration terms to reduce the effects of soil background, and does not saturate as severely as NDVI at high LAI.",
-                "AnswerCn": "NDVI虽然被广泛使用，但对大气效应、土壤背景敏感，并且在高LAI时会饱和。增强植被指数（EVI）被引入以克服这些限制，因为它包含一个可见的蓝光波段以减少大气效应，校准项以减少土壤背景的影响，并且在高LAI时不会像NDVI那样严重饱和。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the consequences of using uncalibrated AVHRR sensors for early NDVI data collection on global change analyses?",
-                "QuestionCn": "使用未校准的AVHRR传感器进行早期NDVI数据收集对全球变化分析的后果是什么？",
-                "AnswerEn": "Using uncalibrated AVHRR sensors for early NDVI data collection results in radiometric and spectral inconsistencies across sensors, which can significantly bias global change analyses. These inconsistencies arise due to the lack of onboard calibration, sensitivity to water, sun glint, glaciers, clouds, and orbital drift. These issues affect the accuracy and reliability of the data, necessitating various methods to ensure data continuity and consistency over time.",
-                "AnswerCn": "使用未校准的AVHRR传感器进行早期NDVI数据收集会导致传感器之间的辐射和光谱不一致，这可能会显著偏倚全球变化分析。这些不一致的产生是由于缺乏在轨校准、对水体、太阳镜、冰川、云层和轨道漂移的敏感性。这些问题影响了数据的准确性和可靠性，因此需要采用各种方法来确保数据在时间上的连续性和一致性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the fusion of GIMMS and MODIS data in the VIP record affect the performance of NDVI3v and EVI3v in global change studies?",
-                "QuestionCn": "GIMMS和MODIS数据在VIP记录中的融合如何影响NDVI3v和EVI3v在全球变化研究中的表现？",
-                "AnswerEn": "The fusion of GIMMS and MODIS data in the VIP record negatively affects the performance of NDVI3v and EVI3v compared to NDVI3g when using in situ data. This is attributed to the integration of different datasets, which can introduce inconsistencies and affect the accuracy of the vegetation indices, especially during different phases of the growing season and in challenging environmental conditions.",
-                "AnswerCn": "GIMMS和MODIS数据在VIP记录中的融合对NDVI3v和EVI3v的性能产生了负面影响，相较于NDVI3g在使用现场数据时。这归因于不同数据集的整合，这可能引入不一致性，并影响植被指数的准确性，特别是在生长季节的不同阶段和具有挑战性的环境条件下。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the implications of downscaling AVHRR vegetation indices to Landsat 30 m resolution on the evaluation of vegetation dynamics?",
-                "QuestionCn": "将AVHRR植被指数下采样到Landsat 30米分辨率对植被动态评估的影响是什么？",
-                "AnswerEn": "Downscaling AVHRR vegetation indices to Landsat 30 m resolution allows for a more detailed evaluation of vegetation dynamics by facilitating a comparison with higher-resolution in situ LAI data. This approach helps improve the understanding of vegetation index performance and enhances the ability to predict LAI for field crops globally, leading to more accurate assessments of vegetation changes and trends at finer spatial scales.",
-                "AnswerCn": "将AVHRR植被指数下调至Landsat 30米分辨率，可以更详细地评估植被动态，便于与更高分辨率的现场LAI数据进行比较。这种方法有助于提高对植被指数性能的理解，并增强全球范围内对田间作物LAI的预测能力，从而在更细的空间尺度上更准确地评估植被变化和趋势。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the main objectives of collecting long-term vegetation index data using Earth observation remote sensing instruments?",
-                "QuestionCn": "收集长期植被指数数据的主要目标是利用地球观测遥感仪器。",
-                "AnswerEn": "The main objectives include estimating canopy properties related to light-use efficiency, representing vegetation climatology in soil–vegetation–atmosphere transfer models, and detecting trends in vegetation and phenology.",
-                "AnswerCn": "主要目标包括估计与光利用效率相关的冠层特性，代表土壤-植被-大气传输模型中的植被气候学，以及检测植被和物候的趋势。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why is it necessary to address the challenges of radiometric and spectral inconsistencies in reflectance data when creating vegetation index datasets?",
-                "QuestionCn": "在创建植被指数数据集时，解决反射率数据中的辐射和光谱不一致性挑战是必要的，原因是什么？",
-                "AnswerEn": "Addressing these challenges is crucial because inconsistencies can significantly bias global change analyses. These issues arise from factors such as lack of onboard calibration in earlier sensors, sensitivity to water and sun glint, and orbital drift, which have been rectified in later sensor launches.",
-                "AnswerCn": "解决这些挑战至关重要，因为不一致性可能会显著影响全球变化分析。这些问题源于早期传感器缺乏机载校准、对水面和阳光反射的敏感性以及轨道漂移，这些问题在后来的传感器发射中得到了修正。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What is the purpose of using a unique Landsat 30 m spatial resolution and in situ database in evaluating the performance of vegetation indices?",
-                "QuestionCn": "使用独特的Landsat 30米空间分辨率和现场数据库来评估植被指数的性能的目的是什么？",
-                "AnswerEn": "The purpose is to provide a comprehensive assessment of the performance of different vegetation indices, such as NDVI3g, NDVI3v, and EVI3v, by using a consistent and high-resolution reference, which can reveal discrepancies and strengths in the datasets used for global change studies.",
-                "AnswerCn": "目的是通过使用一致且高分辨率的参考，全面评估不同植被指数（如NDVI3g、NDVI3v和EVI3v）的性能，以揭示用于全球变化研究的数据集中的差异和优势。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "How can the conversion from DN values to NDVI be accurately performed, and what are the implications of using different division factors in NDVI calculations?",
-                "QuestionCn": "如何准确地将DN值转换为NDVI，并且在NDVI计算中使用不同的除数因素会有什么影响？",
-                "AnswerEn": "The conversion from DN values to NDVI is performed using the formula NDVI = DN/1000 for data prior to 2003, and NDVI = DN/10000 for data from 2003 onwards. The NDVI values should fall within [-1,1], with values outside this range representing other land features. This change in division factor reflects adjustments in data processing that are necessary to maintain consistency and accuracy in NDVI calculations.",
-                "AnswerCn": "DN值转换为NDVI的公式为：2003年之前的数据使用NDVI = DN/1000，2003年及之后的数据使用NDVI = DN/10000。NDVI值应在[-1,1]范围内，超出此范围的值表示其他地表特征。这一除法因子的变化反映了数据处理中的调整，旨在保持NDVI计算的一致性和准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methodological steps are taken to downscale AVHRR vegetation indices to higher spatial resolutions for more detailed analysis, and how is Landsat data utilized in this process?",
-                "QuestionCn": "为了将AVHRR植被指数降尺度到更高的空间分辨率以进行更详细的分析，通常采取以下方法步骤，并利用Landsat数据进行这一过程：\n\n1. **数据预处理**：对AVHRR和Landsat数据进行辐射校正、大气校正和几何校正，以确保数据的一致性和准确性。\n\n2. **选择合适的时间窗口**：根据研究区域的季节性变化，选择与AVHRR数据相对应的Landsat影像，以确保植被指数的时效性。\n\n3. **建立关系模型**：利用Landsat的高分辨率数据与AVHRR的低分辨率数据之间的关系，建立回归模型或机器学习模型，以便将AVHRR数据映射到更高的空间分辨率。\n\n4. **空间插值**：使用空间插值方法（如克里金插值、反距离加权等）对AVHRR数据进行空间插值，以填补高分辨率Landsat数据中的空缺。\n\n5. **验证与精度评估**：通过与地面实测数据或高分辨率遥感数据进行比较，验证降尺度结果的准确性，并进行精度评估。\n\n6. **生成高分辨率植被指数**：最终生成高分辨率的植被指数，以便进行更详细的分析和应用。\n\n通过这些步骤，AVHRR植被指数可以有效地降尺度到更高的空间分辨率，结合Landsat数据进行更深入的生态和环境分析。",
-                "AnswerEn": "Downscaling AVHRR vegetation indices involves using Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM+) 30 m resolution surface reflectance data as a reference. NDVI3g, NDVI3v, and EVI3v are downscaled to 30 m resolution by regressing them with Landsat FPAR. This process allows for finer spatial resolution in analysis and comparison with in situ LAI data, enhancing the assessment of vegetation indices.",
-                "AnswerCn": "下调AVHRR植被指数涉及使用Landsat主题制图仪/增强主题制图仪（TM/ETM+）30米分辨率的表面反射数据作为参考。NDVI3g、NDVI3v和EVI3v通过与Landsat FPAR回归来下调到30米分辨率。这个过程允许在分析和与现场LAI数据比较时获得更细的空间分辨率，从而增强对植被指数的评估。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What technological advancements have enabled the consistent and accurate collection of vegetation index data over long periods?",
-                "QuestionCn": "哪些技术进步使得长期一致和准确地收集植被指数数据成为可能？",
-                "AnswerEn": "The launch of the Advanced Very High Resolution Radiometer (AVHRR) sensors onboard NOAA satellites, specifically NOAA 16, 17, 18, and 19, helped rectify issues related to onboard calibration and led to more consistent radiometric and spectral data, enabling long-term vegetation index data collection.",
-                "AnswerCn": "高级非常高分辨率辐射计（AVHRR）传感器的发射，特别是NOAA 16、17、18和19号卫星，帮助解决了机载校准相关的问题，导致辐射和光谱数据更加一致，从而实现了长期植被指数数据的收集。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How do calibration terms and additional spectral bands enhance the effectiveness of vegetation indices in capturing accurate canopy data?",
-                "QuestionCn": "校准术语和额外的光谱波段如何增强植被指数在捕捉准确的冠层数据方面的有效性？",
-                "AnswerEn": "The enhanced vegetation index (EVI) was introduced to include a visible blue band that reduces atmospheric effects and incorporates calibration terms that mitigate the influence of soil background, enhancing the effectiveness of vegetation indices in capturing accurate canopy data.",
-                "AnswerCn": "增强植被指数（EVI）被引入以包含一个可见的蓝色波段，从而减少大气影响，并结合校准项以减轻土壤背景的影响，增强了植被指数在捕捉准确冠层数据方面的有效性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What methodologies have been employed to ensure continuity and consistency in long-term vegetation index datasets?",
-                "QuestionCn": "为了确保长期植被指数数据集的连续性和一致性，采用了哪些方法论？",
-                "AnswerEn": "Various methods have been developed, including aggregating data to a 15-day time step and calibrating with higher spatial resolution sensors that overlap different NOAA satellite periods, which help ensure continuity and consistency in long-term vegetation index datasets.",
-                "AnswerCn": "已经开发了多种方法，包括将数据聚合到15天的时间步长，并利用与不同NOAA卫星时期重叠的高空间分辨率传感器进行校准，这有助于确保长期植被指数数据集的连续性和一致性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might there be challenges in achieving consistent data synthesis across different satellite sensors for vegetation index datasets?",
-                "QuestionCn": "在不同卫星传感器之间实现一致的数据合成可能面临哪些挑战，以获取植被指数数据集？",
-                "AnswerEn": "Reflectance data collected from earlier AVHRR sensors were difficult to process and synthesize because they lacked onboard calibration and had issues like sensitivity to water, sun glint, and clouds, as well as orbital drift. These factors resulted in radiometric and spectral inconsistencies across sensors, significantly biasing global change analyses.",
-                "AnswerCn": "早期AVHRR传感器收集的反射率数据由于缺乏机载校准，并且存在对水体、太阳镜和云层的敏感性以及轨道漂移等问题，处理和综合起来非常困难。这些因素导致传感器之间的辐射和光谱不一致，显著影响了全球变化分析的结果。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What reasons could explain the poor performance of certain vegetation indices compared to others when evaluated against in situ data?",
-                "QuestionCn": "某些植被指数在与实地数据评估时表现不佳的原因可能包括以下几点：",
-                "AnswerEn": "The performance of NDVI3v and EVI3v was worse than NDVI3g using the in situ data, which was attributed to the fusion of GIMMS and MODIS data in the VIP record. This fusion likely introduced discrepancies affecting the performance of these indices.",
-                "AnswerCn": "NDVI3v和EVI3v的表现比NDVI3g差，这一结果是基于现场数据得出的，主要归因于VIP记录中GIMMS和MODIS数据的融合。这种融合可能引入了影响这些指数表现的差异。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why might the use of enhanced vegetation indices (EVIs) be limited despite their potential to contribute biophysical information in global change studies?",
-                "QuestionCn": "尽管增强植被指数（EVI）在全球变化研究中有潜在的生物物理信息贡献，但其使用可能受到限制的原因是什么？",
-                "AnswerEn": "EVI3v has the potential to contribute biophysical information beyond NDVI3g and NDVI3v to global change studies, but its use is cautioned due to its poor performance in the study, particularly during green-up and senescence periods and in desert regions.",
-                "AnswerCn": "EVI3v有潜力为全球变化研究提供超越NDVI3g和NDVI3v的生物物理信息，但由于其在研究中的表现不佳，特别是在绿化和衰退时期以及沙漠地区，因此使用时需谨慎。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How effective do you think the use of Landsat 30 m spatial resolution data is in downscaling vegetation indices for improving the accuracy of datasets within this domain?",
-                "QuestionCn": "我认为使用Landsat 30米空间分辨率数据在下调植被指数方面的有效性如何，以提高该领域数据集的准确性？",
-                "AnswerEn": "The use of Landsat 30 m spatial resolution data in downscaling vegetation indices, such as NDVI3g, NDVI3v, and EVI3v, is seen as a valuable approach in the domain. It facilitates a detailed comparison and evaluation of these indices by leveraging high-resolution data to assess the predictive capability for LAI. This method enhances dataset accuracy by providing a finer spatial resolution for analysis.",
-                "AnswerCn": "使用Landsat 30米空间分辨率数据对植被指数进行下采样，如NDVI3g、NDVI3v和EVI3v，被视为该领域的一种有价值的方法。它通过利用高分辨率数据来评估这些指数对叶面积指数（LAI）的预测能力，从而促进了详细的比较和评估。这种方法通过提供更细的空间分辨率来增强数据集的准确性。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "In your opinion, what are the primary challenges in ensuring consistency across datasets collected by different AVHRR sensors, and how might these challenges impact research outcomes?",
-                "QuestionCn": "在确保由不同AVHRR传感器收集的数据集之间的一致性方面，主要挑战是什么？这些挑战可能如何影响研究结果？",
-                "AnswerEn": "The primary challenges in ensuring consistency across datasets collected by different AVHRR sensors include radiometric and spectral inconsistencies, lack of onboard calibration in earlier sensors, sensitivity to environmental factors, and orbital drift. These issues can significantly bias global change analyses and affect the reliability of research outcomes. Addressing these challenges is crucial for producing continuous and consistent datasets over time.",
-                "AnswerCn": "确保不同AVHRR传感器收集的数据集一致性的主要挑战包括辐射和光谱不一致、早期传感器缺乏在轨校准、对环境因素的敏感性以及轨道漂移。这些问题可能会显著影响全球变化分析的偏差，并影响研究结果的可靠性。解决这些挑战对于产生持续和一致的时间序列数据集至关重要。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I'm unsure about the challenges faced in processing early satellite data for vegetation indices, especially with respect to calibration issues.",
-                "QuestionCn": "我对处理早期卫星数据以获取植被指数所面临的挑战感到不确定，特别是在校准问题方面。",
-                "AnswerEn": "Reflectance data collected from the earlier AVHRR sensors were difficult to process due to the lack of onboard calibration, sensitivity of the NIR channel to water and clouds, and issues like orbital drift, which needed rectification with later sensor launches.",
-                "AnswerCn": "早期AVHRR传感器收集的反射率数据处理困难，原因包括缺乏机载校准、近红外通道对水体和云层的敏感性，以及轨道漂移等问题，这些问题需要通过后续传感器的发射进行修正。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please analyze the challenges faced in processing AVHRR sensor data for long-term vegetation index studies and suggest possible methods to address these challenges.",
-                "QuestionCn": "请分析在处理AVHRR传感器数据进行长期植被指数研究时面临的挑战，并建议可能的方法来解决这些挑战。",
-                "AnswerEn": "The challenges in processing AVHRR sensor data include the lack of onboard calibration, sensitivity of the NIR channel to water, sun glint, glaciers, clouds, and orbital drift. These challenges lead to radiometric and spectral inconsistencies that can bias global change analyses. To address these challenges, methods such as recalibration with higher spatial resolution sensors, use of advanced algorithms to correct for atmospheric and sensor-specific biases, and inter-sensor calibration techniques are recommended.",
-                "AnswerCn": "处理AVHRR传感器数据的挑战包括缺乏机载校准、近红外通道对水体、太阳眩光、冰川、云层和轨道漂移的敏感性。这些挑战导致辐射和光谱不一致，可能会对全球变化分析产生偏差。为了解决这些挑战，建议采用以下方法：使用更高空间分辨率传感器进行重新校准，使用先进算法纠正大气和传感器特定偏差，以及采用传感器间校准技术。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "Please explore the potential methodologies to downscale vegetation indices from global datasets to finer spatial resolutions for localized studies.",
-                "QuestionCn": "请探讨将全球数据集中的植被指数降尺度到更细空间分辨率以进行局部研究的潜在方法。",
-                "AnswerEn": "One potential methodology to downscale vegetation indices involves using intermediate products such as FPAR derived from higher resolution datasets like Landsat TM/ETM+ 30 m resolution surface reflectance data. This approach utilizes linear regression to convert global vegetation indices to FPAR, which is then downscaled to match the spatial resolution of higher resolution datasets. This method allows for detailed analysis at finer resolutions and can be evaluated using in situ data to ensure accuracy.",
-                "AnswerCn": "一种潜在的植被指数下采样方法涉及使用中间产品，如从更高分辨率数据集（如Landsat TM/ETM+ 30米分辨率表面反射率数据）衍生的FPAR。该方法利用线性回归将全球植被指数转换为FPAR，然后将其下采样以匹配更高分辨率数据集的空间分辨率。这种方法允许在更细的分辨率下进行详细分析，并可以使用实地数据进行评估以确保准确性。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "Please evaluate the effectiveness of using Landsat-derived datasets in enhancing the accuracy of global vegetation indices for various crop types.",
-                "QuestionCn": "请评估使用Landsat衍生数据集在提高各种作物类型全球植被指数准确性方面的有效性。",
-                "AnswerEn": "Landsat-derived datasets, with their 30 m spatial resolution and in situ LAI data, have been effectively used to evaluate and enhance the accuracy of global vegetation indices like NDVI3g, NDVI3v, and EVI3v. These datasets provide detailed surface reflectance data that help in assessing and improving the performance of global indices for major crop types across different continents. The integration of Landsat data helps in achieving better consistency and accuracy, particularly in capturing the phenology and biophysical characteristics of crops.",
-                "AnswerCn": "基于Landsat的数据库，凭借其30米的空间分辨率和现场LAI数据，已有效用于评估和提高全球植被指数（如NDVI3g、NDVI3v和EVI3v）的准确性。这些数据集提供了详细的表面反射率数据，有助于评估和改善全球指数在不同大陆主要作物类型上的表现。Landsat数据的整合有助于实现更好的一致性和准确性，特别是在捕捉作物的物候和生物物理特征方面。",
-                "Level": "C5(Evaluating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Global Inventory Modeling and Mapping Studies",
+        "referenceCn": null,
+        "referenceEn": "Tucker,C.J,J.E.Pinzon,and M.E.Brown(2004),Global Inventory Modeling and Mapping Studies,NA94apr15b.n11-VIg,2.0,Global Land Cover Facility,University of Maryland,College Park,Maryland,04/15/1994."
+      },
+      {
+        "titleCn": "黄土高原地区归一化植被指数时空动态变化及其与气候因子的关系",
+        "titleEn": null,
+        "referenceCn": "徐茜, 任志远, & 杨忍. (2012). 黄土高原地区归一化植被指数时空动态变化及其与气候因子的关系. 陕西师范大学学报（自科版）, 40(1), 82-87.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "黄土高原水蚀风蚀交错带植被覆盖动态变化及其与气候因子的关系",
+        "titleEn": null,
+        "referenceCn": "孙艳萍. 黄土高原水蚀风蚀交错带植被覆盖动态变化及其与气候因子的关系[D]. 西北农林科技大学, 2012.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Effects of ENSO-linked climate and vegetation on population dynamics of sympatric rodent species in semiarid grasslands of Inner Mongolia, China",
+        "referenceCn": null,
+        "referenceEn": "Jiang G, Zhao T, Liu J, Xu L, Yu G, He H, Krebs C J, Zhang Z. Effects of ENSO-linked climate and vegetation on population dynamics of sympatric rodent species in semiarid grasslands of Inner Mongolia, China[J]. Canadian Journal of Zoology, 2011, 89(8): 678–691. doi:10.1139/z11-048"
+      },
+      {
+        "titleCn": "生态地理分区框架下的大兴安岭植被动态研究",
+        "titleEn": null,
+        "referenceCn": "郭笑怡，张洪岩. 生态地理分区框架下的大兴安岭植被动态研究[J]. 地理科学. 2013(02): 181-188.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于遥感和GIS的中国西北植被动态研究",
+        "titleEn": null,
+        "referenceCn": "李珍存. (2007). 基于遥感和GIS的中国西北植被动态研究. (Doctoral dissertation, 甘肃农业大学).",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "长江流域的陆气耦合模拟及径流变化分析",
+        "titleEn": null,
+        "referenceCn": "高冰. 长江流域的陆气耦合模拟及径流变化分析[D]. 清华大学, 2012.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Spatial distributions and temporal variations of atmospheric aerosols and the affecting factors: a case study for a region in central China",
+        "referenceCn": null,
+        "referenceEn": "Guo, Yangjie, Hong, Song, Feng, Nan, Zhuang, Yanhua, Zhang, Liang. Spatial distributions and temporal variations of atmospheric aerosols and the affecting factors: a case study for a region in central China. International Journal of Remote Sensing, 2012, 33(12):3672-3692. doi:10.1080/01431161.2011.631951"
+      },
+      {
+        "titleCn": "基于GIS和RS的中国西北NDVI变化特征及其与气候变化的耦合性",
+        "titleEn": null,
+        "referenceCn": "王海军, 靳晓华, 李海龙, 张勃, 戴声佩. 基于GIS和RS的中国西北NDVI变化特征及其与气候变化的耦合性. 农业工程学报, 2010, (11):194-203",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "吉林西部地表植被归一化植被指数的时空分布特征",
+        "titleEn": null,
+        "referenceCn": "杨淑杰, 李晓东, 王兰芸, 韩智平, 陈剑. 吉林西部地表植被归一化植被指数的时空分布特征. 东北林业大学学报, 2010, (11):80-81+121",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "长江流域NDVI对气候变化响应的时滞效应",
+        "titleEn": null,
+        "referenceCn": "白淑英, 王莉, 史建桥. 长江流域NDVI对气候变化响应的时滞效应. 中国农业气象, 2012, (04):579-586",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "中国东北部地区植被与气候因子相关关系研究",
+        "titleEn": null,
+        "referenceCn": "何慧娟, 史学丽. 中国东北部地区植被与气候因子相关关系研究. 安徽农业科学, 2012, (32):15829-15832",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Response of vegetation coverage on climate change in arid mountain of Northwest China",
+        "referenceCn": null,
+        "referenceEn": "Zhou L, Yang G, Ding Y, Wang J. Response of vegetation coverage on climate change in arid mountain of Northwest China[C]//Geoscience and Remote Sensing Symposium,2009 IEEE International,IGARSS 2009. 2009, 3: III–569–III–572. doi:10.1109/IGARSS.2009.5417821"
+      },
+      {
+        "titleCn": "中国西北地区植被时空演变特征及其对气候变化的响应",
+        "titleEn": null,
+        "referenceCn": "戴声佩, 张勃, 王海军, 郭玲霞, 王亚敏. 中国西北地区植被时空演变特征及其对气候变化的响应. 遥感技术与应用, 2010, (01):69-76",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "The Long-Term Relationship between Population Growth and Vegetation Cover: An Empirical Analysis Based on the Panel Data of 21 Cities in Guangdong Province, China",
+        "referenceCn": null,
+        "referenceEn": "Li C, Kuang Y, Huang N, et al. The Long-Term Relationship between Population Growth and Vegetation Cover: An Empirical Analysis Based on the Panel Data of 21 Cities in Guangdong Province, China[J]. International journal of environmental research and public health. 2013, 10(2): 660-677."
+      },
+      {
+        "titleCn": "基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化研究",
+        "titleEn": null,
+        "referenceCn": "王强, 张勃, 戴声佩. 基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化研究. 资源环境与发展, 2011, (02):12-19",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于GIS的黄土高原地区退耕还林绩效分析",
+        "titleEn": null,
+        "referenceCn": "王雪平, 魏伟, 王永梅, 张飞, 康健. 基于GIS的黄土高原地区退耕还林绩效分析. 人民黄河, 2012, (08):88-91",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "黄土高原与安塞县植被变化及其气候响应特征",
+        "titleEn": null,
+        "referenceCn": "韩新辉，杨改河，刘志超. 黄土高原与安塞县植被变化及其气候响应特征[J]. 西北植物学报. 2009(03): 593-600.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "On the Variation of NDVI with the Principal Climatic Elements in the Tibetan Plateau",
+        "referenceCn": null,
+        "referenceEn": "Sun J, Cheng G, Li W, et al. On the Variation of NDVI with the Principal Climatic Elements in the Tibetan Plateau[J]. Remote Sensing. 2013, 5(4): 1894-1911."
+      },
+      {
+        "titleCn": "宁夏盐池县人地关系的演变及调适对策",
+        "titleEn": null,
+        "referenceCn": "王磊, 宋乃平. 宁夏盐池县人地关系的演变及调适对策. 资源科学, 2007, 29(6): 138–145.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "诺敏河流域植被覆盖时空演变及其与径流的关系研究",
+        "titleEn": null,
+        "referenceCn": "史晓亮，李颖，赵凯，等. 诺敏河流域植被覆盖时空演变及其与径流的关系研究[J]. 干旱区资源与环境. 2013(06): 54-60.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "秦岭南北地区植被覆盖对区域环境变化的响应",
+        "titleEn": null,
+        "referenceCn": "孙华, 白红英, 张清雨, 雒新萍, 张善红. 秦岭南北地区植被覆盖对区域环境变化的响应. 环境科学学报, 2009, (12):2635-2641",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "全球变化下松辽平原生态环境变迁研究",
+        "titleEn": null,
+        "referenceCn": "陈凤臻. 全球变化下松辽平原生态环境变迁研究[D]. 吉林大学, 2009",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A statistical analysis of relationship between climatic factors and the Normalized Difference Vegetation Index in China",
+        "referenceCn": null,
+        "referenceEn": "Song Y, Ma MG. A statistical analysis of relationship between climatic factors and the Normalized Difference Vegetation Index in China. International Journal of Remote Sensing, 2011, 32(14): 3947-3965, DOI: 10.1080/01431161003801336."
+      },
+      {
+        "titleCn": "气候变化和干扰对河西走廊北部风沙源区NDVI的影响",
+        "titleEn": null,
+        "referenceCn": "花立民, 杨思维, 周建伟, 王巧玲, 左松涛. 气候变化和干扰对河西走廊北部风沙源区NDVI的影响. 草地学报, 2012, (06):995-1003",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化",
+        "titleEn": null,
+        "referenceCn": "王强, 张勃, 戴声佩, 邹悦, 马中华, 张亚宁. 基于GIMMS AVHRR NDVI数据的三北防护林工程区植被覆盖动态变化. 资源科学, 2011, (08):1613-1620",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "内蒙古地区极端气候事件时空变化及其与NDVI的相关性",
+        "titleEn": null,
+        "referenceCn": "杨方兴. 内蒙古地区极端气候事件时空变化及其与NDVI的相关性[D]. 长安大学, 2012.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Vegetation dynamics and their response to hydroclimatic factors in the Tarim River Basin, China",
+        "referenceCn": null,
+        "referenceEn": "Wang Y, Shen Y, Chen Y, Guo Y. Vegetation dynamics and their response to hydroclimatic factors in the Tarim River Basin, China[J]. Ecohydrology, 2012: n/a–n/a. doi:10.1002/eco.1255"
+      },
+      {
+        "titleCn": "内蒙古植被NDVI变化特征分析",
+        "titleEn": null,
+        "referenceCn": "张超，苗峻峰，何宇良. 内蒙古植被NDVI变化特征分析[J]. 内蒙古气象. 2013(02): 23-27.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "A study on the effects of the surrounding faults on water loss in the Zoige Wetland, China",
+        "referenceCn": null,
+        "referenceEn": "Li M, Xu R, Huang W, Sun H, Luo L. A study on the effects of the surrounding faults on water loss in the Zoige Wetland, China[J]. Journal of Mountain Science, 2011, 8(4): 518–524. doi:10.1007/s11629-011-2060-4"
+      },
+      {
+        "titleCn": "渭河流域相对湿度与植被覆盖变化及其响应关系",
+        "titleEn": null,
+        "referenceCn": "蒋冲, 王飞, 穆兴民. 渭河流域相对湿度与植被覆盖变化及其响应关系. 水土保持通报, 2012, (05):122-127",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Integrating models to evaluate and map grassland fire risk zones in Hulunbuir of Inner Mongolia, China",
+        "referenceCn": null,
+        "referenceEn": "Bian, Hongfeng, Zhang, Hongyan, Zhou, Daowei, Xu, Jiawei, Zhang, Zhengxiang. Integrating models to evaluate and map grassland fire risk zones in Hulunbuir of Inner Mongolia, China. Fire Safety Journal, 2013, 61:207-216. doi:10.1016/j.firesaf.2013.09.004"
+      },
+      {
+        "titleCn": "基于遥感的榆林地区生态脆弱性研究",
+        "titleEn": null,
+        "referenceCn": "杨强. 基于遥感的榆林地区生态脆弱性研究[D]. 南京大学, 2012.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "中国西北地区植被覆盖变化驱动因子分析",
+        "titleEn": null,
+        "referenceCn": "戴声佩, 张勃, 王海军, 王亚敏, 郭玲霞, 王兴梅, 李丹. 中国西北地区植被覆盖变化驱动因子分析. 干旱区地理, 2010, (04):636-643",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于CASA模型的东北地区农田净初级生产力（NPP）研究",
+        "titleEn": null,
+        "referenceCn": "朱锋. 基于CASA模型的东北地区农田净初级生产力（NPP）研究[D]. 东北师范大学, 2011.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Probability Models of Fire Risk Based on Forest Fire Indices in Contrasting Climates over China",
+        "referenceCn": null,
+        "referenceEn": "Xiaowei, Li, Guobin, Fu, Zeppel, Melanie J. B., Xiubo, Yu, Gang, Zhao, Eamus, Derek, Qiang, Yu. Probability Models of Fire Risk Based on Forest Fire Indices in Contrasting Climates over China. Journal of Resources and Ecology, 2012, 3(2):105-117. doi:10.5814/j.issn.1674-764x.2012.02.002"
+      },
+      {
+        "titleCn": "黄土高原水蚀风蚀交错带植被覆盖时空演变分析",
+        "titleEn": null,
+        "referenceCn": "孙艳萍, 张晓萍, 徐金鹏, 马瞳宇, 马芹, 雷泳南. 黄土高原水蚀风蚀交错带植被覆盖时空演变分析. 西北农林科技大学学报(自然科学版), 2012, (02):143-150+156",
+        "referenceEn": null
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Regional effects of vegetation restoration on water yield across the Loess Plateau, China",
+        "referenceCn": null,
+        "referenceEn": "Feng, X.M., Sun, G., Fu, B.J., Su, C.H., Liu, Y., & Lamparski, H. (2012). Regional effects of vegetation restoration on water yield across the Loess Plateau, China. Hydrol. Earth Syst. Sci., 16(8), 2617-2628. doi:10.5194/hess-16-2617-2012"
+      },
+      {
+        "titleCn": "玛曲县草地退化遥感监测及驱动力研究",
+        "titleEn": null,
+        "referenceCn": "吕志邦. 玛曲县草地退化遥感监测及驱动力研究[D]. 兰州大学, 2012.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "1997—2004年浙江省金衢盆地湿地动态变化分析和生态健康评价",
+        "titleEn": null,
+        "referenceCn": "虞湘. 1997—2004年浙江省金衢盆地湿地动态变化分析和生态健康评价[D]. 浙江大学, 2011.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "中国陆地生态系统服务功能的时空变化分析",
+        "titleEn": null,
+        "referenceCn": "石垚, 王如松, 黄锦楼, 阳文锐. 中国陆地生态系统服务功能的时空变化分析. 科学通报, 2012, (09):720-731",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "1982年至2003年藏北高原草地生态系统NDVI与气候因子的相关分析",
+        "titleEn": null,
+        "referenceCn": "赵玉萍，张宪洲，王景升，等. 1982年至2003年藏北高原草地生态系统NDVI与气候因子的相关分析[J]. 资源科学. 2009(11): 1988-1998.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "黄河下游大型引黄灌区蒸散发长期变化特性",
+        "titleEn": null,
+        "referenceCn": "雷慧闽, 蔡建峰, 杨大文, 王凤娇. 黄河下游大型引黄灌区蒸散发长期变化特性. 水利水电科技进展, 2012, (01):13-17",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "基于NDVI的锡盟苏尼特左旗地表植被生物量的趋势分析和空间格局",
+        "titleEn": null,
+        "referenceCn": "李昌凌, 李文军. 基于NDVI的锡盟苏尼特左旗地表植被生物量的趋势分析和空间格局. 干旱区资源与环境, 2010, (03):147-152",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "大兴安岭NDVI时间序列的长程相关性特征分析",
+        "titleEn": null,
+        "referenceCn": "郭笑怡，刘德赢，张洪岩. 大兴安岭NDVI时间序列的长程相关性特征分析[J]. 地球信息科学学报. 2013(01): 152-158.",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "近30年内蒙古自治区植被变化趋势及影响因素分析",
+        "titleEn": null,
+        "referenceCn": "王娟, 李宝林, 余万里. 近30年内蒙古自治区植被变化趋势及影响因素分析. 干旱区资源与环境, 2012, (02):132-138",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "三北防护林工程区土地退化的时空变化和驱动力分析",
+        "titleEn": null,
+        "referenceCn": "黄森旺. 三北防护林工程区土地退化的时空变化和驱动力分析[D]. 辽宁工程技术大学, 2012.",
+        "referenceEn": null
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "归一化植被指数",
+        "nameEn": "NDVI"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国",
+        "keywordEn": "China"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1981-2006",
+        "keywordEn": "1981-2006",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      },
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Earth observation-based long-term global vegetation index products are used by scientists from a wide range of disciplines concerned with global change. The normalized difference vegetation index (NDVI) is defined as (ρNIR −ρRED)/(ρNIR +ρRED), where ρNIR and ρRED are surface reflectance in the near infrared (NIR; 0.725–1.10 µm) and visible red (0.58–0.68 µm), respectively. As plants become more photoactive, they absorb more visible red light due to the chlorophyll content of leaves and stems, and scatter more in the near infrared due to the alignment of cell walls. This relationship, detected by remote sensing instruments at the canopy scale, has the effect of making the index increase (decrease) as the density of the canopy increases (decreases). As such, NDVI has been used widely in global change research with Earth observation remote sensing for three general purposes: (1) the estimation of canopy properties related to light-use efficiency, such as the leaf area index (LAI) and fraction of photosynthetically active radiation intercepted by the canopy (FPAR), (2) representation of vegetation climatology in soil–vegetation–atmosphere transfer models, and (3) detection of trends in vegetation and phenology. Although NDVI is widely used, it is sensitive to atmospheric effects, soil background, and saturates at high LAI. The enhanced vegetation index (EVI) was introduced to overcome these limitations, as it includes a visible blue band to reduce atmospheric effects, calibration terms to reduce the effects of soil background, and does not saturate as severely as NDVI at high LAI. The Advanced Very High Resolution Radiometer (AVHRR) is the most commonly used sensor for long-term (i.e. pre-MODIS) global change studies, because it began retrieving visible red and NIR reflectance needed to estimate NDVI from 1981. Reflectance data collected from the earlier AVHRR sensors were difficult to process and synthesize, because they lacked onboard calibration; the NIR channel was sensitive to water, sun glint, glaciers at high latitudes, and clouds; and of orbital drift. These issues were rectified with the launch of the AVHRR sensors onboard NOAA 16, 17, 18, and 19, but have resulted in radiometric and spectral inconsistencies across sensors that can significantly bias global change analyses. Various methods have been developed to make these data continuous and consistent through time, but take different approaches and are frequently updated, necessitating new accuracy assessments to inform the user community as they evolve. The Global Inventory Modeling and Mapping Studies (GIMMS) and Vegetation Index and Phenology Lab (VIP) AVHRR products are actively used and frequently updated, but represent fundamentally different approaches to synthesis. Both GIMMS and VIP are aggregated to a 15-day time step from daily data and are calibrated with higher spatial resolution sensors in the period that overlaps NOAA 7, 9, 11, and 14 and NOAA 16, 17, 18, and 19."
+      ],
+      "research objective": [
+        "The aim of this study was to perform a global assessment of the latest version of GIMMS and VIP over a 30-year period (January 1982 to December 2011) in order to aid the user (global change) community in interpreting results that involve these data. In doing so, we helped resolve the superiority of one product over another. The assessment was performed with three experiments that address the three major themes of global change research that involve Earth observation remote sensing."
+      ],
+      "challenges": [
+        "Reflectance data collected from the earlier AVHRR sensors were difficult to process and synthesize, because they lacked onboard calibration; the NIR channel was sensitive to water, sun glint, glaciers at high latitudes, and clouds; and of orbital drift. These issues were rectified with the launch of the AVHRR sensors onboard NOAA 16, 17, 18, and 19, but have resulted in radiometric and spectral inconsistencies across sensors that can significantly bias global change analyses. Bias in inter-calibration of the VIP record at northernmost latitudes was suspected to contribute most to these discrepancies."
+      ],
+      "methods": [
+        "After the filter was applied, NDVI3g was resampled to NDVI3v/EVI3v resolution using the gdalwarp utility (http://www.gdal.org/gdalwarp.html) with default parameters. The data sets were then resampled back to the native NDVI3g spatial resolution for evaluation. FPAR derived from Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM +) 30 m resolution surface reflectance data was used intermediately to downscale NDVI3g, NDVI3v, and EVI3v to 30 m resolution to facilitate the comparison. The Landsat TM/ETM+surface reflectance and in situ LAI data were extracted from a database that was developed to determine the ability of Landsat-based NDVI, EVI2, and other vegetation indices to predict LAI for field crops around the world. NDVI and EVI2 were computed using the equations above. Downscaling was performed by converting AVHRR and Landsat vegetation indices to FPAR. In this study, on a per pixel basis, most of the in situ LAI was retrieved only once, so using a ratio-based approach was not feasible. Therefore, the AVHRR vegetation indices were downscaled to 30 m spatial resolution by regressing (linearly) Landsat FPAR and NDVI3g, NDIV3v, and EVI3v FPAR. Once NDVI3g, NDVI3v, and EVI3v FPAR were downscaled to corresponding Landsat data, their performance was evaluated by regressing them (linearly) with the in situ LAI data. The performance of the final model selected in each case was characterized by the coefficient of determination (R2), significance tests, and root mean square error (RMSE)."
+      ],
+      "dataset": [
+        "Unlike previous global studies, a unique Landsat 30 m spatial resolution and in situ LAI database for major crop types on five continents was used to evaluate the performance of not only NDVI3g and NDVI3v but also EVI3v."
+      ],
+      "findings": [
+        "The performance of NDVI3v and EVI3v was worse than NDVI3g using the in situ data, which was attributed to the fusion of GIMMS and MODIS data in the VIP record. EVI3v has the potential to contribute biophysical information beyond NDVI3g and NDVI3v to global change studies, but we caution its use due to the poor performance of EVI3v in this study. Overall, the records were most consistent at northern latitudes during the primary growing season and southern latitudes and the tropics throughout much of the year, while the records were less consistent at northern latitudes during green-up and senescence, and in the great deserts of the world throughout much of the year. These patterns led to general agreement (disagreement) between trends in the magnitude (timing) of NDVI over the study period."
+      ],
+      "backgroundCn": [
+        "基于地球观测的长期全球植被指数产品被来自广泛学科的科学家用于全球变化研究。归一化差异植被指数（NDVI）定义为 (ρNIR − ρRED)/(ρNIR + ρRED)，其中 ρNIR 和 ρRED 分别是近红外（NIR；0.725–1.10 µm）和可见红光（0.58–0.68 µm）的表面反射率。随着植物光合活性的增强，由于叶子和茎的叶绿素含量，它们吸收更多的可见红光，并由于细胞壁的排列而散射更多的近红外光。这种关系在树冠尺度上通过遥感仪器被检测到，导致当树冠密度增加（减少）时，指数增加（减少）。因此，NDVI在全球变化研究中被广泛使用，主要有三个目的：（1）估算与光利用效率相关的树冠特性，如叶面积指数（LAI）和被树冠截获的光合有效辐射的比例（FPAR）；（2）在土壤-植被-大气传输模型中表示植被气候学；（3）检测植被和物候的趋势。尽管NDVI被广泛使用，但它对大气效应、土壤背景敏感，并且在高LAI时会饱和。增强植被指数（EVI）被引入以克服这些限制，因为它包括一个可见蓝光波段以减少大气效应，校准项以减少土壤背景的影响，并且在高LAI时不会像NDVI那样严重饱和。先进非常高分辨率辐射计（AVHRR）是长期（即前MODIS）全球变化研究中最常用的传感器，因为它自1981年开始获取估算NDVI所需的可见红光和NIR反射率。早期AVHRR传感器收集的反射率数据难以处理和合成，因为它们缺乏机载校准；NIR通道对水、太阳镜、极地的冰川和云敏感；以及轨道漂移。这些问题在NOAA 16、17、18和19号卫星上搭载的AVHRR传感器发射后得到了纠正，但导致了传感器之间的辐射和光谱不一致，这可能显著偏倚全球变化分析。已经开发出各种方法使这些数据在时间上连续和一致，但采取不同的方法并且经常更新， necessitating新的准确性评估以告知用户社区随着它们的发展。全球清单建模和制图研究（GIMMS）和植被指数与物候实验室（VIP）AVHRR产品被积极使用并频繁更新，但代表了根本不同的合成方法。GIMMS和VIP都从每日数据聚合到15天的时间步长，并在与NOAA 7、9、11、14和NOAA 16、17、18、19重叠的时期与更高空间分辨率的传感器进行校准。"
+      ],
+      "research objectiveCn": [
+        "本研究的目的是对最新版本的GIMMS和VIP进行全球评估，时间跨度为30年（1982年1月到2011年12月），以帮助全球变化研究社区解读涉及这些数据的结果。在此过程中，我们帮助解决了一个产品相对于另一个产品的优越性问题。评估通过三个实验进行，涉及全球变化研究的三个主要主题，这些主题与地球观测遥感相关。"
+      ],
+      "challengesCn": [
+        "早期AVHRR传感器收集的反射率数据处理和综合困难，因为它们缺乏在轨校准；近红外通道对水体、太阳镜、极高纬度的冰川和云层敏感；以及轨道漂移。这些问题在NOAA 16、17、18和19号卫星上搭载的AVHRR传感器发射后得到了改善，但导致了传感器之间的辐射和光谱不一致，这可能会显著影响全球变化分析。怀疑在北极地区VIP记录的互校偏差是导致这些差异的主要原因。"
+      ],
+      "methodsCn": [
+        "在应用滤波器后，NDVI3g使用gdalwarp工具（http://www.gdal.org/gdalwarp.html）以默认参数重采样到NDVI3v/EVI3v的分辨率。然后，这些数据集被重新采样回原始的NDVI3g空间分辨率以进行评估。利用Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM+) 30米分辨率的表面反射率数据中间导出的FPAR被用来将NDVI3g、NDVI3v和EVI3v降尺度到30米分辨率，以便进行比较。Landsat TM/ETM+的表面反射率和现场LAI数据是从一个数据库中提取的，该数据库旨在确定基于Landsat的NDVI、EVI2和其他植被指数预测全球农作物LAI的能力。NDVI和EVI2是使用上述公式计算的。降尺度是通过将AVHRR和Landsat植被指数转换为FPAR来进行的。在本研究中，基于每个像素，大多数现场LAI仅提取一次，因此使用基于比率的方法不可行。因此，AVHRR植被指数通过与Landsat FPAR及NDVI3g、NDVI3v和EVI3v FPAR进行线性回归降尺度到30米空间分辨率。一旦NDVI3g、NDVI3v和EVI3v FPAR被降尺度到相应的Landsat数据，它们的性能通过与现场LAI数据进行线性回归进行评估。每种情况下最终选择模型的性能通过决定系数（R2）、显著性检验和均方根误差（RMSE）来表征。"
+      ],
+      "datasetCn": [
+        "与以往的全球研究不同，本研究使用了独特的Landsat 30米空间分辨率和五大洲主要作物类型的现场LAI数据库，以评估不仅是NDVI3g和NDVI3v的性能，还有EVI3v的性能。"
+      ],
+      "findingsCn": [
+        "NDVI3v和EVI3v的性能在使用现场数据时不如NDVI3g，这归因于VIP记录中GIMMS和MODIS数据的融合。EVI3v有潜力为全球变化研究提供超越NDVI3g和NDVI3v的生物物理信息，但由于本研究中EVI3v的表现不佳，我们对其使用表示谨慎。总体而言，这些记录在主要生长季节的北半球和南半球及热带地区的一年大部分时间内最为一致，而在北半球的绿芽和衰退期间以及世界上大部分时间的广阔沙漠地区则一致性较差。这些模式导致了研究期间NDVI在幅度（时机）上的趋势总体一致（不一致）。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Is the GIMMS NDVI data set collected using the AVHRR sensors?",
+        "QuestionCn": "GIMMS NDVI 数据集是使用 AVHRR 传感器收集的吗？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Are NDVI values outside the range of [-1,1] indicative of non-vegetative land features?",
+        "QuestionCn": "NDVI值超出[-1,1]范围的情况是否表明非植被土地特征？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Which data collection method is more prone to atmospheric effects and soil background interference, NDVI or EVI?",
+        "QuestionCn": "哪种数据收集方法更容易受到大气影响和土壤背景干扰，NDVI还是EVI？",
+        "AnswerEn": "NDVI",
+        "AnswerCn": "NDVI",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Are datasets like GIMMS and VIP typically aggregated from daily data to a 15-day time step, a monthly time step, or an annual time step?",
+        "QuestionCn": "像GIMMS和VIP这样的数据集通常是从日数据聚合到15天时间步、月时间步还是年时间步？",
+        "AnswerEn": "15-day time step",
+        "AnswerCn": "15天时间步长",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What is a common method used to process and synthesize reflectance data from earlier AVHRR sensors?",
+        "QuestionCn": "处理和合成早期AVHRR传感器反射率数据的常用方法是什么？",
+        "AnswerEn": "Calibration with higher spatial resolution sensors",
+        "AnswerCn": "使用更高空间分辨率传感器进行校准",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "Where can NDVI and EVI2 be computed using reflectance data?",
+        "QuestionCn": "NDVI和EVI2可以使用反射率数据在哪里计算？",
+        "AnswerEn": "Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM+)",
+        "AnswerCn": "Landsat主题制图仪/增强型主题制图仪Plus (TM/ETM+)",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What challenges are associated with using AVHRR sensors for global change analysis?",
+        "QuestionCn": "使用AVHRR传感器进行全球变化分析面临哪些挑战？",
+        "AnswerEn": "Radiometric and spectral inconsistencies",
+        "AnswerCn": "辐射和光谱不一致",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Could you illustrate a methodological approach to downscale global vegetation index data to a higher spatial resolution for detailed analysis?",
+        "QuestionCn": "您能否阐述一种方法论，以将全球植被指数数据降尺度到更高的空间分辨率，以便进行详细分析？",
+        "AnswerEn": "An example methodological approach involves downscaling NDVI3g, NDVI3v, and EVI3v data to a 30 m resolution by using Landsat Thematic Mapper/Enhanced Thematic Mapper Plus (TM/ETM+) surface reflectance data. This is done by converting AVHRR and Landsat vegetation indices to FPAR and then linearly regressing the FPAR data with in situ LAI data.",
+        "AnswerCn": "一种方法论方法涉及将NDVI3g、NDVI3v和EVI3v数据降尺度到30米分辨率，使用Landsat主题制图仪/增强主题制图仪（TM/ETM+）的表面反射率数据。这是通过将AVHRR和Landsat植被指数转换为FPAR，然后将FPAR数据与现场LAI数据进行线性回归来实现的。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced in inter-calibrating datasets for global vegetation studies, particularly related to different satellite sensors?",
+        "QuestionCn": "在全球植被研究中，特别是与不同卫星传感器相关的情况下，进行数据集间标定时面临的一个挑战是什么？",
+        "AnswerEn": "A significant challenge in inter-calibrating datasets is the presence of radiometric and spectral inconsistencies across different AVHRR sensors, which can bias global change analyses. This is particularly problematic at northernmost latitudes, where bias in inter-calibration of the VIP record is suspected to contribute to discrepancies.",
+        "AnswerCn": "在数据集之间进行互校准时，一个显著的挑战是不同AVHRR传感器之间存在辐射和光谱不一致性，这可能会对全球变化分析产生偏差。这在最北纬度地区尤其成问题，因为VIP记录的互校准偏差被怀疑会导致差异。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of the pixel size and coordinate system used in a dataset related to long-term global vegetation index products?",
+        "QuestionCn": "与长期全球植被指数产品相关的数据集中的像素大小和坐标系统的特征是什么？",
+        "AnswerEn": "8000x8000 meters, Albers Conic Equal Area projection, standard parallels at 25 and 47 degrees, latitude of center at 0 degrees, longitude of center at 105 degrees",
+        "AnswerCn": "8000x8000 米，阿尔伯斯等积圆锥投影，标准纬线为 25 度和 47 度，中心纬度为 0 度，中心经度为 105 度。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the features of the file formats and naming conventions used for storing satellite data in a dataset?",
+        "QuestionCn": "卫星数据集存储的文件格式和命名约定的特征是什么？",
+        "AnswerEn": "XML, HDR, IMG, JPG, YYMMM15a(b).n**-VIg_data_envi.rar, vegetation index analysis, year, month, half-month period, satellite number",
+        "AnswerCn": "XML, HDR, IMG, JPG, YYMMM15a(b).n**-VIg_data_envi.rar, 植被指数分析, 年, 月, 半月期, 卫星编号",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What specific data transformation is required to convert DN values to NDVI values in a dataset involving vegetation indices?",
+        "QuestionCn": "将DN值转换为NDVI值所需的具体数据转换是什么？",
+        "AnswerEn": "divide DN by 1000 for data before 2003, divide DN by 10000 for data after 2003, NDVI values range [-1,1]",
+        "AnswerCn": "在2003年之前的数据中，将DN除以1000；在2003年之后的数据中，将DN除以10000。NDVI值的范围是[-1,1]。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of the NDVI dataset, and how does it compare when resampling to match Landsat resolution for detailed analysis?",
+        "QuestionCn": "NDVI数据集的空间分辨率是多少？在重采样以匹配Landsat分辨率进行详细分析时，它的比较如何？",
+        "AnswerEn": "8 km, 30 m",
+        "AnswerCn": "8公里，30米",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the meaning of 'Normalized Difference Vegetation Index (NDVI)' in the context of satellite data analysis?",
+        "QuestionCn": "归一化差异植被指数（NDVI）在卫星数据分析中的含义是什么？",
+        "AnswerEn": "The Normalized Difference Vegetation Index (NDVI) is defined as (ρNIR − ρRED)/(ρNIR + ρRED), where ρNIR and ρRED are surface reflectance in the near infrared (NIR; 0.725–1.10 µm) and visible red (0.58–0.68 µm), respectively. It is used to measure vegetation density and health by assessing the difference in reflectance between these bands, with higher NDVI values indicating denser and healthier vegetation.",
+        "AnswerCn": "归一化植被指数（NDVI）定义为（ρNIR − ρRED）/(ρNIR + ρRED)，其中ρNIR和ρRED分别是近红外（NIR；0.725–1.10 µm）和可见红光（0.58–0.68 µm）的表面反射率。它用于通过评估这两个波段之间的反射率差异来测量植被的密度和健康状况，NDVI值越高，表示植被越密集、越健康。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the challenges of processing and synthesizing reflectance data from earlier AVHRR sensors compare to those encountered with the newer sensors used in vegetation index datasets?",
+        "QuestionCn": "早期AVHRR传感器处理和合成反射率数据的挑战与用于植被指数数据集的新传感器所遇到的挑战相比，如何？",
+        "AnswerEn": "Reflectance data from earlier AVHRR sensors were difficult to process due to the lack of onboard calibration and sensitivity to various atmospheric and environmental factors, resulting in radiometric and spectral inconsistencies. These issues were rectified in newer sensors with improved calibration and reduced sensitivity to environmental factors, although inter-sensor biases still pose challenges.",
+        "AnswerCn": "早期的AVHRR传感器的反射率数据由于缺乏机载校准以及对各种大气和环境因素的敏感性，处理起来非常困难，导致了辐射和光谱的不一致。这些问题在新型传感器中得到了改善，具有更好的校准和对环境因素的敏感性降低，尽管传感器之间的偏差仍然带来挑战。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways do the approaches to synthesizing vegetation index data differ between the GIMMS and VIP products, and how might these differences impact their application in global change research?",
+        "QuestionCn": "GIMMS和VIP产品在合成植被指数数据的方法上有哪些不同，这些差异可能如何影响它们在全球变化研究中的应用？",
+        "AnswerEn": "GIMMS and VIP products use fundamentally different approaches to synthesize vegetation index data. Both are aggregated to a 15-day time step, but differ in calibration methods and the integration of data from higher spatial resolution sensors. These differences can impact their consistency and applicability in global change research, especially in terms of trend detection and canopy property estimation.",
+        "AnswerCn": "GIMMS和VIP产品在合成植被指数数据的方法上有根本性的不同。两者都被聚合到15天的时间步长，但在校准方法和高空间分辨率传感器数据的整合上存在差异。这些差异可能会影响它们在全球变化研究中的一致性和适用性，特别是在趋势检测和冠层属性估计方面。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the differences in the performance of NDVI3g, NDVI3v, and EVI3v vegetation indices when evaluated using a unique Landsat 30 m spatial resolution and in situ LAI database, and how might these differences influence their use in studies of biophysical information?",
+        "QuestionCn": "在使用独特的Landsat 30米空间分辨率和现场LAI数据库评估时，NDVI3g、NDVI3v和EVI3v植被指数的性能差异是什么，这些差异可能如何影响它们在生物物理信息研究中的应用？",
+        "AnswerEn": "The performance of NDVI3v and EVI3v was worse than NDVI3g when evaluated with the in situ data, attributed to the fusion of GIMMS and MODIS data in the VIP record. While EVI3v has potential to contribute additional biophysical information, its poor performance in this study suggests caution in its application for global change studies.",
+        "AnswerCn": "NDVI3v和EVI3v的表现比NDVI3g在与现场数据评估时更差，这归因于VIP记录中GIMMS和MODIS数据的融合。虽然EVI3v有潜力提供额外的生物物理信息，但在本研究中的表现不佳，建议在全球变化研究中谨慎应用。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How do the atmospheric effects and soil background influence the interpretation of NDVI data and what methodologies can be applied to mitigate these influences in data collection?",
+        "QuestionCn": "大气效应和土壤背景如何影响NDVI数据的解释，以及可以应用哪些方法来减轻这些影响以便进行数据收集？",
+        "AnswerEn": "NDVI is sensitive to atmospheric effects and soil background, which can distort the data interpretation. To mitigate these influences, the enhanced vegetation index (EVI) was introduced as it includes a visible blue band to reduce atmospheric effects and calibration terms to reduce soil background effects, thus providing more reliable data for interpretation.",
+        "AnswerCn": "NDVI对大气影响和土壤背景敏感，这可能会扭曲数据解释。为了减轻这些影响，增强植被指数（EVI）被引入，因为它包含一个可见的蓝色波段以减少大气影响，并且包含校准项以减少土壤背景影响，从而提供更可靠的数据用于解释。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "Why is there a need for continuous and consistent data in global vegetation index products, and what approaches are taken to achieve this consistency?",
+        "QuestionCn": "为什么全球植被指数产品需要持续和一致的数据？为了实现这种一致性采取了哪些方法？",
+        "AnswerEn": "Continuous and consistent data are needed to avoid biases in global change analyses caused by radiometric and spectral inconsistencies across sensors. Various methods are developed to make these data continuous and consistent through time, often involving calibration with higher spatial resolution sensors and frequent updates, necessitating new accuracy assessments.",
+        "AnswerCn": "为了避免由于传感器之间的辐射和光谱不一致而导致的全球变化分析中的偏差，需要连续和一致的数据。为使这些数据在时间上连续和一致，已经开发了各种方法，通常涉及与更高空间分辨率传感器的校准和频繁更新，这需要新的准确性评估。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What motivates the development of alternative indices like the Enhanced Vegetation Index (EVI) in addition to NDVI for vegetation monitoring?",
+        "QuestionCn": "开发替代指数如增强植被指数（EVI）而不仅仅依赖于归一化植被指数（NDVI）进行植被监测的动机是什么？",
+        "AnswerEn": "NDVI, while widely used, is sensitive to atmospheric effects, soil background, and saturates at high LAI. The Enhanced Vegetation Index (EVI) was introduced to overcome these limitations, as it includes a visible blue band to reduce atmospheric effects, calibration terms to reduce the effects of soil background, and does not saturate as severely as NDVI at high LAI.",
+        "AnswerCn": "NDVI虽然被广泛使用，但对大气效应、土壤背景敏感，并且在高LAI时会饱和。增强植被指数（EVI）被引入以克服这些限制，因为它包含一个可见的蓝光波段以减少大气效应，校准项以减少土壤背景的影响，并且在高LAI时不会像NDVI那样严重饱和。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the consequences of using uncalibrated AVHRR sensors for early NDVI data collection on global change analyses?",
+        "QuestionCn": "使用未校准的AVHRR传感器进行早期NDVI数据收集对全球变化分析的后果是什么？",
+        "AnswerEn": "Using uncalibrated AVHRR sensors for early NDVI data collection results in radiometric and spectral inconsistencies across sensors, which can significantly bias global change analyses. These inconsistencies arise due to the lack of onboard calibration, sensitivity to water, sun glint, glaciers, clouds, and orbital drift. These issues affect the accuracy and reliability of the data, necessitating various methods to ensure data continuity and consistency over time.",
+        "AnswerCn": "使用未校准的AVHRR传感器进行早期NDVI数据收集会导致传感器之间的辐射和光谱不一致，这可能会显著偏倚全球变化分析。这些不一致的产生是由于缺乏在轨校准、对水体、太阳镜、冰川、云层和轨道漂移的敏感性。这些问题影响了数据的准确性和可靠性，因此需要采用各种方法来确保数据在时间上的连续性和一致性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the fusion of GIMMS and MODIS data in the VIP record affect the performance of NDVI3v and EVI3v in global change studies?",
+        "QuestionCn": "GIMMS和MODIS数据在VIP记录中的融合如何影响NDVI3v和EVI3v在全球变化研究中的表现？",
+        "AnswerEn": "The fusion of GIMMS and MODIS data in the VIP record negatively affects the performance of NDVI3v and EVI3v compared to NDVI3g when using in situ data. This is attributed to the integration of different datasets, which can introduce inconsistencies and affect the accuracy of the vegetation indices, especially during different phases of the growing season and in challenging environmental conditions.",
+        "AnswerCn": "GIMMS和MODIS数据在VIP记录中的融合对NDVI3v和EVI3v的性能产生了负面影响，相较于NDVI3g在使用现场数据时。这归因于不同数据集的整合，这可能引入不一致性，并影响植被指数的准确性，特别是在生长季节的不同阶段和具有挑战性的环境条件下。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the implications of downscaling AVHRR vegetation indices to Landsat 30 m resolution on the evaluation of vegetation dynamics?",
+        "QuestionCn": "将AVHRR植被指数下采样到Landsat 30米分辨率对植被动态评估的影响是什么？",
+        "AnswerEn": "Downscaling AVHRR vegetation indices to Landsat 30 m resolution allows for a more detailed evaluation of vegetation dynamics by facilitating a comparison with higher-resolution in situ LAI data. This approach helps improve the understanding of vegetation index performance and enhances the ability to predict LAI for field crops globally, leading to more accurate assessments of vegetation changes and trends at finer spatial scales.",
+        "AnswerCn": "将AVHRR植被指数下调至Landsat 30米分辨率，可以更详细地评估植被动态，便于与更高分辨率的现场LAI数据进行比较。这种方法有助于提高对植被指数性能的理解，并增强全球范围内对田间作物LAI的预测能力，从而在更细的空间尺度上更准确地评估植被变化和趋势。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the main objectives of collecting long-term vegetation index data using Earth observation remote sensing instruments?",
+        "QuestionCn": "使用地球观测遥感仪器收集长期植被指数数据的主要目标是什么？",
+        "AnswerEn": "The main objectives include estimating canopy properties related to light-use efficiency, representing vegetation climatology in soil–vegetation–atmosphere transfer models, and detecting trends in vegetation and phenology.",
+        "AnswerCn": "主要目标包括估计与光利用效率相关的冠层特性，代表土壤-植被-大气传输模型中的植被气候学，以及检测植被和物候的趋势。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why is it necessary to address the challenges of radiometric and spectral inconsistencies in reflectance data when creating vegetation index datasets?",
+        "QuestionCn": "在创建植被指数数据集时，解决反射率数据中的辐射和光谱不一致性挑战是必要的，原因是什么？",
+        "AnswerEn": "Addressing these challenges is crucial because inconsistencies can significantly bias global change analyses. These issues arise from factors such as lack of onboard calibration in earlier sensors, sensitivity to water and sun glint, and orbital drift, which have been rectified in later sensor launches.",
+        "AnswerCn": "解决这些挑战至关重要，因为不一致性可能会显著影响全球变化分析。这些问题源于早期传感器缺乏机载校准、对水面和阳光反射的敏感性以及轨道漂移，这些问题在后来的传感器发射中得到了修正。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What is the purpose of using a unique Landsat 30 m spatial resolution and in situ database in evaluating the performance of vegetation indices?",
+        "QuestionCn": "使用独特的Landsat 30米空间分辨率和现场数据库来评估植被指数的性能的目的是什么？",
+        "AnswerEn": "The purpose is to provide a comprehensive assessment of the performance of different vegetation indices, such as NDVI3g, NDVI3v, and EVI3v, by using a consistent and high-resolution reference, which can reveal discrepancies and strengths in the datasets used for global change studies.",
+        "AnswerCn": "目的是通过使用一致且高分辨率的参考，全面评估不同植被指数（如NDVI3g、NDVI3v和EVI3v）的性能，以揭示用于全球变化研究的数据集中的差异和优势。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "How can the conversion from DN values to NDVI be accurately performed, and what are the implications of using different division factors in NDVI calculations?",
+        "QuestionCn": "如何准确地将DN值转换为NDVI，并且在NDVI计算中使用不同的除数因素会有什么影响？",
+        "AnswerEn": "The conversion from DN values to NDVI is performed using the formula NDVI = DN/1000 for data prior to 2003, and NDVI = DN/10000 for data from 2003 onwards. The NDVI values should fall within [-1,1], with values outside this range representing other land features. This change in division factor reflects adjustments in data processing that are necessary to maintain consistency and accuracy in NDVI calculations.",
+        "AnswerCn": "DN值转换为NDVI的公式为：2003年之前的数据使用NDVI = DN/1000，2003年及之后的数据使用NDVI = DN/10000。NDVI值应在[-1,1]范围内，超出此范围的值表示其他地表特征。这一除法因子的变化反映了数据处理中的调整，旨在保持NDVI计算的一致性和准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methodological steps are taken to downscale AVHRR vegetation indices to higher spatial resolutions for more detailed analysis, and how is Landsat data utilized in this process?",
+        "QuestionCn": "将AVHRR植被指数降尺度到更高空间分辨率以进行更详细分析的过程中采取了哪些方法步骤，以及Landsat数据在这一过程中是如何被利用的？",
+        "AnswerEn": "Downscaling AVHRR vegetation indices involves using Landsat Thematic Mapper/The Enhanced Thematic Mapper Plus (TM/ETM+) 30 m resolution surface reflectance data as a reference. NDVI3g, NDVI3v, and EVI3v are downscaled to 30 m resolution by regressing them with Landsat FPAR. This process allows for finer spatial resolution in analysis and comparison with in situ LAI data, enhancing the assessment of vegetation indices.",
+        "AnswerCn": "下调AVHRR植被指数涉及使用Landsat主题制图仪/增强主题制图仪（TM/ETM+）30米分辨率的表面反射数据作为参考。NDVI3g、NDVI3v和EVI3v通过与Landsat FPAR回归来下调到30米分辨率。这个过程允许在分析和与现场LAI数据比较时获得更细的空间分辨率，从而增强对植被指数的评估。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What technological advancements have enabled the consistent and accurate collection of vegetation index data over long periods?",
+        "QuestionCn": "哪些技术进步使得长期一致和准确地收集植被指数数据成为可能？",
+        "AnswerEn": "The launch of the Advanced Very High Resolution Radiometer (AVHRR) sensors onboard NOAA satellites, specifically NOAA 16, 17, 18, and 19, helped rectify issues related to onboard calibration and led to more consistent radiometric and spectral data, enabling long-term vegetation index data collection.",
+        "AnswerCn": "高级非常高分辨率辐射计（AVHRR）传感器的发射，特别是NOAA 16、17、18和19号卫星，帮助解决了机载校准相关的问题，导致辐射和光谱数据更加一致，从而实现了长期植被指数数据的收集。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How do calibration terms and additional spectral bands enhance the effectiveness of vegetation indices in capturing accurate canopy data?",
+        "QuestionCn": "校准术语和额外的光谱波段如何增强植被指数在捕捉准确的冠层数据方面的有效性？",
+        "AnswerEn": "The enhanced vegetation index (EVI) was introduced to include a visible blue band that reduces atmospheric effects and incorporates calibration terms that mitigate the influence of soil background, enhancing the effectiveness of vegetation indices in capturing accurate canopy data.",
+        "AnswerCn": "增强植被指数（EVI）被引入以包含一个可见的蓝色波段，从而减少大气影响，并结合校准项以减轻土壤背景的影响，增强了植被指数在捕捉准确冠层数据方面的有效性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What methodologies have been employed to ensure continuity and consistency in long-term vegetation index datasets?",
+        "QuestionCn": "为了确保长期植被指数数据集的连续性和一致性，采用了哪些方法论？",
+        "AnswerEn": "Various methods have been developed, including aggregating data to a 15-day time step and calibrating with higher spatial resolution sensors that overlap different NOAA satellite periods, which help ensure continuity and consistency in long-term vegetation index datasets.",
+        "AnswerCn": "已经开发了多种方法，包括将数据聚合到15天的时间步长，并利用与不同NOAA卫星时期重叠的高空间分辨率传感器进行校准，这有助于确保长期植被指数数据集的连续性和一致性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might there be challenges in achieving consistent data synthesis across different satellite sensors for vegetation index datasets?",
+        "QuestionCn": "在不同卫星传感器之间实现一致的数据合成可能面临哪些挑战，以获取植被指数数据集？",
+        "AnswerEn": "Reflectance data collected from earlier AVHRR sensors were difficult to process and synthesize because they lacked onboard calibration and had issues like sensitivity to water, sun glint, and clouds, as well as orbital drift. These factors resulted in radiometric and spectral inconsistencies across sensors, significantly biasing global change analyses.",
+        "AnswerCn": "早期AVHRR传感器收集的反射率数据由于缺乏机载校准，并且存在对水体、太阳镜和云层的敏感性以及轨道漂移等问题，处理和综合起来非常困难。这些因素导致传感器之间的辐射和光谱不一致，显著影响了全球变化分析的结果。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What reasons could explain the poor performance of certain vegetation indices compared to others when evaluated against in situ data?",
+        "QuestionCn": "当与现场数据进行评估时，哪些原因可以解释某些植被指数表现不佳与其他指数相比？",
+        "AnswerEn": "The performance of NDVI3v and EVI3v was worse than NDVI3g using the in situ data, which was attributed to the fusion of GIMMS and MODIS data in the VIP record. This fusion likely introduced discrepancies affecting the performance of these indices.",
+        "AnswerCn": "NDVI3v和EVI3v的表现比NDVI3g差，这一结果是基于现场数据得出的，主要归因于VIP记录中GIMMS和MODIS数据的融合。这种融合可能引入了影响这些指数表现的差异。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why might the use of enhanced vegetation indices (EVIs) be limited despite their potential to contribute biophysical information in global change studies?",
+        "QuestionCn": "尽管增强植被指数（EVI）在全球变化研究中有潜在的生物物理信息贡献，但其使用可能受到限制的原因是什么？",
+        "AnswerEn": "EVI3v has the potential to contribute biophysical information beyond NDVI3g and NDVI3v to global change studies, but its use is cautioned due to its poor performance in the study, particularly during green-up and senescence periods and in desert regions.",
+        "AnswerCn": "EVI3v有潜力为全球变化研究提供超越NDVI3g和NDVI3v的生物物理信息，但由于其在研究中的表现不佳，特别是在绿化和衰退时期以及沙漠地区，因此使用时需谨慎。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How effective do you think the use of Landsat 30 m spatial resolution data is in downscaling vegetation indices for improving the accuracy of datasets within this domain?",
+        "QuestionCn": "我认为使用Landsat 30米空间分辨率数据在下调植被指数方面的有效性如何，以提高该领域数据集的准确性？",
+        "AnswerEn": "The use of Landsat 30 m spatial resolution data in downscaling vegetation indices, such as NDVI3g, NDVI3v, and EVI3v, is seen as a valuable approach in the domain. It facilitates a detailed comparison and evaluation of these indices by leveraging high-resolution data to assess the predictive capability for LAI. This method enhances dataset accuracy by providing a finer spatial resolution for analysis.",
+        "AnswerCn": "使用Landsat 30米空间分辨率数据对植被指数进行下采样，如NDVI3g、NDVI3v和EVI3v，被视为该领域的一种有价值的方法。它通过利用高分辨率数据来评估这些指数对叶面积指数（LAI）的预测能力，从而促进了详细的比较和评估。这种方法通过提供更细的空间分辨率来增强数据集的准确性。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "In your opinion, what are the primary challenges in ensuring consistency across datasets collected by different AVHRR sensors, and how might these challenges impact research outcomes?",
+        "QuestionCn": "在确保由不同AVHRR传感器收集的数据集之间的一致性方面，主要挑战是什么？这些挑战可能如何影响研究结果？",
+        "AnswerEn": "The primary challenges in ensuring consistency across datasets collected by different AVHRR sensors include radiometric and spectral inconsistencies, lack of onboard calibration in earlier sensors, sensitivity to environmental factors, and orbital drift. These issues can significantly bias global change analyses and affect the reliability of research outcomes. Addressing these challenges is crucial for producing continuous and consistent datasets over time.",
+        "AnswerCn": "确保不同AVHRR传感器收集的数据集一致性的主要挑战包括辐射和光谱不一致、早期传感器缺乏在轨校准、对环境因素的敏感性以及轨道漂移。这些问题可能会显著影响全球变化分析的偏差，并影响研究结果的可靠性。解决这些挑战对于产生持续和一致的时间序列数据集至关重要。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I'm unsure about the challenges faced in processing early satellite data for vegetation indices, especially with respect to calibration issues.",
+        "QuestionCn": "我对处理早期卫星数据以获取植被指数所面临的挑战感到不确定，特别是在校准问题方面。",
+        "AnswerEn": "Reflectance data collected from the earlier AVHRR sensors were difficult to process due to the lack of onboard calibration, sensitivity of the NIR channel to water and clouds, and issues like orbital drift, which needed rectification with later sensor launches.",
+        "AnswerCn": "早期AVHRR传感器收集的反射率数据处理困难，原因包括缺乏机载校准、近红外通道对水体和云层的敏感性，以及轨道漂移等问题，这些问题需要通过后续传感器的发射进行修正。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please analyze the challenges faced in processing AVHRR sensor data for long-term vegetation index studies and suggest possible methods to address these challenges.",
+        "QuestionCn": "请分析在处理AVHRR传感器数据进行长期植被指数研究时面临的挑战，并建议可能的方法来解决这些挑战。",
+        "AnswerEn": "The challenges in processing AVHRR sensor data include the lack of onboard calibration, sensitivity of the NIR channel to water, sun glint, glaciers, clouds, and orbital drift. These challenges lead to radiometric and spectral inconsistencies that can bias global change analyses. To address these challenges, methods such as recalibration with higher spatial resolution sensors, use of advanced algorithms to correct for atmospheric and sensor-specific biases, and inter-sensor calibration techniques are recommended.",
+        "AnswerCn": "处理AVHRR传感器数据的挑战包括缺乏机载校准、近红外通道对水体、太阳眩光、冰川、云层和轨道漂移的敏感性。这些挑战导致辐射和光谱不一致，可能会对全球变化分析产生偏差。为了解决这些挑战，建议采用以下方法：使用更高空间分辨率传感器进行重新校准，使用先进算法纠正大气和传感器特定偏差，以及采用传感器间校准技术。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "Please explore the potential methodologies to downscale vegetation indices from global datasets to finer spatial resolutions for localized studies.",
+        "QuestionCn": "请探讨将全球数据集中的植被指数降尺度到更细空间分辨率以进行局部研究的潜在方法。",
+        "AnswerEn": "One potential methodology to downscale vegetation indices involves using intermediate products such as FPAR derived from higher resolution datasets like Landsat TM/ETM+ 30 m resolution surface reflectance data. This approach utilizes linear regression to convert global vegetation indices to FPAR, which is then downscaled to match the spatial resolution of higher resolution datasets. This method allows for detailed analysis at finer resolutions and can be evaluated using in situ data to ensure accuracy.",
+        "AnswerCn": "一种潜在的植被指数下采样方法涉及使用中间产品，如从更高分辨率数据集（如Landsat TM/ETM+ 30米分辨率表面反射率数据）衍生的FPAR。该方法利用线性回归将全球植被指数转换为FPAR，然后将其下采样以匹配更高分辨率数据集的空间分辨率。这种方法允许在更细的分辨率下进行详细分析，并可以使用实地数据进行评估以确保准确性。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "Please evaluate the effectiveness of using Landsat-derived datasets in enhancing the accuracy of global vegetation indices for various crop types.",
+        "QuestionCn": "请评估使用Landsat衍生数据集在提高各种作物类型全球植被指数准确性方面的有效性。",
+        "AnswerEn": "Landsat-derived datasets, with their 30 m spatial resolution and in situ LAI data, have been effectively used to evaluate and enhance the accuracy of global vegetation indices like NDVI3g, NDVI3v, and EVI3v. These datasets provide detailed surface reflectance data that help in assessing and improving the performance of global indices for major crop types across different continents. The integration of Landsat data helps in achieving better consistency and accuracy, particularly in capturing the phenology and biophysical characteristics of crops.",
+        "AnswerCn": "基于Landsat的数据库，凭借其30米的空间分辨率和现场LAI数据，已有效用于评估和提高全球植被指数（如NDVI3g、NDVI3v和EVI3v）的准确性。这些数据集提供了详细的表面反射率数据，有助于评估和改善全球指数在不同大陆主要作物类型上的表现。Landsat数据的整合有助于实现更好的一致性和准确性，特别是在捕捉作物的物候和生物物理特征方面。",
+        "Level": "C5(Evaluating)"
+      }
+    ]
+  }
 }

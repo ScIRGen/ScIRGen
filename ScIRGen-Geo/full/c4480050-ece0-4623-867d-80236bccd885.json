@@ -1,184 +1,184 @@
 {
-    "id": "c4480050-ece0-4623-867d-80236bccd885",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Global annual lake ice phenological dataset (1861-2099)",
-            "titleCn": "全球年度湖泊结冰物候数据集（1861-2099）",
-            "description": "The global annual lake ice phenological dataset includes the freeze-up date, break-up date for 74,245 lakes in the northern hemisphere. The dataset is divided into three parts: 1) current data, obtained from MODIS productions through a DLRM model (with parameters provided), covering the period of 2001 to 2020; 2) historical and 3) future simulation data, obtained from the temperature-based lake-specific models, for the periods of 1861-2005 and 2006-2099, respectively. The historical and future simulations were only performed for 30,063 lakes that meet the model conditions and are presented in the dataset.",
-            "descriptionCn": "全球年度湖泊冰物候数据集包括北半球74245个湖泊的冻结日期和破裂日期。数据集分为三部分：\n1：当前时间段数据，通过DLRM模型（提供了参数）从MODIS产品中获得，涵盖2001年至2020年74245个湖泊的冻融时间；\n2-3： 历史（2）和未来（3）两个时间段湖泊冻融模拟，分别从1861-2005年和2006-2099年的基于温度的湖泊特定模型中获得（详见论文）。历史和未来的模拟仅针对30063个满足模型条件的湖泊。",
-            "instructions": "Lake information in the study\nFile name: \"Lake_info_74245lks.csv”\nSize: 4.93 MB\nDescription: This file records information on 74,245 lakes in the study. Column A “Hylak_id” corresponds to the ID in the HydroLAKES database . Column B to H are some basic information in the lakes, such as continent, area (m2), shoreline length (m), shoreline development (-), volume (m3), average depth (m), and elevation (m). Column I “Cen_lon” and J “Cen_lat” are their central longitude and latitude. Column K “STD<2°C” is the comparison results of the minimum temperature STD in 20 years and 2°C (see more details in the paper). Here, “YES” means a temperature-based model can be used to simulate lake ice phenology in the historical and future periods. And the last column L “Array_index(30,063lks)” shows a row index, that corresponds to historical and future data, with values from 0 to 30062.\n\nData in the current period\nFile name: \"Current_74245lks_2001-2020.zip”\nSize: 19.61 MB\nDescription: Nine CSV files are compressed in this ZIP file, and each CSV table has the column “Hylak_id” corresponds to HydroLAKES database. In addition, six files beginning with “fit_” are related to DLRM model fitting. File “fit_n_obs.csv” records the annual number of observations from MODIS. File “fit_para_a1.csv”, “fit_para_a2.csv”, “fit_para_b1.csv”, “fit_para_b2.csv” and “fit_para_c.csv” records five fitting parameters in DLRM: a1, a2, b1, b2, c, respectively. The remaining three CSV files beginning with “ice_”, record the annual lake ice phenology from 2001-2020. That is, “ice_on_day.csv” for freeze-up date, “ice_off_day.csv” for break-up date, and “ice_duration.csv” for ice duration. It is worth noting that August 1st of the previous year is the first day of DLRM, so the recorded freeze-up date and break-up date are calculated from August 1st of the previous year. We use “-1” to indicate unfrozen years.\nNotice: For a few lakes, DLRM model may deviate from the actual situation. This situation generally occurs in lakes with less MODIS valid observations or low Snow Cover Index while freezing within a year (caused by the limitations of MODIS products). Therefore, while using this data, it is best to measure the accuracy of ice phenological metrics in combination with the number of valid observations (in “fit_n_obs.csv”) and the peak value of model fitting (in “fit_para_c.csv”).\n\nData in the historical period\nFile name: \"Historical_30063lks_1861-2005.zip”\nSize: 44.65 MB\nDescription: Twelve NPY files (NumPy array in Python) are compressed in this ZIP file. Each NPY file has a two-dimensional array with 30,063 rows and 144 columns, corresponding to 30,063 lakes and 144 years (1861-2005). The row index of these 30,063 lakes can be seen in the file “Lake_info_74245lks.csv” and corresponds to “Hylak_id”. “Freezing_”, “Breakup_” and “Duration_” in the file name refer to three phenological metrics, respectively. MIROC5, IPSL-CM5A-LR, GFDL-ESM2M and HadGEM2-ES are four global climate models from bias-corrected climate projections (Inter-Sectoral Impact Model Intercomparison Project, or ISIMIP2b), show the source of air temperature we used in the temperature-based model. August 1st of the previous year is the first day in the data, and we use “0” in “Freezing_”, “Breakup_” NPY files to represent unfrozen years.\n\nData in the future period\nFile name: \"Future_30063lks_2006_2099.zip”\nSize: 115.69 MB\nDescription: Forty-eight NPY files are compressed in this ZIP file. Each NPY file has a two-dimensional array with 30,063 rows and 93 columns, corresponding to 30,063 lakes and 93 years (2006-2099). Form of this data is similar to data in the historical period. But it should be noted that four representative concentration pathway (RCP) scenarios are investigated: RCP 2.6, 4.5, 6.0 and 8.5 (low to high), respectively. You can distinguish them by file name. August 1st of the previous year is the first day in the data, and we use “0” instead in “Freezing_”, “Breakup_” NPY files to represent unfrozen years.",
-            "instructionsCn": "Lake information in the study\n文件名: \"Lake_info_74245lks.csv”\n大小: 4.93 MB\n说明：该文件记录了研究中74245个湖泊的信息。A列“Hylak_id”对应于\"HydroLAKES\"数据中的id。B至H列是湖泊中的一些基本信息，如所在大陆、面积（m2）、岸线长度（m）、岸线复杂度（-）、体积（m3）、平均深度（m）和海拔（m）。列I“Cen_lon”和J“Cen_lat”是湖泊的中心经度和纬度。K列“STD<2°C”是20年最低温度STD与2°C的比较结果（详见论文）。这里，“是”表示可以使用基于温度的模型来模拟历史和未来时期的湖泊冰物候。最后一列L“Array_index（30063lks）”显示了一个行索引，对应于历史和未来数据，值从0到30062。\n\nData in the current period\n文件名: \"Current_74245lks_2001-2020.zip”\n大小: 19.61 MB\n说明：在此ZIP文件中压缩了九个CSV文件，每个CSV表都有对应于HydroLAKES数据库的列“Hylak_id”。此外，以“fit_”开头的六个文件与DLRM模型拟合相关。文件“fit_n_obs.csv”记录了MODIS的年度观测次数。文件“fit_para_a1.csv”、“fit_paara_a2.csv”，“fit_para _b1.csv“、“fit.para_b2.csv“和“fit_parah_c.csv”分别记录了DLRM中的五个拟合参数：a1、a2、b1、b2、c。其余三个以“ice_”开头的CSV文件记录了2001-2020年的年度湖泊冰物候。即，“ice_on_day.CSV”表示冻结日期，“ice_off_day.CSV”表示破裂日期，“ice_duration.CSV”表示冰持续时间。值得注意的是，前一年的8月1日是DLRM的第一天，因此记录的冻结日期和拆分日期从前一年8月1号开始计算。我们用“-1”表示未冻结的年份。\n\n注意：对于一些湖泊，DLRM模型可能会偏离实际情况。这种情况通常发生在MODIS有效观测值较少或积雪指数较低的湖泊中，而一年内结冰（由MODIS产品的限制造成）。因此，在使用这些数据时，最好结合有效观测值的数量（在“fit_n_obs.csv”中）和模型拟合的峰值（在“fit_para_c.csv”中”中）来测量冰物候指标的准确性。\n\nData in the historical period\n文件名: \"Historical_30063lks_1861-2005.zip”\n大小: 44.65 MB\n说明：在此ZIP文件中压缩了十二个NPY文件（Python中的NumPy数组）。每个NPY文件都有一个二维数组，有30063行和144列，对应于30063个湖泊和144年（1861-2005）。这30063个湖泊的行索引可以在文件“Lake_info_74245lks.csv”中看到，并对应于“Hylak_id”。文件名中的“Freezing_”、“Breakup_”和“Duration_”分别表示三种物候指标。MIROC5、IPSL-CM5A-LR、GFDL-ESM2M和HadGEM2 ES是来自偏差校正气候预测（部门间影响模型相互比较项目，或ISIMIP2b）的四个全球气候模型，显示了我们在基于温度的模型中使用的空气温度来源。前一年的8月1日是数据中的第一天，我们在“Freezing_”、“Breakup_”NPY文件中使用“0”表示未冻结的年份。\n\nData in the future period\n文件名: \"Future_30063lks_2006_2099.zip”\n大小: 115.69 MB\n说明：此ZIP文件中压缩了48个NPY文件。每个NPY文件都有一个二维数组，有30063行和93列，对应于30063个湖泊和93年（2006-2099年）。该数据的形式与历史时期的数据相似。但应注意的是，研究了四种代表性浓度路径（RCP）情景：RCP 2.6、4.5、6.0和8.5（从低到高）。您可以通过文件名来区分它们。前一年的8月1日是数据中的第一天，我们在“Freezing_”、“Breakup_”NPY文件中使用“0”来表示未冻结的年份。",
-            "east": 180.0,
-            "west": 180.0,
-            "south": 23.0,
-            "north": 90.0,
-            "startTime": "1860-12-31 23:54:00",
-            "endTime": "2099-01-01 00:00:00",
-            "fileSize": 193862461.0,
-            "cstr": "18406.11.Cryos.tpdc.272936",
-            "doi": "10.11888/Cryos.tpdc.272936",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "王欣驰",
-                "nameEn": "WANG Xinchi",
-                "unitEn": "",
-                "unitCn": "南方科技大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Continuous Loss of Global Lake Ice Across Two Centuries Revealed by Satellite Observations and Numerical Modeling",
-                "referenceCn": null,
-                "referenceEn": "Wang, X., Feng, L., Qi, W., Cai, X., Zheng, Y., Gibson, L., Tang, J., Song, X.p., Liu, J., Zheng, C., & Bryan, B.A. (2022). Continuous Loss of Global Lake Ice Across Two Centuries Revealed by Satellite Observations and Numerical Modeling. Geophysical Research Letters, 49"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "冰冻圈遥感",
-                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
-            },
-            {
-                "nameCn": "湖冰",
-                "nameEn": "Lake ice"
-            },
-            {
-                "nameCn": "表面冻融",
-                "nameEn": "Surface Freeze-thaw Cycle/State"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Global"
-            },
-            {
-                "keywordCn": "北半球",
-                "keywordEn": "Northern Hemisphere"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "年度",
-                "keywordEn": "annual",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山地区冰川边界（2018）",
-                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
-            },
-            {
-                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
-                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
-            },
-            {
-                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
-                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
-            },
-            {
-                "titleCn": "北半球湖冰物候数据集（1978-2018）",
-                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
-            },
-            {
-                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
-                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
-            },
-            {
-                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
-                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
-            },
-            {
-                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
-                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
-            },
-            {
-                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
-                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
-            },
-            {
-                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
-                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
-            }
-        ]
+  "id": "c4480050-ece0-4623-867d-80236bccd885",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Global annual lake ice phenological dataset (1861-2099)",
+      "titleCn": "全球年度湖泊结冰物候数据集（1861-2099）",
+      "description": "The global annual lake ice phenological dataset includes the freeze-up date, break-up date for 74,245 lakes in the northern hemisphere. The dataset is divided into three parts: 1) current data, obtained from MODIS productions through a DLRM model (with parameters provided), covering the period of 2001 to 2020; 2) historical and 3) future simulation data, obtained from the temperature-based lake-specific models, for the periods of 1861-2005 and 2006-2099, respectively. The historical and future simulations were only performed for 30,063 lakes that meet the model conditions and are presented in the dataset.",
+      "descriptionCn": "全球年度湖泊冰物候数据集包括北半球74245个湖泊的冻结日期和破裂日期。数据集分为三部分：\n1：当前时间段数据，通过DLRM模型（提供了参数）从MODIS产品中获得，涵盖2001年至2020年74245个湖泊的冻融时间；\n2-3： 历史（2）和未来（3）两个时间段湖泊冻融模拟，分别从1861-2005年和2006-2099年的基于温度的湖泊特定模型中获得（详见论文）。历史和未来的模拟仅针对30063个满足模型条件的湖泊。",
+      "instructions": "Lake information in the study\nFile name: \"Lake_info_74245lks.csv”\nSize: 4.93 MB\nDescription: This file records information on 74,245 lakes in the study. Column A “Hylak_id” corresponds to the ID in the HydroLAKES database . Column B to H are some basic information in the lakes, such as continent, area (m2), shoreline length (m), shoreline development (-), volume (m3), average depth (m), and elevation (m). Column I “Cen_lon” and J “Cen_lat” are their central longitude and latitude. Column K “STD<2°C” is the comparison results of the minimum temperature STD in 20 years and 2°C (see more details in the paper). Here, “YES” means a temperature-based model can be used to simulate lake ice phenology in the historical and future periods. And the last column L “Array_index(30,063lks)” shows a row index, that corresponds to historical and future data, with values from 0 to 30062.\n\nData in the current period\nFile name: \"Current_74245lks_2001-2020.zip”\nSize: 19.61 MB\nDescription: Nine CSV files are compressed in this ZIP file, and each CSV table has the column “Hylak_id” corresponds to HydroLAKES database. In addition, six files beginning with “fit_” are related to DLRM model fitting. File “fit_n_obs.csv” records the annual number of observations from MODIS. File “fit_para_a1.csv”, “fit_para_a2.csv”, “fit_para_b1.csv”, “fit_para_b2.csv” and “fit_para_c.csv” records five fitting parameters in DLRM: a1, a2, b1, b2, c, respectively. The remaining three CSV files beginning with “ice_”, record the annual lake ice phenology from 2001-2020. That is, “ice_on_day.csv” for freeze-up date, “ice_off_day.csv” for break-up date, and “ice_duration.csv” for ice duration. It is worth noting that August 1st of the previous year is the first day of DLRM, so the recorded freeze-up date and break-up date are calculated from August 1st of the previous year. We use “-1” to indicate unfrozen years.\nNotice: For a few lakes, DLRM model may deviate from the actual situation. This situation generally occurs in lakes with less MODIS valid observations or low Snow Cover Index while freezing within a year (caused by the limitations of MODIS products). Therefore, while using this data, it is best to measure the accuracy of ice phenological metrics in combination with the number of valid observations (in “fit_n_obs.csv”) and the peak value of model fitting (in “fit_para_c.csv”).\n\nData in the historical period\nFile name: \"Historical_30063lks_1861-2005.zip”\nSize: 44.65 MB\nDescription: Twelve NPY files (NumPy array in Python) are compressed in this ZIP file. Each NPY file has a two-dimensional array with 30,063 rows and 144 columns, corresponding to 30,063 lakes and 144 years (1861-2005). The row index of these 30,063 lakes can be seen in the file “Lake_info_74245lks.csv” and corresponds to “Hylak_id”. “Freezing_”, “Breakup_” and “Duration_” in the file name refer to three phenological metrics, respectively. MIROC5, IPSL-CM5A-LR, GFDL-ESM2M and HadGEM2-ES are four global climate models from bias-corrected climate projections (Inter-Sectoral Impact Model Intercomparison Project, or ISIMIP2b), show the source of air temperature we used in the temperature-based model. August 1st of the previous year is the first day in the data, and we use “0” in “Freezing_”, “Breakup_” NPY files to represent unfrozen years.\n\nData in the future period\nFile name: \"Future_30063lks_2006_2099.zip”\nSize: 115.69 MB\nDescription: Forty-eight NPY files are compressed in this ZIP file. Each NPY file has a two-dimensional array with 30,063 rows and 93 columns, corresponding to 30,063 lakes and 93 years (2006-2099). Form of this data is similar to data in the historical period. But it should be noted that four representative concentration pathway (RCP) scenarios are investigated: RCP 2.6, 4.5, 6.0 and 8.5 (low to high), respectively. You can distinguish them by file name. August 1st of the previous year is the first day in the data, and we use “0” instead in “Freezing_”, “Breakup_” NPY files to represent unfrozen years.",
+      "instructionsCn": "Lake information in the study\n文件名: \"Lake_info_74245lks.csv”\n大小: 4.93 MB\n说明：该文件记录了研究中74245个湖泊的信息。A列“Hylak_id”对应于\"HydroLAKES\"数据中的id。B至H列是湖泊中的一些基本信息，如所在大陆、面积（m2）、岸线长度（m）、岸线复杂度（-）、体积（m3）、平均深度（m）和海拔（m）。列I“Cen_lon”和J“Cen_lat”是湖泊的中心经度和纬度。K列“STD<2°C”是20年最低温度STD与2°C的比较结果（详见论文）。这里，“是”表示可以使用基于温度的模型来模拟历史和未来时期的湖泊冰物候。最后一列L“Array_index（30063lks）”显示了一个行索引，对应于历史和未来数据，值从0到30062。\n\nData in the current period\n文件名: \"Current_74245lks_2001-2020.zip”\n大小: 19.61 MB\n说明：在此ZIP文件中压缩了九个CSV文件，每个CSV表都有对应于HydroLAKES数据库的列“Hylak_id”。此外，以“fit_”开头的六个文件与DLRM模型拟合相关。文件“fit_n_obs.csv”记录了MODIS的年度观测次数。文件“fit_para_a1.csv”、“fit_paara_a2.csv”，“fit_para _b1.csv“、“fit.para_b2.csv“和“fit_parah_c.csv”分别记录了DLRM中的五个拟合参数：a1、a2、b1、b2、c。其余三个以“ice_”开头的CSV文件记录了2001-2020年的年度湖泊冰物候。即，“ice_on_day.CSV”表示冻结日期，“ice_off_day.CSV”表示破裂日期，“ice_duration.CSV”表示冰持续时间。值得注意的是，前一年的8月1日是DLRM的第一天，因此记录的冻结日期和拆分日期从前一年8月1号开始计算。我们用“-1”表示未冻结的年份。\n\n注意：对于一些湖泊，DLRM模型可能会偏离实际情况。这种情况通常发生在MODIS有效观测值较少或积雪指数较低的湖泊中，而一年内结冰（由MODIS产品的限制造成）。因此，在使用这些数据时，最好结合有效观测值的数量（在“fit_n_obs.csv”中）和模型拟合的峰值（在“fit_para_c.csv”中”中）来测量冰物候指标的准确性。\n\nData in the historical period\n文件名: \"Historical_30063lks_1861-2005.zip”\n大小: 44.65 MB\n说明：在此ZIP文件中压缩了十二个NPY文件（Python中的NumPy数组）。每个NPY文件都有一个二维数组，有30063行和144列，对应于30063个湖泊和144年（1861-2005）。这30063个湖泊的行索引可以在文件“Lake_info_74245lks.csv”中看到，并对应于“Hylak_id”。文件名中的“Freezing_”、“Breakup_”和“Duration_”分别表示三种物候指标。MIROC5、IPSL-CM5A-LR、GFDL-ESM2M和HadGEM2 ES是来自偏差校正气候预测（部门间影响模型相互比较项目，或ISIMIP2b）的四个全球气候模型，显示了我们在基于温度的模型中使用的空气温度来源。前一年的8月1日是数据中的第一天，我们在“Freezing_”、“Breakup_”NPY文件中使用“0”表示未冻结的年份。\n\nData in the future period\n文件名: \"Future_30063lks_2006_2099.zip”\n大小: 115.69 MB\n说明：此ZIP文件中压缩了48个NPY文件。每个NPY文件都有一个二维数组，有30063行和93列，对应于30063个湖泊和93年（2006-2099年）。该数据的形式与历史时期的数据相似。但应注意的是，研究了四种代表性浓度路径（RCP）情景：RCP 2.6、4.5、6.0和8.5（从低到高）。您可以通过文件名来区分它们。前一年的8月1日是数据中的第一天，我们在“Freezing_”、“Breakup_”NPY文件中使用“0”来表示未冻结的年份。",
+      "east": 180.0,
+      "west": 180.0,
+      "south": 23.0,
+      "north": 90.0,
+      "startTime": "1860-12-31 23:54:00",
+      "endTime": "2099-01-01 00:00:00",
+      "fileSize": 193862461.0,
+      "cstr": "18406.11.Cryos.tpdc.272936",
+      "doi": "10.11888/Cryos.tpdc.272936",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics and parameters used in temperature-based models for simulating historical and future lake ice phenology?",
-                "QuestionCn": "用于模拟历史和未来湖泊冰现象的基于温度的模型的特征和参数有哪些？",
-                "AnswerEn": "specific temperature parameters, 30,063 lakes, 1861-2005 historical simulations, 2006-2099 future projections",
-                "AnswerCn": "特定温度参数，30,063个湖泊，1861-2005年历史模拟，2006-2099年未来预测",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many lakes have their freezing and thawing dates recorded in the current time period dataset?",
-                "QuestionCn": "在当前时间段的数据集中，有多少个湖泊记录了它们的冰冻和解冻日期？",
-                "AnswerEn": "74,245",
-                "AnswerCn": "74,245",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do data collection methods for lake ice phenology using the DLRM model and MODIS products compare to temperature-based lake-specific models in terms of accuracy and applicability across different time periods?",
-                "QuestionCn": "使用DLRM模型和MODIS产品进行湖冰物候的数据收集方法与基于温度的湖泊特定模型在准确性和适用性方面如何比较，尤其是在不同时间段内？",
-                "AnswerEn": "The data collection method using the DLRM model and MODIS products focuses on current time periods from 2001 to 2020, covering 74245 lakes by deriving freezing and thawing times. In contrast, temperature-based lake-specific models are used for historical (1861-2005) and future (2006-2099) simulations, applied to 30063 lakes that meet specific model conditions. This comparison highlights differences in the temporal scope, number of lakes covered, and the modeling techniques involved.",
-                "AnswerCn": "数据收集方法使用DLRM模型和MODIS产品，重点关注2001年至2020年的当前时间段，涵盖74245个湖泊，通过推导冰冻和融化时间。相比之下，基于温度的湖泊特定模型用于历史（1861-2005年）和未来（2006-2099年）模拟，适用于满足特定模型条件的30063个湖泊。这一比较突出了时间范围、涵盖湖泊数量和所涉及建模技术的差异。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What data collection methods might account for the ability to simulate historical and future lake ice phenology for specific lakes, and what could be the underlying challenges in ensuring accuracy and consistency across different time periods?",
-                "QuestionCn": "哪些数据收集方法可能有助于模拟特定湖泊的历史和未来冰现象，并且在确保不同时间段之间的准确性和一致性方面可能面临哪些潜在挑战？",
-                "AnswerEn": "The data collection methods for simulating historical and future lake ice phenology involve using temperature-based lake-specific models. The historical and future simulations are conducted for lakes that meet specific model conditions, with historical data covering 1861-2005 and future projections for 2006-2099. A challenge in ensuring accuracy and consistency lies in the reliance on temperature models that must accurately reflect the climatic conditions across vast temporal spans and diverse geographical locations. Additionally, the models must account for variations in local environmental factors that may influence freezing and thawing patterns.",
-                "AnswerCn": "模拟历史和未来湖泊冰现象的数据收集方法涉及使用基于温度的湖泊特定模型。历史和未来的模拟针对满足特定模型条件的湖泊进行，历史数据覆盖1861年至2005年，未来预测则为2006年至2099年。确保准确性和一致性的一大挑战在于依赖温度模型，这些模型必须准确反映跨越广泛时间跨度和多样地理位置的气候条件。此外，模型还必须考虑可能影响结冰和融化模式的局部环境因素的变化。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the primary goals of developing a global annual lake ice phenology dataset spanning from 1861 to 2099, and how does it help in understanding climate change impacts on freshwater ecosystems?",
-                "QuestionCn": "开发一个涵盖1861年至2099年的全球年度湖冰物候数据集的主要目标是什么，以及它如何帮助理解气候变化对淡水生态系统的影响？",
-                "AnswerEn": "The primary goal of developing a global annual lake ice phenology dataset is to monitor and analyze the patterns of lake freezing and melting over a significant period, which can provide valuable insights into the effects of climate change on freshwater ecosystems. By covering a wide temporal range from 1861 to 2099, it allows researchers to study historical trends, current conditions, and future projections of lake ice phenology. This helps in understanding how global warming and temperature fluctuations impact lake ice cover, which is crucial for ecological studies, water resource management, and climate modeling.",
-                "AnswerCn": "开发全球年度湖冰物候数据集的主要目标是监测和分析湖泊结冰和融化的模式，这可以为气候变化对淡水生态系统的影响提供宝贵的见解。通过覆盖从1861年到2099年的广泛时间范围，它使研究人员能够研究历史趋势、当前状况和湖冰物候的未来预测。这有助于理解全球变暖和温度波动如何影响湖泊冰盖，这对于生态研究、水资源管理和气候建模至关重要。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What methodologies can be employed to simulate lake freezing and thawing events for historical and future periods, and what challenges might arise in applying these models across different geographic regions?",
-                "QuestionCn": "可以采用哪些方法来模拟历史和未来时期的湖泊结冰和融化事件，以及在不同地理区域应用这些模型时可能出现的挑战是什么？",
-                "AnswerEn": "The methodologies used involve temperature-based lake-specific models for simulating freezing and thawing events. Historical simulations cover the period from 1861-2005, while future simulations extend from 2006-2099. Challenges in applying these models across different regions may include variations in local climate conditions, differences in lake characteristics, and the availability of accurate temperature data to input into the models.",
-                "AnswerCn": "所使用的方法涉及基于温度的湖泊特定模型，用于模拟结冰和融化事件。历史模拟覆盖1861年至2005年，而未来模拟则延伸至2006年至2099年。在不同地区应用这些模型的挑战可能包括局部气候条件的差异、湖泊特征的不同以及用于输入模型的准确温度数据的可用性。",
-                "Level": "C6(Creating)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "王欣驰",
+        "nameEn": "WANG Xinchi",
+        "unitEn": "",
+        "unitCn": "南方科技大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Continuous Loss of Global Lake Ice Across Two Centuries Revealed by Satellite Observations and Numerical Modeling",
+        "referenceCn": null,
+        "referenceEn": "Wang, X., Feng, L., Qi, W., Cai, X., Zheng, Y., Gibson, L., Tang, J., Song, X.p., Liu, J., Zheng, C., & Bryan, B.A. (2022). Continuous Loss of Global Lake Ice Across Two Centuries Revealed by Satellite Observations and Numerical Modeling. Geophysical Research Letters, 49"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "冰冻圈遥感",
+        "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+      },
+      {
+        "nameCn": "湖冰",
+        "nameEn": "Lake ice"
+      },
+      {
+        "nameCn": "表面冻融",
+        "nameEn": "Surface Freeze-thaw Cycle/State"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Global"
+      },
+      {
+        "keywordCn": "北半球",
+        "keywordEn": "Northern Hemisphere"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "年度",
+        "keywordEn": "annual",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山地区冰川边界（2018）",
+        "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+      },
+      {
+        "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+        "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+      },
+      {
+        "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+        "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+      },
+      {
+        "titleCn": "北半球湖冰物候数据集（1978-2018）",
+        "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+      },
+      {
+        "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+        "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+      },
+      {
+        "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+        "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+      },
+      {
+        "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+        "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+      },
+      {
+        "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+        "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+      },
+      {
+        "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+        "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics and parameters used in temperature-based models for simulating historical and future lake ice phenology?",
+        "QuestionCn": "用于模拟历史和未来湖泊冰现象的基于温度的模型的特征和参数有哪些？",
+        "AnswerEn": "specific temperature parameters, 30,063 lakes, 1861-2005 historical simulations, 2006-2099 future projections",
+        "AnswerCn": "特定温度参数，30,063个湖泊，1861-2005年历史模拟，2006-2099年未来预测",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many lakes have their freezing and thawing dates recorded in the current time period dataset?",
+        "QuestionCn": "在当前时间段的数据集中，有多少个湖泊记录了它们的冰冻和解冻日期？",
+        "AnswerEn": "74,245",
+        "AnswerCn": "74,245",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do data collection methods for lake ice phenology using the DLRM model and MODIS products compare to temperature-based lake-specific models in terms of accuracy and applicability across different time periods?",
+        "QuestionCn": "使用DLRM模型和MODIS产品进行湖冰物候的数据收集方法与基于温度的湖泊特定模型在准确性和适用性方面如何比较，尤其是在不同时间段内？",
+        "AnswerEn": "The data collection method using the DLRM model and MODIS products focuses on current time periods from 2001 to 2020, covering 74245 lakes by deriving freezing and thawing times. In contrast, temperature-based lake-specific models are used for historical (1861-2005) and future (2006-2099) simulations, applied to 30063 lakes that meet specific model conditions. This comparison highlights differences in the temporal scope, number of lakes covered, and the modeling techniques involved.",
+        "AnswerCn": "数据收集方法使用DLRM模型和MODIS产品，重点关注2001年至2020年的当前时间段，涵盖74245个湖泊，通过推导冰冻和融化时间。相比之下，基于温度的湖泊特定模型用于历史（1861-2005年）和未来（2006-2099年）模拟，适用于满足特定模型条件的30063个湖泊。这一比较突出了时间范围、涵盖湖泊数量和所涉及建模技术的差异。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What data collection methods might account for the ability to simulate historical and future lake ice phenology for specific lakes, and what could be the underlying challenges in ensuring accuracy and consistency across different time periods?",
+        "QuestionCn": "哪些数据收集方法可能有助于模拟特定湖泊的历史和未来冰现象，并且在确保不同时间段之间的准确性和一致性方面可能面临哪些潜在挑战？",
+        "AnswerEn": "The data collection methods for simulating historical and future lake ice phenology involve using temperature-based lake-specific models. The historical and future simulations are conducted for lakes that meet specific model conditions, with historical data covering 1861-2005 and future projections for 2006-2099. A challenge in ensuring accuracy and consistency lies in the reliance on temperature models that must accurately reflect the climatic conditions across vast temporal spans and diverse geographical locations. Additionally, the models must account for variations in local environmental factors that may influence freezing and thawing patterns.",
+        "AnswerCn": "模拟历史和未来湖泊冰现象的数据收集方法涉及使用基于温度的湖泊特定模型。历史和未来的模拟针对满足特定模型条件的湖泊进行，历史数据覆盖1861年至2005年，未来预测则为2006年至2099年。确保准确性和一致性的一大挑战在于依赖温度模型，这些模型必须准确反映跨越广泛时间跨度和多样地理位置的气候条件。此外，模型还必须考虑可能影响结冰和融化模式的局部环境因素的变化。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the primary goals of developing a global annual lake ice phenology dataset spanning from 1861 to 2099, and how does it help in understanding climate change impacts on freshwater ecosystems?",
+        "QuestionCn": "开发一个涵盖1861年至2099年的全球年度湖冰物候数据集的主要目标是什么，以及它如何帮助理解气候变化对淡水生态系统的影响？",
+        "AnswerEn": "The primary goal of developing a global annual lake ice phenology dataset is to monitor and analyze the patterns of lake freezing and melting over a significant period, which can provide valuable insights into the effects of climate change on freshwater ecosystems. By covering a wide temporal range from 1861 to 2099, it allows researchers to study historical trends, current conditions, and future projections of lake ice phenology. This helps in understanding how global warming and temperature fluctuations impact lake ice cover, which is crucial for ecological studies, water resource management, and climate modeling.",
+        "AnswerCn": "开发全球年度湖冰物候数据集的主要目标是监测和分析湖泊结冰和融化的模式，这可以为气候变化对淡水生态系统的影响提供宝贵的见解。通过覆盖从1861年到2099年的广泛时间范围，它使研究人员能够研究历史趋势、当前状况和湖冰物候的未来预测。这有助于理解全球变暖和温度波动如何影响湖泊冰盖，这对于生态研究、水资源管理和气候建模至关重要。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What methodologies can be employed to simulate lake freezing and thawing events for historical and future periods, and what challenges might arise in applying these models across different geographic regions?",
+        "QuestionCn": "可以采用哪些方法来模拟历史和未来时期的湖泊结冰和融化事件，以及在不同地理区域应用这些模型时可能出现的挑战是什么？",
+        "AnswerEn": "The methodologies used involve temperature-based lake-specific models for simulating freezing and thawing events. Historical simulations cover the period from 1861-2005, while future simulations extend from 2006-2099. Challenges in applying these models across different regions may include variations in local climate conditions, differences in lake characteristics, and the availability of accurate temperature data to input into the models.",
+        "AnswerCn": "所使用的方法涉及基于温度的湖泊特定模型，用于模拟结冰和融化事件。历史模拟覆盖1861年至2005年，而未来模拟则延伸至2006年至2099年。在不同地区应用这些模型的挑战可能包括局部气候条件的差异、湖泊特征的不同以及用于输入模型的准确温度数据的可用性。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

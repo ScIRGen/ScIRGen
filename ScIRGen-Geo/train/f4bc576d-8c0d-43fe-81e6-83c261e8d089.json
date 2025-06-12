@@ -1,203 +1,203 @@
 {
-    "id": "f4bc576d-8c0d-43fe-81e6-83c261e8d089",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "MODIS Terra surface reflectance products over the Tibetan Plateau (2000-2019)",
-            "titleCn": "青藏高原MODIS Terra地表反射率产品（2000-2019）",
-            "description": "The dataset is the MODIS Terra surface reflectance products from 2000 to 2019 over the Tibetan Plateau,each period of data contains 13 files: 7 surface reflectence files, 3 observation angle files, 2 quality control files and 1 time description file. The dataset is download from USGS and its format is converted from .hdf to .tif by GDAL.The sur_refl_qc_500m and sur_refl_state_500m layers are the quality identification documents,which are stored in an efficient bit-encoded manner.The MODIS surface reflectance play an important role in forest, water resources, climate change.",
-            "descriptionCn": "1）数据内容：本数据集包含从2000-2019年青藏高原地区MODIS长时序地表反射率产品，每期数据共包含13个文件：7个地表反射率文件，3个观测角度文件，2个质量控制文件和1个时间说明文件。2）数据来源及加工方法：主要来自第六版MODIS Terra MOD09A1产品集，青藏高原地区地表反射率产品是通过USGS网站下载，利用GDAL插件进行拼接和转投影得到；3）数据质量描述：sur_refl_qc_500m和sur_refl_state_500m为数据质量文件，其以有效位编码方式存储。4）数据应用成果及前景：在森林、水资源、气候变化等领域长时序信息挖掘分析方面具有重要的应用价值。",
-            "instructions": "1)File name rules:the data of land surface reflectance is stored in units of years in a floder named surface_reflectance, and the subfolder's name is presented as \"date\",for example, 2000; the name rule of each file of land surface reflectance result is \"MOD09A1_date_sur_refl_bxx.tif\",for example, MOD09A1_2001017_sur_refl_b02.tif; the name rule of quality indentification data is \"MOD09A1_date_sur_refl_qc_500m.tif\" and \"MOD09A1_date_sur_refl_state_500m.tif\"; the name rule of angle data is \"MOD09A1_date_sur_refl_szen.tif\", \"MOD09A1_date_sur_refl_szen.tif\" and \"MOD09A1_date_sur_refl_raz.tif\", which represent the file of solar zenith angle, view zenith angle and relative azimuth angle; and the name rule of date description is \"MOD09A1_date_sur_refl_day_of_year.tif\". 2)How to use the dataset: the dataset can be opened by ArcGIS, envi, QGIS and so on, the surface reflectance data are multiplied 0.0001 when used, and the background filling value is -28672; the background filling value of band specific quality data (sur_refl_qc_500m) is 4294967295; the background filling value of surface reflectance state(sur_refl_state_500m) is 65535; and the angle data are multiplied 0.01, and the background filling value is 0.",
-            "instructionsCn": "文件命名：地表反射率数据存放在surface_reflectance文件夹中，以年为单位进行划分，文件夹的命名规则为：年份，如2000;每个地表反射率文件的命名规则为：MOD09A1_成像日期_sur_refl_bxx.tif，如MOD09A1_2001017_sur_refl_b02.tif, 其中2001代表年，017代表Julian日期，b02代表波段名称，该文件即代表2001年第17天青藏高原841-876nm的地表反射率值；质量控制文件的命名规则分别为：描述各波段地表反射率质量文件为MOD09A1_成像日期_sur_refl_qc_500m.tif及描述地表反射情况文件为MOD09A1_成像日期_sur_refl_state_500m.tif，如MOD09A1_2001017_sur_refl_qc_500m.tif，角度数据文件的命名规则分别为：MOD09A1_成像日期_sur_refl_szen.tif、MOD09A1_成像日期_sur_refl_vzen.tif及MOD09A1_成像日期_sur_refl_raz.tif,其分别代表太阳天顶角文件、观测天顶角文件及相对方位角文件；时间说明文件命名规则为：MOD09A1_成像日期_sur_refl_day_of_year.tif。数据使用方式：所有文件数据可使用Arcgis、ENVI、QGIS等软件打开，其中地表反射的值在使用时需要乘以0.0001，填充值为-28672；qc_500m文件填充值为4294967295；角度文件在使用时需乘以0.01，填充值为0；state_500m文件填充值为65535；时间说明文件填充值为65535",
-            "east": 106.7,
-            "west": 73.4,
-            "south": 24.6,
-            "north": 40.4,
-            "startTime": "2000-01-01 00:00:00",
-            "endTime": "2019-12-31 00:00:00",
-            "fileSize": 223512903915.0,
-            "cstr": null,
-            "doi": "",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "贡成娟",
-                "nameEn": "GONG Chengjuan",
-                "unitEn": "",
-                "unitCn": "中国科学院空天信息创新研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "MOD09A1",
-                "referenceCn": null,
-                "referenceEn": "Vermote, E. (2015). MOD09A1 MODIS/Terra Surface Reflectance 8-Day L3 Global 500m SIN Grid V006. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MOD09A1.006"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "地表产品",
-                "nameEn": "Land surface product"
-            },
-            {
-                "nameCn": "沙漠/荒漠",
-                "nameEn": "Desert"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "青藏高原",
-                "keywordEn": "Qinghai Tibet Plateau"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2000-2019",
-                "keywordEn": "2000-2019",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            }
-        ]
+  "id": "f4bc576d-8c0d-43fe-81e6-83c261e8d089",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "MODIS Terra surface reflectance products over the Tibetan Plateau (2000-2019)",
+      "titleCn": "青藏高原MODIS Terra地表反射率产品（2000-2019）",
+      "description": "The dataset is the MODIS Terra surface reflectance products from 2000 to 2019 over the Tibetan Plateau,each period of data contains 13 files: 7 surface reflectence files, 3 observation angle files, 2 quality control files and 1 time description file. The dataset is download from USGS and its format is converted from .hdf to .tif by GDAL.The sur_refl_qc_500m and sur_refl_state_500m layers are the quality identification documents,which are stored in an efficient bit-encoded manner.The MODIS surface reflectance play an important role in forest, water resources, climate change.",
+      "descriptionCn": "1）数据内容：本数据集包含从2000-2019年青藏高原地区MODIS长时序地表反射率产品，每期数据共包含13个文件：7个地表反射率文件，3个观测角度文件，2个质量控制文件和1个时间说明文件。2）数据来源及加工方法：主要来自第六版MODIS Terra MOD09A1产品集，青藏高原地区地表反射率产品是通过USGS网站下载，利用GDAL插件进行拼接和转投影得到；3）数据质量描述：sur_refl_qc_500m和sur_refl_state_500m为数据质量文件，其以有效位编码方式存储。4）数据应用成果及前景：在森林、水资源、气候变化等领域长时序信息挖掘分析方面具有重要的应用价值。",
+      "instructions": "1)File name rules:the data of land surface reflectance is stored in units of years in a floder named surface_reflectance, and the subfolder's name is presented as \"date\",for example, 2000; the name rule of each file of land surface reflectance result is \"MOD09A1_date_sur_refl_bxx.tif\",for example, MOD09A1_2001017_sur_refl_b02.tif; the name rule of quality indentification data is \"MOD09A1_date_sur_refl_qc_500m.tif\" and \"MOD09A1_date_sur_refl_state_500m.tif\"; the name rule of angle data is \"MOD09A1_date_sur_refl_szen.tif\", \"MOD09A1_date_sur_refl_szen.tif\" and \"MOD09A1_date_sur_refl_raz.tif\", which represent the file of solar zenith angle, view zenith angle and relative azimuth angle; and the name rule of date description is \"MOD09A1_date_sur_refl_day_of_year.tif\". 2)How to use the dataset: the dataset can be opened by ArcGIS, envi, QGIS and so on, the surface reflectance data are multiplied 0.0001 when used, and the background filling value is -28672; the background filling value of band specific quality data (sur_refl_qc_500m) is 4294967295; the background filling value of surface reflectance state(sur_refl_state_500m) is 65535; and the angle data are multiplied 0.01, and the background filling value is 0.",
+      "instructionsCn": "文件命名：地表反射率数据存放在surface_reflectance文件夹中，以年为单位进行划分，文件夹的命名规则为：年份，如2000;每个地表反射率文件的命名规则为：MOD09A1_成像日期_sur_refl_bxx.tif，如MOD09A1_2001017_sur_refl_b02.tif, 其中2001代表年，017代表Julian日期，b02代表波段名称，该文件即代表2001年第17天青藏高原841-876nm的地表反射率值；质量控制文件的命名规则分别为：描述各波段地表反射率质量文件为MOD09A1_成像日期_sur_refl_qc_500m.tif及描述地表反射情况文件为MOD09A1_成像日期_sur_refl_state_500m.tif，如MOD09A1_2001017_sur_refl_qc_500m.tif，角度数据文件的命名规则分别为：MOD09A1_成像日期_sur_refl_szen.tif、MOD09A1_成像日期_sur_refl_vzen.tif及MOD09A1_成像日期_sur_refl_raz.tif,其分别代表太阳天顶角文件、观测天顶角文件及相对方位角文件；时间说明文件命名规则为：MOD09A1_成像日期_sur_refl_day_of_year.tif。数据使用方式：所有文件数据可使用Arcgis、ENVI、QGIS等软件打开，其中地表反射的值在使用时需要乘以0.0001，填充值为-28672；qc_500m文件填充值为4294967295；角度文件在使用时需乘以0.01，填充值为0；state_500m文件填充值为65535；时间说明文件填充值为65535",
+      "east": 106.7,
+      "west": 73.4,
+      "south": 24.6,
+      "north": 40.4,
+      "startTime": "2000-01-01 00:00:00",
+      "endTime": "2019-12-31 00:00:00",
+      "fileSize": 223512903915.0,
+      "cstr": null,
+      "doi": "",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the key features and data components involved in creating a comprehensive dataset for long-term surface reflectance analysis in the Qinghai-Tibet Plateau region?",
-                "QuestionCn": "在青藏高原地区创建一个全面的长期表面反射率分析数据集所涉及的关键特征和数据组件包括：",
-                "AnswerEn": "surface reflectance files, observation angle files, quality control files, 13 files per temporal dataset, 7 surface reflectance files, 3 observation angle files, 2 quality control files, 1 time description file",
-                "AnswerCn": "地表反射率文件、观测角度文件、质量控制文件，每个时间数据集有13个文件，7个地表反射率文件，3个观测角度文件，2个质量控制文件，1个时间描述文件。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many files are included in each period of a dataset related to MODIS Terra surface reflectance products for the Tibetan Plateau from 2000-2019?",
-                "QuestionCn": "与2000-2019年西藏高原的MODIS Terra表面反射率产品相关的数据集中，每个时期包含多少个文件？",
-                "AnswerEn": "13 files",
-                "AnswerCn": "13个文件",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the meaning of '地表反射率产品' in the context of remote sensing data related to the Qinghai-Tibet Plateau?",
-                "QuestionCn": "'地表反射率产品'在与青藏高原相关的遥感数据中指的是地表反射率的测量结果，这些数据用于分析地表特征、植被覆盖、土壤湿度等环境变化。",
-                "AnswerEn": "'地表反射率产品' refers to surface reflectance products derived from remote sensing data, specifically from the MODIS Terra MOD09A1 product set for the Qinghai-Tibet Plateau. These products provide long-term sequences of surface reflectance data, which include files for surface reflectance, observation angles, quality control, and time documentation, used for applications in fields such as forestry, water resources, and climate change analysis.",
-                "AnswerCn": "'地表反射率产品'是指从遥感数据中提取的地表反射率产品，特别是来自MODIS Terra MOD09A1产品集的青藏高原数据。这些产品提供长期的地表反射率数据序列，包括地表反射率、观测角度、质量控制和时间文档的文件，广泛应用于林业、水资源和气候变化分析等领域。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What potential challenges might researchers face when using long-term surface reflectance data for analyzing climate change trends on the Qinghai-Tibet Plateau?",
-                "QuestionCn": "研究人员在使用长期表面反射率数据分析青藏高原气候变化趋势时可能面临哪些潜在挑战？",
-                "AnswerEn": "Researchers might face challenges related to the data quality as indicated by the sur_refl_qc_500m and sur_refl_state_500m quality control files, which use bit encoding to store quality information. Additionally, the methods used for data collection, such as the use of GDAL plugins for mosaicking and reprojection, could introduce errors or inconsistencies, especially across a long time series like 2000-2019. Ensuring consistency and accuracy in the data processing steps is crucial for reliable analysis of climate change trends.",
-                "AnswerCn": "研究人员可能面临与数据质量相关的挑战，如 sur_refl_qc_500m 和 sur_refl_state_500m 质量控制文件所示，这些文件使用位编码来存储质量信息。此外，数据收集的方法，例如使用 GDAL 插件进行拼接和重投影，可能会引入错误或不一致，特别是在像 2000-2019 这样长时间序列中。确保数据处理步骤的一致性和准确性对于可靠分析气候变化趋势至关重要。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the potential outcomes of utilizing MODIS Terra surface reflectance products from 2000-2019 in the Qinghai-Tibet Plateau for long-term environmental analysis?",
-                "QuestionCn": "利用2000-2019年MODIS Terra表面反射率产品在青藏高原进行长期环境分析的潜在结果是什么？",
-                "AnswerEn": "Utilizing a MODIS Terra surface reflectance product for long-term environmental analysis on the Qinghai-Tibet Plateau can result in significant findings in areas such as forest monitoring, water resource management, and climate change assessment. This dataset offers valuable long-term information that can enhance understanding and inform strategies in these critical fields.",
-                "AnswerCn": "利用MODIS Terra表面反射率产品进行青藏高原的长期环境分析，可以在森林监测、水资源管理和气候变化评估等领域取得重要发现。该数据集提供了宝贵的长期信息，有助于增强理解并为这些关键领域的策略提供参考。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary objective of developing a dataset of long-term surface reflectance products for the Qinghai-Tibet Plateau using MODIS Terra data from 2000 to 2019?",
-                "QuestionCn": "开发一个基于2000年至2019年MODIS Terra数据的青藏高原长期表面反射率产品数据集的主要目标是什么？",
-                "AnswerEn": "The primary objective is to facilitate the extraction and analysis of long-term information in areas such as forest monitoring, water resource management, and climate change analysis, leveraging the significant application value of surface reflectance data in these fields.",
-                "AnswerCn": "主要目标是促进在森林监测、水资源管理和气候变化分析等领域提取和分析长期信息，利用地表反射率数据在这些领域的显著应用价值。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in collecting and processing MODIS Terra surface reflectance data for the Qinghai-Tibet Plateau from 2000 to 2019, and how are quality control measures integrated into this process?",
-                "QuestionCn": "收集和处理2000年至2019年青藏高原MODIS Terra表面反射率数据的程序步骤包括以下几个方面，并且在这个过程中如何集成质量控制措施：\n\n1. 数据获取：从NASA的MODIS数据中心下载MODIS Terra表面反射率产品（如MOD09A1或MOD09Q1），选择时间范围为2000年至2019年。\n\n2. 数据预处理：对下载的数据进行预处理，包括数据格式转换、投影变换和裁剪，以确保数据适用于青藏高原的研究区域。\n\n3. 数据质量评估：使用MODIS产品中的质量控制（QC）标志，筛选出高质量的像元，剔除云、阴影和水体等影响反射率的因素。\n\n4. 数据合成：根据需要，将不同时间尺度（如日、月、年）的数据进行合成，以生成长期的表面反射率时间序列。\n\n5. 数据分析：对处理后的数据进行分析，包括计算植被指数（如NDVI）、监测土地覆盖变化等。\n\n6. 结果验证：通过与地面观测数据或其他遥感数据进行对比，验证处理结果的准确性。\n\n7. 数据存储与共享：将处理后的数据和分析结果存储在数据库中，并根据需要共享给相关研究人员或机构。\n\n在整个过程中，质量控制措施通过使用MODIS产品的QC标志、数据筛选和验证步骤，确保最终数据的可靠性和准确性。",
-                "AnswerEn": "The MODIS Terra surface reflectance data for the Qinghai-Tibet Plateau from 2000 to 2019 is primarily sourced from the sixth edition of the MODIS Terra MOD09A1 product set. The data collection involves downloading the data through the USGS website. For processing, GDAL plugins are used to mosaic and reproject the data. Quality control is integrated through sur_refl_qc_500m and sur_refl_state_500m files, which store quality information using effective bit encoding.",
-                "AnswerCn": "MODIS Terra表面反射率数据来自2000年至2019年的青藏高原，主要来源于第六版MODIS Terra MOD09A1产品集。数据收集通过USGS网站下载。处理过程中使用GDAL插件对数据进行镶嵌和重投影。质量控制通过sur_refl_qc_500m和sur_refl_state_500m文件集成，这些文件使用有效位编码存储质量信息。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What technological tools or methods enable the processing and integration of MODIS Terra data for generating long-term surface reflectance products in the Qinghai-Tibet Plateau region?",
-                "QuestionCn": "哪些技术工具或方法能够处理和整合MODIS Terra数据，以生成青藏高原地区的长期表面反射率产品？",
-                "AnswerEn": "The processing and integration of MODIS Terra data for generating long-term surface reflectance products in the Qinghai-Tibet Plateau region are enabled by tools such as the GDAL plugin, which is used for data mosaicking and re-projection, and the data is sourced from the USGS website. The dataset includes various files that cover surface reflectance, observation angles, and quality control, stored using effective bit encoding to ensure data quality.",
-                "AnswerCn": "MODIS Terra数据的处理和集成用于生成青藏高原地区的长期表面反射率产品，借助GDAL插件等工具进行数据镶嵌和重投影，数据来源于USGS网站。该数据集包括覆盖表面反射率、观测角度和质量控制的各种文件，采用有效位编码存储，以确保数据质量。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "贡成娟",
+        "nameEn": "GONG Chengjuan",
+        "unitEn": "",
+        "unitCn": "中国科学院空天信息创新研究院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "MOD09A1",
+        "referenceCn": null,
+        "referenceEn": "Vermote, E. (2015). MOD09A1 MODIS/Terra Surface Reflectance 8-Day L3 Global 500m SIN Grid V006. NASA EOSDIS Land Processes DAAC. https://doi.org/10.5067/MODIS/MOD09A1.006"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "地表产品",
+        "nameEn": "Land surface product"
+      },
+      {
+        "nameCn": "沙漠/荒漠",
+        "nameEn": "Desert"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "青藏高原",
+        "keywordEn": "Qinghai Tibet Plateau"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2000-2019",
+        "keywordEn": "2000-2019",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the key features and data components involved in creating a comprehensive dataset for long-term surface reflectance analysis in the Qinghai-Tibet Plateau region?",
+        "QuestionCn": "在青藏高原地区创建长期地表反射率分析的综合数据集涉及哪些关键特征和数据组件？",
+        "AnswerEn": "surface reflectance files, observation angle files, quality control files, 13 files per temporal dataset, 7 surface reflectance files, 3 observation angle files, 2 quality control files, 1 time description file",
+        "AnswerCn": "地表反射率文件、观测角度文件、质量控制文件，每个时间数据集有13个文件，7个地表反射率文件，3个观测角度文件，2个质量控制文件，1个时间描述文件。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many files are included in each period of a dataset related to MODIS Terra surface reflectance products for the Tibetan Plateau from 2000-2019?",
+        "QuestionCn": "与2000-2019年西藏高原的MODIS Terra表面反射率产品相关的数据集中，每个时期包含多少个文件？",
+        "AnswerEn": "13 files",
+        "AnswerCn": "13个文件",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the meaning of '地表反射率产品' in the context of remote sensing data related to the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在与青藏高原相关的遥感数据中，“地表反射率产品”是什么意思？",
+        "AnswerEn": "'地表反射率产品' refers to surface reflectance products derived from remote sensing data, specifically from the MODIS Terra MOD09A1 product set for the Qinghai-Tibet Plateau. These products provide long-term sequences of surface reflectance data, which include files for surface reflectance, observation angles, quality control, and time documentation, used for applications in fields such as forestry, water resources, and climate change analysis.",
+        "AnswerCn": "'地表反射率产品'是指从遥感数据中提取的地表反射率产品，特别是来自MODIS Terra MOD09A1产品集的青藏高原数据。这些产品提供长期的地表反射率数据序列，包括地表反射率、观测角度、质量控制和时间文档的文件，广泛应用于林业、水资源和气候变化分析等领域。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What potential challenges might researchers face when using long-term surface reflectance data for analyzing climate change trends on the Qinghai-Tibet Plateau?",
+        "QuestionCn": "研究人员在使用长期表面反射率数据分析青藏高原气候变化趋势时可能面临哪些潜在挑战？",
+        "AnswerEn": "Researchers might face challenges related to the data quality as indicated by the sur_refl_qc_500m and sur_refl_state_500m quality control files, which use bit encoding to store quality information. Additionally, the methods used for data collection, such as the use of GDAL plugins for mosaicking and reprojection, could introduce errors or inconsistencies, especially across a long time series like 2000-2019. Ensuring consistency and accuracy in the data processing steps is crucial for reliable analysis of climate change trends.",
+        "AnswerCn": "研究人员可能面临与数据质量相关的挑战，如 sur_refl_qc_500m 和 sur_refl_state_500m 质量控制文件所示，这些文件使用位编码来存储质量信息。此外，数据收集的方法，例如使用 GDAL 插件进行拼接和重投影，可能会引入错误或不一致，特别是在像 2000-2019 这样长时间序列中。确保数据处理步骤的一致性和准确性对于可靠分析气候变化趋势至关重要。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the potential outcomes of utilizing MODIS Terra surface reflectance products from 2000-2019 in the Qinghai-Tibet Plateau for long-term environmental analysis?",
+        "QuestionCn": "利用2000-2019年MODIS Terra表面反射率产品在青藏高原进行长期环境分析的潜在结果是什么？",
+        "AnswerEn": "Utilizing a MODIS Terra surface reflectance product for long-term environmental analysis on the Qinghai-Tibet Plateau can result in significant findings in areas such as forest monitoring, water resource management, and climate change assessment. This dataset offers valuable long-term information that can enhance understanding and inform strategies in these critical fields.",
+        "AnswerCn": "利用MODIS Terra表面反射率产品进行青藏高原的长期环境分析，可以在森林监测、水资源管理和气候变化评估等领域取得重要发现。该数据集提供了宝贵的长期信息，有助于增强理解并为这些关键领域的策略提供参考。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary objective of developing a dataset of long-term surface reflectance products for the Qinghai-Tibet Plateau using MODIS Terra data from 2000 to 2019?",
+        "QuestionCn": "开发一个基于2000年至2019年MODIS Terra数据的青藏高原长期表面反射率产品数据集的主要目标是什么？",
+        "AnswerEn": "The primary objective is to facilitate the extraction and analysis of long-term information in areas such as forest monitoring, water resource management, and climate change analysis, leveraging the significant application value of surface reflectance data in these fields.",
+        "AnswerCn": "主要目标是促进在森林监测、水资源管理和气候变化分析等领域提取和分析长期信息，利用地表反射率数据在这些领域的显著应用价值。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in collecting and processing MODIS Terra surface reflectance data for the Qinghai-Tibet Plateau from 2000 to 2019, and how are quality control measures integrated into this process?",
+        "QuestionCn": "收集和处理2000年至2019年青藏高原MODIS Terra地表反射率数据的程序步骤是什么，以及如何在此过程中整合质量控制措施？",
+        "AnswerEn": "The MODIS Terra surface reflectance data for the Qinghai-Tibet Plateau from 2000 to 2019 is primarily sourced from the sixth edition of the MODIS Terra MOD09A1 product set. The data collection involves downloading the data through the USGS website. For processing, GDAL plugins are used to mosaic and reproject the data. Quality control is integrated through sur_refl_qc_500m and sur_refl_state_500m files, which store quality information using effective bit encoding.",
+        "AnswerCn": "MODIS Terra表面反射率数据来自2000年至2019年的青藏高原，主要来源于第六版MODIS Terra MOD09A1产品集。数据收集通过USGS网站下载。处理过程中使用GDAL插件对数据进行镶嵌和重投影。质量控制通过sur_refl_qc_500m和sur_refl_state_500m文件集成，这些文件使用有效位编码存储质量信息。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What technological tools or methods enable the processing and integration of MODIS Terra data for generating long-term surface reflectance products in the Qinghai-Tibet Plateau region?",
+        "QuestionCn": "哪些技术工具或方法能够处理和整合MODIS Terra数据，以生成青藏高原地区的长期表面反射率产品？",
+        "AnswerEn": "The processing and integration of MODIS Terra data for generating long-term surface reflectance products in the Qinghai-Tibet Plateau region are enabled by tools such as the GDAL plugin, which is used for data mosaicking and re-projection, and the data is sourced from the USGS website. The dataset includes various files that cover surface reflectance, observation angles, and quality control, stored using effective bit encoding to ensure data quality.",
+        "AnswerCn": "MODIS Terra数据的处理和集成用于生成青藏高原地区的长期表面反射率产品，借助GDAL插件等工具进行数据镶嵌和重投影，数据来源于USGS网站。该数据集包括覆盖表面反射率、观测角度和质量控制的各种文件，采用有效位编码存储，以确保数据质量。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

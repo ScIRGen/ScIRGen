@@ -1,210 +1,210 @@
 {
-    "id": "18c24715-5ac0-47bc-a058-c6552fa6541b",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Highly accurate global surface soil moisture products retrieved by bright temperature (2015-2020)",
-            "titleCn": "基于亮温反演的高精度全球表层土壤水分产品（2015-2020）",
-            "description": "The dataset is a global surface soil moisture product with a spatial and temporal resolution of 0.25°×0.25°/day, independently developed by Hai-Shen Lǚ's team at Hohai University. The raw data sources are SMOS bright temperature product and SMAP level 4 soil moisture product. The SMOS bright temperature records from 2015-2020 were firstly reconstructed with missing data using the DEINOF method, and then LSTM models were constructed to capture the relationship between bright temperature and SMAP IV products under different bioclimatic partitions (GEnS), and then these network models were driven according to the SMOS bright temperature products under different partitions from 2010-2015 to obtain the SMOS bright temperature products based on the LSTM surface soil moisture products, followed by least squares fusion of SMAP level IV products with ASCAT active microwave soil moisture products for 2015-2020, and finally the final study-level surface soil moisture dataset.",
-            "descriptionCn": "该数据集为河海大学吕海深团队自主研发的时空分辨率为0.25°×0.25°/日的全球表层土壤水分产品。原始数据来源为SMOS亮温产品及SMAP四级土壤水分产品。首先对2015-2020年的SMOS亮温记录采用DEINOF方法进行缺失数据重建，然后搭建LSTM模型在不同生物气候学分区（GEnS）下捕获亮温与SMAP四级产品的关系，再将这些网络模型按照不同分区下2010-2015的SMOS亮温产品进行驱动，获得基于LSTM的表层土壤水分产品，随后对2015-2020年的SMAP四级产品与ASCAT主动微波土壤水分产品进行最小二乘融合，最后得到最终的研究级表层土壤水分数据集。",
-            "instructions": "File naming: The soil moisture data are stored in NetCDF4 format, and the file name is \"Global_HHU_LSTM-SSM_CLF31A-source_yyyy-mm-dd\", where \"Global_HHU_LSTM-SSM\" represents the file prefix, \"CLF31A-source\" represents the bright temperature source taken, and yyyy/mm/dd represents the corresponding year/month/day, respectively. -SSM\" represents the file prefix, \"CLF31A-source\" represents the bright temperature source taken, and yyyyy/mm/dd represents the corresponding year/month/day respectively.\nData reading mode: The files in the dataset can be read directly using the current mainstream programming software, such as Python, MATLAB, or Panoply for visualization.",
-            "instructionsCn": "文件命名：土壤水分数据以NetCDF4格式存储，文件名称为“Global_HHU_LSTM-SSM_CLF31A-source_yyyy-mm-dd”，其中“Global_HHU_LSTM-SSM”代表文件前缀，“CLF31A-source”代表所采取的亮温源，yyyy/mm/dd分别代表相应的年/月/日。\n数据读取方式：数据集中的文件可以使用目前主流的编程软件直接读取，例如Python、MATLAB，或使用Panoply进行可视化读取。",
-            "east": 179.875,
-            "west": -179.875,
-            "south": -89.875,
-            "north": 89.875,
-            "startTime": "2015-03-31 00:00:00",
-            "endTime": "2020-08-28 00:00:00",
-            "fileSize": 8533246410.0,
-            "cstr": "18406.11.Terre.tpdc.300611",
-            "doi": "10.11888/Terre.tpdc.300611",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "王筱译",
-                "nameEn": "WANG Xiaoyi",
-                "unitEn": "",
-                "unitCn": "河海大学"
-            },
-            {
-                "nameCn": "熊雨阳",
-                "nameEn": "XIONG Yuyang",
-                "unitEn": "",
-                "unitCn": "河海大学"
-            },
-            {
-                "nameCn": "吕海深",
-                "nameEn": "LV Haishen",
-                "unitEn": "",
-                "unitCn": "河海大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A reduced latency regional gap-filling method for SMAP using random forest regression",
-                "referenceCn": null,
-                "referenceEn": "Wang, X., Lü, H., Crow, W. T., Corzo, G., Zhu, Y., Su, J., & Gou, Q., et al. (2023). A reduced latency regional gap-filling method for SMAP using random forest regression. Iscience, 26(1)."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "土壤湿度",
-                "nameEn": "soil moisture"
-            },
-            {
-                "nameCn": "水文",
-                "nameEn": "Hydrology"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2015-2020",
-                "keywordEn": "2015-2020",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "国家重点研发计划",
-                "titleEn": "National Key Research and Development Program of China"
-            },
-            {
-                "titleCn": "全球能量循环和水循环关键参数的立体观测与遥感反演",
-                "titleEn": "National Key Research and Development Program of China"
-            },
-            {
-                "titleCn": "全球能量循环和水循环关键参数的立体观测与遥感反演",
-                "titleEn": "National Key Research and Development Program of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
-                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
-            }
-        ]
+  "id": "18c24715-5ac0-47bc-a058-c6552fa6541b",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Highly accurate global surface soil moisture products retrieved by bright temperature (2015-2020)",
+      "titleCn": "基于亮温反演的高精度全球表层土壤水分产品（2015-2020）",
+      "description": "The dataset is a global surface soil moisture product with a spatial and temporal resolution of 0.25°×0.25°/day, independently developed by Hai-Shen Lǚ's team at Hohai University. The raw data sources are SMOS bright temperature product and SMAP level 4 soil moisture product. The SMOS bright temperature records from 2015-2020 were firstly reconstructed with missing data using the DEINOF method, and then LSTM models were constructed to capture the relationship between bright temperature and SMAP IV products under different bioclimatic partitions (GEnS), and then these network models were driven according to the SMOS bright temperature products under different partitions from 2010-2015 to obtain the SMOS bright temperature products based on the LSTM surface soil moisture products, followed by least squares fusion of SMAP level IV products with ASCAT active microwave soil moisture products for 2015-2020, and finally the final study-level surface soil moisture dataset.",
+      "descriptionCn": "该数据集为河海大学吕海深团队自主研发的时空分辨率为0.25°×0.25°/日的全球表层土壤水分产品。原始数据来源为SMOS亮温产品及SMAP四级土壤水分产品。首先对2015-2020年的SMOS亮温记录采用DEINOF方法进行缺失数据重建，然后搭建LSTM模型在不同生物气候学分区（GEnS）下捕获亮温与SMAP四级产品的关系，再将这些网络模型按照不同分区下2010-2015的SMOS亮温产品进行驱动，获得基于LSTM的表层土壤水分产品，随后对2015-2020年的SMAP四级产品与ASCAT主动微波土壤水分产品进行最小二乘融合，最后得到最终的研究级表层土壤水分数据集。",
+      "instructions": "File naming: The soil moisture data are stored in NetCDF4 format, and the file name is \"Global_HHU_LSTM-SSM_CLF31A-source_yyyy-mm-dd\", where \"Global_HHU_LSTM-SSM\" represents the file prefix, \"CLF31A-source\" represents the bright temperature source taken, and yyyy/mm/dd represents the corresponding year/month/day, respectively. -SSM\" represents the file prefix, \"CLF31A-source\" represents the bright temperature source taken, and yyyyy/mm/dd represents the corresponding year/month/day respectively.\nData reading mode: The files in the dataset can be read directly using the current mainstream programming software, such as Python, MATLAB, or Panoply for visualization.",
+      "instructionsCn": "文件命名：土壤水分数据以NetCDF4格式存储，文件名称为“Global_HHU_LSTM-SSM_CLF31A-source_yyyy-mm-dd”，其中“Global_HHU_LSTM-SSM”代表文件前缀，“CLF31A-source”代表所采取的亮温源，yyyy/mm/dd分别代表相应的年/月/日。\n数据读取方式：数据集中的文件可以使用目前主流的编程软件直接读取，例如Python、MATLAB，或使用Panoply进行可视化读取。",
+      "east": 179.875,
+      "west": -179.875,
+      "south": -89.875,
+      "north": 89.875,
+      "startTime": "2015-03-31 00:00:00",
+      "endTime": "2020-08-28 00:00:00",
+      "fileSize": 8533246410.0,
+      "cstr": "18406.11.Terre.tpdc.300611",
+      "doi": "10.11888/Terre.tpdc.300611",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method for generating high-precision global surface soil moisture products using satellite-based brightness temperature inversion?",
-                "QuestionCn": "您能否提供一个数据收集方法的示例，用于通过卫星基于亮温反演生成高精度全球表层土壤湿度产品？",
-                "AnswerEn": "A data collection method for generating high-precision global surface soil moisture products involves using SMOS brightness temperature products and SMAP level-four soil moisture data. The process includes reconstructing missing SMOS brightness temperature records using the DEINOF method, building LSTM models to capture relationships between brightness temperatures and SMAP products across different bioclimatic zones (GEnS), and driving these models with SMOS brightness temperature data from 2010-2015. The resulting LSTM-based surface soil moisture products are then fused with 2015-2020 SMAP level-four products and ASCAT active microwave soil moisture data using least squares, leading to the final research-grade surface soil moisture dataset.",
-                "AnswerCn": "一种生成高精度全球表层土壤湿度产品的数据收集方法涉及使用SMOS亮温产品和SMAP四级土壤湿度数据。该过程包括使用DEINOF方法重建缺失的SMOS亮温记录，构建LSTM模型以捕捉不同生物气候区（GEnS）之间亮温和SMAP产品的关系，并利用2010-2015年的SMOS亮温数据驱动这些模型。最终，基于LSTM的表层土壤湿度产品与2015-2020年的SMAP四级产品和ASCAT主动微波土壤湿度数据通过最小二乘法融合，形成最终的研究级表层土壤湿度数据集。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the characteristics of a dataset that uses LSTM models to infer relationships between brightness temperature and soil moisture products in different bioclimatic zones?",
-                "QuestionCn": "使用LSTM模型推断不同生物气候区之间亮温和土壤湿度产品关系的数据集的特征是什么？",
-                "AnswerEn": "temporal and spatial resolution of 0.25°×0.25°/day, DEINOF data reconstruction methods, integration of multiple data sources, least squares fusion techniques",
-                "AnswerCn": "时间和空间分辨率为0.25°×0.25°/天，DEINOF数据重建方法，集成多种数据源，最小二乘融合技术。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the temporal resolution of a dataset developed for global surface soil moisture products based on LSTM models and SMOS brightness temperature records?",
-                "QuestionCn": "基于LSTM模型和SMOS亮温记录开发的全球表层土壤湿度产品的数据集的时间分辨率是多少？",
-                "AnswerEn": "1 day",
-                "AnswerCn": "1天",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the data reconstruction methods using the DEINOF approach compare to other data reconstruction techniques in terms of accuracy and reliability when processing brightness temperature records for soil moisture estimation?",
-                "QuestionCn": "DEINOF方法的数据重建技术在处理亮温记录以估算土壤湿度时，与其他数据重建技术相比，在准确性和可靠性方面如何？",
-                "AnswerEn": "The DEINOF method is used to reconstruct missing brightness temperature data from SMOS records, which is a critical step in developing a high-resolution global surface soil moisture product. This approach allows for the handling of data gaps effectively before applying LSTM models, ensuring a more continuous and reliable dataset. In comparison to other data reconstruction techniques, DEINOF is specifically tailored for datasets with spatio-temporal properties, which might offer advantages in maintaining data integrity and reducing potential biases in soil moisture estimation.",
-                "AnswerCn": "DEINOF方法用于重建SMOS记录中缺失的亮温数据，这是开发高分辨率全球表层土壤湿度产品的关键步骤。这种方法有效地处理数据缺口，在应用LSTM模型之前，确保数据集更加连续和可靠。与其他数据重建技术相比，DEINOF特别针对具有时空特性的数据显示，可能在保持数据完整性和减少土壤湿度估计中的潜在偏差方面具有优势。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors lead to the development of high-precision global surface soil moisture products based on brightness temperature inversion?",
-                "QuestionCn": "导致基于亮温反演的高精度全球表层土壤湿度产品发展的因素有哪些？",
-                "AnswerEn": "The development of high-precision global surface soil moisture products is driven by the need to enhance spatial and temporal resolution data derived from original sources like SMOS brightness temperature products and SMAP Level 4 soil moisture products. Utilizing methods such as DEINOF for reconstructing missing data and LSTM models for capturing relationships between brightness temperature and soil moisture across different bioclimatic zones, researchers aim to improve accuracy and reliability in soil moisture datasets. Additionally, integrating various data sources like SMAP and ASCAT through least squares fusion contributes to refining the final dataset.",
-                "AnswerCn": "高精度全球表层土壤湿度产品的开发是为了提高来自原始来源（如SMOS亮温产品和SMAP Level 4土壤湿度产品）的空间和时间分辨率数据。研究人员利用DEINOF方法重建缺失数据，并使用LSTM模型捕捉不同生物气候区之间亮温和土壤湿度的关系，旨在提高土壤湿度数据集的准确性和可靠性。此外，通过最小二乘融合整合SMAP和ASCAT等多种数据源，有助于精炼最终数据集。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What are the objectives behind developing a high-precision global surface soil moisture product using brightness temperature inversion techniques?",
-                "QuestionCn": "开发高精度全球表层土壤湿度产品的目标是什么，使用亮温反演技术。",
-                "AnswerEn": "The objective is to create a global surface soil moisture product with high temporal and spatial resolution by leveraging the SMOS brightness temperature data and SMAP level 4 soil moisture products. This involves reconstructing missing data, capturing the relationship between brightness temperature and soil moisture using LSTM models across different bioclimatic zones, and ultimately achieving a refined dataset through the fusion of SMAP and ASCAT microwave soil moisture products.",
-                "AnswerCn": "目标是通过利用SMOS亮温数据和SMAP第4级土壤湿度产品，创建一个具有高时间和空间分辨率的全球表层土壤湿度产品。这涉及重建缺失数据，利用LSTM模型捕捉亮温与土壤湿度之间的关系，涵盖不同的生物气候区，最终通过融合SMAP和ASCAT微波土壤湿度产品实现精细化数据集。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural steps are involved in creating a high-precision global surface soil moisture product using brightness temperature inversion and LSTM models?",
-                "QuestionCn": "创建高精度全球表层土壤湿度产品的程序步骤包括使用亮温反演和LSTM模型。",
-                "AnswerEn": "The process involves reconstructing missing data in the SMOS brightness temperature records from 2015-2020 using the DEINOF method. Next, an LSTM model is developed to capture the relationship between brightness temperature and the SMAP Level 4 soil moisture product across different bioclimatic zones (GEnS). These models are then used to drive the SMOS brightness temperature product from 2010-2015. The results are combined with the SMAP Level 4 and ASCAT active microwave soil moisture products using a least squares fusion method to produce the final research-grade surface soil moisture dataset.",
-                "AnswerCn": "该过程涉及使用DEINOF方法重建2015-2020年SMOS亮温记录中的缺失数据。接下来，开发一个LSTM模型，以捕捉亮温与SMAP Level 4土壤湿度产品在不同生物气候区（GEnS）之间的关系。然后，这些模型用于驱动2010-2015年的SMOS亮温产品。最后，使用最小二乘融合方法将结果与SMAP Level 4和ASCAT主动微波土壤湿度产品结合，生成最终的研究级表层土壤湿度数据集。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "王筱译",
+        "nameEn": "WANG Xiaoyi",
+        "unitEn": "",
+        "unitCn": "河海大学"
+      },
+      {
+        "nameCn": "熊雨阳",
+        "nameEn": "XIONG Yuyang",
+        "unitEn": "",
+        "unitCn": "河海大学"
+      },
+      {
+        "nameCn": "吕海深",
+        "nameEn": "LV Haishen",
+        "unitEn": "",
+        "unitCn": "河海大学"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A reduced latency regional gap-filling method for SMAP using random forest regression",
+        "referenceCn": null,
+        "referenceEn": "Wang, X., Lü, H., Crow, W. T., Corzo, G., Zhu, Y., Su, J., & Gou, Q., et al. (2023). A reduced latency regional gap-filling method for SMAP using random forest regression. Iscience, 26(1)."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "土壤湿度",
+        "nameEn": "soil moisture"
+      },
+      {
+        "nameCn": "水文",
+        "nameEn": "Hydrology"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2015-2020",
+        "keywordEn": "2015-2020",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "国家重点研发计划",
+        "titleEn": "National Key Research and Development Program of China"
+      },
+      {
+        "titleCn": "全球能量循环和水循环关键参数的立体观测与遥感反演",
+        "titleEn": "National Key Research and Development Program of China"
+      },
+      {
+        "titleCn": "全球能量循环和水循环关键参数的立体观测与遥感反演",
+        "titleEn": "National Key Research and Development Program of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+        "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method for generating high-precision global surface soil moisture products using satellite-based brightness temperature inversion?",
+        "QuestionCn": "您能否提供一个数据收集方法的示例，用于通过卫星基于亮温反演生成高精度全球表层土壤湿度产品？",
+        "AnswerEn": "A data collection method for generating high-precision global surface soil moisture products involves using SMOS brightness temperature products and SMAP level-four soil moisture data. The process includes reconstructing missing SMOS brightness temperature records using the DEINOF method, building LSTM models to capture relationships between brightness temperatures and SMAP products across different bioclimatic zones (GEnS), and driving these models with SMOS brightness temperature data from 2010-2015. The resulting LSTM-based surface soil moisture products are then fused with 2015-2020 SMAP level-four products and ASCAT active microwave soil moisture data using least squares, leading to the final research-grade surface soil moisture dataset.",
+        "AnswerCn": "一种生成高精度全球表层土壤湿度产品的数据收集方法涉及使用SMOS亮温产品和SMAP四级土壤湿度数据。该过程包括使用DEINOF方法重建缺失的SMOS亮温记录，构建LSTM模型以捕捉不同生物气候区（GEnS）之间亮温和SMAP产品的关系，并利用2010-2015年的SMOS亮温数据驱动这些模型。最终，基于LSTM的表层土壤湿度产品与2015-2020年的SMAP四级产品和ASCAT主动微波土壤湿度数据通过最小二乘法融合，形成最终的研究级表层土壤湿度数据集。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the characteristics of a dataset that uses LSTM models to infer relationships between brightness temperature and soil moisture products in different bioclimatic zones?",
+        "QuestionCn": "使用LSTM模型推断不同生物气候区之间亮温和土壤湿度产品关系的数据集的特征是什么？",
+        "AnswerEn": "temporal and spatial resolution of 0.25°×0.25°/day, DEINOF data reconstruction methods, integration of multiple data sources, least squares fusion techniques",
+        "AnswerCn": "时间和空间分辨率为0.25°×0.25°/天，DEINOF数据重建方法，集成多种数据源，最小二乘融合技术。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the temporal resolution of a dataset developed for global surface soil moisture products based on LSTM models and SMOS brightness temperature records?",
+        "QuestionCn": "基于LSTM模型和SMOS亮温记录开发的全球表层土壤湿度产品的数据集的时间分辨率是多少？",
+        "AnswerEn": "1 day",
+        "AnswerCn": "1天",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the data reconstruction methods using the DEINOF approach compare to other data reconstruction techniques in terms of accuracy and reliability when processing brightness temperature records for soil moisture estimation?",
+        "QuestionCn": "DEINOF方法的数据重建技术在处理亮温记录以估算土壤湿度时，与其他数据重建技术相比，在准确性和可靠性方面如何？",
+        "AnswerEn": "The DEINOF method is used to reconstruct missing brightness temperature data from SMOS records, which is a critical step in developing a high-resolution global surface soil moisture product. This approach allows for the handling of data gaps effectively before applying LSTM models, ensuring a more continuous and reliable dataset. In comparison to other data reconstruction techniques, DEINOF is specifically tailored for datasets with spatio-temporal properties, which might offer advantages in maintaining data integrity and reducing potential biases in soil moisture estimation.",
+        "AnswerCn": "DEINOF方法用于重建SMOS记录中缺失的亮温数据，这是开发高分辨率全球表层土壤湿度产品的关键步骤。这种方法有效地处理数据缺口，在应用LSTM模型之前，确保数据集更加连续和可靠。与其他数据重建技术相比，DEINOF特别针对具有时空特性的数据显示，可能在保持数据完整性和减少土壤湿度估计中的潜在偏差方面具有优势。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors lead to the development of high-precision global surface soil moisture products based on brightness temperature inversion?",
+        "QuestionCn": "导致基于亮温反演的高精度全球表层土壤湿度产品发展的因素有哪些？",
+        "AnswerEn": "The development of high-precision global surface soil moisture products is driven by the need to enhance spatial and temporal resolution data derived from original sources like SMOS brightness temperature products and SMAP Level 4 soil moisture products. Utilizing methods such as DEINOF for reconstructing missing data and LSTM models for capturing relationships between brightness temperature and soil moisture across different bioclimatic zones, researchers aim to improve accuracy and reliability in soil moisture datasets. Additionally, integrating various data sources like SMAP and ASCAT through least squares fusion contributes to refining the final dataset.",
+        "AnswerCn": "高精度全球表层土壤湿度产品的开发是为了提高来自原始来源（如SMOS亮温产品和SMAP Level 4土壤湿度产品）的空间和时间分辨率数据。研究人员利用DEINOF方法重建缺失数据，并使用LSTM模型捕捉不同生物气候区之间亮温和土壤湿度的关系，旨在提高土壤湿度数据集的准确性和可靠性。此外，通过最小二乘融合整合SMAP和ASCAT等多种数据源，有助于精炼最终数据集。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What are the objectives behind developing a high-precision global surface soil moisture product using brightness temperature inversion techniques?",
+        "QuestionCn": "开发使用亮温反演技术的高精度全球地表土壤湿度产品的目标是什么？",
+        "AnswerEn": "The objective is to create a global surface soil moisture product with high temporal and spatial resolution by leveraging the SMOS brightness temperature data and SMAP level 4 soil moisture products. This involves reconstructing missing data, capturing the relationship between brightness temperature and soil moisture using LSTM models across different bioclimatic zones, and ultimately achieving a refined dataset through the fusion of SMAP and ASCAT microwave soil moisture products.",
+        "AnswerCn": "目标是通过利用SMOS亮温数据和SMAP第4级土壤湿度产品，创建一个具有高时间和空间分辨率的全球表层土壤湿度产品。这涉及重建缺失数据，利用LSTM模型捕捉亮温与土壤湿度之间的关系，涵盖不同的生物气候区，最终通过融合SMAP和ASCAT微波土壤湿度产品实现精细化数据集。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural steps are involved in creating a high-precision global surface soil moisture product using brightness temperature inversion and LSTM models?",
+        "QuestionCn": "使用亮温反演和LSTM模型创建高精度全球表层土壤湿度产品涉及哪些程序步骤？",
+        "AnswerEn": "The process involves reconstructing missing data in the SMOS brightness temperature records from 2015-2020 using the DEINOF method. Next, an LSTM model is developed to capture the relationship between brightness temperature and the SMAP Level 4 soil moisture product across different bioclimatic zones (GEnS). These models are then used to drive the SMOS brightness temperature product from 2010-2015. The results are combined with the SMAP Level 4 and ASCAT active microwave soil moisture products using a least squares fusion method to produce the final research-grade surface soil moisture dataset.",
+        "AnswerCn": "该过程涉及使用DEINOF方法重建2015-2020年SMOS亮温记录中的缺失数据。接下来，开发一个LSTM模型，以捕捉亮温与SMAP Level 4土壤湿度产品在不同生物气候区（GEnS）之间的关系。然后，这些模型用于驱动2010-2015年的SMOS亮温产品。最后，使用最小二乘融合方法将结果与SMAP Level 4和ASCAT主动微波土壤湿度产品结合，生成最终的研究级表层土壤湿度数据集。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

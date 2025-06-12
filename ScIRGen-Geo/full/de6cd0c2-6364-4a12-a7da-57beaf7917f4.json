@@ -1,570 +1,570 @@
 {
-    "id": "de6cd0c2-6364-4a12-a7da-57beaf7917f4",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "Greenland ice sheet surface melting 0.05 ˚ Daily data sets (1985, 2000, 2015)",
-            "titleCn": "格陵兰冰盖表面融化0.05˚每日数据集（1985、2000、2015）",
-            "description": "Surface melting is the primary reason that affects the mass balance of Greenland ice sheet. At the same time, ice and snow have high albedo, and  ice sheet surface melting will cause the difference of radiation energy budget, and then affects the energy exchange between sea-land-air. The high-resolution ice sheet surface melting product provides important information support for the study of Greenland ice sheet surface melting and its response to global climate change. This dataset combined microwave radiometer product and optical albedo product, the daily, winter (June-August) averages and July averages of the former are used for layer-stacking, then Gram-Schmidt Spectral Sharpening was adapted to fuse the layer-stacking results with MODIS GLASS albedo product. The spatial resolution of fusion-results has been downscaled from 25 km to 0.05˚. By employing a threshold-based melt detection approach for each fusion-results pixel, Greenland ice sheet surface melt daily product for 1985, 2000, 2015 (DSSMIS) was generated. The spatial resolution of DSSMIS is higher than that of published data sets at home and abroad. Combined with the advantages of radiometer and albedo data, the spatial details characteristics are enhanced and consistent with the extraction range of the original radiometer products, effectively reducing the noise of the radiometer. DSSMIS’s data type is integer, where 1 is melted, 0 is not melted, 255 is masked area besides Greenland ice sheet, and the data set is stored as *.nc.",
-            "descriptionCn": "冰盖表面融化是影响格陵兰冰盖物质平衡的主要原因，同时冰雪的反射率较高，冰盖表面融化会造成辐射能量收支差异，进而影响海-陆-气之间能量交换。高分辨率冰盖表面融化产品的生成，对研究格陵兰冰盖表面融化及其对全球气候变化的响应提供重要信息支撑。本数据集基于微波辐射计与光学反照率产品，对微波辐射计当日、冬季（12-次年2月）平均和1月平均进行波段合成，利用Gram-Schmidt方法将微波辐射计波段合成数据与MODIS GLASS反照率产品融合，使其空间分辨率从25 km提高至0.05˚。然后基于微波辐射计当日与冬季亮温差值的阈值法对降尺度结果提取格陵兰冰盖表面融化，得到1985年、2000年、2015年格陵兰冰盖表面0.05˚ 每日融化产品。该数据集0.05˚ 的空间分辨率高于目前国内外已发布数据集，凸显了辐射计和反照率数据对表面融化的响应，空间细节特征更加清晰，保持了原辐射计产品的动态范围，有效地抑制了辐射计噪声。该数据集的数据类型为整型，其中1代表融化，0代表未融化，255代表冰盖以外掩膜区域，数据集以“*.nc”格式存储。",
-            "instructions": "File name: the surface melting data is stored in NC format. The file name is \"antarcticcdailysurfacemeltyyyy-yyyy. NC\", where yyyy-yyyy represents the year. For example, ‘antarcticcdailysurfacemelt1985-1986.nc’ represents the NC file, which describes the surface melting range of the Antarctic ice sheet from July 1, 1985 to June 30, 1986. The NC file contains four variables: melt and polar_ Stereographic, x and y, respectively represent the melting pixel value, coordinate system information, X coordinate and Y coordinate in the projection coordinate system.\n\nData reading method: all NC files in the dataset can be directly read by panoply program （https://www.giss.nasa.gov/tools/panoply/download/ ）, select the variable melt , create the XY coordinate axis corresponding to the variable x and variable y for browsing, and change the time to browse the melting range of different dates. If you want to save it as a separate picture for display or analysis, you can use the \"multidimensional tool - create NetCDF grid layer\" tool in ArcGIS program to process the results and generate a file in TIF format, including the melting range of all days in the corresponding year. You can change the display time by opening \"enable time in this layer\" in the \"attribute - time\" tab. In addition, you can also select GDAL, NCO, CDO and other tools to open NC files or convert them to other formats.",
-            "instructionsCn": "文件命名：表面融化数据以nc格式存储，文件的名称为“GreenlandDailySurfaceMeltyyyy.nc”，其中yyyy代表年份，比如GreenlandDailySurfaceMelt1985.nc就代表该nc文件描述了1985年1月1日至1985年12月31日格陵兰冰盖表面融化范围。nc文件包含4个变量：melt, polar_stereographic, x, y，分别代表融化像元值、坐标系信息、投影坐标系中x坐标和y坐标。\n\n数据读取方式：该数据集中的所有nc文件可以直接用Panoply程序（https://www.giss.nasa.gov/tools/panoply/download/）打开，选择melt变量，创建x变量和y变量对应的xy坐标轴进行浏览，可以改变Time选择浏览不同日期的融化范围。如果要保存为单独图片形式显示或进行分析，可用ArcGIS程序中“多维工具-创建NetCDF栅格图层”工具，处理结果生成tif格式的文件，包含对应年份所有天数的融化范围，可通过在属性-时间选项卡中打开“在此图层中启用时间”，改变显示时间。除此之外，也可选择GDAL、NCO、CDO等多种工具打开nc文件或转换为其他格式。",
-            "east": 7.0503,
-            "west": -90.8971,
-            "south": 58.8075,
-            "north": 83.8635,
-            "startTime": null,
-            "endTime": null,
-            "fileSize": 7777554.0,
-            "cstr": "18406.11.Cryos.tpdc.271849",
-            "doi": "10.11888/Cryos.tpdc.271849",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "魏思怡",
-                "nameEn": "WEI Siyi",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "刘岩",
-                "nameEn": "LIU Yan",
-                "unitEn": "",
-                "unitCn": "北京师范大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Melt season duration and ice layer formation on the Greenland ice sheet, 2000–2004",
-                "referenceCn": null,
-                "referenceEn": "Wang, L., Sharp, M., Rivard, B., & Steffen, K. (2007). Melt season duration and ice layer formation on the greenland ice sheet, 2000–2004. Journal of Geophysical Research Atmospheres, 112(F4), -."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Comparison of methods for melt detection over Greenland using active and passive microwave measurements",
-                "referenceCn": null,
-                "referenceEn": "Ashcraft, I.S., & Long, D.G. (2006). Comparison of methods for melt detection over greenland using active and passive microwave measurements. International Journal of Remote Sensing, 27(12/14), 2469-2488."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Passive lIlicrowave-derived spatial and telllporal variati ons of sUlIllller lIlelt on the Greenland ice sheet",
-                "referenceCn": null,
-                "referenceEn": "Mote, T.L., Anderson, M.R., Kuivinen, K.C., & Rowe, C.M. Passive lIlicrowave-derived spatial and telllporal variati ons of sUlIllller lIlelt on the Greenland ice sheet."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Greenland surface melt trends 1973–2007: evidence of a large increase in 2007",
-                "referenceCn": null,
-                "referenceEn": "Mote, T.L. (2007). Greenland surface melt trends 1973–2007: evidence of a large increase in 2007. Geophysical Research Letters, 34(22), L22507."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Quantifying Surface Melt and Liquid Water on the Greenland Ice Sheet using L-band Radiometry",
-                "referenceCn": null,
-                "referenceEn": "D Houtz, Mtzler, C., Naderpour, R., Schwank, M., & Steffen, K. (2021). Quantifying surface melt and liquid water on the greenland ice sheet using l-band radiometry. Remote Sensing of Environment, 256, 112341."
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Satellite Remote Sensing of the Greenland Ice Sheet Ablation Zone: A Review",
-                "referenceCn": null,
-                "referenceEn": "Cooper, M.G., & Smith, L.C. (2019). Satellite Remote Sensing of the Greenland Ice Sheet Ablation Zone: A Review."
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            },
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "光学遥感",
-                "nameEn": "Optical remote sensing"
-            },
-            {
-                "nameCn": "冰冻圈遥感",
-                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
-            },
-            {
-                "nameCn": "冰冻圈遥感产品",
-                "nameEn": "Cryosphere remote sensing products"
-            },
-            {
-                "nameCn": "微波辐射计",
-                "nameEn": "Microwave radiometer"
-            },
-            {
-                "nameCn": "表面冻融",
-                "nameEn": "Surface Freeze-thaw Cycle/State"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "降尺度",
-                "nameEn": "Downscaling"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "格陵兰",
-                "keywordEn": "Greenland"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1985",
-                "keywordEn": "1985",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2000",
-                "keywordEn": "2000",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "2015",
-                "keywordEn": "2015",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": null,
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            },
-            {
-                "titleCn": "时空三极环境大数据平台",
-                "titleEn": "A Big Earth Data Platform for Three Poles"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山地区冰川边界（2018）",
-                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
-            },
-            {
-                "titleCn": "祁连山重点区域人类活动数据集 (2018)",
-                "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
-            },
-            {
-                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
-                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
-            },
-            {
-                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
-                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
-            },
-            {
-                "titleCn": "北半球湖冰物候数据集（1978-2018）",
-                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
-            },
-            {
-                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
-                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
-            },
-            {
-                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
-                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
-            }
-        ]
+  "id": "de6cd0c2-6364-4a12-a7da-57beaf7917f4",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "Greenland ice sheet surface melting 0.05 ˚ Daily data sets (1985, 2000, 2015)",
+      "titleCn": "格陵兰冰盖表面融化0.05˚每日数据集（1985、2000、2015）",
+      "description": "Surface melting is the primary reason that affects the mass balance of Greenland ice sheet. At the same time, ice and snow have high albedo, and  ice sheet surface melting will cause the difference of radiation energy budget, and then affects the energy exchange between sea-land-air. The high-resolution ice sheet surface melting product provides important information support for the study of Greenland ice sheet surface melting and its response to global climate change. This dataset combined microwave radiometer product and optical albedo product, the daily, winter (June-August) averages and July averages of the former are used for layer-stacking, then Gram-Schmidt Spectral Sharpening was adapted to fuse the layer-stacking results with MODIS GLASS albedo product. The spatial resolution of fusion-results has been downscaled from 25 km to 0.05˚. By employing a threshold-based melt detection approach for each fusion-results pixel, Greenland ice sheet surface melt daily product for 1985, 2000, 2015 (DSSMIS) was generated. The spatial resolution of DSSMIS is higher than that of published data sets at home and abroad. Combined with the advantages of radiometer and albedo data, the spatial details characteristics are enhanced and consistent with the extraction range of the original radiometer products, effectively reducing the noise of the radiometer. DSSMIS’s data type is integer, where 1 is melted, 0 is not melted, 255 is masked area besides Greenland ice sheet, and the data set is stored as *.nc.",
+      "descriptionCn": "冰盖表面融化是影响格陵兰冰盖物质平衡的主要原因，同时冰雪的反射率较高，冰盖表面融化会造成辐射能量收支差异，进而影响海-陆-气之间能量交换。高分辨率冰盖表面融化产品的生成，对研究格陵兰冰盖表面融化及其对全球气候变化的响应提供重要信息支撑。本数据集基于微波辐射计与光学反照率产品，对微波辐射计当日、冬季（12-次年2月）平均和1月平均进行波段合成，利用Gram-Schmidt方法将微波辐射计波段合成数据与MODIS GLASS反照率产品融合，使其空间分辨率从25 km提高至0.05˚。然后基于微波辐射计当日与冬季亮温差值的阈值法对降尺度结果提取格陵兰冰盖表面融化，得到1985年、2000年、2015年格陵兰冰盖表面0.05˚ 每日融化产品。该数据集0.05˚ 的空间分辨率高于目前国内外已发布数据集，凸显了辐射计和反照率数据对表面融化的响应，空间细节特征更加清晰，保持了原辐射计产品的动态范围，有效地抑制了辐射计噪声。该数据集的数据类型为整型，其中1代表融化，0代表未融化，255代表冰盖以外掩膜区域，数据集以“*.nc”格式存储。",
+      "instructions": "File name: the surface melting data is stored in NC format. The file name is \"antarcticcdailysurfacemeltyyyy-yyyy. NC\", where yyyy-yyyy represents the year. For example, ‘antarcticcdailysurfacemelt1985-1986.nc’ represents the NC file, which describes the surface melting range of the Antarctic ice sheet from July 1, 1985 to June 30, 1986. The NC file contains four variables: melt and polar_ Stereographic, x and y, respectively represent the melting pixel value, coordinate system information, X coordinate and Y coordinate in the projection coordinate system.\n\nData reading method: all NC files in the dataset can be directly read by panoply program （https://www.giss.nasa.gov/tools/panoply/download/ ）, select the variable melt , create the XY coordinate axis corresponding to the variable x and variable y for browsing, and change the time to browse the melting range of different dates. If you want to save it as a separate picture for display or analysis, you can use the \"multidimensional tool - create NetCDF grid layer\" tool in ArcGIS program to process the results and generate a file in TIF format, including the melting range of all days in the corresponding year. You can change the display time by opening \"enable time in this layer\" in the \"attribute - time\" tab. In addition, you can also select GDAL, NCO, CDO and other tools to open NC files or convert them to other formats.",
+      "instructionsCn": "文件命名：表面融化数据以nc格式存储，文件的名称为“GreenlandDailySurfaceMeltyyyy.nc”，其中yyyy代表年份，比如GreenlandDailySurfaceMelt1985.nc就代表该nc文件描述了1985年1月1日至1985年12月31日格陵兰冰盖表面融化范围。nc文件包含4个变量：melt, polar_stereographic, x, y，分别代表融化像元值、坐标系信息、投影坐标系中x坐标和y坐标。\n\n数据读取方式：该数据集中的所有nc文件可以直接用Panoply程序（https://www.giss.nasa.gov/tools/panoply/download/）打开，选择melt变量，创建x变量和y变量对应的xy坐标轴进行浏览，可以改变Time选择浏览不同日期的融化范围。如果要保存为单独图片形式显示或进行分析，可用ArcGIS程序中“多维工具-创建NetCDF栅格图层”工具，处理结果生成tif格式的文件，包含对应年份所有天数的融化范围，可通过在属性-时间选项卡中打开“在此图层中启用时间”，改变显示时间。除此之外，也可选择GDAL、NCO、CDO等多种工具打开nc文件或转换为其他格式。",
+      "east": 7.0503,
+      "west": -90.8971,
+      "south": 58.8075,
+      "north": 83.8635,
+      "startTime": null,
+      "endTime": null,
+      "fileSize": 7777554.0,
+      "cstr": "18406.11.Cryos.tpdc.271849",
+      "doi": "10.11888/Cryos.tpdc.271849",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Understanding surface melt over the Greenland Ice Sheet (GrIS) is important for evaluating the effect of the changing global climate on humanity, and for forecasting sea level rise. Global sea levels are rising, and current predictions suggest that the rate of sea level rise will continue to accelerate. Mass loss of the Greenland Ice Sheet (GrIS) currently contributes about 0.72 mm/yr to global sea level rise, and along with Antarctica, is predicted to become the dominant contributor to global sea level rise within the century. The mass balance quantifies the total mass change of the GrIS and is directly proportional to mean global sea level. It has been shown that the rate of GrIS mass loss is increasing and could contribute to 7-21 cm increase in Global Mean Sea Level (GMSL) by the end of the century. Both the Surface Mass Balance (SMB) and glacier discharge (ice deposited from outlet glaciers directly into the ocean) contribute significantly to the mass balance of the GrIS, and the two are correlated. The SMB includes positive mass contributions from precipitation as well as loss due to evaporation and sublimation in addition to the dominant meltwater runoff loss. Current forecasts, which include uncertainties in basal friction, the lubrication of discharging ice, suggest large uncertainty in the future Greenland mass balance. Accurate knowledge of the current state of the GrIS SMB is thus imperative to predict the possible rate of future global sea level rise. Surface mass loss is expected to increase significantly in the 21st century, compared to discharge, and the SMB is the dominant contributor to uncertainty in GMSL predictions. One of the most direct methods of measuring mass change is by gravimetry from the Gravity Recovery and Climate Experiment (GRACE) satellite. GRACE-derived estimates have their own sources of uncertainty, particularly glacier isostatic adjustment or postglacial rebound and tidal aliasing. Also GRACE measurements typically need more than 5 years of integration to achieve sufficiently accurate estimates of GrIS mass-change. Mass balance can also be studied from laser or radar altimetry but these techniques also have uncertainties introduced by the required knowledge on density distribution over the GrIS. Satellite data have been used to map surface melt on the GrIS, particularly passive microwave, radar backscatter, and visible imagery. However, these methods only provide maps of binary information on melt versus non-melt, and are unable to provide quantitative information about volumetric liquid water. In Houtz et al. (2019) a new method was introduced for the simultaneous retrieval of snow/firn mass-density and snow liquid water content from passive L-band radiometry."
-            ],
-            "research objective": [
-                "We demonstrate a recently developed L-band passive microwave algorithm for the retrieval of snow liquid water and snow and firn density over the GrIS. In this study, we expand corresponding retrievals to the entire GrIS, and show: density, liquid water column, and integrated surface liquid water estimates. We show that liquid water column, down to the penetration depth of L-band microwaves, can be calculated from SMOS-based retrievals using a physically deterministic Emission Model (EM). By integrating retrieved liquid water over time and area we estimate the volume of melt water on the GrIS as a function of time and as an annual total. We discuss how this quantified total melt water relates to the GrIS surface mass loss and thus to the SMB, and we also discuss the limitations of the algorithm and uncertainty contributions."
-            ],
-            "challenges": [
-                "GRACE-derived estimates have their own sources of uncertainty, particularly glacier isostatic adjustment or postglacial rebound and tidal aliasing. Also GRACE measurements typically need more than 5 years of integration to achieve sufficiently accurate estimates of GrIS mass-change. Mass balance can also be studied from laser or radar altimetry but these techniques also have uncertainties introduced by the required knowledge on density distribution over the GrIS. We discuss how this quantified total melt water relates to the GrIS surface mass loss and thus to the SMB, and we also discuss the limitations of the algorithm and uncertainty contributions."
-            ],
-            "methods": [
-                "The resulting SMOS-based WS retrievals are used to quantify liquid water over the GrIS resulting from surface melt of the uppermost firn/snow layer. Here, T0 is computed for each year individually, as opposed to the multi-year mean used in Houtz et al. 2019, to demonstrate a more operationally-ready algorithm. We also only consider a period in the assumed dry snow period (the first 90 Days of the Year (DoY)) in which we assume the firn/snow to be dry, as surface wetness can significantly increase the firn/snow permittivity and therefore change the Brewster angle. For a SMOS orbit i the instantaneous water column at a single pixel Wc, i can be calculated as: Wc , i = WS ⋅ twet. The instantaneous water column Wc, i can now be summed over all observations, and normalized by the number of observations, to obtain annual (yr) liquid water column Wc, yr. The value of Wc, yr is computed for each GrIS pixel on the SMOS Equal-Area Scalable Earth version 2.0 grid (EASE-grid 2.0) (Brodzik et al. 2012)."
-            ],
-            "dataset": [
-                "The retrievals are performed using brightness temperatures from the ESA SMOS satellite. Microwave brightness temperatures measured at 1.4 GHz by the European Space Agency (ESA) Soil Moisture and Ocean Salinity (SMOS) satellite are the sole input to our retrieval algorithm."
-            ],
-            "findings": [
-                "The integrated annual surface liquid water retrieved over the entire ice sheet compares on the same order as modeled estimates of total meltwater available in current literature. The density retrievals show potential for mapping the equilibrium line altitude of the ice sheet by determining where retrieved densities exceed typical seasonal snowpack density, thus indicating the presence of firn."
-            ],
-            "backgroundCn": [
-                "理解格林兰冰盖（GrIS）表面融化对于评估全球气候变化对人类的影响以及预测海平面上升至关重要。全球海平面正在上升，目前的预测表明，海平面上升的速度将继续加快。格林兰冰盖的质量损失目前每年对全球海平面上升贡献约0.72毫米，并且与南极洲一起，预计在本世纪内将成为全球海平面上升的主要贡献者。质量平衡量化了格林兰冰盖的总质量变化，并与全球平均海平面直接成正比。研究表明，格林兰冰盖的质量损失速度正在加快，预计到本世纪末可能对全球平均海平面（GMSL）贡献7-21厘米的增加。表面质量平衡（SMB）和冰川排放（从冰川出口直接沉积到海洋的冰）对格林兰冰盖的质量平衡有显著贡献，两者之间存在相关性。SMB包括来自降水的正质量贡献，以及由于蒸发和升华造成的损失，此外，融水径流损失是主要的损失来源。目前的预测，包括基底摩擦、排放冰的润滑等不确定性，表明未来格林兰质量平衡存在较大不确定性。因此，准确了解格林兰冰盖SMB的当前状态对于预测未来全球海平面上升的可能速度至关重要。预计在21世纪，表面质量损失将显著增加，相较于冰川排放，SMB是全球海平面上升预测中不确定性的主要贡献者。测量质量变化的最直接方法之一是通过重力测量，使用重力恢复与气候实验（GRACE）卫星。GRACE衍生的估计有其自身的不确定性，特别是冰川的等静压调整或后冰川反弹以及潮汐混叠。此外，GRACE测量通常需要超过5年的整合才能获得足够准确的格林兰冰盖质量变化估计。质量平衡也可以通过激光或雷达测高进行研究，但这些技术也引入了对格林兰冰盖上密度分布知识的要求的不确定性。卫星数据已被用于绘制格林兰冰盖的表面融化，特别是被动微波、雷达后向散射和可见光影像。然而，这些方法仅提供融化与非融化的二元信息地图，无法提供关于体积液态水的定量信息。在Houtz等（2019）中，提出了一种新方法，通过被动L波段辐射测量同时检索雪/冰层质量密度和雪液态水含量。"
-            ],
-            "research objectiveCn": [
-                "我们展示了一种新开发的L波段被动微波算法，用于在格陵兰冰盖（GrIS）上获取雪的液态水和雪及冰雪密度。在本研究中，我们将相应的检索扩展到整个格陵兰冰盖，并展示：密度、液态水柱和综合表面液态水估计。我们表明，液态水柱可以通过使用基于SMOS的检索和物理确定性的发射模型（EM）计算，直到L波段微波的穿透深度。通过对检索到的液态水进行时间和区域的积分，我们估算了格陵兰冰盖的融水体积，作为时间的函数和年度总量。我们讨论了这一量化的融水总量如何与格陵兰冰盖的表面质量损失相关联，从而与表面质量平衡（SMB）相关联，并讨论了该算法的局限性和不确定性来源。"
-            ],
-            "challengesCn": [
-                "GRACE衍生的估计有其自身的不确定性来源，特别是冰川等静压调整或后冰川反弹以及潮汐混叠。此外，GRACE测量通常需要超过5年的积分才能获得足够准确的格陵兰冰盖（GrIS）质量变化估计。质量平衡也可以通过激光或雷达高程测量进行研究，但这些技术也引入了对GrIS上密度分布知识的要求所带来的不确定性。我们讨论了量化的总融水如何与GrIS表面质量损失相关联，从而与表面质量平衡（SMB）相关联，并讨论了算法的局限性和不确定性贡献。"
-            ],
-            "methodsCn": [
-                "基于SMOS的水分检索结果用于量化格陵兰冰盖（GrIS）上层雪/冰层表面融化所产生的液态水。在这里，T0是针对每年单独计算的，而不是像Houtz等人2019年所使用的多年均值，以展示更具操作性的算法。我们还仅考虑假定干雪期的前90天（年初的第90天），在此期间我们假设雪/冰层是干燥的，因为表面湿度会显著增加雪/冰层的介电常数，从而改变布鲁斯特角。对于SMOS轨道i，单个像素的瞬时水柱Wc,i可以计算为：Wc,i = WS ⋅ twet。瞬时水柱Wc,i现在可以在所有观测值上求和，并通过观测值的数量进行归一化，以获得年度（yr）液态水柱Wc,yr。Wc,yr的值是在SMOS等面积可缩放地球版本2.0网格（EASE-grid 2.0）（Brodzik等人2012年）上为每个GrIS像素计算的。"
-            ],
-            "datasetCn": [
-                "检索是使用欧洲航天局（ESA）土壤湿度和海洋盐度（SMOS）卫星的亮温进行的。由欧洲航天局（ESA）土壤湿度和海洋盐度（SMOS）卫星在1.4 GHz频率下测量的微波亮温是我们检索算法的唯一输入。"
-            ],
-            "findingsCn": [
-                "整个冰盖的综合年表面液态水的提取量与当前文献中模型估计的可用总融水量相当。密度提取显示出通过确定提取的密度超过典型季节性雪盖密度的地方来绘制冰盖平衡线高度的潜力，从而指示出存在firn（雪冻层）。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "魏思怡",
+        "nameEn": "WEI Siyi",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "刘岩",
+        "nameEn": "LIU Yan",
+        "unitEn": "",
+        "unitCn": "北京师范大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Can passive microwave satellite data provide binary information about melt versus non-melt over the Greenland Ice Sheet?",
-                "QuestionCn": "被动微波卫星数据能否提供关于格陵兰冰盖融化与非融化的二元信息？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Do GRACE-derived estimates of the Greenland Ice Sheet mass change require more than 5 years of data for accurate results?",
-                "QuestionCn": "GRACE衍生的格林兰冰盖质量变化估计是否需要超过5年的数据才能获得准确结果？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "Where are the challenges of GRACE-derived estimates in studying the mass balance of the Greenland Ice Sheet particularly evident?",
-                "QuestionCn": "GRACE衍生的估计在研究格陵兰冰盖的质量平衡时，特别明显的挑战在哪里？",
-                "AnswerEn": "glacier isostatic adjustment",
-                "AnswerCn": "冰川均衡调整",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What is the role of microwave brightness temperatures from the SMOS satellite in the data collection methods for studying surface melt over the Greenland Ice Sheet?",
-                "QuestionCn": "SMOS卫星的微波亮温在研究格陵兰冰盖表面融化的数据收集方法中扮演着什么角色。",
-                "AnswerEn": "Microwave brightness temperatures at 1.4 GHz",
-                "AnswerCn": "微波亮度温度在1.4 GHz",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method that improves spatial resolution for studying Greenland Ice Sheet surface melt?",
-                "QuestionCn": "您能否提供一种数据收集方法的例子，以提高对格林兰冰盖表面融化研究的空间分辨率？",
-                "AnswerEn": "A data collection method that improves spatial resolution involves using microwave radiometer and optical albedo products. These are combined using the Gram-Schmidt method to enhance spatial resolution from 25 km to 0.05˚, allowing for detailed analysis of surface melt patterns.",
-                "AnswerCn": "一种提高空间分辨率的数据收集方法涉及使用微波辐射计和光学反照率产品。这些数据通过Gram-Schmidt方法结合，从25公里提升到0.05度的空间分辨率，从而允许对表面融化模式进行详细分析。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced when using satellite data to map surface melt on the Greenland Ice Sheet?",
-                "QuestionCn": "使用卫星数据绘制格林兰冰盖表面融化情况时面临的一个挑战是什么？",
-                "AnswerEn": "One challenge is that satellite data often only provide binary maps of melt versus non-melt, lacking quantitative information about volumetric liquid water. This limits the ability to fully understand meltwater dynamics and its contribution to surface mass loss.",
-                "AnswerCn": "一个挑战是卫星数据通常只提供融化与非融化的二元地图，缺乏关于体积液态水的定量信息。这限制了我们充分理解融水动态及其对表面质量损失贡献的能力。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Could you give an example of a dataset that has been used to retrieve snow liquid water content over the Greenland Ice Sheet?",
-                "QuestionCn": "您能否提供一个用于检索格陵兰冰盖上雪液态水含量的数据集的示例？",
-                "AnswerEn": "An example of a dataset used for this purpose is from the ESA SMOS satellite, which provides microwave brightness temperatures measured at 1.4 GHz. This data is used in an algorithm to retrieve snow liquid water content and density over the Greenland Ice Sheet.",
-                "AnswerCn": "一个用于此目的的数据集来自欧洲空间局的SMOS卫星，该卫星提供在1.4 GHz频率下测量的微波亮度温度。这些数据用于一个算法，以获取格林兰冰盖上的雪液态水含量和密度。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the key features of datasets used for analyzing the surface melt of the Greenland Ice Sheet?",
-                "QuestionCn": "用于分析格林兰冰盖表面融化的数据库的关键特征是什么？",
-                "AnswerEn": "high-resolution spatial data, resolution of 0.05˚, microwave radiometer data, optical albedo products, binary information on melt versus non-melt states",
-                "AnswerCn": "高分辨率空间数据，分辨率为0.05˚，微波辐射计数据，光学反照率产品，融化与非融化状态的二元信息。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What characteristics define the data collection methods for measuring the Greenland Ice Sheet's Surface Mass Balance (SMB)?",
-                "QuestionCn": "测量格林兰冰盖表面质量平衡（SMB）的数据收集方法的特点包括哪些？",
-                "AnswerEn": "satellite data, passive microwave, radar backscatter, binary melt/non-melt maps, gravimetry, GRACE satellite, integration over several years, uncertainties, glacier isostatic adjustment",
-                "AnswerCn": "卫星数据，被动微波，雷达后向散射，二元融化/非融化图，重力测量，GRACE卫星，多年整合，不确定性，冰川均衡调整。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "How many years of integration are typically needed for satellite gravimetry measurements to achieve accurate estimates of mass change over the Greenland Ice Sheet?",
-                "QuestionCn": "通常需要多少年的整合才能通过卫星重力测量准确估计格林兰冰盖的质量变化？",
-                "AnswerEn": "5 years",
-                "AnswerCn": "5年",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What is the spatial resolution achieved when microwave radiometer data is combined with MODIS GLASS albedo products for surface melt detection over the Greenland Ice Sheet?",
-                "QuestionCn": "当将微波辐射计数据与MODIS GLASS反照率产品结合用于格陵兰冰盖表面融化检测时，所达到的空间分辨率是多少？",
-                "AnswerEn": "25 km, 0.05˚",
-                "AnswerCn": "25公里，0.05˚",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How much does the mass loss of the Greenland Ice Sheet currently contribute annually to global sea level rise?",
-                "QuestionCn": "格林兰冰盖目前每年对全球海平面上升的质量损失贡献多少？",
-                "AnswerEn": "0.72 mm/yr",
-                "AnswerCn": "0.72 毫米/年",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is the significance of using microwave radiometry in data collection for surface melt analytics over ice sheets?",
-                "QuestionCn": "使用微波辐射计进行冰盖表面融化分析的数据收集具有重要意义。",
-                "AnswerEn": "Microwave radiometry, particularly from satellites like the SMOS, is significant in surface melt analytics over ice sheets as it provides brightness temperature measurements that can be used to retrieve snow liquid water and snow and firn density. This method allows for the analysis of liquid water resulting from surface melt, which is essential to understanding the surface mass balance and the contribution to global sea level rise.",
-                "AnswerCn": "微波辐射计，特别是来自像SMOS这样的卫星，在冰盖表面融化分析中具有重要意义，因为它提供了亮度温度测量，可以用来获取雪的液态水和雪及冰渣的密度。这种方法允许分析由表面融化产生的液态水，这对于理解表面质量平衡及其对全球海平面上升的贡献至关重要。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What challenges are associated with gravimetry-based methods for measuring mass change in ice sheets?",
-                "QuestionCn": "与基于重力测量的方法测量冰盖质量变化相关的挑战有哪些？",
-                "AnswerEn": "Gravimetry-based methods, such as those using the GRACE satellite, face challenges like uncertainties due to glacier isostatic adjustment or postglacial rebound, tidal aliasing, and the requirement of more than five years of data integration to achieve accurate estimates of ice sheet mass change. These challenges can affect the precision of mass balance studies.",
-                "AnswerCn": "基于重力测量的方法，例如使用GRACE卫星，面临着一些挑战，如由于冰川等静态调整或后冰川反弹引起的不确定性、潮汐混叠，以及需要超过五年的数据整合才能获得冰盖质量变化的准确估计。这些挑战可能会影响质量平衡研究的精确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the integration of passive microwave data with optical albedo products improve dataset resolution in ice sheet surface melt studies?",
-                "QuestionCn": "被动微波数据与光学反照率产品的集成如何改善冰盖表面融化研究中的数据集分辨率？",
-                "AnswerEn": "The integration of passive microwave data with optical albedo products, such as using the Gram-Schmidt method, improves dataset resolution by enhancing the spatial resolution from 25 km to 0.05˚. This fusion captures clearer spatial details and maintains the dynamic range of the original radiometric data, effectively suppressing noise and improving the accuracy of surface melt detection over ice sheets.",
-                "AnswerCn": "被动微波数据与光学反照率产品的集成，例如使用Gram-Schmidt方法，可以通过将数据集的分辨率从25公里提高到0.05度，从而改善数据集的分辨率。这种融合捕捉到了更清晰的空间细节，并保持了原始辐射数据的动态范围，有效抑制了噪声，提高了冰盖表面融化检测的准确性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "How do the data collection methods for surface melt over the Greenland Ice Sheet using microwave radiometry compare to those using gravimetry from the GRACE satellite?",
-                "QuestionCn": "格林兰冰盖表面融化的数据收集方法中，微波辐射计与GRACE卫星的重力测量方法相比，有何不同？",
-                "AnswerEn": "Microwave radiometry, as used for surface melt detection, provides high-resolution spatial data by integrating microwave radiometer data with optical reflectance products, enabling detailed mapping of melt areas. In contrast, gravimetry from the GRACE satellite measures mass changes over time and requires longer integration periods (more than 5 years) to achieve accurate estimates, due to uncertainties like glacier isostatic adjustment and tidal aliasing.",
-                "AnswerCn": "微波辐射计用于表面融化检测，通过将微波辐射计数据与光学反射产品相结合，提供高分辨率的空间数据，从而实现融化区域的详细映射。相比之下，GRACE卫星的重力测量用于测量随时间变化的质量变化，需要超过5年的较长积分周期才能获得准确的估计，因为存在冰川等静态调整和潮汐混叠等不确定性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the differences in spatial resolution and data type between datasets derived from microwave radiometry and those from laser or radar altimetry for studying the Greenland Ice Sheet?",
-                "QuestionCn": "微波辐射测量和激光或雷达高程测量所衍生的数据集在空间分辨率和数据类型方面有什么区别，以研究格林兰冰盖？",
-                "AnswerEn": "Datasets derived from microwave radiometry, as mentioned, have a spatial resolution of 0.05˚ and provide binary data indicating melt or non-melt areas. On the other hand, laser or radar altimetry datasets typically offer different spatial resolutions and include quantitative altimetric measurements to assess changes in ice sheet elevation, which can be affected by uncertainties in density distribution.",
-                "AnswerCn": "来自微波辐射测量的数据集具有0.05˚的空间分辨率，并提供指示融化或非融化区域的二进制数据。另一方面，激光或雷达高程测量数据集通常提供不同的空间分辨率，并包含定量的高程测量，以评估冰盖高度的变化，这可能受到密度分布不确定性的影响。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "In what ways do passive microwave methods for retrieving snow liquid water content differ from methods using visible imagery in evaluating the Greenland Ice Sheet's surface melt?",
-                "QuestionCn": "被动微波方法在评估格林兰冰盖表面融化时与使用可见光影像的方法在获取雪液态水含量方面有何不同？",
-                "AnswerEn": "Passive microwave methods for retrieving snow liquid water content, such as those using L-band microwaves, provide quantitative estimates of liquid water volume and density over time and area, allowing detailed understanding of meltwater contributions. Visible imagery, however, primarily offers binary maps of melt versus non-melt without quantitative volumetric information, limiting its ability to assess the total meltwater content.",
-                "AnswerCn": "被动微波方法（如使用L波段微波）用于获取雪的液态水含量，能够提供液态水体积和密度的定量估计，允许对融水贡献进行详细理解。然而，可见光影像主要提供融化与非融化的二元地图，而没有定量的体积信息，这限制了其评估总融水含量的能力。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can the integration of high-resolution satellite data improve the understanding of surface melt patterns on the Greenland Ice Sheet?",
-                "QuestionCn": "高分辨率卫星数据的整合如何改善对格陵兰冰盖表面融化模式的理解？",
-                "AnswerEn": "The integration of microwave radiometer and optical albedo products can enhance spatial resolution, providing clearer spatial details of surface melt patterns. This method allows for a better response to surface melt dynamics and helps in reducing noise in radiometer data, leading to more accurate datasets.",
-                "AnswerCn": "微波辐射计与光学反照率产品的结合可以提高空间分辨率，提供更清晰的表面融化模式空间细节。这种方法能够更好地响应表面融化动态，并有助于减少辐射计数据中的噪声，从而生成更准确的数据集。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What challenges arise from using satellite-derived measurements to infer surface mass changes on the Greenland Ice Sheet, and how might these be addressed?",
-                "QuestionCn": "使用卫星衍生测量来推断格陵兰冰盖的表面质量变化时，会出现哪些挑战，以及如何解决这些挑战？",
-                "AnswerEn": "Challenges include uncertainties from glacier isostatic adjustment, postglacial rebound, and tidal aliasing in GRACE data, as well as density distribution knowledge for altimetry. Addressing these could involve refining measurement techniques, using longer integration periods, or integrating multiple data sources for cross-validation.",
-                "AnswerCn": "挑战包括来自冰川等静压调整、后冰川反弹和GRACE数据中的潮汐混叠的不确定性，以及对高程测量的密度分布知识的了解。解决这些问题可能涉及改进测量技术、使用更长的积分周期，或整合多个数据源进行交叉验证。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the high resolution improvement in datasets dealing with surface melt over the Greenland Ice Sheet?",
-                "QuestionCn": "导致格陵兰冰盖表面融化数据集高分辨率改善的原因是什么？",
-                "AnswerEn": "The high resolution improvement in datasets dealing with surface melt over the Greenland Ice Sheet is caused by the fusion of microwave radiometer band composite data and MODIS GLASS albedo products using the Gram-Schmidt method, which enhances the spatial resolution from 25 km to 0.05˚.",
-                "AnswerCn": "对格林兰冰盖表面融化数据集的高分辨率改进是通过融合微波辐射计波段复合数据和MODIS GLASS反照率产品，采用Gram-Schmidt方法实现的，从而将空间分辨率从25公里提高到0.05˚。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why are there uncertainties in current methods for estimating the mass change of the Greenland Ice Sheet?",
-                "QuestionCn": "当前估算格林兰冰盖质量变化的方法存在不确定性的原因是什么？",
-                "AnswerEn": "Uncertainties in current methods for estimating the mass change of the Greenland Ice Sheet arise from factors such as glacier isostatic adjustment or postglacial rebound and tidal aliasing in GRACE-derived estimates, as well as the required knowledge on density distribution over the ice sheet in laser or radar altimetry techniques.",
-                "AnswerCn": "当前估计格林兰冰盖质量变化的方法存在不确定性，这些不确定性来源于冰川的等静压调整或后冰川反弹，以及GRACE衍生估计中的潮汐混叠问题，还有激光或雷达测高技术中对冰盖密度分布的要求知识。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What factors contribute to the challenges in accurately quantifying volumetric liquid water on the Greenland Ice Sheet?",
-                "QuestionCn": "哪些因素导致准确量化格林兰冰盖上体积液态水的挑战？",
-                "AnswerEn": "Challenges in accurately quantifying volumetric liquid water on the Greenland Ice Sheet are contributed by the limitations of satellite methods used to map surface melt, which typically provide only binary information on melt versus non-melt, and the uncertainties in the retrieval algorithms that estimate snow liquid water and snow and firn density.",
-                "AnswerCn": "准确量化格林兰冰盖上体积液态水的挑战，源于用于映射表面融化的卫星方法的局限性，这些方法通常仅提供融化与非融化的二元信息，以及在估算雪中液态水和雪与冰渣密度时的算法不确定性。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What impact does integrating multiple satellite data sources have on the spatial resolution and accuracy of ice sheet surface melt datasets?",
-                "QuestionCn": "整合多个卫星数据源对冰盖表面融化数据集的空间分辨率和准确性有什么影响？",
-                "AnswerEn": "Integrating data from microwave radiometers and optical reflectance products enhances spatial resolution from 25 km to 0.05˚, providing clearer spatial details and maintaining the dynamic range of the original radiometer products while suppressing noise, thus improving the accuracy of surface melt detection.",
-                "AnswerCn": "将微波辐射计和光学反射产品的数据进行整合，可以将空间分辨率从25公里提高到0.05度，提供更清晰的空间细节，同时保持原始辐射计产品的动态范围，并抑制噪声，从而提高表面融化检测的准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the use of different satellite-derived data methods affect the estimation of surface mass loss in the Greenland Ice Sheet?",
-                "QuestionCn": "不同卫星衍生数据方法的使用如何影响格陵兰冰盖表面质量损失的估计？",
-                "AnswerEn": "Different satellite-derived methods, such as passive microwave, radar backscatter, and visible imagery, provide only binary information on melt versus non-melt, lacking quantitative volumetric information. In contrast, using passive L-band radiometry can offer simultaneous retrieval of snow/firn mass-density and snow liquid water content, allowing for more detailed estimations of surface mass loss.",
-                "AnswerCn": "不同的卫星衍生方法，如被动微波、雷达后向散射和可见光影像，仅提供关于融化与非融化的二元信息，缺乏定量的体积信息。相比之下，使用被动L波段辐射计可以同时获取雪/冰雪的质量密度和雪的液态水含量，从而允许对表面质量损失进行更详细的估算。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary objective of generating a high-resolution surface melt product over the Greenland Ice Sheet using microwave radiometer and optical albedo products?",
-                "QuestionCn": "生成高分辨率表面融化产品的主要目标是利用微波辐射计和光学反照率产品对格陵兰冰盖进行监测。",
-                "AnswerEn": "The primary objective is to provide important information for studying the surface melt of the Greenland Ice Sheet and its response to global climate change by improving spatial resolution to 0.05˚, allowing for clearer spatial detail and effective noise suppression.",
-                "AnswerCn": "主要目标是提供重要信息，以研究格陵兰冰盖的表面融化及其对全球气候变化的响应，通过将空间分辨率提高到0.05˚，以实现更清晰的空间细节和有效的噪声抑制。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why is it significant to develop an L-band passive microwave algorithm for retrieving snow liquid water and firn density over the Greenland Ice Sheet?",
-                "QuestionCn": "开发L波段被动微波算法以获取格陵兰冰盖上的雪液态水和冰雪密度是重要的，因为这可以帮助我们更好地理解冰盖的变化、气候变化的影响以及水资源管理。",
-                "AnswerEn": "Developing this algorithm is significant because it allows for the retrieval of snow liquid water and firn density over the Greenland Ice Sheet, which helps quantify the volume of meltwater and understand its relation to surface mass loss and surface mass balance, contributing to predictions of future global sea level rise.",
-                "AnswerCn": "开发这个算法具有重要意义，因为它可以检索格林兰冰盖上的雪液态水和雪密度，这有助于量化融化水的体积，并理解其与表面质量损失和表面质量平衡的关系，从而有助于预测未来全球海平面上升。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What is the intention behind using brightness temperatures from the SMOS satellite as the sole input for a retrieval algorithm over the Greenland Ice Sheet?",
-                "QuestionCn": "使用SMOS卫星的亮温作为格陵兰冰盖反演算法唯一输入的意图是什么？",
-                "AnswerEn": "The intention is to quantify liquid water over the Greenland Ice Sheet resulting from surface melt, which is critical for understanding surface mass loss, and to provide accurate data that can be used to estimate annual liquid water columns and support assessments of the ice sheet's impact on global sea level rise.",
-                "AnswerCn": "目的是量化格陵兰冰盖因表面融化而产生的液态水，这对于理解表面质量损失至关重要，并提供准确的数据，以便估算年度液态水柱，并支持对冰盖对全球海平面上升影响的评估。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedures are involved in enhancing the spatial resolution of ice sheet surface melt datasets using satellite data?",
-                "QuestionCn": "增强冰盖表面融化数据集空间分辨率的程序涉及哪些步骤？",
-                "AnswerEn": "To enhance the spatial resolution of ice sheet surface melt datasets, the process involves using a combination of microwave radiometer and optical albedo products. The Gram-Schmidt method is applied to combine microwave radiometer band data with MODIS GLASS albedo products, increasing the spatial resolution from 25 km to 0.05˚. This approach also includes using threshold methods based on the difference in brightness temperature between daily and winter measurements to extract surface melt data.",
-                "AnswerCn": "为了提高冰盖表面融化数据集的空间分辨率，该过程涉及结合微波辐射计和光学反照率产品。采用Gram-Schmidt方法将微波辐射计波段数据与MODIS GLASS反照率产品结合，从而将空间分辨率从25公里提高到0.05˚。该方法还包括基于日常和冬季测量之间亮温差异的阈值方法，以提取表面融化数据。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How are liquid water and density retrievals from snow and firn conducted over the Greenland Ice Sheet using passive microwave algorithms?",
-                "QuestionCn": "如何通过被动微波算法在格陵兰冰盖上进行液态水和雪、冰渣密度的检索。",
-                "AnswerEn": "Liquid water and density retrievals are conducted by applying an L-band passive microwave algorithm using brightness temperatures from the ESA SMOS satellite. The algorithm calculates the liquid water column down to the penetration depth of L-band microwaves using a physically deterministic Emission Model. The retrievals are performed for each pixel on the Greenland Ice Sheet using brightness temperature measurements at 1.4 GHz, leading to estimates of the volume of melt water over time and area.",
-                "AnswerCn": "液态水和密度的检索是通过应用L波段被动微波算法，使用来自欧洲航天局SMOS卫星的亮度温度进行的。该算法利用物理确定性发射模型计算L波段微波的穿透深度下的液态水柱。检索是在格陵兰冰盖的每个像素上进行的，使用1.4 GHz的亮度温度测量，进而估算随时间和区域变化的融化水体积。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the challenges associated with using GRACE satellite data for measuring mass change over the Greenland Ice Sheet, and how do these challenges affect the data collection process?",
-                "QuestionCn": "使用GRACE卫星数据测量格林兰冰盖的质量变化面临的挑战有哪些，这些挑战如何影响数据收集过程？",
-                "AnswerEn": "Challenges associated with using GRACE satellite data include uncertainties related to glacier isostatic adjustment or postglacial rebound and tidal aliasing. Additionally, GRACE measurements require more than 5 years of integration to achieve accurate estimates of mass change. These challenges affect the data collection process by introducing uncertainties in mass balance studies and necessitating long-term data collection and integration to produce reliable results.",
-                "AnswerCn": "使用GRACE卫星数据面临的挑战包括与冰川等静压调整或后冰川反弹相关的不确定性以及潮汐混叠。此外，GRACE测量需要超过5年的集成才能获得准确的质量变化估计。这些挑战通过在质量平衡研究中引入不确定性，影响数据收集过程，并需要长期的数据收集和集成以产生可靠的结果。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methods enable the enhancement of spatial resolution in datasets concerning the Greenland Ice Sheet surface melt?",
-                "QuestionCn": "哪些方法可以增强关于格林兰冰盖表面融化的数据集的空间分辨率？",
-                "AnswerEn": "The enhancement of spatial resolution is achieved by using the Gram-Schmidt method to fuse microwave radiometer data with MODIS GLASS albedo products, improving the spatial resolution from 25 km to 0.05˚.",
-                "AnswerCn": "通过使用Gram-Schmidt方法将微波辐射计数据与MODIS GLASS反照率产品融合，实现了空间分辨率的增强，将空间分辨率从25公里提高到0.05˚。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How do certain satellite technologies enable the retrieval of snow liquid water content over the Greenland Ice Sheet?",
-                "QuestionCn": "某些卫星技术如何使得能够获取格陵兰冰盖上的雪液态水含量。",
-                "AnswerEn": "The ESA SMOS satellite, through its microwave brightness temperatures at 1.4 GHz, enables the retrieval of snow liquid water content by using a physically deterministic Emission Model (EM) to calculate the liquid water column over time.",
-                "AnswerCn": "ESA SMOS 卫星通过其在 1.4 GHz 的微波亮温，利用物理确定性发射模型（EM）计算液态水柱，从而实现对雪液态水含量的检索。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What challenges are associated with using gravimetry from satellites like GRACE in obtaining accurate mass-change estimates for the Greenland Ice Sheet?",
-                "QuestionCn": "使用像GRACE这样的卫星重力测量来获取格林兰冰盖的准确质量变化估计时，面临哪些挑战？",
-                "AnswerEn": "Challenges include uncertainties such as glacier isostatic adjustment, postglacial rebound, and tidal aliasing, which require more than 5 years of integration for sufficiently accurate estimates.",
-                "AnswerCn": "挑战包括不确定性，如冰川等静态调整、后冰川反弹和潮汐混叠，这些都需要超过5年的整合才能获得足够准确的估计。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might there be challenges in achieving high spatial resolution in datasets that map surface melt over the Greenland Ice Sheet?",
-                "QuestionCn": "在绘制格林兰冰盖表面融化的高空间分辨率数据集时，可能会面临一些挑战。",
-                "AnswerEn": "Achieving high spatial resolution can be challenging due to the need to integrate data from different sources, such as microwave radiometers and optical reflectance products, which have varying resolutions. The fusion of these data types to enhance spatial resolution requires sophisticated methods like the Gram-Schmidt process, and this integration can be affected by noise and other uncertainties inherent in the original datasets.",
-                "AnswerCn": "实现高空间分辨率可能面临挑战，因为需要整合来自不同来源的数据，例如微波辐射计和光学反射产品，这些数据具有不同的分辨率。为了增强空间分辨率，融合这些数据类型需要复杂的方法，如Gram-Schmidt过程，而这种集成可能受到原始数据集中固有的噪声和其他不确定性的影响。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why do some data collection methods struggle to provide quantitative information about the volumetric liquid water in the Greenland Ice Sheet?",
-                "QuestionCn": "为什么一些数据收集方法难以提供关于格林兰冰盖中液态水体积的定量信息？",
-                "AnswerEn": "Traditional satellite data collection methods like passive microwave, radar backscatter, and visible imagery typically deliver binary maps indicating melt versus non-melt conditions, but they lack the capability to quantify volumetric liquid water. These methods are limited in their ability to penetrate the snow and firn layers deeply enough to assess the liquid water content accurately.",
-                "AnswerCn": "传统的卫星数据收集方法，如被动微波、雷达后向散射和可见光影像，通常提供指示融化与非融化条件的二元地图，但它们无法量化体积液态水。这些方法在深入雪层和冰层以准确评估液态水含量方面存在局限性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Why might the retrieval of snow liquid water and density over the Greenland Ice Sheet face uncertainties and limitations?",
-                "QuestionCn": "在格林兰冰盖上获取雪的液态水和密度可能面临不确定性和局限性的原因是什么？",
-                "AnswerEn": "The retrieval of snow liquid water and density faces uncertainties due to factors such as glacier isostatic adjustment, postglacial rebound, and tidal aliasing, which affect GRACE-derived estimates. Additionally, satellite measurements require more than five years of integration to achieve accurate mass-change estimates, and variations in snow and firn density contribute further challenges to precise retrievals.",
-                "AnswerCn": "雪的液态水和密度的获取面临不确定性，这些不确定性源于冰川的等静态调整、后冰川反弹和潮汐混叠，这些因素影响了基于GRACE的估算。此外，卫星测量需要超过五年的整合才能获得准确的质量变化估算，而雪和雪层密度的变化进一步增加了精确获取的挑战。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "How would you evaluate the effectiveness of using microwave radiometry and optical albedo products in enhancing spatial resolution for ice sheet surface melt datasets?",
-                "QuestionCn": "如何评估使用微波辐射计和光学反照率产品在增强冰盖表面融化数据集空间分辨率方面的有效性？",
-                "AnswerEn": "The use of microwave radiometry and optical albedo products is deemed effective in enhancing spatial resolution for ice sheet surface melt datasets. By employing the Gram-Schmidt method, the integration of these products raises the spatial resolution from 25 km to 0.05˚, providing clearer spatial detail and maintaining the dynamic range of the original radiometer products while effectively suppressing noise.",
-                "AnswerCn": "微波辐射计和光学反照率产品的使用被认为在增强冰盖表面融化数据集的空间分辨率方面是有效的。通过采用Gram-Schmidt方法，这些产品的空间分辨率从25公里提高到0.05˚，提供了更清晰的空间细节，并保持了原始辐射计产品的动态范围，同时有效抑制了噪声。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand how microwave radiometry data is integrated with optical albedo products to enhance spatial resolution in ice sheet melt studies.",
-                "QuestionCn": "我不明白微波辐射计数据是如何与光学反照率产品结合以提高冰盖融化研究的空间分辨率的。",
-                "AnswerEn": "The integration involves using the Gram-Schmidt method to combine microwave radiometer data with MODIS GLASS albedo products, which improves spatial resolution from 25 km to 0.05˚. The method synthesizes the microwave radiometer bands with the optical data to achieve finer spatial detail while maintaining the dynamic range of the original radiometer data.",
-                "AnswerCn": "该集成涉及使用Gram-Schmidt方法将微波辐射计数据与MODIS GLASS反照率产品结合，从而将空间分辨率从25公里提高到0.05˚。该方法将微波辐射计波段与光学数据合成，以实现更精细的空间细节，同时保持原始辐射计数据的动态范围。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I'm unclear about the specific challenges faced when using satellite data to map surface melt over the Greenland Ice Sheet.",
-                "QuestionCn": "我对使用卫星数据绘制格林兰冰盖表面融化情况时面临的具体挑战感到不清楚。",
-                "AnswerEn": "Challenges with satellite data include uncertainties related to postglacial rebound, tidal aliasing in GRACE measurements, and the need for more than five years of data for accurate mass-change estimates. Additionally, methods like passive microwave, radar backscatter, and visible imagery provide only binary melt/non-melt maps without quantitative volumetric information.",
-                "AnswerCn": "卫星数据面临的挑战包括与后冰期反弹相关的不确定性、GRACE测量中的潮汐混叠，以及需要超过五年的数据才能准确估计质量变化。此外，像被动微波、雷达后向散射和可见光影像等方法仅提供二元的融化/非融化地图，而没有定量的体积信息。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I don't understand the importance of quantifying the liquid water column in snow and firn on the ice sheet.",
-                "QuestionCn": "我不理解量化冰盖上雪和冰渣中的液态水柱的重要性。",
-                "AnswerEn": "Quantifying the liquid water column is crucial as it helps estimate the volume of meltwater over time and area, which relates to the Greenland Ice Sheet's surface mass loss. This information is essential for understanding the Surface Mass Balance (SMB) and its contribution to global sea level rise predictions.",
-                "AnswerCn": "量化液态水柱是至关重要的，因为它有助于估算随时间和区域变化的融水体积，这与格林兰冰盖的表面质量损失有关。这些信息对于理解表面质量平衡（SMB）及其对全球海平面上升预测的贡献至关重要。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please outline the challenges faced in deriving accurate mass balance estimates for the Greenland Ice Sheet and discuss how these challenges impact data collection and analysis.",
-                "QuestionCn": "概述在推导格林兰冰盖准确的质量平衡估计时面临的挑战，并讨论这些挑战如何影响数据收集和分析。",
-                "AnswerEn": "Challenges in deriving mass balance estimates include uncertainties from glacier isostatic adjustment, postglacial rebound, and tidal aliasing, especially in GRACE-derived estimates which require long integration periods for accuracy. Laser and radar altimetry also present challenges due to uncertainties in density distribution knowledge over the ice sheet. These challenges impact data collection by introducing significant uncertainty in mass change measurements, affecting the reliability of predictions related to global sea level rise.",
-                "AnswerCn": "在推导质量平衡估计时面临的挑战包括来自冰川等静态调整、后冰川反弹和潮汐混叠的不确定性，尤其是在GRACE衍生的估计中，这些估计需要较长的积分周期才能达到准确性。激光和雷达测高也存在挑战，因为对冰盖上密度分布的知识存在不确定性。这些挑战影响了数据收集，给质量变化测量引入了显著的不确定性，从而影响了与全球海平面上升相关的预测的可靠性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please analyze the methods used to estimate snow liquid water content and firn density over the Greenland Ice Sheet and discuss their implications for understanding surface mass loss.",
-                "QuestionCn": "请分析用于估计格林兰冰盖上雪的液态水含量和冰雪密度的方法，并讨论它们对理解表面质量损失的影响。",
-                "AnswerEn": "The methods involve using a recently developed L-band passive microwave algorithm to retrieve snow liquid water and firn density over the Greenland Ice Sheet. The approach employs brightness temperatures from the SMOS satellite and a physically deterministic Emission Model to estimate liquid water columns. These methods provide a way to quantify surface mass loss more directly and relate it to Surface Mass Balance, contributing to a better understanding of mass changes and their implications for sea level rise.",
-                "AnswerCn": "这些方法涉及使用最近开发的L波段被动微波算法来获取格陵兰冰盖上的雪液态水和雪密度。该方法利用SMOS卫星的亮温数据和一个物理确定性的发射模型来估算液态水柱。这些方法提供了一种更直接量化表面质量损失并将其与表面质量平衡相关联的方式，有助于更好地理解质量变化及其对海平面上升的影响。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Melt season duration and ice layer formation on the Greenland ice sheet, 2000–2004",
+        "referenceCn": null,
+        "referenceEn": "Wang, L., Sharp, M., Rivard, B., & Steffen, K. (2007). Melt season duration and ice layer formation on the greenland ice sheet, 2000–2004. Journal of Geophysical Research Atmospheres, 112(F4), -."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Comparison of methods for melt detection over Greenland using active and passive microwave measurements",
+        "referenceCn": null,
+        "referenceEn": "Ashcraft, I.S., & Long, D.G. (2006). Comparison of methods for melt detection over greenland using active and passive microwave measurements. International Journal of Remote Sensing, 27(12/14), 2469-2488."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Passive lIlicrowave-derived spatial and telllporal variati ons of sUlIllller lIlelt on the Greenland ice sheet",
+        "referenceCn": null,
+        "referenceEn": "Mote, T.L., Anderson, M.R., Kuivinen, K.C., & Rowe, C.M. Passive lIlicrowave-derived spatial and telllporal variati ons of sUlIllller lIlelt on the Greenland ice sheet."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Greenland surface melt trends 1973–2007: evidence of a large increase in 2007",
+        "referenceCn": null,
+        "referenceEn": "Mote, T.L. (2007). Greenland surface melt trends 1973–2007: evidence of a large increase in 2007. Geophysical Research Letters, 34(22), L22507."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Quantifying Surface Melt and Liquid Water on the Greenland Ice Sheet using L-band Radiometry",
+        "referenceCn": null,
+        "referenceEn": "D Houtz, Mtzler, C., Naderpour, R., Schwank, M., & Steffen, K. (2021). Quantifying surface melt and liquid water on the greenland ice sheet using l-band radiometry. Remote Sensing of Environment, 256, 112341."
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Satellite Remote Sensing of the Greenland Ice Sheet Ablation Zone: A Review",
+        "referenceCn": null,
+        "referenceEn": "Cooper, M.G., & Smith, L.C. (2019). Satellite Remote Sensing of the Greenland Ice Sheet Ablation Zone: A Review."
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      },
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "光学遥感",
+        "nameEn": "Optical remote sensing"
+      },
+      {
+        "nameCn": "冰冻圈遥感",
+        "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+      },
+      {
+        "nameCn": "冰冻圈遥感产品",
+        "nameEn": "Cryosphere remote sensing products"
+      },
+      {
+        "nameCn": "微波辐射计",
+        "nameEn": "Microwave radiometer"
+      },
+      {
+        "nameCn": "表面冻融",
+        "nameEn": "Surface Freeze-thaw Cycle/State"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "降尺度",
+        "nameEn": "Downscaling"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "格陵兰",
+        "keywordEn": "Greenland"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1985",
+        "keywordEn": "1985",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2000",
+        "keywordEn": "2000",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "2015",
+        "keywordEn": "2015",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": null,
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      },
+      {
+        "titleCn": "时空三极环境大数据平台",
+        "titleEn": "A Big Earth Data Platform for Three Poles"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山地区冰川边界（2018）",
+        "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+      },
+      {
+        "titleCn": "祁连山重点区域人类活动数据集 (2018)",
+        "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
+      },
+      {
+        "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+        "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+      },
+      {
+        "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+        "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+      },
+      {
+        "titleCn": "北半球湖冰物候数据集（1978-2018）",
+        "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+      },
+      {
+        "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+        "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+      },
+      {
+        "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+        "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Understanding surface melt over the Greenland Ice Sheet (GrIS) is important for evaluating the effect of the changing global climate on humanity, and for forecasting sea level rise. Global sea levels are rising, and current predictions suggest that the rate of sea level rise will continue to accelerate. Mass loss of the Greenland Ice Sheet (GrIS) currently contributes about 0.72 mm/yr to global sea level rise, and along with Antarctica, is predicted to become the dominant contributor to global sea level rise within the century. The mass balance quantifies the total mass change of the GrIS and is directly proportional to mean global sea level. It has been shown that the rate of GrIS mass loss is increasing and could contribute to 7-21 cm increase in Global Mean Sea Level (GMSL) by the end of the century. Both the Surface Mass Balance (SMB) and glacier discharge (ice deposited from outlet glaciers directly into the ocean) contribute significantly to the mass balance of the GrIS, and the two are correlated. The SMB includes positive mass contributions from precipitation as well as loss due to evaporation and sublimation in addition to the dominant meltwater runoff loss. Current forecasts, which include uncertainties in basal friction, the lubrication of discharging ice, suggest large uncertainty in the future Greenland mass balance. Accurate knowledge of the current state of the GrIS SMB is thus imperative to predict the possible rate of future global sea level rise. Surface mass loss is expected to increase significantly in the 21st century, compared to discharge, and the SMB is the dominant contributor to uncertainty in GMSL predictions. One of the most direct methods of measuring mass change is by gravimetry from the Gravity Recovery and Climate Experiment (GRACE) satellite. GRACE-derived estimates have their own sources of uncertainty, particularly glacier isostatic adjustment or postglacial rebound and tidal aliasing. Also GRACE measurements typically need more than 5 years of integration to achieve sufficiently accurate estimates of GrIS mass-change. Mass balance can also be studied from laser or radar altimetry but these techniques also have uncertainties introduced by the required knowledge on density distribution over the GrIS. Satellite data have been used to map surface melt on the GrIS, particularly passive microwave, radar backscatter, and visible imagery. However, these methods only provide maps of binary information on melt versus non-melt, and are unable to provide quantitative information about volumetric liquid water. In Houtz et al. (2019) a new method was introduced for the simultaneous retrieval of snow/firn mass-density and snow liquid water content from passive L-band radiometry."
+      ],
+      "research objective": [
+        "We demonstrate a recently developed L-band passive microwave algorithm for the retrieval of snow liquid water and snow and firn density over the GrIS. In this study, we expand corresponding retrievals to the entire GrIS, and show: density, liquid water column, and integrated surface liquid water estimates. We show that liquid water column, down to the penetration depth of L-band microwaves, can be calculated from SMOS-based retrievals using a physically deterministic Emission Model (EM). By integrating retrieved liquid water over time and area we estimate the volume of melt water on the GrIS as a function of time and as an annual total. We discuss how this quantified total melt water relates to the GrIS surface mass loss and thus to the SMB, and we also discuss the limitations of the algorithm and uncertainty contributions."
+      ],
+      "challenges": [
+        "GRACE-derived estimates have their own sources of uncertainty, particularly glacier isostatic adjustment or postglacial rebound and tidal aliasing. Also GRACE measurements typically need more than 5 years of integration to achieve sufficiently accurate estimates of GrIS mass-change. Mass balance can also be studied from laser or radar altimetry but these techniques also have uncertainties introduced by the required knowledge on density distribution over the GrIS. We discuss how this quantified total melt water relates to the GrIS surface mass loss and thus to the SMB, and we also discuss the limitations of the algorithm and uncertainty contributions."
+      ],
+      "methods": [
+        "The resulting SMOS-based WS retrievals are used to quantify liquid water over the GrIS resulting from surface melt of the uppermost firn/snow layer. Here, T0 is computed for each year individually, as opposed to the multi-year mean used in Houtz et al. 2019, to demonstrate a more operationally-ready algorithm. We also only consider a period in the assumed dry snow period (the first 90 Days of the Year (DoY)) in which we assume the firn/snow to be dry, as surface wetness can significantly increase the firn/snow permittivity and therefore change the Brewster angle. For a SMOS orbit i the instantaneous water column at a single pixel Wc, i can be calculated as: Wc , i = WS ⋅ twet. The instantaneous water column Wc, i can now be summed over all observations, and normalized by the number of observations, to obtain annual (yr) liquid water column Wc, yr. The value of Wc, yr is computed for each GrIS pixel on the SMOS Equal-Area Scalable Earth version 2.0 grid (EASE-grid 2.0) (Brodzik et al. 2012)."
+      ],
+      "dataset": [
+        "The retrievals are performed using brightness temperatures from the ESA SMOS satellite. Microwave brightness temperatures measured at 1.4 GHz by the European Space Agency (ESA) Soil Moisture and Ocean Salinity (SMOS) satellite are the sole input to our retrieval algorithm."
+      ],
+      "findings": [
+        "The integrated annual surface liquid water retrieved over the entire ice sheet compares on the same order as modeled estimates of total meltwater available in current literature. The density retrievals show potential for mapping the equilibrium line altitude of the ice sheet by determining where retrieved densities exceed typical seasonal snowpack density, thus indicating the presence of firn."
+      ],
+      "backgroundCn": [
+        "理解格林兰冰盖（GrIS）表面融化对于评估全球气候变化对人类的影响以及预测海平面上升至关重要。全球海平面正在上升，目前的预测表明，海平面上升的速度将继续加快。格林兰冰盖的质量损失目前每年对全球海平面上升贡献约0.72毫米，并且与南极洲一起，预计在本世纪内将成为全球海平面上升的主要贡献者。质量平衡量化了格林兰冰盖的总质量变化，并与全球平均海平面直接成正比。研究表明，格林兰冰盖的质量损失速度正在加快，预计到本世纪末可能对全球平均海平面（GMSL）贡献7-21厘米的增加。表面质量平衡（SMB）和冰川排放（从冰川出口直接沉积到海洋的冰）对格林兰冰盖的质量平衡有显著贡献，两者之间存在相关性。SMB包括来自降水的正质量贡献，以及由于蒸发和升华造成的损失，此外，融水径流损失是主要的损失来源。目前的预测，包括基底摩擦、排放冰的润滑等不确定性，表明未来格林兰质量平衡存在较大不确定性。因此，准确了解格林兰冰盖SMB的当前状态对于预测未来全球海平面上升的可能速度至关重要。预计在21世纪，表面质量损失将显著增加，相较于冰川排放，SMB是全球海平面上升预测中不确定性的主要贡献者。测量质量变化的最直接方法之一是通过重力测量，使用重力恢复与气候实验（GRACE）卫星。GRACE衍生的估计有其自身的不确定性，特别是冰川的等静压调整或后冰川反弹以及潮汐混叠。此外，GRACE测量通常需要超过5年的整合才能获得足够准确的格林兰冰盖质量变化估计。质量平衡也可以通过激光或雷达测高进行研究，但这些技术也引入了对格林兰冰盖上密度分布知识的要求的不确定性。卫星数据已被用于绘制格林兰冰盖的表面融化，特别是被动微波、雷达后向散射和可见光影像。然而，这些方法仅提供融化与非融化的二元信息地图，无法提供关于体积液态水的定量信息。在Houtz等（2019）中，提出了一种新方法，通过被动L波段辐射测量同时检索雪/冰层质量密度和雪液态水含量。"
+      ],
+      "research objectiveCn": [
+        "我们展示了一种新开发的L波段被动微波算法，用于在格陵兰冰盖（GrIS）上获取雪的液态水和雪及冰雪密度。在本研究中，我们将相应的检索扩展到整个格陵兰冰盖，并展示：密度、液态水柱和综合表面液态水估计。我们表明，液态水柱可以通过使用基于SMOS的检索和物理确定性的发射模型（EM）计算，直到L波段微波的穿透深度。通过对检索到的液态水进行时间和区域的积分，我们估算了格陵兰冰盖的融水体积，作为时间的函数和年度总量。我们讨论了这一量化的融水总量如何与格陵兰冰盖的表面质量损失相关联，从而与表面质量平衡（SMB）相关联，并讨论了该算法的局限性和不确定性来源。"
+      ],
+      "challengesCn": [
+        "GRACE衍生的估计有其自身的不确定性来源，特别是冰川等静压调整或后冰川反弹以及潮汐混叠。此外，GRACE测量通常需要超过5年的积分才能获得足够准确的格陵兰冰盖（GrIS）质量变化估计。质量平衡也可以通过激光或雷达高程测量进行研究，但这些技术也引入了对GrIS上密度分布知识的要求所带来的不确定性。我们讨论了量化的总融水如何与GrIS表面质量损失相关联，从而与表面质量平衡（SMB）相关联，并讨论了算法的局限性和不确定性贡献。"
+      ],
+      "methodsCn": [
+        "基于SMOS的水分检索结果用于量化格陵兰冰盖（GrIS）上层雪/冰层表面融化所产生的液态水。在这里，T0是针对每年单独计算的，而不是像Houtz等人2019年所使用的多年均值，以展示更具操作性的算法。我们还仅考虑假定干雪期的前90天（年初的第90天），在此期间我们假设雪/冰层是干燥的，因为表面湿度会显著增加雪/冰层的介电常数，从而改变布鲁斯特角。对于SMOS轨道i，单个像素的瞬时水柱Wc,i可以计算为：Wc,i = WS ⋅ twet。瞬时水柱Wc,i现在可以在所有观测值上求和，并通过观测值的数量进行归一化，以获得年度（yr）液态水柱Wc,yr。Wc,yr的值是在SMOS等面积可缩放地球版本2.0网格（EASE-grid 2.0）（Brodzik等人2012年）上为每个GrIS像素计算的。"
+      ],
+      "datasetCn": [
+        "检索是使用欧洲航天局（ESA）土壤湿度和海洋盐度（SMOS）卫星的亮温进行的。由欧洲航天局（ESA）土壤湿度和海洋盐度（SMOS）卫星在1.4 GHz频率下测量的微波亮温是我们检索算法的唯一输入。"
+      ],
+      "findingsCn": [
+        "整个冰盖的综合年表面液态水的提取量与当前文献中模型估计的可用总融水量相当。密度提取显示出通过确定提取的密度超过典型季节性雪盖密度的地方来绘制冰盖平衡线高度的潜力，从而指示出存在firn（雪冻层）。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Can passive microwave satellite data provide binary information about melt versus non-melt over the Greenland Ice Sheet?",
+        "QuestionCn": "被动微波卫星数据能否提供关于格陵兰冰盖融化与非融化的二元信息？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Do GRACE-derived estimates of the Greenland Ice Sheet mass change require more than 5 years of data for accurate results?",
+        "QuestionCn": "GRACE衍生的格林兰冰盖质量变化估计是否需要超过5年的数据才能获得准确结果？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "Where are the challenges of GRACE-derived estimates in studying the mass balance of the Greenland Ice Sheet particularly evident?",
+        "QuestionCn": "GRACE衍生的估计在研究格陵兰冰盖的质量平衡时，特别明显的挑战在哪里？",
+        "AnswerEn": "glacier isostatic adjustment",
+        "AnswerCn": "冰川均衡调整",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What is the role of microwave brightness temperatures from the SMOS satellite in the data collection methods for studying surface melt over the Greenland Ice Sheet?",
+        "QuestionCn": "来自SMOS卫星的微波亮温在格陵兰冰盖地表融化研究的数据收集方法中有什么作用？",
+        "AnswerEn": "Microwave brightness temperatures at 1.4 GHz",
+        "AnswerCn": "微波亮度温度在1.4 GHz",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method that improves spatial resolution for studying Greenland Ice Sheet surface melt?",
+        "QuestionCn": "您能否提供一种数据收集方法的例子，以提高对格林兰冰盖表面融化研究的空间分辨率？",
+        "AnswerEn": "A data collection method that improves spatial resolution involves using microwave radiometer and optical albedo products. These are combined using the Gram-Schmidt method to enhance spatial resolution from 25 km to 0.05˚, allowing for detailed analysis of surface melt patterns.",
+        "AnswerCn": "一种提高空间分辨率的数据收集方法涉及使用微波辐射计和光学反照率产品。这些数据通过Gram-Schmidt方法结合，从25公里提升到0.05度的空间分辨率，从而允许对表面融化模式进行详细分析。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced when using satellite data to map surface melt on the Greenland Ice Sheet?",
+        "QuestionCn": "使用卫星数据绘制格林兰冰盖表面融化情况时面临的一个挑战是什么？",
+        "AnswerEn": "One challenge is that satellite data often only provide binary maps of melt versus non-melt, lacking quantitative information about volumetric liquid water. This limits the ability to fully understand meltwater dynamics and its contribution to surface mass loss.",
+        "AnswerCn": "一个挑战是卫星数据通常只提供融化与非融化的二元地图，缺乏关于体积液态水的定量信息。这限制了我们充分理解融水动态及其对表面质量损失贡献的能力。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Could you give an example of a dataset that has been used to retrieve snow liquid water content over the Greenland Ice Sheet?",
+        "QuestionCn": "您能否提供一个用于检索格陵兰冰盖上雪液态水含量的数据集的示例？",
+        "AnswerEn": "An example of a dataset used for this purpose is from the ESA SMOS satellite, which provides microwave brightness temperatures measured at 1.4 GHz. This data is used in an algorithm to retrieve snow liquid water content and density over the Greenland Ice Sheet.",
+        "AnswerCn": "一个用于此目的的数据集来自欧洲空间局的SMOS卫星，该卫星提供在1.4 GHz频率下测量的微波亮度温度。这些数据用于一个算法，以获取格林兰冰盖上的雪液态水含量和密度。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the key features of datasets used for analyzing the surface melt of the Greenland Ice Sheet?",
+        "QuestionCn": "用于分析格林兰冰盖表面融化的数据库的关键特征是什么？",
+        "AnswerEn": "high-resolution spatial data, resolution of 0.05˚, microwave radiometer data, optical albedo products, binary information on melt versus non-melt states",
+        "AnswerCn": "高分辨率空间数据，分辨率为0.05˚，微波辐射计数据，光学反照率产品，融化与非融化状态的二元信息。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What characteristics define the data collection methods for measuring the Greenland Ice Sheet's Surface Mass Balance (SMB)?",
+        "QuestionCn": "测量格林兰冰盖表面质量平衡（SMB）的数据收集方法的特点包括哪些？",
+        "AnswerEn": "satellite data, passive microwave, radar backscatter, binary melt/non-melt maps, gravimetry, GRACE satellite, integration over several years, uncertainties, glacier isostatic adjustment",
+        "AnswerCn": "卫星数据，被动微波，雷达后向散射，二元融化/非融化图，重力测量，GRACE卫星，多年整合，不确定性，冰川均衡调整。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "How many years of integration are typically needed for satellite gravimetry measurements to achieve accurate estimates of mass change over the Greenland Ice Sheet?",
+        "QuestionCn": "通常需要多少年的整合才能通过卫星重力测量准确估计格林兰冰盖的质量变化？",
+        "AnswerEn": "5 years",
+        "AnswerCn": "5年",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What is the spatial resolution achieved when microwave radiometer data is combined with MODIS GLASS albedo products for surface melt detection over the Greenland Ice Sheet?",
+        "QuestionCn": "当将微波辐射计数据与MODIS GLASS反照率产品结合用于格陵兰冰盖表面融化检测时，所达到的空间分辨率是多少？",
+        "AnswerEn": "25 km, 0.05˚",
+        "AnswerCn": "25公里，0.05˚",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How much does the mass loss of the Greenland Ice Sheet currently contribute annually to global sea level rise?",
+        "QuestionCn": "格林兰冰盖目前每年对全球海平面上升的质量损失贡献多少？",
+        "AnswerEn": "0.72 mm/yr",
+        "AnswerCn": "0.72 毫米/年",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is the significance of using microwave radiometry in data collection for surface melt analytics over ice sheets?",
+        "QuestionCn": "在冰盖表面融化分析的数据收集中使用微波辐射计的意义是什么？",
+        "AnswerEn": "Microwave radiometry, particularly from satellites like the SMOS, is significant in surface melt analytics over ice sheets as it provides brightness temperature measurements that can be used to retrieve snow liquid water and snow and firn density. This method allows for the analysis of liquid water resulting from surface melt, which is essential to understanding the surface mass balance and the contribution to global sea level rise.",
+        "AnswerCn": "微波辐射计，特别是来自像SMOS这样的卫星，在冰盖表面融化分析中具有重要意义，因为它提供了亮度温度测量，可以用来获取雪的液态水和雪及冰渣的密度。这种方法允许分析由表面融化产生的液态水，这对于理解表面质量平衡及其对全球海平面上升的贡献至关重要。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What challenges are associated with gravimetry-based methods for measuring mass change in ice sheets?",
+        "QuestionCn": "与基于重力测量的方法测量冰盖质量变化相关的挑战有哪些？",
+        "AnswerEn": "Gravimetry-based methods, such as those using the GRACE satellite, face challenges like uncertainties due to glacier isostatic adjustment or postglacial rebound, tidal aliasing, and the requirement of more than five years of data integration to achieve accurate estimates of ice sheet mass change. These challenges can affect the precision of mass balance studies.",
+        "AnswerCn": "基于重力测量的方法，例如使用GRACE卫星，面临着一些挑战，如由于冰川等静态调整或后冰川反弹引起的不确定性、潮汐混叠，以及需要超过五年的数据整合才能获得冰盖质量变化的准确估计。这些挑战可能会影响质量平衡研究的精确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the integration of passive microwave data with optical albedo products improve dataset resolution in ice sheet surface melt studies?",
+        "QuestionCn": "被动微波数据与光学反照率产品的集成如何改善冰盖表面融化研究中的数据集分辨率？",
+        "AnswerEn": "The integration of passive microwave data with optical albedo products, such as using the Gram-Schmidt method, improves dataset resolution by enhancing the spatial resolution from 25 km to 0.05˚. This fusion captures clearer spatial details and maintains the dynamic range of the original radiometric data, effectively suppressing noise and improving the accuracy of surface melt detection over ice sheets.",
+        "AnswerCn": "被动微波数据与光学反照率产品的集成，例如使用Gram-Schmidt方法，可以通过将数据集的分辨率从25公里提高到0.05度，从而改善数据集的分辨率。这种融合捕捉到了更清晰的空间细节，并保持了原始辐射数据的动态范围，有效抑制了噪声，提高了冰盖表面融化检测的准确性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "How do the data collection methods for surface melt over the Greenland Ice Sheet using microwave radiometry compare to those using gravimetry from the GRACE satellite?",
+        "QuestionCn": "格林兰冰盖表面融化的数据收集方法中，微波辐射计与GRACE卫星的重力测量方法相比，有何不同？",
+        "AnswerEn": "Microwave radiometry, as used for surface melt detection, provides high-resolution spatial data by integrating microwave radiometer data with optical reflectance products, enabling detailed mapping of melt areas. In contrast, gravimetry from the GRACE satellite measures mass changes over time and requires longer integration periods (more than 5 years) to achieve accurate estimates, due to uncertainties like glacier isostatic adjustment and tidal aliasing.",
+        "AnswerCn": "微波辐射计用于表面融化检测，通过将微波辐射计数据与光学反射产品相结合，提供高分辨率的空间数据，从而实现融化区域的详细映射。相比之下，GRACE卫星的重力测量用于测量随时间变化的质量变化，需要超过5年的较长积分周期才能获得准确的估计，因为存在冰川等静态调整和潮汐混叠等不确定性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the differences in spatial resolution and data type between datasets derived from microwave radiometry and those from laser or radar altimetry for studying the Greenland Ice Sheet?",
+        "QuestionCn": "微波辐射测量和激光或雷达高程测量所衍生的数据集在空间分辨率和数据类型方面有什么区别，以研究格林兰冰盖？",
+        "AnswerEn": "Datasets derived from microwave radiometry, as mentioned, have a spatial resolution of 0.05˚ and provide binary data indicating melt or non-melt areas. On the other hand, laser or radar altimetry datasets typically offer different spatial resolutions and include quantitative altimetric measurements to assess changes in ice sheet elevation, which can be affected by uncertainties in density distribution.",
+        "AnswerCn": "来自微波辐射测量的数据集具有0.05˚的空间分辨率，并提供指示融化或非融化区域的二进制数据。另一方面，激光或雷达高程测量数据集通常提供不同的空间分辨率，并包含定量的高程测量，以评估冰盖高度的变化，这可能受到密度分布不确定性的影响。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "In what ways do passive microwave methods for retrieving snow liquid water content differ from methods using visible imagery in evaluating the Greenland Ice Sheet's surface melt?",
+        "QuestionCn": "被动微波方法在评估格林兰冰盖表面融化时与使用可见光影像的方法在获取雪液态水含量方面有何不同？",
+        "AnswerEn": "Passive microwave methods for retrieving snow liquid water content, such as those using L-band microwaves, provide quantitative estimates of liquid water volume and density over time and area, allowing detailed understanding of meltwater contributions. Visible imagery, however, primarily offers binary maps of melt versus non-melt without quantitative volumetric information, limiting its ability to assess the total meltwater content.",
+        "AnswerCn": "被动微波方法（如使用L波段微波）用于获取雪的液态水含量，能够提供液态水体积和密度的定量估计，允许对融水贡献进行详细理解。然而，可见光影像主要提供融化与非融化的二元地图，而没有定量的体积信息，这限制了其评估总融水含量的能力。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can the integration of high-resolution satellite data improve the understanding of surface melt patterns on the Greenland Ice Sheet?",
+        "QuestionCn": "高分辨率卫星数据的整合如何改善对格陵兰冰盖表面融化模式的理解？",
+        "AnswerEn": "The integration of microwave radiometer and optical albedo products can enhance spatial resolution, providing clearer spatial details of surface melt patterns. This method allows for a better response to surface melt dynamics and helps in reducing noise in radiometer data, leading to more accurate datasets.",
+        "AnswerCn": "微波辐射计与光学反照率产品的结合可以提高空间分辨率，提供更清晰的表面融化模式空间细节。这种方法能够更好地响应表面融化动态，并有助于减少辐射计数据中的噪声，从而生成更准确的数据集。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What challenges arise from using satellite-derived measurements to infer surface mass changes on the Greenland Ice Sheet, and how might these be addressed?",
+        "QuestionCn": "使用卫星衍生测量来推断格陵兰冰盖的表面质量变化时，会出现哪些挑战，以及如何解决这些挑战？",
+        "AnswerEn": "Challenges include uncertainties from glacier isostatic adjustment, postglacial rebound, and tidal aliasing in GRACE data, as well as density distribution knowledge for altimetry. Addressing these could involve refining measurement techniques, using longer integration periods, or integrating multiple data sources for cross-validation.",
+        "AnswerCn": "挑战包括来自冰川等静压调整、后冰川反弹和GRACE数据中的潮汐混叠的不确定性，以及对高程测量的密度分布知识的了解。解决这些问题可能涉及改进测量技术、使用更长的积分周期，或整合多个数据源进行交叉验证。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the high resolution improvement in datasets dealing with surface melt over the Greenland Ice Sheet?",
+        "QuestionCn": "导致格陵兰冰盖表面融化数据集高分辨率改善的原因是什么？",
+        "AnswerEn": "The high resolution improvement in datasets dealing with surface melt over the Greenland Ice Sheet is caused by the fusion of microwave radiometer band composite data and MODIS GLASS albedo products using the Gram-Schmidt method, which enhances the spatial resolution from 25 km to 0.05˚.",
+        "AnswerCn": "对格林兰冰盖表面融化数据集的高分辨率改进是通过融合微波辐射计波段复合数据和MODIS GLASS反照率产品，采用Gram-Schmidt方法实现的，从而将空间分辨率从25公里提高到0.05˚。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why are there uncertainties in current methods for estimating the mass change of the Greenland Ice Sheet?",
+        "QuestionCn": "当前估算格林兰冰盖质量变化的方法存在不确定性的原因是什么？",
+        "AnswerEn": "Uncertainties in current methods for estimating the mass change of the Greenland Ice Sheet arise from factors such as glacier isostatic adjustment or postglacial rebound and tidal aliasing in GRACE-derived estimates, as well as the required knowledge on density distribution over the ice sheet in laser or radar altimetry techniques.",
+        "AnswerCn": "当前估计格林兰冰盖质量变化的方法存在不确定性，这些不确定性来源于冰川的等静压调整或后冰川反弹，以及GRACE衍生估计中的潮汐混叠问题，还有激光或雷达测高技术中对冰盖密度分布的要求知识。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What factors contribute to the challenges in accurately quantifying volumetric liquid water on the Greenland Ice Sheet?",
+        "QuestionCn": "哪些因素导致准确量化格林兰冰盖上体积液态水的挑战？",
+        "AnswerEn": "Challenges in accurately quantifying volumetric liquid water on the Greenland Ice Sheet are contributed by the limitations of satellite methods used to map surface melt, which typically provide only binary information on melt versus non-melt, and the uncertainties in the retrieval algorithms that estimate snow liquid water and snow and firn density.",
+        "AnswerCn": "准确量化格林兰冰盖上体积液态水的挑战，源于用于映射表面融化的卫星方法的局限性，这些方法通常仅提供融化与非融化的二元信息，以及在估算雪中液态水和雪与冰渣密度时的算法不确定性。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What impact does integrating multiple satellite data sources have on the spatial resolution and accuracy of ice sheet surface melt datasets?",
+        "QuestionCn": "整合多个卫星数据源对冰盖表面融化数据集的空间分辨率和准确性有什么影响？",
+        "AnswerEn": "Integrating data from microwave radiometers and optical reflectance products enhances spatial resolution from 25 km to 0.05˚, providing clearer spatial details and maintaining the dynamic range of the original radiometer products while suppressing noise, thus improving the accuracy of surface melt detection.",
+        "AnswerCn": "将微波辐射计和光学反射产品的数据进行整合，可以将空间分辨率从25公里提高到0.05度，提供更清晰的空间细节，同时保持原始辐射计产品的动态范围，并抑制噪声，从而提高表面融化检测的准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the use of different satellite-derived data methods affect the estimation of surface mass loss in the Greenland Ice Sheet?",
+        "QuestionCn": "不同卫星衍生数据方法的使用如何影响格陵兰冰盖表面质量损失的估计？",
+        "AnswerEn": "Different satellite-derived methods, such as passive microwave, radar backscatter, and visible imagery, provide only binary information on melt versus non-melt, lacking quantitative volumetric information. In contrast, using passive L-band radiometry can offer simultaneous retrieval of snow/firn mass-density and snow liquid water content, allowing for more detailed estimations of surface mass loss.",
+        "AnswerCn": "不同的卫星衍生方法，如被动微波、雷达后向散射和可见光影像，仅提供关于融化与非融化的二元信息，缺乏定量的体积信息。相比之下，使用被动L波段辐射计可以同时获取雪/冰雪的质量密度和雪的液态水含量，从而允许对表面质量损失进行更详细的估算。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary objective of generating a high-resolution surface melt product over the Greenland Ice Sheet using microwave radiometer and optical albedo products?",
+        "QuestionCn": "使用微波辐射计和光学反照率产品生成格陵兰冰盖高分辨率表面融化产品的主要目标是什么？",
+        "AnswerEn": "The primary objective is to provide important information for studying the surface melt of the Greenland Ice Sheet and its response to global climate change by improving spatial resolution to 0.05˚, allowing for clearer spatial detail and effective noise suppression.",
+        "AnswerCn": "主要目标是提供重要信息，以研究格陵兰冰盖的表面融化及其对全球气候变化的响应，通过将空间分辨率提高到0.05˚，以实现更清晰的空间细节和有效的噪声抑制。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why is it significant to develop an L-band passive microwave algorithm for retrieving snow liquid water and firn density over the Greenland Ice Sheet?",
+        "QuestionCn": "为什么开发用于检索格陵兰冰盖上雪液态水和冰原密度的L波段被动微波算法具有重要意义？",
+        "AnswerEn": "Developing this algorithm is significant because it allows for the retrieval of snow liquid water and firn density over the Greenland Ice Sheet, which helps quantify the volume of meltwater and understand its relation to surface mass loss and surface mass balance, contributing to predictions of future global sea level rise.",
+        "AnswerCn": "开发这个算法具有重要意义，因为它可以检索格林兰冰盖上的雪液态水和雪密度，这有助于量化融化水的体积，并理解其与表面质量损失和表面质量平衡的关系，从而有助于预测未来全球海平面上升。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What is the intention behind using brightness temperatures from the SMOS satellite as the sole input for a retrieval algorithm over the Greenland Ice Sheet?",
+        "QuestionCn": "使用SMOS卫星的亮温作为格陵兰冰盖反演算法唯一输入的意图是什么？",
+        "AnswerEn": "The intention is to quantify liquid water over the Greenland Ice Sheet resulting from surface melt, which is critical for understanding surface mass loss, and to provide accurate data that can be used to estimate annual liquid water columns and support assessments of the ice sheet's impact on global sea level rise.",
+        "AnswerCn": "目的是量化格陵兰冰盖因表面融化而产生的液态水，这对于理解表面质量损失至关重要，并提供准确的数据，以便估算年度液态水柱，并支持对冰盖对全球海平面上升影响的评估。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedures are involved in enhancing the spatial resolution of ice sheet surface melt datasets using satellite data?",
+        "QuestionCn": "增强冰盖表面融化数据集空间分辨率的程序涉及哪些步骤？",
+        "AnswerEn": "To enhance the spatial resolution of ice sheet surface melt datasets, the process involves using a combination of microwave radiometer and optical albedo products. The Gram-Schmidt method is applied to combine microwave radiometer band data with MODIS GLASS albedo products, increasing the spatial resolution from 25 km to 0.05˚. This approach also includes using threshold methods based on the difference in brightness temperature between daily and winter measurements to extract surface melt data.",
+        "AnswerCn": "为了提高冰盖表面融化数据集的空间分辨率，该过程涉及结合微波辐射计和光学反照率产品。采用Gram-Schmidt方法将微波辐射计波段数据与MODIS GLASS反照率产品结合，从而将空间分辨率从25公里提高到0.05˚。该方法还包括基于日常和冬季测量之间亮温差异的阈值方法，以提取表面融化数据。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How are liquid water and density retrievals from snow and firn conducted over the Greenland Ice Sheet using passive microwave algorithms?",
+        "QuestionCn": "如何使用被动微波算法从格陵兰冰盖上的雪和冰层中进行液态水和密度检索？",
+        "AnswerEn": "Liquid water and density retrievals are conducted by applying an L-band passive microwave algorithm using brightness temperatures from the ESA SMOS satellite. The algorithm calculates the liquid water column down to the penetration depth of L-band microwaves using a physically deterministic Emission Model. The retrievals are performed for each pixel on the Greenland Ice Sheet using brightness temperature measurements at 1.4 GHz, leading to estimates of the volume of melt water over time and area.",
+        "AnswerCn": "液态水和密度的检索是通过应用L波段被动微波算法，使用来自欧洲航天局SMOS卫星的亮度温度进行的。该算法利用物理确定性发射模型计算L波段微波的穿透深度下的液态水柱。检索是在格陵兰冰盖的每个像素上进行的，使用1.4 GHz的亮度温度测量，进而估算随时间和区域变化的融化水体积。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the challenges associated with using GRACE satellite data for measuring mass change over the Greenland Ice Sheet, and how do these challenges affect the data collection process?",
+        "QuestionCn": "使用GRACE卫星数据测量格林兰冰盖的质量变化面临的挑战有哪些，这些挑战如何影响数据收集过程？",
+        "AnswerEn": "Challenges associated with using GRACE satellite data include uncertainties related to glacier isostatic adjustment or postglacial rebound and tidal aliasing. Additionally, GRACE measurements require more than 5 years of integration to achieve accurate estimates of mass change. These challenges affect the data collection process by introducing uncertainties in mass balance studies and necessitating long-term data collection and integration to produce reliable results.",
+        "AnswerCn": "使用GRACE卫星数据面临的挑战包括与冰川等静压调整或后冰川反弹相关的不确定性以及潮汐混叠。此外，GRACE测量需要超过5年的集成才能获得准确的质量变化估计。这些挑战通过在质量平衡研究中引入不确定性，影响数据收集过程，并需要长期的数据收集和集成以产生可靠的结果。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methods enable the enhancement of spatial resolution in datasets concerning the Greenland Ice Sheet surface melt?",
+        "QuestionCn": "哪些方法可以增强关于格林兰冰盖表面融化的数据集的空间分辨率？",
+        "AnswerEn": "The enhancement of spatial resolution is achieved by using the Gram-Schmidt method to fuse microwave radiometer data with MODIS GLASS albedo products, improving the spatial resolution from 25 km to 0.05˚.",
+        "AnswerCn": "通过使用Gram-Schmidt方法将微波辐射计数据与MODIS GLASS反照率产品融合，实现了空间分辨率的增强，将空间分辨率从25公里提高到0.05˚。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How do certain satellite technologies enable the retrieval of snow liquid water content over the Greenland Ice Sheet?",
+        "QuestionCn": "某些卫星技术如何实现格陵兰冰盖上积雪液态水含量的获取？",
+        "AnswerEn": "The ESA SMOS satellite, through its microwave brightness temperatures at 1.4 GHz, enables the retrieval of snow liquid water content by using a physically deterministic Emission Model (EM) to calculate the liquid water column over time.",
+        "AnswerCn": "ESA SMOS 卫星通过其在 1.4 GHz 的微波亮温，利用物理确定性发射模型（EM）计算液态水柱，从而实现对雪液态水含量的检索。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What challenges are associated with using gravimetry from satellites like GRACE in obtaining accurate mass-change estimates for the Greenland Ice Sheet?",
+        "QuestionCn": "使用像GRACE这样的卫星重力测量来获取格林兰冰盖的准确质量变化估计时，面临哪些挑战？",
+        "AnswerEn": "Challenges include uncertainties such as glacier isostatic adjustment, postglacial rebound, and tidal aliasing, which require more than 5 years of integration for sufficiently accurate estimates.",
+        "AnswerCn": "挑战包括不确定性，如冰川等静态调整、后冰川反弹和潮汐混叠，这些都需要超过5年的整合才能获得足够准确的估计。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might there be challenges in achieving high spatial resolution in datasets that map surface melt over the Greenland Ice Sheet?",
+        "QuestionCn": "为什么在绘制格陵兰冰盖表面融化的数据集中实现高空间分辨率可能会面临挑战？",
+        "AnswerEn": "Achieving high spatial resolution can be challenging due to the need to integrate data from different sources, such as microwave radiometers and optical reflectance products, which have varying resolutions. The fusion of these data types to enhance spatial resolution requires sophisticated methods like the Gram-Schmidt process, and this integration can be affected by noise and other uncertainties inherent in the original datasets.",
+        "AnswerCn": "实现高空间分辨率可能面临挑战，因为需要整合来自不同来源的数据，例如微波辐射计和光学反射产品，这些数据具有不同的分辨率。为了增强空间分辨率，融合这些数据类型需要复杂的方法，如Gram-Schmidt过程，而这种集成可能受到原始数据集中固有的噪声和其他不确定性的影响。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why do some data collection methods struggle to provide quantitative information about the volumetric liquid water in the Greenland Ice Sheet?",
+        "QuestionCn": "为什么一些数据收集方法难以提供关于格林兰冰盖中液态水体积的定量信息？",
+        "AnswerEn": "Traditional satellite data collection methods like passive microwave, radar backscatter, and visible imagery typically deliver binary maps indicating melt versus non-melt conditions, but they lack the capability to quantify volumetric liquid water. These methods are limited in their ability to penetrate the snow and firn layers deeply enough to assess the liquid water content accurately.",
+        "AnswerCn": "传统的卫星数据收集方法，如被动微波、雷达后向散射和可见光影像，通常提供指示融化与非融化条件的二元地图，但它们无法量化体积液态水。这些方法在深入雪层和冰层以准确评估液态水含量方面存在局限性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Why might the retrieval of snow liquid water and density over the Greenland Ice Sheet face uncertainties and limitations?",
+        "QuestionCn": "在格林兰冰盖上获取雪的液态水和密度可能面临不确定性和局限性的原因是什么？",
+        "AnswerEn": "The retrieval of snow liquid water and density faces uncertainties due to factors such as glacier isostatic adjustment, postglacial rebound, and tidal aliasing, which affect GRACE-derived estimates. Additionally, satellite measurements require more than five years of integration to achieve accurate mass-change estimates, and variations in snow and firn density contribute further challenges to precise retrievals.",
+        "AnswerCn": "雪的液态水和密度的获取面临不确定性，这些不确定性源于冰川的等静态调整、后冰川反弹和潮汐混叠，这些因素影响了基于GRACE的估算。此外，卫星测量需要超过五年的整合才能获得准确的质量变化估算，而雪和雪层密度的变化进一步增加了精确获取的挑战。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "How would you evaluate the effectiveness of using microwave radiometry and optical albedo products in enhancing spatial resolution for ice sheet surface melt datasets?",
+        "QuestionCn": "如何评估使用微波辐射计和光学反照率产品在增强冰盖表面融化数据集空间分辨率方面的有效性？",
+        "AnswerEn": "The use of microwave radiometry and optical albedo products is deemed effective in enhancing spatial resolution for ice sheet surface melt datasets. By employing the Gram-Schmidt method, the integration of these products raises the spatial resolution from 25 km to 0.05˚, providing clearer spatial detail and maintaining the dynamic range of the original radiometer products while effectively suppressing noise.",
+        "AnswerCn": "微波辐射计和光学反照率产品的使用被认为在增强冰盖表面融化数据集的空间分辨率方面是有效的。通过采用Gram-Schmidt方法，这些产品的空间分辨率从25公里提高到0.05˚，提供了更清晰的空间细节，并保持了原始辐射计产品的动态范围，同时有效抑制了噪声。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand how microwave radiometry data is integrated with optical albedo products to enhance spatial resolution in ice sheet melt studies.",
+        "QuestionCn": "我不明白微波辐射计数据是如何与光学反照率产品结合以提高冰盖融化研究的空间分辨率的。",
+        "AnswerEn": "The integration involves using the Gram-Schmidt method to combine microwave radiometer data with MODIS GLASS albedo products, which improves spatial resolution from 25 km to 0.05˚. The method synthesizes the microwave radiometer bands with the optical data to achieve finer spatial detail while maintaining the dynamic range of the original radiometer data.",
+        "AnswerCn": "该集成涉及使用Gram-Schmidt方法将微波辐射计数据与MODIS GLASS反照率产品结合，从而将空间分辨率从25公里提高到0.05˚。该方法将微波辐射计波段与光学数据合成，以实现更精细的空间细节，同时保持原始辐射计数据的动态范围。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I'm unclear about the specific challenges faced when using satellite data to map surface melt over the Greenland Ice Sheet.",
+        "QuestionCn": "我对使用卫星数据绘制格林兰冰盖表面融化情况时面临的具体挑战感到不清楚。",
+        "AnswerEn": "Challenges with satellite data include uncertainties related to postglacial rebound, tidal aliasing in GRACE measurements, and the need for more than five years of data for accurate mass-change estimates. Additionally, methods like passive microwave, radar backscatter, and visible imagery provide only binary melt/non-melt maps without quantitative volumetric information.",
+        "AnswerCn": "卫星数据面临的挑战包括与后冰期反弹相关的不确定性、GRACE测量中的潮汐混叠，以及需要超过五年的数据才能准确估计质量变化。此外，像被动微波、雷达后向散射和可见光影像等方法仅提供二元的融化/非融化地图，而没有定量的体积信息。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I don't understand the importance of quantifying the liquid water column in snow and firn on the ice sheet.",
+        "QuestionCn": "我不理解量化冰盖上雪和冰渣中的液态水柱的重要性。",
+        "AnswerEn": "Quantifying the liquid water column is crucial as it helps estimate the volume of meltwater over time and area, which relates to the Greenland Ice Sheet's surface mass loss. This information is essential for understanding the Surface Mass Balance (SMB) and its contribution to global sea level rise predictions.",
+        "AnswerCn": "量化液态水柱是至关重要的，因为它有助于估算随时间和区域变化的融水体积，这与格林兰冰盖的表面质量损失有关。这些信息对于理解表面质量平衡（SMB）及其对全球海平面上升预测的贡献至关重要。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please outline the challenges faced in deriving accurate mass balance estimates for the Greenland Ice Sheet and discuss how these challenges impact data collection and analysis.",
+        "QuestionCn": "概述在推导格林兰冰盖准确的质量平衡估计时面临的挑战，并讨论这些挑战如何影响数据收集和分析。",
+        "AnswerEn": "Challenges in deriving mass balance estimates include uncertainties from glacier isostatic adjustment, postglacial rebound, and tidal aliasing, especially in GRACE-derived estimates which require long integration periods for accuracy. Laser and radar altimetry also present challenges due to uncertainties in density distribution knowledge over the ice sheet. These challenges impact data collection by introducing significant uncertainty in mass change measurements, affecting the reliability of predictions related to global sea level rise.",
+        "AnswerCn": "在推导质量平衡估计时面临的挑战包括来自冰川等静态调整、后冰川反弹和潮汐混叠的不确定性，尤其是在GRACE衍生的估计中，这些估计需要较长的积分周期才能达到准确性。激光和雷达测高也存在挑战，因为对冰盖上密度分布的知识存在不确定性。这些挑战影响了数据收集，给质量变化测量引入了显著的不确定性，从而影响了与全球海平面上升相关的预测的可靠性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please analyze the methods used to estimate snow liquid water content and firn density over the Greenland Ice Sheet and discuss their implications for understanding surface mass loss.",
+        "QuestionCn": "请分析用于估计格林兰冰盖上雪的液态水含量和冰雪密度的方法，并讨论它们对理解表面质量损失的影响。",
+        "AnswerEn": "The methods involve using a recently developed L-band passive microwave algorithm to retrieve snow liquid water and firn density over the Greenland Ice Sheet. The approach employs brightness temperatures from the SMOS satellite and a physically deterministic Emission Model to estimate liquid water columns. These methods provide a way to quantify surface mass loss more directly and relate it to Surface Mass Balance, contributing to a better understanding of mass changes and their implications for sea level rise.",
+        "AnswerCn": "这些方法涉及使用最近开发的L波段被动微波算法来获取格陵兰冰盖上的雪液态水和雪密度。该方法利用SMOS卫星的亮温数据和一个物理确定性的发射模型来估算液态水柱。这些方法提供了一种更直接量化表面质量损失并将其与表面质量平衡相关联的方式，有助于更好地理解质量变化及其对海平面上升的影响。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

@@ -1,519 +1,519 @@
 {
-    "id": "92685bff-8319-4a8e-b020-e299a7f64a16",
-    "relatedPaper": 1,
-    "context": {
-        "metadata": {
-            "titleEn": "0.05 ° daily scale fusion dataset of soil moisture in the Qinghai Tibet Plateau region (1961-2019)",
-            "titleCn": "青藏高原地区土壤水0.05°日尺度融合数据集（1961-2019）",
-            "description": "This dataset employs the Climate Adaptive Transfer Learning (CATL) framework to generate a daily-scale dataset of soil moisture in the Tibetan Plateau from 1961 to 2019, with a spatial resolution of 0.05°. The dataset integrates ERA5-LAND reanalysis data with in-situ measurement data provided by the International Soil Moisture Network (ISMN), significantly improving the accuracy and reliability of soil moisture estimates in data-scarce regions.\n\nThe dataset is developed by selecting source domains with climatic features similar to the Tibetan Plateau and using a hybrid model that combines Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks. By training within the source domains and then fine-tuning the model for the target domain, namely the Tibetan Plateau, this strategy not only fully leverages the long-term spatiotemporal advantages of the ERA5-LAND dataset but also effectively reduces the inherent error in the data and alleviates the issue of scarce soil water ground station data in the Tibetan Plateau region.\n\nPerformance validation of the dataset shows that it has a higher correlation coefficient (CC=0.755) and lower unbiased Root Mean Square Error (ubRMSE=0.042) compared to the SMAPL3 data between 2015 and 2019. Moreover, in the historical data reconstruction from 1961 to 2010, the dataset achieved an 11.3% improvement in correlation coefficient and a 1.5% reduction in unbiased Root Mean Square Error compared to the original ERA5-Land reanalysis data. These achievements highlight the high adaptability of the CATL framework to regions significantly affected by climate change and the increased estimation accuracy it provides.",
-            "descriptionCn": "本数据集采用气候适应性迁移学习（CATL）框架，生成了1961至2019年期间的青藏高原土壤湿度日尺度数据集，具备0.05°的空间分辨率。该数据集融合了ERA5-LAND再分析数据与国际土壤湿度网络（ISMN）提供的原位测量数据，针对数据稀缺的地区，极大地提升了土壤湿度估计的准确性与可靠性。\n数据集通过选择气候特征与青藏高原相似的区域作为模型训练的源域，并采用结合了卷积神经网络（CNN）与长短期记忆网络（LSTM）的融合模型。通过在源域内进行训练后，再将模型通过微调策略迁移到目标域，即青藏高原，这一策略不仅充分利用了ERA5-LAND数据集覆盖的长期时空优势，还有效降低了数据的固有误差，缓解了青藏高原地区土壤水地面站点数据稀缺的问题。\n本数据集的性能验证显示，其在2015至2019年间相比于SMAPL3数据具有更高的相关系数（CC=0.755）和更低的无偏均方根误差（ubRMSE=0.042）。此外，在1961至2010年的历史数据重建方面，本数据集相较于原始ERA5-Land再分析数据，实现了相关系数的11.3%提升和无偏均方根误差的1.5%降低，这一成果凸显了CATL框架对于应对气候变化显著区域的高度适应性和提升的估计准确性。",
-            "instructions": "The file is stored in netcdf4 format, and all data is stored in the qtp.dataset_1961-2019.nc file, which contains three dimensions: \"time\", \"lat\", and \"lon\", corresponding to time, latitude, and longitude, respectively. The time dimension is indexed in the format of \"Y-M-D\", and the dimensions and longitude are stored in float64 format.",
-            "instructionsCn": "文件以netcdf4格式存储，所有数据均存储于qtp_dataset_1961-2019.nc文件中，文件中包含三个维度，“time”，“lat”，“lon”，分别对应时间、纬度和经度。时间维度按照“Y-M-D”的格式进行索引，维度和经度以float64格式存储。",
-            "east": 66.15,
-            "west": 104.8,
-            "south": 24.2,
-            "north": 40.85,
-            "startTime": "1961-01-01 00:00:00",
-            "endTime": "2019-12-31 00:00:00",
-            "fileSize": 22283234244.0,
-            "cstr": "18406.11.Terre.tpdc.301105",
-            "doi": "10.11888/Terre.tpdc.301105",
-            "dataFormat": null,
-            "license": "1"
-        },
-        "authorList": [
-            {
-                "nameCn": "杨竣然",
-                "nameEn": "YANG Junran",
-                "unitEn": "",
-                "unitCn": "电子科技大学"
-            },
-            {
-                "nameCn": "杨勤丽",
-                "nameEn": "YANG Qinli",
-                "unitEn": "",
-                "unitCn": "电子科技大学"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "A climate-adaptive transfer learning framework for improving soil moisture estimation in the Qinghai-Tibet Plateau",
-                "referenceCn": null,
-                "referenceEn": "Yang, J., Yang, Q., Hu, F., Shao, J., & Wang, G. (2024). A climate-adaptive transfer learning framework for improving soil moisture estimation in the Qinghai-Tibet Plateau. Journal of Hydrology, 630, 130717. doi:https://doi.org/10.1016/j.jhydrol.2024.130717"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "遥感",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层",
-                "nameEn": "Terrestrial Surface"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "土壤水分",
-                "nameEn": "Soil moisture"
-            },
-            {
-                "nameCn": "土壤水分产品",
-                "nameEn": "Soil Moisture Product"
-            },
-            {
-                "nameCn": "机器学习",
-                "nameEn": "Machine learning"
-            },
-            {
-                "nameCn": "融合",
-                "nameEn": "fusion"
-            },
-            {
-                "nameCn": "遥感技术",
-                "nameEn": "Remote Sensing Technology"
-            },
-            {
-                "nameCn": "陆地表层遥感",
-                "nameEn": "Terrestrial Surface Remote Sensing"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "青藏高原",
-                "keywordEn": "Qinghai-Tibet Plateau"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "1961-2019",
-                "keywordEn": "1961-2019",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "基于“空-天-地”立体监测的多源数据融合技术",
-                "titleEn": "Multi-source data fusion technology based on \"air-sky-ground\" three-dimensional monitoring"
-            },
-            {
-                "titleCn": "气候与下垫面变化下基于深度学习的流域径流预测及可解释性研究",
-                "titleEn": "Research on deep learning based runoff prediction and its interpretation in the changing of climate and underlying surface"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
-                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
-            },
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
-                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
-            },
-            {
-                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
-                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
-            },
-            {
-                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
-                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山地区水体指数产品（2018）",
-                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
-            }
-        ]
+  "id": "92685bff-8319-4a8e-b020-e299a7f64a16",
+  "relatedPaper": 1,
+  "context": {
+    "metadata": {
+      "titleEn": "0.05 ° daily scale fusion dataset of soil moisture in the Qinghai Tibet Plateau region (1961-2019)",
+      "titleCn": "青藏高原地区土壤水0.05°日尺度融合数据集（1961-2019）",
+      "description": "This dataset employs the Climate Adaptive Transfer Learning (CATL) framework to generate a daily-scale dataset of soil moisture in the Tibetan Plateau from 1961 to 2019, with a spatial resolution of 0.05°. The dataset integrates ERA5-LAND reanalysis data with in-situ measurement data provided by the International Soil Moisture Network (ISMN), significantly improving the accuracy and reliability of soil moisture estimates in data-scarce regions.\n\nThe dataset is developed by selecting source domains with climatic features similar to the Tibetan Plateau and using a hybrid model that combines Convolutional Neural Networks (CNN) and Long Short-Term Memory (LSTM) networks. By training within the source domains and then fine-tuning the model for the target domain, namely the Tibetan Plateau, this strategy not only fully leverages the long-term spatiotemporal advantages of the ERA5-LAND dataset but also effectively reduces the inherent error in the data and alleviates the issue of scarce soil water ground station data in the Tibetan Plateau region.\n\nPerformance validation of the dataset shows that it has a higher correlation coefficient (CC=0.755) and lower unbiased Root Mean Square Error (ubRMSE=0.042) compared to the SMAPL3 data between 2015 and 2019. Moreover, in the historical data reconstruction from 1961 to 2010, the dataset achieved an 11.3% improvement in correlation coefficient and a 1.5% reduction in unbiased Root Mean Square Error compared to the original ERA5-Land reanalysis data. These achievements highlight the high adaptability of the CATL framework to regions significantly affected by climate change and the increased estimation accuracy it provides.",
+      "descriptionCn": "本数据集采用气候适应性迁移学习（CATL）框架，生成了1961至2019年期间的青藏高原土壤湿度日尺度数据集，具备0.05°的空间分辨率。该数据集融合了ERA5-LAND再分析数据与国际土壤湿度网络（ISMN）提供的原位测量数据，针对数据稀缺的地区，极大地提升了土壤湿度估计的准确性与可靠性。\n数据集通过选择气候特征与青藏高原相似的区域作为模型训练的源域，并采用结合了卷积神经网络（CNN）与长短期记忆网络（LSTM）的融合模型。通过在源域内进行训练后，再将模型通过微调策略迁移到目标域，即青藏高原，这一策略不仅充分利用了ERA5-LAND数据集覆盖的长期时空优势，还有效降低了数据的固有误差，缓解了青藏高原地区土壤水地面站点数据稀缺的问题。\n本数据集的性能验证显示，其在2015至2019年间相比于SMAPL3数据具有更高的相关系数（CC=0.755）和更低的无偏均方根误差（ubRMSE=0.042）。此外，在1961至2010年的历史数据重建方面，本数据集相较于原始ERA5-Land再分析数据，实现了相关系数的11.3%提升和无偏均方根误差的1.5%降低，这一成果凸显了CATL框架对于应对气候变化显著区域的高度适应性和提升的估计准确性。",
+      "instructions": "The file is stored in netcdf4 format, and all data is stored in the qtp.dataset_1961-2019.nc file, which contains three dimensions: \"time\", \"lat\", and \"lon\", corresponding to time, latitude, and longitude, respectively. The time dimension is indexed in the format of \"Y-M-D\", and the dimensions and longitude are stored in float64 format.",
+      "instructionsCn": "文件以netcdf4格式存储，所有数据均存储于qtp_dataset_1961-2019.nc文件中，文件中包含三个维度，“time”，“lat”，“lon”，分别对应时间、纬度和经度。时间维度按照“Y-M-D”的格式进行索引，维度和经度以float64格式存储。",
+      "east": 66.15,
+      "west": 104.8,
+      "south": 24.2,
+      "north": 40.85,
+      "startTime": "1961-01-01 00:00:00",
+      "endTime": "2019-12-31 00:00:00",
+      "fileSize": 22283234244.0,
+      "cstr": "18406.11.Terre.tpdc.301105",
+      "doi": "10.11888/Terre.tpdc.301105",
+      "dataFormat": null,
+      "license": "1"
     },
-    "extract_pdfs_data": [
-        {
-            "background": [
-                "Soil moisture (SM) plays essential roles in revealing complex interaction mechanisms among air – soil-water-plant processes. In the Qinghai-Tibet Plateau (QTP), the in-situ SM data is sparse and limited, satellite-based SM data has short period, while reanalysis SM data has advantages on long-term and high spatiotemporal resolution but has relatively high error."
-            ],
-            "research objective": [
-                "In this study, to improve soil moisture estimation in the QTP, we aim to propose a Climate-Adaptive Transfer Learning (CATL) framework for data scarce region based on reanalysis data (ERA5-LAND dataset) and the in-situ data (International Soil Moisture Network (ISMN) data)."
-            ],
-            "challenges": [
-                "The QTP possesses a complex climate system and each climate class corresponds to various sub-areas, if we fine-tune all the in-situ stations in the QTP into one model may fail to achieve the expected performance and even lead to negative transfer."
-            ],
-            "methods": [
-                "Specifically, regarding the QTP as the target region, selecting the areas with similar climate types with QTP as the source region, we train the CNN-LSTM fusion model in the source region and then transfer it to the target region via fine-tuning strategy."
-            ],
-            "dataset": [
-                "Data used in this study include ERA5-Land data, ISMN in-situ data, and digital elevation model (DEM) data. The in-situ data is sourced from the International Soil Moisture Network (ISMN), a global initiative focused on establishing and maintaining a comprehensive in-situ soil moisture database. At present, the ISMN dataset stands as the largest in-situ soil moisture database worldwide, encompassing data from 59 networks, 2446 stations, and 13,376 observation points, and spanning a time period from 1952 to near-real time. Produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), the ERA5-Land dataset is derived from the land component of the ERA5 climate reanalysis model. The ERA5-Land dataset provides available seamless global data from 1950 with a spatial resolution of 0.1°*0.1° and a temporal resolution of 1 h. In this study, hourly data with variables of skin temperature, total precipitation, and volumetric soil water layer 1 in the ERA5-Land dataset are utilized."
-            ],
-            "findings": [
-                "The CATL framework significantly improved the soil moisture estimation accuracy of ERA5-Land in the QTP, achieving better precision than the SMAPL3 data during 2015 – 2019. Furthermore, the CATL framework worked well on historical data reconstruction during 2010 – 2014 and finally produced a long term (1960 – 2019) soil moisture dataset (daily, 0.05°) with precision improved for the QTP. This study provides a new tool for soil moisture estimation improvement in data-scarce region which will also benefit basin hydrology and water resources management."
-            ],
-            "backgroundCn": [
-                "土壤湿度（SM）在揭示空气-土壤-水-植物过程之间复杂的相互作用机制中发挥着重要作用。在青藏高原（QTP），原位土壤湿度数据稀缺且有限，基于卫星的土壤湿度数据时间跨度短，而再分析土壤湿度数据在长期和高时空分辨率方面具有优势，但相对误差较高。"
-            ],
-            "research objectiveCn": [
-                "在本研究中，为了改善青藏高原（QTP）地区的土壤湿度估计，我们旨在基于再分析数据（ERA5-LAND数据集）和现场数据（国际土壤湿度网络（ISMN）数据）提出一个气候自适应迁移学习（CATL）框架，以应对数据稀缺地区的问题。"
-            ],
-            "challengesCn": [
-                "青藏高原（QTP）拥有复杂的气候系统，每个气候类别对应不同的子区域。如果将青藏高原的所有在地气象站整合到一个模型中，可能无法达到预期的性能，甚至可能导致负迁移。"
-            ],
-            "methodsCn": [
-                "具体来说，针对青藏 Plateau（QTP）作为目标区域，选择与QTP气候类型相似的区域作为源区域，我们在源区域训练CNN-LSTM融合模型，然后通过微调策略将其转移到目标区域。"
-            ],
-            "datasetCn": [
-                "本研究所使用的数据包括ERA5-Land数据、ISMN实地数据和数字高程模型（DEM）数据。实地数据来源于国际土壤湿度网络（ISMN），这是一个全球性倡议，旨在建立和维护一个全面的实地土壤湿度数据库。目前，ISMN数据集是全球最大的实地土壤湿度数据库，涵盖来自59个网络、2446个站点和13,376个观测点的数据，时间跨度从1952年至近实时。ERA5-Land数据集由欧洲中期天气预报中心（ECMWF）生成，源自ERA5气候重分析模型的陆地部分。ERA5-Land数据集提供自1950年以来的无缝全球数据，空间分辨率为0.1°×0.1°，时间分辨率为1小时。在本研究中，利用ERA5-Land数据集中每小时的皮肤温度、总降水量和体积土壤水层1的变量数据。"
-            ],
-            "findingsCn": [
-                "CATL框架显著提高了ERA5-Land在青藏 Plateau（QTP）地区的土壤湿度估计精度，在2015年至2019年期间，其精度优于SMAPL3数据。此外，CATL框架在2010年至2014年的历史数据重建中表现良好，最终生成了一个长期（1960年至2019年）土壤湿度数据集（每日，0.05°），提高了青藏 Plateau的精度。本研究为数据稀缺地区的土壤湿度估计改进提供了一种新工具，这也将有利于流域水文和水资源管理。"
-            ]
-        }
+    "authorList": [
+      {
+        "nameCn": "杨竣然",
+        "nameEn": "YANG Junran",
+        "unitEn": "",
+        "unitCn": "电子科技大学"
+      },
+      {
+        "nameCn": "杨勤丽",
+        "nameEn": "YANG Qinli",
+        "unitEn": "",
+        "unitCn": "电子科技大学"
+      }
     ],
-    "query": {
-        "Verification": [
-            {
-                "QuestionEn": "Does the integration of ERA5-LAND reanalysis data with in-situ measurements from the International Soil Moisture Network significantly enhance soil moisture estimation accuracy in data-scarce regions?",
-                "QuestionCn": "将ERA5-LAND再分析数据与国际土壤湿度网络的现场测量数据结合起来，是否显著提高了数据稀缺地区土壤湿度估计的准确性？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Can the Climate-Adaptive Transfer Learning framework effectively reduce the inherent errors in reanalysis data for regions with sparse data like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "气候自适应迁移学习框架能否有效减少像青藏高原这样数据稀疏地区再分析数据的固有误差？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "Is it possible to improve the precision of historical soil moisture data reconstruction in the Qinghai-Tibet Plateau through the use of a CNN-LSTM fusion model trained on regions with similar climate characteristics?",
-                "QuestionCn": "通过使用在气候特征相似区域训练的CNN-LSTM融合模型，是否可以提高青藏高原历史土壤湿度数据重建的精度？",
-                "AnswerEn": "Yes",
-                "AnswerCn": "是",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Disjunctive": [
-            {
-                "QuestionEn": "Is the primary data collection method for soil moisture in the Qinghai-Tibet Plateau based on in-situ measurements, satellite observations, or reanalysis data?",
-                "QuestionCn": "青藏高原土壤湿度的主要数据收集方法是基于现场测量、卫星观测还是再分析数据？",
-                "AnswerEn": "in-situ measurements, satellite observations, reanalysis data",
-                "AnswerCn": "原位测量、卫星观测、再分析数据",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Concept Completion": [
-            {
-                "QuestionEn": "What are the main challenges in soil moisture data collection on the Qinghai-Tibet Plateau?",
-                "QuestionCn": "青藏高原土壤湿度数据收集的主要挑战是什么？",
-                "AnswerEn": "sparse and limited in-situ soil moisture data, short period of satellite-based soil moisture data, relatively high error of reanalysis soil moisture data",
-                "AnswerCn": "稀疏和有限的原位土壤湿度数据，卫星土壤湿度数据时间较短，再分析土壤湿度数据误差相对较高。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Where can similar climate type regions to the Qinghai-Tibet Plateau be identified for the purpose of data transfer in soil moisture estimation?",
-                "QuestionCn": "可以在哪些类似气候类型的地区识别出与青藏高原相似的区域，以便进行土壤湿度估算的数据转移？",
-                "AnswerEn": "Source regions",
-                "AnswerCn": "源区域",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Example": [
-            {
-                "QuestionEn": "Can you provide an example of a data collection method that improves soil moisture estimation accuracy in regions with sparse in-situ data?",
-                "QuestionCn": "您能否提供一种数据收集方法的示例，以提高在稀疏原位数据区域的土壤湿度估计准确性？",
-                "AnswerEn": "One example is using a Climate-Adaptive Transfer Learning (CATL) framework, which combines reanalysis data like the ERA5-LAND dataset and in-situ data from the International Soil Moisture Network (ISMN), to enhance soil moisture estimation accuracy in the Qinghai-Tibet Plateau. This method involves training a CNN-LSTM fusion model in regions with similar climate types and then transferring it to the target region.",
-                "AnswerCn": "一个例子是使用气候自适应迁移学习（CATL）框架，该框架结合了ERA5-LAND数据集等再分析数据和国际土壤湿度网络（ISMN）的现场数据，以提高青藏高原土壤湿度估计的准确性。这种方法涉及在气候类型相似的区域训练CNN-LSTM融合模型，然后将其迁移到目标区域。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "What is an example of a challenge faced when developing a soil moisture dataset for a complex climate region like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在开发像青藏高原这样复杂气候区域的土壤湿度数据集时面临的一个挑战是什么？",
-                "AnswerEn": "A challenge in developing a soil moisture dataset for the Qinghai-Tibet Plateau is dealing with the complex climate system, where each climate class corresponds to various sub-areas. Fine-tuning all in-situ stations into one model may lead to negative transfer and not achieve the expected performance.",
-                "AnswerCn": "在为青藏高原开发土壤湿度数据集时，一个挑战是处理复杂的气候系统，其中每个气候类别对应不同的子区域。将所有实地站点微调为一个模型可能会导致负迁移，无法达到预期的性能。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Can you give an example of a dataset that was used to enhance the accuracy of soil moisture estimation in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "您能否提供一个用于提高青藏高原土壤湿度估计准确性的 dataset 示例？",
-                "AnswerEn": "An example is the ERA5-Land dataset, which is derived from the land component of the ERA5 climate reanalysis model. It provides seamless global data with a spatial resolution of 0.1° and a temporal resolution of 1 hour. This dataset, combined with ISMN in-situ data, was utilized to improve soil moisture estimation accuracy using the CATL framework.",
-                "AnswerCn": "ERA5-Land 数据集是从 ERA5 气候重分析模型的陆地部分衍生而来的。它提供无缝的全球数据，空间分辨率为 0.1°，时间分辨率为 1 小时。该数据集与 ISMN 现场数据结合，利用 CATL 框架提高了土壤湿度估计的准确性。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Feature Specification": [
-            {
-                "QuestionEn": "What are the key characteristics that define the spatial and temporal resolution of a soil moisture dataset in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "定义青藏高原土壤湿度数据集的空间和时间分辨率的关键特征是什么？",
-                "AnswerEn": "0.05° spatial resolution, daily temporal resolution",
-                "AnswerCn": "0.05° 空间分辨率，日时间分辨率",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the features of the climate-adaptive transfer learning framework that enhance soil moisture estimation in data-scarce regions?",
-                "QuestionCn": "气候适应性迁移学习框架的特征有哪些，可以增强数据稀缺地区的土壤湿度估计？",
-                "AnswerEn": "selecting source regions with similar climate types, CNN-LSTM fusion model, fine-tuning for the target region, leveraging long-term reanalysis data, using in-situ data",
-                "AnswerCn": "选择具有相似气候类型的源区域，CNN-LSTM融合模型，针对目标区域进行微调，利用长期再分析数据，使用原位数据。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Quantification": [
-            {
-                "QuestionEn": "What is the spatial resolution of a dataset developed using the Climate-Adaptive Transfer Learning framework for soil moisture estimation in the Qinghai-Tibet Plateau?",
-                "QuestionCn": "使用气候适应性迁移学习框架开发的青藏高原土壤湿度估计数据集的空间分辨率是多少？",
-                "AnswerEn": "0.05°",
-                "AnswerCn": "0.05°",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "How many networks are included in the International Soil Moisture Network (ISMN) database, which is used as part of the data collection methods in the field?",
-                "QuestionCn": "国际土壤湿度网络（ISMN）数据库中包含多少个网络，这些网络作为实地数据收集方法的一部分。",
-                "AnswerEn": "59",
-                "AnswerCn": "59",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "By what percentage did the CATL framework improve the correlation coefficient of historical soil moisture data compared to the original ERA5-Land reanalysis data?",
-                "QuestionCn": "CATL框架相比于原始ERA5-Land再分析数据，提高了历史土壤湿度数据的相关系数百分比是多少？",
-                "AnswerEn": "11.3%",
-                "AnswerCn": "11.3%",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What is a Climate-Adaptive Transfer Learning (CATL) framework in the context of soil moisture data estimation?",
-                "QuestionCn": "气候适应性迁移学习（CATL）框架是在土壤湿度数据估计的背景下提出的。",
-                "AnswerEn": "A Climate-Adaptive Transfer Learning (CATL) framework is a method proposed to enhance soil moisture estimation in data-scarce regions, particularly the Qinghai-Tibet Plateau. It utilizes reanalysis data and in-situ data, training a CNN-LSTM fusion model in regions with similar climate types and then transferring the model to the target region via fine-tuning.",
-                "AnswerCn": "气候适应性迁移学习（CATL）框架是一种旨在增强数据稀缺地区土壤湿度估计的方法，特别是在青藏高原。该框架利用再分析数据和现场数据，在气候类型相似的区域训练CNN-LSTM融合模型，然后通过微调将模型迁移到目标区域。",
-                "Level": "C1(Remembering)"
-            },
-            {
-                "QuestionEn": "What are the challenges in using soil moisture datasets for regions like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "在像青藏高原这样的地区使用土壤湿度数据集面临哪些挑战？",
-                "AnswerEn": "The challenges include the complex climate system of the Qinghai-Tibet Plateau, which has various sub-areas corresponding to different climate classes. Fine-tuning all in-situ stations in the region into one model may not achieve the expected performance and could lead to negative transfer.",
-                "AnswerCn": "挑战包括青藏高原复杂的气候系统，该地区具有不同气候类别对应的多个子区域。将该地区所有的实地站点微调为一个模型可能无法达到预期的性能，并可能导致负迁移。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What constitutes the ERA5-Land dataset in the context of soil moisture studies?",
-                "QuestionCn": "ERA5-Land数据集在土壤湿度研究中的构成是什么？",
-                "AnswerEn": "The ERA5-Land dataset is derived from the land component of the ERA5 climate reanalysis model and is produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides seamless global data from 1950 with a spatial resolution of 0.1° and a temporal resolution of 1 hour, including variables like skin temperature, total precipitation, and volumetric soil water layer 1.",
-                "AnswerCn": "ERA5-Land 数据集是由欧洲中期天气预报中心（ECMWF）生产的ERA5气候重分析模型的陆地组件衍生而来。它提供自1950年以来的无缝全球数据，空间分辨率为0.1°，时间分辨率为1小时，包括地表温度、总降水量和土壤水分层1的体积等变量。",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Comparison": [
-            {
-                "QuestionEn": "In what ways do the challenges of soil moisture data collection in the Qinghai-Tibet Plateau differ from those in other climate-adaptive regions?",
-                "QuestionCn": "青藏高原的土壤湿度数据收集面临的挑战与其他气候适应区域的挑战有何不同？",
-                "AnswerEn": "The Qinghai-Tibet Plateau has a complex climate system with various sub-areas, making it challenging to fine-tune models without risking negative transfer. This is distinct from other regions where climate conditions might be more uniform, allowing for simpler model adaptation without the need for extensive fine-tuning strategies.",
-                "AnswerCn": "青藏高原拥有复杂的气候系统，具有多种子区域，这使得在不冒负迁移风险的情况下微调模型变得具有挑战性。这与其他气候条件可能更为均匀的地区不同，在这些地区可以更简单地进行模型适应，而无需广泛的微调策略。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What are the similarities and differences in the methodologies used to enhance soil moisture estimation accuracy in the Qinghai-Tibet Plateau compared to other data-scarce regions?",
-                "QuestionCn": "在青藏高原与其他数据稀缺地区提高土壤湿度估计准确性的方法论的相似性和差异性是什么？",
-                "AnswerEn": "The methodology for the Qinghai-Tibet Plateau involves using a CNN-LSTM fusion model trained in regions with similar climate types and then fine-tuned for the target region. This method is similar to other data-scarce regions where transfer learning might be used. However, the specific climate-adaptive framework and the choice of source regions with similar climate characteristics make it uniquely tailored to the Qinghai-Tibet Plateau's diverse conditions.",
-                "AnswerCn": "青藏高原的方法论涉及使用CNN-LSTM融合模型，在具有相似气候类型的区域进行训练，然后针对目标区域进行微调。这种方法类似于其他数据稀缺区域可能使用的迁移学习。然而，特定的气候适应框架以及选择具有相似气候特征的源区域，使其独特地适应青藏高原多样的条件。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "What are the potential implications of using a climate-adaptive transfer learning framework for addressing challenges in soil moisture data collection in complex climate systems?",
-                "QuestionCn": "使用气候适应性迁移学习框架来应对复杂气候系统中土壤湿度数据收集挑战的潜在影响是什么？",
-                "AnswerEn": "Using a climate-adaptive transfer learning framework can effectively address challenges in complex climate systems by selecting source regions with similar climate characteristics, thus avoiding negative transfer and ensuring better model performance. This approach enhances the estimation accuracy by fine-tuning models specifically for varied sub-areas within complex climate systems.",
-                "AnswerCn": "使用气候适应性迁移学习框架可以有效解决复杂气候系统中的挑战，通过选择具有相似气候特征的源区域，从而避免负迁移并确保更好的模型性能。这种方法通过专门针对复杂气候系统内的不同子区域微调模型，增强了估计的准确性。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What causes the limited accuracy in soil moisture estimation when using reanalysis data compared to in-situ measurements in the Qinghai-Tibet Plateau region?",
-                "QuestionCn": "在青藏高原地区，使用再分析数据进行土壤湿度估计时，导致准确性有限的原因是什么？",
-                "AnswerEn": "Reanalysis data, while offering long-term and high spatiotemporal resolution, tend to have higher errors due to the sparse and limited in-situ soil moisture data in the Qinghai-Tibet Plateau. This scarcity hampers the calibration and validation processes, affecting the accuracy of soil moisture estimation.",
-                "AnswerCn": "再分析数据虽然提供了长期和高时空分辨率，但由于青藏高原地面土壤湿度数据稀少且有限，往往会导致更高的误差。这种稀缺性妨碍了校准和验证过程，影响了土壤湿度估计的准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What factors contribute to the challenges in effectively using satellite-based soil moisture data for long-term historical reconstruction in regions like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "有效利用卫星土壤湿度数据进行历史重建的挑战因素在于像青藏高原这样的地区。",
-                "AnswerEn": "Satellite-based soil moisture data often covers shorter time periods and may not provide the necessary historical depth for long-term reconstruction. Additionally, the complex climate and topography of regions like the Qinghai-Tibet Plateau exacerbate these challenges by requiring models with higher adaptability and precision to effectively utilize such data in historical contexts.",
-                "AnswerCn": "卫星土壤湿度数据通常覆盖的时间段较短，可能无法提供长期重建所需的历史深度。此外，像青藏高原这样的地区复杂的气候和地形加剧了这些挑战，要求模型具备更高的适应性和精确性，以有效利用这些数据进行历史背景下的研究。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Causal Consequence": [
-            {
-                "QuestionEn": "What are the consequences of using a CNN-LSTM fusion model trained in a source region with a similar climate for soil moisture estimation in a target region with complex climate systems?",
-                "QuestionCn": "在一个气候相似的源区域训练的CNN-LSTM融合模型在一个气候系统复杂的目标区域用于土壤湿度估计的后果是什么？",
-                "AnswerEn": "Using a CNN-LSTM fusion model trained in a source region with a similar climate leads to improved soil moisture estimation in the target region, effectively reducing inherent data errors and addressing the issue of sparse in-situ data.",
-                "AnswerCn": "使用在具有相似气候的源区域训练的CNN-LSTM融合模型，可以有效改善目标区域的土壤湿度估计，减少固有的数据误差，并解决稀缺的现场数据问题。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "How does the inclusion of both ERA5-Land reanalysis data and ISMN in-situ data affect the long-term soil moisture dataset quality and precision in a complex climate region?",
-                "QuestionCn": "ERA5-Land再分析数据和ISMN现场数据的结合如何影响复杂气候区域的长期土壤湿度数据集的质量和精度？",
-                "AnswerEn": "The inclusion of both ERA5-Land reanalysis data and ISMN in-situ data enhances the quality and precision of the long-term soil moisture dataset, providing a more reliable estimation and historical data reconstruction for complex climate regions.",
-                "AnswerCn": "ERA5-Land再分析数据和ISMN现场数据的结合提高了长期土壤湿度数据集的质量和精度，为复杂气候区域提供了更可靠的估算和历史数据重建。",
-                "Level": "C5(Evaluating)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the purpose of utilizing a Climate-Adaptive Transfer Learning framework for soil moisture estimation in regions with sparse data?",
-                "QuestionCn": "利用气候适应性迁移学习框架进行土壤湿度估计的目的是在数据稀缺的地区提高估计的准确性和可靠性。",
-                "AnswerEn": "The goal is to improve soil moisture estimation accuracy in data-scarce regions like the Qinghai-Tibet Plateau by leveraging the Climate-Adaptive Transfer Learning framework. This approach integrates reanalysis data and in-situ data, addressing data scarcity while reducing errors and enhancing estimation reliability.",
-                "AnswerCn": "目标是在数据稀缺的地区，如青藏高原，通过利用气候自适应迁移学习框架来提高土壤湿度估计的准确性。这种方法整合了再分析数据和现场数据，解决了数据稀缺的问题，同时减少了误差，提高了估计的可靠性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "Why is it important to select areas with similar climate types as the source region for training models aimed at soil moisture estimation?",
-                "QuestionCn": "选择气候类型相似的区域作为土壤湿度估计模型的训练源区域是重要的，因为气候对土壤湿度有直接影响。相似的气候条件可以确保模型在训练时获得一致的土壤湿度特征，从而提高模型的准确性和可靠性。",
-                "AnswerEn": "Selecting areas with similar climate types as the source region is crucial because it helps in effectively training the models, ensuring that the characteristics of the source data align closely with the target region. This minimizes negative transfer and improves the performance of the model in the complex climate system of the Qinghai-Tibet Plateau.",
-                "AnswerCn": "选择与源区域气候类型相似的区域至关重要，因为这有助于有效训练模型，确保源数据的特征与目标区域紧密对齐。这可以最小化负迁移，改善模型在复杂气候系统中的表现，尤其是在青藏高原。",
-                "Level": "C5(Evaluating)"
-            },
-            {
-                "QuestionEn": "What are the objectives behind integrating ERA5-LAND reanalysis data with in-situ measurements from the International Soil Moisture Network?",
-                "QuestionCn": "将ERA5-LAND再分析数据与国际土壤湿度网络的现场测量数据整合的目标是什么？",
-                "AnswerEn": "The objective is to combine the long-term, high spatiotemporal resolution advantages of ERA5-LAND reanalysis data with the ground-truth accuracy of in-situ measurements from the International Soil Moisture Network. This integration aims to enhance the precision and reliability of soil moisture estimates in the Qinghai-Tibet Plateau, particularly in areas where in-situ data is sparse.",
-                "AnswerCn": "目标是将ERA5-LAND再分析数据的长期高时空分辨率优势与国际土壤湿度网络的实地测量的真实准确性相结合。这一整合旨在提高青藏高原土壤湿度估计的精确性和可靠性，特别是在实地数据稀缺的地区。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What steps are involved in utilizing a Climate-Adaptive Transfer Learning framework to enhance soil moisture estimation in regions with sparse data?",
-                "QuestionCn": "利用气候适应性迁移学习框架来增强稀疏数据区域的土壤湿度估计涉及以下步骤：",
-                "AnswerEn": "To enhance soil moisture estimation in regions with sparse data using a Climate-Adaptive Transfer Learning framework, the process involves selecting areas with similar climate types as the source region, training a CNN-LSTM fusion model in the source region, and transferring it to the target region (like the Qinghai-Tibet Plateau) through a fine-tuning strategy.",
-                "AnswerCn": "为了在数据稀缺的地区增强土壤湿度估计，采用气候自适应迁移学习框架的过程包括选择与源区域气候类型相似的区域，在源区域训练CNN-LSTM融合模型，并通过微调策略将其转移到目标区域（如青藏高原）。",
-                "Level": "C3(Applying)"
-            },
-            {
-                "QuestionEn": "How can reanalysis data and in-situ data be effectively combined to improve soil moisture datasets in data-scarce regions?",
-                "QuestionCn": "如何有效结合再分析数据和现场数据，以改善数据稀缺地区的土壤湿度数据集？",
-                "AnswerEn": "Reanalysis data (such as ERA5-LAND) and in-situ data (from networks like the International Soil Moisture Network) can be effectively combined by selecting a model training source region with similar climate characteristics to the target region and using a fusion model that leverages the strengths of both data types to address data scarcity and improve estimation accuracy.",
-                "AnswerCn": "再分析数据（如ERA5-LAND）和现场数据（来自国际土壤湿度网络等网络）可以通过选择与目标区域气候特征相似的模型训练源区域有效结合，并使用融合模型利用两种数据类型的优势，以解决数据稀缺问题并提高估计准确性。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What procedural steps are necessary to validate the performance of a soil moisture dataset in comparison to existing datasets?",
-                "QuestionCn": "验证土壤湿度数据集性能与现有数据集进行比较所需的程序步骤是什么？",
-                "AnswerEn": "To validate the performance of a soil moisture dataset, one would compare it against existing datasets such as SMAPL3, focusing on metrics like correlation coefficient and unbiased root mean square error over a specified period to assess improvements in estimation accuracy.",
-                "AnswerCn": "为了验证土壤湿度数据集的性能，可以将其与现有数据集如SMAPL3进行比较，重点关注相关系数和无偏根均方误差等指标，以评估估计准确性的改进。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What methodologies enable the effective integration of satellite-based data and in-situ measurements for soil moisture estimation in data-scarce regions like the Qinghai-Tibet Plateau?",
-                "QuestionCn": "哪些方法论能够有效整合卫星数据和地面测量数据，以便在像青藏高原这样的数据稀缺地区进行土壤湿度估算？",
-                "AnswerEn": "A methodology that enables effective integration involves using the Climate-Adaptive Transfer Learning (CATL) framework, which combines reanalysis data from ERA5-LAND and in-situ data from the International Soil Moisture Network (ISMN). This approach involves training a CNN-LSTM fusion model in regions with similar climate types and then transferring it to the target region through fine-tuning, which helps improve estimation accuracy despite sparse in-situ measurements.",
-                "AnswerCn": "一种有效整合的方法论涉及使用气候适应性迁移学习（CATL）框架，该框架结合了ERA5-LAND的再分析数据和国际土壤湿度网络（ISMN）的现场数据。这种方法涉及在气候类型相似的区域训练CNN-LSTM融合模型，然后通过微调将其转移到目标区域，这有助于提高估计准确性，尽管现场测量稀疏。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "What conditions or strategies facilitate the improvement of soil moisture data accuracy in regions with complex climate systems?",
-                "QuestionCn": "哪些条件或策略可以促进在气候系统复杂的地区提高土壤湿度数据的准确性？",
-                "AnswerEn": "Improvement of soil moisture data accuracy in regions with complex climate systems, such as the Qinghai-Tibet Plateau, is facilitated by selecting source regions with similar climate characteristics for model training. The use of a CNN-LSTM fusion model and fine-tuning strategies in the CATL framework also play a crucial role. These strategies help mitigate the risk of negative transfer and enhance the model's adaptability and accuracy in data-scarce regions.",
-                "AnswerCn": "在气候系统复杂的地区，如青藏高原，提高土壤湿度数据准确性的方法是选择具有相似气候特征的源区域进行模型训练。使用CNN-LSTM融合模型和CATL框架中的微调策略也起着至关重要的作用。这些策略有助于减轻负迁移的风险，并增强模型在数据稀缺区域的适应性和准确性。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What technological frameworks or advancements enable long-term, high-resolution soil moisture data reconstruction in areas with limited ground station data?",
-                "QuestionCn": "哪些技术框架或进展能够在地面站数据有限的地区实现长期、高分辨率的土壤湿度数据重建？",
-                "AnswerEn": "The Climate-Adaptive Transfer Learning (CATL) framework enables long-term, high-resolution soil moisture data reconstruction by leveraging the spatial and temporal coverage of the ERA5-LAND dataset and the comprehensive in-situ data from the ISMN. This framework effectively overcomes the limitations of sparse ground station data through advanced machine learning models and transfer learning techniques, resulting in improved historical data reconstruction and enhanced precision.",
-                "AnswerCn": "气候自适应迁移学习（CATL）框架通过利用ERA5-LAND数据集的空间和时间覆盖以及ISMN的全面地面数据，实现了长期高分辨率土壤湿度数据的重建。该框架有效克服了稀疏地面站数据的局限性，采用先进的机器学习模型和迁移学习技术，从而提高了历史数据重建的准确性和精度。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Expectation": [
-            {
-                "QuestionEn": "Why might a dataset integrating reanalysis data and in-situ measurements lead to improved soil moisture estimation accuracy in regions with sparse data?",
-                "QuestionCn": "将再分析数据与现场测量数据整合的 dataset 可能会提高稀疏数据区域土壤湿度估计的准确性，原因如下：",
-                "AnswerEn": "A dataset integrating reanalysis data and in-situ measurements can leverage the long-term, high spatiotemporal resolution of reanalysis data like the ERA5-LAND, while using in-situ data to calibrate and correct for inherent errors. This combination can enhance estimation accuracy, especially in data-scarce regions such as the Qinghai-Tibet Plateau.",
-                "AnswerCn": "一个整合再分析数据和现场测量数据的数据集可以利用再分析数据（如ERA5-LAND）的长期高时空分辨率，同时使用现场数据来校准和修正固有的误差。这种组合可以提高估计的准确性，特别是在数据稀缺的地区，如青藏高原。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "What challenges might arise when using a CNN-LSTM fusion model for climate adaptation in regions with complex climate systems?",
-                "QuestionCn": "在气候适应中使用CNN-LSTM融合模型时，可能会出现哪些挑战，尤其是在气候系统复杂的地区？",
-                "AnswerEn": "Challenges can include the risk of negative transfer if a single model is used across diverse sub-areas within a complex climate region like the Qinghai-Tibet Plateau. Different climate classes may require fine-tuned models to accurately capture local variations and interactions, necessitating careful selection of source regions with similar climate types.",
-                "AnswerCn": "挑战包括在像青藏高原这样复杂气候区域内，如果使用单一模型，可能会面临负迁移的风险。不同的气候类别可能需要经过精细调整的模型，以准确捕捉地方性变化和相互作用，这需要仔细选择具有相似气候类型的源区域。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Judgmental": [
-            {
-                "QuestionEn": "In what ways could the integration of satellite-based and in-situ soil moisture data be improved to ensure more accurate and reliable long-term datasets?",
-                "QuestionCn": "如何改进卫星基础和地面土壤湿度数据的集成，以确保更准确和可靠的长期数据集？",
-                "AnswerEn": "The integration of satellite-based and in-situ soil moisture data could be improved by employing advanced machine learning frameworks, such as the CATL framework, which effectively combines reanalysis data with in-situ measurements. Additionally, leveraging areas with similar climate characteristics for model training and fine-tuning can further enhance accuracy and reliability of long-term datasets.",
-                "AnswerCn": "卫星基础和地面土壤湿度数据的整合可以通过采用先进的机器学习框架来改善，例如CATL框架，该框架有效地将再分析数据与地面测量结合起来。此外，利用具有相似气候特征的区域进行模型训练和微调，可以进一步提高长期数据集的准确性和可靠性。",
-                "Level": "C6(Creating)"
-            }
-        ],
-        "Assertion": [
-            {
-                "QuestionEn": "I don't understand why utilizing reanalysis data can be advantageous for estimating soil moisture in regions with sparse in-situ data.",
-                "QuestionCn": "我不明白为什么在地面观测数据稀少的地区，利用再分析数据对土壤湿度进行估计会有优势。",
-                "AnswerEn": "Reanalysis data, such as the ERA5-LAND dataset, offers the advantage of long-term and high spatiotemporal resolution, which can significantly improve soil moisture estimation accuracy in regions where in-situ data is sparse.",
-                "AnswerCn": "再分析数据，如ERA5-LAND数据集，具有长期和高时空分辨率的优势，这可以显著提高在地面观测数据稀缺地区的土壤湿度估计准确性。",
-                "Level": "C2(Understanding)"
-            },
-            {
-                "QuestionEn": "I’m unsure about how transfer learning can be applied in soil moisture estimation across different climatic regions.",
-                "QuestionCn": "我不确定如何在不同气候区域应用迁移学习进行土壤湿度估计。",
-                "AnswerEn": "Transfer learning, particularly the Climate-Adaptive Transfer Learning (CATL) framework, can be applied by selecting source regions with climate types similar to the target region, training a model, and then transferring it to the target region using a fine-tuning strategy. This helps improve soil moisture estimation in data-scarce regions like the Qinghai-Tibet Plateau.",
-                "AnswerCn": "迁移学习，特别是气候适应性迁移学习（CATL）框架，可以通过选择与目标区域气候类型相似的源区域，训练模型，然后使用微调策略将其转移到目标区域。这有助于改善像青藏 Plateau 这样的数据稀缺区域的土壤湿度估计。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Request/Directive": [
-            {
-                "QuestionEn": "Please analyze the potential challenges and strategies involved in utilizing transfer learning to improve soil moisture estimation in regions with sparse data.",
-                "QuestionCn": "请分析在数据稀缺的地区利用迁移学习提高土壤湿度估计的潜在挑战和策略。",
-                "AnswerEn": "One of the challenges is the complex climate system of the Qinghai-Tibet Plateau, where each climate class corresponds to various sub-areas. Fine-tuning all in-situ stations into one model might lead to negative transfer. The strategy involves selecting areas with similar climate types as the source region to train a CNN-LSTM fusion model and then transferring it to the target region via a fine-tuning strategy.",
-                "AnswerCn": "青藏高原的气候系统复杂，各气候类型对应不同的子区域。将所有的实地观测站整合到一个模型中可能会导致负迁移。该策略涉及选择气候类型相似的区域作为源区域，以训练CNN-LSTM融合模型，然后通过微调策略将其转移到目标区域。",
-                "Level": "C4(Analyzing)"
-            },
-            {
-                "QuestionEn": "Please explore the methodologies used to integrate in-situ and reanalysis data for enhancing soil moisture datasets in data-scarce regions.",
-                "QuestionCn": "请探讨用于整合原位和再分析数据以增强数据稀缺地区土壤湿度数据集的方法论。",
-                "AnswerEn": "The integration involves using a Climate-Adaptive Transfer Learning (CATL) framework that combines ERA5-LAND reanalysis data with in-situ data from the International Soil Moisture Network (ISMN). This approach utilizes the long-term and high spatiotemporal resolution advantages of reanalysis data while reducing inherent errors by leveraging the comprehensive in-situ dataset and fine-tuning the model to the target region.",
-                "AnswerCn": "该集成涉及使用气候自适应迁移学习（CATL）框架，将ERA5-LAND再分析数据与国际土壤湿度网络（ISMN）的现场数据相结合。这种方法利用了再分析数据的长期和高时空分辨率优势，同时通过利用全面的现场数据集来减少固有误差，并对模型进行针对目标区域的微调。",
-                "Level": "C6(Creating)"
-            },
-            {
-                "QuestionEn": "Please investigate potential datasets or data sources that could be leveraged for improving soil moisture estimation accuracy in high-altitude regions.",
-                "QuestionCn": "请调查可以利用的潜在数据集或数据源，以提高高海拔地区土壤湿度估计的准确性。",
-                "AnswerEn": "Potential datasets include the ERA5-Land data, which offers seamless global data with long-term temporal coverage, and the International Soil Moisture Network (ISMN) data, which is the largest in-situ soil moisture database worldwide. Additional data like digital elevation model (DEM) data could also be utilized to enhance soil moisture estimation accuracy in high-altitude regions such as the Qinghai-Tibet Plateau.",
-                "AnswerCn": "潜在的数据集包括ERA5-Land数据，该数据提供无缝的全球数据，具有长期的时间覆盖；以及国际土壤湿度网络（ISMN）数据，这是全球最大的地面土壤湿度数据库。此外，数字高程模型（DEM）数据也可以用于提高高海拔地区（如青藏高原）土壤湿度估计的准确性。",
-                "Level": "C6(Creating)"
-            }
-        ]
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "A climate-adaptive transfer learning framework for improving soil moisture estimation in the Qinghai-Tibet Plateau",
+        "referenceCn": null,
+        "referenceEn": "Yang, J., Yang, Q., Hu, F., Shao, J., & Wang, G. (2024). A climate-adaptive transfer learning framework for improving soil moisture estimation in the Qinghai-Tibet Plateau. Journal of Hydrology, 630, 130717. doi:https://doi.org/10.1016/j.jhydrol.2024.130717"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "遥感",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层",
+        "nameEn": "Terrestrial Surface"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "土壤水分",
+        "nameEn": "Soil moisture"
+      },
+      {
+        "nameCn": "土壤水分产品",
+        "nameEn": "Soil Moisture Product"
+      },
+      {
+        "nameCn": "机器学习",
+        "nameEn": "Machine learning"
+      },
+      {
+        "nameCn": "融合",
+        "nameEn": "fusion"
+      },
+      {
+        "nameCn": "遥感技术",
+        "nameEn": "Remote Sensing Technology"
+      },
+      {
+        "nameCn": "陆地表层遥感",
+        "nameEn": "Terrestrial Surface Remote Sensing"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "青藏高原",
+        "keywordEn": "Qinghai-Tibet Plateau"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "1961-2019",
+        "keywordEn": "1961-2019",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "基于“空-天-地”立体监测的多源数据融合技术",
+        "titleEn": "Multi-source data fusion technology based on \"air-sky-ground\" three-dimensional monitoring"
+      },
+      {
+        "titleCn": "气候与下垫面变化下基于深度学习的流域径流预测及可解释性研究",
+        "titleEn": "Research on deep learning based runoff prediction and its interpretation in the changing of climate and underlying surface"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+        "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+      },
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+        "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+      },
+      {
+        "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+        "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+      },
+      {
+        "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+        "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山地区水体指数产品（2018）",
+        "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": [
+    {
+      "background": [
+        "Soil moisture (SM) plays essential roles in revealing complex interaction mechanisms among air – soil-water-plant processes. In the Qinghai-Tibet Plateau (QTP), the in-situ SM data is sparse and limited, satellite-based SM data has short period, while reanalysis SM data has advantages on long-term and high spatiotemporal resolution but has relatively high error."
+      ],
+      "research objective": [
+        "In this study, to improve soil moisture estimation in the QTP, we aim to propose a Climate-Adaptive Transfer Learning (CATL) framework for data scarce region based on reanalysis data (ERA5-LAND dataset) and the in-situ data (International Soil Moisture Network (ISMN) data)."
+      ],
+      "challenges": [
+        "The QTP possesses a complex climate system and each climate class corresponds to various sub-areas, if we fine-tune all the in-situ stations in the QTP into one model may fail to achieve the expected performance and even lead to negative transfer."
+      ],
+      "methods": [
+        "Specifically, regarding the QTP as the target region, selecting the areas with similar climate types with QTP as the source region, we train the CNN-LSTM fusion model in the source region and then transfer it to the target region via fine-tuning strategy."
+      ],
+      "dataset": [
+        "Data used in this study include ERA5-Land data, ISMN in-situ data, and digital elevation model (DEM) data. The in-situ data is sourced from the International Soil Moisture Network (ISMN), a global initiative focused on establishing and maintaining a comprehensive in-situ soil moisture database. At present, the ISMN dataset stands as the largest in-situ soil moisture database worldwide, encompassing data from 59 networks, 2446 stations, and 13,376 observation points, and spanning a time period from 1952 to near-real time. Produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), the ERA5-Land dataset is derived from the land component of the ERA5 climate reanalysis model. The ERA5-Land dataset provides available seamless global data from 1950 with a spatial resolution of 0.1°*0.1° and a temporal resolution of 1 h. In this study, hourly data with variables of skin temperature, total precipitation, and volumetric soil water layer 1 in the ERA5-Land dataset are utilized."
+      ],
+      "findings": [
+        "The CATL framework significantly improved the soil moisture estimation accuracy of ERA5-Land in the QTP, achieving better precision than the SMAPL3 data during 2015 – 2019. Furthermore, the CATL framework worked well on historical data reconstruction during 2010 – 2014 and finally produced a long term (1960 – 2019) soil moisture dataset (daily, 0.05°) with precision improved for the QTP. This study provides a new tool for soil moisture estimation improvement in data-scarce region which will also benefit basin hydrology and water resources management."
+      ],
+      "backgroundCn": [
+        "土壤湿度（SM）在揭示空气-土壤-水-植物过程之间复杂的相互作用机制中发挥着重要作用。在青藏高原（QTP），原位土壤湿度数据稀缺且有限，基于卫星的土壤湿度数据时间跨度短，而再分析土壤湿度数据在长期和高时空分辨率方面具有优势，但相对误差较高。"
+      ],
+      "research objectiveCn": [
+        "在本研究中，为了改善青藏高原（QTP）地区的土壤湿度估计，我们旨在基于再分析数据（ERA5-LAND数据集）和现场数据（国际土壤湿度网络（ISMN）数据）提出一个气候自适应迁移学习（CATL）框架，以应对数据稀缺地区的问题。"
+      ],
+      "challengesCn": [
+        "青藏高原（QTP）拥有复杂的气候系统，每个气候类别对应不同的子区域。如果将青藏高原的所有在地气象站整合到一个模型中，可能无法达到预期的性能，甚至可能导致负迁移。"
+      ],
+      "methodsCn": [
+        "具体来说，针对青藏 Plateau（QTP）作为目标区域，选择与QTP气候类型相似的区域作为源区域，我们在源区域训练CNN-LSTM融合模型，然后通过微调策略将其转移到目标区域。"
+      ],
+      "datasetCn": [
+        "本研究所使用的数据包括ERA5-Land数据、ISMN实地数据和数字高程模型（DEM）数据。实地数据来源于国际土壤湿度网络（ISMN），这是一个全球性倡议，旨在建立和维护一个全面的实地土壤湿度数据库。目前，ISMN数据集是全球最大的实地土壤湿度数据库，涵盖来自59个网络、2446个站点和13,376个观测点的数据，时间跨度从1952年至近实时。ERA5-Land数据集由欧洲中期天气预报中心（ECMWF）生成，源自ERA5气候重分析模型的陆地部分。ERA5-Land数据集提供自1950年以来的无缝全球数据，空间分辨率为0.1°×0.1°，时间分辨率为1小时。在本研究中，利用ERA5-Land数据集中每小时的皮肤温度、总降水量和体积土壤水层1的变量数据。"
+      ],
+      "findingsCn": [
+        "CATL框架显著提高了ERA5-Land在青藏 Plateau（QTP）地区的土壤湿度估计精度，在2015年至2019年期间，其精度优于SMAPL3数据。此外，CATL框架在2010年至2014年的历史数据重建中表现良好，最终生成了一个长期（1960年至2019年）土壤湿度数据集（每日，0.05°），提高了青藏 Plateau的精度。本研究为数据稀缺地区的土壤湿度估计改进提供了一种新工具，这也将有利于流域水文和水资源管理。"
+      ]
     }
+  ],
+  "query": {
+    "Verification": [
+      {
+        "QuestionEn": "Does the integration of ERA5-LAND reanalysis data with in-situ measurements from the International Soil Moisture Network significantly enhance soil moisture estimation accuracy in data-scarce regions?",
+        "QuestionCn": "将ERA5-LAND再分析数据与国际土壤湿度网络的现场测量数据结合起来，是否显著提高了数据稀缺地区土壤湿度估计的准确性？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Can the Climate-Adaptive Transfer Learning framework effectively reduce the inherent errors in reanalysis data for regions with sparse data like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "气候自适应迁移学习框架能否有效减少像青藏高原这样数据稀疏地区再分析数据的固有误差？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "Is it possible to improve the precision of historical soil moisture data reconstruction in the Qinghai-Tibet Plateau through the use of a CNN-LSTM fusion model trained on regions with similar climate characteristics?",
+        "QuestionCn": "通过使用在气候特征相似区域训练的CNN-LSTM融合模型，是否可以提高青藏高原历史土壤湿度数据重建的精度？",
+        "AnswerEn": "Yes",
+        "AnswerCn": "是",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Disjunctive": [
+      {
+        "QuestionEn": "Is the primary data collection method for soil moisture in the Qinghai-Tibet Plateau based on in-situ measurements, satellite observations, or reanalysis data?",
+        "QuestionCn": "青藏高原土壤湿度的主要数据收集方法是基于现场测量、卫星观测还是再分析数据？",
+        "AnswerEn": "in-situ measurements, satellite observations, reanalysis data",
+        "AnswerCn": "原位测量、卫星观测、再分析数据",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Concept Completion": [
+      {
+        "QuestionEn": "What are the main challenges in soil moisture data collection on the Qinghai-Tibet Plateau?",
+        "QuestionCn": "青藏高原土壤湿度数据收集的主要挑战是什么？",
+        "AnswerEn": "sparse and limited in-situ soil moisture data, short period of satellite-based soil moisture data, relatively high error of reanalysis soil moisture data",
+        "AnswerCn": "稀疏和有限的原位土壤湿度数据，卫星土壤湿度数据时间较短，再分析土壤湿度数据误差相对较高。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Where can similar climate type regions to the Qinghai-Tibet Plateau be identified for the purpose of data transfer in soil moisture estimation?",
+        "QuestionCn": "可以在哪些类似气候类型的地区识别出与青藏高原相似的区域，以便进行土壤湿度估算的数据转移？",
+        "AnswerEn": "Source regions",
+        "AnswerCn": "源区域",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Example": [
+      {
+        "QuestionEn": "Can you provide an example of a data collection method that improves soil moisture estimation accuracy in regions with sparse in-situ data?",
+        "QuestionCn": "您能否提供一种数据收集方法的示例，以提高在稀疏原位数据区域的土壤湿度估计准确性？",
+        "AnswerEn": "One example is using a Climate-Adaptive Transfer Learning (CATL) framework, which combines reanalysis data like the ERA5-LAND dataset and in-situ data from the International Soil Moisture Network (ISMN), to enhance soil moisture estimation accuracy in the Qinghai-Tibet Plateau. This method involves training a CNN-LSTM fusion model in regions with similar climate types and then transferring it to the target region.",
+        "AnswerCn": "一个例子是使用气候自适应迁移学习（CATL）框架，该框架结合了ERA5-LAND数据集等再分析数据和国际土壤湿度网络（ISMN）的现场数据，以提高青藏高原土壤湿度估计的准确性。这种方法涉及在气候类型相似的区域训练CNN-LSTM融合模型，然后将其迁移到目标区域。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "What is an example of a challenge faced when developing a soil moisture dataset for a complex climate region like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在开发像青藏高原这样复杂气候区域的土壤湿度数据集时面临的一个挑战是什么？",
+        "AnswerEn": "A challenge in developing a soil moisture dataset for the Qinghai-Tibet Plateau is dealing with the complex climate system, where each climate class corresponds to various sub-areas. Fine-tuning all in-situ stations into one model may lead to negative transfer and not achieve the expected performance.",
+        "AnswerCn": "在为青藏高原开发土壤湿度数据集时，一个挑战是处理复杂的气候系统，其中每个气候类别对应不同的子区域。将所有实地站点微调为一个模型可能会导致负迁移，无法达到预期的性能。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Can you give an example of a dataset that was used to enhance the accuracy of soil moisture estimation in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "您能否提供一个用于提高青藏高原土壤湿度估计准确性的 dataset 示例？",
+        "AnswerEn": "An example is the ERA5-Land dataset, which is derived from the land component of the ERA5 climate reanalysis model. It provides seamless global data with a spatial resolution of 0.1° and a temporal resolution of 1 hour. This dataset, combined with ISMN in-situ data, was utilized to improve soil moisture estimation accuracy using the CATL framework.",
+        "AnswerCn": "ERA5-Land 数据集是从 ERA5 气候重分析模型的陆地部分衍生而来的。它提供无缝的全球数据，空间分辨率为 0.1°，时间分辨率为 1 小时。该数据集与 ISMN 现场数据结合，利用 CATL 框架提高了土壤湿度估计的准确性。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Feature Specification": [
+      {
+        "QuestionEn": "What are the key characteristics that define the spatial and temporal resolution of a soil moisture dataset in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "定义青藏高原土壤湿度数据集的空间和时间分辨率的关键特征是什么？",
+        "AnswerEn": "0.05° spatial resolution, daily temporal resolution",
+        "AnswerCn": "0.05° 空间分辨率，日时间分辨率",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the features of the climate-adaptive transfer learning framework that enhance soil moisture estimation in data-scarce regions?",
+        "QuestionCn": "气候适应性迁移学习框架的特征有哪些，可以增强数据稀缺地区的土壤湿度估计？",
+        "AnswerEn": "selecting source regions with similar climate types, CNN-LSTM fusion model, fine-tuning for the target region, leveraging long-term reanalysis data, using in-situ data",
+        "AnswerCn": "选择具有相似气候类型的源区域，CNN-LSTM融合模型，针对目标区域进行微调，利用长期再分析数据，使用原位数据。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Quantification": [
+      {
+        "QuestionEn": "What is the spatial resolution of a dataset developed using the Climate-Adaptive Transfer Learning framework for soil moisture estimation in the Qinghai-Tibet Plateau?",
+        "QuestionCn": "使用气候适应性迁移学习框架开发的青藏高原土壤湿度估计数据集的空间分辨率是多少？",
+        "AnswerEn": "0.05°",
+        "AnswerCn": "0.05°",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "How many networks are included in the International Soil Moisture Network (ISMN) database, which is used as part of the data collection methods in the field?",
+        "QuestionCn": "国际土壤湿度网络（ISMN）数据库中包含多少个网络，这些网络被用作该领域数据收集方法的一部分？",
+        "AnswerEn": "59",
+        "AnswerCn": "59",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "By what percentage did the CATL framework improve the correlation coefficient of historical soil moisture data compared to the original ERA5-Land reanalysis data?",
+        "QuestionCn": "CATL框架相比于原始ERA5-Land再分析数据，提高了历史土壤湿度数据的相关系数百分比是多少？",
+        "AnswerEn": "11.3%",
+        "AnswerCn": "11.3%",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What is a Climate-Adaptive Transfer Learning (CATL) framework in the context of soil moisture data estimation?",
+        "QuestionCn": "在土壤湿度数据估算的背景下，什么是气候自适应迁移学习（CATL）框架？",
+        "AnswerEn": "A Climate-Adaptive Transfer Learning (CATL) framework is a method proposed to enhance soil moisture estimation in data-scarce regions, particularly the Qinghai-Tibet Plateau. It utilizes reanalysis data and in-situ data, training a CNN-LSTM fusion model in regions with similar climate types and then transferring the model to the target region via fine-tuning.",
+        "AnswerCn": "气候适应性迁移学习（CATL）框架是一种旨在增强数据稀缺地区土壤湿度估计的方法，特别是在青藏高原。该框架利用再分析数据和现场数据，在气候类型相似的区域训练CNN-LSTM融合模型，然后通过微调将模型迁移到目标区域。",
+        "Level": "C1(Remembering)"
+      },
+      {
+        "QuestionEn": "What are the challenges in using soil moisture datasets for regions like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在像青藏高原这样的地区使用土壤湿度数据集面临哪些挑战？",
+        "AnswerEn": "The challenges include the complex climate system of the Qinghai-Tibet Plateau, which has various sub-areas corresponding to different climate classes. Fine-tuning all in-situ stations in the region into one model may not achieve the expected performance and could lead to negative transfer.",
+        "AnswerCn": "挑战包括青藏高原复杂的气候系统，该地区具有不同气候类别对应的多个子区域。将该地区所有的实地站点微调为一个模型可能无法达到预期的性能，并可能导致负迁移。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What constitutes the ERA5-Land dataset in the context of soil moisture studies?",
+        "QuestionCn": "ERA5-Land数据集在土壤湿度研究中的构成是什么？",
+        "AnswerEn": "The ERA5-Land dataset is derived from the land component of the ERA5 climate reanalysis model and is produced by the European Centre for Medium-Range Weather Forecasts (ECMWF). It provides seamless global data from 1950 with a spatial resolution of 0.1° and a temporal resolution of 1 hour, including variables like skin temperature, total precipitation, and volumetric soil water layer 1.",
+        "AnswerCn": "ERA5-Land 数据集是由欧洲中期天气预报中心（ECMWF）生产的ERA5气候重分析模型的陆地组件衍生而来。它提供自1950年以来的无缝全球数据，空间分辨率为0.1°，时间分辨率为1小时，包括地表温度、总降水量和土壤水分层1的体积等变量。",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Comparison": [
+      {
+        "QuestionEn": "In what ways do the challenges of soil moisture data collection in the Qinghai-Tibet Plateau differ from those in other climate-adaptive regions?",
+        "QuestionCn": "青藏高原的土壤湿度数据收集面临的挑战与其他气候适应区域的挑战有何不同？",
+        "AnswerEn": "The Qinghai-Tibet Plateau has a complex climate system with various sub-areas, making it challenging to fine-tune models without risking negative transfer. This is distinct from other regions where climate conditions might be more uniform, allowing for simpler model adaptation without the need for extensive fine-tuning strategies.",
+        "AnswerCn": "青藏高原拥有复杂的气候系统，具有多种子区域，这使得在不冒负迁移风险的情况下微调模型变得具有挑战性。这与其他气候条件可能更为均匀的地区不同，在这些地区可以更简单地进行模型适应，而无需广泛的微调策略。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What are the similarities and differences in the methodologies used to enhance soil moisture estimation accuracy in the Qinghai-Tibet Plateau compared to other data-scarce regions?",
+        "QuestionCn": "在青藏高原与其他数据稀缺地区提高土壤湿度估计准确性的方法论的相似性和差异性是什么？",
+        "AnswerEn": "The methodology for the Qinghai-Tibet Plateau involves using a CNN-LSTM fusion model trained in regions with similar climate types and then fine-tuned for the target region. This method is similar to other data-scarce regions where transfer learning might be used. However, the specific climate-adaptive framework and the choice of source regions with similar climate characteristics make it uniquely tailored to the Qinghai-Tibet Plateau's diverse conditions.",
+        "AnswerCn": "青藏高原的方法论涉及使用CNN-LSTM融合模型，在具有相似气候类型的区域进行训练，然后针对目标区域进行微调。这种方法类似于其他数据稀缺区域可能使用的迁移学习。然而，特定的气候适应框架以及选择具有相似气候特征的源区域，使其独特地适应青藏高原多样的条件。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "What are the potential implications of using a climate-adaptive transfer learning framework for addressing challenges in soil moisture data collection in complex climate systems?",
+        "QuestionCn": "使用气候适应性迁移学习框架来应对复杂气候系统中土壤湿度数据收集挑战的潜在影响是什么？",
+        "AnswerEn": "Using a climate-adaptive transfer learning framework can effectively address challenges in complex climate systems by selecting source regions with similar climate characteristics, thus avoiding negative transfer and ensuring better model performance. This approach enhances the estimation accuracy by fine-tuning models specifically for varied sub-areas within complex climate systems.",
+        "AnswerCn": "使用气候适应性迁移学习框架可以有效解决复杂气候系统中的挑战，通过选择具有相似气候特征的源区域，从而避免负迁移并确保更好的模型性能。这种方法通过专门针对复杂气候系统内的不同子区域微调模型，增强了估计的准确性。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What causes the limited accuracy in soil moisture estimation when using reanalysis data compared to in-situ measurements in the Qinghai-Tibet Plateau region?",
+        "QuestionCn": "在青藏高原地区，使用再分析数据进行土壤湿度估计时，导致准确性有限的原因是什么？",
+        "AnswerEn": "Reanalysis data, while offering long-term and high spatiotemporal resolution, tend to have higher errors due to the sparse and limited in-situ soil moisture data in the Qinghai-Tibet Plateau. This scarcity hampers the calibration and validation processes, affecting the accuracy of soil moisture estimation.",
+        "AnswerCn": "再分析数据虽然提供了长期和高时空分辨率，但由于青藏高原地面土壤湿度数据稀少且有限，往往会导致更高的误差。这种稀缺性妨碍了校准和验证过程，影响了土壤湿度估计的准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What factors contribute to the challenges in effectively using satellite-based soil moisture data for long-term historical reconstruction in regions like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "在青藏高原等地区有效利用基于卫星的土壤湿度数据进行长期历史重建面临的挑战因素有哪些？",
+        "AnswerEn": "Satellite-based soil moisture data often covers shorter time periods and may not provide the necessary historical depth for long-term reconstruction. Additionally, the complex climate and topography of regions like the Qinghai-Tibet Plateau exacerbate these challenges by requiring models with higher adaptability and precision to effectively utilize such data in historical contexts.",
+        "AnswerCn": "卫星土壤湿度数据通常覆盖的时间段较短，可能无法提供长期重建所需的历史深度。此外，像青藏高原这样的地区复杂的气候和地形加剧了这些挑战，要求模型具备更高的适应性和精确性，以有效利用这些数据进行历史背景下的研究。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Causal Consequence": [
+      {
+        "QuestionEn": "What are the consequences of using a CNN-LSTM fusion model trained in a source region with a similar climate for soil moisture estimation in a target region with complex climate systems?",
+        "QuestionCn": "在一个气候相似的源区域训练的CNN-LSTM融合模型在一个气候系统复杂的目标区域用于土壤湿度估计的后果是什么？",
+        "AnswerEn": "Using a CNN-LSTM fusion model trained in a source region with a similar climate leads to improved soil moisture estimation in the target region, effectively reducing inherent data errors and addressing the issue of sparse in-situ data.",
+        "AnswerCn": "使用在具有相似气候的源区域训练的CNN-LSTM融合模型，可以有效改善目标区域的土壤湿度估计，减少固有的数据误差，并解决稀缺的现场数据问题。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "How does the inclusion of both ERA5-Land reanalysis data and ISMN in-situ data affect the long-term soil moisture dataset quality and precision in a complex climate region?",
+        "QuestionCn": "ERA5-Land再分析数据和ISMN现场数据的结合如何影响复杂气候区域的长期土壤湿度数据集的质量和精度？",
+        "AnswerEn": "The inclusion of both ERA5-Land reanalysis data and ISMN in-situ data enhances the quality and precision of the long-term soil moisture dataset, providing a more reliable estimation and historical data reconstruction for complex climate regions.",
+        "AnswerCn": "ERA5-Land再分析数据和ISMN现场数据的结合提高了长期土壤湿度数据集的质量和精度，为复杂气候区域提供了更可靠的估算和历史数据重建。",
+        "Level": "C5(Evaluating)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the purpose of utilizing a Climate-Adaptive Transfer Learning framework for soil moisture estimation in regions with sparse data?",
+        "QuestionCn": "在数据稀疏地区利用气候自适应迁移学习框架进行土壤湿度估算的目的是什么？",
+        "AnswerEn": "The goal is to improve soil moisture estimation accuracy in data-scarce regions like the Qinghai-Tibet Plateau by leveraging the Climate-Adaptive Transfer Learning framework. This approach integrates reanalysis data and in-situ data, addressing data scarcity while reducing errors and enhancing estimation reliability.",
+        "AnswerCn": "目标是在数据稀缺的地区，如青藏高原，通过利用气候自适应迁移学习框架来提高土壤湿度估计的准确性。这种方法整合了再分析数据和现场数据，解决了数据稀缺的问题，同时减少了误差，提高了估计的可靠性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "Why is it important to select areas with similar climate types as the source region for training models aimed at soil moisture estimation?",
+        "QuestionCn": "为什么选择气候类型相似的地区作为训练土壤湿度估计模型的源区域很重要？",
+        "AnswerEn": "Selecting areas with similar climate types as the source region is crucial because it helps in effectively training the models, ensuring that the characteristics of the source data align closely with the target region. This minimizes negative transfer and improves the performance of the model in the complex climate system of the Qinghai-Tibet Plateau.",
+        "AnswerCn": "选择与源区域气候类型相似的区域至关重要，因为这有助于有效训练模型，确保源数据的特征与目标区域紧密对齐。这可以最小化负迁移，改善模型在复杂气候系统中的表现，尤其是在青藏高原。",
+        "Level": "C5(Evaluating)"
+      },
+      {
+        "QuestionEn": "What are the objectives behind integrating ERA5-LAND reanalysis data with in-situ measurements from the International Soil Moisture Network?",
+        "QuestionCn": "将ERA5-LAND再分析数据与国际土壤湿度网络的现场测量数据整合的目标是什么？",
+        "AnswerEn": "The objective is to combine the long-term, high spatiotemporal resolution advantages of ERA5-LAND reanalysis data with the ground-truth accuracy of in-situ measurements from the International Soil Moisture Network. This integration aims to enhance the precision and reliability of soil moisture estimates in the Qinghai-Tibet Plateau, particularly in areas where in-situ data is sparse.",
+        "AnswerCn": "目标是将ERA5-LAND再分析数据的长期高时空分辨率优势与国际土壤湿度网络的实地测量的真实准确性相结合。这一整合旨在提高青藏高原土壤湿度估计的精确性和可靠性，特别是在实地数据稀缺的地区。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What steps are involved in utilizing a Climate-Adaptive Transfer Learning framework to enhance soil moisture estimation in regions with sparse data?",
+        "QuestionCn": "利用气候自适应迁移学习框架来增强稀疏数据区域的土壤湿度估计涉及哪些步骤？",
+        "AnswerEn": "To enhance soil moisture estimation in regions with sparse data using a Climate-Adaptive Transfer Learning framework, the process involves selecting areas with similar climate types as the source region, training a CNN-LSTM fusion model in the source region, and transferring it to the target region (like the Qinghai-Tibet Plateau) through a fine-tuning strategy.",
+        "AnswerCn": "为了在数据稀缺的地区增强土壤湿度估计，采用气候自适应迁移学习框架的过程包括选择与源区域气候类型相似的区域，在源区域训练CNN-LSTM融合模型，并通过微调策略将其转移到目标区域（如青藏高原）。",
+        "Level": "C3(Applying)"
+      },
+      {
+        "QuestionEn": "How can reanalysis data and in-situ data be effectively combined to improve soil moisture datasets in data-scarce regions?",
+        "QuestionCn": "如何有效结合再分析数据和现场数据，以改善数据稀缺地区的土壤湿度数据集？",
+        "AnswerEn": "Reanalysis data (such as ERA5-LAND) and in-situ data (from networks like the International Soil Moisture Network) can be effectively combined by selecting a model training source region with similar climate characteristics to the target region and using a fusion model that leverages the strengths of both data types to address data scarcity and improve estimation accuracy.",
+        "AnswerCn": "再分析数据（如ERA5-LAND）和现场数据（来自国际土壤湿度网络等网络）可以通过选择与目标区域气候特征相似的模型训练源区域有效结合，并使用融合模型利用两种数据类型的优势，以解决数据稀缺问题并提高估计准确性。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What procedural steps are necessary to validate the performance of a soil moisture dataset in comparison to existing datasets?",
+        "QuestionCn": "验证土壤湿度数据集性能与现有数据集进行比较所需的程序步骤是什么？",
+        "AnswerEn": "To validate the performance of a soil moisture dataset, one would compare it against existing datasets such as SMAPL3, focusing on metrics like correlation coefficient and unbiased root mean square error over a specified period to assess improvements in estimation accuracy.",
+        "AnswerCn": "为了验证土壤湿度数据集的性能，可以将其与现有数据集如SMAPL3进行比较，重点关注相关系数和无偏根均方误差等指标，以评估估计准确性的改进。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What methodologies enable the effective integration of satellite-based data and in-situ measurements for soil moisture estimation in data-scarce regions like the Qinghai-Tibet Plateau?",
+        "QuestionCn": "哪些方法论能够有效整合卫星数据和地面测量数据，以便在像青藏高原这样的数据稀缺地区进行土壤湿度估算？",
+        "AnswerEn": "A methodology that enables effective integration involves using the Climate-Adaptive Transfer Learning (CATL) framework, which combines reanalysis data from ERA5-LAND and in-situ data from the International Soil Moisture Network (ISMN). This approach involves training a CNN-LSTM fusion model in regions with similar climate types and then transferring it to the target region through fine-tuning, which helps improve estimation accuracy despite sparse in-situ measurements.",
+        "AnswerCn": "一种有效整合的方法论涉及使用气候适应性迁移学习（CATL）框架，该框架结合了ERA5-LAND的再分析数据和国际土壤湿度网络（ISMN）的现场数据。这种方法涉及在气候类型相似的区域训练CNN-LSTM融合模型，然后通过微调将其转移到目标区域，这有助于提高估计准确性，尽管现场测量稀疏。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "What conditions or strategies facilitate the improvement of soil moisture data accuracy in regions with complex climate systems?",
+        "QuestionCn": "哪些条件或策略可以促进在气候系统复杂的地区提高土壤湿度数据的准确性？",
+        "AnswerEn": "Improvement of soil moisture data accuracy in regions with complex climate systems, such as the Qinghai-Tibet Plateau, is facilitated by selecting source regions with similar climate characteristics for model training. The use of a CNN-LSTM fusion model and fine-tuning strategies in the CATL framework also play a crucial role. These strategies help mitigate the risk of negative transfer and enhance the model's adaptability and accuracy in data-scarce regions.",
+        "AnswerCn": "在气候系统复杂的地区，如青藏高原，提高土壤湿度数据准确性的方法是选择具有相似气候特征的源区域进行模型训练。使用CNN-LSTM融合模型和CATL框架中的微调策略也起着至关重要的作用。这些策略有助于减轻负迁移的风险，并增强模型在数据稀缺区域的适应性和准确性。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What technological frameworks or advancements enable long-term, high-resolution soil moisture data reconstruction in areas with limited ground station data?",
+        "QuestionCn": "哪些技术框架或进展能够在地面站数据有限的地区实现长期、高分辨率的土壤湿度数据重建？",
+        "AnswerEn": "The Climate-Adaptive Transfer Learning (CATL) framework enables long-term, high-resolution soil moisture data reconstruction by leveraging the spatial and temporal coverage of the ERA5-LAND dataset and the comprehensive in-situ data from the ISMN. This framework effectively overcomes the limitations of sparse ground station data through advanced machine learning models and transfer learning techniques, resulting in improved historical data reconstruction and enhanced precision.",
+        "AnswerCn": "气候自适应迁移学习（CATL）框架通过利用ERA5-LAND数据集的空间和时间覆盖以及ISMN的全面地面数据，实现了长期高分辨率土壤湿度数据的重建。该框架有效克服了稀疏地面站数据的局限性，采用先进的机器学习模型和迁移学习技术，从而提高了历史数据重建的准确性和精度。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Expectation": [
+      {
+        "QuestionEn": "Why might a dataset integrating reanalysis data and in-situ measurements lead to improved soil moisture estimation accuracy in regions with sparse data?",
+        "QuestionCn": "为什么整合再分析数据和现场测量的数据集可能会提高在数据稀疏地区的土壤湿度估算准确性？",
+        "AnswerEn": "A dataset integrating reanalysis data and in-situ measurements can leverage the long-term, high spatiotemporal resolution of reanalysis data like the ERA5-LAND, while using in-situ data to calibrate and correct for inherent errors. This combination can enhance estimation accuracy, especially in data-scarce regions such as the Qinghai-Tibet Plateau.",
+        "AnswerCn": "一个整合再分析数据和现场测量数据的数据集可以利用再分析数据（如ERA5-LAND）的长期高时空分辨率，同时使用现场数据来校准和修正固有的误差。这种组合可以提高估计的准确性，特别是在数据稀缺的地区，如青藏高原。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "What challenges might arise when using a CNN-LSTM fusion model for climate adaptation in regions with complex climate systems?",
+        "QuestionCn": "在气候适应中使用CNN-LSTM融合模型时，可能会出现哪些挑战，尤其是在气候系统复杂的地区？",
+        "AnswerEn": "Challenges can include the risk of negative transfer if a single model is used across diverse sub-areas within a complex climate region like the Qinghai-Tibet Plateau. Different climate classes may require fine-tuned models to accurately capture local variations and interactions, necessitating careful selection of source regions with similar climate types.",
+        "AnswerCn": "挑战包括在像青藏高原这样复杂气候区域内，如果使用单一模型，可能会面临负迁移的风险。不同的气候类别可能需要经过精细调整的模型，以准确捕捉地方性变化和相互作用，这需要仔细选择具有相似气候类型的源区域。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Judgmental": [
+      {
+        "QuestionEn": "In what ways could the integration of satellite-based and in-situ soil moisture data be improved to ensure more accurate and reliable long-term datasets?",
+        "QuestionCn": "如何改进卫星基础和地面土壤湿度数据的集成，以确保更准确和可靠的长期数据集？",
+        "AnswerEn": "The integration of satellite-based and in-situ soil moisture data could be improved by employing advanced machine learning frameworks, such as the CATL framework, which effectively combines reanalysis data with in-situ measurements. Additionally, leveraging areas with similar climate characteristics for model training and fine-tuning can further enhance accuracy and reliability of long-term datasets.",
+        "AnswerCn": "卫星基础和地面土壤湿度数据的整合可以通过采用先进的机器学习框架来改善，例如CATL框架，该框架有效地将再分析数据与地面测量结合起来。此外，利用具有相似气候特征的区域进行模型训练和微调，可以进一步提高长期数据集的准确性和可靠性。",
+        "Level": "C6(Creating)"
+      }
+    ],
+    "Assertion": [
+      {
+        "QuestionEn": "I don't understand why utilizing reanalysis data can be advantageous for estimating soil moisture in regions with sparse in-situ data.",
+        "QuestionCn": "我不明白为什么在地面观测数据稀少的地区，利用再分析数据对土壤湿度进行估计会有优势。",
+        "AnswerEn": "Reanalysis data, such as the ERA5-LAND dataset, offers the advantage of long-term and high spatiotemporal resolution, which can significantly improve soil moisture estimation accuracy in regions where in-situ data is sparse.",
+        "AnswerCn": "再分析数据，如ERA5-LAND数据集，具有长期和高时空分辨率的优势，这可以显著提高在地面观测数据稀缺地区的土壤湿度估计准确性。",
+        "Level": "C2(Understanding)"
+      },
+      {
+        "QuestionEn": "I’m unsure about how transfer learning can be applied in soil moisture estimation across different climatic regions.",
+        "QuestionCn": "我不确定如何在不同气候区域应用迁移学习进行土壤湿度估计。",
+        "AnswerEn": "Transfer learning, particularly the Climate-Adaptive Transfer Learning (CATL) framework, can be applied by selecting source regions with climate types similar to the target region, training a model, and then transferring it to the target region using a fine-tuning strategy. This helps improve soil moisture estimation in data-scarce regions like the Qinghai-Tibet Plateau.",
+        "AnswerCn": "迁移学习，特别是气候适应性迁移学习（CATL）框架，可以通过选择与目标区域气候类型相似的源区域，训练模型，然后使用微调策略将其转移到目标区域。这有助于改善像青藏 Plateau 这样的数据稀缺区域的土壤湿度估计。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Request/Directive": [
+      {
+        "QuestionEn": "Please analyze the potential challenges and strategies involved in utilizing transfer learning to improve soil moisture estimation in regions with sparse data.",
+        "QuestionCn": "请分析在数据稀缺的地区利用迁移学习提高土壤湿度估计的潜在挑战和策略。",
+        "AnswerEn": "One of the challenges is the complex climate system of the Qinghai-Tibet Plateau, where each climate class corresponds to various sub-areas. Fine-tuning all in-situ stations into one model might lead to negative transfer. The strategy involves selecting areas with similar climate types as the source region to train a CNN-LSTM fusion model and then transferring it to the target region via a fine-tuning strategy.",
+        "AnswerCn": "青藏高原的气候系统复杂，各气候类型对应不同的子区域。将所有的实地观测站整合到一个模型中可能会导致负迁移。该策略涉及选择气候类型相似的区域作为源区域，以训练CNN-LSTM融合模型，然后通过微调策略将其转移到目标区域。",
+        "Level": "C4(Analyzing)"
+      },
+      {
+        "QuestionEn": "Please explore the methodologies used to integrate in-situ and reanalysis data for enhancing soil moisture datasets in data-scarce regions.",
+        "QuestionCn": "请探讨用于整合原位和再分析数据以增强数据稀缺地区土壤湿度数据集的方法论。",
+        "AnswerEn": "The integration involves using a Climate-Adaptive Transfer Learning (CATL) framework that combines ERA5-LAND reanalysis data with in-situ data from the International Soil Moisture Network (ISMN). This approach utilizes the long-term and high spatiotemporal resolution advantages of reanalysis data while reducing inherent errors by leveraging the comprehensive in-situ dataset and fine-tuning the model to the target region.",
+        "AnswerCn": "该集成涉及使用气候自适应迁移学习（CATL）框架，将ERA5-LAND再分析数据与国际土壤湿度网络（ISMN）的现场数据相结合。这种方法利用了再分析数据的长期和高时空分辨率优势，同时通过利用全面的现场数据集来减少固有误差，并对模型进行针对目标区域的微调。",
+        "Level": "C6(Creating)"
+      },
+      {
+        "QuestionEn": "Please investigate potential datasets or data sources that could be leveraged for improving soil moisture estimation accuracy in high-altitude regions.",
+        "QuestionCn": "请调查可以利用的潜在数据集或数据源，以提高高海拔地区土壤湿度估计的准确性。",
+        "AnswerEn": "Potential datasets include the ERA5-Land data, which offers seamless global data with long-term temporal coverage, and the International Soil Moisture Network (ISMN) data, which is the largest in-situ soil moisture database worldwide. Additional data like digital elevation model (DEM) data could also be utilized to enhance soil moisture estimation accuracy in high-altitude regions such as the Qinghai-Tibet Plateau.",
+        "AnswerCn": "潜在的数据集包括ERA5-Land数据，该数据提供无缝的全球数据，具有长期的时间覆盖；以及国际土壤湿度网络（ISMN）数据，这是全球最大的地面土壤湿度数据库。此外，数字高程模型（DEM）数据也可以用于提高高海拔地区（如青藏高原）土壤湿度估计的准确性。",
+        "Level": "C6(Creating)"
+      }
+    ]
+  }
 }

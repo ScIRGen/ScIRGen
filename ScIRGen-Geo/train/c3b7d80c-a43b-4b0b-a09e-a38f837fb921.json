@@ -1,245 +1,245 @@
 {
-    "id": "c3b7d80c-a43b-4b0b-a09e-a38f837fb921",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Physical snow process model supported global snow depth product retrieved from the passive microwave AMSR2 sensor (2013-2020)",
-            "titleCn": "积雪物理过程模型支持的全球AMSR2被动微波雪深反演数据集（2013-2020）",
-            "description": "1. Data content: global 0.25-degree resolution daily snow depth product for seasonal snow from 2013 to 2020, including land areas in the northern and southern hemispheres except Antarctica and Greenland.\n2. Data source and processing method: In view of the underestimation problem of current mainstream passive microwave snow products in mountainous areas, the machine learning algorithm is used to generate a new snow depth product, which trained the representative snow depth measurements from meteorological stations globally, year by year, based on both the AMSR2 (Advanced Microwave Scanning Radiometer 2) brightness temperatures and the prior knowledge of snow parameters from snow process model simulations. The snow priors come from the improved multiple-layer SNTHERM (Snow Thermal Model) simulation driven by the GLDAS (Global Land Data Assistance System) dataset, including snow grain size, snow density and the first-guess snow depth parameters. The machine learning algorithm is mainly used to overcome the biases in snow priors caused by the forcing dataset error. The meteorological station measurements participating in the construction of ground truths are from the GHCN (Global Historical Climate Network), GSOD (Global Surface Summary of the Day), USHCN (The United States Historical Climate Network), ECA&D (European Climate Assessment&Dataset) and daily snow depth measurements from reference meteorological stations in China. The snow cover extent is jointly determined based on MODIS 0.05 ° Climate Grid snow cover product and SNTHERM simulations.\n3. Data quality description: 1) Cross validation: The root mean square error (RMSE) of retrieved snow depth validated by 1.72 million samples in eight years worldwide is 12.4 cm. The bias of snow depth is not sensitive to elevation and forest cover fraction. 2) Independent validation: the RMSE validated using the 25 km quadrat, 500 m quadrat and snow course measurements from the China Snow Survey in 2018-2019 years is 4.93-8.9 cm; RMSE validated against the EuroAlps dataset and CanSWE dataset are 17.3 cm and 24.2 cm, respectively, in the 0-100 cm snow depth range; if the snow depth is converted to the snow water equivalent (SWE) using a fixed density of 240 kg/m3, the SWE RMSE validated against the GlobSnow validation dataset - the Russian part and the US SNOTEL dataset are 29.2 mm and 40.1 mm in 0-200 mm range. Due to the differences between the training dataset and the independent validation dataset, it is difficult to have a fully-unbiased validation result in the deep snow range; however, the new product still slightly outperforms the JAXA official AMSR2 product and GlobSnow product in the mountains and at the edge of mountains, respectively. Note: The current validation results are calculated based on the representative in-situ measurements. Please contact the data provider and refer to the paper for representative evaluation criteria.\n4. Data application achievements and prospects: research on the spatial and temporal distributions of seasonal snow cover; on requirement of a seasonal snow information to support the study of other elements in the cryosphere; researchers looking for a less-biased passive microwave snow depth product in the mountains at current stage.\n5. Others: We would like to express our gratitude to the providers of all kinds of raw datasets to generate our new product. Please refer to the paper for the acknowledgement and data description.",
-            "descriptionCn": "1.数据内容：2013-2020年全球0.25度季节性积雪日雪深产品，包含除南极和格陵兰外的南北半球陆上区域。\n2.数据来源及加工方法：针对当前主流被动微波积雪产品在山区的低估问题，利用机器学习算法融合AMSR2（Advanced Microwave Scanning Radiometer 2）传感器亮温和积雪过程模型模拟的先验知识，以经过代表性检验的全球气象台站数据作为训练样本，逐年生成了2013-2020全球雪深反演数据集。其中，先验知识来自于GLDAS（Global Land Data Assimilation System）数据驱动的改进SNTHERM（Snow Thermal Model）多层积雪物理过程模型模拟，包含雪粒径、雪密度、初始雪深三类参数。机器学习算法主要用于克服先验知识受气象驱动影响形成的相对偏差。参与构建地面雪深真值的气象台站数据来自GHCN (Global Historical Climatology Network)、GSOD (Global Surface Summary of the Day)、USHCN (The United States Historical Climatology Network)、ECA&D (European Climate Assessment & Dataset)及中国基准气象站雪深日值数据集资料。积雪覆盖范围基于MODIS 0.05度Climate Grid雪盖数据及SNTHERM模拟雪盖范围联合判定。\n3.数据质量描述：1）交叉验证：根据全球八年172万个气象台站观测日雪深样本验证的反演均方根误差（RMSE）为12.4 cm。雪深偏差对海拔高度和森林覆盖度不敏感。2）独立验证：采用2018-2019年中国积雪调查数据25km样方、500米样方、路线调查三类数据验证的RMSE为4.93-8.9 cm之间；基于阿尔卑斯山EuroAlps数据和加拿大CanSWE数据验证的RMSE在0-100cm雪深范围内保持在17.3 cm和24.2 cm的水平；以240 kg/m3雪密度换算为雪水当量后，采用GlobSnow验证数据集-俄罗斯部分和美国SNOTEL数据评价的雪水当量RMSE在0-200mm范围分别为29.2 mm和40.1 mm。由于训练数据集和验证数据集之间的差异，当前无法达到独立验证结果在厚雪区间完全无偏，但经检验其在山区或山区边缘的表现优于AMSR2官方产品和GlobSnow产品。注意：当前验证结果基于有代表性的观测数据，代表性评价标准请参看论文。\n4.数据应用成果及前景：积雪时空分布研究；为冰冻圈其它要素研究提供雪深参考信息；当前阶段需求偏差更小的山区粗分辨率雪深产品的研究者。\n5.其它：我们对研究所用各类原始数据的提供者表示感谢，请参考论文获取致谢及原始数据相关信息。",
-            "instructions": "File name: Snow depth data is stored in NetCDF format, and the file name is \"Snow_025_daily. yyyymmdd. 003. nc4\", where yyyy represents year, mm represents month, and dd represents day.\nData reading method: various NetCDF format software and reading programs can be used for reading. Each file contains 3 fields, lon - grid center longitude, lat - grid center latitude, SD - snow depth (unit: cm).",
-            "instructionsCn": "文件命名：雪深数据以NetCDF格式存储，文件的名称为“Snow_025_daily.yyyymmdd.003.nc4”，其中yyyy代表年，mm代表月，dd代表日。\n数据读取方式：可采用各类NetCDF格式软件和读取程序读取。每个文件包含3个字段，lon-网格中心经度，lat-网格中心纬度，SD-雪深（单位cm）。",
-            "east": 180.0,
-            "west": -180.0,
-            "south": -60.0,
-            "north": 90.0,
-            "startTime": "2013-01-01 00:00:00",
-            "endTime": "2020-12-31 00:00:00",
-            "fileSize": 686580020.0,
-            "cstr": "18406.11.Cryos.tpdc.272937",
-            "doi": "10.11888/Cryos.tpdc.272937",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "潘金梅",
-                "nameEn": "PAN Jinmei",
-                "unitEn": "",
-                "unitCn": "中国科学院国家空间科学中心"
-            },
-            {
-                "nameCn": "杨建卫",
-                "nameEn": "YANG Jianwei ",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "蒋玲梅",
-                "nameEn": "JIANG Lingmei",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "熊川",
-                "nameEn": "Xiong Chuan",
-                "unitEn": "Southwest Jiaotong University",
-                "unitCn": "西南交通大学"
-            },
-            {
-                "nameCn": "潘方博",
-                "nameEn": "PAN Fangbo ",
-                "unitEn": "Beijing Normal University",
-                "unitCn": "北京师范大学"
-            },
-            {
-                "nameCn": "施建成",
-                "nameEn": "SHI Jiancheng",
-                "unitEn": "",
-                "unitCn": "中国科学院国家空间科学中心"
-            },
-            {
-                "nameCn": "高晓文",
-                "nameEn": "GAO Xiaowen",
-                "unitEn": "Graduate University of CAS",
-                "unitCn": "中国科学院研究生院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Validation of the SNTHERM model applied for snow depth, grain size, and brightness temperature simulation at meteorological stations in China",
-                "referenceCn": null,
-                "referenceEn": "Chen, T., Pan, J., Chang, S., Xiong, C., Shi, J., Liu, M., Che, T., Wang, L., Liu, H., 2020. Validation of the SNTHERM model applied for snow depth, grain size, and brightness temperature simulation at meteorological stations in China. Remote Sens. 12, 507. https://doi.org/10.3390/rs12030507"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Evaluation of the effective microstructure parameter of the microwave emission model of layered snowpack for multiple-layer snow",
-                "referenceCn": null,
-                "referenceEn": "Yu, Y., Pan, J., Shi, J., 2021. Evaluation of the effective microstructure parameter of the microwave emission model of layered snowpack for multiple-layer snow. Remote Sens. 13. https://doi.org/10.3390/rs13102012 "
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Evaluation of stereology for snow microstructure measurement and microwave emission modeling: a case study",
-                "referenceCn": null,
-                "referenceEn": "Pan, J., Durand, M.T., Courville, Z., Vander Jagt, B.J., Molotch, N.P., Margulis, S.A., Kim, E.J., Schneebeli, M., Mätzler, C., 2021. Evaluation of stereology for snow microstructure measurement and microwave emission modeling: a case study. Int. J. Digit. Earth 14, 1316–1336. https://doi.org/10.1080/17538947.2021.1902006"
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Differences between the HUT snow emission model and MEMLS and their effects on brightness temperature simulation",
-                "referenceCn": null,
-                "referenceEn": "Pan, J., Durand, M., Sandells, M., Lemmetyinen, J., Kim, E.J., Pulliainen, J., Kontu, A., Derksen, C., 2016. Differences between the HUT snow emission model and MEMLS and their effects on brightness temperature simulation. IEEE Trans. Geosci. Remote Sens. 54, 2001–2019. https://doi.org/10.1109/TGRS.2015.2493505 "
-            },
-            {
-                "titleCn": null,
-                "titleEn": "Combination of Snow Process Model Priors and Site Representativeness Evaluation to Improve the Global Snow Depth Retrieval Based on Passive Microwaves",
-                "referenceCn": null,
-                "referenceEn": "Pan, J., Yang, J., Jiang, L., Xiong, C., Pan, F., Gao, X., Shi, J., Chang, S., 2023. Combination of Snow Process Model Priors and Site Representativeness Evaluation to Improve the Global Snow Depth Retrieval Based on Passive Microwaves. IEEE Trans. Geosci. Remote Sens. 61, 1–20. https://doi.org/10.1109/TGRS.2023.3276651"
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "冰冻圈",
-                "nameEn": "Cryosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "积雪",
-                "nameEn": "Snow"
-            },
-            {
-                "nameCn": "积雪深度",
-                "nameEn": "Snow depth"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "全球",
-                "keywordEn": "Global"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2013-2020",
-                "keywordEn": "2013-2020",
-                "type": "temporal"
-            },
-            {
-                "keywordCn": "逐日",
-                "keywordEn": "Daily",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
-                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
-            },
-            {
-                "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
-                "titleEn": "Major Research plan of the National Natural Science Foundation of China"
-            },
-            {
-                "titleCn": "国家重点研发计划",
-                "titleEn": "National Key Research and Development Program of China"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
-                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
-            },
-            {
-                "titleCn": "祁连山地区冰川边界（2018）",
-                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
-            },
-            {
-                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
-                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
-            },
-            {
-                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
-                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
-            },
-            {
-                "titleCn": "北半球湖冰物候数据集（1978-2018）",
-                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
-            },
-            {
-                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
-                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
-            },
-            {
-                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
-                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
-            },
-            {
-                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
-                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
-            },
-            {
-                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
-                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
-            },
-            {
-                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
-                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
-            }
-        ]
+  "id": "c3b7d80c-a43b-4b0b-a09e-a38f837fb921",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Physical snow process model supported global snow depth product retrieved from the passive microwave AMSR2 sensor (2013-2020)",
+      "titleCn": "积雪物理过程模型支持的全球AMSR2被动微波雪深反演数据集（2013-2020）",
+      "description": "1. Data content: global 0.25-degree resolution daily snow depth product for seasonal snow from 2013 to 2020, including land areas in the northern and southern hemispheres except Antarctica and Greenland.\n2. Data source and processing method: In view of the underestimation problem of current mainstream passive microwave snow products in mountainous areas, the machine learning algorithm is used to generate a new snow depth product, which trained the representative snow depth measurements from meteorological stations globally, year by year, based on both the AMSR2 (Advanced Microwave Scanning Radiometer 2) brightness temperatures and the prior knowledge of snow parameters from snow process model simulations. The snow priors come from the improved multiple-layer SNTHERM (Snow Thermal Model) simulation driven by the GLDAS (Global Land Data Assistance System) dataset, including snow grain size, snow density and the first-guess snow depth parameters. The machine learning algorithm is mainly used to overcome the biases in snow priors caused by the forcing dataset error. The meteorological station measurements participating in the construction of ground truths are from the GHCN (Global Historical Climate Network), GSOD (Global Surface Summary of the Day), USHCN (The United States Historical Climate Network), ECA&D (European Climate Assessment&Dataset) and daily snow depth measurements from reference meteorological stations in China. The snow cover extent is jointly determined based on MODIS 0.05 ° Climate Grid snow cover product and SNTHERM simulations.\n3. Data quality description: 1) Cross validation: The root mean square error (RMSE) of retrieved snow depth validated by 1.72 million samples in eight years worldwide is 12.4 cm. The bias of snow depth is not sensitive to elevation and forest cover fraction. 2) Independent validation: the RMSE validated using the 25 km quadrat, 500 m quadrat and snow course measurements from the China Snow Survey in 2018-2019 years is 4.93-8.9 cm; RMSE validated against the EuroAlps dataset and CanSWE dataset are 17.3 cm and 24.2 cm, respectively, in the 0-100 cm snow depth range; if the snow depth is converted to the snow water equivalent (SWE) using a fixed density of 240 kg/m3, the SWE RMSE validated against the GlobSnow validation dataset - the Russian part and the US SNOTEL dataset are 29.2 mm and 40.1 mm in 0-200 mm range. Due to the differences between the training dataset and the independent validation dataset, it is difficult to have a fully-unbiased validation result in the deep snow range; however, the new product still slightly outperforms the JAXA official AMSR2 product and GlobSnow product in the mountains and at the edge of mountains, respectively. Note: The current validation results are calculated based on the representative in-situ measurements. Please contact the data provider and refer to the paper for representative evaluation criteria.\n4. Data application achievements and prospects: research on the spatial and temporal distributions of seasonal snow cover; on requirement of a seasonal snow information to support the study of other elements in the cryosphere; researchers looking for a less-biased passive microwave snow depth product in the mountains at current stage.\n5. Others: We would like to express our gratitude to the providers of all kinds of raw datasets to generate our new product. Please refer to the paper for the acknowledgement and data description.",
+      "descriptionCn": "1.数据内容：2013-2020年全球0.25度季节性积雪日雪深产品，包含除南极和格陵兰外的南北半球陆上区域。\n2.数据来源及加工方法：针对当前主流被动微波积雪产品在山区的低估问题，利用机器学习算法融合AMSR2（Advanced Microwave Scanning Radiometer 2）传感器亮温和积雪过程模型模拟的先验知识，以经过代表性检验的全球气象台站数据作为训练样本，逐年生成了2013-2020全球雪深反演数据集。其中，先验知识来自于GLDAS（Global Land Data Assimilation System）数据驱动的改进SNTHERM（Snow Thermal Model）多层积雪物理过程模型模拟，包含雪粒径、雪密度、初始雪深三类参数。机器学习算法主要用于克服先验知识受气象驱动影响形成的相对偏差。参与构建地面雪深真值的气象台站数据来自GHCN (Global Historical Climatology Network)、GSOD (Global Surface Summary of the Day)、USHCN (The United States Historical Climatology Network)、ECA&D (European Climate Assessment & Dataset)及中国基准气象站雪深日值数据集资料。积雪覆盖范围基于MODIS 0.05度Climate Grid雪盖数据及SNTHERM模拟雪盖范围联合判定。\n3.数据质量描述：1）交叉验证：根据全球八年172万个气象台站观测日雪深样本验证的反演均方根误差（RMSE）为12.4 cm。雪深偏差对海拔高度和森林覆盖度不敏感。2）独立验证：采用2018-2019年中国积雪调查数据25km样方、500米样方、路线调查三类数据验证的RMSE为4.93-8.9 cm之间；基于阿尔卑斯山EuroAlps数据和加拿大CanSWE数据验证的RMSE在0-100cm雪深范围内保持在17.3 cm和24.2 cm的水平；以240 kg/m3雪密度换算为雪水当量后，采用GlobSnow验证数据集-俄罗斯部分和美国SNOTEL数据评价的雪水当量RMSE在0-200mm范围分别为29.2 mm和40.1 mm。由于训练数据集和验证数据集之间的差异，当前无法达到独立验证结果在厚雪区间完全无偏，但经检验其在山区或山区边缘的表现优于AMSR2官方产品和GlobSnow产品。注意：当前验证结果基于有代表性的观测数据，代表性评价标准请参看论文。\n4.数据应用成果及前景：积雪时空分布研究；为冰冻圈其它要素研究提供雪深参考信息；当前阶段需求偏差更小的山区粗分辨率雪深产品的研究者。\n5.其它：我们对研究所用各类原始数据的提供者表示感谢，请参考论文获取致谢及原始数据相关信息。",
+      "instructions": "File name: Snow depth data is stored in NetCDF format, and the file name is \"Snow_025_daily. yyyymmdd. 003. nc4\", where yyyy represents year, mm represents month, and dd represents day.\nData reading method: various NetCDF format software and reading programs can be used for reading. Each file contains 3 fields, lon - grid center longitude, lat - grid center latitude, SD - snow depth (unit: cm).",
+      "instructionsCn": "文件命名：雪深数据以NetCDF格式存储，文件的名称为“Snow_025_daily.yyyymmdd.003.nc4”，其中yyyy代表年，mm代表月，dd代表日。\n数据读取方式：可采用各类NetCDF格式软件和读取程序读取。每个文件包含3个字段，lon-网格中心经度，lat-网格中心纬度，SD-雪深（单位cm）。",
+      "east": 180.0,
+      "west": -180.0,
+      "south": -60.0,
+      "north": 90.0,
+      "startTime": "2013-01-01 00:00:00",
+      "endTime": "2020-12-31 00:00:00",
+      "fileSize": 686580020.0,
+      "cstr": "18406.11.Cryos.tpdc.272937",
+      "doi": "10.11888/Cryos.tpdc.272937",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Quantification": [
-            {
-                "QuestionEn": "What is the root mean square error (RMSE) for the global snow depth retrievals validated with meteorological station observations over eight years?",
-                "QuestionCn": "全球雪深检索与气象站观测数据验证的均方根误差（RMSE）是多少，时间跨度为八年？",
-                "AnswerEn": "12.4 cm",
-                "AnswerCn": "12.4 厘米",
-                "Level": "C1(Remembering)"
-            }
-        ],
-        "Definition": [
-            {
-                "QuestionEn": "What does 'passive microwave snow depth retrieval' mean in the context of snow depth datasets?",
-                "QuestionCn": "“被动微波雪深提取”在雪深数据集的上下文中是什么意思。",
-                "AnswerEn": "Passive microwave snow depth retrieval refers to the process of estimating snow depth by utilizing data from microwave sensors, such as AMSR2, which measure the brightness temperature of snow. This method incorporates machine learning algorithms to integrate these measurements with prior knowledge from snow process models, addressing common underestimation issues in mountainous areas.",
-                "AnswerCn": "被动微波雪深反演是指利用微波传感器（如AMSR2）测量雪的亮温来估计雪深的过程。这种方法结合了机器学习算法，将这些测量结果与雪过程模型的先验知识相结合，以解决山区常见的低估问题。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the low estimation of snow depth in mountainous areas when using passive microwave snow products, and how have recent methodologies addressed this issue?",
-                "QuestionCn": "在使用被动微波雪产品时，导致山区雪深低估的因素有哪些？最近的方法论是如何解决这个问题的？",
-                "AnswerEn": "The low estimation of snow depth in mountainous areas using passive microwave snow products is primarily due to the limitations of these products in capturing complex terrain and dense vegetation. Recent methodologies have addressed this issue by employing machine learning algorithms to integrate brightness temperatures from the AMSR2 sensor with prior knowledge from snow process models. This integration is trained using globally representative meteorological station data, which helps mitigate biases introduced by meteorological influences in the prior knowledge, resulting in more accurate snow depth retrievals.",
-                "AnswerCn": "在山区使用被动微波雪产品对雪深的低估主要是由于这些产品在捕捉复杂地形和密集植被方面的局限性。最近的方法通过采用机器学习算法，将AMSR2传感器的亮温与雪过程模型的先验知识相结合，解决了这一问题。这种集成使用全球代表性的气象站数据进行训练，有助于减轻先验知识中引入的气象影响所造成的偏差，从而实现更准确的雪深检索。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What are the procedural steps involved in integrating machine learning algorithms with passive microwave sensors and snow process models to improve snow depth estimation in mountainous regions?",
-                "QuestionCn": "将机器学习算法与被动微波传感器和雪过程模型集成，以改善山区雪深估计的程序步骤包括以下几个方面：",
-                "AnswerEn": "The process involves using machine learning algorithms to combine brightness temperatures from the AMSR2 sensor with prior knowledge simulated by a snow process model. This prior knowledge is derived from the GLDAS-driven SNTHERM multi-layer snow physical process model, which includes parameters such as snow grain size, snow density, and initial snow depth. Global meteorological station data, which have undergone representativeness testing, are used as training samples to generate annual global snow depth retrieval datasets from 2013 to 2020. The machine learning algorithms address the relative biases formed due to meteorological influences on the prior knowledge.",
-                "AnswerCn": "该过程涉及使用机器学习算法将AMSR2传感器的亮温与由雪过程模型模拟的先验知识相结合。该先验知识来源于GLDAS驱动的SNTHERM多层雪物理过程模型，其中包括雪粒大小、雪密度和初始雪深等参数。经过代表性测试的全球气象站数据被用作训练样本，以生成2013年至2020年的年度全球雪深检索数据集。机器学习算法解决了由于气象影响而形成的先验知识的相对偏差。",
-                "Level": "C3(Applying)"
-            }
-        ],
-        "Enablement": [
-            {
-                "QuestionEn": "What machine learning algorithms enable the improvement of snow depth estimation accuracy in complex terrains?",
-                "QuestionCn": "哪些机器学习算法能够提高复杂地形中雪深估计的准确性？",
-                "AnswerEn": "Machine learning algorithms are utilized to overcome the relative biases formed by meteorological influences, by integrating AMSR2 sensor brightness temperatures and prior knowledge simulated from snow process models to improve snow depth estimation, especially in mountainous regions.",
-                "AnswerCn": "机器学习算法被用来克服由气象影响形成的相对偏差，通过整合AMSR2传感器的亮温和从雪过程模型模拟的先验知识，以改善雪深估计，特别是在山区。",
-                "Level": "C4(Analyzing)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "潘金梅",
+        "nameEn": "PAN Jinmei",
+        "unitEn": "",
+        "unitCn": "中国科学院国家空间科学中心"
+      },
+      {
+        "nameCn": "杨建卫",
+        "nameEn": "YANG Jianwei ",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "蒋玲梅",
+        "nameEn": "JIANG Lingmei",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "熊川",
+        "nameEn": "Xiong Chuan",
+        "unitEn": "Southwest Jiaotong University",
+        "unitCn": "西南交通大学"
+      },
+      {
+        "nameCn": "潘方博",
+        "nameEn": "PAN Fangbo ",
+        "unitEn": "Beijing Normal University",
+        "unitCn": "北京师范大学"
+      },
+      {
+        "nameCn": "施建成",
+        "nameEn": "SHI Jiancheng",
+        "unitEn": "",
+        "unitCn": "中国科学院国家空间科学中心"
+      },
+      {
+        "nameCn": "高晓文",
+        "nameEn": "GAO Xiaowen",
+        "unitEn": "Graduate University of CAS",
+        "unitCn": "中国科学院研究生院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Validation of the SNTHERM model applied for snow depth, grain size, and brightness temperature simulation at meteorological stations in China",
+        "referenceCn": null,
+        "referenceEn": "Chen, T., Pan, J., Chang, S., Xiong, C., Shi, J., Liu, M., Che, T., Wang, L., Liu, H., 2020. Validation of the SNTHERM model applied for snow depth, grain size, and brightness temperature simulation at meteorological stations in China. Remote Sens. 12, 507. https://doi.org/10.3390/rs12030507"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Evaluation of the effective microstructure parameter of the microwave emission model of layered snowpack for multiple-layer snow",
+        "referenceCn": null,
+        "referenceEn": "Yu, Y., Pan, J., Shi, J., 2021. Evaluation of the effective microstructure parameter of the microwave emission model of layered snowpack for multiple-layer snow. Remote Sens. 13. https://doi.org/10.3390/rs13102012 "
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Evaluation of stereology for snow microstructure measurement and microwave emission modeling: a case study",
+        "referenceCn": null,
+        "referenceEn": "Pan, J., Durand, M.T., Courville, Z., Vander Jagt, B.J., Molotch, N.P., Margulis, S.A., Kim, E.J., Schneebeli, M., Mätzler, C., 2021. Evaluation of stereology for snow microstructure measurement and microwave emission modeling: a case study. Int. J. Digit. Earth 14, 1316–1336. https://doi.org/10.1080/17538947.2021.1902006"
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Differences between the HUT snow emission model and MEMLS and their effects on brightness temperature simulation",
+        "referenceCn": null,
+        "referenceEn": "Pan, J., Durand, M., Sandells, M., Lemmetyinen, J., Kim, E.J., Pulliainen, J., Kontu, A., Derksen, C., 2016. Differences between the HUT snow emission model and MEMLS and their effects on brightness temperature simulation. IEEE Trans. Geosci. Remote Sens. 54, 2001–2019. https://doi.org/10.1109/TGRS.2015.2493505 "
+      },
+      {
+        "titleCn": null,
+        "titleEn": "Combination of Snow Process Model Priors and Site Representativeness Evaluation to Improve the Global Snow Depth Retrieval Based on Passive Microwaves",
+        "referenceCn": null,
+        "referenceEn": "Pan, J., Yang, J., Jiang, L., Xiong, C., Pan, F., Gao, X., Shi, J., Chang, S., 2023. Combination of Snow Process Model Priors and Site Representativeness Evaluation to Improve the Global Snow Depth Retrieval Based on Passive Microwaves. IEEE Trans. Geosci. Remote Sens. 61, 1–20. https://doi.org/10.1109/TGRS.2023.3276651"
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "冰冻圈",
+        "nameEn": "Cryosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "积雪",
+        "nameEn": "Snow"
+      },
+      {
+        "nameCn": "积雪深度",
+        "nameEn": "Snow depth"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "全球",
+        "keywordEn": "Global"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2013-2020",
+        "keywordEn": "2013-2020",
+        "type": "temporal"
+      },
+      {
+        "keywordCn": "逐日",
+        "keywordEn": "Daily",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
+        "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+      },
+      {
+        "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
+        "titleEn": "Major Research plan of the National Natural Science Foundation of China"
+      },
+      {
+        "titleCn": "国家重点研发计划",
+        "titleEn": "National Key Research and Development Program of China"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+        "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+      },
+      {
+        "titleCn": "祁连山地区冰川边界（2018）",
+        "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+      },
+      {
+        "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+        "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+      },
+      {
+        "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+        "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+      },
+      {
+        "titleCn": "北半球湖冰物候数据集（1978-2018）",
+        "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+      },
+      {
+        "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+        "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+      },
+      {
+        "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+        "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+      },
+      {
+        "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+        "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+      },
+      {
+        "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+        "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+      },
+      {
+        "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+        "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Quantification": [
+      {
+        "QuestionEn": "What is the root mean square error (RMSE) for the global snow depth retrievals validated with meteorological station observations over eight years?",
+        "QuestionCn": "全球雪深检索与气象站观测数据验证的均方根误差（RMSE）是多少，时间跨度为八年？",
+        "AnswerEn": "12.4 cm",
+        "AnswerCn": "12.4 厘米",
+        "Level": "C1(Remembering)"
+      }
+    ],
+    "Definition": [
+      {
+        "QuestionEn": "What does 'passive microwave snow depth retrieval' mean in the context of snow depth datasets?",
+        "QuestionCn": "在雪深数据集中，“被动微波雪深反演”是什么意思？",
+        "AnswerEn": "Passive microwave snow depth retrieval refers to the process of estimating snow depth by utilizing data from microwave sensors, such as AMSR2, which measure the brightness temperature of snow. This method incorporates machine learning algorithms to integrate these measurements with prior knowledge from snow process models, addressing common underestimation issues in mountainous areas.",
+        "AnswerCn": "被动微波雪深反演是指利用微波传感器（如AMSR2）测量雪的亮温来估计雪深的过程。这种方法结合了机器学习算法，将这些测量结果与雪过程模型的先验知识相结合，以解决山区常见的低估问题。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the low estimation of snow depth in mountainous areas when using passive microwave snow products, and how have recent methodologies addressed this issue?",
+        "QuestionCn": "在使用被动微波雪产品时，导致山区雪深低估的因素有哪些？最近的方法论是如何解决这个问题的？",
+        "AnswerEn": "The low estimation of snow depth in mountainous areas using passive microwave snow products is primarily due to the limitations of these products in capturing complex terrain and dense vegetation. Recent methodologies have addressed this issue by employing machine learning algorithms to integrate brightness temperatures from the AMSR2 sensor with prior knowledge from snow process models. This integration is trained using globally representative meteorological station data, which helps mitigate biases introduced by meteorological influences in the prior knowledge, resulting in more accurate snow depth retrievals.",
+        "AnswerCn": "在山区使用被动微波雪产品对雪深的低估主要是由于这些产品在捕捉复杂地形和密集植被方面的局限性。最近的方法通过采用机器学习算法，将AMSR2传感器的亮温与雪过程模型的先验知识相结合，解决了这一问题。这种集成使用全球代表性的气象站数据进行训练，有助于减轻先验知识中引入的气象影响所造成的偏差，从而实现更准确的雪深检索。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What are the procedural steps involved in integrating machine learning algorithms with passive microwave sensors and snow process models to improve snow depth estimation in mountainous regions?",
+        "QuestionCn": "将机器学习算法与被动微波传感器和积雪过程模型集成，以改善山区积雪深度估算的程序步骤是什么？",
+        "AnswerEn": "The process involves using machine learning algorithms to combine brightness temperatures from the AMSR2 sensor with prior knowledge simulated by a snow process model. This prior knowledge is derived from the GLDAS-driven SNTHERM multi-layer snow physical process model, which includes parameters such as snow grain size, snow density, and initial snow depth. Global meteorological station data, which have undergone representativeness testing, are used as training samples to generate annual global snow depth retrieval datasets from 2013 to 2020. The machine learning algorithms address the relative biases formed due to meteorological influences on the prior knowledge.",
+        "AnswerCn": "该过程涉及使用机器学习算法将AMSR2传感器的亮温与由雪过程模型模拟的先验知识相结合。该先验知识来源于GLDAS驱动的SNTHERM多层雪物理过程模型，其中包括雪粒大小、雪密度和初始雪深等参数。经过代表性测试的全球气象站数据被用作训练样本，以生成2013年至2020年的年度全球雪深检索数据集。机器学习算法解决了由于气象影响而形成的先验知识的相对偏差。",
+        "Level": "C3(Applying)"
+      }
+    ],
+    "Enablement": [
+      {
+        "QuestionEn": "What machine learning algorithms enable the improvement of snow depth estimation accuracy in complex terrains?",
+        "QuestionCn": "哪些机器学习算法能够提高复杂地形中雪深估计的准确性？",
+        "AnswerEn": "Machine learning algorithms are utilized to overcome the relative biases formed by meteorological influences, by integrating AMSR2 sensor brightness temperatures and prior knowledge simulated from snow process models to improve snow depth estimation, especially in mountainous regions.",
+        "AnswerCn": "机器学习算法被用来克服由气象影响形成的相对偏差，通过整合AMSR2传感器的亮温和从雪过程模型模拟的先验知识，以改善雪深估计，特别是在山区。",
+        "Level": "C4(Analyzing)"
+      }
+    ]
+  }
 }

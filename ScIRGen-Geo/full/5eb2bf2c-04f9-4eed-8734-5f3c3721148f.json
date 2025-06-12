@@ -1,200 +1,200 @@
 {
-    "id": "5eb2bf2c-04f9-4eed-8734-5f3c3721148f",
-    "relatedPaper": 0,
-    "context": {
-        "metadata": {
-            "titleEn": "Thunderstorm cloud characteristic data set in China and surrounding areas (2010-2018)",
-            "titleCn": "中国及周边区域雷暴云特征数据集（2010-2018）",
-            "description": "This data set is based on the lightning location data calculation of TBB products, cloud classification (CLC) products and world wide lightning location network (wwlln) in the full disk area detected by fy-2e satellite (fy-2e) from 2010 to 2018 to establish the lightning storm cloud feature data set. The algorithm used for wwlln lightning clustering is DBSCAN algorithm. According to Hutchins et al. (2014), it is required that the number of lightning in each lightning cluster in the thunderstorm cloud is greater than 2 and all fall within the radius of 12 km. The data set includes thunderstorm cloud time and location information, thunderstorm cloud shape (long, short axis, rotation angle, etc.) information represented by fitting ellipse, cloud area representing thunderstorm cloud structure, statistical value of black body temperature (TBB), included flash information, and included strong convection core, lightning cluster information and other data information.",
-            "descriptionCn": "该数据集基于2010–2018年FY-2E卫星（FY-2E）探测全圆盘区域内的TBB产品、云分类（Cloud Classification，CLC）产品以及全球闪电定位网（World Wide Lightning Location Network，WWLLN）的闪电定位数据计算建立雷暴云特征数据集。对WWLLN闪电聚类使用的算法为DBSCAN算法，参考Hutchins et al.（2014）要求雷暴云中的每个闪电簇中的闪电数大于2且都落在半径12 km以内。数据集包括雷暴云时间、位置信息，用拟合椭圆表示的雷暴云形态（长、短轴、旋转角等）信息，表征雷暴云结构的云面积、相当黑体亮度温度（Black Body Temperature，TBB）统计值、包含的闪电信息以及包含的强对流核、闪电簇信息等数据信息。",
-            "instructions": "File naming: it is stored in the structure data format of mat format data. The file name is \"yyyymmdd_hhmm.mat\", and yyyymmddhhmm respectively represents the time corresponding to the data (universal time, UTC): year, month, day, hour, minute, for example, 20100112_ 0000 means 0:00 on January 12, 2010.\nData reading method: the format of data file is mat file, which is a standard binary file and the standard format of MATLAB data storage. When reading data, you can directly use matlab to read. Some codes for data reading are as follows:\n%Reading of single parameter\nfilepath=’\\dataset\\YYYY\\YYYYMMDD_ hhmm. mat’;% Data path\nload(path);% Open the data file\nArea=TSC(1). Area；% Read the area of the first thunderstorm cloud\nWWLLN_ lon=TSC(1). WWLLNstroke(:,8); % Read the longitude information of all lightning in the first thunderstorm cloud\nS52_ Area=TSC(1). S52(2). Area; % Read the area of the first strong convection core in the first thunderstorm cloud",
-            "instructionsCn": "文件命名：采用mat格式数据中结构体（struct）数据格式存储。文件名为“YYYYMMDD_hhmm.mat”，YYYYMMDDhhmm分别表示数据对应的时间（世界时，UTC）：年、月、日、时、分，如20100112_0000表示2010年01月12日0时0分。\n数据读取方式：数据文件格式为mat文件，mat文件是标准的二进制文件，是MATLAB的数据存储的标准格式。在数据读取时，可直接使用MATLAB进行读取。数据读取的部分代码如下所示：\n%单个参量的读取\nfilepath=’\\dataset\\YYYY\\YYYYMMDD_hhmm.mat’;%数据路径\nload(path);%打开该数据文件\nArea=TSC(1).Area；%读取第1个雷暴云的面积\nWWLLN_lon=TSC(1).WWLLNstroke(:,8); %读取第1个雷暴云内所有闪电的经度信息\nS52_Area=TSC(1).S52(2).Area; %读取第1个雷暴云内第1个强对流核的面积",
-            "east": 180.0,
-            "west": 14.5,
-            "south": -90.0,
-            "north": 90.0,
-            "startTime": "2010-01-12 00:00:00",
-            "endTime": "2018-12-31 00:00:00",
-            "fileSize": 261740747199.0,
-            "cstr": "18406.11.Atmos.tpdc.272622",
-            "doi": "10.11888/Atmos.tpdc.272622",
-            "dataFormat": null,
-            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
-        },
-        "authorList": [
-            {
-                "nameCn": "马瑞阳",
-                "nameEn": "MA Ruiyang ",
-                "unitEn": "China Academy of Meteorological Sciences",
-                "unitCn": "中国气象科学研究院"
-            },
-            {
-                "nameCn": "郑栋",
-                "nameEn": "ZHENG Dong ",
-                "unitEn": "China Academy of Meteorological Sciences",
-                "unitCn": "中国气象科学研究院"
-            }
-        ],
-        "literatureList": [
-            {
-                "titleCn": null,
-                "titleEn": "Thunderstorm activity over the Qinghai–Tibet Plateau indicated by the combined data of the FY-2E geostationary satellite and WWLLN",
-                "referenceCn": "Du, Y., Zheng, D., & Ma, R., et al. (2022). Thunderstorm activity over the Qinghai–Tibet Plateau indicated by the combined data of the FY-2E geostationary satellite and WWLLN. Submitted to Remote Sensing.（提交该数据集时已接收）",
-                "referenceEn": null
-            },
-            {
-                "titleCn": "雷暴云特征数据集及我国雷暴活动特征",
-                "titleEn": null,
-                "referenceCn": "马瑞阳, 郑栋, 姚雯, 等. (2021). 雷暴云特征数据集及我国雷暴活动特征. 应用气象学报, 32(3), 358-369.",
-                "referenceEn": null
-            }
-        ],
-        "keywordStandList": [
-            {
-                "nameCn": "大气",
-                "nameEn": "Atmosphere"
-            }
-        ],
-        "themeList": [
-            {
-                "nameCn": "云",
-                "nameEn": "Clouds"
-            },
-            {
-                "nameCn": "云特性",
-                "nameEn": "Cloud properties"
-            },
-            {
-                "nameCn": "大气电学",
-                "nameEn": "Atmospheric Electricity"
-            },
-            {
-                "nameCn": "强对流",
-                "nameEn": "strong convection"
-            },
-            {
-                "nameCn": "气象灾害",
-                "nameEn": "Meteorological Disaster"
-            },
-            {
-                "nameCn": "雷暴",
-                "nameEn": "Thunderstorm"
-            }
-        ],
-        "placeKeywordList": [
-            {
-                "keywordCn": "中国及周边",
-                "keywordEn": "China and surrounding areas"
-            }
-        ],
-        "temporalKeywordList": [
-            {
-                "keywordCn": "2010-2018",
-                "keywordEn": "2010-2018",
-                "type": "temporal"
-            }
-        ],
-        "fundVOList": [
-            {
-                "titleCn": "第二次青藏高原综合科学考察研究",
-                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
-            }
-        ],
-        "projectList": [
-            {
-                "titleCn": "国家青藏高原科学数据中心",
-                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
-            }
-        ],
-        "relatedDataList": [
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
-            },
-            {
-                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
-                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
-            }
-        ]
+  "id": "5eb2bf2c-04f9-4eed-8734-5f3c3721148f",
+  "relatedPaper": 0,
+  "context": {
+    "metadata": {
+      "titleEn": "Thunderstorm cloud characteristic data set in China and surrounding areas (2010-2018)",
+      "titleCn": "中国及周边区域雷暴云特征数据集（2010-2018）",
+      "description": "This data set is based on the lightning location data calculation of TBB products, cloud classification (CLC) products and world wide lightning location network (wwlln) in the full disk area detected by fy-2e satellite (fy-2e) from 2010 to 2018 to establish the lightning storm cloud feature data set. The algorithm used for wwlln lightning clustering is DBSCAN algorithm. According to Hutchins et al. (2014), it is required that the number of lightning in each lightning cluster in the thunderstorm cloud is greater than 2 and all fall within the radius of 12 km. The data set includes thunderstorm cloud time and location information, thunderstorm cloud shape (long, short axis, rotation angle, etc.) information represented by fitting ellipse, cloud area representing thunderstorm cloud structure, statistical value of black body temperature (TBB), included flash information, and included strong convection core, lightning cluster information and other data information.",
+      "descriptionCn": "该数据集基于2010–2018年FY-2E卫星（FY-2E）探测全圆盘区域内的TBB产品、云分类（Cloud Classification，CLC）产品以及全球闪电定位网（World Wide Lightning Location Network，WWLLN）的闪电定位数据计算建立雷暴云特征数据集。对WWLLN闪电聚类使用的算法为DBSCAN算法，参考Hutchins et al.（2014）要求雷暴云中的每个闪电簇中的闪电数大于2且都落在半径12 km以内。数据集包括雷暴云时间、位置信息，用拟合椭圆表示的雷暴云形态（长、短轴、旋转角等）信息，表征雷暴云结构的云面积、相当黑体亮度温度（Black Body Temperature，TBB）统计值、包含的闪电信息以及包含的强对流核、闪电簇信息等数据信息。",
+      "instructions": "File naming: it is stored in the structure data format of mat format data. The file name is \"yyyymmdd_hhmm.mat\", and yyyymmddhhmm respectively represents the time corresponding to the data (universal time, UTC): year, month, day, hour, minute, for example, 20100112_ 0000 means 0:00 on January 12, 2010.\nData reading method: the format of data file is mat file, which is a standard binary file and the standard format of MATLAB data storage. When reading data, you can directly use matlab to read. Some codes for data reading are as follows:\n%Reading of single parameter\nfilepath=’\\dataset\\YYYY\\YYYYMMDD_ hhmm. mat’;% Data path\nload(path);% Open the data file\nArea=TSC(1). Area；% Read the area of the first thunderstorm cloud\nWWLLN_ lon=TSC(1). WWLLNstroke(:,8); % Read the longitude information of all lightning in the first thunderstorm cloud\nS52_ Area=TSC(1). S52(2). Area; % Read the area of the first strong convection core in the first thunderstorm cloud",
+      "instructionsCn": "文件命名：采用mat格式数据中结构体（struct）数据格式存储。文件名为“YYYYMMDD_hhmm.mat”，YYYYMMDDhhmm分别表示数据对应的时间（世界时，UTC）：年、月、日、时、分，如20100112_0000表示2010年01月12日0时0分。\n数据读取方式：数据文件格式为mat文件，mat文件是标准的二进制文件，是MATLAB的数据存储的标准格式。在数据读取时，可直接使用MATLAB进行读取。数据读取的部分代码如下所示：\n%单个参量的读取\nfilepath=’\\dataset\\YYYY\\YYYYMMDD_hhmm.mat’;%数据路径\nload(path);%打开该数据文件\nArea=TSC(1).Area；%读取第1个雷暴云的面积\nWWLLN_lon=TSC(1).WWLLNstroke(:,8); %读取第1个雷暴云内所有闪电的经度信息\nS52_Area=TSC(1).S52(2).Area; %读取第1个雷暴云内第1个强对流核的面积",
+      "east": 180.0,
+      "west": 14.5,
+      "south": -90.0,
+      "north": 90.0,
+      "startTime": "2010-01-12 00:00:00",
+      "endTime": "2018-12-31 00:00:00",
+      "fileSize": 261740747199.0,
+      "cstr": "18406.11.Atmos.tpdc.272622",
+      "doi": "10.11888/Atmos.tpdc.272622",
+      "dataFormat": null,
+      "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
     },
-    "extract_pdfs_data": null,
-    "query": {
-        "Feature Specification": [
-            {
-                "QuestionEn": "What specific attributes are used to characterize the morphology of thunderstorm clouds in a dataset?",
-                "QuestionCn": "在一个数据集中，用于表征雷暴云形态的具体属性有哪些？",
-                "AnswerEn": "time and location information, shape represented by a fitted ellipse, long and short axes, rotation angle, cloud area, statistical values of equivalent black body brightness temperature, lightning information, strong convection cores, lightning clusters",
-                "AnswerCn": "时间和位置信息，形状由拟合椭圆表示，长轴和短轴，旋转角度，云区面积，等效黑体亮度温度的统计值，闪电信息，强对流核心，闪电簇。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Interpretation": [
-            {
-                "QuestionEn": "How can clustering algorithms, such as DBSCAN, contribute to the understanding of lightning patterns within thunderstorm clouds in satellite and lightning network data?",
-                "QuestionCn": "聚类算法，如DBSCAN，可以如何帮助理解卫星和闪电网络数据中雷暴云内的闪电模式。",
-                "AnswerEn": "Clustering algorithms like DBSCAN help identify and group lightning events into clusters based on their proximity, ensuring that each cluster contains more than two lightning strikes within a radius of 12 km. This method allows researchers to infer characteristics of the thunderstorm clouds, such as their spatial distribution and density of lightning activities, which can reveal insights into the structure and dynamics of thunderstorms over time.",
-                "AnswerCn": "聚类算法如DBSCAN有助于根据闪电事件的接近程度将其识别并分组，确保每个簇内包含超过两个闪电击中事件，且半径为12公里。这种方法使研究人员能够推断雷暴云的特征，例如闪电活动的空间分布和密度，这可以揭示雷暴的结构和动态随时间的变化。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Causal Antecedent": [
-            {
-                "QuestionEn": "What factors contribute to the challenges in forming accurate thunderstorm cloud feature datasets using satellite and lightning location data?",
-                "QuestionCn": "形成准确的雷暴云特征数据集时，卫星和闪电定位数据面临的挑战因素有哪些？",
-                "AnswerEn": "The challenges in forming accurate thunderstorm cloud feature datasets using satellite and lightning location data arise from the need to integrate different data sources, such as TBB products from FY-2E satellites and lightning location data from WWLLN, and the complexity of using algorithms like DBSCAN for clustering lightning data. These processes must ensure that each lightning cluster within a thunderstorm cloud contains more than two lightning events within a 12 km radius, which requires precise and consistent data collection and processing methods.",
-                "AnswerCn": "在使用卫星和闪电定位数据形成准确的雷暴云特征数据集时，面临的挑战在于需要整合不同的数据源，例如来自FY-2E卫星的TBB产品和来自WWLLN的闪电定位数据，以及使用像DBSCAN这样的算法对闪电数据进行聚类的复杂性。这些过程必须确保每个雷暴云内的闪电聚类在12公里半径内包含超过两个闪电事件，这需要精确和一致的数据收集与处理方法。",
-                "Level": "C4(Analyzing)"
-            }
-        ],
-        "Goal Orientation": [
-            {
-                "QuestionEn": "What is the primary objective of developing a dataset that characterizes thunderstorm clouds using satellite TBB products, cloud classification data, and global lightning location network data?",
-                "QuestionCn": "开发一个通过卫星TBB产品、云分类数据和全球闪电定位网络数据来表征雷暴云的数据集的主要目标是什么？",
-                "AnswerEn": "The primary objective is to establish a comprehensive thunderstorm cloud characteristics dataset by utilizing TBB products from the FY-2E satellite, cloud classification products, and lightning location data from the World Wide Lightning Location Network. This aims to provide detailed information on thunderstorm cloud features such as time, location, morphology, structure, and lightning information, which can enhance understanding and analysis of thunderstorm dynamics in China and surrounding regions from 2010 to 2018.",
-                "AnswerCn": "主要目标是通过利用FY-2E卫星的TBB产品、云分类产品以及来自世界闪电定位网络的闪电定位数据，建立一个全面的雷暴云特征数据集。该数据集旨在提供有关雷暴云特征的详细信息，如时间、位置、形态、结构和闪电信息，从而增强对2010年至2018年中国及周边地区雷暴动态的理解和分析。",
-                "Level": "C2(Understanding)"
-            }
-        ],
-        "Instrumental/Procedural": [
-            {
-                "QuestionEn": "What procedural techniques can be used to cluster lightning data when building a dataset of thunderstorm cloud characteristics for a region?",
-                "QuestionCn": "在构建某个地区雷暴云特征的数据集时，可以使用哪些程序技术对闪电数据进行聚类？",
-                "AnswerEn": "The DBSCAN algorithm is used for clustering lightning data, with the requirement that each lightning cluster contains more than 2 lightning strikes, all located within a 12 km radius.",
-                "AnswerCn": "DBSCAN算法用于对闪电数据进行聚类，要求每个闪电簇包含超过2次闪电击，并且所有闪电击都位于12公里半径内。",
-                "Level": "C3(Applying)"
-            }
-        ]
-    }
+    "authorList": [
+      {
+        "nameCn": "马瑞阳",
+        "nameEn": "MA Ruiyang ",
+        "unitEn": "China Academy of Meteorological Sciences",
+        "unitCn": "中国气象科学研究院"
+      },
+      {
+        "nameCn": "郑栋",
+        "nameEn": "ZHENG Dong ",
+        "unitEn": "China Academy of Meteorological Sciences",
+        "unitCn": "中国气象科学研究院"
+      }
+    ],
+    "literatureList": [
+      {
+        "titleCn": null,
+        "titleEn": "Thunderstorm activity over the Qinghai–Tibet Plateau indicated by the combined data of the FY-2E geostationary satellite and WWLLN",
+        "referenceCn": "Du, Y., Zheng, D., & Ma, R., et al. (2022). Thunderstorm activity over the Qinghai–Tibet Plateau indicated by the combined data of the FY-2E geostationary satellite and WWLLN. Submitted to Remote Sensing.（提交该数据集时已接收）",
+        "referenceEn": null
+      },
+      {
+        "titleCn": "雷暴云特征数据集及我国雷暴活动特征",
+        "titleEn": null,
+        "referenceCn": "马瑞阳, 郑栋, 姚雯, 等. (2021). 雷暴云特征数据集及我国雷暴活动特征. 应用气象学报, 32(3), 358-369.",
+        "referenceEn": null
+      }
+    ],
+    "keywordStandList": [
+      {
+        "nameCn": "大气",
+        "nameEn": "Atmosphere"
+      }
+    ],
+    "themeList": [
+      {
+        "nameCn": "云",
+        "nameEn": "Clouds"
+      },
+      {
+        "nameCn": "云特性",
+        "nameEn": "Cloud properties"
+      },
+      {
+        "nameCn": "大气电学",
+        "nameEn": "Atmospheric Electricity"
+      },
+      {
+        "nameCn": "强对流",
+        "nameEn": "strong convection"
+      },
+      {
+        "nameCn": "气象灾害",
+        "nameEn": "Meteorological Disaster"
+      },
+      {
+        "nameCn": "雷暴",
+        "nameEn": "Thunderstorm"
+      }
+    ],
+    "placeKeywordList": [
+      {
+        "keywordCn": "中国及周边",
+        "keywordEn": "China and surrounding areas"
+      }
+    ],
+    "temporalKeywordList": [
+      {
+        "keywordCn": "2010-2018",
+        "keywordEn": "2010-2018",
+        "type": "temporal"
+      }
+    ],
+    "fundVOList": [
+      {
+        "titleCn": "第二次青藏高原综合科学考察研究",
+        "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+      }
+    ],
+    "projectList": [
+      {
+        "titleCn": "国家青藏高原科学数据中心",
+        "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+      }
+    ],
+    "relatedDataList": [
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+      },
+      {
+        "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+        "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+      }
+    ]
+  },
+  "extract_pdfs_data": null,
+  "query": {
+    "Feature Specification": [
+      {
+        "QuestionEn": "What specific attributes are used to characterize the morphology of thunderstorm clouds in a dataset?",
+        "QuestionCn": "在一个数据集中，用于表征雷暴云形态的具体属性有哪些？",
+        "AnswerEn": "time and location information, shape represented by a fitted ellipse, long and short axes, rotation angle, cloud area, statistical values of equivalent black body brightness temperature, lightning information, strong convection cores, lightning clusters",
+        "AnswerCn": "时间和位置信息，形状由拟合椭圆表示，长轴和短轴，旋转角度，云区面积，等效黑体亮度温度的统计值，闪电信息，强对流核心，闪电簇。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Interpretation": [
+      {
+        "QuestionEn": "How can clustering algorithms, such as DBSCAN, contribute to the understanding of lightning patterns within thunderstorm clouds in satellite and lightning network data?",
+        "QuestionCn": "聚类算法，例如DBSCAN，如何帮助理解卫星和闪电网络数据中雷暴云内的闪电模式？",
+        "AnswerEn": "Clustering algorithms like DBSCAN help identify and group lightning events into clusters based on their proximity, ensuring that each cluster contains more than two lightning strikes within a radius of 12 km. This method allows researchers to infer characteristics of the thunderstorm clouds, such as their spatial distribution and density of lightning activities, which can reveal insights into the structure and dynamics of thunderstorms over time.",
+        "AnswerCn": "聚类算法如DBSCAN有助于根据闪电事件的接近程度将其识别并分组，确保每个簇内包含超过两个闪电击中事件，且半径为12公里。这种方法使研究人员能够推断雷暴云的特征，例如闪电活动的空间分布和密度，这可以揭示雷暴的结构和动态随时间的变化。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Causal Antecedent": [
+      {
+        "QuestionEn": "What factors contribute to the challenges in forming accurate thunderstorm cloud feature datasets using satellite and lightning location data?",
+        "QuestionCn": "形成准确的雷暴云特征数据集时，卫星和闪电定位数据面临的挑战因素有哪些？",
+        "AnswerEn": "The challenges in forming accurate thunderstorm cloud feature datasets using satellite and lightning location data arise from the need to integrate different data sources, such as TBB products from FY-2E satellites and lightning location data from WWLLN, and the complexity of using algorithms like DBSCAN for clustering lightning data. These processes must ensure that each lightning cluster within a thunderstorm cloud contains more than two lightning events within a 12 km radius, which requires precise and consistent data collection and processing methods.",
+        "AnswerCn": "在使用卫星和闪电定位数据形成准确的雷暴云特征数据集时，面临的挑战在于需要整合不同的数据源，例如来自FY-2E卫星的TBB产品和来自WWLLN的闪电定位数据，以及使用像DBSCAN这样的算法对闪电数据进行聚类的复杂性。这些过程必须确保每个雷暴云内的闪电聚类在12公里半径内包含超过两个闪电事件，这需要精确和一致的数据收集与处理方法。",
+        "Level": "C4(Analyzing)"
+      }
+    ],
+    "Goal Orientation": [
+      {
+        "QuestionEn": "What is the primary objective of developing a dataset that characterizes thunderstorm clouds using satellite TBB products, cloud classification data, and global lightning location network data?",
+        "QuestionCn": "开发一个通过卫星TBB产品、云分类数据和全球闪电定位网络数据来表征雷暴云的数据集的主要目标是什么？",
+        "AnswerEn": "The primary objective is to establish a comprehensive thunderstorm cloud characteristics dataset by utilizing TBB products from the FY-2E satellite, cloud classification products, and lightning location data from the World Wide Lightning Location Network. This aims to provide detailed information on thunderstorm cloud features such as time, location, morphology, structure, and lightning information, which can enhance understanding and analysis of thunderstorm dynamics in China and surrounding regions from 2010 to 2018.",
+        "AnswerCn": "主要目标是通过利用FY-2E卫星的TBB产品、云分类产品以及来自世界闪电定位网络的闪电定位数据，建立一个全面的雷暴云特征数据集。该数据集旨在提供有关雷暴云特征的详细信息，如时间、位置、形态、结构和闪电信息，从而增强对2010年至2018年中国及周边地区雷暴动态的理解和分析。",
+        "Level": "C2(Understanding)"
+      }
+    ],
+    "Instrumental/Procedural": [
+      {
+        "QuestionEn": "What procedural techniques can be used to cluster lightning data when building a dataset of thunderstorm cloud characteristics for a region?",
+        "QuestionCn": "在构建某个地区雷暴云特征的数据集时，可以使用哪些程序技术对闪电数据进行聚类？",
+        "AnswerEn": "The DBSCAN algorithm is used for clustering lightning data, with the requirement that each lightning cluster contains more than 2 lightning strikes, all located within a 12 km radius.",
+        "AnswerCn": "DBSCAN算法用于对闪电数据进行聚类，要求每个闪电簇包含超过2次闪电击，并且所有闪电击都位于12公里半径内。",
+        "Level": "C3(Applying)"
+      }
+    ]
+  }
 }

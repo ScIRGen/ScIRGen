@@ -1,0 +1,507 @@
+{
+    "id": "06414391-abd4-4d28-a844-bd036a0b8c55",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "0.02° seamless hourly land surface temperature dataset over East Asia (2016-2021)",
+            "titleCn": "东亚区域0.02°逐小时无缝地表温度数据集（2016-2021）",
+            "description": "Hourly spatially complete land surface temperature (LST) products have a wide range of applications in many fields such as freeze-thaw state monitoring and summer high temperature heat wave monitoring. Although the LST retrieved from thermal infrared (TIR) remote sensing observations has high accuracy, it is spatially incomplete due to the influence of cloud, which heavily limits the application of LST. LST simulated by land surface models (LSM) is with high temporal resolution and spatiotemporal continuity, while the spatial resolution is relatively coarse and the accuracy is poor. Therefore, fusing the remote sensing retrieved LST and the model simulated LST is an effective way to obtain seamless hourly LST. The authors proposed a fusion method to generate 0.02° hourly seamless LST over East Asia and produced the corresponding data set.\nThis dataset is the 0.02 ° hourly seamless LST dataset over East Asia (2016-2021). Firstly, the iTES algorithm is employed to retrieve the Himawari-8/AHI LST. Secondly, the CLDAS LST is corrected to eliminate its system deviation. Finally, the multi-scale Kalman filter is employed to fuse Himawari-8/AHI LST and the bias-corrected CLDAS LST to generate 0.02 ° hourly seamless LST. The in situ verification results show that the root mean square error (RMSE) of the seamless LST is about 3k.\nThe temporal resolution and spatial resolution of this dataset are 1 hour and 0.02°, respectively. The time period is 2016-2021 over (0-60°N, 80°E-140°E).",
+            "descriptionCn": "逐小时空间完整的地表温度产品在冻融状态监测、夏季高温热浪监测等领域具有广泛的应用需求。基于热红外遥感反演的地表温度精度较高，但是容易受到云雾的影响，空间上不连续，这给用户带来诸多不便，也极大地限制了其应用。模式模拟的地表温度虽时空完整，但空间分辨率低，精度差。因此融合遥感反演的地表温度和模式模拟的地表温度，是获取逐小时空间完整地表温度的有效途径。基于此，作者发展了生成东亚区域0.02°逐小时无缝地表温度的融合方法，并制备了相应的数据集（2016-2021）。\n本数据集为东亚区域0.02°逐小时无缝地表温度数据集产品（2016-2021年）。首先采用iTES算法反演葵花8/AHI 地表温度，之后对CLDAS LST 进行偏差校正以消除其系统偏差，最后使用多尺度卡尔曼滤波融合葵花8/AHI LST和CLDAS LST，生成0.02°逐小时无缝地表温度数据集。地面验证结果表明，全天地表温度的均方根误差（RMSE）约为3K，精度较好。\n本数据集的时间分辨率为1小时，空间分辨率0.02°，时间跨度为2016年-2021年，空间范围为0-60°N，80°E-140°E。",
+            "instructions": "File naming convention: AHI_ ALLSKY_ LST_ YYYYMMDDHH_ Vn. tif/ AHI_ ALLSKY_ QC_ YYYYMMDDHH_ Vn. TIF (AHI indicates Himawari-8/AHI LST based; allsky indicates all-weather LST; LST indicates LST product / QC represents the quality identification; yyyy indicates the year of the product; mm indicates the month of the product; DD indicates the date of the product; HH indicates the UTC hours of the product; VN indicates the version number of the product\nData format: tif\nThe data storage types are as follows:\nLst: the data type is uint16, the unit is k, the scaling factor is 0.01, that is, the real LST = read LST * 0.01, and the filling value is 65535\nQC: the data type is int8, unused digits are filled with 0 value, the right side is low and the left side is high\nData reading method: it can be read by MATLAB, Python and other programming languages, or it can be visualized in envi or ArcGIS and other software.\nData version No.: V1",
+            "instructionsCn": "文件命名约定：AHI_ALLSKY_LST_YYYYMMDDHH_Vn.tif/ AHI_ALLSKY_QC_YYYYMMDDHH_Vn.tif(AHI说明是基于葵花8/AHI LST的温度产品；ALLSKY说明是全天候产品;LST表示输出产品为地表温度产品/QC代表质量标识;YYYY表示产品的年份；MM表示产品的月份；DD表示产品的日期；HH表示产品的UTC小时数; Vn表示产品的版本号\n数据格式：.tif\n数据存储类型如下：\nLST：数据类型为uint16，单位为K，缩放系数为0.01，即真实LST=读取的LST*0.01，填充值为65535\nQC：数据类型为int8，未用到的位数以0值填充，右侧为低位，左侧为高位\n数据读取方式：可以使用Matlab，Python等语言编程读取，也可以在envi或者arcgis等软件中实现可视化。\n数据版本号：V1",
+            "east": 80.0,
+            "west": 140.0,
+            "south": 0.0,
+            "north": 60.0,
+            "startTime": "2016-01-01 00:00:00",
+            "endTime": "2021-12-31 23:00:00",
+            "fileSize": 320502897826.0,
+            "cstr": "18406.11.Cryos.tpdc.272511",
+            "doi": "10.11888/Cryos.tpdc.272511",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "程洁",
+                "nameEn": "CHENG Jie",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "董胜越",
+                "nameEn": "DONG Shengyue",
+                "unitEn": "",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "施建成",
+                "nameEn": "SHI Jiancheng",
+                "unitEn": "",
+                "unitCn": "中国科学院国家空间科学中心"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "A Data Fusion Method for Generating Hourly Seamless Land Surface Temperature from Himawari-8 AHI Data",
+                "referenceCn": null,
+                "referenceEn": "Dong, S., Cheng, J., Shi, J., Shi, C., Sun, S., & Liu, W. (2022). A Data Fusion Method for Generating Hourly Seamless Land Surface Temperature from Himawari-8 AHI Data. Remote Sensing, 14, 5170"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "An Improved Temperature and Emissivity Separation Algorithm for the Advanced Himawari Imager",
+                "referenceCn": null,
+                "referenceEn": "Zhou, S., & Cheng, J. (2020). An Improved Temperature and Emissivity Separation Algorithm for the Advanced Himawari Imager. IEEE Transactions on Geoscience and Remote Sensing, 58(10), 7105-7124."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "冰冻圈",
+                "nameEn": "Cryosphere"
+            },
+            {
+                "nameCn": "遥感",
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "冰冻圈遥感",
+                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+            },
+            {
+                "nameCn": "冰冻圈遥感产品",
+                "nameEn": "Cryosphere remote sensing products"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "东亚",
+                "keywordEn": "East Asia"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2016-2021",
+                "keywordEn": "2016-2021",
+                "type": "temporal"
+            },
+            {
+                "keywordCn": "逐小时",
+                "keywordEn": "Hourly",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "第二次青藏高原综合科学考察研究",
+                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山地区冰川边界（2018）",
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleCn": "北半球湖冰物候数据集（1978-2018）",
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            },
+            {
+                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Land surface temperature (LST) is a key parameter controlling the energy exchange between the atmosphere and the surface in land surface processes and has been widely used in various disciplines, such as climate change, evapotranspiration, agriculture, hydrology, and urban climate studies. Typically, LST is obtained from ground measurements, satellite remote sensing, and land surface modeling. Thermal-infrared (TIR) remote sensing is an effective tool for obtaining LST at a large scale. TIR observations from polar-orbiting satellites, such as the MODerate resolution Imaging Spectroradiometer (MODIS) and Landsat series, and geostationary satellites, such as Fengyun-4A, Himawari-8, and Meteosat Second Generation (MSG) have already been explored to generate LST products. Specifically, polar-orbiting satellites provide TIR observations with relatively fine spatial resolution and coarse temporal resolution, which hinders the application of LST in numerous fields, such as soil freeze/thaw status discrimination, diurnal variation in Earth-atmosphere system parameters modeling, and land surface hydrological process simulation. Geostationary satellites can achieve a temporal resolution up to 2.5 min, which can compensate for the deficiencies in the temporal continuity of polar-orbiting satellites. However, the TIR observations of both polar-orbiting satellites and geostationary satellites are spatially incomplete because TIR signals cannot penetrate clouds and obtain LST information underneath clouds. Microwave (MW) remote sensing can obtain cloudy sky LST. Unfortunately, both the accuracy and spatial resolution of MW LST under clear-sky conditions are inferior to TIR LST thus far. Recently, a large number of methods for estimating cloudy-sky LST have been proposed and significant progress has been achieved. These methods can be roughly categorized as spatial interpolation methods, surface energy balance (SEB) methods, machine learning methods, and spatiotemporal data fusion methods."
+            ],
+            "research objective": [
+                "This paper proposes a data fusion method for producing hourly seamless LST from Himawari-8 Advanced Himawari Imager (AHI) data."
+            ],
+            "challenges": [
+                "The performance of the approach is not acceptable. The RMSE of the retrieved cloudy-sky LST was larger than 5 K at the two field sites. Moreover, the employed meteorological data were from field experiments, and it is ambiguous whether the algorithm can be expanded to generate seamless LST products at regional or global scales. Therefore, this method cannot be fully duplicated to AHI/Himawari-8."
+            ],
+            "methods": [
+                "First, the high-quality hourly clear-sky LST was retrieved from AHI data by an improved temperature and emissivity separation algorithm; then, the hourly spatially complete China Land Data Assimilation System (CLDAS) LST was calibrated by a bias correction method. Finally, the strengths of the retrieved AHI LST and bias-corrected CLDAS LST were combined by the multiresolution Kalman filter (MKF) algorithm to generate hourly seamless LST at different spatial scales."
+            ],
+            "dataset": [
+                "With the proposed method, we have produced a 0.02° seamless LST dataset from 2016 through 2021 that is freely available at the National Tibetan Plateau Data Center."
+            ],
+            "findings": [
+                "Validation results showed the bias and root mean square error (RMSE) of the fused LST at a finer scale (0.02°) were −0.65 K and 3.38 K under cloudy sky conditions, the values were −0.55 K and 3.03 K for all sky conditions, respectively. The bias and RMSE of the fused LST at the coarse scale (0.06°) are −0.46 K and 3.11 K, respectively. This accuracy is comparable to the accuracy of all-weather LST derived by various methods reported in the published literature. In addition, we obtained the consistent LST images across different scales. The seamless finer LST data over East Asia can not only reflect the spatial distribution characteristics of LST during different seasons, but also exactly present the diurnal variation of the LST."
+            ],
+            "backgroundCn": [
+                "地表温度（LST）是控制大气与地表之间能量交换的关键参数，在气候变化、蒸散发、农业、水文学和城市气候研究等多个学科中得到了广泛应用。通常，LST是通过地面测量、卫星遥感和地表建模获得的。热红外（TIR）遥感是获取大尺度LST的有效工具。来自极轨卫星的TIR观测，如中分辨率成像光谱仪（MODIS）和Landsat系列，以及静止卫星，如风云4A、 Himawari-8和第二代气象卫星（MSG），已经被探索用于生成LST产品。具体而言，极轨卫星提供相对较高空间分辨率但较低时间分辨率的TIR观测，这限制了LST在许多领域的应用，如土壤冻结/解冻状态判别、地球-大气系统参数建模的日变化以及地表水文过程模拟。静止卫星可以实现高达2.5分钟的时间分辨率，这可以弥补极轨卫星在时间连续性方面的不足。然而，无论是极轨卫星还是静止卫星的TIR观测在空间上都是不完整的，因为TIR信号无法穿透云层，无法获取云层下的LST信息。微波（MW）遥感可以在多云天空下获取LST。不幸的是，迄今为止，在晴空条件下，MW LST的准确性和空间分辨率都低于TIR LST。最近，已经提出了大量估计多云天空LST的方法，并取得了显著进展。这些方法大致可以分为空间插值方法、表面能量平衡（SEB）方法、机器学习方法和时空数据融合方法。"
+            ],
+            "research objectiveCn": [
+                "本文提出了一种数据融合方法，用于从Himawari-8高级Himawari成像仪（AHI）数据中生成每小时无缝的陆地表面温度（LST）。"
+            ],
+            "challengesCn": [
+                "该方法的性能不可接受。两个现场站点的云天表面温度（LST）提取的均方根误差（RMSE）大于5 K。此外，所使用的气象数据来自现场实验，目前尚不清楚该算法是否可以扩展以生成区域或全球范围内的无缝LST产品。因此，该方法无法完全复制到AHI/Himawari-8。"
+            ],
+            "methodsCn": [
+                "首先，通过改进的温度和发射率分离算法从AHI数据中提取了高质量的每小时晴空地表温度（LST）；然后，通过偏差校正方法对每小时空间完整的中国陆地数据同化系统（CLDAS）LST进行了校准。最后，利用多分辨率卡尔曼滤波（MKF）算法将提取的AHI LST和偏差校正的CLDAS LST的优势结合起来，生成不同空间尺度的每小时无缝LST。"
+            ],
+            "datasetCn": [
+                "通过所提出的方法，我们生成了一个从2016年到2021年的0.02°无缝地表温度（LST）数据集，该数据集可在国家西藏高原数据中心免费获取。"
+            ],
+            "findingsCn": [
+                "验证结果显示，在多云天气条件下，融合的地表温度（LST）在更细尺度（0.02°）的偏差和均方根误差（RMSE）分别为−0.65 K和3.38 K；在所有天气条件下，这些值为−0.55 K和3.03 K。粗尺度（0.06°）的融合LST的偏差和RMSE分别为−0.46 K和3.11 K。这一准确性与文献中报道的各种方法获得的全天候LST的准确性相当。此外，我们获得了不同尺度下的一致LST图像。东亚地区无缝的细尺度LST数据不仅能够反映不同季节LST的空间分布特征，还能准确呈现LST的日变化。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Can a data fusion method effectively produce hourly seamless land surface temperature (LST) from satellite data?",
+                "QuestionCn": "数据融合方法能有效地从卫星数据中生成每小时无缝的地表温度（LST）吗？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Does the proposed method for generating seamless LST datasets involve calibrating land surface temperature data with a bias correction method?",
+                "QuestionCn": "所提议的生成无缝地表温度（LST）数据集的方法是否涉及使用偏差校正方法对地表温度数据进行校准？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Is the primary method for estimating cloudy-sky land surface temperature based on spatial interpolation, surface energy balance, machine learning, or spatiotemporal data fusion?",
+                "QuestionCn": "估计多云天空下的地表温度的主要方法是基于空间插值、表面能量平衡、机器学习还是时空数据融合？",
+                "AnswerEn": "spatiotemporal data fusion",
+                "AnswerCn": "时空数据融合",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Which satellite data is more commonly used for generating land surface temperature products, polar-orbiting satellites like MODIS and Landsat, or geostationary satellites like Himawari-8?",
+                "QuestionCn": "用于生成地表温度产品的卫星数据更常用的是极地轨道卫星，如MODIS和Landsat，还是静止卫星，如Himawari-8？",
+                "AnswerEn": "geostationary satellites like Himawari-8",
+                "AnswerCn": "静止轨道卫星如Himawari-8",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What data fusion method is used for producing hourly seamless land surface temperature (LST) in the domain?",
+                "QuestionCn": "用于生成该区域每小时无缝地表温度（LST）的数据融合方法是什么？",
+                "AnswerEn": "multiresolution Kalman filter (MKF) algorithm",
+                "AnswerCn": "多分辨率卡尔曼滤波器 (MKF) 算法",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with retrieving cloudy-sky land surface temperature (LST) using the discussed approach?",
+                "QuestionCn": "使用所讨论的方法检索多云天空下的地表温度（LST）面临哪些挑战？",
+                "AnswerEn": "RMSE",
+                "AnswerCn": "均方根误差",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data fusion method used to generate seamless land surface temperature (LST) datasets?",
+                "QuestionCn": "您能否提供一个用于生成无缝地表温度（LST）数据集的数据融合方法的示例？",
+                "AnswerEn": "A data fusion method for producing hourly seamless LST involves using Himawari-8 Advanced Himawari Imager (AHI) data to retrieve high-quality hourly clear-sky LST with an improved temperature and emissivity separation algorithm, calibrating the hourly spatially complete China Land Data Assimilation System (CLDAS) LST by a bias correction method, and combining these using the multiresolution Kalman filter (MKF) algorithm.",
+                "AnswerCn": "一种用于生成每小时无缝地表温度（LST）的数据融合方法涉及使用Himawari-8高级Himawari成像仪（AHI）数据，通过改进的温度和发射率分离算法检索高质量的每小时晴空LST，利用偏差校正方法对每小时空间完整的中国陆地数据同化系统（CLDAS）LST进行校准，并使用多分辨率卡尔曼滤波器（MKF）算法将这些数据结合起来。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge faced in generating seamless LST products at regional or global scales?",
+                "QuestionCn": "在区域或全球范围内生成无缝陆地表面温度（LST）产品时面临的一个挑战是什么？",
+                "AnswerEn": "A challenge in generating seamless LST products at regional or global scales is that the RMSE of the retrieved cloudy-sky LST can be larger than 5 K at field sites, and it is unclear if the algorithm can be expanded beyond field experiments.",
+                "AnswerCn": "在区域或全球尺度生成无缝地表温度（LST）产品的一个挑战是，获取的多云天空下的LST的均方根误差（RMSE）在实地站点可能超过5 K，目前尚不清楚该算法是否可以扩展到实地实验之外。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What factors contribute to the accuracy and limitations of land surface temperature measurements under cloudy conditions?",
+                "QuestionCn": "影响云层条件下地表温度测量准确性和局限性的因素有哪些？",
+                "AnswerEn": "inability of thermal-infrared signals to penetrate clouds, differing accuracy and resolution between microwave and thermal-infrared remote sensing methods, data fusion techniques, bias correction",
+                "AnswerCn": "热红外信号无法穿透云层，微波和热红外遥感方法之间的精度和分辨率差异，数据融合技术，偏差校正。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the spatial resolution of a dataset that uses a fusion method to achieve seamless land surface temperature data?",
+                "QuestionCn": "使用融合方法实现无缝地表温度数据的数据集的空间分辨率是多少？",
+                "AnswerEn": "0.02°",
+                "AnswerCn": "0.02°",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many years of data are covered in a dataset that provides hourly seamless land surface temperature products in the specified region?",
+                "QuestionCn": "该数据集提供了指定区域的每小时无缝地表温度产品，覆盖了多少年的数据？",
+                "AnswerEn": "6 years",
+                "AnswerCn": "6年",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the root mean square error (RMSE) of the fused land surface temperature dataset under all sky conditions?",
+                "QuestionCn": "在所有天空条件下，融合的地表温度数据集的均方根误差（RMSE）是多少？",
+                "AnswerEn": "3.03 K",
+                "AnswerCn": "3.03 开尔文",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does 'thermal-infrared (TIR) remote sensing' mean in the context of land surface temperature data collection?",
+                "QuestionCn": "“热红外（TIR）遥感”在地表温度数据收集的背景下指的是利用热红外波段的传感器来测量地表温度的技术。",
+                "AnswerEn": "Thermal-infrared (TIR) remote sensing is a method used to obtain land surface temperature (LST) at a large scale by measuring the thermal radiation emitted by the Earth's surface. TIR observations are typically obtained from satellite instruments on polar-orbiting and geostationary satellites. These observations provide valuable data for understanding energy exchange processes but are limited by spatial incompleteness due to the inability of TIR signals to penetrate clouds.",
+                "AnswerCn": "热红外（TIR）遥感是一种通过测量地球表面发出的热辐射来大规模获取地表温度（LST）的方法。TIR观测通常来自极地轨道和静止卫星上的卫星仪器。这些观测为理解能量交换过程提供了宝贵的数据，但由于TIR信号无法穿透云层，导致空间不完整性。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is meant by 'data fusion method' in producing seamless land surface temperature datasets?",
+                "QuestionCn": "在生成无缝地表温度数据集时，“数据融合方法”是指将来自不同来源或传感器的数据结合起来，以提高数据的准确性和完整性。",
+                "AnswerEn": "A data fusion method refers to the process of integrating multiple data sources to produce a comprehensive and continuous dataset. In the context of producing seamless land surface temperature datasets, it involves combining high-quality clear-sky LST retrieved from satellite data with spatially complete LST from land data assimilation systems. This integration often uses advanced algorithms like the multiresolution Kalman filter to generate hourly seamless LST with improved spatial and temporal resolution.",
+                "AnswerCn": "数据融合方法是指整合多个数据源以生成全面和连续的数据集的过程。在生成无缝地表温度（LST）数据集的背景下，它涉及将从卫星数据中获取的高质量晴空LST与来自陆地数据同化系统的空间完整LST相结合。这种集成通常使用先进的算法，如多分辨率卡尔曼滤波器，以生成具有更高空间和时间分辨率的每小时无缝LST。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What does 'multiresolution Kalman filter (MKF) algorithm' mean in the fusion of land surface temperature data?",
+                "QuestionCn": "“多分辨率卡尔曼滤波器（MKF）算法”在地表温度数据融合中的意思是什么？",
+                "AnswerEn": "The multiresolution Kalman filter (MKF) algorithm is a computational technique used to combine different datasets to improve the estimation accuracy of land surface temperature. It leverages the strengths of each data source by accounting for their respective uncertainties and scales. In this context, MKF is used to fuse the strengths of retrieved AHI LST and bias-corrected CLDAS LST to produce a seamless hourly dataset across various spatial scales.",
+                "AnswerCn": "多分辨率卡尔曼滤波器（MKF）算法是一种计算技术，用于结合不同的数据集，以提高地表温度的估计精度。它通过考虑每个数据源的相应不确定性和尺度，利用每个数据源的优势。在这个背景下，MKF用于融合检索的AHI LST和经过偏差校正的CLDAS LST的优势，以生成跨各种空间尺度的无缝小时数据集。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the fusion method for producing seamless land surface temperature (LST) from thermal-infrared (TIR) remote sensing data compare to the use of microwave (MW) remote sensing for the same purpose in terms of accuracy and spatial resolution?",
+                "QuestionCn": "融合方法用于从热红外（TIR）遥感数据生成无缝地表温度（LST）与使用微波（MW）遥感实现相同目的在准确性和空间分辨率方面的比较如何？",
+                "AnswerEn": "The fusion method using TIR remote sensing data achieves higher accuracy and spatial resolution than MW remote sensing. TIR provides clearer observations under clear-sky conditions, while MW can obtain cloudy sky LST but with inferior accuracy and spatial resolution. The fusion method seeks to overcome spatial discontinuities in TIR data by integrating it with model simulations.",
+                "AnswerCn": "使用TIR遥感数据的融合方法比MW遥感方法具有更高的准确性和空间分辨率。TIR在晴空条件下提供更清晰的观测，而MW可以在多云天空下获取地表温度（LST），但准确性和空间分辨率较低。融合方法旨在通过将TIR数据与模型模拟相结合，克服TIR数据中的空间不连续性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In what ways do the challenges of retrieving land surface temperature (LST) using polar-orbiting satellites differ from those associated with geostationary satellites?",
+                "QuestionCn": "使用极轨卫星获取地表温度（LST）所面临的挑战与使用静止卫星所面临的挑战有哪些不同？",
+                "AnswerEn": "Polar-orbiting satellites provide high spatial resolution but have coarse temporal resolution, limiting their application in continuous monitoring. Geostationary satellites offer high temporal resolution, potentially up to 2.5 minutes, but their TIR observations are spatially incomplete due to cloud cover, similar to polar-orbiting satellites.",
+                "AnswerCn": "极地轨道卫星提供高空间分辨率，但时间分辨率较低，限制了它们在连续监测中的应用。静止卫星提供高时间分辨率，潜在可达2.5分钟，但由于云层覆盖，其热红外观测在空间上不完整，类似于极地轨道卫星。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the differences in methodological approaches between spatial interpolation methods and spatiotemporal data fusion methods for estimating cloudy-sky land surface temperature (LST)?",
+                "QuestionCn": "空间插值方法和时空数据融合方法在估计多云天空下的地表温度（LST）时的研究方法有什么不同？",
+                "AnswerEn": "Spatial interpolation methods primarily focus on estimating LST by filling gaps in spatial data, often using nearby clear-sky observations. Spatiotemporal data fusion methods, on the other hand, integrate both spatial and temporal information, often combining multiple data sources, to generate more complete and accurate LST datasets under varying sky conditions.",
+                "AnswerCn": "空间插值方法主要集中在通过填补空间数据中的空白来估计地表温度（LST），通常使用附近的晴空观测数据。时空数据融合方法则整合了空间和时间信息，通常结合多个数据源，以在不同的天空条件下生成更完整和准确的地表温度数据集。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What are the primary reasons behind the need for a fusion method to produce seamless land surface temperature datasets in East Asia?",
+                "QuestionCn": "在东亚地区，生产无缝地表温度数据集的主要原因是什么？",
+                "AnswerEn": "The need for a fusion method arises because the thermal-infrared remote sensing data, while having high accuracy, are spatially discontinuous due to interference from clouds. In contrast, model-simulated land surface temperature data are temporally and spatially complete but have low spatial resolution and accuracy. Thus, fusing these datasets helps achieve high-resolution, accurate, and complete hourly land surface temperature data.",
+                "AnswerCn": "融合方法的需求产生是因为热红外遥感数据虽然具有高精度，但由于云层干扰而在空间上不连续。相比之下，模型模拟的地表温度数据在时间和空间上是完整的，但空间分辨率和精度较低。因此，融合这些数据集有助于获得高分辨率、准确且完整的每小时地表温度数据。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why does cloud cover present a challenge in obtaining accurate land surface temperature measurements using thermal-infrared remote sensing?",
+                "QuestionCn": "云层覆盖在使用热红外遥感获取准确的地表温度测量时会带来挑战，原因是什么？",
+                "AnswerEn": "Cloud cover is a challenge because thermal-infrared signals cannot penetrate clouds, leading to spatially incomplete data. This limitation hinders the accurate retrieval of land surface temperature beneath cloudy conditions, necessitating the use of alternative methods like spatial interpolation or data fusion to estimate the land surface temperature under clouds.",
+                "AnswerCn": "云层覆盖是一个挑战，因为热红外信号无法穿透云层，导致空间数据不完整。这一限制妨碍了在多云条件下准确获取地表温度，因此需要使用空间插值或数据融合等替代方法来估计云下的地表温度。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What causes the retrieval errors in cloudy-sky land surface temperature measurements, and how are these addressed in data processing?",
+                "QuestionCn": "导致多云天空下地表温度测量的检索错误的原因是什么，以及在数据处理过程中如何解决这些问题？",
+                "AnswerEn": "Retrieval errors in cloudy-sky land surface temperature measurements are primarily caused by the inability of thermal-infrared remote sensing to penetrate clouds, leading to incomplete data. These errors are addressed through methods such as bias correction of model-simulated data and data fusion techniques like the multiresolution Kalman filter, which combine the strengths of different data sources to produce more accurate and seamless temperature datasets.",
+                "AnswerCn": "在多云天空下，地表温度测量中的检索错误主要是由于热红外遥感无法穿透云层，导致数据不完整。这些错误通过模型模拟数据的偏差校正和数据融合技术（如多分辨率卡尔曼滤波器）来解决，这些技术结合了不同数据源的优势，以生成更准确和无缝的温度数据集。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the likely impacts on the accuracy of land surface temperature measurements when combining satellite remote sensing data with model simulations?",
+                "QuestionCn": "将卫星遥感数据与模型模拟相结合时，对地表温度测量准确性的可能影响是什么？",
+                "AnswerEn": "Combining satellite remote sensing data with model simulations can lead to high accuracy land surface temperature measurements. This approach helps overcome the limitations of each method, such as the spatial discontinuity of remote sensing due to cloud cover and the low spatial resolution of model simulations, resulting in a more complete and accurate dataset.",
+                "AnswerCn": "将卫星遥感数据与模型模拟相结合可以实现高精度的地表温度测量。这种方法有助于克服各自方法的局限性，例如遥感因云层覆盖而导致的空间不连续性和模型模拟的低空间分辨率，从而生成更完整、更准确的数据集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How might the application of a multiresolution Kalman filter affect the generation of seamless land surface temperature datasets?",
+                "QuestionCn": "多分辨率卡尔曼滤波器的应用可能会如何影响无缝地表温度数据集的生成？",
+                "AnswerEn": "The application of a multiresolution Kalman filter in generating seamless land surface temperature datasets allows for the integration of high-quality retrieved data and bias-corrected model data. This method results in hourly seamless datasets with finer spatial resolution and improved accuracy, essential for various applications like monitoring freeze/thaw status and high-temperature events.",
+                "AnswerCn": "多分辨率卡尔曼滤波器在生成无缝地表温度数据集中的应用，允许高质量的提取数据与偏差校正的模型数据进行整合。该方法生成的每小时无缝数据集具有更细的空间分辨率和更高的准确性，对于监测冻融状态和高温事件等各种应用至关重要。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What consequences arise from using a 0.02° spatial resolution for monitoring land surface temperature over East Asia?",
+                "QuestionCn": "使用0.02°空间分辨率监测东亚的地表温度会产生哪些后果？",
+                "AnswerEn": "Using a 0.02° spatial resolution for monitoring land surface temperature over East Asia enables a detailed representation of spatial distribution and diurnal variation of temperatures across different seasons. This high-resolution data supports various applications, including climate change studies, hydrological simulations, and urban climate monitoring, by providing more precise and reliable information.",
+                "AnswerCn": "使用0.02°的空间分辨率监测东亚的地表温度，可以详细表示不同季节的温度空间分布和日变化。这种高分辨率数据支持多种应用，包括气候变化研究、水文模拟和城市气候监测，提供更精确和可靠的信息。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "Why is it important to develop a data fusion method for generating hourly seamless land surface temperature datasets in East Asia?",
+                "QuestionCn": "开发用于生成东亚地区每小时无缝地表温度数据集的数据融合方法的重要性是什么？",
+                "AnswerEn": "The ultimate goal of developing a data fusion method for generating hourly seamless land surface temperature datasets in East Asia is to overcome the limitations of existing LST data sources. Thermal-infrared remote sensing provides high accuracy but suffers from spatial discontinuities due to cloud cover, while model simulations offer complete spatial coverage but have low spatial resolution and accuracy. By fusing remote sensing and model data, the aim is to create a high-resolution, temporally continuous LST dataset that can be effectively used for monitoring applications such as freeze/thaw status and heatwave impacts.",
+                "AnswerCn": "开发用于生成东亚地区每小时无缝地表温度（LST）数据集的数据融合方法的最终目标是克服现有LST数据源的局限性。热红外遥感提供了高精度，但由于云层覆盖而存在空间不连续性，而模型模拟则提供了完整的空间覆盖，但空间分辨率和精度较低。通过融合遥感和模型数据，旨在创建一个高分辨率、时间连续的LST数据集，能够有效用于监测应用，如冻融状态和热浪影响。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is the rationale behind correcting biases in CLDAS LST data to produce a seamless LST dataset?",
+                "QuestionCn": "纠正CLDAS LST数据中的偏差以生成无缝LST数据集的理由是什么？",
+                "AnswerEn": "Bias correction of CLDAS LST data is crucial for producing a seamless LST dataset because it eliminates systematic errors inherent in the model simulations. By aligning the CLDAS LST with more accurate remote sensing observations, the fusion process can leverage the strengths of both data sources. This ensures the final product maintains high temporal resolution and improved accuracy, which is vital for various applications such as diurnal variation studies and land surface process simulations.",
+                "AnswerCn": "CLDAS LST数据的偏差修正对于生成无缝的LST数据集至关重要，因为它消除了模型模拟中固有的系统误差。通过将CLDAS LST与更准确的遥感观测对齐，融合过程可以利用两种数据源的优势。这确保了最终产品保持高时间分辨率和更高的准确性，这对于日变化研究和陆面过程模拟等各种应用至关重要。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in generating a seamless hourly land surface temperature (LST) dataset using remote sensing data from geostationary satellites?",
+                "QuestionCn": "生成无缝的每小时地表温度（LST）数据集的程序步骤涉及使用来自静止卫星的遥感数据，包括以下几个步骤：\n\n1. 数据获取：从静止卫星获取原始遥感数据，通常包括红外和可见光波段的数据。\n\n2. 数据预处理：对获取的原始数据进行校正，包括辐射校正、大气校正和几何校正，以确保数据的准确性和一致性。\n\n3. 温度反演：应用适当的算法（如单通道法或多通道法）从校正后的遥感数据中反演出地表温度。\n\n4. 数据融合：将不同时间和空间分辨率的LST数据进行融合，以生成高时效性和高空间分辨率的LST产品。\n\n5. 数据插值：使用空间插值方法（如克里金插值或反距离加权）填补数据中的空缺，确保数据的连续性和无缝性。\n\n6. 数据验证：通过与地面观测数据进行比较，验证生成的LST数据集的准确性和可靠性。\n\n7. 数据存储与发布：将处理后的LST数据集存储在数据库中，并根据需求发布给用户，确保数据的可访问性。\n\n8. 数据更新：定期更新LST数据集，以反映最新的地表温度变化。",
+                "AnswerEn": "The process involves retrieving high-quality hourly clear-sky LST from Himawari-8 AHI data using an improved temperature and emissivity separation algorithm. Then, the spatially complete China Land Data Assimilation System (CLDAS) LST is calibrated using a bias correction method. Finally, the strengths of the retrieved AHI LST and the bias-corrected CLDAS LST are combined through the multiresolution Kalman filter (MKF) algorithm to produce an hourly seamless LST dataset.",
+                "AnswerCn": "该过程涉及使用改进的温度和发射率分离算法，从Himawari-8 AHI数据中检索高质量的每小时晴空地表温度（LST）。然后，使用偏差校正方法对空间完整的中国陆地数据同化系统（CLDAS）LST进行校准。最后，通过多分辨率卡尔曼滤波器（MKF）算法将检索到的AHI LST和偏差校正后的CLDAS LST的优势结合起来，生成每小时无缝的LST数据集。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How can different data fusion methods be applied to improve the spatial and temporal resolution of LST datasets in the presence of cloud cover?",
+                "QuestionCn": "如何应用不同的数据融合方法来提高在云层覆盖情况下地表温度（LST）数据集的空间和时间分辨率？",
+                "AnswerEn": "Various methods can be applied, such as using spatial interpolation techniques, surface energy balance methods, machine learning, and spatiotemporal data fusion methods. These approaches aim to estimate cloudy-sky LST by compensating for the spatial incompleteness of thermal-infrared (TIR) observations, which are challenged by cloud cover, while leveraging the temporal continuity provided by geostationary satellites.",
+                "AnswerCn": "可以应用多种方法，例如使用空间插值技术、表面能量平衡方法、机器学习和时空数据融合方法。这些方法旨在通过补偿热红外（TIR）观测的空间不完整性来估计多云天空下的地表温度（LST），而这些观测受到云层覆盖的挑战，同时利用静止卫星提供的时间连续性。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What challenges are typically encountered when integrating thermal-infrared (TIR) and microwave (MW) remote sensing data to produce all-weather LST datasets, and how are these challenges addressed?",
+                "QuestionCn": "在整合热红外（TIR）和微波（MW）遥感数据以生成全天候地表温度（LST）数据集时，通常会遇到哪些挑战，以及如何解决这些挑战？",
+                "AnswerEn": "Challenges include the spatial incompleteness of TIR observations due to cloud cover and the inferior accuracy and spatial resolution of MW LST under clear-sky conditions. These challenges are addressed by employing methods such as bias correction for calibration and multiresolution Kalman filter algorithms to combine the strengths of TIR and MW data, ultimately generating more precise and seamless LST datasets across various weather conditions.",
+                "AnswerCn": "挑战包括由于云层覆盖导致的热红外（TIR）观测的空间不完整性，以及在晴空条件下微波（MW）地表温度（LST）精度和空间分辨率较低。这些挑战通过采用偏差校正方法进行校准，以及多分辨率卡尔曼滤波算法来结合TIR和MW数据的优势，最终生成更精确和无缝的LST数据集，以适应各种天气条件。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What methodological advancements enable the creation of hourly seamless land surface temperature datasets in regions prone to cloud cover?",
+                "QuestionCn": "哪些方法论进展使得在易受云层覆盖影响的地区创建每小时无缝地表温度数据集成为可能？",
+                "AnswerEn": "A methodological advancement involves using thermal-infrared (TIR) remote sensing and a multiresolution Kalman filter (MKF) algorithm to fuse high-quality hourly clear-sky LST data from Himawari-8 with bias-corrected China Land Data Assimilation System (CLDAS) LST, thus enabling the creation of hourly seamless land surface temperature datasets even in cloudy conditions.",
+                "AnswerCn": "一种方法学进展涉及使用热红外（TIR）遥感和多分辨率卡尔曼滤波（MKF）算法，将来自Himawari-8的高质量每小时晴空地表温度（LST）数据与经过偏差校正的中国陆地数据同化系统（CLDAS）LST进行融合，从而即使在多云条件下也能创建每小时无缝的地表温度数据集。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "How do spatial interpolation and data fusion techniques enable the estimation of land surface temperatures under cloudy sky conditions?",
+                "QuestionCn": "空间插值和数据融合技术如何在多云天气条件下实现地表温度的估算。",
+                "AnswerEn": "Spatial interpolation and data fusion techniques, such as the multiresolution Kalman filter (MKF), allow for the combination of strengths from retrieved clear-sky data and bias-corrected model data, enabling the estimation of land surface temperatures under cloudy sky conditions with improved accuracy.",
+                "AnswerCn": "空间插值和数据融合技术，如多分辨率卡尔曼滤波器（MKF），能够结合清晰天空数据和偏差校正模型数据的优势，从而在多云天空条件下更准确地估计地表温度。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In what ways does the integration of multisource remote sensing data enable more accurate and spatially complete land surface temperature monitoring?",
+                "QuestionCn": "多源遥感数据的集成如何使地表温度监测更加准确和空间完整？",
+                "AnswerEn": "The integration of multisource remote sensing data, such as combining Himawari-8 Advanced Himawari Imager (AHI) data with China Land Data Assimilation System (CLDAS) LST through a fusion method, enables more accurate and spatially complete land surface temperature monitoring by overcoming the limitations of individual data sources like cloud interference and low spatial resolution.",
+                "AnswerCn": "多源遥感数据的集成，例如将Himawari-8高级Himawari成像仪（AHI）数据与中国陆地数据同化系统（CLDAS）地表温度（LST）通过融合方法结合，可以更准确和空间完整地监测地表温度，从而克服单一数据源的局限性，如云干扰和低空间分辨率。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might a data fusion method be necessary for generating a seamless land surface temperature dataset?",
+                "QuestionCn": "数据融合方法在生成无缝地表温度数据集时可能是必要的，原因如下：",
+                "AnswerEn": "Thermal-infrared remote sensing data, though accurate, are spatially incomplete due to cloud interference. A data fusion method that combines remote sensing data with model simulations can overcome these limitations, providing a comprehensive and accurate land surface temperature dataset.",
+                "AnswerCn": "热红外遥感数据虽然准确，但由于云层干扰而在空间上不完整。一种将遥感数据与模型模拟相结合的数据融合方法可以克服这些限制，提供全面且准确的地表温度数据集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What challenges could arise when trying to expand a data fusion algorithm for land surface temperature to a regional or global scale?",
+                "QuestionCn": "在尝试将土地表面温度的数据融合算法扩展到区域或全球尺度时，可能会出现哪些挑战？",
+                "AnswerEn": "Challenges include the potential inadequacy of the algorithm's performance, as seen with higher RMSE values at some field sites, and the uncertainty of how well meteorological data from specific field experiments can be generalized to broader areas.",
+                "AnswerCn": "挑战包括算法性能可能不足的问题，例如在某些田间地点的RMSE值较高，以及不确定特定田间实验的气象数据在更广泛区域的普适性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might methods for estimating cloudy-sky land surface temperature yield larger errors, and how can this be addressed?",
+                "QuestionCn": "估计多云天空下地表温度的方法可能会产生更大的误差，这可能是由于云层对地表辐射的影响、云的类型和厚度变化、以及大气条件的不确定性等因素造成的。为了解决这个问题，可以采用更精确的辐射传输模型、结合卫星观测数据进行校正、以及使用多种气象数据源进行综合分析。",
+                "AnswerEn": "Methods might yield larger errors due to the complexity of accurately retrieving thermal-infrared signals through clouds. Techniques like bias correction and multiresolution Kalman filter algorithms can be employed to combine different data sources and improve accuracy.",
+                "AnswerCn": "由于通过云层准确获取热红外信号的复杂性，某些方法可能会产生较大的误差。可以采用偏差校正和多分辨率卡尔曼滤波算法等技术，结合不同的数据源以提高准确性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "How would you evaluate the effectiveness of using thermal-infrared remote sensing for generating land surface temperature data, given the challenges with cloud cover?",
+                "QuestionCn": "如何评估使用热红外遥感生成地表温度数据的有效性，考虑到云层覆盖带来的挑战？",
+                "AnswerEn": "Thermal-infrared remote sensing is effective for obtaining land surface temperature (LST) due to its high accuracy. However, cloud cover presents a significant challenge as it prevents the acquisition of LST information beneath clouds, leading to spatially incomplete data. The integration of methods like spatial interpolation, surface energy balance, and data fusion, such as the multiresolution Kalman filter, can enhance the effectiveness by addressing these challenges.",
+                "AnswerCn": "热红外遥感因其高精度而有效获取地表温度（LST）。然而，云层覆盖是一个重大挑战，因为它阻碍了云下LST信息的获取，导致空间数据不完整。通过整合空间插值、表面能量平衡和数据融合等方法，如多分辨率卡尔曼滤波，可以提高其有效性，解决这些挑战。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "In your opinion, what are the key challenges that need to be addressed to improve the accuracy of land surface temperature datasets under all sky conditions?",
+                "QuestionCn": "在我看来，需要解决的关键挑战以提高在各种天空条件下地表温度数据集的准确性包括：",
+                "AnswerEn": "Key challenges in improving the accuracy of land surface temperature datasets under all sky conditions include the development of robust algorithms that can accurately estimate LST under cloudy conditions, as traditional thermal-infrared methods are limited. Enhancements in bias correction and data fusion techniques, like the multiresolution Kalman filter, are crucial to mitigate these challenges and achieve consistent and accurate temperature data.",
+                "AnswerCn": "在改善全云条件下地表温度数据集的准确性方面，主要挑战包括开发能够准确估计云层条件下地表温度的强健算法，因为传统的热红外方法受到限制。偏差校正和数据融合技术的增强，如多分辨率卡尔曼滤波器，对于缓解这些挑战并实现一致和准确的温度数据至关重要。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don’t understand how the data collection methods can achieve high spatial resolution for land surface temperature observations.",
+                "QuestionCn": "我不明白数据收集方法如何能够实现高空间分辨率的地表温度观测。",
+                "AnswerEn": "The data collection method combines thermal-infrared (TIR) remote sensing from geostationary satellites like Himawari-8, which provides high temporal resolution, with spatially complete land surface temperature (LST) from systems like the China Land Data Assimilation System (CLDAS). This approach addresses the spatial resolution challenge by using a multiresolution Kalman filter algorithm to fuse the high-quality clear-sky LST from AHI data with bias-corrected CLDAS LST, resulting in a seamless 0.02° hourly dataset.",
+                "AnswerCn": "数据收集方法结合了来自静止卫星（如Himawari-8）的热红外（TIR）遥感，提供高时间分辨率，以及来自中国陆地数据同化系统（CLDAS）的空间完整的地表温度（LST）。这种方法通过使用多分辨率卡尔曼滤波算法，将来自AHI数据的高质量晴空LST与经过偏差校正的CLDAS LST融合，解决了空间分辨率的挑战，最终生成无缝的0.02°每小时数据集。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I'm not sure why it's challenging to retrieve accurate land surface temperature data under cloudy conditions.",
+                "QuestionCn": "我不确定为什么在多云条件下获取准确的地表温度数据会很困难。",
+                "AnswerEn": "Retrieving accurate land surface temperature data under cloudy conditions is challenging because thermal-infrared (TIR) signals, which are typically used in remote sensing for LST, cannot penetrate clouds. This results in spatially incomplete data. To overcome this, methods like bias correction and data fusion using the multiresolution Kalman filter are employed to estimate LST under cloudy conditions, combining strengths from different data sources.",
+                "AnswerCn": "在多云条件下获取准确的地表温度数据是具有挑战性的，因为热红外（TIR）信号通常用于遥感的地表温度（LST）无法穿透云层。这导致数据在空间上不完整。为了克服这一问题，采用了偏差校正和使用多分辨率卡尔曼滤波器的数据融合方法，以估计多云条件下的地表温度，结合来自不同数据源的优势。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please explore different data fusion techniques that can be utilized to improve the accuracy and spatial completeness of land surface temperature datasets.",
+                "QuestionCn": "请探讨可以利用的不同数据融合技术，以提高地表温度数据集的准确性和空间完整性。",
+                "AnswerEn": "A data fusion method leveraging Himawari-8 Advanced Himawari Imager (AHI) data has been proposed to produce hourly seamless land surface temperature. This involves retrieving high-quality clear-sky land surface temperature using an improved temperature and emissivity separation algorithm, calibrating spatially complete China Land Data Assimilation System (CLDAS) land surface temperature with a bias correction method, and combining these using a multiresolution Kalman filter algorithm.",
+                "AnswerCn": "一种利用Himawari-8先进的Himawari成像仪（AHI）数据的数据融合方法已被提出，以生成每小时无缝的地表温度。这涉及使用改进的温度和发射率分离算法检索高质量的晴空地表温度，利用偏差校正方法对空间完整的中国陆地数据同化系统（CLDAS）地表温度进行校准，并使用多分辨率卡尔曼滤波算法将这些数据结合起来。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

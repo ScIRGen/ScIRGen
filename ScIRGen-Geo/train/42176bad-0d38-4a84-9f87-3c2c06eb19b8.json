@@ -1,0 +1,538 @@
+{
+    "id": "42176bad-0d38-4a84-9f87-3c2c06eb19b8",
+    "relatedPaper": 2,
+    "context": {
+        "metadata": {
+            "titleEn": "Global high-resolution water storage anomaly dataset (2002-2022)",
+            "titleCn": "全球高分辨率水储量异常数据集（2002-2022）",
+            "description": "Terrestrial water storage anomaly (TWSA) and Groundwater storage anomaly (GWSA) hold paramount significance in hydrological research and water resource management. However, products derived from the Gravity Recovery and Climate Experiment (GRACE) and its Follow-On (GRACE-FO) missions are constrained by the satellite's design and variations in processing strategies among different institutions, resulting in multiple suboptimal products. These products not only exhibit coarse spatial resolution but also suffer from a continuous 11-months gap (from July 2017 to May 2018), thereby imposing significant limitations on related research. To simultaneously address the aforementioned three challenges, the Bayesian-based Three-Cornered Hat (BTCH) method was initially employed to fuse low-uncertainty GRACE-derived TWSA/GWSA products with coarse resolution (0.5°). Subsequently, based on the fused TWSA/GWSA products and multi-source datasets, a Machine Learning Downscaling Framework based on Physically Constrained Sliding Window (MLDF-PCSW) was developed in this study. This framework not only enhanced the spatial resolution of the products but also filled the data gap, ultimately producing a long-term and continuous dataset on the global (excluding Greenland and Antarctica), named High-resolution Water Storage Anomaly (HWSA v1.0) which incorporates the information (Variables: TWSA and GWSA; Spatial resolution: 0.05°; Temporal resolution: monthly; Time spans: April 2002 to December 2022). The results of the uncertainty analysis with the Three-Cornered Hat (TCH) method indicate that the TWSA derived from the Center for Space Research (CSR) exhibits the lowest uncertainty (25.38 mm) within the three original products, and the uncertainty decreases by 35.07% (16.48 mm) after fusion with the BTCH method. The HWSA v1.0 dataset based on MLDF-PCSW not only preserves the original information of the fused TWSA/GWSA products but also delineates more detailed spatial details, demonstrating excellent performance compared to the data before downscaling in terms of correlation coefficients (CC) and root mean square error (RMSE) (TWSA: CC=0.99, RMSE=0.68 mm; GWSA: CC=0.99, RMSE=1.24 mm) and showing good consistency with in-situ groundwater observations with the maximum CC value of 0.96. The comparison results with the other four gap-filled TWSA products also show outstanding performance with the average CC value reaching 0.98 in the world. Obviously, the HWSA v1.0 datasets have enormous potential to provide a robust data foundation for related research endeavors.",
+            "descriptionCn": "陆地水储量异常（TWSA）和地下水储量异常（GWSA）在水文研究和水资源管理中具有重要意义。然而，来自重力恢复和气候实验（GRACE）及其后续任务（GRACE-FO）的产品受卫星设计和不同机构处理策略不同的限制，导致存在多个次优产品。而且，这些产品不仅具有粗糙的空间分辨率，在2017年7月至2018年5月之间还存在连续11个月的间断，给相关研究带来了显著的局限。因此本研究首先基于BTCH（Bayesian-based Three-Cornered Hat）方法融合了多个机构发布的GRACE产品获得了不确定性最低的产品（0.5°），并在此基础上构建了基于物理约束滑动窗口的机器学习降尺度框架（Machine Learning Downscaling Framework based on Physically Constrained Sliding Window，MLDF-PCSW）实现了对应产品空间分辨率的提升（从0.5°到0.05°）及连续缺失月份的填补（2017年7月到2018年5月），并最终生产了一套全球连续数据集，命名为HWSA v1.0（High-resolution Water Storage Anomaly），该数据集包含信息（变量：TWSA和GWSA；空间分辨率：0.05°；时间分辨率：月；时间跨度：2002年4月至2022年12月）。基于三角帽（Three-Cornered Hat，TCH）方法的不确定性分析结果显示，在三个原始产品中，来自美国德克萨斯大学研究中心（Center for Space Research，CSR）的TWSA具有最低的不确定性（25.38 mm），而在基于BTCH方法融合后，不确定性减少了35.07%（16.48 mm）。基于MLDF-PCSW的HWSA v1.0数据集不仅保留了融合的TWSA/GWSA产品的原始信息，而且刻画了更详细的空间细节，与降尺度之前的数据相比在相关系数（Correlation Coefficients，CC）和均方根误差（Root Mean Square Error，RMSE）指标上表现出色（TWSA：CC=0.99，RMSE=0.68 mm；GWSA：CC=0.99，RMSE=1.24 mm），与原位地下水位观测的对比也显示出较高的一致性（最大CC值为0.96）。与其他的重建的TWSA产品的比较结果也表现较好，全球平均CC值达到0.98。显然，该数据集具有为相关研究提供强大数据基础的巨大潜力。",
+            "instructions": "This dataset contains three files named BTCH-TWSA-GWSA-200204-202212-MONTH-050.nc, HWSA-V1.0-TWSA-200204-202212-MONTH-005.nc, and HWSA-V1.0-GWSA-200204-202212-MONTH-005.nc. The dataset is stored in NetCDF format. Each file contains multiple variables, including latitude ('lat '), longitude ('lon'), time ('time '), and terrestrial water storage anomaly ('twsa_005') or groundwater storage anomaly ('gwsa_005 '). Data reading method: This dataset can be viewed and read using Matlab/Python/ArcGIS.\nIf you plan to use our data in your manuscript or presentation, we hope you can inform us at an early stage of your work. If this dataset is crucial to your research or if a significant result depends on the HWSA v1.0, please notify us of your findings and publication plans before submitting your paper. This will give us the opportunity to review the paper/report and contribute.",
+            "instructionsCn": "本数据集包含三个文件，分别以BTCH-TWSA-GWSA-200204-202212-MONTH-050.nc、HWSA-V1.0-TWSA-200204-202212-MONTH-005.nc和HWSA-V1.0-GWSA-200204-202212-MONTH-005.nc命名，数据以NetCDF格式存储。每个文件中包含多个变量，有纬度（'lat'）、经度（'lon'）、时间（‘time’）和陆地水储量异常（'twsa_005'）或地下水储量异常（'gwsa_005'）。数据读取方式：该数据集可以使用Matlab/Python/ArcGIS进行查看和读取等操作。\n如果您计划在论文或报告中使用我们的数据，我们希望您能在工作初期就告知我们。如果这个数据集对您的研究至关重要，或者某个重要结果依赖于 HWSA v1.0，请您在提交论文前通知我们您的结果和出版计划，给我们阅读论文/报告和作出贡献的机会。",
+            "east": 180.0,
+            "west": -180.0,
+            "south": -90.0,
+            "north": 90.0,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 52150125945.0,
+            "cstr": "18406.11.Terre.tpdc.300962",
+            "doi": "10.11888/Terre.tpdc.300962",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameCn": "张刚强",
+                "nameEn": "ZHANG Gangqiang",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "徐同仁",
+                "nameEn": "XU Tongren ",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Improving the Resolution and Accuracy of Groundwater Level Anomalies Using the Machine Learning-Based Fusion Model in the North China Plain",
+                "referenceCn": null,
+                "referenceEn": "Zhang, G., Zheng, W., Yin, W., & Lei, W. (2021). Improving the Resolution and Accuracy of Groundwater Level Anomalies Using the Machine Learning-Based Fusion Model in the North China Plain. Sensors, 21(1), 46. https://doi.org/10.3390/s21010046"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A Bayesian Three-Cornered Hat (BTCH) Method: Improving the Terrestrial Evapotranspiration Estimation",
+                "referenceCn": null,
+                "referenceEn": "He, X., Xu, T., Xia, Y., Bateni, S. M., Guo, Z., Liu, S., Mao, K., Zhang, Y., Feng, H., & Zhao, J. (2020). A Bayesian Three-Cornered Hat (BTCH) Method: Improving the Terrestrial Evapotranspiration Estimation. Remote Sensing, 12(5), 878. https://doi.org/10.3390/rs12050878"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Improving the resolution of GRACE-based water storage estimates based on machine learning downscaling schemes",
+                "referenceCn": null,
+                "referenceEn": "Yin, W., Zhang, G., Han, S., Yeo, I., & Zhang, M. (2022). Improving the resolution of GRACE-based water storage estimates based on machine learning downscaling schemes. Journal of Hydrology, 613, 128447. https://doi.org/10.1016/j.jhydrol.2022.128447"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Improving the spatial resolution of GRACE-based groundwater storage estimates using a machine learning algorithm and hydrological model",
+                "referenceCn": null,
+                "referenceEn": "Yin, W., Zhang, G., Liu, F., Zhang, D., Zhang, X., & Chen, S. (2022). Improving the spatial resolution of GRACE-based groundwater storage estimates using a machine learning algorithm and hydrological model. Hydrogeology Journal, 30(3), 947-963. https://doi.org/10.1007/s10040-021-02447-4"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A machine learning downscaling framework based on a physically constrained sliding window technique for improving resolution of global water storage anomaly",
+                "referenceCn": null,
+                "referenceEn": "Zhang, G., Xu, T., Yin, W., Bateni, S. M., Jun, C., Kim, D., et al. (2024). A machine learning downscaling framework based on a physically constrained sliding window technique for improving resolution of global water storage anomaly. Remote Sensing of Environment, 313, 114359. https://doi.org/10.1016/j.rse.2024.114359."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "固体地球",
+                "nameEn": "Solid earth"
+            },
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "GRACE",
+                "nameEn": "GRACE"
+            },
+            {
+                "nameCn": "地下水储量异常",
+                "nameEn": "Groundwater water storage anomaly (GWSA)"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "Hydrology"
+            },
+            {
+                "nameCn": "重力",
+                "nameEn": "Gravity"
+            },
+            {
+                "nameCn": "陆地水储量异常",
+                "nameEn": "Terrestrial water storage anomaly"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "全球",
+                "keywordEn": "Global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2002-2022",
+                "keywordEn": "2002-2024",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "融合天-空-地一体化观测与陆面过程模型估算地表水热通量研究",
+                "titleEn": "Estimation of surface water and heat flux through integrating satellite–airborne–ground-based observations and land surface model"
+            },
+            {
+                "titleCn": "洞庭湖流域生态水文过程与面源污染精准调控机制",
+                "titleEn": "Ecohydrological process mechanism analysis and precise regulation of diffuse pollution in Dongting Lake Basin"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "The applications of the Gravity Recovery and Climate Experiment (GRACE) on local scales are obstructed owing to the coarser spatial resolution of GRACE observations. The Gravity Recovery and Climate Experiment (GRACE) satellites provide an effective measure to detect terrestrial water storage changes at large-scale regions, particularly in areas with limited measured data. Up to now, GRACE has been widely utilized in a number of applications, e.g., retrieving groundwater, quantifying drought, measuring massive flood, and detecting land subsidence. Despite these achievements, there are still some shortcomings which limit its application in long-term hydrological changes, e.g., data gaps and time lag. Additionally, care must be taken when GRACE observations are applied to regions with heterogeneous geomorphological features. Especially, the footprint of GRACE observations is approximately 200,000 km² as a result of the orbit height, which is too coarse to meet the requirements of water resource managers. Improving the spatial resolution of GRACE satellites has the great potential to enhance wider applications of GRACE data. There are two commonly used methods to downscale GRACE observations, namely dynamical and statistical approaches. The dynamical downscaling can also be called as data assimilation (DA), which integrate GRACE observations and simulated water storage estimates from hydrological models. Previous studies have highlighted the benefit of DA in improving the spatial resolution of GRACE data and disaggregating terrestrial water storage anomalies (TWSA) into various water storage components. Nevertheless, the principal drawback of DA is computational cost and strong dependence on the uncertain boundary condition of hydrological models. The statistical approaches can be considered as alternatives; for example, recent demonstration with GRACE data to name a few. With the advancement of machine learning (ML) techniques, the statistical methods become more feasible. In statistical downscaling models, it is crucial to identify representative predictors for the performance of model prediction, while no effective variable selection method has been proposed yet. Most predictors are chosen based on the subjective experience or water balance method, and thus these developed models may not be uniformly applicable to other areas."
+            ],
+            "research objective": [
+                "In this study, the partial least squares regression (PLSR) model firstly is employed to identify the representative predictors associated with GRACE observations. Then, the performance of two different downscaling schemes (namely pixel-scale and regional-scale models) are comprehensively investigated, based on a machine learning algorithm known as random forest, to enhance the resolution of GRACE-based water storage estimates to the grid resolution as small as 5 km. The high-resolution results presented in this study can lead to better understanding on regional water resources and provide quantitative information to water management considering irrigation water use and groundwater consumption."
+            ],
+            "challenges": [
+                "However, there are still two deficiencies in previous GRACE downscaling research, namely the selection of input variables and the scale of model construction. The downscaled results still suffered from systematic effects and coarser spatial resolution, limiting the application in local water resources management. However, the major drawback of this scheme is that whether the downscaling models developed at the national scale can be suitable to arbitrarily small-scale regions."
+            ],
+            "methods": [
+                "In this study, the partial least squares regression (PLSR) model firstly is employed to identify the representative predictors associated with GRACE observations. Then, the performance of two different downscaling schemes (namely pixel-scale and regional-scale models) are comprehensively investigated, based on a machine learning algorithm known as random forest, to enhance the resolution of GRACE-based water storage estimates to the grid resolution as small as 5 km. The downscaled results are validated against hydrological model simulations and a number of in-situ groundwater level measurements within one of most rapidly urbanized basin in China, Haihe River Basin. Starting with the GRACE observations, two kinds of pixel and regional downscaling schemes are developed."
+            ],
+            "dataset": [
+                "Gridded RL06 GRACE mascon products were employed in this study, released by the Center for Space Research (CSR-RL06M) and the Jet Propulsion Laboratory (JPL-RL06M). Monthly groundwater level measurements were collected to validate the accuracy of downscaled GWSA estimates, which were issued by Beijing Water Resources Bulletin of China from January 2005 to December 2015."
+            ],
+            "findings": [
+                "The PLSR model recognizes four variables (namely evapotranspiration, temperature, land surface temperature, and soil moisture) as the predominant factors, acting as the predictors of downscaling models. The downscaled results were consistent with each other and with the original GRACE data at a broad scale with the correlation up to 0.98. It was found that there was 3.20 times deviation of the results from the model simulation in computation of groundwater depletion rates within plain areas. In-situ water level measurements highlight that the downscaling models are improved by 36.95 % and 23.25 % in correlation relative to the original GRACE data and the simulated groundwater storage anomalies, respectively. Generally, the pixel-scale model is slightly better than the regional-scale model with 69 % (171 out of 249 observation wells) of higher correlation and 53 % (131 out of 249 observation wells) of smaller root mean squared error."
+            ],
+            "backgroundCn": [
+                "重力恢复与气候实验（GRACE）在地方尺度上的应用受到GRACE观测的较粗空间分辨率的阻碍。GRACE卫星有效地测量大区域的陆地水储存变化，特别是在测量数据有限的地区。迄今为止，GRACE已广泛应用于多种领域，例如提取地下水、量化干旱、测量大规模洪水和检测地面沉降。尽管取得了这些成就，但仍存在一些限制其在长期水文变化应用中的不足，例如数据缺口和时间滞后。此外，在将GRACE观测应用于具有异质地貌特征的地区时，必须谨慎。特别是，由于轨道高度的原因，GRACE观测的足迹约为200,000平方公里，这对于水资源管理者的需求来说过于粗糙。提高GRACE卫星的空间分辨率具有极大的潜力，可以增强GRACE数据的更广泛应用。常用的两种下分辨率GRACE观测的方法是动态方法和统计方法。动态下分辨率也可以称为数据同化（DA），它将GRACE观测与水文模型的模拟水储存估计相结合。先前的研究强调了数据同化在提高GRACE数据空间分辨率和将陆地水储存异常（TWSA）分解为各种水储存成分方面的好处。然而，数据同化的主要缺点是计算成本高且对水文模型的不确定边界条件依赖性强。统计方法可以被视为替代方案；例如，最近对GRACE数据的演示。随着机器学习（ML）技术的进步，统计方法变得更加可行。在统计下分辨率模型中，识别代表性预测变量对于模型预测的性能至关重要，而目前尚未提出有效的变量选择方法。大多数预测变量是基于主观经验或水量平衡方法选择的，因此这些开发的模型可能无法均匀适用于其他地区。"
+            ],
+            "research objectiveCn": [
+                "在本研究中，首先采用偏最小二乘回归（PLSR）模型识别与GRACE观测相关的代表性预测因子。然后，基于一种称为随机森林的机器学习算法，全面研究了两种不同的下采样方案（即像素尺度模型和区域尺度模型）的性能，以将GRACE基础的水储量估计的分辨率提高到小至5公里的网格分辨率。本研究中呈现的高分辨率结果可以更好地理解区域水资源，并为水管理提供定量信息，考虑灌溉用水和地下水消耗。"
+            ],
+            "challengesCn": [
+                "然而，以前的GRACE降尺度研究仍然存在两个不足之处，即输入变量的选择和模型构建的尺度。降尺度结果仍然受到系统性影响和较粗的空间分辨率的限制，限制了在地方水资源管理中的应用。然而，这种方案的主要缺点是，在国家尺度上开发的降尺度模型是否适合任意小尺度区域。"
+            ],
+            "methodsCn": [
+                "在本研究中，首先采用偏最小二乘回归（PLSR）模型识别与GRACE观测相关的代表性预测因子。然后，基于一种称为随机森林的机器学习算法，全面研究了两种不同的下采样方案（即像素尺度和区域尺度模型）的性能，以提高GRACE基础水储量估计的分辨率，达到小至5公里的网格分辨率。下采样结果与中国最迅速城市化的流域之一——海河流域的水文模型模拟和多个现场地下水位测量进行了验证。从GRACE观测数据开始，开发了两种像素和区域下采样方案。"
+            ],
+            "datasetCn": [
+                "本研究采用了由德克萨斯大学空间研究中心（CSR-RL06M）和喷气推进实验室（JPL-RL06M）发布的网格化RL06 GRACE mascon产品。每月的地下水位测量数据用于验证下调的地下水储量估计的准确性，这些数据由中国北京水资源公报提供，时间范围为2005年1月至2015年12月。"
+            ],
+            "findingsCn": [
+                "PLSR模型识别了四个变量（即蒸散发、温度、地表温度和土壤湿度）作为下分辨率模型的主要预测因子。下分辨率结果在广泛尺度上彼此一致，并与原始GRACE数据一致，相关性高达0.98。发现平原地区的地下水耗竭率计算结果与模型模拟结果存在3.20倍的偏差。现场水位测量表明，相较于原始GRACE数据和模拟的地下水储量异常，下分辨率模型的相关性分别提高了36.95%和23.25%。总体而言，像素尺度模型略优于区域尺度模型，69%（249个观测井中的171个）具有更高的相关性，53%（249个观测井中的131个）具有更小的均方根误差。"
+            ]
+        },
+        {
+            "background": [
+                "Terrestrial water storage anomaly (TWSA) and groundwater storage anomaly (GWSA) serve as crucial components of the water cycle that need to be carefully monitored, raising the need for high-quality data. The Gravity Recovery and Climate Experiment (GRACE) mission and its Follow-On mission (GRACE-FO) utilize satellite technology to monitor changes in terrestrial water storage (TWS). Since their launch, these missions have been employed in a number of important research projects, including quantifying components of the water cycle, monitoring glaciers, assessing trends in anthropogenic groundwater depletion, improving climate models, estimating the global sea-level budget, and monitoring extreme events such as floods and drought. However, GRACE is constrained by three limitations: discrepancies in Level-3 products among different institutions, the coarse spatial resolution (~3°) of GRACE-derived products, and the continuous 11-month data gap between the GRACE and GRACE-FO missions. GRACE mass concentration blocks (mascons) are a widely used parameterization method, with mascon products available from three main sources: the Center for Space Research (CSR), the Jet Propulsion Laboratory (JPL), and the National Aeronautics and Space Administration (NASA) Goddard Space Flight Center (GSFC)."
+            ],
+            "research objective": [
+                "Therefore, the main objective of this study is to simultaneously address the three main drawbacks of GRACE-derived products and generate a set of long-term, temporally continuous, and high-resolution GRACE-derived global TWSA and GWSA products."
+            ],
+            "challenges": [
+                "However, products derived from the Gravity Recovery and Climate Experiment (GRACE) mission and its Follow-On mission (GRACE-FO) are constrained by the satellite design and variation in processing strategies among different institutions, resulting in multiple suboptimal products. These products not only have a coarse spatial resolution but also suffer from a continuous 11-month gap from July 2017 to May 2018, which represent significant limitations for related research."
+            ],
+            "methods": [
+                "This study collected data for these variables from ERA5-Land, which has the closest spatial resolution (0.1°) and global coverage. This study also acquired and processed data on the digital elevation model (DEM), slope, temporal information (TI), and location information (LI). The BTCH fusion algorithm was employed to integrate the TWSA_CSR, TWSA_JPL, and TWSA_GSFC products to produce TWSA_BTCH, a higher-quality TWSA product with a spatial resolution of 0.5° and a monthly temporal resolution. To derive the GWSA products, SMA, SWEA, and PCWSA were subtracted from the TWSA products before and after fusion."
+            ],
+            "dataset": [
+                "The HWSA v1.0, a long-term, continuous dataset on a global scale (excluding Greenland and Antarctica; variables: TWSA and GWSA; spatial resolution: 0.05°; temporal resolution: monthly; period: April 2002 to December 2022)."
+            ],
+            "findings": [
+                "The results of uncertainty analysis using the three-cornered hat (TCH) method indicated that the TWSA derived from the Center for Space Research (CSR) exhibited the lowest uncertainty (23.91 mm) of the three original products, and the uncertainty decreased by 35.42% (15.44 mm) after data fusion using the BTCH method. The HWSA v1.0 dataset based on MLDF-PCSW exhibited high correlation coefficients (CCs) (0.999 and 0.999 for TWSA and GWSA, respectively) and a low root mean square error (RMSE) (0.68 mm and 1.24 mm for TWSA and GWSA, respectively) with the original TWSA and GWSA products, while also providing more detailed TWSA and GWSA spatial information. Independent validation for TWSA_DYY based on the water balance method has been done across six basins and the results are great, with the CCs between 0.69 and 0.92. The GWSA from the MLDF-PCSW demonstrated acceptable correspondence with global in-situ groundwater observations, with a mean CC of 0.27. The other four previously released gap-filled TWSA products also exhibited outstanding performance, with the average CC reaching 0.98 for the 11-month gap. Collectively, these results suggest that the HWSA v1.0 dataset based on the MLDF-PCSW has significant potential as a robust data foundation for related research."
+            ],
+            "backgroundCn": [
+                "陆地水储存异常（TWSA）和地下水储存异常（GWSA）是水循环的重要组成部分，需要仔细监测，这就需要高质量的数据。重力恢复与气候实验（GRACE）任务及其后续任务（GRACE-FO）利用卫星技术监测陆地水储存（TWS）的变化。自发射以来，这些任务已被用于多个重要研究项目，包括量化水循环的组成部分、监测冰川、评估人为地下水枯竭的趋势、改善气候模型、估算全球海平面预算以及监测极端事件如洪水和干旱。然而，GRACE面临三大限制：不同机构之间的三级产品存在差异、GRACE衍生产品的空间分辨率较粗（约3°），以及GRACE与GRACE-FO任务之间连续的11个月数据缺口。GRACE质量浓度块（mascons）是一种广泛使用的参数化方法，mascon产品来自三个主要来源：德克萨斯大学空间研究中心（CSR）、喷气推进实验室（JPL）和美国国家航空航天局戈达德太空飞行中心（GSFC）。"
+            ],
+            "research objectiveCn": [
+                "因此，本研究的主要目标是同时解决GRACE衍生产品的三个主要缺点，并生成一套长期、时间连续且高分辨率的GRACE衍生全球土壤水储量（TWSA）和地下水储量（GWSA）产品。"
+            ],
+            "challengesCn": [
+                "然而，源自重力恢复与气候实验（GRACE）任务及其后续任务（GRACE-FO）的产品受到卫星设计和不同机构之间处理策略变化的限制，导致出现多个次优产品。这些产品不仅空间分辨率较低，而且在2017年7月至2018年5月之间存在连续11个月的缺口，这对相关研究构成了重大限制。"
+            ],
+            "methodsCn": [
+                "本研究从ERA5-Land收集了这些变量的数据，该数据集具有最接近的空间分辨率（0.1°）和全球覆盖范围。本研究还获取并处理了数字高程模型（DEM）、坡度、时间信息（TI）和位置信息（LI）数据。采用BTCH融合算法将TWSA_CSR、TWSA_JPL和TWSA_GSFC产品进行整合，生成TWSA_BTCH，这是一个具有0.5°空间分辨率和每月时间分辨率的高质量TWSA产品。为了推导GWSA产品，从TWSA产品中减去SMA、SWEA和PCWSA，进行融合前后的处理。"
+            ],
+            "datasetCn": [
+                "HWSA v1.0是一个长期的、连续的全球数据集（不包括格林兰和南极洲；变量：TWSA和GWSA；空间分辨率：0.05°；时间分辨率：每月；时间范围：2002年4月到2022年12月）。"
+            ],
+            "findingsCn": [
+                "使用三角帽（TCH）方法进行的不确定性分析结果表明，来自空间研究中心（CSR）的总水储量（TWSA）显示出三种原始产品中最低的不确定性（23.91 mm），而在使用BTCH方法进行数据融合后，不确定性降低了35.42%（15.44 mm）。基于MLDF-PCSW的HWSA v1.0数据集与原始TWSA和GWSA产品之间具有高相关系数（CCs）（TWSA和GWSA分别为0.999和0.999），且均方根误差（RMSE）较低（TWSA和GWSA分别为0.68 mm和1.24 mm），同时提供了更详细的TWSA和GWSA空间信息。基于水量平衡法对TWSA_DYY的独立验证已在六个流域中进行，结果良好，相关系数在0.69到0.92之间。基于MLDF-PCSW的GWSA与全球实地地下水观测结果之间表现出可接受的对应关系，平均相关系数为0.27。其他四个先前发布的填补缺口的TWSA产品也表现出卓越的性能，11个月缺口的平均相关系数达到0.98。综合来看，这些结果表明，基于MLDF-PCSW的HWSA v1.0数据集在相关研究中具有作为稳健数据基础的显著潜力。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Does the Bayesian-based Three-Cornered Hat (BTCH) method effectively reduce uncertainty in GRACE-derived products?",
+                "QuestionCn": "贝叶斯三角帽（BTCH）方法是否有效减少了GRACE衍生产品中的不确定性？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Can the Machine Learning Downscaling Framework based on Physically Constrained Sliding Window (MLDF-PCSW) enhance the spatial resolution of water storage anomaly data?",
+                "QuestionCn": "基于物理约束滑动窗口的机器学习降尺度框架（MLDF-PCSW）能否增强水储存异常数据的空间分辨率？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Is it possible to achieve high correlation and low root mean square error in downscaled GRACE data compared to original GRACE datasets?",
+                "QuestionCn": "在与原始GRACE数据相比的降尺度GRACE数据中，是否可以实现高相关性和低均方根误差？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Which dataset offers a higher resolution for terrestrial water storage anomaly analysis: the original GRACE mascon products, HWSA v1.0, or ERA5-Land data?",
+                "QuestionCn": "哪个数据集在陆地水储量异常分析中提供更高的分辨率：原始的GRACE mascon产品、HWSA v1.0，还是ERA5-Land数据？",
+                "AnswerEn": "HWSA v1.0",
+                "AnswerCn": "HWSA v1.0",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of how Bayesian-based methods have been utilized to improve the quality of water storage anomaly datasets derived from satellite observations?",
+                "QuestionCn": "您能否提供一个例子，说明基于贝叶斯的方法如何被用于改善从卫星观测中得出的水储存异常数据集的质量？",
+                "AnswerEn": "The Bayesian-based Three-Cornered Hat (BTCH) method was used to fuse multiple GRACE products, resulting in a higher-quality water storage anomaly dataset with reduced uncertainty.",
+                "AnswerCn": "基于贝叶斯的三角帽（BTCH）方法被用于融合多个GRACE产品，从而生成了更高质量的水储存异常数据集，并减少了不确定性。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a machine learning approach that has been applied to enhance the spatial resolution of terrestrial water storage anomaly products?",
+                "QuestionCn": "一种已应用于提高陆地水储存异常产品空间分辨率的机器学习方法的例子是什么？",
+                "AnswerEn": "A machine learning downscaling framework based on a physically constrained sliding window (MLDF-PCSW) was employed to improve the spatial resolution of terrestrial water storage anomaly products from 0.5° to 0.05°.",
+                "AnswerCn": "基于物理约束滑动窗口的机器学习降尺度框架（MLDF-PCSW）被用于将陆地水储存异常产品的空间分辨率从0.5°提高到0.05°。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you provide an example of datasets used to validate the accuracy of downscaled groundwater storage anomaly estimates?",
+                "QuestionCn": "您能否提供用于验证降尺度地下水储量异常估计准确性的示例数据集？",
+                "AnswerEn": "Monthly groundwater level measurements were collected and used to validate the accuracy of downscaled groundwater storage anomaly estimates, as issued by the Beijing Water Resources Bulletin of China from January 2005 to December 2015.",
+                "AnswerCn": "每月收集地下水位测量数据，用于验证2005年1月至2015年12月期间中国北京水资源公报发布的下调地下水储量异常估计的准确性。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the key factors influencing the uncertainty in global water storage anomaly datasets?",
+                "QuestionCn": "影响全球水储量异常数据集不确定性的关键因素有哪些？",
+                "AnswerEn": "satellite design limitations, variation in processing strategies, coarse spatial resolution, discrepancies in Level-3 products, data gaps",
+                "AnswerCn": "卫星设计限制、处理策略的变化、粗略的空间分辨率、三级产品的不一致、数据缺失。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the essential variables and their roles in enhancing the spatial resolution of water storage anomaly data?",
+                "QuestionCn": "增强水储存异常数据空间分辨率的关键变量及其作用是什么？",
+                "AnswerEn": "evapotranspiration, temperature, land surface temperature, soil moisture",
+                "AnswerCn": "蒸散、气温、地表温度、土壤湿度",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What data sources and techniques are commonly used for validating downscaled terrestrial water storage anomaly models?",
+                "QuestionCn": "常用的数据源和技术用于验证下调的陆地水储存异常模型有哪些？",
+                "AnswerEn": "hydrological model simulations, in-situ groundwater level measurements, RL06 GRACE mascon products from CSR and JPL",
+                "AnswerCn": "水文模型模拟、原位地下水位测量、来自CSR和JPL的RL06 GRACE质量浓度产品",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the reduction in uncertainty achieved through the Bayesian-based Three-Cornered Hat (BTCH) fusion method for terrestrial water storage anomaly (TWSA) products?",
+                "QuestionCn": "贝叶斯三角帽（BTCH）融合方法在陆地水储存异常（TWSA）产品中实现的不确定性减少是多少？",
+                "AnswerEn": "35.07%, 25.38 mm, 16.48 mm",
+                "AnswerCn": "35.07%，25.38毫米，16.48毫米",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What is the spatial resolution of the high-resolution water storage anomaly dataset after applying the machine learning downscaling framework?",
+                "QuestionCn": "高分辨率水储量异常数据集在应用机器学习下采样框架后，其空间分辨率是多少？",
+                "AnswerEn": "0.05°",
+                "AnswerCn": "0.05°",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the spatial resolution improvement method using a machine learning downscaling framework compare to dynamic downscaling approaches in terms of effectiveness and computational cost?",
+                "QuestionCn": "使用机器学习下采样框架的空间分辨率改善方法与动态下采样方法在有效性和计算成本方面的比较如何？",
+                "AnswerEn": "The machine learning downscaling framework based on a physically constrained sliding window (MLDF-PCSW) improved spatial resolution from 0.5° to 0.05° and filled data gaps effectively. It retains the original information while providing detailed spatial details with high correlation coefficients (0.99) and low RMSE (TWSA: 0.68 mm, GWSA: 1.24 mm). On the other hand, dynamic downscaling, also known as data assimilation, integrates GRACE observations with hydrological models but is computationally expensive and highly dependent on uncertain boundary conditions.",
+                "AnswerCn": "基于物理约束滑动窗口的机器学习降尺度框架（MLDF-PCSW）将空间分辨率从0.5°提高到0.05°，并有效填补数据缺口。它保留了原始信息，同时提供了详细的空间细节，具有高相关系数（0.99）和低均方根误差（TWSA: 0.68 mm，GWSA: 1.24 mm）。另一方面，动态降尺度，也称为数据同化，将GRACE观测与水文模型集成，但计算成本高且高度依赖不确定的边界条件。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the differences in the data fusion techniques used to address the uncertainties in terrestrial water storage anomaly data?",
+                "QuestionCn": "用于解决陆地水储存异常数据不确定性的数据融合技术有哪些不同之处？",
+                "AnswerEn": "The Bayesian-based Three-Cornered Hat (BTCH) method was used to fuse multiple GRACE products, reducing uncertainty by 35.07% to 16.48 mm. In contrast, other methods might not achieve such a reduction in uncertainty, and their effectiveness can vary depending on the processing strategies of different institutions. The BTCH method effectively integrates TWSA_CSR, TWSA_JPL, and TWSA_GSFC products to generate a higher-quality product.",
+                "AnswerCn": "基于贝叶斯的三角帽（BTCH）方法被用来融合多个GRACE产品，将不确定性降低了35.07%至16.48毫米。相比之下，其他方法可能无法实现如此程度的不确定性降低，其有效性可能因不同机构的处理策略而异。BTCH方法有效整合了TWSA_CSR、TWSA_JPL和TWSA_GSFC产品，以生成更高质量的产品。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How does the selection of input variables in statistical downscaling models impact the performance and applicability of these models compared to dynamic downscaling methods?",
+                "QuestionCn": "输入变量的选择在统计降尺度模型中的影响如何，与动态降尺度方法相比，这些模型的性能和适用性如何？",
+                "AnswerEn": "In statistical downscaling models, the selection of representative predictors, such as evapotranspiration, temperature, and soil moisture, is crucial for model performance. Partial least squares regression (PLSR) identified key predictors, improving model consistency with the original GRACE data. These models are generally more feasible with machine learning advancements but might lack uniform applicability across different regions. Dynamic downscaling methods integrate GRACE data with hydrological models, offering potentially more comprehensive solutions but at higher computational costs and with dependence on model boundary conditions.",
+                "AnswerCn": "在统计降尺度模型中，选择代表性预测因子，如蒸散发、温度和土壤湿度，对模型性能至关重要。偏最小二乘回归（PLSR）识别了关键预测因子，提高了模型与原始GRACE数据的一致性。这些模型通常在机器学习进展的帮助下更具可行性，但可能在不同地区的适用性上存在差异。动态降尺度方法将GRACE数据与水文模型结合，提供了更全面的解决方案，但计算成本较高，并且依赖于模型边界条件。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can machine learning techniques be applied to enhance the spatial and temporal resolution of satellite-derived water storage datasets?",
+                "QuestionCn": "机器学习技术如何应用于提高卫星获取的水储存数据集的空间和时间分辨率？",
+                "AnswerEn": "Machine learning techniques, such as the Machine Learning Downscaling Framework based on Physically Constrained Sliding Window (MLDF-PCSW), can be applied to enhance the spatial resolution of satellite-derived water storage datasets by utilizing a sliding window approach to downscale coarse resolution data to finer scales. This method also addresses data gaps, such as the 11-month interruption between GRACE and GRACE-FO missions, by filling in missing data to create continuous datasets.",
+                "AnswerCn": "机器学习技术，如基于物理约束滑动窗口的机器学习下采样框架（MLDF-PCSW），可以通过利用滑动窗口方法将卫星衍生的水储存数据集的空间分辨率增强，从而将粗分辨率数据下采样到更细的尺度。该方法还解决了数据缺口问题，例如GRACE和GRACE-FO任务之间的11个月中断，通过填补缺失数据来创建连续的数据集。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What are the potential challenges in selecting input variables for downscaling models of satellite-derived water storage data, and how might they be addressed?",
+                "QuestionCn": "在选择卫星衍生水储存数据的降尺度模型输入变量时，可能面临的挑战包括：变量选择的复杂性、数据的空间和时间分辨率差异、变量之间的相关性、以及模型的过拟合风险。为了解决这些问题，可以采取以下措施：进行特征选择和降维分析以识别最相关的变量、使用多尺度数据融合技术来提高数据一致性、应用正则化方法来减少过拟合风险，以及进行交叉验证以评估模型的泛化能力。",
+                "AnswerEn": "One potential challenge in selecting input variables for downscaling models is the absence of an effective variable selection method, as many current models rely on subjective experience or the water balance method for choosing predictors. This can be addressed by employing methods like partial least squares regression (PLSR) to identify representative predictors associated with satellite observations, ensuring that the models are robust and applicable across different regions.",
+                "AnswerCn": "在选择下调模型的输入变量时，一个潜在的挑战是缺乏有效的变量选择方法，因为许多当前模型依赖于主观经验或水量平衡法来选择预测变量。这可以通过采用偏最小二乘回归（PLSR）等方法来解决，以识别与卫星观测相关的代表性预测变量，从而确保模型在不同区域的稳健性和适用性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What causes the limitations in spatial resolution and data gaps in GRACE-derived products, and how do these factors affect the application of such datasets in hydrological studies?",
+                "QuestionCn": "GRACE衍生产品中的空间分辨率限制和数据缺口的原因是什么，这些因素如何影响这些数据集在水文研究中的应用？",
+                "AnswerEn": "The limitations in spatial resolution and data gaps in GRACE-derived products are primarily due to the satellite design and varying processing strategies among different institutions. These factors lead to multiple suboptimal products and a coarse spatial resolution (~3°), alongside a continuous 11-month gap from July 2017 to May 2018. These constraints significantly limit the application of GRACE data in long-term hydrological changes and local water resource management.",
+                "AnswerCn": "GRACE衍生产品的空间分辨率限制和数据缺口主要是由于卫星设计和不同机构之间的处理策略差异。这些因素导致了多个次优产品和粗糙的空间分辨率（约3°），同时在2017年7月至2018年5月之间存在连续11个月的数据缺口。这些限制显著限制了GRACE数据在长期水文变化和地方水资源管理中的应用。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is the selection of input variables a critical challenge in downscaling GRACE observations for finer spatial resolution?",
+                "QuestionCn": "选择输入变量是将GRACE观测数据降尺度到更细空间分辨率的一个关键挑战。",
+                "AnswerEn": "The selection of input variables is crucial because it directly influences the performance of statistical downscaling models, such as those using machine learning techniques. However, no effective variable selection method has been proposed yet, leading to predictors often being chosen based on subjective experience or the water balance method. This variability may limit the models' applicability to different regions and affect the accuracy of downscaled results.",
+                "AnswerCn": "输入变量的选择至关重要，因为它直接影响统计降尺度模型的性能，例如使用机器学习技术的模型。然而，目前尚未提出有效的变量选择方法，导致预测变量往往基于主观经验或水量平衡法进行选择。这种变异性可能限制模型在不同地区的适用性，并影响降尺度结果的准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the underlying reasons for the discrepancies in GRACE Level-3 products among different institutions, and how do these discrepancies impact the fusion of GRACE data?",
+                "QuestionCn": "不同机构之间GRACE Level-3产品的差异背后的原因是什么，这些差异如何影响GRACE数据的融合？",
+                "AnswerEn": "Discrepancies in GRACE Level-3 products arise from the variations in satellite data processing strategies employed by different institutions. These differences lead to multiple suboptimal products, complicating the fusion process. The discrepancies must be addressed to reduce uncertainties and enhance the quality of the fused GRACE data, which is essential for producing high-resolution and temporally continuous datasets for more effective hydrological research and water resource management.",
+                "AnswerCn": "GRACE Level-3 产品中的差异源于不同机构采用的卫星数据处理策略的变化。这些差异导致多个次优产品， complicating the fusion process。必须解决这些差异，以减少不确定性并提高融合 GRACE 数据的质量，这对于生成高分辨率和时间连续的数据集以便于更有效的水文研究和水资源管理至关重要。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential effects on data accuracy and spatial resolution when integrating products from different institutions using a fusion algorithm?",
+                "QuestionCn": "在使用融合算法整合来自不同机构的产品时，可能对数据准确性和空间分辨率产生的影响是什么？",
+                "AnswerEn": "Integrating products from different institutions using a fusion algorithm, such as the BTCH method, can significantly reduce uncertainty and enhance data quality. For example, the uncertainty in TWSA products decreased by 35.07% (from 25.38 mm to 16.48 mm) after fusion. This approach also improves the spatial resolution of the data from 0.5° to 0.05°, allowing for more detailed spatial information.",
+                "AnswerCn": "通过使用融合算法（如BTCH方法）整合来自不同机构的产品，可以显著降低不确定性并提高数据质量。例如，经过融合后，TWSA产品的不确定性降低了35.07%（从25.38毫米降至16.48毫米）。这种方法还将数据的空间分辨率从0.5°提高到0.05°，允许获取更详细的空间信息。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the implications of using a machine learning algorithm to improve the spatial resolution of satellite-derived water storage estimates?",
+                "QuestionCn": "使用机器学习算法来提高卫星获取的水储量估计的空间分辨率的影响是什么？",
+                "AnswerEn": "Using a machine learning algorithm, like random forest, to improve the spatial resolution of satellite-derived water storage estimates can lead to better understanding and management of regional water resources. It allows for high-resolution results, down to a grid resolution as small as 5 km, enhancing the applicability of the data for local water resource management and providing quantitative information relevant to irrigation and groundwater consumption.",
+                "AnswerCn": "使用机器学习算法，如随机森林，来提高卫星衍生水储量估计的空间分辨率，可以更好地理解和管理区域水资源。这允许获得高分辨率的结果，网格分辨率可小至5公里，增强了数据在地方水资源管理中的适用性，并提供与灌溉和地下水消耗相关的定量信息。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What motivates researchers to enhance the spatial resolution of satellite-derived water storage anomaly datasets using machine learning approaches?",
+                "QuestionCn": "研究人员使用机器学习方法提高卫星衍生水储存异常数据集空间分辨率的动机是什么？",
+                "AnswerEn": "The primary motivation to enhance the spatial resolution of satellite-derived water storage anomaly datasets using machine learning approaches is to improve the applicability of these datasets in regional and local hydrological studies and water resource management. The original GRACE observations have a coarse spatial resolution, which limits their utility at smaller scales. By enhancing the resolution, researchers aim to provide more detailed spatial information that can support better understanding and management of water resources, including groundwater consumption and irrigation use.",
+                "AnswerCn": "增强卫星衍生水储量异常数据集的空间分辨率的主要动机是提高这些数据集在区域和地方水文研究及水资源管理中的适用性。原始的GRACE观测具有较粗的空间分辨率，这限制了它们在较小尺度上的实用性。通过提高分辨率，研究人员旨在提供更详细的空间信息，以支持对水资源的更好理解和管理，包括地下水消耗和灌溉使用。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is it important to address the data gaps and discrepancies in GRACE-derived water storage products?",
+                "QuestionCn": "解决GRACE衍生水储存产品中的数据缺口和差异是重要的原因是什么？",
+                "AnswerEn": "Addressing the data gaps and discrepancies in GRACE-derived water storage products is crucial because these issues pose significant limitations for long-term hydrological research. The continuous 11-month gap between the GRACE and GRACE-FO missions and the discrepancies in Level-3 products among different institutions hinder comprehensive analysis of terrestrial water storage changes over time. By creating a continuous and high-resolution dataset, researchers can better monitor and understand trends in water storage anomalies, ultimately aiding in water cycle studies and water resource management.",
+                "AnswerCn": "解决GRACE衍生水储存产品中的数据缺口和差异至关重要，因为这些问题对长期水文研究构成了重大限制。GRACE和GRACE-FO任务之间连续11个月的间隔以及不同机构之间的Level-3产品差异，阻碍了对陆地水储存变化的全面分析。通过创建一个连续且高分辨率的数据集，研究人员可以更好地监测和理解水储存异常的趋势，最终有助于水循环研究和水资源管理。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What are the procedural steps involved in using the Bayesian-based Three-Cornered Hat method for integrating multiple GRACE products to reduce uncertainty in water storage anomaly datasets?",
+                "QuestionCn": "使用基于贝叶斯的三角帽方法整合多个GRACE产品以减少水储存异常数据集的不确定性所涉及的程序步骤如下：",
+                "AnswerEn": "The Bayesian-based Three-Cornered Hat (BTCH) method is employed to integrate products from different institutions such as CSR, JPL, and GSFC. This involves collecting and processing GRACE-derived terrestrial water storage anomaly (TWSA) products, applying the BTCH algorithm to achieve a higher-quality TWSA product with reduced uncertainty at a spatial resolution of 0.5° and a monthly temporal resolution.",
+                "AnswerCn": "基于贝叶斯的三角帽（BTCH）方法被用于整合来自不同机构的产品，如CSR、JPL和GSFC。这涉及收集和处理GRACE衍生的陆地水储存异常（TWSA）产品，应用BTCH算法以实现更高质量的TWSA产品，并在0.5°的空间分辨率和每月的时间分辨率下减少不确定性。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How does the Machine Learning Downscaling Framework based on Physically Constrained Sliding Window enhance the spatial resolution of water storage anomaly products?",
+                "QuestionCn": "基于物理约束滑动窗口的机器学习降尺度框架如何提高水储存异常产品的空间分辨率？",
+                "AnswerEn": "The Machine Learning Downscaling Framework based on Physically Constrained Sliding Window (MLDF-PCSW) enhances spatial resolution by taking the integrated TWSA products and applying a machine learning algorithm to improve the resolution from 0.5° to 0.05°. This method also fills in missing data for the 11-month gap between July 2017 and May 2018, providing a continuous dataset with detailed spatial information.",
+                "AnswerCn": "基于物理约束滑动窗口的机器学习降尺度框架（MLDF-PCSW）通过利用集成的TWSA产品，应用机器学习算法将分辨率从0.5°提高到0.05°，从而增强空间分辨率。该方法还填补了2017年7月至2018年5月之间11个月的缺失数据，提供了具有详细空间信息的连续数据集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What is the process for selecting representative predictors in statistical downscaling models for improving GRACE data resolution using machine learning techniques?",
+                "QuestionCn": "在统计降尺度模型中选择代表性预测变量的过程，以利用机器学习技术提高GRACE数据分辨率。",
+                "AnswerEn": "In statistical downscaling models, representative predictors are identified using the partial least squares regression (PLSR) model. This model selects key variables such as evapotranspiration, temperature, land surface temperature, and soil moisture, which serve as predictors in the machine learning models. These predictors help enhance the resolution of GRACE-based water storage estimates down to a grid resolution as small as 5 km.",
+                "AnswerCn": "在统计降尺度模型中，代表性预测变量是通过偏最小二乘回归（PLSR）模型识别的。该模型选择关键变量，如蒸散发、温度、地表温度和土壤湿度，这些变量作为机器学习模型中的预测因子。这些预测因子有助于将基于GRACE的水储量估计的分辨率提高到小至5公里的网格分辨率。",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "How do statistical methods facilitate the identification of representative predictors for enhancing the accuracy of downscaled GRACE data?",
+                "QuestionCn": "统计方法如何促进代表性预测因子的识别，以提高降尺度GRACE数据的准确性？",
+                "AnswerEn": "Partial least squares regression (PLSR) is employed to identify representative predictors associated with GRACE observations, which are then used in machine learning models like random forest to improve the resolution of GRACE-based water storage estimates.",
+                "AnswerCn": "偏最小二乘回归（PLSR）被用来识别与GRACE观测相关的代表性预测变量，这些变量随后被用于随机森林等机器学习模型，以提高基于GRACE的水储量估计的分辨率。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might a dataset focused on global water storage anomalies face challenges in achieving high spatial resolution and continuity?",
+                "QuestionCn": "一个专注于全球水储存异常的数据集可能面临实现高空间分辨率和连续性的挑战。",
+                "AnswerEn": "A dataset focused on global water storage anomalies might face challenges in achieving high spatial resolution and continuity due to limitations in satellite design and variation in processing strategies among different institutions. These constraints lead to coarse spatial resolution and significant data gaps, such as the continuous 11-month gap between GRACE and GRACE-FO missions.",
+                "AnswerCn": "一个专注于全球水储存异常的数据集可能面临由于卫星设计的限制和不同机构之间处理策略的差异而导致的高空间分辨率和连续性方面的挑战。这些限制导致空间分辨率较粗和显著的数据缺口，例如GRACE和GRACE-FO任务之间连续11个月的缺口。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why could the fusion of products from multiple institutions be expected to reduce uncertainty in datasets related to terrestrial water storage anomalies?",
+                "QuestionCn": "多个机构产品的融合预计会减少与陆地水储存异常相关的数据集的不确定性，原因如下：",
+                "AnswerEn": "The fusion of products from multiple institutions could be expected to reduce uncertainty in datasets related to terrestrial water storage anomalies because it allows for the integration of different processing strategies and satellite data, potentially lowering the overall uncertainty by combining strengths and mitigating weaknesses of individual products, as evidenced by a reduction in uncertainty by over 35% using the BTCH method.",
+                "AnswerCn": "来自多个机构的产品融合可以预期减少与陆地水储存异常相关的数据集的不确定性，因为它允许整合不同的处理策略和卫星数据，潜在地通过结合各个产品的优势和减轻其弱点来降低整体不确定性，正如使用BTCH方法时不确定性减少超过35%所证明的那样。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might machine learning downscaling frameworks be anticipated to enhance the spatial resolution of satellite-derived water storage data?",
+                "QuestionCn": "机器学习下采样框架可能被预期能够提高卫星获取的水储存数据的空间分辨率，原因是什么？",
+                "AnswerEn": "Machine learning downscaling frameworks might be anticipated to enhance the spatial resolution of satellite-derived water storage data by employing advanced algorithms that can incorporate physical constraints and identify relevant predictors, thus allowing for a finer spatial detail and filling data gaps, which is crucial for improving the applicability of these datasets for local water resource management.",
+                "AnswerCn": "机器学习下采样框架有望通过采用先进算法来提高卫星衍生水储存数据的空间分辨率，这些算法能够结合物理约束并识别相关预测因子，从而实现更精细的空间细节并填补数据空白，这对于提高这些数据集在地方水资源管理中的适用性至关重要。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What are the perceived strengths and limitations of using the Bayesian-based Three-Cornered Hat (BTCH) method for data fusion in the context of water storage anomaly datasets?",
+                "QuestionCn": "在水储存异常数据集的背景下，使用基于贝叶斯的三角帽（BTCH）方法进行数据融合的感知优势和局限性是什么？",
+                "AnswerEn": "The BTCH method is valued for its ability to reduce uncertainty in fused datasets, as shown by the reduction in uncertainty from the original TWSA products. However, the method's effectiveness is dependent on the quality and compatibility of the input datasets, and there may be challenges in ensuring that the fusion process does not introduce biases or loss of critical spatial information.",
+                "AnswerCn": "BTCH方法因其能够减少融合数据集中的不确定性而受到重视，正如从原始TWSA产品中减少的不确定性所示。然而，该方法的有效性依赖于输入数据集的质量和兼容性，并且在确保融合过程不引入偏差或丢失关键空间信息方面可能会面临挑战。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I can't figure out what challenges are commonly faced in improving the accuracy and applicability of GRACE-derived products for regional water management.",
+                "QuestionCn": "我无法弄清楚在提高GRACE衍生产品的准确性和适用性以用于区域水资源管理时常见的挑战。",
+                "AnswerEn": "Challenges in improving GRACE-derived products include the coarse spatial resolution of GRACE observations, discrepancies among products from different institutions, and the 11-month data gap between GRACE and GRACE-FO missions. These issues can hinder the application of GRACE data in local water resource management. Approaches like data fusion using Bayesian-based Three-Cornered Hat (BTCH) methods and machine learning downscaling aim to address these challenges by creating high-resolution, continuous datasets.",
+                "AnswerCn": "改善GRACE衍生产品的挑战包括GRACE观测的空间分辨率较粗、不同机构产品之间的差异，以及GRACE和GRACE-FO任务之间的11个月数据间隙。这些问题可能会妨碍GRACE数据在地方水资源管理中的应用。像基于贝叶斯的三角帽（BTCH）方法的数据融合和机器学习下采样等方法旨在通过创建高分辨率、连续的数据集来解决这些挑战。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "I'm unsure about the methods used to validate and ensure the reliability of downscaled terrestrial and groundwater storage anomaly data.",
+                "QuestionCn": "我对验证和确保下游陆地和地下水储量异常数据可靠性的方法感到不确定。",
+                "AnswerEn": "Validation of downscaled data involves comparing the results with in-situ measurements and hydrological model simulations. For example, the downscaled results are validated against monthly groundwater level measurements and hydrological models within regions such as the Haihe River Basin in China. The use of the three-cornered hat method for uncertainty analysis and comparison with independent datasets helps in ensuring the reliability of such high-resolution downscaled products.",
+                "AnswerCn": "下调数据的验证涉及将结果与现场测量和水文模型模拟进行比较。例如，下调结果与中国海河流域的月度地下水位测量和水文模型进行验证。使用三角帽方法进行不确定性分析，并与独立数据集进行比较，有助于确保这些高分辨率下调产品的可靠性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please analyze the challenges associated with filling data gaps in satellite-derived water storage anomaly datasets.",
+                "QuestionCn": "分析填补卫星衍生水储量异常数据集中的数据缺口所面临的挑战。",
+                "AnswerEn": "Challenges in filling data gaps in satellite-derived water storage anomaly datasets include dealing with the continuous 11-month gap between July 2017 and May 2018. The MLDF-PCSW framework has been applied to fill these gaps, providing a continuous dataset for related research.",
+                "AnswerCn": "填补卫星衍生水储量异常数据集中的数据缺口面临的挑战包括处理2017年7月到2018年5月之间连续11个月的缺口。MLDF-PCSW框架已被应用于填补这些缺口，从而为相关研究提供了连续的数据集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Please evaluate the effectiveness of different data fusion techniques in reducing uncertainty in terrestrial water storage anomaly datasets.",
+                "QuestionCn": "请评估不同数据融合技术在减少陆地水储存异常数据集不确定性方面的有效性。",
+                "AnswerEn": "The Bayesian-based Three-Cornered Hat (BTCH) method is employed to fuse multiple GRACE products, resulting in a product with the lowest uncertainty. The uncertainty of the fused product decreased by approximately 35.07%, demonstrating the effectiveness of the BTCH method in reducing uncertainty in terrestrial water storage anomaly datasets.",
+                "AnswerCn": "基于贝叶斯的三角帽（BTCH）方法被用来融合多个GRACE产品，从而生成具有最低不确定性的产品。融合产品的不确定性降低了约35.07%，这证明了BTCH方法在减少陆地水储存异常数据集不确定性方面的有效性。",
+                "Level": "C5(Evaluating)"
+            }
+        ]
+    }
+}

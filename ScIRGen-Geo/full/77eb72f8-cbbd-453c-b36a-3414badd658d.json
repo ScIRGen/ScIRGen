@@ -1,0 +1,189 @@
+{
+    "id": "77eb72f8-cbbd-453c-b36a-3414badd658d",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Dataset of passive microwave SMMR brightness temperature in China (1978-1987)",
+            "titleCn": "中国地区被动微波SMMR亮度温度数据集（1978-1987）",
+            "description": "This dataset mainly includes the passive microwave brightness temperature obtained from the Scanning Multichannel Microwave Radiometer (SMMR) carried by the Nimbus-7 satellite, including 06H, 06V, 10H, 10V, 18H, 18V, 21H, 21V, 37H, 37V, a total of ten microwave channels with two transits (ascending & descending) brightness temperature per day from October 25, 1978 to August 20, 1987, where H represents horizontal polarization and V represents vertical polarization.\nNimbus-7, launched in October 1978, is a solar-synchronous polar-orbiting satellite. The microwave sensor SMMR is a dual-polarization microwave radiometer that measures the brightness temperature of five frequencies (6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz) on the surface. It scans the surface at a fixed incident angle of about 50.3 °, with a width of 780 km, and passes through the equator at noon 12:00 (ascending orbit) and 24:00 (descending orbit). The time resolution of SMMR is daily, but due to the wide distance between swaths, the same surface will be revisited every 5-6 days.\n1. File format and naming:\nEach set of data is composed of remote sensing data files.\nThe name and naming rules of each group of data files in the SMMR_Grid_China directory are as follows:\nSMMR-MLyyyydddA / D.subset.ccH / V (remote sensing data)\nAmong them: SMMR stands for SMMR sensor; ML stands for multi-channel low resolution; yyyy stands for year; ddd stands for Julian Day of the year (1-365 / 366); A / D stands for ascending (A) and derailing (D ); subset represents the brightness temperature data in China; cc represents the frequency (6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz); H / V represents horizontal polarization (H) and vertical polarization (V).\n2. Coordinate system and projection:\nThe projection method is an equal area secant cylindrical projection, and the double standard parallels are 30 degrees north and south. For more information about EASE-GRID, please refer to http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/.\nIf you need to convert the EASE-Grid projection to Geographic projection, please refer to the ease2geo.prj file, the content is as follows:\nInput\nprojection cylindrical\nunits meters\nparameters 6371228 6371228\n1 / * Enter projection type (1, 2, or 3)\n0 00 00 / * Longitude of central meridian\n30 00 00 / * Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nparameters\nend\n3. Data format:\nStored as integer binary, each data occupies 2 bytes. The actual data stored in this dataset is the brightness temperature * 10. After reading the data, you need to divide by 10 to get the real brightness temperature.\nSpatial resolution: 25km;\nTime resolution: daily, from 1978 to 1987.\n4. Spatial range:\nLongitude: 60.1 ° -140.0 ° East longitude;\nLatitude: 14.9 ° -55.0 ° north latitude.\n5. Data reading\nRemote sensing image data files for each set of data can be opened in ENVI and ERDAS software.",
+            "descriptionCn": "本数据集主要包含Nimbus-7卫星携带的扫描式多通道微波辐射计（SMMR：Scanning Multichannel Microwave Radiometer）获得的被动微波亮度温度，包含1978年10月25日-1987年8月20日的06H、06V、10H、10V、18H、18V、21H、21V、37H、37V共十个微波通道的每天两次过境（升轨&降轨）亮度温度，其中H代表水平极化，V代表垂直极化。\n1978年10月发射的Nimbus-7为太阳同步极轨卫星，搭载的微波传感器SMMR，是一台测量地表五个频率（6.6GHz，10.69GHz，18.0GHz，21.0GHz，37.0GHz）微波亮温的双极化微波辐射计。它以约50.3°固定入射角扫描地表，幅宽780km，并在正午12：00（升轨）与午夜24：00（降轨）通过赤道。SMMR时间分辨率为每日，但由于swath间距离较宽，大概每隔5-6天才会重访同一地表。\n1、文件格式和命名：\n每组数据均由遥感数据文件构成。\nSMMR_Grid_China目录下的每组数据文件名及命名规则如下： \nSMMR-MLyyyydddA/D.subset.ccH/V（遥感数据）\n其中：SMMR代表SMMR传感器；ML代表多通道低分辨率；yyyy代表年份；ddd代表该年的儒略日（1-365/366）；A/D分别代表升轨（A）和降轨（D）；subset表示中国地区的亮温数据；cc代表频率（6.6GHz，10.69GHz，18.0GHz，21.0GHz，37.0GHz）；H/V分别代表水平极化（H）和垂直极化（V）。\n2、坐标系及投影：\n投影方式为等积割圆柱投影，双标准纬线为南北纬30度。有关EASE-GRID的相关详细信息，请参考http://www.ncgia.ucsb.edu/globalgrids-book/ease_grid/。\n如果需要将EASE-Grid投影方式转换成Geographic投影方式，请参照ease2geo.prj文件，内容如下：\nInput\nprojection cylindrical\nunits meters\nparameters 6371228 6371228\n1 /* Enter projection type (1, 2, or 3)\n0 00 00 /* Longitude of central meridian\n30 00 00 /* Latitude of standard parallel\nOutput\nProjection GEOGRAPHIC\nSpheroid KRASovsky\nUnits dd\nparameters\nend\n3、数据格式：\n以整数形二进制存储，每个数据占2个字节。本数据集中实际存储的数据为亮温*10，读出数据后需除以10得到真实亮温。\n空间分辨率：25km；\n时间分辨率：逐日，从1978年至1987年。\n4、空间范围： \n经度：60.1°-140.0°东经；\n纬度：14.9°-55.0°北纬。\n5、数据读取\n每一组数据的遥感影像数据文件可以在ENVI和ERDAS软件中打开。",
+            "instructions": "1. File format and naming:\nEach group of data consists of remote sensing data files.\nThe file names and naming rules of each group of data under SMMR grid China directory are as follows:\nSmmr-mlyyydda / d.subset.cch/v (remote sensing data)\nAmong them, SMMR represents SMMR sensor, ML represents multi-channel low resolution, yyyy represents year, DDD represents Julian day (1-365 / 366), a / D represents ascending orbit (a) and descending orbit (d), subset represents brightness temperature data in China, CC represents frequency (6.6ghz, 10.69ghz, 18.0ghz, 21.0ghz, 37.0ghz), H / V represents horizontal polarization (H) and vertical polarization (V).",
+            "instructionsCn": "1、文件格式和命名：\n每组数据均由遥感数据文件构成。\nSMMR_Grid_China目录下的每组数据文件名及命名规则如下： \nSMMR-MLyyyydddA/D.subset.ccH/V（遥感数据）\n其中：SMMR代表SMMR传感器；ML代表多通道低分辨率；yyyy代表年份；ddd代表该年的儒略日（1-365/366）；A/D分别代表升轨（A）和降轨（D）；subset表示中国地区的亮温数据；cc代表频率（6.6GHz，10.69GHz，18.0GHz，21.0GHz，37.0GHz）；H/V分别代表水平极化（H）和垂直极化（V）。",
+            "east": 140.0,
+            "west": 60.1,
+            "south": 14.9,
+            "north": 55.0,
+            "startTime": "1978-11-04 14:00:00",
+            "endTime": "1987-08-31 18:00:00",
+            "fileSize": 3108378129.0,
+            "cstr": null,
+            "doi": "",
+            "dataFormat": "栅格",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "NSIDC",
+                "nameEn": "NSIDC",
+                "unitEn": "National Snow and Ice Data Center",
+                "unitCn": "National Snow and Ice Data Center"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Nimbus-7 SMMR Pathfinder Daily EASE-Grid Brightness Temperatures",
+                "referenceCn": null,
+                "referenceEn": "Knowles, K.W., Eni Njoku, R.L. Armstrong, and M.J. Brodzik. 2002. Nimbus-7 SMMR Pathfinder Daily EASE-Grid Brightness Temperatures. Boulder, Colorado USA: National Snow and Ice Data Center. Digital media.`"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "冰冻圈",
+                "nameEn": "Cryosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "冰冻圈遥感",
+                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+            },
+            {
+                "nameCn": "微波遥感",
+                "nameEn": "Microwave remote sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "中国",
+                "keywordEn": "China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1978-1987",
+                "keywordEn": "1978-1987",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山地区冰川边界（2018）",
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleCn": "北半球湖冰物候数据集（1978-2018）",
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            },
+            {
+                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+            },
+            {
+                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+            },
+            {
+                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the primary frequencies used by the Scanning Multichannel Microwave Radiometer (SMMR) for data collection in passive microwave brightness temperature datasets?",
+                "QuestionCn": "扫描多通道微波辐射计（SMMR）在被动微波亮温数据集收集中的主要频率是什么？",
+                "AnswerEn": "6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz",
+                "AnswerCn": "6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection technique used for acquiring passive microwave brightness temperature measurements from a satellite platform?",
+                "QuestionCn": "您能否提供一个用于从卫星平台获取被动微波亮度温度测量的数据收集技术的示例？",
+                "AnswerEn": "An example of a data collection technique for acquiring passive microwave brightness temperature measurements involves using the Scanning Multichannel Microwave Radiometer (SMMR) aboard the Nimbus-7 satellite. The SMMR measures microwave brightness temperatures at five different frequencies (6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz) with dual polarization (horizontal and vertical) by scanning the Earth's surface at a fixed incidence angle of approximately 50.3°. The satellite follows a sun-synchronous polar orbit, crossing the equator at noon (ascending node) and midnight (descending node), providing daily temporal resolution. Due to the wide swath width of 780 km, the same ground location is revisited approximately every 5-6 days.",
+                "AnswerCn": "获取被动微波亮温测量的数据收集技术的一个例子是使用搭载在Nimbus-7卫星上的扫描多通道微波辐射计（SMMR）。SMMR在五个不同频率（6.6GHz、10.69GHz、18.0GHz、21.0GHz、37.0GHz）下以双极化（水平和垂直）测量微波亮温，扫描地球表面，固定入射角约为50.3°。该卫星沿着太阳同步极轨道运行，在中午（上升节点）和午夜（下降节点）穿越赤道，提供每日的时间分辨率。由于宽达780公里的扫描宽度，同一地面位置大约每5-6天重访一次。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the essential features of passive microwave brightness temperature data collected by Scanning Multichannel Microwave Radiometers (SMMR)?",
+                "QuestionCn": "被扫描多通道微波辐射计（SMMR）收集的被动微波亮温数据的基本特征是什么？",
+                "AnswerEn": "6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz, horizontal and vertical polarizations, twice daily, ascending and descending orbits, spatial resolution of 25km, temporal resolution of daily intervals, 1978 to 1987, equal-area cylindrical projection, dual standard parallels at 30 degrees north and south latitude",
+                "AnswerCn": "6.6GHz、10.69GHz、18.0GHz、21.0GHz、37.0GHz，水平和垂直极化，每日两次，上升和下降轨道，空间分辨率为25公里，时间分辨率为每日间隔，1978年至1987年，等面积圆柱投影，标准纬线为北纬30度和南纬30度。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many unique microwave channels are involved in the passive microwave brightness temperature data collection method?",
+                "QuestionCn": "在被动微波亮温数据收集方法中涉及多少个独特的微波通道？",
+                "AnswerEn": "10",
+                "AnswerCn": "10",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is the Scanning Multichannel Microwave Radiometer (SMMR) and how is it used in capturing brightness temperature data?",
+                "QuestionCn": "扫描多通道微波辐射计（SMMR）是一种用于捕捉亮度温度数据的仪器。它通过测量地球表面和大气中微波辐射的强度，来获取不同频率下的亮度温度信息。这些数据可以用于气象、海洋学和环境监测等多个领域。",
+                "AnswerEn": "The Scanning Multichannel Microwave Radiometer (SMMR) is a microwave sensor used for measuring the Earth's surface brightness temperatures at five different frequencies (6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz) with dual polarization. It is mounted on the Nimbus-7 satellite, which is a sun-synchronous polar orbiting satellite launched in October 1978. The SMMR scans the Earth's surface at a fixed incidence angle of about 50.3°, covering a swath width of 780 km. It passes over the equator twice daily at 12:00 (ascending pass) and 24:00 (descending pass), providing data with a temporal resolution of one day. However, due to the wide swath spacing, it takes approximately 5-6 days to revisit the same location on the Earth's surface.",
+                "AnswerCn": "扫描多通道微波辐射计（SMMR）是一种微波传感器，用于测量地球表面的亮温，频率为五个不同的频段（6.6GHz、10.69GHz、18.0GHz、21.0GHz、37.0GHz），具有双极化特性。它安装在Nimbus-7卫星上，这是一颗于1978年10月发射的太阳同步极地轨道卫星。SMMR以约50.3°的固定入射角扫描地球表面，覆盖宽度为780公里的扫描带。它每天两次经过赤道，分别在12:00（上升经过）和24:00（下降经过），提供一天的时间分辨率。然而，由于宽广的扫描带间距，重新访问地球表面的同一位置大约需要5-6天。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What are the procedures to process passive microwave brightness temperature data from a scanning multichannel microwave radiometer for regional analysis?",
+                "QuestionCn": "处理来自扫描多通道微波辐射计的被动微波亮温数据以进行区域分析的程序是什么？",
+                "AnswerEn": "The data from a scanning multichannel microwave radiometer is stored in integer binary format, with each data point occupying 2 bytes. The brightness temperature is stored as the actual value multiplied by 10, so to obtain the real brightness temperature, the data must be divided by 10. Spatial resolution is 25 km, and temporal resolution is daily from 1978 to 1987. The data can be opened using software like ENVI and ERDAS, and it is projected using an equal-area cylindrical projection with standard parallels at 30 degrees north and south. To convert the projection to a geographic projection, a specific file with conversion instructions is used.",
+                "AnswerCn": "扫描多通道微波辐射计的数据以整数二进制格式存储，每个数据点占用2个字节。亮温以实际值乘以10的形式存储，因此要获得真实的亮温，必须将数据除以10。空间分辨率为25公里，时间分辨率为1978年至1987年的每日数据。数据可以使用ENVI和ERDAS等软件打开，并采用等面积圆柱投影，标准纬线位于南北30度。要将投影转换为地理投影，需要使用特定文件中的转换说明。",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What technological advancements have facilitated the collection of passive microwave brightness temperature data over China from 1978 to 1987?",
+                "QuestionCn": "哪些技术进步促进了1978年至1987年间中国被动微波亮温数据的收集？",
+                "AnswerEn": "The technological advancements that facilitated the collection of passive microwave brightness temperature data include the deployment of the Nimbus-7 satellite with a Scanning Multichannel Microwave Radiometer (SMMR) sensor capable of measuring dual-polarization microwave brightness temperatures across five frequencies (6.6GHz, 10.69GHz, 18.0GHz, 21.0GHz, 37.0GHz) at a fixed incidence angle of approximately 50.3°. The satellite's sun-synchronous polar orbit allowed for daily data acquisition over the region.",
+                "AnswerCn": "促进被动微波亮温数据收集的技术进步包括部署Nimbus-7卫星，该卫星配备了扫描多通道微波辐射计（SMMR）传感器，能够在约50.3°的固定入射角下测量五个频率（6.6GHz、10.69GHz、18.0GHz、21.0GHz、37.0GHz）的双极化微波亮温。卫星的太阳同步极轨道允许对该区域进行每日数据采集。",
+                "Level": "C1(Remembering)"
+            }
+        ]
+    }
+}

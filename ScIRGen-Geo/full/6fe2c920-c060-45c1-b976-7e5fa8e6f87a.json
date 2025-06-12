@@ -1,0 +1,260 @@
+{
+    "id": "6fe2c920-c060-45c1-b976-7e5fa8e6f87a",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "HiWATER: Dataset of hydrometeorological observation network (cosmic-ray soil moisture of Daman Superstation, 2013)",
+            "titleCn": "黑河生态水文遥感试验：水文气象观测网数据集（大满超级站宇宙射线土壤水分-2013）",
+            "description": "This dataset includes the observational data from 20 September, 2012, through 31 December, 2013, collected by the Cosmic-ray Soil Moisture Observation System (COSMOS), called crs, which waslocated at 100.372° E, 38.856° N and 1557 m above sea level,near the Daman Superstation in the Daman Irrigation District, Zhangye City, Gansu Province. The land cover in the footprint was a maize crop. The bottom of the probe was 0.5 m above the ground, and the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, ℃), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour), thermal neutron counts (N2C, counts per hour), the sample time of fast neutrons (N1ET, s), and the sample time of thermal neutrons (N2ET, s). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Quality control\nData were deleted and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity exceeded 80% inside the probe box, (c) the samping durationwere less than 59 minutes or greater than 61 minutes  and (d) the neutron count differed from the previous value by more than 20%.\n2) Air pressure correction\nAn air pressure correction was applied to the quality-controlled raw data according to the equation containedin the equipment manual.\n3) Calibration\nAfter the quality control and corrections were applied, the soil moisture was calculated using the equation in Desilets et al. (2010), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 was calibrated using the in situ observed soil moisture recordedby SoilNET within the footprint. \n4) Soil moisture computation\nBased on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation specified in the equipment manual.\nFor more information, please refer to Liu et al. (2018) (for hydrometeorological observation network or sites information), Zhu et al. (2015) (for data processing) in the Citation section.",
+            "descriptionCn": "该数据集包含了2012年9月20日至2013年12月31日的宇宙射线仪器（crs）观测数据。站点位于甘肃省张掖市大满灌区农田内，下垫面是玉米地。观测点的经纬度是100.3722E, 38.8555N，海拔1556m，仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）、热中子数N2C（个/小时）、快中子采样时间N1ET（s）及热中子采样时间N2ET（s）。发布的数据为经过处理计算后的数据，数据表头包括：Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。此外缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor。\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再通过公式反求得到N0。\n在此，根据仪器源区内的Soilnet土壤水分数据对仪器进行率定，建立土壤体积含水量θv和快中子之间的关系。分别选取干湿状况差异比较明显的6月26日-27日和7月16日-17日四天的数据，其中6月26日-27日率定数据显示土壤水分较小，因此选取4厘米、10厘米和20厘米的三个值平均值作为率定数据，其变化范围为22%-30%，而7月16日-17日率定数据显示土壤水分较大，因此选取4厘米、10厘米的两个值平均值作为率定数据，其变化范围为28%-39%，最后平均N0为3597。\n4）\t土壤水分计算\n根据公式，计算得到每小时的土壤含水量数据。\n水文气象网或站点信息请参考Liu et al. (2018)，观测数据处理请参考Zhu et al. (2015)。",
+            "instructions": "",
+            "instructionsCn": "",
+            "east": 100.3723,
+            "west": 100.3723,
+            "south": 38.8556,
+            "north": 38.8556,
+            "startTime": "2012-10-02 10:00:00",
+            "endTime": "2014-01-12 11:00:00",
+            "fileSize": 462844.0,
+            "cstr": "18406.11.hiwater.193.2014.db",
+            "doi": "10.3972/hiwater.193.2014.db",
+            "dataFormat": "CSV",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "刘绍民",
+                "nameEn": "LIU Shaomin",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "朱忠礼",
+                "nameEn": "ZHU Zhongli",
+                "unitEn": "",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "李新",
+                "nameEn": "LI Xin",
+                "unitEn": "",
+                "unitCn": "中国科学院青藏高原研究所"
+            },
+            {
+                "nameCn": "徐自为",
+                "nameEn": "XU Ziwei",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "The Heihe Integrated Observatory Network: A Basin-Scale Land Surface Processes Observatory in China",
+                "referenceCn": null,
+                "referenceEn": "Liu, S.M., Li, X., Xu, Z.W., Che, T., Xiao, Q., Ma, M.G., Liu, Q.H., Jin, R., Guo, J.W., Wang, L.X., Wang, W.Z., Qi, Y., Li, H.Y., Xu, T.R., Ran, Y.H., Hu, X.L., Shi, S.J., Zhu, Z.L., Tan, J.L., Zhang, Y., & Ren, Z.G. (2018). The Heihe Integrated Observatory Network: A Basin-Scale Land Surface Processes Observatory in China. Vadose Zone Journal, 17(1), 180072. doi:10.2136/vzj2018.04.0072."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in a typical endorheic basin",
+                "referenceCn": null,
+                "referenceEn": "Liu, S.M., Xu, Z.W., Che, T., Li, X.,  Xu, T.R.,  Ren, Z.G., Zhang, Y., Tan, J.L., Song, L.S., Zhou, J., Zhu, Z.L., Yang, X.F., Liu, R., & Ma, Y.F. (2023). A dataset of energy, water vapor, and carbon exchange observations in oasis–desert areas from 2012 to 2021 in\na typical endorheic basin. Earth System Science Data, 15, 4959-4981."
+            },
+            {
+                "titleCn": "宇宙射线快中子法在农田土壤水分测量中的研究与应用",
+                "titleEn": null,
+                "referenceCn": "焦其顺, 朱忠礼, 刘绍民, 晋锐, 杜帆. (2013). 宇宙射线快中子法在农田土壤水分测量中的研究与应用. 地球科学进展, 28(10), 1136-1143.",
+                "referenceEn": null
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system",
+                "referenceCn": null,
+                "referenceEn": "Li, X., Liu, S.M., Xiao, Q., Ma, M.G., Jin, R., Che, T., Wang, W.Z., Hu, X.L., Xu, Z.W., Wen, J.G., Wang, L.X. (2017). A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system. Scientific Data, 4, 170083. doi:10.1038/sdata.2017.83."
+            },
+            {
+                "titleCn": "黑河流域生态—水文过程综合遥感观测联合试验总体设计",
+                "titleEn": null,
+                "referenceCn": "李新, 刘绍民, 马明国, 肖青, 柳钦火, 晋锐, 车涛, 王维真, 祁元, 李弘毅, 朱高峰, 郭建文, 冉有华, 闻建光, 王树果. (2012). 黑河流域生态-水文过程综合遥感观测联合试验总体设计. 地球科学进展, 27(5), 481-498. doi:10.11867/j.issn.1001-8166.2012.05.0481.",
+                "referenceEn": null
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
+                "referenceCn": null,
+                "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design",
+                "referenceCn": null,
+                "referenceEn": "Li X, Cheng GD, Liu SM, Xiao Q, Ma MG, Jin R, Che T, Liu QH, Wang WZ, Qi Y, Wen JG, Li HY, Zhu GF, Guo JW, Ran YH, Wang SG, Zhu ZL, Zhou J, Hu XL, Xu ZW. Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design. Bulletin of the American Meteorological Society, 2013, 94(8): 1145-1160, 10.1175/BAMS-D-12-00154.1."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "土壤",
+                "nameEn": "Soil"
+            },
+            {
+                "nameCn": "土壤湿度/水分含量",
+                "nameEn": "Soil moisture/Water content"
+            },
+            {
+                "nameCn": "宇宙射线土壤水分",
+                "nameEn": "Cosmic-ray soil moisture observing system"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "中游人工绿洲试验区",
+                "keywordEn": "the artificial oasis experimental area in the middle reaches"
+            },
+            {
+                "keywordCn": "大满超级站",
+                "keywordEn": "Daman Superstation"
+            },
+            {
+                "keywordCn": "黑河流域",
+                "keywordEn": "Heihe River Basin"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2012-09-20至2013-12-31",
+                "keywordEn": "2012-09-20 to 2013-12-31",
+                "type": "temporal"
+            },
+            {
+                "keywordCn": "2013",
+                "keywordEn": "2013",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "黑河流域生态-水文过程综合遥感观测试验：水文气象要素与多尺度蒸散发观测",
+                "titleEn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER)"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            },
+            {
+                "titleCn": "数字黑河",
+                "titleEn": "Digital heihe"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of data filtering criteria used in hydrometeorological observations to ensure data quality?",
+                "QuestionCn": "在水文气象观测中，为确保数据质量所使用的数据过滤标准的特征包括：",
+                "AnswerEn": "voltage less than or equal to 11.8 volts, relative humidity greater than or equal to 80%, sampling time intervals not within 60±1 minutes, fast neutron counts with changes greater than 200 over adjacent hours, missing data placeholder value of -6999",
+                "AnswerCn": "电压小于或等于11.8伏，相对湿度大于或等于80%，采样时间间隔不在60±1分钟内，快中子计数在相邻小时内变化大于200，缺失数据的占位符值为-6999。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many original observation parameters are recorded by the cosmic-ray instrument in a hydrometeorological observation network dataset?",
+                "QuestionCn": "在水文气象观测网络数据集中，宇宙射线仪记录了多少个原始观测参数？",
+                "AnswerEn": "8",
+                "AnswerCn": "8",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is the meaning of 'cosmic-ray soil moisture measurement' in the context of hydrometeorological observation networks?",
+                "QuestionCn": "“宇宙射线土壤湿度测量”在水文气象观测网络中的意义是什么。",
+                "AnswerEn": "Cosmic-ray soil moisture measurement refers to a method of determining soil moisture content using cosmic-ray sensors. These sensors detect fast and thermal neutrons, which are influenced by the hydrogen atoms in water. The measurement process typically involves the correction of neutron counts for factors such as atmospheric pressure and involves calibration using known soil moisture conditions to establish a relationship between neutron counts and soil moisture content.",
+                "AnswerCn": "宇宙射线土壤湿度测量是指使用宇宙射线传感器确定土壤湿度含量的一种方法。这些传感器检测快速和热中子，而这些中子受到水中氢原子的影响。测量过程通常涉及对中子计数进行修正，以考虑大气压力等因素，并通过已知的土壤湿度条件进行校准，以建立中子计数与土壤湿度含量之间的关系。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can variations in quick neutron counts inform us about soil moisture patterns over time, and what challenges might arise in calibrating instruments to accurately reflect these changes?",
+                "QuestionCn": "快速中子计数的变化如何能告诉我们土壤湿度随时间的变化，以及在校准仪器以准确反映这些变化时可能会遇到哪些挑战？",
+                "AnswerEn": "Variations in quick neutron counts can provide insights into soil moisture patterns as they are directly used to compute soil volumetric water content. Challenges in calibration include the need for precise calibration of the instrument using soil samples from the measurement area and establishing a reliable relationship between soil moisture and neutron counts. Errors can arise from incorrect calibration of the N0 value or from data not meeting the selection criteria, such as voltage or humidity thresholds.",
+                "AnswerCn": "快速中子计数的变化可以提供土壤湿度模式的洞察，因为它们直接用于计算土壤体积含水量。校准中的挑战包括需要使用测量区域的土壤样本对仪器进行精确校准，以及建立土壤湿度与中子计数之间的可靠关系。错误可能源于N0值的校准不正确或数据未满足选择标准，例如电压或湿度阈值。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What are the procedural steps involved in calibrating an instrument for measuring soil moisture using cosmic ray neutrons in agricultural fields?",
+                "QuestionCn": "使用宇宙射线中子测量农业领域土壤湿度的仪器校准的程序步骤包括：\n\n1. **设备准备**：确保宇宙射线中子探测器和相关设备处于良好工作状态，并进行必要的维护。\n\n2. **选择校准地点**：选择具有已知土壤湿度的测试地点，最好是在不同土壤类型和湿度条件下进行。\n\n3. **土壤湿度测量**：使用标准土壤湿度测量方法（如烘干法或传感器法）在选定地点测量土壤湿度，记录数据。\n\n4. **宇宙射线中子探测**：在相同地点使用宇宙射线中子探测器进行测量，记录中子计数率。\n\n5. **数据对比**：将宇宙射线中子探测器的测量结果与标准土壤湿度测量结果进行对比，分析两者之间的关系。\n\n6. **建立校准模型**：根据对比结果，建立土壤湿度与中子计数率之间的校准模型，通常采用线性回归或其他统计方法。\n\n7. **验证校准模型**：在不同的土壤湿度条件下进行验证测试，确保校准模型的准确性和可靠性。\n\n8. **调整和优化**：根据验证结果，必要时对校准模型进行调整和优化，以提高测量精度。\n\n9. **记录和报告**：将校准过程、结果和模型记录在案，并撰写校准报告，以备将来参考。\n\n10. **定期重新校准**：根据使用频率和环境变化，定期对仪器进行重新校准，以确保持续的测量准确性。",
+                "AnswerEn": "The calibration process involves the following steps: First, identifying dry and wet conditions in the field to use for calibration data collection, such as the specific days of June 26-27 for dry conditions and July 16-17 for wet conditions. During these periods, soil moisture is measured at different depths (4 cm, 10 cm, and 20 cm for dry; 4 cm and 10 cm for wet). The average soil moisture values from these measurements are then used to establish a relationship between soil volumetric water content and fast neutron counts. The average N0 value, representing fast neutron counts under dry soil conditions, is calculated (3597 in this case) to adjust and calibrate the instrument readings for accurate soil moisture estimation.",
+                "AnswerCn": "校准过程包括以下步骤：首先，在田间识别干燥和湿润条件，以便收集校准数据，例如在6月26日至27日的干燥条件和7月16日至17日的湿润条件。在这些期间，分别在不同深度（干燥条件下为4厘米、10厘米和20厘米；湿润条件下为4厘米和10厘米）测量土壤湿度。然后，使用这些测量的平均土壤湿度值建立土壤体积含水量与快速中子计数之间的关系。计算平均N0值，代表干燥土壤条件下的快速中子计数（在此案例中为3597），以调整和校准仪器读数，以便准确估算土壤湿度。",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What data processing steps are necessary to ensure the accuracy and reliability of hydrometeorological datasets collected using cosmic ray instruments in agricultural settings?",
+                "QuestionCn": "为了确保在农业环境中使用宇宙射线仪器收集的水文气象数据集的准确性和可靠性，必要的数据处理步骤包括：",
+                "AnswerEn": "The data processing steps include data screening based on specific criteria, such as removing data with voltage less than or equal to 11.8V, relative humidity greater than or equal to 80%, and sampling intervals outside 60±1 minutes. It also involves correcting fast neutron counts for pressure using a specified formula, calibrating the instrument by determining the dry soil fast neutron count (N0), and calculating soil moisture based on established relationships between neutron counts and soil volumetric water content.",
+                "AnswerCn": "数据处理步骤包括根据特定标准进行数据筛选，例如去除电压小于或等于11.8V、相对湿度大于或等于80%以及采样间隔在60±1分钟之外的数据。还涉及使用指定公式对快速中子计数进行压力修正，通过确定干土快速中子计数（N0）来校准仪器，并根据中子计数与土壤体积含水量之间的既定关系计算土壤湿度。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

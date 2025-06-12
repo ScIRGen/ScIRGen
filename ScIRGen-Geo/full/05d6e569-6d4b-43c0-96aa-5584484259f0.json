@@ -1,0 +1,248 @@
+{
+    "id": "05d6e569-6d4b-43c0-96aa-5584484259f0",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Daily 1-km all-weather land surface temperature dataset for the China's landmass and its surrounding areas (TRIMS LST; 2000-2022)",
+            "titleCn": "中国陆域及周边逐日1km全天候地表温度数据集（TRIMS LST；2000-2022）",
+            "description": "Land surface temperature (LST) is one of the important parameters between the Earth's surface and the atmosphere. LST is not only a sensitive indicator for measuring climate change factors and an important prerequisite for grasping climate change patterns, but also a direct input parameter for many models, and has a wide range of applications in many fields such as meteorology, environmental ecology, hydrology, and climate. With the deepening of research and refinement of related studies, there is an urgent need for all - weather LST based on satellite remote sensing. The dataset was generated based on enhanced Reanalysis and Thermal infrared remote sensing Merging (E-RTM) method. The primary input data for the method are Terra/Aqua MODIS LST products and GLDAS data, with ancillary data including NDVI and surface albedo. The evaluation results show that the dataset not only has good image quality and seamless spatial accuracy, but also has a high degree of agreement in amplitude and spatial distribution with the 1 km Terra/Aqua MODIS LST product, which is now widely used in academia day by day. The mean bias deviation (MBD) of the data set is 0.09 K and 0.03 K and the standard deviation of bias (STD) is 1.45 K and 1.17 K for daytime and nighttime when using MODIS LST as a reference. There is no significant difference between sky and clear sky conditions. The temporal resolution of this dataset is four observations per day, the spatial resolution is 1 km, and the time span is 2000-2022; the spatial scope includes the main land areas of China (including Hong Kong, Macao and Taiwan, excluding the South China Sea islands for the time being), and the surrounding areas (72°E-135°E, 19°N-55°N). The abbreviation of this dataset is TRIMS LST (Thermal and Reanalysis Integrating Moderate-resolution Spatial-Seamless LST. In order to reduce the related user data download and processing effort, the TRIMS LST - TP (Daily 1-km all-weather land surface temperature dataset for Western China (TRIMS LST-TP; 2000-2022) V2) synchronous National Tibetan Plateau Data Center.",
+            "descriptionCn": "地表温度（Land surface temperature, LST）是地球表面与大气之间界面的重要参量之一。它既是地表与大气能量交互作用的直接体现，又对于地气过程具有复杂的反馈作用。因此，地表温度不仅是气候变化的敏感指示因子和掌握气候变化规律的重要前提，还是众多模型的直接输入参数，在许多领域有广泛的应用，如气象气候、环境生态、水文等。伴随地学及相关领域研究的深入和精细化，学术界对卫星遥感的全天候地表温度（All-weather LST）具有迫切的需求。\n本数据集的制备方法是增强型的卫星热红外遥感-再分析数据集成方法。方法的主要输入数据为Terra/Aqua MODIS LST产品和GLDAS等数据，辅助数据包括卫星遥感提供的植被指数、地表反照率等。方法充分利用了卫星热红外遥感和再分析数据提供的地表温度高频分量、低频分量以及地表温度的空间相关性，最终重建得到较高质量的全天候地表温度数据集。\n评价结果表明，本数据集具有良好的图像质量和精度，不仅在空间上无缝，还与当前学术界广泛采用的逐日1 km Terra/Aqua MODIS LST产品在幅值和空间分布上具有较高的一致性。当以MODIS LST为参考时，该数据集在白天和夜间的平均偏差（MBE）为0.09K和-0.03K，偏差标准差（STD）为1.45K和1.17K。基于19个站点实测数据的检验结果表明，其MBE为-2.26K至1.73K，RMSE为0.80K至3.68K，且在晴空与非晴空条件下无显著区别。\n本数据集的时间分辨率为逐日4次，空间分辨率为1km，时间跨度为2000年-2022年；空间范围包括我国陆域的主要区域（包含港澳台地区，暂不包含我国南海诸岛）及周边区域（72°E-135°E，19°N-55°N）。本数据集的缩写名为TRIMS LST（Thermal and Reanalysis Integrating Moderate-resolution Spatial-seamless LST），以便用户使用。需要说明的是，TRIMS LST的空间子集TRIMS LST-TP（中国西部逐日1 km全天候地表温度数据集（TRIMS LST-TP；2000-2022）V2）同步在国家青藏高原科学数据中心发布，以减少相关用户数据下载和处理的工作量。",
+            "instructions": "File naming: LST data are in GEOTIFF and NETCDF formats, each file is about 35MB, and the data of different years are stored in folders named \"year\", which are stored in two folders, one for daytime and the other for nighttime. The specific file naming method is \"TRIMS_Aqua/TRIMS_Terra+year+DOY+D/N.tif\", in which DOY stands for Day of the Year, D/N stands for Day/Night, such as TRIMS_Aqua2020001D.tif.\nData format: Integer\nUsage: It can be read and subsequently processed directly by GIS software or matlab, etc. The image value/100=surface temperature value (two decimal places are retained);\nData resolution: 4 times per day, 1 km.\nData time: corresponds to the instantaneous transit time of MODIS pixels, see the data description document for details of the processing.\nKey parameters of the dataset:\n(1) Projection mode: Albers equal area\n(2) Missing values: Uniformly labelled with 0.",
+            "instructionsCn": "文件命名：地表温度数据有GEOTIFF和NETCDF两种格式，每个文件约35MB。不同年份的数据分别存放于以“年”命名的文件夹下， 该年数据按照白天DAY和晚上NIGHT两个文件夹分别存储。具体文件命名方式为“TRIMS_Aqua/TRIMS_Terra+year+DOY+D/N.tif/.nc”，其中DOY代表年积日，D/N代表白天/夜间，如TRIMS_Aqua2020001D.tif/.nc。\n数据格式为：整型\n使用方式：可直接使用GIS软件或matlab等软件进行读取和后续处理，像元值/100=地表温度值（保留小数点后两位）；\n数据分辨率：逐日4次，1 km。\n数据时间：对应MODIS像元的瞬时过境时间，具体处理方式详见数据说明文档。\n数据集关键参数：\n（1）\t投影方式：Albers equal area\n（2）\t缺失值：统一以0标注",
+            "east": 135.0,
+            "west": 72.0,
+            "south": 17.0,
+            "north": 55.0,
+            "startTime": "2022-12-31 00:00:00",
+            "endTime": "2022-12-31 00:00:00",
+            "fileSize": 1823447362877.0,
+            "cstr": "18406.11.Meteoro.tpdc.271252",
+            "doi": "10.11888/Meteoro.tpdc.271252",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameCn": "周纪",
+                "nameEn": "ZHOU Ji",
+                "unitEn": "University of Electronic Science and Technology of China",
+                "unitCn": "电子科技大学"
+            },
+            {
+                "nameCn": "张晓东",
+                "nameEn": "ZHANG Xiaodong",
+                "unitEn": "",
+                "unitCn": "电子科技大学 资源与环境学院"
+            },
+            {
+                "nameCn": "唐文彬",
+                "nameEn": "TANG Wenbin",
+                "unitEn": "",
+                "unitCn": "电子科技大学资源与环境学院"
+            },
+            {
+                "nameCn": "丁利荣",
+                "nameEn": "DING Lirong",
+                "unitEn": "University of Electronic Science and Technology of China",
+                "unitCn": "电子科技大学"
+            },
+            {
+                "nameCn": "马晋",
+                "nameEn": "MA Jin ",
+                "unitEn": "University of Electronic Science and Technology of China",
+                "unitCn": "电子科技大学"
+            },
+            {
+                "nameCn": "张旭",
+                "nameEn": "ZHANG Xu",
+                "unitEn": "电子科技大学资源与环境学院",
+                "unitCn": "电子科技大学资源与环境学院"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "TRIMS LST: A daily 1-km all-weather land surface temperature dataset for the Chinese landmass and surrounding areas (2000–2022)",
+                "referenceCn": null,
+                "referenceEn": "Tang, W., Zhou, J., Ma, J., Wang, Z., Ding, L., Zhang, X., and Zhang, X. (2024). TRIMS LST: a daily 1 km all-weather land surface temperature dataset for China's landmass and surrounding areas (2000–2022). Earth Syst. Sci. Data, 16, 387–419, https://doi.org/10.5194/essd-16-387-2024."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A practical reanalysis data and thermal infrared remote sensing data merging (RTM) method for reconstruction of a 1-km all-weather land surface temperature",
+                "referenceCn": null,
+                "referenceEn": "Zhang, X., Zhou, J., Liang, S., Wang, D. (2021). A practical reanalysis data and thermal infrared remote sensing data merging (RTM) method for reconstruction of a 1-km all-weather land surface temperature. Remote Sensing of Environment, 260, 112437. https://doi.org/10.1016/j.rse.2021.112437."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A method based on temporal component decomposition for estimating 1-km all-weather land surface temperature by merging satellite thermal infrared and passive microwave observations",
+                "referenceCn": null,
+                "referenceEn": "Zhang, X., Zhou, J., Göttsche, F., Zhan, W., Liu, S., & Cao, R. (2019). A Method Based on Temporal Component Decomposition for Estimating 1-km All-Weather Land Surface Temperature by Merging Satellite Thermal Infrared and Passive Microwave Observations. IEEE Transactions on Geoscience and Remote Sensing, 57, 4670–4691. https://doi.org/10.1109/TGRS.2019.2892417"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A thermal sampling depth correction method for land surface temperature estimation from satellite passive microwave observation over barren land",
+                "referenceCn": null,
+                "referenceEn": "Zhou, J., Zhang, X., Zhan, W., Göttsche, F.-M., Liu, S., Olesen, F.-S., Hu, W., & Dai, F. (2017). A thermal sampling depth correction method for land surface temperature estimation from satellite passive microwave observation over barren land. IEEE Transactions on Geoscience and Remote Sensing, 55, 4743–4756. https://doi.org/10.1109/TGRS.2017.2698828"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "其他",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "全天候",
+                "nameEn": "All-weather"
+            },
+            {
+                "nameCn": "地表温度",
+                "nameEn": "land surface temperature"
+            },
+            {
+                "nameCn": "大气遥感",
+                "nameEn": "Atmosphere Remote Sensing"
+            },
+            {
+                "nameCn": "热红外遥感",
+                "nameEn": "Thermal infrared remote sensing"
+            },
+            {
+                "nameCn": "遥感技术",
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameCn": "陆地表层遥感",
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "中国陆域",
+                "keywordEn": "Chinese landmass"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2000-2021",
+                "keywordEn": "2000-2021",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "多源遥感协同下的全天候地表温度反演方法",
+                "titleEn": "A method to estimate all-weather LST based on the integration of multi-source remote sensing observations"
+            },
+            {
+                "titleCn": "复杂山区泥石流监测预警技术装备集成与示范",
+                "titleEn": "Integration and Demonstration of Monitoring and Early Warning Technology and Equipment for Debris Flow in Complex Mountainous Areas"
+            },
+            {
+                "titleCn": "中欧科技合作“龙计划”五期项目",
+                "titleEn": "All-Weather Land Surface Temperature at High Spatial Resolution: Validation and Applications"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the key features and attributes of a land surface temperature dataset that integrates satellite thermal infrared remote sensing and reanalysis data?",
+                "QuestionCn": "集成卫星热红外遥感和再分析数据的地表温度数据集的关键特征和属性包括：",
+                "AnswerEn": "high frequency and low frequency temperature components, spatial correlation of land surface temperature, seamless spatial coverage, Terra/Aqua MODIS LST products, GLDAS data, auxiliary data like vegetation indices and surface albedo, high image quality and accuracy, consistency in amplitude and spatial distribution, temporal resolution of four times daily, spatial resolution of 1 km, time span from 2000 to 2022, specified geographic region",
+                "AnswerCn": "高频和低频温度分量，地表温度的空间相关性，无缝空间覆盖，Terra/Aqua MODIS LST产品，GLDAS数据，植被指数和地表反照率等辅助数据，高图像质量和精度，振幅和空间分布的一致性，时间分辨率为每日四次，空间分辨率为1公里，时间跨度从2000年到2022年，指定地理区域。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the spatial resolution of a dataset that integrates satellite thermal infrared remote sensing and reanalysis data for land surface temperature?",
+                "QuestionCn": "集成卫星热红外遥感和再分析数据的地表温度数据集的空间分辨率是多少？",
+                "AnswerEn": "1 km",
+                "AnswerCn": "1公里",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the enhanced satellite thermal infrared remote sensing-reanalysis data integration method for land surface temperature compare to traditional MODIS LST products in terms of spatial and temporal resolution?",
+                "QuestionCn": "增强卫星热红外遥感-再分析数据集成方法在地表温度方面与传统MODIS LST产品在空间和时间分辨率上有何比较？",
+                "AnswerEn": "The enhanced method for land surface temperature has a spatial resolution of 1 km and temporal resolution of four times daily, spanning from 2000 to 2022. It provides high-quality, seamless spatial data that has high consistency in magnitude and spatial distribution with the daily 1 km Terra/Aqua MODIS LST products. The average biases compared to MODIS LST are 0.09K during the day and -0.03K at night, with standard deviations of 1.45K and 1.17K respectively.",
+                "AnswerCn": "增强的地表温度方法具有1公里的空间分辨率和每日四次的时间分辨率，覆盖2000年至2022年。它提供高质量、无缝的空间数据，在幅度和空间分布上与每日1公里的Terra/Aqua MODIS LST产品具有高度一致性。与MODIS LST相比，白天的平均偏差为0.09K，夜间为-0.03K，标准偏差分别为1.45K和1.17K。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What is the impact on the quality and accuracy of land surface temperature data when integrating satellite thermal infrared remote sensing with reanalysis data, compared to using only satellite data?",
+                "QuestionCn": "将卫星热红外遥感与再分析数据结合使用时，对地表温度数据的质量和准确性影响如何，与仅使用卫星数据相比？",
+                "AnswerEn": "The integration of satellite thermal infrared remote sensing with reanalysis data results in a dataset that has high image quality and accuracy. It provides a seamless spatial coverage and maintains high consistency in both amplitude and spatial distribution when compared to the widely used daily 1 km Terra/Aqua MODIS LST products. The mean bias error (MBE) is 0.09K during the day and -0.03K at night, with a standard deviation of 1.45K and 1.17K, respectively, indicating improved precision over using only satellite data.",
+                "AnswerCn": "卫星热红外遥感与再分析数据的结合产生了一个高图像质量和准确度的数据集。它提供了无缝的空间覆盖，并在幅度和空间分布上与广泛使用的每日1公里Terra/Aqua MODIS陆表温度（LST）产品保持高度一致。白天的平均偏差误差（MBE）为0.09K，夜间为-0.03K，标准差分别为1.45K和1.17K，表明与仅使用卫星数据相比，精度得到了改善。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What are the primary objectives of integrating satellite thermal infrared remote sensing and reanalysis data for developing an all-weather land surface temperature dataset in the context of climate and environmental research?",
+                "QuestionCn": "在气候和环境研究的背景下，整合卫星热红外遥感和再分析数据以开发全天候地表温度数据集的主要目标是什么？",
+                "AnswerEn": "The primary objectives are to accurately reflect the energy interactions between the Earth's surface and the atmosphere, provide a sensitive indicator for climate change, serve as a crucial input for various models in fields such as meteorology, climate, ecology, and hydrology, and meet the urgent demand for high-quality all-weather land surface temperature data. The integration aims to leverage the high-frequency and low-frequency components of surface temperature from satellite infrared data and reanalysis data, as well as their spatial correlation, to reconstruct a high-quality dataset that is spatially seamless and consistent with widely used MODIS LST products.",
+                "AnswerCn": "主要目标是准确反映地球表面与大气之间的能量交互，提供气候变化的敏感指标，作为气象、气候、生态和水文学等领域各种模型的重要输入，并满足对高质量全天候地表温度数据的迫切需求。该集成旨在利用卫星红外数据和再分析数据中地表温度的高频和低频成分及其空间相关性，重建一个空间无缝且与广泛使用的MODIS LST产品一致的高质量数据集。",
+                "Level": "C2(Understanding)"
+            }
+        ]
+    }
+}

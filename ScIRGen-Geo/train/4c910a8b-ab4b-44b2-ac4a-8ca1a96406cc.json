@@ -1,0 +1,521 @@
+{
+    "id": "4c910a8b-ab4b-44b2-ac4a-8ca1a96406cc",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "High-resolution tropospheric NO2 VCDs over East Asia POMINO-TROPOMI v1.2 (2018-2022)",
+            "titleCn": "东亚地区高分辨率对流层二氧化氮垂直柱浓度数据集POMINO-TROPOMI v1.2（2018-2022）",
+            "description": "POMINO-TROPOMI data is based on POMINO-TROPOMI retrieval algorithm developed by ACM Research Group of Peking University. The algorithm uses the AMFv6 package driven by the parallel LIDORT radiative transfer model, and focuses on improving the calculation of tropospheric NO2 air mass factor (AMF). POMINO-TROPOMI algorithm uses the daily BRDF coefficient of MODIS MCD43C2.006 dataset and OMLER v3 surface albedo data to calculate the surface reflectance. The algorithm uses the aerosol data from nested GEOS Chem (v9-02) simulations to explicitly account for the aerosol optical effects. In addition, the simulated AOD is corrected by the monthly average AOD data of MODIS MYD04_ L2 dataset. Before calculating tropospheric NO2 AMF, POMINO-TROPOMI algorithm uses consistent ancillary parameters and cloud pressure provided by TROOMI PAL v2.3.1 data to re-retrieve cloud fraction. Based on the tropospheric NO2 AMF of POMINO-TROPOMI algorithm and the tropospheric NO2 slant column densities of TROPOMI PAL v2.3.1 data, POMINO-TROPOMI tropospheric NO2 VCDs are obtained. For more information and data, please visit http://www.pku-atmos-acm.org/acmProduct.php/#TROPOMI.",
+            "descriptionCn": "POMINO-TROPOMI数据基于北京大学ACM研究组自行开发的POMINO-TROPOMI反演算法。该算法使用并行LIDORT辐射传输模式驱动的AMFv6软件包，重点改进了对流层NO2大气质量因子（AMF）的计算。POMINO-TROPOMI算法使用了MODIS MCD43C2.006数据集的逐日BRDF系数和OMLER v3地表反照率数据计算地表反射率。算法使用了嵌套的GEOS-Chem (v9-02)模式的气溶胶数据来显性表征气溶胶光学效应。此外，该算法使用了MODIS MYD04_L2的月平均AOD数据对模拟的AOD进行修正。在计算对流层NO2 AMF之前，POMINO-TROPOMI算法使用了一致的先验参数和TROPOMI PAL v2.3.1数据提供的云气压对云分数进行了重新反演。基于POMINO-TROPOMI算法的对流层NO2 AMF以及TROPOMI PAL v2.3.1数据的对流层NO2斜柱浓度，得到POMINO-TROPOMI对流层NO2垂直柱浓度。详细信息和更多数据请访问http://www.pku-atmos-acm.org/acmProduct.php/#TROPOMI.",
+            "instructions": "The file name is POMINO-TROPOMI_ v1.2_ monthly_ YYYYMM.nc, where YYYY represents the year and MM represents the month.\nData reading method: all data in the dataset are nc format files, which can be opened with python (calling the netCDF4 package) and read directly. The main content includes POMINO-TROPOMI tropospheric AMF, POMINO-TROPOMI tropospheric NO2 VCDs, TROOMI PAL tropospheric NO2 VCDs and other relevant ancillary parameters.",
+            "instructionsCn": "文件名为：POMINO-TROPOMI_v1.2_monthly_YYYYMM.nc，其中YYYY代表年份，MM代表月份。\n数据读取方式：该数据集中的所有数据均为nc格式文件，可以用python（调用netCDF4包）打开并直接读取。主体内容包括POMINO-TROPOMI对流层AMF, POMINO-TROPOMI对流层NO2垂直柱浓度，TROPOMI PAL对流层NO2垂直柱浓度以及其他相关先验参数。",
+            "east": 140.0,
+            "west": 70.0,
+            "south": 15.0,
+            "north": 55.0,
+            "startTime": "2018-05-01 00:00:00",
+            "endTime": "2022-06-30 00:00:00",
+            "fileSize": 4032675400.0,
+            "cstr": "18406.11.Atmos.tpdc.273003",
+            "doi": "10.11888/Atmos.tpdc.273003",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "林金泰",
+                "nameEn": "LIN Jintai",
+                "unitEn": "",
+                "unitCn": "北京大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "A new TROPOMI product for tropospheric NO2 columns over East Asia with explicit aerosol corrections",
+                "referenceCn": null,
+                "referenceEn": "Liu, M.Y., Lin, J.T. *, Kong, H., Boersma, K. F., Eskes, H., Kanaya, Y., He, Q., Tian, X., Qin, K., Xie, P., Spurr, R., Ni, R.J., Yan, Y.Y., Weng, H.J., & Wang, J.X. (2020). A new TROPOMI product for tropospheric NO2 columns over East Asia with explicit aerosol corrections. Atmospheric Measurement Techniques, 13, 4247-4259, DOI: 10.5194/amt-13-4247-2020"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Retrieving tropospheric nitrogen dioxide from the Ozone Monitoring Instrument: Effects of aerosols, surface reflectance anisotropy, and vertical profile of nitrogen dioxide",
+                "referenceCn": null,
+                "referenceEn": "Lin, J.T*., Martin, R.V., Boersma, K.F., Sneep, M., Stammes, P., & Spurr, R., et al. (2014). Retrieving tropospheric nitrogen dioxide from the ozone monitoring instrument: effects of aerosols, surface reflectance anisotropy, and vertical profile of nitrogen dioxide, Atmos. Chem. Phys., 14, 1441-1461, doi:10.5194/acp-14-1441-2014"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Influence of aerosols and surface reflectance on satellite NO2 retrieval: seasonal and spatial characteristics and implications for NOx emission constraints",
+                "referenceCn": null,
+                "referenceEn": "Lin, J.T*., Liu, M.Y., Xin, J.Y., Boersma, K.F., Spurr, R., Martin, R., & Zhang, Q. (2015). Influence of aerosols and surface reflectance on satellite NO2 retrieval: seasonal and spatial characteristics and implications for NOx emission constraints, Atmospheric Chemistry and Physics, 15, 11217-11241, doi:10.5194/acp-15-11217-2015"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "大气",
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": " 氧化氮",
+                "nameEn": "Nitrogen oxides"
+            },
+            {
+                "nameCn": "大气微量气体",
+                "nameEn": "Atmospheric Trace Gase"
+            },
+            {
+                "nameCn": "大气质量",
+                "nameEn": "Atmospheric Quality"
+            },
+            {
+                "nameCn": "大气遥感",
+                "nameEn": "Atmosphere Remote Sensing"
+            },
+            {
+                "nameCn": "大气遥感产品",
+                "nameEn": "Atmospheric remote sensing products"
+            },
+            {
+                "nameCn": "氮化合物",
+                "nameEn": "Nitrogen compounds"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "东亚地区",
+                "keywordEn": "East Asia"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2018.05-2022.06",
+                "keywordEn": "2018.05-2022.06",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "第二次青藏高原综合科学考察研究",
+                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [],
+            "research objective": [],
+            "challenges": [],
+            "methods": [],
+            "dataset": [],
+            "findings": [],
+            "backgroundCn": [],
+            "research objectiveCn": [],
+            "challengesCn": [],
+            "methodsCn": [],
+            "datasetCn": [],
+            "findingsCn": []
+        },
+        {
+            "background": [
+                "The retrieval of tropospheric NO2 VCD from OMI is done by dividing the tropospheric slant column density (SCD) by the tropospheric air mass factor (AMF). Current representative OMI products covering China, DOMINO v2 and OMNO2 v2, do not explicitly account for the effect of aerosols on the solar radiation. Since aerosols affect the radiation field in retrieving both clouds and NO2, the net effect on the retrieved NO2 columns is unclear. This aerosol issue is particularly significant over East China due to its high aerosol loadings. In addition, the DOMINO and OMNO2 products also assume Lambertian surface with no dependence of surface reflectance on the geometry of the light path. DOMINO and OMNO2 adopt the vertical profile of NO2 simulated by coarse-resolution global chemical transport models (CTMs), TM4 at 3° long. × 2° lat. for DOMINO v2 and GMI at 2.5° long. × 2° lat. for OMNO2 v2, which are unable to capture the variability of NO2 at smaller scales."
+            ],
+            "research objective": [
+                "Here we quantify the influences over China via an improved retrieval process."
+            ],
+            "challenges": [],
+            "methods": [
+                "We explicitly account for aerosol optical effects (simulated by nested GEOS-Chem at 0.667° long. × 0.5° lat. and constrained by aerosol measurements), surface reflectance anisotropy, and high-resolution vertical profiles of NO2 (simulated by GEOS-Chem). Prior to the NO2 retrieval, we derive the cloud information using consistent ancillary assumptions. We compare our retrieval to the widely used DOMINO v2 product, using MAX-DOAS measurements at three urban/suburban sites in East China as reference and focusing the analysis on the 127 OMI pixels (in 30 days) closest to the MAX-DOAS sites."
+            ],
+            "dataset": [
+                "The MAX-DOAS measurements were conducted at three urban/suburban sites in East China, one at the Institute of Atmospheric Physics (IAP), Chinese Academy of Sciences (CAS) in urban Beijing, one in Xianghe County to the southeast of Beijing, and one in the city of Tai’An. For all sites, the VCD of NO2 is retrieved from the radiation measurements around 477 nm. The total retrieval uncertainty on the tropospheric NO2 column has been estimated at 11% for the Beijing and Xianghe sites (Hendrick et al., 2013) and 14% for the Tai’An site (Irie et al., 2012)."
+            ],
+            "findings": [
+                "We find that our retrieval reduces the interference of aerosols on the retrieved cloud properties, thus enhancing the number of valid OMI pixels by about 25%. Compared to DOMINO v2, our retrieval better captures the day-to-day variability in MAX-DOAS NO2 data (R2 = 0.96 versus 0.72), due to pixel-specific radiative transfer calculations rather than the use of a look-up table, explicit inclusion of aerosols, and consideration of surface reflectance anisotropy. Our retrieved NO2 columns are 54% of the MAX-DOAS data on average, reflecting the inevitable spatial inconsistency between the two types of measurement, errors in MAX-DOAS data, and uncertainties in our OMI retrieval related to aerosols and vertical profile of NO2."
+            ],
+            "backgroundCn": [
+                "从OMI获取对流层NO2垂直柱密度（VCD）的方法是将对流层斜柱密度（SCD）除以对流层空气质量因子（AMF）。当前覆盖中国的代表性OMI产品DOMINO v2和OMNO2 v2并未明确考虑气溶胶对太阳辐射的影响。由于气溶胶影响辐射场，从而在检索云和NO2时，获取的NO2柱密度的净效应尚不清楚。由于东中国地区气溶胶负荷较高，这一气溶胶问题尤为显著。此外，DOMINO和OMNO2产品还假设地表为朗伯表面，且地表反射率与光路几何形状无关。DOMINO和OMNO2采用了由粗分辨率全球化学运输模型（CTMs）模拟的NO2垂直分布，DOMINO v2使用TM4（3°经度 × 2°纬度），OMNO2 v2使用GMI（2.5°经度 × 2°纬度），这些模型无法捕捉NO2在较小尺度上的变异性。"
+            ],
+            "research objectiveCn": [
+                "在这里，我们通过改进的检索过程量化对中国的影响。"
+            ],
+            "challengesCn": [],
+            "methodsCn": [
+                "我们明确考虑了气溶胶光学效应（通过嵌套的GEOS-Chem模拟，分辨率为0.667°经度 × 0.5°纬度，并受到气溶胶测量的约束）、地表反射各向异性以及高分辨率的NO2垂直剖面（由GEOS-Chem模拟）。在NO2反演之前，我们使用一致的辅助假设来推导云信息。我们将我们的反演结果与广泛使用的DOMINO v2产品进行比较，使用东中国三个城市/郊区站点的MAX-DOAS测量作为参考，重点分析与MAX-DOAS站点最近的127个OMI像素（在30天内）。"
+            ],
+            "datasetCn": [
+                "MAX-DOAS 测量在中国东部的三个城市/郊区地点进行，分别位于北京的中国科学院大气物理研究所（IAP）、位于北京东南的香河县以及泰安城市。在所有地点，NO2 的垂直柱浓度（VCD）是通过对477 nm附近的辐射测量进行反演获得的。对于北京和香河站，对对流层 NO2 柱浓度的总反演不确定性估计为11%（Hendrick et al., 2013），而泰安站的估计为14%（Irie et al., 2012）。"
+            ],
+            "findingsCn": [
+                "我们发现我们的检索减少了气溶胶对云属性检索的干扰，从而使有效的OMI像素数量增加了约25%。与DOMINO v2相比，我们的检索更好地捕捉了MAX-DOAS NO2数据的日常变化（R2 = 0.96对比0.72），这是由于采用了像素特定的辐射传输计算，而不是使用查找表，明确考虑了气溶胶，并考虑了表面反射各向异性。我们的NO2柱浓度检索结果平均为MAX-DOAS数据的54%，反映了两种测量之间不可避免的空间不一致性、MAX-DOAS数据的误差以及与气溶胶和NO2垂直分布相关的OMI检索不确定性。"
+            ]
+        },
+        {
+            "background": [
+                "Tropospheric nitrogen oxides (NOx = NO + NO2) are important pollutants affecting ozone, aerosols, acid deposition, and climate. China has become the top emitter of NOx due to its recent anthropogenic emission growth along with reductions in North America and Europe. Vertical column densities (VCDs) of tropospheric nitrogen dioxide (NO2) retrieved from the Ozone Monitoring Instrument (OMI) have been used extensively to study Chinese NOx pollution. However, NO2 retrievals from OMI and other space-borne instruments are subject to large systematic and random errors due to uncertainties in the conversion process from radiance to VCDs. In particular, current NO2 algorithms take an implicit approach to accounting for aerosol optical effects, with no explicit specification of aerosols in the retrievals of both NO2 VCDs and ancillary cloud parameters."
+            ],
+            "research objective": [
+                "Here, we conduct an improved retrieval of NO2 VCDs over China, called the POMINO algorithm, based on measurements from the Ozone Monitoring Instrument (OMI), and we test the importance of a number of aerosol and surface reflectance treatments in this algorithm. This study extends our previous work to introduce an improved pixel-specific level-2 retrieval of tropospheric NO2 VCDs over China (80–130°E, 20–53°N), Peking University OMI NO2 (POMINO). We then evaluate the individual and combined effects of an implicit aerosol treatment and changes in surface reflectance characteristics."
+            ],
+            "challenges": [
+                "There are no sufficiently comprehensive independent measurements available to systematically evaluate the various NO2 retrieval approaches. In situ measurements are rare for vertical profiles of aerosols and NO2."
+            ],
+            "methods": [
+                "POMINO uses a parallelized LIDORT-driven AMFv6 package to derive tropospheric air mass factors via pixel-specific radiative transfer calculations with no look-up tables, taking slant column densities from DOMINO v2. Prerequisite cloud optical properties are derived from a dedicated cloud retrieval process that is fully consistent with the main NO2 retrieval. Aerosol optical properties are taken from GEOS-Chem simulations constrained by MODIS aerosol optical depth (AOD) data. For the present analysis, POMINO level-2 data for 2012 are aggregated into monthly means on a 0.25° long. ×0.25° lat. grid. We calculated the AMFs for O2–O2 (to derive CF and CP; at 475 nm) and NO2 (at 438 nm) by using a newly improved AMFv6 package to coordinate the retrieval process. Our retrieval explicitly accounts for the effects of spatiotemporally varying aerosols and surface reflectance anisotropy on radiation."
+            ],
+            "dataset": [
+                "Our POMINO NO2 data are available for 2004–2013. We simultaneously provide daily AOD, SSA and surface reflectance (MODIS BRF over land and turbid coastal ocean and OMLER v3 albedo over the open ocean) data for users."
+            ],
+            "findings": [
+                "POMINO-retrieved annual mean NO2 VCDs vary from 15–25 × 10^15 cm−2 over the polluted North China Plain (NCP) to below 10^15 cm−2 over much of western China. Using POMINO to infer Chinese emissions of nitrogen oxides leads to annual anthropogenic emissions of 9.05 TgN yr−1, an increase from 2006 by about 19%. Replacing the MODIS BRDF data with the OMLER v1 monthly climatological albedo data affects NO2 VCDs by up to 40% for certain locations and seasons. Excluding aerosol information from the retrieval process enhances annual mean NO2 VCDs by 15–40% over much of eastern China. The implicit aerosol treatment also tends to exclude days with high pollution, since aerosols are interpreted as effective clouds and the respective OMI pixels are often excluded by cloud screening; this is a potentially important sampling bias. Therefore, an explicit treatment of aerosols is important for space-based NO2 retrievals and emission constraints."
+            ],
+            "backgroundCn": [
+                "对流层氮氧化物（NOx = NO + NO2）是影响臭氧、气溶胶、酸沉降和气候的重要污染物。由于最近人类活动排放的增长，中国已成为NOx的最大排放国，而北美和欧洲的排放则有所减少。来自臭氧监测仪（OMI）的对流层二氧化氮（NO2）垂直柱密度（VCDs）已被广泛用于研究中国的NOx污染。然而，OMI和其他卫星仪器的NO2反演受到系统性和随机性误差的影响，这些误差源于从辐射到VCD的转换过程中的不确定性。特别是，目前的NO2算法在考虑气溶胶光学效应时采取了隐式方法，在NO2 VCD和辅助云参数的反演中没有明确指定气溶胶。"
+            ],
+            "research objectiveCn": [
+                "在这里，我们基于臭氧监测仪（OMI）的测量，进行了一种改进的中国地区NO2垂直柱浓度（VCDs）检索，称为POMINO算法，并测试了该算法中多种气溶胶和表面反射率处理的重要性。本研究扩展了我们之前的工作，引入了一种改进的像素特定二级检索方法，用于中国地区的对流层NO2 VCDs（80–130°E，20–53°N），即北京大学OMI NO2（POMINO）。随后，我们评估了隐式气溶胶处理和表面反射特性变化的单独及联合影响。"
+            ],
+            "challengesCn": [
+                "目前没有足够全面的独立测量数据来系统地评估各种NO2检索方法。对于气溶胶和NO2的垂直剖面，现场测量非常稀少。"
+            ],
+            "methodsCn": [
+                "POMINO使用并行化的LIDORT驱动AMFv6包，通过像素特定的辐射传输计算来推导对流层空气质量因子，且不使用查找表，采用来自DOMINO v2的斜柱密度。先决条件的云光学特性是通过一个专门的云检索过程获得的，该过程与主要的NO2检索完全一致。气溶胶光学特性则来自于GEOS-Chem模拟，并受到MODIS气溶胶光学深度（AOD）数据的约束。在本次分析中，POMINO 2012年的二级数据被聚合为0.25°经度 × 0.25°纬度网格的月均值。我们使用新改进的AMFv6包计算了O2–O2（以推导CF和CP；在475 nm处）和NO2（在438 nm处）的AMF，协调了检索过程。我们的检索明确考虑了时空变化的气溶胶和表面反射各向异性对辐射的影响。"
+            ],
+            "datasetCn": [
+                "我们的POMINO NO2数据可用于2004年至2013年。我们同时提供每日的气溶胶光学厚度（AOD）、单散射反照率（SSA）和地表反射率（陆地和浑浊沿海海域的MODIS BRF以及开放海洋的OMLER v3反照率）数据供用户使用。"
+            ],
+            "findingsCn": [
+                "POMINO 提取的年均 NO2 VCD（垂直柱浓度）在污染严重的华北平原（NCP）范围为 15–25 × 10^15 cm−2，而在中国西部大部分地区则低于 10^15 cm−2。利用 POMINO 推断中国的氮氧化物排放量，年人类排放量为 9.05 TgN yr−1，比 2006 年增加了约 19%。将 MODIS BRDF 数据替换为 OMLER v1 月度气候铝度数据，会在某些地点和季节对 NO2 VCD 产生高达 40% 的影响。排除气溶胶信息的检索过程会使东部中国大部分地区的年均 NO2 VCD 增加 15–40%。隐式气溶胶处理也倾向于排除高污染的天数，因为气溶胶被解释为有效云层，相关的 OMI 像素常常因云筛选而被排除；这可能是一个重要的采样偏差。因此，气溶胶的显式处理对于基于卫星的 NO2 检索和排放约束至关重要。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Does the data collection method explicitly account for aerosol optical effects in the retrieval of tropospheric NO2 concentrations?",
+                "QuestionCn": "数据收集方法是否明确考虑了气溶胶光学效应在对对流层NO2浓度的提取中？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Are there challenges related to the lack of comprehensive independent measurements for evaluating NO2 retrieval approaches?",
+                "QuestionCn": "评估NO2检索方法时，缺乏全面独立测量是否存在相关挑战？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the key components of a data collection method that accounts for aerosol optical effects in tropospheric NO2 retrievals?",
+                "QuestionCn": "考虑气溶胶光学效应的对流层NO2反演的数据收集方法的关键组成部分是什么？",
+                "AnswerEn": "Nested GEOS-Chem simulations, MODIS BRDF, OMLER data, cloud properties",
+                "AnswerCn": "嵌套的GEOS-Chem模拟，MODIS BRDF，OMLER数据，云特性",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Where can data on high-resolution tropospheric NO2 vertical column densities be sourced for East Asia?",
+                "QuestionCn": "东亚地区高分辨率对流层NO2垂直柱密度的数据可以从哪里获取？",
+                "AnswerEn": "POMINO-TROPOMI dataset",
+                "AnswerCn": "POMINO-TROPOMI 数据集",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "When do challenges arise in assessing the accuracy of NO2 retrieval algorithms due to the lack of independent measurements?",
+                "QuestionCn": "在评估NO2检索算法的准确性时，由于缺乏独立测量，挑战何时出现？",
+                "AnswerEn": "insufficient comprehensive independent measurements",
+                "AnswerCn": "独立测量不足够全面",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "What is an example of a data collection method that addresses the challenge of surface reflectance anisotropy in tropospheric NO2 retrievals?",
+                "QuestionCn": "一个解决对流层NO2检索中表面反射各向异性挑战的数据收集方法的例子是什么？",
+                "AnswerEn": "An example of a data collection method that addresses surface reflectance anisotropy is the use of MODIS MCD43C2.006 dataset's daily BRDF coefficients in the POMINO-TROPOMI algorithm. This dataset provides detailed surface reflectance information that is crucial for calculating accurate atmospheric mass factors (AMF) and improving the retrieval of tropospheric NO2 VCDs by taking into account the geometry of the light path and the anisotropy of surface reflection.",
+                "AnswerCn": "一种解决表面反射各向异性的数据收集方法是使用MODIS MCD43C2.006数据集的每日BRDF系数，该方法在POMINO-TROPOMI算法中得以应用。该数据集提供了详细的表面反射信息，对于计算准确的大气质量因子（AMF）和改善对流层NO2垂直柱浓度（VCD）的检索至关重要，因为它考虑了光路的几何形状和表面反射的各向异性。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you provide an example of a potential dataset that could be used to study the variability of NO2 at smaller scales in East China?",
+                "QuestionCn": "您能否提供一个潜在的数据集示例，用于研究东中国地区NO2在较小尺度上的变异性？",
+                "AnswerEn": "A potential dataset for studying the variability of NO2 at smaller scales in East China is the POMINO NO2 data, which includes high-resolution vertical profiles of NO2 simulated by the GEOS-Chem model. This dataset provides detailed spatial and temporal information on NO2 concentrations and is particularly useful for capturing the fine-scale variability of NO2 that may not be captured by coarser global chemical transport models.",
+                "AnswerCn": "一个潜在的数据集用于研究东中国NO2的微观变异性是POMINO NO2数据，该数据集包括由GEOS-Chem模型模拟的NO2高分辨率垂直剖面。该数据集提供了NO2浓度的详细空间和时间信息，特别适用于捕捉可能无法通过较粗的全球化学传输模型捕获的NO2细尺度变异性。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of data collection methods that account for aerosol optical effects in the retrieval of tropospheric NO2 VCDs?",
+                "QuestionCn": "考虑气溶胶光学效应在获取对流层NO2垂直柱浓度（VCDs）时的数据收集方法的特征是什么？",
+                "AnswerEn": "aerosol optical effects simulated by nested GEOS-Chem, constrained by aerosol measurements, explicit consideration of aerosol optical properties",
+                "AnswerCn": "气溶胶光学效应由嵌套的GEOS-Chem模拟，受气溶胶测量约束，明确考虑气溶胶光学性质。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What specific attributes are considered when calculating surface reflectance in high-resolution NO2 retrieval algorithms?",
+                "QuestionCn": "在高分辨率NO2检索算法中，计算表面反射率时考虑的具体属性包括哪些？",
+                "AnswerEn": "daily BRDF coefficients, OMLER v3 surface albedo data, surface reflectance anisotropy",
+                "AnswerCn": "每日BRDF系数，OMLER v3地表反照率数据，地表反射各向异性",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the features of datasets that improve the retrieval accuracy of tropospheric NO2 VCDs in regions with high aerosol loadings?",
+                "QuestionCn": "在高气溶胶负荷区域，提高对对流层NO2垂直柱浓度（VCDs）检索准确性的特征数据集有哪些？",
+                "AnswerEn": "high-resolution vertical profiles of NO2, aerosol optical properties, ancillary cloud parameters",
+                "AnswerCn": "高分辨率的二氧化氮垂直剖面、气溶胶光学特性、辅助云参数",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How much improvement, in percentage, does the retrieval process achieve in reducing the interference of aerosols on retrieved cloud properties?",
+                "QuestionCn": "检索过程在减少气溶胶对检索云属性干扰方面取得了多少百分比的改善？",
+                "AnswerEn": "25%",
+                "AnswerCn": "25%",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is the estimated range of annual mean NO2 VCDs retrieved by POMINO in the polluted North China Plain?",
+                "QuestionCn": "POMINO在污染严重的华北平原中检索到的年均NO2 VCD的估计范围是多少？",
+                "AnswerEn": "15-25 × 10^15 cm−2",
+                "AnswerCn": "15-25 × 10^15 厘米−2",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is the POMINO-TROPOMI algorithm, and how does it contribute to calculating tropospheric NO2 vertical column concentrations?",
+                "QuestionCn": "POMINO-TROPOMI算法是什么，它如何有助于计算对流层NO2垂直柱浓度？",
+                "AnswerEn": "The POMINO-TROPOMI algorithm is developed by the Peking University ACM research group to improve the retrieval of tropospheric NO2 vertical column densities. This algorithm uses the parallel LIDORT radiative transfer model-driven AMFv6 software package to enhance the calculation of atmospheric mass factors (AMFs) for NO2. It incorporates MODIS MCD43C2.006 daily BRDF coefficients and OMLER v3 surface albedo data for surface reflectance calculations, and uses aerosol data from the nested GEOS-Chem model for aerosol optical effects. The algorithm also corrects simulated aerosol optical depth (AOD) using monthly AOD data from MODIS MYD04_L2 before calculating the tropospheric NO2 AMF.",
+                "AnswerCn": "POMINO-TROPOMI算法由北京大学ACM研究小组开发，旨在改善对对流层NO2垂直柱密度的检索。该算法使用并行LIDORT辐射传输模型驱动的AMFv6软件包，以增强对NO2的大气质量因子（AMF）的计算。它结合了MODIS MCD43C2.006每日BRDF系数和OMLER v3地表反射率数据进行地表反射率计算，并使用来自嵌套GEOS-Chem模型的气溶胶数据来考虑气溶胶光学效应。该算法还在计算对流层NO2 AMF之前，使用MODIS MYD04_L2的每月气溶胶光学深度（AOD）数据对模拟的气溶胶光学深度进行校正。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with the use of coarse-resolution global chemical transport models in NO2 retrievals?",
+                "QuestionCn": "使用粗分辨率全球化学传输模型进行NO2检索时面临哪些挑战？",
+                "AnswerEn": "Challenges associated with using coarse-resolution global chemical transport models in NO2 retrievals include the inability to capture the variability of NO2 at smaller scales. Models such as TM4 and GMI used in previous products like DOMINO v2 and OMNO2 v2 are too coarse (3° long. × 2° lat. for TM4 and 2.5° long. × 2° lat. for GMI) to accurately represent NO2 variations, especially in regions with high aerosol loadings like East China. This affects the precision of the NO2 vertical column density retrievals.",
+                "AnswerCn": "使用粗分辨率全球化学传输模型进行NO2检索所面临的挑战包括无法捕捉NO2在较小尺度上的变异性。像TM4和GMI这样的模型在之前的产品如DOMINO v2和OMNO2 v2中使用，其分辨率过于粗糙（TM4为3°经度 × 2°纬度，GMI为2.5°经度 × 2°纬度），无法准确表示NO2的变化，特别是在像东中国这样高气溶胶负荷的地区。这影响了NO2垂直柱密度检索的精度。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do tropospheric NO2 retrieval methods that utilize aerosol optical effects compare to those that do not in terms of accuracy and data coverage?",
+                "QuestionCn": "利用气溶胶光学效应的对流层NO2检索方法与不利用这些效应的方法在准确性和数据覆盖方面有何比较？",
+                "AnswerEn": "Methods that explicitly account for aerosol optical effects, like the improved retrieval process mentioned, reduce the interference of aerosols on retrieved cloud properties, enhancing data coverage by about 25% compared to methods that do not account for aerosols. These methods better capture day-to-day variability in NO2 data due to specific radiative transfer calculations and consideration of surface reflectance anisotropy.",
+                "AnswerCn": "明确考虑气溶胶光学效应的方法，如提到的改进检索过程，减少了气溶胶对检索云属性的干扰，与不考虑气溶胶的方法相比，数据覆盖率提高了约25%。这些方法通过特定的辐射传输计算和考虑表面反射各向异性，更好地捕捉了NO2数据的日常变化。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the differences between datasets using MODIS MCD43C2.006 daily BRDF coefficients and OMLER v1 monthly climatological albedo data in terms of their impact on NO2 VCD retrievals?",
+                "QuestionCn": "MODIS MCD43C2.006每日BRDF系数数据集与OMLER v1月气候铝度数据集在NO2 VCD检索中的影响差异是什么？",
+                "AnswerEn": "Using MODIS MCD43C2.006 daily BRDF coefficients provides more accurate surface reflectance data, which affects NO2 VCDs significantly. In contrast, using OMLER v1 monthly climatological albedo data can cause differences in NO2 VCDs by up to 40% for certain locations and seasons, indicating potential biases in retrievals without daily updates.",
+                "AnswerCn": "使用MODIS MCD43C2.006每日BRDF系数提供的表面反射率数据更为准确，这对NO2垂直柱浓度（VCD）有显著影响。相比之下，使用OMLER v1每月气候平均反照率数据可能导致某些地点和季节的NO2 VCD差异高达40%，这表明在没有每日更新的情况下，检索结果可能存在偏差。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can the integration of aerosol optical effects improve the accuracy of tropospheric NO2 vertical column density retrievals in high aerosol loading regions?",
+                "QuestionCn": "气溶胶光学效应的整合如何提高高气溶胶负荷区域对对流层NO2垂直柱密度检索的准确性？",
+                "AnswerEn": "The integration of aerosol optical effects, as simulated by the nested GEOS-Chem model and constrained by aerosol measurements, can reduce the interference of aerosols on retrieved cloud properties and enhance the number of valid data points. This improves the accuracy of retrievals by explicitly accounting for aerosol impacts on radiation, leading to better representation of day-to-day variability in NO2 data.",
+                "AnswerCn": "通过嵌套的GEOS-Chem模型模拟气溶胶光学效应，并结合气溶胶测量数据，可以减少气溶胶对云属性反演的干扰，并增加有效数据点的数量。这通过明确考虑气溶胶对辐射的影响，提高了反演的准确性，从而更好地表征NO2数据的日常变化。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What are the implications of using high-resolution vertical profiles of NO2 in the retrieval process for understanding local air quality dynamics?",
+                "QuestionCn": "使用高分辨率的NO2垂直剖面在检索过程中对理解地方空气质量动态的影响是什么？",
+                "AnswerEn": "Utilizing high-resolution vertical profiles of NO2, as simulated by GEOS-Chem, allows for capturing variability at smaller scales which is crucial for understanding local air quality dynamics. This approach provides a more detailed view of NO2 distribution, enhancing the understanding of spatial inconsistencies and improving the accuracy of emission estimates.",
+                "AnswerCn": "利用GEOS-Chem模拟的高分辨率NO2垂直剖面，可以捕捉到较小尺度的变异性，这对于理解地方空气质量动态至关重要。这种方法提供了NO2分布的更详细视图，增强了对空间不一致性的理解，并提高了排放估算的准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the challenges in systematically evaluating various NO2 retrieval approaches, particularly with respect to aerosol and vertical profile measurements?",
+                "QuestionCn": "系统评估各种NO2检索方法面临的挑战主要与气溶胶和垂直剖面测量有关的因素包括哪些？",
+                "AnswerEn": "Challenges in systematically evaluating various NO2 retrieval approaches stem from the lack of sufficiently comprehensive independent measurements, particularly for vertical profiles of aerosols and NO2. In situ measurements are rare, making it difficult to validate retrieval algorithms and assess their accuracy across different environmental conditions. This scarcity of data limits the ability to test the effectiveness of different retrieval methods and to quantify the uncertainties associated with aerosol and NO2 profile assumptions.",
+                "AnswerCn": "系统评估各种NO2检索方法的挑战源于缺乏足够全面的独立测量，特别是气溶胶和NO2的垂直剖面。现场测量非常稀少，这使得验证检索算法和评估其在不同环境条件下的准确性变得困难。这种数据的稀缺限制了测试不同检索方法有效性的能力，以及量化与气溶胶和NO2剖面假设相关的不确定性的能力。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "How do changes in surface reflectance treatment affect the retrieval of NO2 VCDs over East Asia?",
+                "QuestionCn": "表面反射率处理的变化如何影响东亚地区NO2垂直柱浓度（VCDs）的获取？",
+                "AnswerEn": "Changes in surface reflectance treatment, such as replacing BRDF data with climatological albedo data, can significantly affect NO2 VCDs by up to 40% in certain locations and seasons, indicating the importance of precise surface reflectance characterization in retrieval processes.",
+                "AnswerCn": "表面反射率处理的变化，例如用气候学反照率数据替代BRDF数据，可能会在某些地点和季节对NO2垂直柱浓度（VCDs）产生高达40%的显著影响，这表明在反演过程中精确的表面反射率特征化的重要性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the consequences of not including aerosol information in the retrieval process for space-based NO2 observations?",
+                "QuestionCn": "不在空间基NO2观测的检索过程中包含气溶胶信息的后果是什么？",
+                "AnswerEn": "Excluding aerosol information from the retrieval process can enhance annual mean NO2 VCDs by 15–40% over eastern China and lead to a sampling bias as days with high pollution may be excluded due to aerosols being misinterpreted as clouds, highlighting the need for explicit aerosol treatment in retrievals.",
+                "AnswerCn": "排除气溶胶信息的检索过程可能会使东中国地区的年均NO2垂直柱浓度（VCDs）提高15-40%，并导致采样偏差，因为高污染的日子可能因气溶胶被误解为云而被排除，这突显了在检索中需要对气溶胶进行明确处理的必要性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What objectives drive the inclusion of ancillary cloud parameter retrievals in the process of collecting tropospheric NO2 data using space-borne instruments?",
+                "QuestionCn": "在使用卫星仪器收集对流层NO2数据的过程中，包含辅助云参数检索的目标是什么？",
+                "AnswerEn": "The objectives include ensuring consistency and accuracy in NO2 retrievals by deriving cloud information using ancillary assumptions. This approach helps reduce the interference of clouds on the measurement of NO2 columns, thus improving the reliability of data obtained from space-borne instruments and enabling better comparisons with ground-based measurements.",
+                "AnswerCn": "目标包括通过使用辅助假设来获取云信息，以确保NO2检索的一致性和准确性。这种方法有助于减少云对NO2柱测量的干扰，从而提高来自太空仪器获得的数据的可靠性，并使与地面测量的比较更加准确。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in using the POMINO-TROPOMI algorithm to calculate tropospheric NO2 vertical column densities in East Asia?",
+                "QuestionCn": "使用POMINO-TROPOMI算法计算东亚地区的对流层NO2垂直柱密度涉及哪些程序步骤？",
+                "AnswerEn": "The POMINO-TROPOMI algorithm involves using the LIDORT radiative transfer model driven AMFv6 software package to improve the calculation of tropospheric NO2 atmospheric mass factors (AMF). It incorporates MODIS MCD43C2.006 daily BRDF coefficients and OMLER v3 surface albedo data for surface reflectance calculations. The algorithm also uses aerosol data from the nested GEOS-Chem model and corrects simulated AOD using MODIS MYD04_L2 monthly averaged AOD data. Before calculating tropospheric NO2 AMF, consistent prior parameters and cloud pressure provided by TROPOMI PAL v2.3.1 data are used for cloud fraction retrieval.",
+                "AnswerCn": "POMINO-TROPOMI算法涉及使用LIDORT辐射传输模型驱动的AMFv6软件包，以改善对对流层NO2大气质量因子（AMF）的计算。它结合了MODIS MCD43C2.006每日BRDF系数和OMLER v3地表反照率数据进行地表反射率计算。该算法还使用来自嵌套GEOS-Chem模型的气溶胶数据，并使用MODIS MYD04_L2每月平均气溶胶光学厚度（AOD）数据来修正模拟的AOD。在计算对流层NO2 AMF之前，使用TROPOMI PAL v2.3.1数据提供的一致先验参数和云压进行云分数检索。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How are aerosol effects explicitly accounted for in the improved retrieval process of NO2 vertical column densities over China?",
+                "QuestionCn": "在改进的NO2垂直柱密度检索过程中，如何明确考虑气溶胶效应？",
+                "AnswerEn": "Aerosol effects are explicitly accounted for by using aerosol optical properties simulated by the nested GEOS-Chem model, which are constrained by MODIS aerosol optical depth (AOD) data. The retrieval process involves pixel-specific radiative transfer calculations and includes aerosol effects by simulating them with GEOS-Chem, thereby avoiding the use of look-up tables and improving the accuracy of NO2 retrievals.",
+                "AnswerCn": "气溶胶效应通过使用嵌套的GEOS-Chem模型模拟的气溶胶光学特性显式考虑，这些特性受到MODIS气溶胶光学深度（AOD）数据的约束。检索过程涉及像素特定的辐射传输计算，并通过模拟GEOS-Chem中的气溶胶效应来实现，从而避免使用查找表，提高了NO2检索的准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What methodological approach is used to retrieve cloud information consistently before calculating NO2 vertical column densities in the retrieval process?",
+                "QuestionCn": "在检索过程中，为了一致地获取云信息，在计算NO2垂直柱密度之前使用了什么方法论方法？",
+                "AnswerEn": "Cloud information is derived using consistent ancillary assumptions that are fully aligned with the main NO2 retrieval process. This involves a dedicated cloud retrieval process that provides prerequisite cloud optical properties, ensuring that the cloud information used is consistent with the conditions required for accurate NO2 vertical column density calculations.",
+                "AnswerCn": "云信息是通过与主要NO2检索过程完全一致的辅助假设得出的。这涉及一个专门的云检索过程，提供必要的云光学特性，确保所使用的云信息与准确的NO2垂直柱密度计算所需的条件一致。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What conditions or resources enable the use of nested GEOS-Chem models for explicit aerosol optical effects simulation in tropospheric NO2 retrieval processes?",
+                "QuestionCn": "哪些条件或资源使得在对流层NO2反演过程中使用嵌套GEOS-Chem模型进行显式气溶胶光学效应模拟成为可能？",
+                "AnswerEn": "The use of nested GEOS-Chem models is enabled by the need to explicitly account for aerosol optical effects, which are constrained by aerosol measurements and integrated into high-resolution vertical profiles of NO2. This approach allows for a more accurate representation of aerosols' impact on solar radiation, enhancing the retrieval process.",
+                "AnswerCn": "使用嵌套的GEOS-Chem模型是为了明确考虑气溶胶的光学效应，这些效应受到气溶胶测量的约束，并整合到NO2的高分辨率垂直剖面中。这种方法能够更准确地表示气溶胶对太阳辐射的影响，从而增强了检索过程。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What technological advancements or methodologies enable the improvement of cloud property retrievals to support accurate NO2 VCD retrievals?",
+                "QuestionCn": "哪些技术进步或方法论能够改善云属性检索，以支持准确的NO2垂直柱浓度（VCD）检索？",
+                "AnswerEn": "Technological advancements such as the use of consistent ancillary assumptions and pixel-specific radiative transfer calculations allow for improved cloud property retrievals, supporting more accurate NO2 VCD retrievals by reducing aerosol interference and enhancing the number of valid satellite pixels.",
+                "AnswerCn": "技术进步，如使用一致的附加假设和像素特定的辐射传输计算，能够改善云属性的检索，从而通过减少气溶胶干扰和增加有效卫星像素的数量，支持更准确的NO2垂直柱浓度（VCD）检索。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why do data collection methods for tropospheric NO2 VCDs over East Asia need to incorporate aerosol optical effects explicitly?",
+                "QuestionCn": "为什么东亚的对流层NO2垂直柱浓度（VCDs）数据收集方法需要明确考虑气溶胶光学效应？",
+                "AnswerEn": "Incorporating aerosol optical effects explicitly is important because aerosols significantly affect the retrieval of both clouds and NO2 by altering the solar radiation field. This is particularly crucial over East China, where high aerosol loadings can distort the accuracy of NO2 measurements if not properly accounted for.",
+                "AnswerCn": "明确纳入气溶胶光学效应是重要的，因为气溶胶显著影响云和二氧化氮（NO2）的反演，通过改变太阳辐射场。这在中国东部尤为关键，因为高气溶胶负荷如果不加以适当考虑，会扭曲NO2测量的准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might the retrieval of tropospheric NO2 VCDs over China face challenges when using traditional surface reflectance assumptions?",
+                "QuestionCn": "在使用传统的地表反射率假设时，检索中国地区对流层NO2垂直柱浓度（VCDs）可能面临挑战。",
+                "AnswerEn": "Traditional assumptions of a Lambertian surface, which imply no dependence of surface reflectance on the geometry of the light path, may not capture the variability and anisotropy of surface reflectance accurately. This can lead to errors in the NO2 retrieval process, especially in areas with complex surface types like urban regions in China.",
+                "AnswerCn": "传统的拉姆伯特表面假设意味着表面反射率与光路径的几何形状无关，但这可能无法准确捕捉表面反射率的变异性和各向异性。这可能导致在复杂表面类型区域（如中国的城市地区）中，NO2 反演过程出现错误。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "How do researchers perceive the challenges of incorporating aerosol data in the retrieval of NO2 vertical column densities, and what methods could potentially address these challenges?",
+                "QuestionCn": "研究人员如何看待在获取NO2垂直柱密度时融入气溶胶数据的挑战，以及哪些方法可能解决这些挑战？",
+                "AnswerEn": "Researchers acknowledge significant challenges due to the lack of comprehensive independent measurements for aerosols; however, using aerosol data from sources like GEOS-Chem simulations and MODIS AOD can help address these challenges. The explicit consideration of aerosol optical effects is crucial in improving retrieval accuracy.",
+                "AnswerCn": "研究人员承认，由于缺乏全面的独立气溶胶测量数据，面临重大挑战；然而，利用GEOS-Chem模拟和MODIS AOD等来源的气溶胶数据可以帮助解决这些挑战。明确考虑气溶胶光学效应对于提高反演精度至关重要。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don't understand why there is a need to consider surface reflectance anisotropy in the NO2 data retrieval process.",
+                "QuestionCn": "我不明白为什么在NO2数据提取过程中需要考虑表面反射各向异性。",
+                "AnswerEn": "Surface reflectance anisotropy needs to be considered because it can significantly affect the accuracy of radiative transfer calculations. The retrieval process uses the MODIS BRDF (Bidirectional Reflectance Distribution Function) coefficients to account for this anisotropy, which helps in obtaining a more accurate representation of the surface conditions that influence the observed NO2 signals.",
+                "AnswerCn": "表面反射各向异性需要考虑，因为它会显著影响辐射传输计算的准确性。检索过程使用MODIS BRDF（双向反射分布函数）系数来考虑这种各向异性，这有助于获得更准确的表面条件表示，从而影响观测到的NO2信号。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I'm unsure about the challenges involved in systematically evaluating different NO2 retrieval approaches.",
+                "QuestionCn": "我对系统评估不同NO2检索方法所涉及的挑战感到不确定。",
+                "AnswerEn": "One of the main challenges is the lack of comprehensive independent measurements to evaluate various NO2 retrieval methods. In situ measurements, especially for vertical profiles of aerosols and NO2, are rare, making it difficult to systematically validate and compare different retrieval approaches.",
+                "AnswerCn": "主要挑战之一是缺乏全面的独立测量来评估各种NO2检索方法。特别是气溶胶和NO2的垂直剖面现场测量非常稀少，这使得系统地验证和比较不同的检索方法变得困难。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please analyze the data collection methods used for high-resolution tropospheric NO2 vertical column concentration datasets and suggest potential improvements.",
+                "QuestionCn": "请分析用于高分辨率对流层NO2垂直柱浓度数据集的数据收集方法，并建议潜在的改进。",
+                "AnswerEn": "The data collection methods for high-resolution tropospheric NO2 vertical column concentrations include using the POMINO-TROPOMI retrieval algorithm, which employs a parallel LIDORT-driven AMFv6 software package. Improvements could involve enhancing the aerosol optical effects representation and refining surface reflectance calculations using more up-to-date datasets or models.",
+                "AnswerCn": "高分辨率对流层NO2垂直柱浓度的数据收集方法包括使用POMINO-TROPOMI反演算法，该算法采用并行LIDORT驱动的AMFv6软件包。改进可以包括增强气溶胶光学效应的表示，并使用更新的数据集或模型来精细化地表反射率计算。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "Please identify and discuss the challenges faced in collecting accurate tropospheric NO2 VCD data over East Asia and propose potential solutions.",
+                "QuestionCn": "请识别并讨论在东亚地区收集准确的对流层NO2垂直柱浓度（VCD）数据所面临的挑战，并提出潜在的解决方案。",
+                "AnswerEn": "Challenges in collecting accurate tropospheric NO2 VCD data include the impact of aerosols on solar radiation, errors due to coarse-resolution global chemical transport models, and inconsistencies in surface reflectance models. Potential solutions involve explicitly accounting for aerosol optical effects using high-resolution models like GEOS-Chem, improving surface reflectance anisotropy considerations, and integrating more comprehensive in situ measurements.",
+                "AnswerCn": "收集准确的对流层NO2垂直柱浓度（VCD）数据面临的挑战包括气溶胶对太阳辐射的影响、由于粗分辨率全球化学传输模型导致的误差，以及地表反射模型的不一致性。潜在的解决方案包括使用高分辨率模型（如GEOS-Chem）明确考虑气溶胶光学效应、改善地表反射各向异性考虑，以及整合更全面的现场测量数据。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "Please explore potential datasets or sources that could complement or enhance the understanding of NO2 emissions and their spatial variability over East Asia.",
+                "QuestionCn": "请探索潜在的数据集或来源，以补充或增强对东亚NO2排放及其空间变异性的理解。",
+                "AnswerEn": "Potential datasets that could complement the understanding of NO2 emissions over East Asia include the MAX-DOAS measurements at urban/suburban sites, MODIS MCD43C2.006 data for BRDF coefficients, and aerosol data from MODIS MYD04_L2. Incorporating these datasets can help refine the spatial variability understanding by providing additional data points and improving the accuracy of aerosol and surface reflectance modeling.",
+                "AnswerCn": "潜在的数据集可以补充对东亚NO2排放的理解，包括城市/郊区站点的MAX-DOAS测量、MODIS MCD43C2.006数据的BRDF系数，以及来自MODIS MYD04_L2的气溶胶数据。整合这些数据集可以通过提供额外的数据点并提高气溶胶和表面反射建模的准确性，帮助细化空间变异性的理解。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

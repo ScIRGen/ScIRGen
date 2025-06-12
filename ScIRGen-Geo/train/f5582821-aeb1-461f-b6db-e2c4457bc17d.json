@@ -1,0 +1,506 @@
+{
+    "id": "f5582821-aeb1-461f-b6db-e2c4457bc17d",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "The development of devices monitoring ecosystem energy and water flux: Mesoscale soil moisture measurement system (2020)",
+            "titleCn": "生态系统水热关键参量监测设备研制：中尺度土壤水分测定仪观测数据（2020）",
+            "description": "This dataset includes data recorded by the Heihe integrated observatory network obtained from a mesoscale soil moisture measurement system of soil moisture of Daman Superstation from January 1 to December 31, 2020. The site (100.372° E, 38.856° N) was located on a cropland (maize surface) in the Daman irrigation, which is near Zhangye city, Gansu Province. The elevation is 1556 m. The bottom of the probe was 0.5 m above the ground; the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, C), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Data were removed and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity was greater than 80% inside the probe box, (c) the counting data were not of one-hour duration and (d) neutron count differed from the previous value by more than 20%; 2) An air pressure correction was applied to the quality-controlled raw data according to the equation contained in the equipment manual; 3) After the quality control and corrections were applied, soil moisture was calculated using the equation in Zreda et al. (2012), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 was calibrated using the in situ observed soil moisture by SoilNET within the footprint; 4) Based on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation from the equipment manual. Moreover, suspicious data were marked in red.\nFor more information, please refer to Liu et al. (2018) (for sites information), Zhu et al. (2015) for data processing) in the Citation section.",
+            "descriptionCn": "该数据集包含了2020年1月1日至2020年12月31日黑河流域地表过程综合观测网中游大满超级站研制中尺度土壤水分测定仪观测数据。站点位于甘肃省张掖市大满灌区农田内，下垫面是玉米田。观测点的经纬度是100.3722°E, 38.8555°N，海拔1556m。仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）。发布的数据为经过处理计算后的数据，数据表头包括：Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。剔除及缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor。\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再通过公式反求得到N0。\n站点信息请参考Liu et al. (2018)，观测数据处理请参考Zhu et al. (2015)。",
+            "instructions": "Project name+ instrument name",
+            "instructionsCn": "课题名称+仪器名称",
+            "east": 100.3722,
+            "west": 100.3722,
+            "south": 38.8555,
+            "north": 38.8555,
+            "startTime": "2020-01-01 00:00:00",
+            "endTime": "2020-12-31 00:00:00",
+            "fileSize": 521712.0,
+            "cstr": "18406.11.Hydro.tpdc.271792",
+            "doi": "10.11888/Hydro.tpdc.271792",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "乔云峰",
+                "nameEn": "QIAO Yunfeng",
+                "unitEn": "",
+                "unitCn": "中国科学院地理科学与资源研究所"
+            },
+            {
+                "nameCn": "刘绍民",
+                "nameEn": "LIU Shaomin",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "徐自为",
+                "nameEn": "XU Ziwei",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Observation and simulation of lake-air heat and water transfer processes in a high-altitude shallow lake on the Tibetan Plateau",
+                "referenceCn": null,
+                "referenceEn": "Wang, Binbin, Ma, Yaoming, Chen, Xuelong, Ma, Weiqiang, Su, Zhongbo, Menenti, Massimo. Observation and simulation of lake-air heat and water transfer processes in a high-altitude shallow lake on the Tibetan Plateau. Journal of Geophysical Research: Atmospheres, 2015, 120(24):2015JD023863. doi:10.1002/2015JD023863"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China",
+                "referenceCn": null,
+                "referenceEn": "Liu, S., Li, X., Xu, Z., Che, T., Xiao, Q., Ma, M., Liu, Q., Jin, R., Guo, J., Wang, L., Wang, W., Qi, Y., Li, H., Xu, T., Ran, Y., Hu, X., Shi, S., Zhu, Z., Tan, J., Zhang, Y., Ren, Z. (2018). The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China. Vadose Zone Journal, 17,180072. https://doi.org/10.2136/vzj2018.04.0072."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Internet of Things to network smart devices for ecosystem monitoring",
+                "referenceCn": null,
+                "referenceEn": "Li, X., Zhao, N., Jin, R., Liu, S.M., Sun, X.M., Wen, X.F., Wu, D.X., Zhou, Y., Guo, J.W., Chen, S.P., Xu, Z.W., Ma, M.G., Wang, T.M., Qu, Y.H., Wang, X.W., Wu, F.M., &Zhou, Y.K. (2019). Internet of Things to network smart devices for ecosystem monitoring. Science Bulletin, 64, 1234–1245."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "土壤湿度",
+                "nameEn": "soil moisture"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "Hydrology"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "大满灌区农田",
+                "keywordEn": null
+            },
+            {
+                "keywordCn": "大满超级站",
+                "keywordEn": "Daman superstation"
+            },
+            {
+                "keywordCn": "黑河流域",
+                "keywordEn": "Heihe River basin"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2020",
+                "keywordEn": "2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "生态系统水热关键参量监测设备研制",
+                "titleEn": "National Key Research and Development Program of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Smart, real-time, low-cost, and distributed ecosystem monitoring is essential for understanding and managing rapidly changing ecosystems. However, new techniques in the big data era have rarely been introduced into operational ecosystem monitoring, particularly for fragile ecosystems in remote areas. Ecosystem monitoring can be defined as a time series of measurements of key variables in the biosphere and is designed to detect variability in ecosystem dynamics and ultimately answer questions regarding biospheric changes. Driven by the advancement of smart devices and rapid development of the Internet of Things (IoT), ecosystem monitoring has entered a new paradigm: monitoring the ecosystem based on the IoT. The advancement of embedded microprocessors and wireless communication has led to the development of smart devices for field-based and in situ environmental monitoring."
+            ],
+            "research objective": [
+                "We introduce the Internet of Things (IoT) techniques to establish a prototype ecosystem monitoring system by developing innovative smart devices and using IoT technologies for ecosystem monitoring in isolated environments. The scientific objectives of this effort are as follows. (1) Develop innovative smart devices for monitoring key air, water, soil, and biota variables that have high measurement accuracy compared to that of conventional devices. The smart devices will be able to obtain network access via wireless communication modules. (2) Establish an ecosystem monitoring IoT that integrates automatic data acquisition and transmission, quality control, real-time data sharing, and online data visualization and analysis. (3) Test, verify and demonstrate the applicability of the ecosystem monitoring IoT in three typical fragile ecosystems for ecosystem monitoring and management."
+            ],
+            "challenges": [
+                "The first challenge for achieving ecosystem monitoring via the IoT is to integrate heterogeneous WSNs into the Internet based on standard communication protocols, enabling smart devices to participate in the IoT. The second challenge is the efficient management of massive monitoring data sets. The third challenge is to design an effective ecosystem monitoring network that will provide the scientific information needed for ecosystem management and decision-making processes."
+            ],
+            "methods": [
+                "The initiative includes three steps: developing the smart ecosystem monitoring devices, networking the devices and integrating them with the information system using the IoT, and testing the applicability of the ecosystem monitoring IoT in a variety of typical ecosystems across China."
+            ],
+            "dataset": [],
+            "findings": [],
+            "backgroundCn": [
+                "智能、实时、低成本和分布式的生态系统监测对于理解和管理快速变化的生态系统至关重要。然而，在大数据时代的新技术很少被引入到操作性生态系统监测中，特别是在偏远地区的脆弱生态系统中。生态系统监测可以定义为对生物圈中关键变量的时间序列测量，旨在检测生态系统动态的变异性，并最终回答有关生物圈变化的问题。在智能设备的进步和物联网（IoT）的快速发展推动下，生态系统监测进入了一个新范式：基于物联网的生态系统监测。嵌入式微处理器和无线通信的发展导致了用于现场和原位环境监测的智能设备的出现。"
+            ],
+            "research objectiveCn": [
+                "我们引入物联网（IoT）技术，通过开发创新的智能设备建立一个原型生态系统监测系统，以便在孤立环境中进行生态系统监测。本项目的科学目标如下：（1）开发创新的智能设备，以高于传统设备的测量精度监测关键的空气、水、土壤和生物变量。这些智能设备将能够通过无线通信模块获得网络接入。（2）建立一个生态系统监测物联网，集成自动数据采集与传输、质量控制、实时数据共享以及在线数据可视化和分析。（3）在三个典型脆弱生态系统中测试、验证和展示生态系统监测物联网的适用性，以便进行生态系统监测和管理。"
+            ],
+            "challengesCn": [
+                "实现通过物联网进行生态系统监测的第一个挑战是将异构无线传感器网络（WSN）基于标准通信协议集成到互联网中，使智能设备能够参与物联网。第二个挑战是高效管理海量监测数据集。第三个挑战是设计一个有效的生态系统监测网络，以提供生态系统管理和决策过程所需的科学信息。"
+            ],
+            "methodsCn": [
+                "该倡议包括三个步骤：开发智能生态系统监测设备，联网设备并使用物联网将其与信息系统集成，以及在中国各类典型生态系统中测试生态系统监测物联网的适用性。"
+            ],
+            "datasetCn": [],
+            "findingsCn": []
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Do the data collection methods for soil moisture monitoring include pressure correction for neutron counts?",
+                "QuestionCn": "土壤湿度监测的数据收集方法是否包括对中子计数的压力修正？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Do datasets for ecosystem monitoring tend to focus more on key air variables, water variables, or soil (such as soil moisture) and biota variables?",
+                "QuestionCn": "生态系统监测的数据集通常更侧重于关键的空气变量、水变量，还是土壤（如土壤湿度）和生物变量？",
+                "AnswerEn": "soil and biota variables",
+                "AnswerCn": "土壤和生物群变量",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the key variables monitored in the ecosystem monitoring system based on the IoT?",
+                "QuestionCn": "基于物联网的生态系统监测系统中监测的关键变量有哪些？",
+                "AnswerEn": "air, water, soil, biota variables",
+                "AnswerCn": "空气、水、土壤、生物变量",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Where was the prototype ecosystem monitoring system implemented using IoT technologies?",
+                "QuestionCn": "原型生态监测系统使用物联网技术实施在哪里？",
+                "AnswerEn": "China",
+                "AnswerCn": "中国",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What are the challenges faced when integrating smart devices into an IoT-based ecosystem monitoring network?",
+                "QuestionCn": "在将智能设备集成到基于物联网的生态监测网络中时面临的挑战有哪些？",
+                "AnswerEn": "integrating heterogeneous wireless sensor networks into the Internet",
+                "AnswerCn": "将异构无线传感器网络集成到互联网中",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Could you illustrate a challenge related to the integration of smart devices in ecosystem monitoring networks that use IoT?",
+                "QuestionCn": "您能否举例说明在使用物联网的生态监测网络中，智能设备集成相关的挑战？",
+                "AnswerEn": "One challenge is integrating heterogeneous wireless sensor networks (WSNs) into the Internet based on standard communication protocols, enabling smart devices to participate in the IoT for ecosystem monitoring.",
+                "AnswerCn": "一个挑战是将异构无线传感器网络（WSN）基于标准通信协议集成到互联网中，使智能设备能够参与物联网进行生态系统监测。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of innovative smart devices developed for monitoring in the field of ecosystem monitoring?",
+                "QuestionCn": "在生态系统监测领域开发的创新智能设备的一个例子是什么？",
+                "AnswerEn": "Innovative smart devices developed for monitoring key air, water, soil, and biota variables with high measurement accuracy compared to conventional devices. These devices can obtain network access via wireless communication modules as part of an IoT-based ecosystem monitoring effort.",
+                "AnswerCn": "开发了创新的智能设备，用于监测关键的空气、水、土壤和生物变量，具有比传统设备更高的测量精度。这些设备可以通过无线通信模块获得网络接入，作为物联网生态监测努力的一部分。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the specific properties of the smart devices developed for ecosystem monitoring in isolated environments?",
+                "QuestionCn": "用于孤立环境生态系统监测的智能设备的具体特性是什么？",
+                "AnswerEn": "high measurement accuracy, wireless communication modules, real-time data sharing, online data visualization and analysis",
+                "AnswerCn": "高测量精度、无线通信模块、实时数据共享、在线数据可视化和分析",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What data collection challenges are associated with integrating heterogeneous Wireless Sensor Networks (WSNs) into the Internet of Things (IoT) for ecosystem monitoring?",
+                "QuestionCn": "将异构无线传感器网络（WSNs）集成到物联网（IoT）中进行生态系统监测时，数据收集面临哪些挑战？",
+                "AnswerEn": "integrating heterogeneous WSNs, standard communication protocols, enabling smart devices, efficiently managing massive datasets",
+                "AnswerCn": "集成异构无线传感器网络、标准通信协议、启用智能设备、高效管理海量数据集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What characteristics define the approach for establishing an ecosystem monitoring IoT in fragile ecosystems?",
+                "QuestionCn": "建立脆弱生态系统生态监测物联网的方法的特点包括：",
+                "AnswerEn": "innovative smart devices, accurate monitoring, automatic data acquisition, automatic data transmission, quality control, applicability across various ecosystems",
+                "AnswerCn": "创新智能设备、精确监测、自动数据采集、自动数据传输、质量控制、适用于各种生态系统",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many key variables are monitored by the smart devices developed for ecosystem observation?",
+                "QuestionCn": "用于生态系统观察的智能设备监测多少个关键变量？",
+                "AnswerEn": "4",
+                "AnswerCn": "4",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many data screening standards are applied to the soil moisture dataset?",
+                "QuestionCn": "土壤湿度数据集应用了多少个数据筛选标准？",
+                "AnswerEn": "4",
+                "AnswerCn": "4",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is meant by '智能设备' in the context of ecosystem monitoring?",
+                "QuestionCn": "在生态系统监测的背景下，“智能设备”指的是能够收集、分析和传输数据的高科技设备，这些设备通常具备传感器、网络连接和数据处理能力，用于实时监测环境变化和生态系统健康。",
+                "AnswerEn": "'智能设备' in the context of ecosystem monitoring refers to innovative smart devices developed for monitoring key environmental variables such as air, water, soil, and biota. These devices are characterized by their high measurement accuracy and capability to access networks via wireless communication modules, facilitating real-time data acquisition and sharing in isolated environments.",
+                "AnswerCn": "'智能设备'在生态系统监测的背景下是指为监测空气、水、土壤和生物等关键环境变量而开发的创新智能设备。这些设备具有高测量精度，并能够通过无线通信模块接入网络，从而在偏远环境中实现实时数据采集和共享。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the method of data screening in the ecosystem water and heat parameter monitoring compare to the general practices of data screening in IoT-based ecosystem monitoring?",
+                "QuestionCn": "生态系统水和热参数监测中的数据筛选方法与基于物联网的生态系统监测中的一般数据筛选实践相比如何？",
+                "AnswerEn": "The data screening method in the ecosystem water and heat parameter monitoring involves specific standards such as removing data based on voltage levels, relative humidity, sampling intervals, and changes in neutron counts. In contrast, IoT-based ecosystem monitoring focuses on integrating heterogeneous wireless sensor networks and managing massive datasets, which may involve different data screening practices tailored to the diversity and volume of data collected through IoT devices.",
+                "AnswerCn": "生态系统水和热参数监测中的数据筛选方法涉及特定标准，例如根据电压水平、相对湿度、采样间隔和中子计数变化来删除数据。相比之下，基于物联网的生态系统监测侧重于集成异构无线传感器网络和管理海量数据集，这可能涉及针对通过物联网设备收集的数据的多样性和数量量身定制的不同数据筛选实践。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "In what ways does the challenge of data management in the ecosystem water and heat parameter monitoring differ from the challenges faced in IoT-based ecosystem monitoring networks?",
+                "QuestionCn": "在水和热参数监测的生态系统中，数据管理的挑战与基于物联网的生态系统监测网络所面临的挑战有何不同？",
+                "AnswerEn": "Data management in the ecosystem water and heat parameter monitoring involves specific data processing steps like pressure correction and instrument calibration, focusing on ensuring the accuracy of neutron counts and soil moisture data. On the other hand, IoT-based ecosystem monitoring networks face broader challenges in efficiently managing massive datasets, integrating heterogeneous networks, and designing monitoring networks that provide actionable scientific information for ecosystem management.",
+                "AnswerCn": "生态系统水和热参数监测中的数据管理涉及特定的数据处理步骤，如压力修正和仪器校准，重点确保中子计数和土壤湿度数据的准确性。另一方面，基于物联网的生态系统监测网络面临更广泛的挑战，包括高效管理海量数据、整合异构网络以及设计能够为生态系统管理提供可操作科学信息的监测网络。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How might integrating IoT techniques with smart devices enhance the accuracy and efficiency of ecosystem monitoring in remote and fragile environments?",
+                "QuestionCn": "将物联网技术与智能设备结合，可以提高在偏远和脆弱环境中生态系统监测的准确性和效率。",
+                "AnswerEn": "Integrating IoT techniques with smart devices enhances ecosystem monitoring by allowing for real-time data acquisition, automatic data transmission, and online data visualization, which improves measurement accuracy and system efficiency in isolated environments.",
+                "AnswerCn": "将物联网技术与智能设备相结合，可以通过实时数据采集、自动数据传输和在线数据可视化来增强生态系统监测，从而提高孤立环境中的测量准确性和系统效率。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What challenges might arise when attempting to manage and analyze massive datasets collected from heterogeneous wireless sensor networks (WSNs) in ecosystem monitoring?",
+                "QuestionCn": "在生态监测中，尝试管理和分析来自异构无线传感器网络（WSNs）收集的大规模数据集时，可能会出现哪些挑战？",
+                "AnswerEn": "Challenges include integrating heterogeneous WSNs using standard communication protocols for IoT participation and efficiently managing the massive datasets to provide necessary scientific information for ecosystem management and decision-making.",
+                "AnswerCn": "挑战包括使用标准通信协议集成异构无线传感器网络（WSNs）以参与物联网，以及高效管理海量数据集，以提供生态系统管理和决策所需的科学信息。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What strategies could be employed to ensure that ecosystem monitoring devices maintain high measurement accuracy compared to conventional devices, especially for key variables in soil, air, and water?",
+                "QuestionCn": "为了确保生态监测设备在土壤、空气和水等关键变量的测量准确性高于传统设备，可以采用以下策略：",
+                "AnswerEn": "Strategies include developing innovative smart devices with advanced embedded microprocessors and wireless communication capabilities, ensuring they are calibrated against known standards, and integrating them into an IoT system for real-time data quality control.",
+                "AnswerCn": "策略包括开发具有先进嵌入式微处理器和无线通信能力的创新智能设备，确保它们与已知标准进行校准，并将其集成到物联网系统中，以实现实时数据质量控制。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the necessity of developing innovative smart devices for monitoring key variables in ecosystems, particularly in isolated environments?",
+                "QuestionCn": "哪些因素促使在孤立环境中开发用于监测生态系统关键变量的创新智能设备的必要性？",
+                "AnswerEn": "The need for innovative smart devices arises from the requirement for high measurement accuracy in monitoring key air, water, soil, and biota variables, which are crucial for understanding ecosystem dynamics. Additionally, the advancement of smart devices, embedded microprocessors, and wireless communication technologies have enabled real-time, low-cost, and distributed ecosystem monitoring, which is essential for managing rapidly changing and fragile ecosystems.",
+                "AnswerCn": "对创新智能设备的需求源于对监测关键空气、水、土壤和生物变量的高测量精度的要求，这对于理解生态系统动态至关重要。此外，智能设备、嵌入式微处理器和无线通信技术的进步使得实时、低成本和分布式生态系统监测成为可能，这对于管理快速变化和脆弱的生态系统至关重要。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is it challenging to manage massive datasets in ecosystem monitoring using IoT technologies?",
+                "QuestionCn": "在生态系统监测中使用物联网技术管理海量数据集为何具有挑战性？",
+                "AnswerEn": "The challenge in managing massive datasets stems from the integration of heterogeneous wireless sensor networks (WSNs) into the Internet, which requires standard communication protocols. Efficient data management is critical for providing scientific information necessary for ecosystem management and decision-making processes, especially when dealing with large volumes of data collected from various smart devices.",
+                "AnswerCn": "管理海量数据的挑战源于将异构无线传感器网络（WSN）集成到互联网中，这需要标准的通信协议。高效的数据管理对于提供生态系统管理和决策过程所需的科学信息至关重要，尤其是在处理来自各种智能设备的大量数据时。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential consequences of integrating IoT techniques into ecosystem monitoring for fragile ecosystems?",
+                "QuestionCn": "将物联网技术整合到脆弱生态系统监测中的潜在后果是什么？",
+                "AnswerEn": "Integrating IoT techniques into ecosystem monitoring can lead to the development of smart devices that offer high measurement accuracy and enable real-time data acquisition and transmission. This can enhance the ability to monitor and manage fragile ecosystems effectively by providing timely and accurate information for decision-making.",
+                "AnswerCn": "将物联网技术融入生态系统监测可以开发出高测量精度的智能设备，实现实时数据采集和传输。这可以通过提供及时和准确的信息来增强对脆弱生态系统的监测和管理能力，从而为决策提供支持。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What outcomes might result from addressing the challenges of managing massive monitoring datasets in ecosystem IoT networks?",
+                "QuestionCn": "解决生态系统物联网网络中管理庞大监测数据集的挑战可能会产生哪些结果？",
+                "AnswerEn": "Addressing the challenges of managing massive monitoring datasets in ecosystem IoT networks can lead to more efficient data processing and storage solutions, improved data quality control, and enhanced capabilities for real-time data sharing and analysis. This would allow for more comprehensive and effective ecosystem management and monitoring.",
+                "AnswerCn": "解决生态系统物联网网络中管理庞大监测数据集的挑战，可以带来更高效的数据处理和存储解决方案、改善数据质量控制，以及增强实时数据共享和分析的能力。这将使生态系统管理和监测更加全面和有效。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "Why is it important to integrate automatic data acquisition and real-time data sharing in an ecosystem monitoring IoT?",
+                "QuestionCn": "在生态系统监测物联网中，集成自动数据采集和实时数据共享的重要性在于：",
+                "AnswerEn": "Integrating automatic data acquisition and real-time data sharing is crucial for efficiently managing massive monitoring datasets and ensuring the timely availability of high-quality data for ecosystem monitoring. This integration facilitates online data visualization and analysis, which is essential for understanding and managing rapidly changing ecosystems.",
+                "AnswerCn": "自动数据采集与实时数据共享的整合对于高效管理庞大的监测数据集以及确保高质量数据的及时可用性至关重要。这种整合促进了在线数据可视化和分析，这对于理解和管理快速变化的生态系统至关重要。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What are the intended outcomes of testing the applicability of an ecosystem monitoring IoT in various fragile ecosystems?",
+                "QuestionCn": "测试生态系统监测物联网在各种脆弱生态系统中的适用性预期的结果是什么？",
+                "AnswerEn": "The intended outcomes include verifying the effectiveness and reliability of the IoT-based monitoring system in different ecosystems, demonstrating its applicability for ecosystem management, and providing valuable scientific information needed to address challenges in ecosystem monitoring and management.",
+                "AnswerCn": "预期成果包括验证基于物联网的监测系统在不同生态系统中的有效性和可靠性，展示其在生态系统管理中的适用性，并提供解决生态系统监测和管理挑战所需的有价值的科学信息。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedures are involved in the data screening process to ensure the accuracy and reliability of soil moisture measurements in ecosystem monitoring?",
+                "QuestionCn": "在生态系统监测中，确保土壤湿度测量的准确性和可靠性的数据筛选过程涉及哪些程序？",
+                "AnswerEn": "The data screening process involves several steps: removing data with voltage less than or equal to 11.8 volts, excluding data where relative humidity is greater than or equal to 80%, discarding data where the sampling interval is not within 60±1 minutes, and eliminating neutron count data that changes more than 200 between adjacent hours. Any excluded or missing data is supplemented with -6999.",
+                "AnswerCn": "数据筛选过程涉及几个步骤：去除电压小于或等于11.8伏的数据，排除相对湿度大于或等于80%的数据，丢弃采样间隔不在60±1分钟内的数据，以及消除相邻小时之间变化超过200的中子计数数据。任何被排除或缺失的数据都用-6999进行补充。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How is air pressure correction applied to neutron data in the context of soil moisture monitoring, and what is the significance of this step?",
+                "QuestionCn": "在土壤湿度监测中，空气压力修正是如何应用于中子数据的，这一步骤的重要性是什么。",
+                "AnswerEn": "Air pressure correction is applied using a formula specified in the instrument's manual, which adjusts the raw neutron data to account for variations in air pressure. This correction is necessary to ensure that the neutron count reflects true soil moisture conditions, independent of atmospheric pressure changes.",
+                "AnswerCn": "气压修正是通过仪器手册中规定的公式进行的，该公式调整原始中子数据，以考虑气压变化的影响。这个修正是必要的，以确保中子计数反映真实的土壤湿度条件，而不受大气压力变化的影响。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What is the procedure for calibrating soil moisture measurement instruments using neutron count, and why is this calibration important for accurate data collection?",
+                "QuestionCn": "使用中子计数校准土壤湿度测量仪器的程序是什么，为什么这种校准对准确数据收集很重要？",
+                "AnswerEn": "Calibration involves determining the N0 value, which is the neutron count under dry soil conditions. This is done by measuring soil moisture in the area using soil samples or a dense network of soil moisture sensors, obtaining the corrected neutron data, and calculating N0 using a specific formula. Calibration is crucial to accurately convert neutron counts into soil moisture levels, reflecting true ground conditions.",
+                "AnswerCn": "校准涉及确定N0值，即在干燥土壤条件下的中子计数。这是通过使用土壤样本或密集的土壤湿度传感器网络测量该区域的土壤湿度，获取修正后的中子数据，并使用特定公式计算N0来完成的。校准对于准确将中子计数转换为土壤湿度水平至关重要，以反映真实的地面条件。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What advancements in IoT technologies have enabled the development of smart ecosystem monitoring devices for remote and fragile environments?",
+                "QuestionCn": "哪些物联网技术的进步促进了智能生态系统监测设备在偏远和脆弱环境中的发展？",
+                "AnswerEn": "The advancements of embedded microprocessors and wireless communication have led to the development of smart devices for field-based and in situ environmental monitoring, enabling the integration of these devices into the Internet of Things (IoT) for ecosystem monitoring.",
+                "AnswerCn": "嵌入式微处理器和无线通信的进步促使了用于现场和原位环境监测的智能设备的发展，使这些设备能够集成到物联网（IoT）中进行生态系统监测。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How do smart devices achieve high measurement accuracy for ecosystem monitoring compared to conventional devices?",
+                "QuestionCn": "智能设备如何相比传统设备实现生态监测的高测量精度？",
+                "AnswerEn": "Smart devices are designed to monitor key air, water, soil, and biota variables with high measurement accuracy, and they obtain network access via wireless communication modules, which is a significant improvement over conventional devices.",
+                "AnswerCn": "智能设备旨在以高测量精度监测关键的空气、水、土壤和生物变量，并通过无线通信模块获得网络访问，这比传统设备有了显著的改进。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What challenges must be overcome to integrate heterogeneous wireless sensor networks into the Internet for ecosystem monitoring?",
+                "QuestionCn": "将异构无线传感器网络集成到互联网以进行生态系统监测必须克服哪些挑战？",
+                "AnswerEn": "The integration of heterogeneous wireless sensor networks into the Internet requires addressing challenges such as standardizing communication protocols and efficiently managing massive monitoring datasets to enable smart devices to participate in the IoT.",
+                "AnswerCn": "将异构无线传感器网络集成到互联网中需要解决一些挑战，例如标准化通信协议和高效管理海量监测数据集，以使智能设备能够参与物联网。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why could there be difficulties in managing massive datasets collected from ecosystem monitoring IoT systems?",
+                "QuestionCn": "管理从生态系统监测物联网系统收集的大规模数据集可能会面临哪些困难？",
+                "AnswerEn": "Managing massive datasets from ecosystem monitoring IoT systems can be difficult due to the sheer volume of data generated by continuous and real-time monitoring. This requires efficient data management strategies to store, process, and analyze the data, ensuring data quality and accessibility while dealing with potential network bandwidth limitations.",
+                "AnswerCn": "管理生态系统监测物联网系统产生的大规模数据集可能很困难，因为持续和实时监测生成的数据量庞大。这需要有效的数据管理策略来存储、处理和分析数据，确保数据质量和可访问性，同时应对潜在的网络带宽限制。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might innovative smart devices developed for ecosystem monitoring need to have higher measurement accuracy compared to conventional devices?",
+                "QuestionCn": "创新的智能设备在生态系统监测中需要比传统设备具有更高的测量精度，原因可能包括以下几点：",
+                "AnswerEn": "Innovative smart devices for ecosystem monitoring need higher measurement accuracy because they are designed to monitor key variables in fragile ecosystems, which require precise and reliable data to detect subtle changes and variations in ecosystem dynamics that are crucial for effective ecosystem management and decision-making.",
+                "AnswerCn": "创新的智能设备用于生态系统监测需要更高的测量精度，因为它们旨在监测脆弱生态系统中的关键变量，这些变量需要精确和可靠的数据，以便检测生态系统动态中的微妙变化和变异，这对于有效的生态系统管理和决策至关重要。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What are the potential advantages and disadvantages of using IoT technologies for ecosystem monitoring in remote areas?",
+                "QuestionCn": "使用物联网技术进行偏远地区生态系统监测的潜在优势和劣势是什么？",
+                "AnswerEn": "The potential advantages of using IoT technologies for ecosystem monitoring include the ability to obtain real-time data and high measurement accuracy, along with the integration of automatic data acquisition and transmission. The disadvantages might involve challenges such as integrating heterogeneous WSNs into the IoT, managing large datasets efficiently, and designing an effective monitoring network for scientific decision-making.",
+                "AnswerCn": "使用物联网技术进行生态系统监测的潜在优势包括能够获得实时数据和高测量精度，以及自动数据采集和传输的集成。缺点可能涉及将异构无线传感器网络（WSN）集成到物联网中的挑战、高效管理大数据集的难度，以及为科学决策设计有效监测网络的复杂性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "In what ways could the development of smart devices improve the accuracy and reliability of monitoring key variables in ecosystems?",
+                "QuestionCn": "智能设备的发展可以通过以下几种方式提高生态系统中关键变量监测的准确性和可靠性：",
+                "AnswerEn": "Smart devices could improve the accuracy and reliability of monitoring by providing high measurement accuracy compared to conventional devices. They enable network access via wireless communication, allowing for real-time data sharing and online data visualization, which can enhance the precision and timeliness of ecosystem monitoring and management.",
+                "AnswerCn": "智能设备可以通过提供比传统设备更高的测量精度来提高监测的准确性和可靠性。它们通过无线通信实现网络访问，允许实时数据共享和在线数据可视化，从而增强生态系统监测和管理的精确性和及时性。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What are the main challenges faced when integrating heterogeneous wireless sensor networks (WSNs) with the Internet for ecosystem monitoring, and how might these be addressed?",
+                "QuestionCn": "在将异构无线传感器网络（WSNs）与互联网集成以进行生态系统监测时，面临的主要挑战有哪些，以及如何解决这些挑战？",
+                "AnswerEn": "The main challenges include integrating heterogeneous WSNs into the Internet using standard communication protocols and efficiently managing massive datasets. These challenges might be addressed by developing innovative smart devices, establishing an IoT ecosystem monitoring network, and employing rigorous quality control measures to ensure data integrity and usefulness for ecosystem management.",
+                "AnswerCn": "主要挑战包括使用标准通信协议将异构无线传感器网络（WSNs）集成到互联网中，以及高效管理海量数据集。这些挑战可以通过开发创新的智能设备、建立物联网生态系统监测网络以及采用严格的质量控制措施来确保数据的完整性和对生态系统管理的有效性来解决。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don't understand how smart devices improve the accuracy of ecosystem monitoring compared to conventional devices.",
+                "QuestionCn": "我不明白智能设备如何提高生态系统监测的准确性，相较于传统设备。",
+                "AnswerEn": "Smart devices for ecosystem monitoring are developed to have high measurement accuracy and are integrated with wireless communication modules, enabling them to participate in IoT. These advancements allow for real-time data sharing, quality control, and online data visualization and analysis, which enhance the accuracy and efficiency of ecosystem monitoring.",
+                "AnswerCn": "用于生态系统监测的智能设备被开发为具有高测量精度，并集成了无线通信模块，使其能够参与物联网。这些进展允许实时数据共享、质量控制以及在线数据可视化和分析，从而提高生态系统监测的准确性和效率。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I'm unsure about the challenges faced when integrating ecosystem monitoring devices into the Internet of Things (IoT).",
+                "QuestionCn": "我不确定在将生态系统监测设备集成到物联网（IoT）时面临的挑战。",
+                "AnswerEn": "One of the main challenges is integrating heterogeneous wireless sensor networks (WSNs) into the Internet using standard communication protocols to enable smart devices to participate in the IoT. Additionally, efficiently managing massive monitoring data sets and designing an effective monitoring network that provides necessary scientific information for ecosystem management are significant challenges.",
+                "AnswerCn": "主要挑战之一是将异构无线传感器网络（WSNs）通过标准通信协议集成到互联网中，以使智能设备能够参与物联网。此外，高效管理海量监测数据集以及设计一个有效的监测网络，以提供生态系统管理所需的科学信息，也是重要的挑战。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I can't make sense of how data from ecosystem monitoring devices are managed and utilized in real-time applications.",
+                "QuestionCn": "我无法理解生态系统监测设备的数据是如何在实时应用中管理和利用的。",
+                "AnswerEn": "The ecosystem monitoring IoT integrates automatic data acquisition and transmission with real-time data sharing, quality control, and online data visualization and analysis. This system facilitates the efficient management and utilization of data in real-time applications, enabling better ecosystem monitoring and management in isolated environments.",
+                "AnswerCn": "生态系统监测物联网集成了自动数据采集和传输、实时数据共享、质量控制以及在线数据可视化和分析。该系统促进了实时应用中数据的高效管理和利用，使得在孤立环境中能够更好地进行生态系统监测和管理。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please explore various data collection methods used for monitoring soil moisture in ecosystems, and describe how innovative smart devices can enhance measurement accuracy compared to conventional devices.",
+                "QuestionCn": "请探讨用于监测生态系统土壤湿度的各种数据收集方法，并描述创新智能设备如何提高测量精度，相较于传统设备。",
+                "AnswerEn": "Innovative smart devices can enhance soil moisture monitoring by utilizing IoT technologies for more precise and real-time data acquisition. These devices, equipped with advanced microprocessors and wireless communication modules, allow for more accurate measurements of soil moisture and integration into a comprehensive ecosystem monitoring IoT system.",
+                "AnswerCn": "创新的智能设备可以通过利用物联网技术增强土壤湿度监测，实现更精确和实时的数据采集。这些设备配备了先进的微处理器和无线通信模块，能够更准确地测量土壤湿度，并集成到一个综合的生态系统监测物联网系统中。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Please propose a strategy for testing the applicability of an ecosystem monitoring IoT system in various fragile ecosystems, and outline the potential benefits for ecosystem management.",
+                "QuestionCn": "请提出一个策略，用于测试物联网生态系统监测系统在各种脆弱生态系统中的适用性，并概述其对生态系统管理的潜在好处。",
+                "AnswerEn": "Testing the applicability of an ecosystem monitoring IoT system involves deploying smart devices in diverse fragile ecosystems across China to collect and analyze key environmental variables. The benefits include improved data quality and accessibility, enabling informed decision-making and targeted ecosystem management strategies.",
+                "AnswerCn": "测试生态系统监测物联网系统的适用性涉及在中国不同脆弱生态系统中部署智能设备，以收集和分析关键环境变量。其好处包括提高数据质量和可获取性，从而促进知情决策和针对性的生态系统管理策略。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

@@ -1,0 +1,473 @@
+{
+    "id": "58f4b08b-e88e-4652-b646-9e475039aa71",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Hourly meteorological forcing & land surface state dataset of Tibet Plateau with 10 km spatial resolution (2000-2010)",
+            "titleCn": "青藏高原逐时10 km分辨率近地表大气驱动和地表状态数据集（2000-2010）",
+            "description": "The near surface atmospheric forcing and surface state dataset of the Tibetan Plateau was yielded by WRF model, time range: 2000-2010, space range: 25-40 °N, 75-105 °E, time resolution: hourly, space resolution: 10 km, grid number: 150 * 300. \nThere are 33 variables in total, including 11 near surface atmospheric variables: temperature at 2m height on the ground, specific humidity at 2m height on the ground, surface pressure, latitudinal component of 10m wind field on the ground, longitudinal component of 10m wind field on the ground, proportion of solid precipitation, cumulative cumulus convective precipitation, cumulative grid precipitation, downward shortwave radiation flux at the surface, downward length at the surface Wave radiation flux, cumulative potential evaporation. \nThere are 19 surface state variables: soil temperature in each layer, soil moisture in each layer, liquid water content in each layer, heat flux of snow phase change, soil bottom temperature, surface runoff, underground runoff, vegetation proportion, surface heat flux, snow water equivalent, actual snow thickness, snow density, water in the canopy, surface temperature, albedo, background albedo, lower boundary Soil temperature, upward heat flux (sensible heat flux) at the surface and upward water flux (sensible heat flux) at the surface.\nThere are three other variables: longitude, latitude and planetary boundary layer height.",
+            "descriptionCn": "采用WRF模式制备的青藏高原近地表大气驱动和地表状态数据集，时间范围：2000-2010，空间范围：25-40 ºN，75-105 ºE，时间分辨率：逐时，空间分辨率：10 km，格点数为150*300。\n总计有33个变量，其中包含的近地表大气变量11个： 地面上2m高度的温度、 地面上2m高度的比湿、地面气压、地面上10m风场的纬向分量、地面上10m风场的经向分量、固体降水比例、累积的积云对流降水、累积的格点降水、地表处的向下短波辐射通量、地表处的向下长波辐射通量、累计的潜在蒸发。\n包含的地表状态变量有19个：各层土壤温度、各层土壤湿度、 各层土壤液态水含量、雪相态改变的热通量、土壤底部温度、地表径流、地下径流、植被比例、地面热通量、雪水当量、实际雪厚、雪密度、冠层中的水、地表温度、反照率、背景反照率、更低边界处的土壤温度、地表面处向上的热量通量（感热通量）、地表面处向上的水量通量（感热通量）。\n其他变量3个：经度、纬度和行星边界层高度。",
+            "instructions": "The data is in the format of NetCDF and stored month by month. Due to the large amount of data, there are three (a, b, c) files each month, named as: wrfout_d02_yyyy-mm-01a.nc, wrfout_d02_yyyy-mm-01b.nc and wrfout_d02_yyyy-mm-01c.nc, where: yyyy represents year, mm represents month. \n\nThe file wrfout_d02_yyyy-mm-01a.nc contains the following variables: SR solid precipitation proportion; POTEVP cumulative potential evaporation; SNOPCX snow phase change heat flux; SOILTB soil bottom temperature; Q2 specific humidity at 2m height on the ground; T2 temperature at 2m height on the ground; PSFC ground pressure; U10 latitude component of 10m wind field on the ground; V10 longitude component of 10m wind field; SFROFF surface diameter Flow; UDROFF underground runoff; VEGFRA vegetation ratio; GRDFLX surface heat flux; SNOW snow water equivalent; SNOWH snow thickness. \n\nThe file wrfout_d02_yyyy-mm-01b.nc contains the following variables: snow density of RHOSN; water in canopies of CANWAT; TSK surface temperature; cumulus convective precipitation accumulated by RAINC; grid precipitation accumulated by RAINNC; downward short wave radiation flux at surface SWDOWN; downward long wave radiation flux at GLW surface; ALBEDO; Background albedo ALBBCK; soil temperature at lower boundary of TMN; PBLH planetary boundary layer height; HFX upward heat flux (sensible heat flux); GFX upward water flux (sensible heat flux); LAT latitude; LON longitude. \n\nThe file  wrfout_d02_yyyy-mm-01c.nc contains the following variables: soil temperature of each layer of TSLB; soil moisture of each layer of SMOIS; soil water of each layer of SH2O.",
+            "instructionsCn": "数据为netcdf格式，逐月存储，因数据量较大，每个月有三个（a，b，c）文件，分别命名为：wrfout_d02_yyyy-mm-01a.nc、wrfout_d02_yyyy-mm-01b.nc和wrfout_d02_yyyy-mm-01c.nc，其中：yyyy代表年份，mm代表月份。\n\n        wrfout_d02_yyyy-mm-01a.nc文件包含的变量：SR 固体降水比例；POTEVP 累计的潜在蒸发；SNOPCX 雪相态改变的热通量；SOILTB 土壤底部温度；Q2 地面上2m高度的比湿；T2 地面上2m高度的温度；PSFC 地面气压；U10 地面上10m风场的纬向分量；V10 地面上10m风场的经向分量；SFROFF 地表径流；UDROFF 地下径流；VEGFRA  植被比例；GRDFLX 地面热通量；SNOW 雪水当量；SNOWH 实际雪厚。\n\n        wrfout_d02_yyyy-mm-01b.nc文件包含的变量：RHOSN 雪密度；CANWAT 冠层中的水；TSK 地表温度；RAINC 累积的积云对流降水；RAINNC 累积的格点降水；SWDOWN 地表处的向下短波辐射通量；GLW 地表处的向下长波辐射通量；ALBEDO 反照率；ALBBCK 背景反照率；TMN 更低边界处的土壤温度； PBLH 行星边界层高度；HFX 地表面处向上的热量通量（感热通量）；QFX 地表面处向上的水量通量（感热通量）；LAT 纬度；LON 经度。\n\n        wrfout_d02_yyyy-mm-01c.nc文件包含的变量：TSLB 各层土壤温度；SMOIS 各层土壤湿度；SH2O 各层土壤液态水含量。",
+            "east": 105.0,
+            "west": 75.0,
+            "south": 25.0,
+            "north": 40.0,
+            "startTime": "2000-01-16 08:00:00",
+            "endTime": "2011-01-15 08:00:00",
+            "fileSize": 750815659904.0,
+            "cstr": "18406.11.Meteoro.tpdc.270277",
+            "doi": "10.11888/Meteoro.tpdc.270277",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "潘小多",
+                "nameEn": "PAN Xiaoduo",
+                "unitEn": "Institute of Tibetan Plateau Research, CAS",
+                "unitCn": "中国科学院青藏高原研究所"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Assessing spatiotemporal characteristics of atmospheric water cycle processes over the Tibetan Plateau using the WRF model and finer box model",
+                "referenceCn": null,
+                "referenceEn": "Pan, X., Nie, X., Li, H., Washakh, R. M. A., & Jin, J. (2024). Assessing spatiotemporal characteristics of atmospheric water cycle processes over the Tibetan Plateau using the WRF model and finer box model. Scientific Reports, 14: 4959. https://doi.org/10.1038/s41598-024-55208-0."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Dynamic downscaling of near-surface air temperature at the basin scale using WRF–a case study in the Heihe River Basin, China",
+                "referenceCn": null,
+                "referenceEn": "Pan, X.D., Li, X., Shi, X.K., Han, X.J., Luo, L.H., Wang, L.X. Dynamic downscaling of near-surface air temperature at the basin scale using WRF–a case study in the Heihe River Basin, China. Frontiers of Earth Science, 2012, 6(3): 314-323, doi: 10.1007/s11707-012-0306-2."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Validation of WRF model on simulating forcing data for Heihe River Basin",
+                "referenceCn": null,
+                "referenceEn": "Pan XD, Li X. Validation of WRF model on simulating forcing data for Heihe River Basin. Sciences in Cold and Arid Regions, 2011, 3(4): 344-357, doi: 10.3724/SP.J.1226.2011.00344."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "大气",
+                "nameEn": "Atmosphere"
+            },
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "反照率",
+                "nameEn": "Albedo"
+            },
+            {
+                "nameCn": "土壤",
+                "nameEn": "Soil"
+            },
+            {
+                "nameCn": "土壤温度",
+                "nameEn": "Soil temperature"
+            },
+            {
+                "nameCn": "土壤湿度/水分含量",
+                "nameEn": "Soil moisture/Water content"
+            },
+            {
+                "nameCn": "地下水",
+                "nameEn": "Ground Water"
+            },
+            {
+                "nameCn": "地表水",
+                "nameEn": "Surface Water"
+            },
+            {
+                "nameCn": "地表过程",
+                "nameEn": "Earth SurFace Processes"
+            },
+            {
+                "nameCn": "径流",
+                "nameEn": "Runoff"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "Hydrology"
+            },
+            {
+                "nameCn": "温度",
+                "nameEn": "Temperature"
+            },
+            {
+                "nameCn": "短波辐射",
+                "nameEn": "Shortwave radiation"
+            },
+            {
+                "nameCn": "空气温度",
+                "nameEn": "Air temperature"
+            },
+            {
+                "nameCn": "辐射",
+                "nameEn": "Radiation"
+            },
+            {
+                "nameCn": "降水",
+                "nameEn": "Precipitation"
+            },
+            {
+                "nameCn": "降水量",
+                "nameEn": "Precipitation amount"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "青藏高原",
+                "keywordEn": "Tibetan Plateau"
+            },
+            {
+                "keywordCn": "高亚洲",
+                "keywordEn": "High Mountain Asia"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2000-2010",
+                "keywordEn": "2000-2010",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
+                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "The near-surface atmospheric elements including air temperature, pressure, relative humility, wind, precipitation and radiation are called forcing data to drive hydrological, land surface, and ecological models. Coupling or use of the General Circulation Model (GCM) output to drive the land surface model is an important source of forcing data for large-scale land surface models, however the spatial and temporal resolution can not meet the requirements of a regional scale land surface model and its coarse resolution ignored regional environmental impact assessment. Thus, a regional scale land surface model or land surface data assimilation system needs forcing data with a higher temporal-spatial resolution. Therefore, downscaling GCM output is necessary in order to prepare for a long series of high spatial and temporal resolution forcing data for regional scale or basin-scale land surface, hydrological and ecological simulation and assimilation. Downscaling is a method of obtaining high-resolution climate or climate change information from relatively coarse-resolution GCMs. Dynamic downscaling uses large scale climatic background information to establish higher resolution meteorological distribution fields by GCMs. Regional climate model is considered to be an effective dynamic downscaling method to derive high-resolution local climate information. The model’s physical meaning is clear, it is built on the nonlinear interaction between large scale and regional scale, and can distinguish local features characterized by local topography, vegetation cover and soil hydrological processes, and can be used anywhere independent of observation data with an improved description of local features."
+            ],
+            "research objective": [
+                "In order to do the validation of WRF model on simulating forcing data for the Heihe River Basin, daily meteorological observation data from 15 stations of CMA (China Meteorological Administration) and hourly meteorological observation data from seven sites of WATER (Watershed Airborne Telemetry Experimental Research) are used to compare with WRF simulations, with a time range of a whole year for 2008. Thus, the validation accuracy of forcing data from RCM is important before input to drive the land surface model."
+            ],
+            "challenges": [],
+            "methods": [
+                "The model was validated at 15 surface meteorological stations maintained by the China Meteorological Administration (CMA) and seven observation-strengthened stations setup by WATER project. In this study, WRF is used for downscaling of weather and climate ranging from one kilometer to thousands of kilometers and used for deriving meteorological parameters required for hydrological models. For this study, two way nested computational domains of 41×55×28 and 101×121×28 grid points and horizontal resolutions of 25 km and 5 km, respectively, have been set. The model is initialized by real boundary conditions using NCAR-NCEP’s Final Analysis (FNL) data (NCEP-DSS083.2, 2009) having a resolution of 1°×1° (111 km×111 km)."
+            ],
+            "dataset": [
+                "Daily meteorological observation data from 15 stations of CMA (China Meteorological Administration) and hourly meteorological observation data from seven sites of WATER (Watershed Airborne Telemetry Experimental Research) are used to compare with WRF simulations, with a time range of a whole year for 2008. The model was validated at 15 surface meteorological stations maintained by the China Meteorological Administration (CMA) and seven observation-strengthened stations setup by WATER project. Data from CMA stations are used for daily validation; the WATER’s are for hourly validation. All CMA data in 2008 are used for comparison, the time span of WATER’s are listed in Table 2."
+            ],
+            "findings": [
+                "Results show that the average MBE (Mean Bias Error) of daily 2-m surface temperature, surface pressure, 2-m relative humidity and 10-m wind speed were −0.19 °C, −4.49 hPa, 4.08% and 0.92 m/s, the average RMSE (Root Mean Square Error) of them were 2.11 °C, 5.37 hPa, 9.55% and 1.73 m/s, and the average R (correlation coefficient) of them were 0.99, 0.98, 0.80 and 0.55, respectively. The average MBE of hourly 2-m surface temperature, surface pressure, 2-m relative humidity, 10-m wind speed, downward shortwave radiation and downward longwave were −0.16 °C, −6.62 hPa, −5.14%, 0.26 m/s, 33.0 W/m2 and −6.44 W/m2, the average RMSE of them were 2.62 °C, 17.10 hPa, 20.71%, 2.46 m/s, 152.9 W/m2 and 53.5 W/m2, and the average R of them were 0.96, 0.97, 0.70, 0.26, 0.91 and 0.60, respectively. Thus, the following conclusions were obtained: (1) regardless of daily or hourly validation, WRF model simulations of 2-m surface temperature, surface pressure and relative humidity are more reliable, especially for 2-m surface air temperature and surface pressure, the values of MBE were small and R were more than 0.96; (2) the WRF simulating downward shortwave radiation was relatively good, the average R between WRF simulation and hourly observation data was above 0.9, and the average R of downward longwave radiation was 0.6; (3) both wind speed and rainfall simulated from WRF model did not agree well with observation data."
+            ],
+            "backgroundCn": [
+                "近地面大气要素，包括气温、气压、相对湿度、风、降水和辐射，被称为驱动水文、陆面和生态模型的强迫数据。将全球气候模型（GCM）输出与陆面模型耦合或使用是大型陆面模型的重要强迫数据来源，然而其空间和时间分辨率无法满足区域尺度陆面模型的要求，其粗糙的分辨率忽略了区域环境影响评估。因此，区域尺度陆面模型或陆面数据同化系统需要具有更高时间和空间分辨率的强迫数据。因此，降尺度GCM输出是必要的，以准备一系列高空间和时间分辨率的强迫数据，用于区域尺度或流域尺度的陆面、水文和生态模拟与同化。降尺度是一种从相对粗分辨率的GCM中获取高分辨率气候或气候变化信息的方法。动态降尺度利用大规模气候背景信息，通过GCM建立更高分辨率的气象分布场。区域气候模型被认为是有效的动态降尺度方法，用于推导高分辨率的地方气候信息。该模型的物理意义明确，建立在大尺度与区域尺度之间的非线性相互作用之上，能够区分由局部地形、植被覆盖和土壤水文过程特征化的局部特征，并且可以在没有观测数据的情况下独立于任何地方使用，改善对局部特征的描述。"
+            ],
+            "research objectiveCn": [
+                "为了验证WRF模型在模拟黑河流域强迫数据的能力，使用了来自中国气象局（CMA）15个站点的日气象观测数据和来自水文空气遥测实验研究（WATER）七个站点的小时气象观测数据，与WRF模拟结果进行比较，时间范围为2008年的整年。因此，在将区域气候模型（RCM）的强迫数据输入到陆面模型之前，验证其准确性是非常重要的。"
+            ],
+            "challengesCn": [],
+            "methodsCn": [
+                "该模型在中国气象局（CMA）维护的15个地面气象站和由WATER项目设立的7个观测强化站进行了验证。在本研究中，WRF用于天气和气候的下尺度模拟，范围从一公里到数千公里，并用于推导水文模型所需的气象参数。为此研究设置了两个双向嵌套计算域，分别为41×55×28和101×121×28网格点，水平分辨率分别为25公里和5公里。模型通过使用NCAR-NCEP的最终分析（FNL）数据（NCEP-DSS083.2，2009）初始化，边界条件的分辨率为1°×1°（111公里×111公里）。"
+            ],
+            "datasetCn": [
+                "使用中国气象局（CMA）15个气象观测站的日常气象观测数据和水文空气遥测实验研究（WATER）七个站点的每小时气象观测数据，与WRF模拟结果进行比较，时间范围为2008年的整年。该模型在中国气象局（CMA）维护的15个地面气象站和WATER项目设置的七个观测强化站点进行了验证。CMA站点的数据用于日常验证，而WATER的数据用于每小时验证。2008年所有CMA数据均用于比较，WATER的数据时间跨度列在表2中。"
+            ],
+            "findingsCn": [
+                "结果显示，日均2米表面温度、表面气压、2米相对湿度和10米风速的平均MBE（均值偏差）分别为−0.19 °C、−4.49 hPa、4.08%和0.92 m/s，平均RMSE（均方根误差）分别为2.11 °C、5.37 hPa、9.55%和1.73 m/s，平均R（相关系数）分别为0.99、0.98、0.80和0.55。小时2米表面温度、表面气压、2米相对湿度、10米风速、下行短波辐射和下行长波辐射的平均MBE分别为−0.16 °C、−6.62 hPa、−5.14%、0.26 m/s、33.0 W/m²和−6.44 W/m²，平均RMSE分别为2.62 °C、17.10 hPa、20.71%、2.46 m/s、152.9 W/m²和53.5 W/m²，平均R分别为0.96、0.97、0.70、0.26、0.91和0.60。因此，得出以下结论：（1）无论是日均还是小时验证，WRF模型对2米表面温度、表面气压和相对湿度的模拟更为可靠，尤其是2米表面气温和表面气压，MBE值较小且R值均超过0.96；（2）WRF对下行短波辐射的模拟相对较好，WRF模拟与小时观测数据之间的平均R值超过0.9，而下行长波辐射的平均R值为0.6；（3）WRF模型模拟的风速和降水与观测数据不太一致。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Is the WRF model used for downscaling weather and climate data capable of providing high spatial and temporal resolution needed for regional scale simulations?",
+                "QuestionCn": "WRF模型用于天气和气候数据的下行尺度，能够提供区域尺度模拟所需的高空间和时间分辨率吗？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Does the validation of meteorological models primarily depend on daily observation data from meteorological stations, hourly data from specialized projects, or both?",
+                "QuestionCn": "气象模型的验证主要依赖于气象站的日常观测数据、专门项目的小时数据，还是两者兼而有之？",
+                "AnswerEn": "both",
+                "AnswerCn": "两者",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "When is the time range used for model validation in studies assessing the accuracy of downscaled meteorological data for hydrological and ecological simulations?",
+                "QuestionCn": "在评估下游气象数据在水文和生态模拟中的准确性时，模型验证所使用的时间范围是什么？",
+                "AnswerEn": "2008",
+                "AnswerCn": "2008年",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method that validates a regional climate model's output using meteorological observations?",
+                "QuestionCn": "您能否提供一个数据收集方法的例子，用于验证区域气候模型输出与气象观测的关系？",
+                "AnswerEn": "The validation of the WRF model involved comparing its output with daily meteorological observation data from 15 stations of CMA (China Meteorological Administration) and hourly meteorological observation data from seven sites of the WATER project for the entire year of 2008.",
+                "AnswerCn": "WRF模型的验证涉及将其输出与中国气象局15个站点的日气象观测数据以及WATER项目七个站点的小时气象观测数据进行比较，时间范围为2008年全年。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you give an example of how dynamic downscaling is used to generate high-resolution climate data in a specific region?",
+                "QuestionCn": "动态下调是如何用于生成特定区域高分辨率气候数据的一个例子。",
+                "AnswerEn": "Dynamic downscaling was employed using the WRF model to establish higher resolution meteorological distribution fields by utilizing large-scale climatic background information from GCMs. This approach was applied to derive meteorological parameters necessary for hydrological models, set within nested computational domains with grid points and horizontal resolutions of 25 km and 5 km.",
+                "AnswerCn": "动态下采样采用WRF模型，通过利用来自全球气候模型（GCMs）的较大规模气候背景信息，建立更高分辨率的气象分布场。该方法用于推导水文模型所需的气象参数，设置在具有25公里和5公里网格点及水平分辨率的嵌套计算域内。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the attributes and resolution specifications of atmospheric variables used in datasets in this domain?",
+                "QuestionCn": "在该领域的数据集中使用的大气变量的属性和分辨率规格是什么？",
+                "AnswerEn": "temperature at 2m, pressure, specific humidity at 2m, zonal wind component at 10m, meridional wind component at 10m, solid precipitation ratio, accumulated convective precipitation, accumulated grid precipitation, downward shortwave radiation flux, downward longwave radiation flux, accumulated potential evaporation, spatial resolution 10 km, temporal resolution hourly",
+                "AnswerCn": "2米温度、气压、2米比湿、10米纬向风分量、10米经向风分量、固态降水比率、积累对流降水、积累格点降水、向下短波辐射通量、向下长波辐射通量、积累潜在蒸发，空间分辨率10公里，时间分辨率每小时。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What characteristics define the land surface state variables collected for datasets in this field?",
+                "QuestionCn": "定义该领域数据集的陆地表面状态变量的特征是什么？",
+                "AnswerEn": "soil temperature, soil moisture, soil liquid water content, heat flux due to phase change of snow, soil bottom temperature, surface runoff, subsurface runoff, vegetation fraction, ground heat flux, snow water equivalent, actual snow depth, snow density, canopy water, surface temperature, albedo, background albedo, lower boundary soil temperature, upward heat flux at the surface, upward water flux at the surface",
+                "AnswerCn": "土壤温度、土壤湿度、土壤液态水含量、由于雪相变引起的热通量、土壤底部温度、地表径流、地下径流、植被覆盖率、地面热通量、雪水当量、实际雪深、雪密度、冠层水、地表温度、反照率、背景反照率、土壤下边界温度、地表向上的热通量、地表向上的水通量。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are the criteria for validating the accuracy of forcing data in the context of this field?",
+                "QuestionCn": "在该领域中，验证强迫数据准确性的标准包括以下几个方面：",
+                "AnswerEn": "Mean Bias Error (MBE), Root Mean Square Error (RMSE), correlation coefficient (R), 2-m surface temperature, surface pressure, relative humidity, wind speed",
+                "AnswerCn": "平均偏差误差 (MBE)、均方根误差 (RMSE)、相关系数 (R)、2米高度地表温度、地表气压、相对湿度、风速",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does 'dynamic downscaling' mean in the context of generating high-resolution climate data?",
+                "QuestionCn": "在生成高分辨率气候数据的背景下，“动态下调”指的是一种气候建模技术，通过将大尺度气候模型的输出数据转化为更小尺度的高分辨率数据，以捕捉更细致的气候变化特征和局部气候过程。",
+                "AnswerEn": "Dynamic downscaling is a method of obtaining high-resolution climate or climate change information from relatively coarse-resolution General Circulation Models (GCMs). It uses large scale climatic background information to establish higher resolution meteorological distribution fields by GCMs. The regional climate model is considered an effective dynamic downscaling method to derive high-resolution local climate information, which can distinguish local features characterized by local topography, vegetation cover, and soil hydrological processes.",
+                "AnswerCn": "动态下采样是一种从相对粗分辨率的全球气候模型（GCMs）中获取高分辨率气候或气候变化信息的方法。它利用大规模气候背景信息来建立由GCMs生成的高分辨率气象分布场。区域气候模型被认为是一种有效的动态下采样方法，用于获取高分辨率的地方气候信息，能够区分由地方地形、植被覆盖和土壤水文过程特征所表征的地方特征。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are 'forcing data' in the context of hydrological and ecological models?",
+                "QuestionCn": "在水文和生态模型的背景下，“强迫数据”指的是用于驱动模型的外部输入数据。这些数据通常包括气象数据（如降水、温度、风速等）、土地利用变化、流域特征和其他环境变量，它们对模型的运行和结果产生重要影响。",
+                "AnswerEn": "Forcing data refer to near-surface atmospheric elements including air temperature, pressure, relative humidity, wind, precipitation, and radiation. These elements are used to drive hydrological, land surface, and ecological models. They are essential inputs for these models to simulate various environmental processes accurately.",
+                "AnswerCn": "强迫数据指的是近地面大气要素，包括气温、气压、相对湿度、风、降水和辐射。这些要素用于驱动水文、陆面和生态模型。它们是这些模型准确模拟各种环境过程的基本输入。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do the data collection methods at CMA stations compare to those used at WATER project sites in terms of their impact on the validation accuracy of meteorological models?",
+                "QuestionCn": "CMA站点的数据收集方法与WATER项目地点使用的方法在气象模型验证准确性方面的影响如何比较？",
+                "AnswerEn": "The data collection methods at CMA stations provide daily meteorological observations, while the WATER project sites offer hourly data. The validation accuracy of meteorological models using daily CMA data showed reliable simulations for 2-m surface temperature, surface pressure, and relative humidity. In contrast, the hourly data from WATER sites allowed for a detailed assessment of parameters like downward shortwave radiation, which had a high correlation with observations, indicating differences in temporal resolution impact.",
+                "AnswerCn": "CMA站点的数据收集方法提供每日气象观测，而WATER项目站点则提供每小时数据。使用每日CMA数据验证气象模型的准确性显示出对2米表面温度、表面气压和相对湿度的可靠模拟。相比之下，来自WATER站点的每小时数据允许对下行短波辐射等参数进行详细评估，其与观测值之间的高相关性表明了时间分辨率对结果的影响。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "What can be inferred about the importance of spatial and temporal resolution in meteorological datasets when considering regional environmental impacts?",
+                "QuestionCn": "在考虑区域环境影响时，可以推断出气象数据集中的空间和时间分辨率的重要性。",
+                "AnswerEn": "The spatial and temporal resolution of meteorological datasets is crucial for accurately assessing regional environmental impacts. Coarse resolution, such as that from General Circulation Models (GCMs), often misses localized features and impacts, prompting the need for downscaling to achieve higher resolution. This allows regional scale models to better capture local topography, vegetation, soil hydrological processes, and other regional characteristics for more precise environmental assessments.",
+                "AnswerCn": "气象数据集的空间和时间分辨率对于准确评估区域环境影响至关重要。粗分辨率的数据，如来自一般环流模型（GCMs），往往无法捕捉到局部特征和影响，因此需要进行降尺度以实现更高的分辨率。这使得区域尺度模型能够更好地捕捉当地地形、植被、土壤水文过程以及其他区域特征，从而进行更精确的环境评估。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "How might the validation process of meteorological models influence the reliability of forcing data used in hydrological and ecological simulations?",
+                "QuestionCn": "气象模型的验证过程如何影响用于水文和生态模拟的强迫数据的可靠性？",
+                "AnswerEn": "The validation process of meteorological models, such as using observations from meteorological stations, is essential for ensuring the reliability of forcing data. Accurate validation against observed data helps verify the model's ability to simulate key atmospheric variables like temperature, pressure, and humidity. This is critical before using the model's output to drive hydrological and ecological simulations, as it ensures the data reflects real-world conditions and improves the accuracy of model predictions.",
+                "AnswerCn": "气象模型的验证过程，例如使用气象站的观测数据，对于确保强迫数据的可靠性至关重要。与观测数据的准确验证有助于验证模型模拟关键大气变量（如温度、压力和湿度）的能力。这在使用模型输出驱动水文和生态模拟之前是至关重要的，因为它确保数据反映真实世界的条件，并提高模型预测的准确性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What causes the need for high temporal and spatial resolution in regional scale land surface models?",
+                "QuestionCn": "区域尺度土地表面模型对高时间分辨率和空间分辨率的需求原因是什么？",
+                "AnswerEn": "The need for high temporal and spatial resolution in regional scale land surface models is caused by the limitations of General Circulation Models (GCMs), which have coarse resolution that does not meet the requirements for regional scale models and ignores regional environmental impacts.",
+                "AnswerCn": "区域尺度土地表面模型对高时间和空间分辨率的需求是由于全球气候模型（GCM）的局限性，后者的分辨率较粗，无法满足区域尺度模型的要求，并且忽略了区域环境影响。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is dynamic downscaling considered necessary for preparing high-resolution forcing data?",
+                "QuestionCn": "动态下调被认为是准备高分辨率强迫数据所必需的原因是什么？",
+                "AnswerEn": "Dynamic downscaling is considered necessary because it allows for the derivation of high-resolution climate information from coarse General Circulation Models (GCMs), providing a clearer description of local features such as topography, vegetation cover, and soil hydrological processes, which are crucial for regional scale or basin-scale simulations and assimilations.",
+                "AnswerCn": "动态下调被认为是必要的，因为它允许从粗分辨率的全球气候模型（GCMs）中推导出高分辨率的气候信息，从而更清晰地描述局部特征，如地形、植被覆盖和土壤水文过程，这些对于区域尺度或流域尺度的模拟和同化至关重要。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What is the impact of using high-resolution dynamic downscaling techniques on the accuracy and precision of regional scale meteorological simulations?",
+                "QuestionCn": "使用高分辨率动态下调技术对区域尺度气象模拟的准确性和精确性有何影响？",
+                "AnswerEn": "Using high-resolution dynamic downscaling techniques, such as the WRF model, allows for the derivation of meteorological parameters with higher spatial and temporal resolution, which improves the accuracy and precision of regional scale meteorological simulations. This method can distinguish local features characterized by local topography, vegetation cover, and soil hydrological processes, providing a clearer physical meaning and improved local feature descriptions.",
+                "AnswerCn": "使用高分辨率动态下调技术，如WRF模型，可以以更高的空间和时间分辨率推导气象参数，从而提高区域尺度气象模拟的准确性和精确性。这种方法能够区分由局部地形、植被覆盖和土壤水文过程特征化的局部特征，提供更清晰的物理意义和改进的局部特征描述。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "How does the integration of General Circulation Model outputs with regional climate models affect the quality of forcing data for hydrological and ecological simulations?",
+                "QuestionCn": "全球环流模型输出与区域气候模型的集成如何影响水文和生态模拟的强迫数据质量？",
+                "AnswerEn": "Integrating General Circulation Model outputs with regional climate models through downscaling enhances the quality of forcing data by providing higher temporal and spatial resolution data necessary for regional scale hydrological and ecological simulations. This integration addresses the limitations of coarse-resolution GCMs and improves regional environmental impact assessments, enabling effective simulation and assimilation of localized climatic conditions.",
+                "AnswerCn": "通过降尺度将一般环流模型（GCM）输出与区域气候模型集成，可以提高强迫数据的质量，提供区域尺度水文和生态模拟所需的更高时间和空间分辨率数据。这种集成解决了粗分辨率GCM的局限性，并改善了区域环境影响评估，使得能够有效模拟和同化局部气候条件。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the purpose of downscaling GCM output to create high-resolution forcing data for regional scale land surface models?",
+                "QuestionCn": "将GCM输出进行降尺度的目的是为了为区域尺度的陆面模型创建高分辨率的强迫数据。",
+                "AnswerEn": "Downscaling GCM output is necessary to prepare a long series of high spatial and temporal resolution forcing data for regional scale or basin-scale land surface, hydrological, and ecological simulation and assimilation. It addresses the limitations of GCMs' coarse resolution that ignore regional environmental impact assessments.",
+                "AnswerCn": "对GCM输出进行降尺度处理是为了准备一系列高空间和时间分辨率的强迫数据，以用于区域尺度或流域尺度的地表、 hydrological 和生态模拟与同化。这解决了GCM粗分辨率的局限性，忽略了区域环境影响评估。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Why is it essential to validate WRF model simulations against meteorological observations before being used in land surface models?",
+                "QuestionCn": "在将WRF模型模拟结果用于陆面模型之前，验证其与气象观测数据的一致性是至关重要的。",
+                "AnswerEn": "Validation accuracy of forcing data from RCM is important before input to drive the land surface model, ensuring reliability and accuracy of the simulations in representing near-surface atmospheric conditions.",
+                "AnswerCn": "强迫数据的验证准确性对于区域气候模型（RCM）在输入驱动陆面模型之前非常重要，以确保模拟在表示近地面大气条件方面的可靠性和准确性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is the significance of using a regional climate model for obtaining high-resolution local climate information?",
+                "QuestionCn": "使用区域气候模型获取高分辨率地方气候信息的重要性是什么？",
+                "AnswerEn": "A regional climate model is effective for dynamic downscaling to derive high-resolution local climate information, as it can distinguish local features characterized by local topography, vegetation cover, and soil hydrological processes, and can be used anywhere independent of observation data with an improved description of local features.",
+                "AnswerCn": "区域气候模型在动态下采样方面有效，可以获取高分辨率的地方气候信息，因为它能够区分由地方地形、植被覆盖和土壤水文过程特征所表征的地方特征，并且可以在任何地方独立于观测数据使用，从而改善对地方特征的描述。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedures are used to validate a regional climate model's ability to simulate high-resolution atmospheric and surface state data for a specified geographic region?",
+                "QuestionCn": "用于验证区域气候模型在特定地理区域模拟高分辨率大气和地表状态数据能力的程序有哪些？",
+                "AnswerEn": "The validation of a regional climate model, such as WRF, involves comparing its simulations with meteorological observation data from established stations. For example, in the research context, daily meteorological observation data from 15 CMA stations and hourly data from seven WATER sites were used to validate the model over a year, focusing on variables like surface temperature, pressure, humidity, and wind speed.",
+                "AnswerCn": "区域气候模型（如WRF）的验证涉及将其模拟结果与已建立气象站的气象观测数据进行比较。例如，在研究背景下，使用来自15个中国气象局（CMA）站的日气象观测数据和来自七个水文站（WATER）的小时数据，对模型进行了为期一年的验证，重点关注表面温度、气压、湿度和风速等变量。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How is downscaling applied to enhance the spatial and temporal resolution of climate data from general circulation models for regional applications?",
+                "QuestionCn": "下调技术如何应用于提高来自一般环流模型的气候数据的空间和时间分辨率，以便进行区域应用？",
+                "AnswerEn": "Downscaling is applied to obtain high-resolution climate data using dynamic methods. Regional climate models, like WRF, are employed to perform dynamic downscaling, which involves using large-scale climatic background information to establish higher-resolution meteorological distribution fields. This process enables the generation of climate data that can capture local features such as topography and vegetation, independent of direct observation data.",
+                "AnswerCn": "下采样是通过动态方法获得高分辨率气候数据的过程。区域气候模型，如WRF，被用来执行动态下采样，这涉及使用大规模气候背景信息来建立更高分辨率的气象分布场。这个过程能够生成能够捕捉局部特征（如地形和植被）的气候数据，而不依赖于直接观测数据。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What methodologies are employed to integrate various meteorological and surface state variables into a comprehensive dataset for use in hydrological and ecological models?",
+                "QuestionCn": "有哪些方法论被用来将各种气象和地表状态变量整合成一个综合数据集，以便在水文和生态模型中使用？",
+                "AnswerEn": "Methodologies involve using regional climate models like WRF to simulate a range of near-surface atmospheric and surface state variables over a defined spatial and temporal resolution. This includes variables such as 2-m temperature, surface pressure, and soil moisture, which are then validated against observational data from meteorological stations to ensure reliability before being used in hydrological and ecological models.",
+                "AnswerCn": "方法论涉及使用区域气候模型，如WRF，模拟一系列近地面大气和表面状态变量，涵盖特定的空间和时间分辨率。这包括2米温度、地面气压和土壤湿度等变量，然后通过与气象站的观测数据进行验证，以确保其可靠性，之后再用于水文和生态模型。",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might the expected accuracy of forcing data from regional climate models not align with observations when driving a land surface model?",
+                "QuestionCn": "为什么区域气候模型的强迫数据在驱动陆面模型时，预期的准确性可能与观测结果不一致？",
+                "AnswerEn": "The validation accuracy of forcing data from regional climate models is crucial before input into land surface models. Potential discrepancies can arise from limitations in spatial and temporal resolution of the original General Circulation Model outputs, which may not fully capture regional environmental impacts, as well as challenges in accurately simulating specific variables like wind speed and rainfall.",
+                "AnswerCn": "强制区域气候模型数据的验证准确性在输入陆面模型之前至关重要。由于原始大气环流模型输出的空间和时间分辨率的限制，可能会出现潜在的差异，这可能无法充分捕捉区域环境影响，以及在准确模拟特定变量（如风速和降雨量）方面的挑战。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might some meteorological parameters, such as wind speed and rainfall, not perform as well in simulations compared to other variables like temperature and pressure?",
+                "QuestionCn": "某些气象参数，如风速和降雨量，在模拟中的表现可能不如其他变量（如温度和气压）好，原因可能是什么？",
+                "AnswerEn": "Simulations of wind speed and rainfall from dynamic downscaling methods like the WRF model may not align as closely with observational data due to complex atmospheric processes and interactions that are more difficult to model accurately. Factors such as model resolution, parameterization schemes, and local geographical influences can impact the accuracy of these variables more significantly than others like temperature and pressure.",
+                "AnswerCn": "动态下调方法如WRF模型的风速和降雨量模拟可能与观测数据的对齐程度较低，这是由于复杂的气象过程和相互作用更难以准确建模。模型分辨率、参数化方案和地方地理影响等因素可能对这些变量的准确性产生比温度和压力等其他变量更显著的影响。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "In your judgment, what are the potential implications of the reliability of regional climate model simulations on hydrological and ecological modeling?",
+                "QuestionCn": "在您看来，区域气候模型模拟的可靠性对水文和生态建模的潜在影响是什么？",
+                "AnswerEn": "The reliability of regional climate model simulations significantly impacts hydrological and ecological modeling by providing accurate forcing data, such as surface temperature, pressure, and humidity. Reliable simulations ensure that models can accurately reflect environmental conditions, enhancing our understanding and prediction capabilities of regional hydrological and ecological processes.",
+                "AnswerCn": "区域气候模型模拟的可靠性对水文和生态建模有显著影响，因为它提供了准确的强迫数据，如地表温度、气压和湿度。可靠的模拟确保模型能够准确反映环境条件，从而增强我们对区域水文和生态过程的理解和预测能力。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don't understand how high-resolution forcing data is generated for regional-scale models?",
+                "QuestionCn": "我不明白如何为区域尺度模型生成高分辨率强迫数据。",
+                "AnswerEn": "High-resolution forcing data for regional-scale models is generated through a process called downscaling, where coarse-resolution General Circulation Model (GCM) outputs are refined to higher temporal and spatial resolutions. Dynamic downscaling involves using regional climate models, such as WRF, to establish meteorological distribution fields that reflect local features like topography and vegetation without dependence on observation data.",
+                "AnswerCn": "高分辨率强迫数据用于区域尺度模型的生成过程称为下采样，其中粗分辨率的全球气候模型（GCM）输出被细化为更高的时间和空间分辨率。动态下采样涉及使用区域气候模型，如WRF，建立反映局部特征（如地形和植被）的气象分布场，而不依赖于观测数据。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I'm unsure about the methods used to validate meteorological simulation models in this domain.",
+                "QuestionCn": "我对在这个领域中验证气象模拟模型所使用的方法感到不确定。",
+                "AnswerEn": "Meteorological simulation models are validated by comparing their outputs against observational data from meteorological stations. In this domain, the WRF model's outputs were validated using daily data from 15 CMA stations and hourly data from seven WATER sites, assessing parameters like surface temperature, pressure, humidity, and radiation for accuracy against observed values.",
+                "AnswerCn": "气象模拟模型通过将其输出与气象站的观测数据进行比较来验证。在这个领域，WRF模型的输出使用来自15个CMA站的日数据和来自七个WATER站的小时数据进行验证，评估表面温度、气压、湿度和辐射等参数的准确性与观测值的对比。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please investigate the potential for expanding datasets through the integration of additional observational data sources in the simulation of near-surface atmospheric elements.",
+                "QuestionCn": "请调查通过整合额外观测数据源在近地面大气元素模拟中扩展数据集的潜力。",
+                "AnswerEn": "Expanding datasets can be achieved by integrating additional observational data sources from meteorological stations, satellite observations, or other regional monitoring networks. This integration could enhance the spatial and temporal resolution of simulations, improve the accuracy of model validations, and provide more comprehensive datasets for hydrological, land surface, and ecological models. Utilizing diverse data sources can also help identify and address regional environmental impacts more effectively.",
+                "AnswerCn": "扩展数据集可以通过整合来自气象站、卫星观测或其他区域监测网络的额外观测数据源来实现。这种整合可以提高模拟的空间和时间分辨率，改善模型验证的准确性，并为水文、陆面和生态模型提供更全面的数据集。利用多样化的数据源还可以更有效地识别和解决区域环境影响。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

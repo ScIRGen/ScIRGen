@@ -1,0 +1,628 @@
+{
+    "id": "57148781-4c75-4259-a9e6-8d15c1a0f474",
+    "relatedPaper": 2,
+    "context": {
+        "metadata": {
+            "titleEn": "Bankfull geometry dataset of major exorheic rivers on the Qinghai-Tibet Plateau (1984-2020)",
+            "titleCn": "青藏高原主要河流平滩河流表面信息数据库（1984-2020）",
+            "description": "Based on the Sentinel-2 and Landsat 5/7/8 multispectral instrument imageries combined with in-situ measured hydrological data, bankfull river geometry of six major exorheic river basins of the Qinghai-Tibet Plateau (the upper Yellow River, upper Jinsha River, Yalong River, Lantsang River, Nu River and Yalung Zangbo River) are presented. River surface of six mainstreams and major tributaries are included. For each river basin, two types of rivers are included: connected and disconnected rivers. Format of the dataset is .shp exported from the ArcGIS 10.5.\nThree products are included in the dataset: one original product (bankfull river surface dataset) and two derived products (bankfull river width dataset and bankfull river surface area dataset with a 1 km river length interval). These three products are in three folders. The first folder, “1-Bankfull River Surface”, contains river surface vectors for six river basins in the .shp file. The second folder, “2-Bankfull River Width”, contains bankfull river widths and corresponding coordinates with a 1 km-step river length for six mainstreams and some connected tributaries in .xlsx format. The river width vectors in the .shp files are also provided in the second folder. The third folder, “3-Bankfull River Surface Area”, contains bankfull river surface areas and corresponding coordinates with a 1 km-step river length for six mainstreams and some connected tributaries in .xlsx format. \nThree Supplementary Files are included: Supplementary File 1, tables and figures related to the dataset; Supplementary File 2, used for river surface extraction based on GEE platform; Supplementary File 3, used for river width extraction based on Matlab.\nThe provided planform river hydromorphology data can supplement global hydrography datasets and effectively represent the combined fluvial geomorphology and geological background in the study area.",
+            "descriptionCn": "青藏高原六大外流河（黄河、金沙江、雅砻江、怒江、澜沧江、雅鲁藏布江）平滩流量条件下河流表面SHP矢量数据，以1km为步长的平滩流量下河宽和面积的SHP矢量和XLS表格数据。\n基于现场实测水文和大断面数据（1967-2020年），结合洪水频率分析，确定六大水系沿程的平滩流量、日期和河宽；采用MNDWI指数分别从Sentinel-2（2017-2020年）和Landsat5/7/8（1984-2020年）影像中提取平滩流量下河流表面矢量。\n该数据库可作为全球水文数据集的补充，为研究青藏高原河床演变、河流生态、水文模拟、河流水-气界面物质交换等提供基础数据。",
+            "instructions": "XXX_con.shp;  \nXXX_discon.shp;  \nXXX_connected_river_width_divide_1km.shp;  \nXXX_connected_RW_divide_1km.xlsx;  \nXXX_connected_area_divided_1km.shp;  \nXXX_connected_Area_divide_1km.xlsx;",
+            "instructionsCn": "XXX_连通河流.shp;     \nXXX_不连通河流.shp;     \nXXX_连通河流河宽1km间隔.shp;     \nXXX_连通河流河宽1km间隔.xlsx;    \nXXX_连通河流表面积1km间隔.shp;    \nXXX_连通河流表面积1km间隔.xlsx;",
+            "east": 105.57,
+            "west": 82.0,
+            "south": 22.98,
+            "north": 38.33,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 80988941.0,
+            "cstr": null,
+            "doi": "10.1038/s41597-022-01614-w",
+            "dataFormat": null,
+            "license": "Attribution 4.0 International (CC BY 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "李丹",
+                "nameEn": "LI Dan ",
+                "unitEn": "State Key Laboratory of Hydroscience and Engineering, Department of Hydraulic Engineering, Tsinghua University",
+                "unitCn": "清华大学  水利水电工程系  水沙科学与水利水电工程国家重点实验室"
+            },
+            {
+                "nameCn": "薛源",
+                "nameEn": "XUE Yuan ",
+                "unitEn": "State Key Laboratory of Hydroscience and Engineering, Department of Hydraulic Engineering, Tsinghua University",
+                "unitCn": "清华大学  水利水电工程系  水沙科学与水利水电工程国家重点实验室"
+            },
+            {
+                "nameCn": "覃超",
+                "nameEn": "QIN Chao ",
+                "unitEn": "State Key Laboratory of Hydroscience and Engineering, Department of Hydraulic Engineering, Tsinghua University",
+                "unitCn": "清华大学  水利水电工程系  水沙科学与水利水电工程国家重点实验室"
+            },
+            {
+                "nameCn": "吴保生",
+                "nameEn": "WU Baosheng ",
+                "unitEn": "State Key Laboratory of Hydroscience and Engineering, Department of Hydraulic Engineering, Tsinghua University",
+                "unitCn": "清华大学  水利水电工程系  水沙科学与水利水电工程国家重点实验室"
+            },
+            {
+                "nameCn": "陈博伟",
+                "nameEn": "CHEN Bowei ",
+                "unitEn": "Key Laboratory of Digital Earth Science, Aerospace Information Research Institute, Chinese Academy of Sciences",
+                "unitCn": "中国科学院  空天信息创新研究院  数字地球重点实验室"
+            },
+            {
+                "nameCn": "汪舸",
+                "nameEn": "WANG Ge ",
+                "unitEn": "State Key Laboratory of Hydroscience and Engineering, Department of Hydraulic Engineering, Tsinghua University",
+                "unitCn": "清华大学  水利水电工程系  水沙科学与水利水电工程国家重点实验室"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Automatic extraction of mountain river surface and width based on multisource high-resolution satellite images",
+                "referenceCn": null,
+                "referenceEn": "Xue, Y., Qin, C., Wu, B., Li, D., & Fu, X. (2022). Automatic extraction of mountain river surface and width based on multisource high-resolution satellite images. Remote Sensing, 14, 2370."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "River extraction under bankfull discharge conditions based on sentinel-2 imagery and DEM data",
+                "referenceCn": null,
+                "referenceEn": "Li, D., Wang, G., Qin, C., & Wu, B.S. (2021). River extraction under bankfull discharge conditions based on sentinel-2 imagery and DEM data. Remote Sensing, 13, 2650."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Open-Surface River Extraction Based on Sentinel-2 MSI Imagery and DEM Data: Case Study of the Upper Yellow River",
+                "referenceCn": null,
+                "referenceEn": "Li, D., Wu, B., Chen, B., Qin, C., Wang, Y., Zhang, Y., & Xue, Y. (2020). Open-Surface River Extraction Based on Sentinel-2 MSI Imagery and DEM Data: Case Study of the Upper Yellow River. Remote Sensing, 12, 2737."
+            },
+            {
+                "titleCn": "基于多源国产高分辨率遥感影像的山区河流信息自动提取",
+                "titleEn": null,
+                "referenceCn": "薛源, 覃超, 吴保生, 李丹, 傅旭东. (2022). 基于多源国产高分辨率遥感影像的山区河流信息自动提取. 清华大学学报(自然科学版), 10.16511/j.cnki.qhdxxb.2022.22.043.",
+                "referenceEn": null
+            },
+            {
+                "titleCn": "基于卫星遥感的水体信息提取研究进展与展望",
+                "titleEn": null,
+                "referenceCn": "李丹, 吴保生, 陈博伟, 薛源, 张翼. (2020). 基于卫星遥感的水体信息提取研究进展与展望. 清华大学学报(自然科学版), 60, 147-161.",
+                "referenceEn": null
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "其他",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "遥感",
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "三级流域分区水系网",
+                "nameEn": "class III watershed"
+            },
+            {
+                "nameCn": "光学遥感",
+                "nameEn": "Optical remote sensing"
+            },
+            {
+                "nameCn": "其他",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "其他数据",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "山区河流",
+                "nameEn": "moutain river"
+            },
+            {
+                "nameCn": "径流",
+                "nameEn": "Streamflow"
+            },
+            {
+                "nameCn": "时空差异",
+                "nameEn": "spatio-temporal variations"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "hydrology"
+            },
+            {
+                "nameCn": "水文特征值",
+                "nameEn": "Hydrologic characteristic value"
+            },
+            {
+                "nameCn": "水文遥感产品",
+                "nameEn": "Hydrological remote sensing products"
+            },
+            {
+                "nameCn": "流域水系",
+                "nameEn": "Drainage Basin and River System"
+            },
+            {
+                "nameCn": "遥感产品",
+                "nameEn": "Remote Sensing Product"
+            },
+            {
+                "nameCn": "遥感技术",
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameCn": "陆地表层遥感",
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "怒江",
+                "keywordEn": "Nu River"
+            },
+            {
+                "keywordCn": "澜沧江",
+                "keywordEn": "Lantsang River"
+            },
+            {
+                "keywordCn": "金沙江",
+                "keywordEn": "Jinsha River"
+            },
+            {
+                "keywordCn": "雅砻江",
+                "keywordEn": "Yalong River"
+            },
+            {
+                "keywordCn": "雅鲁藏布江",
+                "keywordEn": "Yarlung Zangbo River"
+            },
+            {
+                "keywordCn": "青藏高原",
+                "keywordEn": "Qinghai-Tibet Plateau"
+            },
+            {
+                "keywordCn": "黄河",
+                "keywordEn": "Yellow River"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1984-2020",
+                "keywordEn": "1984-2020",
+                "type": "temporal"
+            },
+            {
+                "keywordCn": "年最大洪峰流量",
+                "keywordEn": "annual maximum peak discharge",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "国家自然科学基金",
+                "titleEn": "National Natural Science Foundation of China"
+            },
+            {
+                "titleCn": "国家自然科学基金青年项目",
+                "titleEn": "National Natural Science Foundation of China"
+            },
+            {
+                "titleCn": "中国博士后科学基金",
+                "titleEn": "China Postdoctoral Science Foundation"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "River discharge and width are essential hydraulic variables and hydrological data needed to inform river management and restoration efforts. Bankfull discharge is morphologically critical because it represents the link between within-bank processes and floodplain processes, and bankfull discharge is frequently used to estimate the channel forming or dominant discharge of alluvial rivers. Therefore, understanding the dynamics of bankfull discharge and bankfull river width at fine spatial resolutions is essential for applications in hydrology, fluvial geomorphology, and stream ecology. Remote sensing is an effective method for extracting open-surface inland water bodies over a variety of spatiotemporal scales compared with other field survey methods employed in the past decades."
+            ],
+            "research objective": [
+                "Insights into bankfull river discharge and bankfull width at fine spatial resolutions are essential. More importantly, the extracted river widths provide basic data to analyze the spatial distribution of bankfull widths along river networks and other applications in hydrology, fluvial geomorphology, and stream ecology."
+            ],
+            "challenges": [
+                "However, for rivers with high suspended sediment concentrations, the existing methods are usually less accurate in river width extraction. However, most existing river width datasets were not acquired under bankfull discharge conditions due to the limited number of high-quality images constrained by the satellite revisitation periods and the influence of snow and clouds; and limited in situ measurement data can be used to calculate bankfull discharge. To date, there are no in-depth studies of the river network structure and runoff characteristics of the QTP, which is known as the “Asian Water Tower”, containing the headwaters of ten major rivers across the Asian continent, and related research has just begun."
+            ],
+            "methods": [
+                "In this study, 10-m Sentinel-2 multispectral instrument (MSI) imagery and digital elevation model (DEM) data, as well as in situ discharge and sediment data, are fused to extract bankfull river widths on the upper Yellow River. Using in situ cross-section morphology data and flood frequency estimations to calculate the bankfull discharge of 22 hydrological stations, the one-to-one correspondence relationship between the bankfull discharge data and the image cover data was determined. The machine learning (ML) method is used to extract water bodies from the Sentinel-2 images in the Google Earth Engine (GEE)."
+            ],
+            "dataset": [
+                "The data used in this study were acquired from the Annual Hydrological Reports of the People’s Republic of China (1967–2019), and these data include river width, flow depth, flow velocity, flow discharge, suspended sediment concentration, and cross-section information. A total of 713 samples (400 water bodies, 313 nonwater bodies) were manually selected from the land-cover images on the GEE platform for the first subregion; the second subregion has a total of 409 samples (202 water bodies, 207 nonwater bodies); and the third subregion has 608 samples (302 water bodies, 306 nonwater bodies)."
+            ],
+            "findings": [
+                "The research results show that (1) for rivers with high suspended sediment concentrations, the water quality index (SRMIR-Red) constitutes a higher contribution; the infrared band performs better in areas with greater amounts of vegetation coverage; and for rivers in general, the water indices perform best. (2) The effective river width of the extracted connected rivers is 30 m, which is 3 times the image resolution. The R2, root mean square error (RMSE), and mean bias error (MBE) of the estimated river width values are 0.991, 7.455 m, and −0.232 m, respectively. (3) The average river widths of the single-thread sections show linear increases along the main stream, and the R2 value is 0.801. The river width has a power function relationship with bankfull discharge and the contributing area, i.e., the downstream hydraulic geometry, with R2 values of 0.782 and 0.630, respectively."
+            ],
+            "backgroundCn": [
+                "河流流量和宽度是重要的水力变量和水文数据，对于河流管理和恢复工作至关重要。满流量在形态上具有重要意义，因为它代表了河岸内过程与洪泛区过程之间的联系，满流量常用于估算冲积河流的河道形成或主导流量。因此，理解满流量和满流河宽在细空间分辨率下的动态，对于水文学、河流地貌学和溪流生态学的应用至关重要。与过去几十年采用的其他实地调查方法相比，遥感是一种有效的提取开放水面内陆水体的方法，适用于各种时空尺度。"
+            ],
+            "research objectiveCn": [
+                "对河流的满流量和满流宽度的细空间分辨率洞察至关重要。更重要的是，提取的河流宽度为分析河流网络沿线的满流宽度的空间分布以及在水文学、河流地貌学和溪流生态学中的其他应用提供了基本数据。"
+            ],
+            "challengesCn": [
+                "然而，对于悬浮沉积物浓度较高的河流，现有的方法在河宽提取方面通常不够准确。然而，大多数现有的河宽数据集并不是在满流条件下获取的，这主要是由于高质量影像数量有限，受到卫星重访周期的限制，以及雪和云的影响；而且可用于计算满流的现场测量数据也有限。迄今为止，关于青藏 Plateau（QTP）的河流网络结构和径流特征的深入研究尚未开展，该地区被称为“亚洲水塔”，是亚洲大陆十条主要河流的发源地，相关研究刚刚开始。"
+            ],
+            "methodsCn": [
+                "在本研究中，利用10米分辨率的Sentinel-2多光谱仪（MSI）影像和数字高程模型（DEM）数据，以及现场流量和沉积物数据，融合提取了黄河上游的银行全宽。通过使用现场横截面形态数据和洪水频率估算来计算22个水文站的银行全流量，确定了银行全流量数据与影像覆盖数据之间的一一对应关系。采用机器学习（ML）方法在谷歌地球引擎（GEE）中提取Sentinel-2影像中的水体。"
+            ],
+            "datasetCn": [
+                "本研究所使用的数据来自中华人民共和国的年度水文报告（1967–2019），这些数据包括河流宽度、流深、流速、流量、悬浮沉积物浓度和横截面信息。第一子区域共手动选择了713个样本（400个水体，313个非水体）；第二子区域共有409个样本（202个水体，207个非水体）；第三子区域有608个样本（302个水体，306个非水体）。"
+            ],
+            "findingsCn": [
+                "研究结果表明：(1) 对于悬浮沉积物浓度较高的河流，水质指数（SRMIR-Red）贡献更大；红外波段在植被覆盖量较大的区域表现更好；而对于一般河流，水质指数的表现最佳。(2) 提取的连通河流的有效河宽为30米，是影像分辨率的3倍。估计的河宽值的R2、均方根误差（RMSE）和平均偏差误差（MBE）分别为0.991、7.455米和−0.232米。(3) 单线程河段的平均河宽沿主流线性增加，R2值为0.801。河宽与满流排放量和汇水面积之间存在幂函数关系，即下游水力几何，R2值分别为0.782和0.630。"
+            ]
+        },
+        {
+            "background": [
+                "River systems across the globe develop from source regions, stretch over the land, and finally flow into the sea as the “blood vessels of the earth”. They gather, transmit, and distribute water, sediment, and biogenic substances in the basin thus closely linking together multi-temporal scale processes such as hydrological cycles, landform changes, and ecological evolution. Water bodies interact with the atmosphere, vegetation, environment, and geomorphology to play an important role in regional economic and environmental sustainability, drinking water safety, and ecological security. In recent years, rapid advancements in satellite remote sensing, computer image processing, and artificial intelligence (AI) technologies, as well as the abundance of basic geographic information data such as digital elevation models (DEMs), has allowed for remarkable progress in river network system research. Satellite-based imagery allows for accurate water body detection, extraction, and classification as it encompasses both spatial and spectral characteristics. Different water indices have been constructed using the spatial and spectral characteristics of remote sensing images to accurately extract water body information. The most commonly used index is the normalized difference water index (NDWI) proposed by Mcfeeters based on the normalized difference vegetation index (NDVI) concept. Classiﬁcation algorithms proposed in the past based on remote sensing images are mostly dependent on existing reference data or known input data as training samples. The influence of high altitudes, narrow channels, complex topographies, and long-term cloud cover, however, make it very difficult to extract rivers in unmanned regions of the Tibetan Plateau. As the birthplace of many large rivers, such as the Yangtze River, the Yellow River, the Yarlung Zangbo River, and the Lantsang River, the Tibetan Plateau is typical of a region lacking hydrological data: Its ecological environment is fragile and sensitive to external disturbances caused by climate change and anthropogenic activity. Global water products such as global river widths from Landsat (GRWL) by Allen and Pavelsky and global surface water by Pekel et al. have performed well on Tibetan Plateau. However, both products yield incomplete characterizations of small rivers (<90 m width), and there has been no detailed study within a specific time range in the Tibetan Plateau region. Tributaries connected to the main streams, though with relatively small size, are also important water resources to the Upper Yellow River Basin. Their accurate extraction plays an important role in discharge retrieval and runoff simulation of the hydrological model in the source area of the river.",
+                "Misleading information caused by topographic shadows, cloud shadows, and snow cover make it difficult to distinguish the water body from other surfaces. Generally, the bankfull discharge and corresponding parameters (e.g., river width, water depth) have important physical significance to geomorphological evolution of river systems and hydrological modelling.",
+                "Previous studies have shown that water body extraction is markedly affected by low-reflectance surfaces in complex regions. Low-reflectance surroundings such as topographic shadows, cloud shadows, high building shadows, dark built-up regions, and black soils negatively impact the accuracy of water body extraction. Unlike Allen and Pavelsky, who used a single MNDWI index to extract water bodies over a large observation area, we used multiple indices to extract water bodies according to the features of several pre-defined sub-regions.",
+                "The integration of multiple water indices based on the GEE platform proved suitable for small rivers extraction over different topographies and large-scale areas using Sentinel-2 images. The detailed distribution of braided rivers, meandering rivers, and other rivers along the river networks of the Upper Yellow River was given. River widths are usually below 300 m in this region with the exception of braided rivers. The proposed method can be used along with Sentinel-2 MSI imagery to extract rivers at least 30 m in width in mountain regions."
+            ],
+            "research objective": [
+                "In this study, we effectively extract small and open-surface river information in the Upper Yellow River by fusing Sentinel-2 with 10 m resolution optical imagery corresponding to average discharge of the summer flood season and the 90 m digital elevation model (DEM) data. The Upper Yellow River was taken as the observation area in this study. We fused the SRTM 90 m DEM data and 10 m resolution Sentinel-2 images to enhance the small-river extraction accuracy. We chose three water body indices, including the modified normalized difference water index (MNDWI), the revised normalized difference water index (RNDWI), and the automated water extraction index (AWEI), to determine the optimal extraction results.",
+                "In the future, we will consider the use of higher resolution remote sensing images, adding meteorological parameters and sediment data, and explore the possibility of using more advanced methods to extract water surface for smaller mountain rivers with widths less than 30 m."
+            ],
+            "challenges": [
+                "The influence of high altitudes, narrow channels, complex topographies, and long-term cloud cover, however, make it very difficult to extract rivers in unmanned regions of the Tibetan Plateau. There is an urgent need to improve the extraction accuracy of river surface data, especially for small rivers (width < 90 m).",
+                "The western source region has the highest altitude and is affected by clouds and snow throughout the year, so it was impossible to obtain a high-quality image during the flood season there. The northeast region is characterized by urban agglomerations with highly complex underlying surfaces, as well as narrower rivers than areas upstream, so the extraction accuracy was also relatively low there. Disconnection in extracted rivers mainly occurred when water body width was below 30 m, in other words, 3 times the 10 m spatial resolution of the basic image data we adopted. Some disconnected rivers we extracted here are between 17 and 30 m wide and could only be connected at certain specific regions. Due to the limited time range and the effects of shadows, clouds, snow, and other factors, there are a few river segments wider than 30 m that were not well extracted.",
+                "However, a large buffer zone increased the workload for subsequent manual vector editing. The MBE result indicated that, on average, half a pixel underestimation existed in the prediction."
+            ],
+            "methods": [
+                "In this study, we effectively extract small and open-surface river information in the Upper Yellow River by fusing Sentinel-2 with 10 m resolution optical imagery corresponding to average discharge of the summer flood season and the 90 m digital elevation model (DEM) data. To effectively minimize the impact of the underlying surface, the study area was divided into five sub-regions according to underlying surface, terrain, and altitude features. We minimize the effects of cloud, snow, and shadow cover on the extracted river surface via a modified normalized difference water index (MNDWI), revised normalized difference water index (RNDWI), automated water extraction index (AWEI), and Otsu threshold method. Water index calculations and water element extractions are operated on the Google Earth Engine (GEE) platform. The river network vectors derived from the DEM data are used as constraints to minimize background noise in the extraction results. Sentinel-2 with 10 m spatial resolution multispectral instrument (MSI) remote sensing images during the 2017 flood season were used to extract river surface. We fused the SRTM 90 m DEM data and 10 m resolution Sentinel-2 images to enhance the small-river extraction accuracy. We chose three water body indices, including the modified normalized difference water index (MNDWI), the revised normalized difference water index (RNDWI), and the automated water extraction index (AWEI), to determine the optimal extraction results. The accuracy of extracted river positions and river widths was evaluated with GRWL and hydrological station in situ data.",
+                "We used topographic maps and other auxiliary data to manually edit the DEMs to remove influence of buildings and other extraneous surface features. We set the minimum confluence area to 7.29 km 2 after trial-and-error revealed this was appropriate. We extracted a total of seven orders of river networks according to this minimum area using the DNET. We measured river widths of different orders artificially on Google Earth, then established buffer zones of the river networks based on the measured widths to de-noise the river surface extraction results. We collected data from 39 hydrological stations in the study area during the summer flood seasons from 2007 to 2017 from the Hydrology Yearbook of Yellow River. Considering the effect of these factors and the interference of the environmental background, we deployed a three-step process to extract the water body. First, we obtained five sub-regions by merging the catchments of each hydrological station according to the differences in underlying surface, elevation, and river level. Next, we adopted three water body indices for input to Otsu’s threshold segmentation method for automatic water surface extraction. Finally, we built a buffer zone along the river system using the drainage network data to constrain the range of river surface extraction and minimize background noise. The data processing work mainly included discharge determination, the selection of Sentinel-2 images, study area subdivision, and calculation of water body indices on the GEE cloud platform. De-noising, vector data editing, and connectivity of the rivers were conducted in ArcGIS 10.2.",
+                "We instead used Otsu’s method to determine the initial base threshold, then adjusted the threshold several times and integrated visual interpretations to determine the optimal segmentation threshold. We transformed the images generated by the water indices into vector features in order to create shape files for de-noising in ArcGIS 10.2. We found that a substantial amount of noise persisted inside the buffer zones, especially in urban regions and regions affected by clouds and mountain shadows, which needed to be removed manually. All operations were performed in ArcGIS 10.2. By buffering the extracted river feature, we tied to connect the disconnected rivers as much as possible for showing existence and a better present of a whole river network. We determined the in situ river widths from 39 hydrological stations in the corresponding dates from the hydrological yearbook to verify the river width estimations extracted from Sentinel-2 satellite images.",
+                "Average discharge values in the summer flood season of 39 hydrological stations in the Upper Yellow River were obtained in this study according to field-measured data over an 11-year period (2007–2017). Based on the date parameter, one-to-one correspondence between the in situ river discharge of each hydrological station and the image in the corresponding catchment area was established. Water indices were fused and Otsu threshold segmentation was deployed to extract the river surface. Construction of water indices of the MNDWI, RNDWI, and AWEI, and Otsu threshold calculations were carried out on the GEE platform. Differences in the underlying surfaces and elevations were used to sub-divide the study area into five sub-regions, each of which was given different water indices and thresholds to extract water bodies."
+            ],
+            "dataset": [
+                "The Sentinel-2 satellite images used in this study were collected from 16 June to 31 October 2017, on the GEE cloud platform. Sentinel-2 is a European wide-swath, high-resolution, and multi-spectral imaging mission developed by the European Space Agency (ESA). We used the Drainage Network Extraction Tool (DNET) developed by Wu et al. and Bai et al. to extract river networks from the SRTM 90 m DEM.",
+                "SRTM 90 m DEM data was downloaded from “http: //www.gscloud.cn/”. We collected data from 39 hydrological stations in the study area during the summer flood seasons from 2007 to 2017 from the Hydrology Yearbook of Yellow River. This set of data contains coordinate position, date, velocity, measured discharge, and river width, among other information.",
+                "Six of the 13 Sentinel-2 data bands were used to construct MNDWI, RNDWI, and AWEI as follows: where ρ is the apparent reflectance value of spectral bands of Sentinel-2, including blue (band 2), green (band 3), red (band 4), NIR (band 8), SWIR1 (band 11), and SWIR2 (band 12). The spatial resolution of all six bands was uniformly resampled to 10 m. River networks extracted using DNET from the SRTM 90 m DEM were used as an aid to remove the majority of the noise by setting up a buffer zone alongside, as mentioned above."
+            ],
+            "findings": [
+                "The results show the integrity of the extracted small river surface by the RNDWI index is optimal. Overall, the statistical evaluation indicates the accuracy of the extracted river widths is satisfactory. The effective river width that can be accurately extracted based on satellite images is three times the image resolution. Sentinel-2 MSI images with a spatial resolution of 10 m are used to find that the rivers over 30 m wide can be connectedly, accurately extracted with the proposed method. Results of this work can enrich the river width database in the northeast Tibetan Plateau and its boundary region. The river width information may provide a foundation for studying the spatiotemporal changes in channel geometry of river systems in high-mountain regions.",
+                "The MNDWI had better extraction results than other techniques in parts of the study area dominated by urban and sandy lands. The AWEI had better results in parts dominated by vegetation. The RNDWI significantly outperformed the other two indices in the extraction of small rivers. The study area is located in the Upper Yellow River, where the overall river widths are relatively narrow. The RNDWI index was adopted in all five sub-regions to extract these small rivers properly. Compared with the MNDWI and AWEI, the RNDWI extracted more details of small rivers in the study area; however, it produced more pepper and salt noise on the large rivers. The statistical evaluation showed a satisfactory result, the R2, RSR, RMSE, and MBE of the estimated river widths were 0.948, 0.234, 16.148, and −5.392 m, respectively.",
+                "The estimated river widths were found to be in close agreement with their in situ counterparts. Results of this study enrich the river widths database under the average discharge for the Upper Yellow River and provide basic data support for discharge retrieval. At the same time, they may also provide reliable river width information for the study of geomorphic evolution of channel geometry and the accurate simulation of runoff process in hydrological model in mountain areas."
+            ],
+            "backgroundCn": [
+                "全球的河流系统从源头地区发展，延伸于陆地，最终流入海洋，成为地球的“血管”。它们在流域内收集、传输和分配水、沉积物和生物物质，从而紧密联系多时间尺度的过程，如水文循环、地貌变化和生态演变。水体与大气、植被、环境和地貌相互作用，在区域经济和环境可持续性、饮用水安全和生态安全中发挥着重要作用。近年来，卫星遥感、计算机图像处理和人工智能（AI）技术的快速进步，以及数字高程模型（DEMs）等基础地理信息数据的丰富，使得河流网络系统研究取得了显著进展。基于卫星影像的技术能够准确检测、提取和分类水体，因为它涵盖了空间和光谱特征。利用遥感影像的空间和光谱特征构建了不同的水体指数，以准确提取水体信息。最常用的指数是麦克菲特（Mcfeeters）提出的归一化差异水体指数（NDWI），该指数基于归一化差异植被指数（NDVI）的概念。过去基于遥感影像提出的分类算法大多依赖于现有的参考数据或已知输入数据作为训练样本。然而，高海拔、狭窄的河道、复杂的地形和长期的云层覆盖使得在无人区的青藏高原提取河流变得非常困难。青藏高原是许多大河的发源地，如长江、黄河、雅鲁藏布江和澜沧江，该地区缺乏水文数据，其生态环境脆弱，对气候变化和人为活动造成的外部干扰非常敏感。全球水产品，如艾伦（Allen）和帕维尔斯基（Pavelsky）提供的来自Landsat的全球河流宽度（GRWL）和佩克尔（Pekel）等人的全球地表水，在青藏高原表现良好。然而，这两种产品对小河流（<90米宽）的表征不完整，且在青藏高原地区没有在特定时间范围内进行详细研究。尽管与主流相连的支流规模相对较小，但它们也是黄河上游流域的重要水资源。准确提取这些支流在河流源区的排水量获取和径流模拟的水文模型中发挥着重要作用。",
+                "由于地形阴影、云阴影和雪盖造成的误导性信息，使得区分水体与其他表面变得困难。一般来说，满流量及其相应参数（如河宽、水深）对河流系统的地貌演变和水文模型具有重要的物理意义。",
+                "以往的研究表明，水体提取受到复杂区域中低反射表面的显著影响。低反射周围环境，如地形阴影、云阴影、高建筑阴影、暗色建筑区域和黑色土壤，都会对水体提取的准确性产生负面影响。与Allen和Pavelsky使用单一的MNDWI指数在大范围观察区域提取水体不同，我们根据多个预定义子区域的特征使用了多个指数来提取水体。",
+                "基于GEE平台的多种水体指数的集成证明适用于在不同地形和大规模区域内提取小河流，使用的是Sentinel-2影像。详细展示了黄河上游河流网络中辫状河、曲流河及其他河流的分布。在该地区，河流宽度通常低于300米，辫状河除外。所提出的方法可以与Sentinel-2 MSI影像结合使用，以提取宽度至少为30米的山地河流。"
+            ],
+            "research objectiveCn": [
+                "在本研究中，我们通过融合Sentinel-2的10米分辨率光学影像与夏季洪水季节平均流量对应的数据，有效提取了黄河上游的小型开放水面河流信息。黄河上游被选为本研究的观察区域。我们融合了SRTM 90米数字高程模型（DEM）数据和10米分辨率的Sentinel-2影像，以提高小河流提取的准确性。我们选择了三种水体指数，包括改进的归一化水体差异指数（MNDWI）、修订的归一化水体差异指数（RNDWI）和自动水体提取指数（AWEI），以确定最佳的提取结果。",
+                "在未来，我们将考虑使用更高分辨率的遥感影像，添加气象参数和沉积物数据，并探索使用更先进的方法提取宽度小于30米的小山河的水面。"
+            ],
+            "challengesCn": [
+                "高海拔、狭窄的河道、复杂的地形以及长期的云层覆盖，使得在无人区的青藏高原上提取河流变得非常困难。迫切需要提高河流表面数据的提取精度，特别是对于小河流（宽度<90米）。",
+                "西部源区海拔最高，全年受到云层和降雪的影响，因此在洪水季节无法获得高质量的影像。东北地区则以城市聚集区为特征，底面复杂，河流比上游地区更窄，因此提取精度相对较低。在提取的河流中，主要发生断连的情况是当水体宽度低于30米时，换句话说，就是我们采用的基础影像数据的10米空间分辨率的3倍。一些我们提取的断连河流宽度在17到30米之间，只能在特定区域连接。由于时间范围有限以及阴影、云层、降雪等因素的影响，仍有一些宽度超过30米的河段未能很好地提取。",
+                "然而，较大的缓冲区增加了后续手动矢量编辑的工作量。MBE结果表明，预测中平均存在半个像素的低估。"
+            ],
+            "methodsCn": [
+                "在本研究中，我们通过融合与夏季洪水季节平均流量相对应的10米分辨率的Sentinel-2光学影像和90米数字高程模型（DEM）数据，有效提取了黄河上游的小型开放水面河流信息。为了有效减少底层表面的影响，研究区域根据底层表面、地形和海拔特征被划分为五个子区域。我们通过修改的归一化水体指数（MNDWI）、修订的归一化水体指数（RNDWI）、自动水体提取指数（AWEI）和Otsu阈值法，最小化云、雪和阴影覆盖对提取河流表面的影响。水体指数计算和水体元素提取在Google Earth Engine（GEE）平台上进行。通过DEM数据导出的河流网络矢量作为约束，以最小化提取结果中的背景噪声。我们使用2017年洪水季节的10米分辨率Sentinel-2多光谱仪（MSI）遥感影像提取河流表面。我们融合了SRTM 90米DEM数据和10米分辨率的Sentinel-2影像，以提高小型河流提取的准确性。我们选择了三种水体指数，包括修改的归一化水体指数（MNDWI）、修订的归一化水体指数（RNDWI）和自动水体提取指数（AWEI），以确定最佳提取结果。提取的河流位置和河流宽度的准确性通过GRWL和水文站的现场数据进行评估。",
+                "我们使用地形图和其他辅助数据手动编辑数字高程模型（DEM），以去除建筑物和其他外部表面特征的影响。经过反复试验，我们将最小汇流面积设置为7.29平方公里，发现这是合适的。我们根据这个最小面积使用DNET提取了总共七个级别的河流网络。我们在谷歌地球上人工测量了不同级别河流的宽度，然后根据测量的宽度建立了河流网络的缓冲区，以去除河流表面提取结果中的噪声。我们从2007年至2017年夏季洪水季节收集了39个水文站的数据，数据来源于《黄河水文年鉴》。考虑到这些因素的影响以及环境背景的干扰，我们部署了一个三步过程来提取水体。首先，我们根据底层表面、海拔和河流水位的差异，将每个水文站的集水区合并为五个子区域。接下来，我们采用三种水体指数作为输入，使用大津法阈值分割方法进行自动水面提取。最后，我们利用排水网络数据在河流系统沿线建立缓冲区，以限制河流表面提取的范围并最小化背景噪声。数据处理工作主要包括流量确定、Sentinel-2影像选择、研究区划分以及在GEE云平台上计算水体指数。去噪、矢量数据编辑和河流连通性工作在ArcGIS 10.2中进行。",
+                "我们使用Otsu方法确定初始基准阈值，然后多次调整阈值，并结合视觉解释来确定最佳分割阈值。我们将水指数生成的图像转换为矢量特征，以便在ArcGIS 10.2中创建形状文件进行去噪。我们发现，在缓冲区区域内，尤其是在城市地区以及受云层和山影影响的地区，仍然存在大量噪声，需要手动去除。所有操作均在ArcGIS 10.2中进行。通过对提取的河流特征进行缓冲，我们尽量连接断开的河流，以展示整个河流网络的存在和更好的表现。我们从39个水文站点获取了相应日期的现场河宽数据，以验证从Sentinel-2卫星图像提取的河宽估算值。",
+                "本研究根据2007年至2017年11年的实地测量数据，获得了黄河上游39个水文站在夏季洪水季节的平均流量值。根据日期参数，建立了每个水文站的原位河流流量与相应流域图像之间的一一对应关系。融合水体指数，并采用Otsu阈值分割提取河面。MNDWI、RNDWI和AWEI的水体指数构建以及Otsu阈值计算是在GEE平台上进行的。根据地表和海拔的差异，将研究区域细分为五个子区域，每个子区域采用不同的水体指数和阈值来提取水体。"
+            ],
+            "datasetCn": [
+                "本研究中使用的Sentinel-2卫星图像是在2017年6月16日至10月31日期间收集的，数据来自GEE云平台。Sentinel-2是由欧洲空间局（ESA）开发的欧洲宽幅、高分辨率、多光谱成像任务。我们使用了Wu等人和Bai等人开发的排水网络提取工具（DNET）从SRTM 90米数字高程模型（DEM）中提取河流网络。",
+                "从“http://www.gscloud.cn/”下载了SRTM 90米数字高程模型（DEM）数据。我们从2007年至2017年夏季洪水季节收集了研究区域内39个水文站的数据，数据来源于《黄河水文年鉴》。该数据集包含坐标位置、日期、流速、测得的流量和河宽等信息。",
+                "使用六个Sentinel-2数据波段构建了MNDWI、RNDWI和AWEI，具体如下：其中ρ是Sentinel-2的光谱波段的表观反射值，包括蓝色（波段2）、绿色（波段3）、红色（波段4）、近红外（波段8）、短波红外1（波段11）和短波红外2（波段12）。所有六个波段的空间分辨率均统一重采样至10米。使用DNET从SRTM 90米DEM提取的河流网络作为辅助，通过设置缓冲区来去除大部分噪声，如上所述。"
+            ],
+            "findingsCn": [
+                "结果表明，RNDWI指数提取的小河流表面的完整性是最佳的。总体统计评估表明，提取的河宽准确性令人满意。基于卫星图像可以准确提取的有效河宽是图像分辨率的三倍。使用空间分辨率为10米的Sentinel-2 MSI图像发现，宽度超过30米的河流可以通过所提出的方法连贯且准确地提取。此项工作的结果可以丰富东北藏区及其边界地区的河宽数据库。河宽信息可能为研究高山地区河流系统的通道几何形态的时空变化提供基础。",
+                "MNDWI在研究区城市和沙地主导的部分区域的提取结果优于其他技术。AWEI在植被主导的部分区域表现更好。RNDWI在小河流的提取上显著优于其他两个指数。研究区位于黄河上游，整体河宽相对较窄。RNDWI指数被采用在所有五个子区域中，以正确提取这些小河流。与MNDWI和AWEI相比，RNDWI在研究区提取了更多小河流的细节；然而，它在大河流上产生了更多的椒盐噪声。统计评估显示结果令人满意，估计河宽的R2、RSR、RMSE和MBE分别为0.948、0.234、16.148和−5.392米。",
+                "估计的河宽与其原位测量结果非常接近。本研究的结果丰富了黄河上游在平均流量下的河宽数据库，为流量反演提供了基础数据支持。同时，这些结果也可能为研究河道几何形态的地貌演变以及在山区水文模型中准确模拟径流过程提供可靠的河宽信息。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Is it necessary to use a combination of remote sensing imagery and in situ data to accurately determine bankfull river discharge and width?",
+                "QuestionCn": "是否有必要结合遥感影像和现场数据来准确确定河流的满流量和宽度？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Does cloud cover and snow significantly impact the accuracy of river extraction methods in high-altitude regions like the Tibetan Plateau?",
+                "QuestionCn": "云层覆盖和雪对高海拔地区（如青藏高原）河流提取方法的准确性有显著影响吗？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Which remote sensing technique is predominantly used for extracting river surface data on the Tibetan Plateau: Sentinel-2, Landsat, or other satellites?",
+                "QuestionCn": "在提取青藏高原河流表面数据时，主要使用哪种遥感技术：Sentinel-2、Landsat，还是其他卫星？",
+                "AnswerEn": "Sentinel-2",
+                "AnswerCn": "哨兵-2",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenge is more prominent in extracting river data in the Tibetan Plateau: high suspended sediment concentrations, cloud cover, or narrow channels?",
+                "QuestionCn": "在提取青藏高原河流数据时，哪种挑战更为突出：高悬浮沉积物浓度、云层覆盖还是狭窄河道？",
+                "AnswerEn": "narrow channels",
+                "AnswerCn": "狭窄的通道",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "For river data extraction, which index shows better performance in urban areas: MNDWI, RNDWI, or AWEI?",
+                "QuestionCn": "对于城市地区的河流数据提取，哪个指数表现更好：MNDWI、RNDWI还是AWEI？",
+                "AnswerEn": "MNDWI",
+                "AnswerCn": "MNDWI",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the challenges in extracting river data from remote sensing images in the Tibetan Plateau?",
+                "QuestionCn": "从遥感图像中提取青藏高原河流数据面临的挑战有哪些？",
+                "AnswerEn": "high altitudes",
+                "AnswerCn": "高海拔",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What datasets are utilized to study river networks in the Tibetan Plateau?",
+                "QuestionCn": "用于研究青藏高原河流网络的数据集有哪些？",
+                "AnswerEn": "Sentinel-2 satellite images, SRTM 90 m DEM data, Annual Hydrological Reports of China",
+                "AnswerCn": "哨兵-2卫星影像，SRTM 90米数字高程模型数据，中国年度水文报告",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of how remote sensing techniques are used to extract river widths at fine spatial resolutions?",
+                "QuestionCn": "你能提供一个例子，说明遥感技术如何在细致的空间分辨率下提取河流宽度吗？",
+                "AnswerEn": "In studies of river discharge and width, remote sensing techniques such as the use of Sentinel-2 multispectral instrument (MSI) imagery and digital elevation model (DEM) data are employed. These tools are fused with in situ discharge and sediment data to extract bankfull river widths, particularly in the upper Yellow River. The machine learning method is also used to extract water bodies from Sentinel-2 images in the Google Earth Engine (GEE), illustrating the application of remote sensing in hydrological studies.",
+                "AnswerCn": "在河流流量和宽度的研究中，采用遥感技术，如使用Sentinel-2多光谱仪（MSI）影像和数字高程模型（DEM）数据。这些工具与现场流量和沉积物数据相结合，以提取黄河上游的银行全宽。机器学习方法也被用于从Sentinel-2影像中提取水体，展示了遥感在水文研究中的应用。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge faced in extracting river surface data in high-altitude regions like the Tibetan Plateau?",
+                "QuestionCn": "在高海拔地区如青藏高原提取河流表面数据时面临的一个挑战是什么？",
+                "AnswerEn": "A significant challenge in extracting river surface data in high-altitude regions like the Tibetan Plateau is the influence of high altitudes, narrow channels, complex topographies, and long-term cloud cover. These factors make it difficult to obtain high-quality images during the flood season and affect the accuracy of river extraction, especially for small rivers with widths less than 90 meters.",
+                "AnswerCn": "在像青藏高原这样的高海拔地区提取河流表面数据面临着重大挑战，主要是由于高海拔、狭窄的河道、复杂的地形以及长期的云层覆盖。这些因素使得在洪水季节获取高质量图像变得困难，并影响河流提取的准确性，尤其是对于宽度小于90米的小河流。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of data collection methods used to extract river surfaces in complex terrains like the Tibetan Plateau?",
+                "QuestionCn": "用于提取复杂地形（如青藏高原）中河流表面的数据收集方法的特点是什么？",
+                "AnswerEn": "remote sensing, satellite imagery, water indices (MNDWI, RNDWI, AWEI), high altitudes, narrow channels, long-term cloud cover",
+                "AnswerCn": "遥感，卫星影像，水体指数（MNDWI，RNDWI，AWEI），高海拔，狭窄水道，长期云层覆盖",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is meant by 'bankfull discharge' in the context of river hydrology and its significance in data collection?",
+                "QuestionCn": "在河流水文学的背景下，“满银行流量”是指河流在其岸边完全充满水时的流量。这一概念在数据收集中的重要性体现在以下几个方面：它可以帮助水文科学家理解河流的流动特征、预测洪水风险、评估生态系统健康以及进行水资源管理。",
+                "AnswerEn": "Bankfull discharge refers to the flow level at which a river completely fills its channel and begins to spill onto its floodplain. This discharge is morphologically significant as it represents the transition between within-bank processes and floodplain processes. It is often used to estimate channel-forming or dominant discharge in alluvial rivers, making it essential for applications in hydrology, fluvial geomorphology, and stream ecology.",
+                "AnswerCn": "满流量指的是河流完全填满其河道并开始溢出到洪泛区的流量水平。这一流量在形态上具有重要意义，因为它代表了河道内过程与洪泛区过程之间的转变。它常用于估算冲积河流的渠道形成或主导流量，因此在水文学、河流地貌学和溪流生态学等应用中至关重要。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "How does 'remote sensing' contribute to the extraction of river surface data, and what are the challenges associated with it?",
+                "QuestionCn": "遥感如何有助于河流表面数据的提取，以及与之相关的挑战是什么？",
+                "AnswerEn": "Remote sensing involves using satellite imagery to extract open-surface inland water body information over various spatiotemporal scales, providing a more effective method than traditional field surveys. Challenges include accurately extracting river widths in regions with high suspended sediment concentrations, limited high-quality images due to satellite revisitation periods, and the presence of snow and clouds. Such conditions can affect data accuracy, particularly in regions like the Tibetan Plateau.",
+                "AnswerCn": "遥感技术利用卫星影像提取开放水面内陆水体信息，覆盖各种时空尺度，提供了一种比传统实地调查更有效的方法。面临的挑战包括在悬浮沉积物浓度高的地区准确提取河流宽度、由于卫星重访周期限制而导致的高质量影像不足，以及雪和云的存在。这些条件可能影响数据的准确性，特别是在像青藏高原这样的地区。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do the methods of extracting river widths using Sentinel-2 MSI imagery compare with those using Landsat imagery in terms of accuracy and resolution?",
+                "QuestionCn": "使用Sentinel-2 MSI影像提取河流宽度的方法与使用Landsat影像的方法在准确性和分辨率方面有何比较？",
+                "AnswerEn": "Sentinel-2 MSI imagery provides a resolution of 10 meters, allowing for the extraction of river widths down to 30 meters, which is three times the image resolution. This offers higher spatial resolution compared to Landsat imagery, which is used with the MNDWI index but may not provide as detailed extraction for small rivers. The Sentinel-2 imagery, combined with DEM data, enhances accuracy, especially for small rivers in complex topographies.",
+                "AnswerCn": "Sentinel-2 MSI影像提供10米的分辨率，使得可以提取宽度达到30米的河流，这相当于图像分辨率的三倍。这相比于使用MNDWI指数的Landsat影像提供了更高的空间分辨率，但对于小河流的详细提取可能不如Sentinel-2影像。结合数字高程模型（DEM）数据，Sentinel-2影像在复杂地形中对小河流的提取精度得到了增强。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the similarities and differences between challenges faced in extracting river surfaces in the Upper Yellow River region compared to other regions with high suspended sediment concentrations?",
+                "QuestionCn": "在提取黄河上游地区的河流表面时面临的挑战与其他高悬浮沉积物浓度地区的挑战之间有哪些相似之处和不同之处？",
+                "AnswerEn": "Both regions face challenges related to high suspended sediment concentrations that can affect the accuracy of river width extraction. However, the Upper Yellow River region also deals with additional complexities such as high altitude, narrow channels, and long-term cloud cover, which make it difficult to obtain high-quality imagery. In contrast, other regions with high sediment levels may not encounter the same topographical and climatic challenges.",
+                "AnswerCn": "两个地区都面临与高悬浮沉积物浓度相关的挑战，这可能影响河宽提取的准确性。然而，黄河上游地区还面临额外的复杂性，如高海拔、狭窄的河道和长期的云层覆盖，这使得获取高质量影像变得困难。相比之下，其他高沉积物水平的地区可能不会遇到相同的地形和气候挑战。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "What can be inferred about the effectiveness and limitations of remote sensing techniques in extracting river width data in high-altitude, cloud-prone regions like the Tibetan Plateau?",
+                "QuestionCn": "可以推断出，在高海拔、云层多发的地区，如青藏高原，遥感技术在提取河流宽度数据方面的有效性和局限性。",
+                "AnswerEn": "Remote sensing techniques, such as those using Sentinel-2 imagery, are effective for extracting river width data due to their ability to capture spatial and spectral characteristics. However, these methods face limitations in high-altitude, cloud-prone regions like the Tibetan Plateau, where factors such as topographic shadows, cloud shadows, and snow cover interfere with accurate water body extraction. Despite these challenges, combining multiple water indices and utilizing the Google Earth Engine platform can enhance the accuracy of small river extraction in complex terrains.",
+                "AnswerCn": "遥感技术，如使用Sentinel-2影像，因其能够捕捉空间和光谱特征而有效提取河流宽度数据。然而，这些方法在高海拔、多云地区（如青藏高原）面临限制，地形阴影、云阴影和雪盖等因素干扰了水体的准确提取。尽管存在这些挑战，结合多种水体指数并利用Google Earth Engine平台可以提高复杂地形中小河流提取的准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How do different water body indices, such as MNDWI, RNDWI, and AWEI, contribute to the extraction accuracy of river surfaces in diverse topographies and environmental conditions?",
+                "QuestionCn": "不同水体指数，如MNDWI、RNDWI和AWEI，如何在不同地形和环境条件下提高河流表面的提取准确性？",
+                "AnswerEn": "Different water body indices contribute variably to extraction accuracy based on environmental conditions. The RNDWI is optimal for small river extraction, especially in mountainous regions, while the MNDWI performs better in urban and sandy areas. The AWEI is more effective in vegetated areas. These indices, when used appropriately, help mitigate the effects of low-reflectance surfaces and environmental noise, improving overall extraction accuracy of river surfaces.",
+                "AnswerCn": "不同的水体指数在提取准确性方面根据环境条件的不同而有所变化。RNDWI在山区的小河提取中表现最佳，而MNDWI在城市和沙质地区表现更好。AWEI在植被覆盖区域更为有效。这些指数在适当使用时，有助于减轻低反射表面和环境噪声的影响，提高河流表面的整体提取准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the inaccuracies in river width extraction in areas with high suspended sediment concentrations?",
+                "QuestionCn": "在悬浮沉积物浓度较高的地区，影响河流宽度提取不准确的因素有哪些？",
+                "AnswerEn": "For rivers with high suspended sediment concentrations, existing methods are usually less accurate. The water quality index (SRMIR-Red) plays a significant role in these inaccuracies, as it has a higher contribution in such environments. Furthermore, the influence of infrared bands in areas with significant vegetation coverage also affects extraction accuracy.",
+                "AnswerCn": "对于悬浮沉积物浓度较高的河流，现有的方法通常准确性较低。水质指数（SRMIR-Red）在这些环境中对不准确性有较大影响。此外，红外波段在植被覆盖较密集的地区也会影响提取的准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the causes behind the incomplete characterization of small rivers in the Tibetan Plateau by existing global water products?",
+                "QuestionCn": "现有全球水产品对青藏高原小河流的不完整表征的原因是什么？",
+                "AnswerEn": "Existing global water products, like those by Allen and Pavelsky, yield incomplete characterizations of small rivers due to their focus on larger observation areas and the limitations of the indices used. The challenges of extracting small rivers are compounded by low-reflectance surfaces, topographic shadows, and weather conditions unique to the Tibetan Plateau. To address these issues, multiple indices tailored to different sub-regions are used to improve extraction accuracy of small rivers.",
+                "AnswerCn": "现有的全球水体产品，如Allen和Pavelsky的产品，由于其关注较大观测区域和所使用指数的局限性，导致对小河流的表征不够完整。提取小河流的挑战因低反射表面、地形阴影以及青藏高原特有的天气条件而加剧。为了解决这些问题，采用多种针对不同子区域的指数，以提高小河流的提取准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential impacts on river width estimation accuracy when employing machine learning methods on satellite data in regions with high suspended sediment concentrations?",
+                "QuestionCn": "在悬浮沉积物浓度高的地区，使用机器学习方法处理卫星数据时，河流宽度估计准确性可能受到的影响是什么？",
+                "AnswerEn": "Machine learning methods applied to satellite data can enhance the accuracy of river width estimations, even in areas with high suspended sediment concentrations. These methods, by leveraging spectral indices and in situ data, help overcome the inaccuracies typically associated with remote sensing in such challenging environments, resulting in more reliable river width datasets.",
+                "AnswerCn": "应用于卫星数据的机器学习方法可以提高河流宽度估计的准确性，即使在悬浮沉积物浓度较高的地区。这些方法通过利用光谱指数和现场数据，帮助克服在此类挑战性环境中遥感通常存在的不准确性，从而生成更可靠的河流宽度数据集。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "Why does the integration of multiple water indices matter in the extraction of small rivers in regions with complex topographies?",
+                "QuestionCn": "在复杂地形区域中，多个水体指数的整合在小河流的提取中为何重要？",
+                "AnswerEn": "The integration of multiple water indices is crucial for accurately extracting small rivers in regions with complex topographies because it addresses the challenges posed by high altitudes, narrow channels, and long-term cloud cover. Different indices, like MNDWI, RNDWI, and AWEI, are optimized for different environmental conditions, such as urban areas, vegetation, and sandy lands. This approach improves the extraction accuracy of river surfaces, especially for smaller rivers that are less than 90 meters wide, which are often not well-characterized by global water products.",
+                "AnswerCn": "多个水体指数的整合对于在复杂地形区域准确提取小河流至关重要，因为它解决了高海拔、狭窄河道和长期云层覆盖带来的挑战。不同的指数，如MNDWI、RNDWI和AWEI，针对不同的环境条件进行了优化，例如城市地区、植被和沙地。这种方法提高了河流表面的提取精度，特别是对于宽度小于90米的小河流，这些河流通常在全球水体产品中未得到良好表征。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "How can machine learning methods be utilized to improve the accuracy of river surface extraction from remote sensing data?",
+                "QuestionCn": "机器学习方法如何被利用来提高从遥感数据中提取河流表面的准确性？",
+                "AnswerEn": "Machine learning methods are used to extract water bodies from Sentinel-2 images by training a model with manually selected samples of water and non-water bodies. The model is applied in the Google Earth Engine platform to identify and classify water bodies accurately. This approach is combined with in situ cross-section morphology data and flood frequency estimations to improve the accuracy and reliability of river surface extraction, especially in areas with high suspended sediment concentrations.",
+                "AnswerCn": "机器学习方法用于从Sentinel-2影像中提取水体，通过使用手动选择的水体和非水体样本训练模型。该模型在Google Earth Engine平台上应用，以准确识别和分类水体。这种方法结合了现场横截面形态数据和洪水频率估计，以提高河流表面提取的准确性和可靠性，特别是在悬浮沉积物浓度较高的地区。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What strategies are employed to minimize the impact of cloud and snow cover when extracting river networks using remote sensing techniques?",
+                "QuestionCn": "在使用遥感技术提取河流网络时，采用了哪些策略来最小化云层和雪盖的影响？",
+                "AnswerEn": "To minimize the impact of cloud and snow cover, the study area is divided into sub-regions based on underlying surface, terrain, and altitude features. Modified water indices, including MNDWI, RNDWI, and AWEI, are applied to each sub-region to enhance extraction accuracy. Otsu’s threshold method is used for automatic water surface extraction, and a buffer zone along the river system is created using drainage network data to constrain the extraction range and reduce background noise.",
+                "AnswerCn": "为了最小化云层和雪盖的影响，研究区域根据基础表面、地形和海拔特征划分为子区域。对每个子区域应用修改后的水体指数，包括MNDWI、RNDWI和AWEI，以提高提取精度。使用Otsu阈值法进行自动水面提取，并利用排水网络数据创建沿河流系统的缓冲区，以限制提取范围并减少背景噪声。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What technological advancements have facilitated the extraction of river surface information from remote sensing images in regions with complex topographies and high altitudes?",
+                "QuestionCn": "哪些技术进步促进了在复杂地形和高海拔地区从遥感图像中提取河流表面信息的能力？",
+                "AnswerEn": "Rapid advancements in satellite remote sensing, computer image processing, and artificial intelligence (AI) technologies, combined with the availability of high-resolution multispectral imaging missions like Sentinel-2, have facilitated the extraction of river surface information. The integration of multiple water indices and the use of platforms like Google Earth Engine (GEE) for data processing have enabled more accurate extraction and classification of water bodies, even in regions with complex topographies and high altitudes.",
+                "AnswerCn": "卫星遥感、计算机图像处理和人工智能（AI）技术的快速进步，加上高分辨率多光谱成像任务（如Sentinel-2）的可用性，促进了河流表面信息的提取。多种水体指数的集成以及使用Google Earth Engine（GEE）等平台进行数据处理，使得即使在地形复杂和高海拔地区，也能更准确地提取和分类水体。",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How do different water indices enable the extraction of river features in areas with varying underlying surface conditions?",
+                "QuestionCn": "不同的水体指数如何在不同的基础表面条件下促进河流特征的提取？",
+                "AnswerEn": "Different water indices, such as the modified normalized difference water index (MNDWI), revised normalized difference water index (RNDWI), and automated water extraction index (AWEI), are utilized to optimize the extraction of river features in areas with varying underlying surface conditions. These indices are chosen based on the specific characteristics of the region, such as urban areas, vegetation-dominated regions, or sandy lands, to improve accuracy in water body detection.",
+                "AnswerCn": "不同的水体指数，如改进的归一化水体指数（MNDWI）、修订的归一化水体指数（RNDWI）和自动水体提取指数（AWEI），被用于优化在不同底层表面条件下的河流特征提取。这些指数是根据区域的特定特征选择的，例如城市地区、植被主导区域或沙地，以提高水体检测的准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why is it challenging to extract accurate river width data for rivers with high suspended sediment concentrations, and what data collection methods could potentially improve accuracy?",
+                "QuestionCn": "为什么在悬浮沉积物浓度高的河流中提取准确的河宽数据会很有挑战性？哪些数据收集方法可能会提高准确性？",
+                "AnswerEn": "For rivers with high suspended sediment concentrations, the existing methods are usually less accurate in river width extraction. This is due to the influence of suspended sediments on the reflectance properties of the water surface, which complicates the extraction process. Using multispectral imagery and digital elevation model data, combined with in situ discharge and sediment data, can improve accuracy by providing a more comprehensive dataset that accounts for these variables.",
+                "AnswerCn": "对于悬浮沉积物浓度较高的河流，现有的方法在河宽提取方面通常准确性较低。这是由于悬浮沉积物对水面反射特性的影响，使提取过程变得复杂。利用多光谱影像和数字高程模型数据，结合现场流量和沉积物数据，可以通过提供更全面的数据集来提高准确性，从而考虑这些变量。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the expected challenges when using satellite imagery for river surface extraction in high-altitude regions, and how might these challenges be mitigated?",
+                "QuestionCn": "在高海拔地区使用卫星影像提取河流表面时，预期会面临以下挑战，以及如何缓解这些挑战：\n\n1. **气候条件**：高海拔地区的气候变化剧烈，可能导致云层覆盖和降雪，影响影像质量。\n   - **缓解措施**：使用多时相影像进行时序分析，选择云层覆盖较少的影像进行处理。\n\n2. **地形复杂性**：高海拔地区地形起伏大，河流可能被山脉和峡谷遮挡，导致提取困难。\n   - **缓解措施**：结合数字高程模型（DEM）和其他地理信息系统（GIS）数据，辅助识别河流位置。\n\n3. **影像分辨率**：高分辨率影像可能难以获取，低分辨率影像可能无法清晰显示河流特征。\n   - **缓解措施**：利用多源数据融合技术，结合不同分辨率的影像，提高提取精度。\n\n4. **植被覆盖**：高海拔地区植被茂盛，可能遮挡河流，影响提取效果。\n   - **缓解措施**：采用植被指数（如NDVI）分析，识别水体与植被的光谱差异，增强河流提取。\n\n5. **数据获取成本**：高海拔地区的卫星影像获取成本可能较高。\n   - **缓解措施**：利用开放数据源和公共卫星影像，降低获取成本。\n\n6. **水体变化**：季节性变化可能导致河流形态和流量的变化，影响提取结果。\n   - **缓解措施**：进行长期监测，分析不同季节的影像数据，建立动态模型。\n\n通过以上措施，可以有效缓解在高海拔地区使用卫星影像提取河流表面时面临的挑战。",
+                "AnswerEn": "High-altitude regions present challenges such as narrow channels, complex topographies, and persistent cloud cover, which make it difficult to obtain high-quality satellite images. These challenges can be mitigated by using multiple water indices to optimize water body extraction and by employing advanced image processing techniques to minimize the effects of shadows and clouds. Additionally, dividing the study area into sub-regions based on physical features can enhance accuracy.",
+                "AnswerCn": "高海拔地区面临着狭窄通道、复杂地形和持续云层等挑战，这使得获取高质量的卫星图像变得困难。通过使用多种水体指数来优化水体提取，并采用先进的图像处理技术来最小化阴影和云层的影响，可以减轻这些挑战。此外，根据物理特征将研究区域划分为子区域可以提高准确性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What are the reasons for the incomplete characterization of small rivers in existing global water datasets, and what methodologies could be employed to address this issue?",
+                "QuestionCn": "现有全球水体数据集中小河流的不完整特征化的原因是什么？可以采用哪些方法来解决这个问题？",
+                "AnswerEn": "Existing global water datasets often yield incomplete characterizations of small rivers due to limitations in satellite resolution and the challenges of extracting water bodies in complex terrain. To address this issue, methodologies such as using higher-resolution remote sensing images, integrating multiple water indices, and employing advanced machine learning techniques for better feature extraction could be beneficial. Additionally, refining the extraction process to account for local environmental variables can improve coverage.",
+                "AnswerCn": "现有的全球水体数据集由于卫星分辨率的限制和在复杂地形中提取水体的挑战，往往无法对小河流进行完整的表征。为了解决这个问题，使用更高分辨率的遥感影像、整合多种水体指数以及采用先进的机器学习技术以更好地提取特征等方法可能会有所帮助。此外，优化提取过程以考虑当地环境变量也可以提高覆盖率。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What are the potential challenges in using remote sensing for hydrological data collection in high-altitude regions like the Tibetan Plateau?",
+                "QuestionCn": "在像青藏高原这样的高海拔地区使用遥感进行水文数据收集的潜在挑战有哪些？",
+                "AnswerEn": "Potential challenges in using remote sensing in high-altitude regions include the influence of high altitudes, narrow channels, complex topographies, and long-term cloud cover, which can make it difficult to obtain high-quality images and accurately extract river surfaces. Additionally, the presence of topographic shadows and snow cover complicates the differentiation of water bodies from other surfaces.",
+                "AnswerCn": "在高海拔地区使用遥感技术的潜在挑战包括高海拔的影响、狭窄的河道、复杂的地形以及长期的云层覆盖，这些因素使得获取高质量图像和准确提取河流表面变得困难。此外，地形阴影和雪盖的存在也使得区分水体与其他表面变得复杂。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I am not sure how researchers can manage to obtain accurate river width data given the limited number of high-quality satellite images available.",
+                "QuestionCn": "我不确定研究人员如何能够获得准确的河流宽度数据，因为可用的高质量卫星图像数量有限。",
+                "AnswerEn": "Researchers address the limitation of high-quality satellite images by using machine learning methods to extract water bodies from Sentinel-2 images on platforms like Google Earth Engine. They utilize a combination of Sentinel-2 imagery during specific flood seasons, DEM data, in situ discharge, and sediment data to calculate bankfull discharge and river widths. The use of multiple water indices and strategic sub-region division helps refine extraction results, enhancing the accuracy despite limited high-quality images.",
+                "AnswerCn": "研究人员通过使用机器学习方法，从Sentinel-2影像中提取水体，以解决高质量卫星图像的局限性，平台如Google Earth Engine。他们利用特定洪水季节的Sentinel-2影像、数字高程模型（DEM）数据、现场流量和沉积物数据来计算河流的满流量和河宽。使用多种水体指数和战略性子区域划分有助于精炼提取结果，尽管高质量图像有限，但提高了准确性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "I don't understand why extracting river networks from DEM data is considered a critical part of the data collection process in hydrology studies.",
+                "QuestionCn": "我不明白为什么从数字高程模型（DEM）数据中提取河流网络被认为是水文学研究数据收集过程中的一个关键部分。",
+                "AnswerEn": "Extracting river networks from DEM data is crucial because it provides structural information that helps minimize background noise in the extraction of river surfaces. The DEM data offers a topographical perspective that supports the identification and delineation of river networks, which is essential for accurate hydrological modeling and understanding the geomorphological evolution of river systems. This structural data acts as a constraint to enhance the extraction accuracy of river widths and discharge conditions, enabling more reliable hydrological analysis.",
+                "AnswerCn": "从数字高程模型（DEM）数据中提取河流网络至关重要，因为它提供了结构信息，有助于减少提取河流表面时的背景噪声。DEM数据提供了一个地形视角，支持河流网络的识别和划定，这对于准确的水文建模和理解河流系统的地貌演变至关重要。这些结构数据作为约束，增强了河流宽度和流量条件的提取精度，从而使水文分析更加可靠。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please analyze the challenges involved in extracting accurate river width data in regions with high suspended sediment concentrations using remote sensing techniques.",
+                "QuestionCn": "分析在悬浮沉积物浓度高的地区使用遥感技术提取准确河宽数据所面临的挑战。",
+                "AnswerEn": "Challenges in extracting accurate river width data in regions with high suspended sediment concentrations include the difficulty in river width extraction due to the limitations of existing methods under such conditions. The accuracy is often compromised by the limited number of high-quality images, constrained satellite revisit periods, and interference from snow and clouds. This makes it challenging to acquire datasets under bankfull discharge conditions, which affects the precision of river width data.",
+                "AnswerCn": "在悬浮沉积物浓度较高的地区提取准确的河宽数据面临的挑战包括，由于现有方法在这种条件下的局限性，河宽提取变得困难。由于高质量影像数量有限、卫星重访周期受限以及雪和云的干扰，准确性往往受到影响。这使得在河流满水条件下获取数据集变得具有挑战性，从而影响河宽数据的精确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

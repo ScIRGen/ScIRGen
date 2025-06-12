@@ -1,0 +1,542 @@
+{
+    "id": "35ffff9f-8e1b-4296-801f-d8231e4f8dc3",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "1-km monthly maximum temperature dataset for China (1901-2023)",
+            "titleCn": "中国1km分辨率月最高温度数据集（1901-2023）",
+            "description": "This dataset includes the monthly maximum temperature data with 0.0083333 arc degree (~1km)  for China from Jan 1901 to Dec 2023. The data form belongs to NETCDF, namely .nc file. The unit of the data is 0.1 ℃. The dataset was spatially downscaled from CRU TS v4.02 with WorldClim datasets based on Delta downscaling method. The dataset was evaluated by 496 national weather stations across China, and the evaluation indicated that the downscaled dataset is reliable for the investigations related to climate change across China. The dataset covers the main land area of China, including Hong Kong, Macao and Taiwan regions, and excluding islands and reefs in South China Sea. WGS84 is recommended for data coordinate system.",
+            "descriptionCn": "该数据为中国逐月最高温度数据，空间分辨率为0.0083333°（约1km），时间为1901.1-2023.12。数据格式为NETCDF，即.nc格式。数据单位为0.1 ℃。该数据集是根据CRU发布的全球0.5°气候数据集以及WorldClim发布的全球高分辨率气候数据集，通过Delta空间降尺度方案在中国降尺度生成的。并且，使用496个独立气象观测点数据进行验证，验证结果可信。本数据集包含的地理空间范围是全国主要陆地（包含港澳台地区），不含南海岛礁等区域。nc数据可使用ArcMAP软件打开制图; 并可用Matlab软件进行提取处理，Matlab发布了读入与存储nc文件的函数，读取函数为ncread，切换到nc文件存储文件夹，语句表达为：ncread (‘XXX.nc’,‘var’, [i j t],[leni lenj lent])，其中XXX.nc为文件名，为字符串需要’’；var是从XXX.nc中读取的变量名，为字符串需要’’；i、j、t分别为读取数据的起始行、列、时间，leni、lenj、lent i分别为在行、列、时间维度上读取的长度。这样，研究区内任何地区、任何时间段均可用此函数读取。Matlab的help里面有很多关于nc数据的命令，可查看。数据坐标系统建议使用WGS84。",
+            "instructions": "Stored in NC format, the file name is \"tmx_yyyy. NC\", where yyyy is the year, and each NC file contains 12 time points, representing January to December. In order to reduce the storage capacity, compressed files have been stored, such as tmx_ yyyy. rar。 NC format can be opened with ArcMap multidimensional data tool, or MATLAB, R, etc.",
+            "instructionsCn": "以nc格式为存储，文件名称为“tmx_yyyy.nc”，其中yyyy为年份，每个nc文件包含12个时间点，代表1-12月。为减少存储量，均已压缩文件存放，如tmx_yyyy.rar。nc格式可用arcmap多维数据工具打开，或者Matlab、R等等。注意：每个nc文件有12个图层，如在ArcMap中打开，是可以选择time维度，选择1代表1月，选择7则代表7月，依次类推；如果默认不选择time维度，打开数据后则默认为第一个图层，也就是1月。nc文件可以在ArcMap工具箱Multidimension Tools下面的Make NetCDF Raster Layer工具打开，对话框打开后，可在Dimension Values (optional)下选择time，其value数值点开可看到数值列表1-12，选择其中一个月份即可；或者默认打开nc文件后，显示第一个图层（1月份），然后在图层属性下点击NETCDF属性卡，选择time维度的value列表，可以看到1-12，选择其中一个月份即可。如在ArcMap中进行栅格计算等操作，建议在选择好月份之后，导出为一个栅格数据实体存于硬盘，因为加载的nc数据仍为一个临时数据在内存中。导出为栅格数据实体后，建议给WGS84坐标系统，然后开始操作分析。给WGS84时，在Catalog中找到导出的栅格数据实体，点开其属性，找到Spatial Reference属性，点开Edit打开坐标系统选项，在Geographic Coordinate Systems（也就是大地坐标系统）找到World，选择其下WGS 1984。其后才可以赋予投影系统等等操作，如需要的话。",
+            "east": 136.196045022846,
+            "west": 72.1960450229045,
+            "south": 16.2504610568287,
+            "north": 55.5587943901263,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 31532887263.0,
+            "cstr": null,
+            "doi": "10.5281/zenodo.3185722",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "彭守璋",
+                "nameEn": "PENG Shouzhang",
+                "unitEn": "",
+                "unitCn": "西北农林科技大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011–2100.",
+                "referenceCn": null,
+                "referenceEn": "Peng, S.Z., Ding, Y.X., Wen, Z.M., Chen, Y.M., Cao, Y., & Ren, J.Y. (2017). Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011–2100. Agricultural and Forest Meteorology,  233, 183–194."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Spatiotemporal trends and attribution of drought across China from 1901–2100",
+                "referenceCn": null,
+                "referenceEn": "Ding, Y.X., & Peng, S.Z. (2020). Spatiotemporal trends and attribution of drought across China from 1901–2100. Sustainability, 12(2), 477."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "1 km monthly temperature and precipitation dataset for China from 1901 to 2017",
+                "referenceCn": null,
+                "referenceEn": "Peng, S.Z., Ding, Y.X., Liu, W.Z., & Li, Z. (2019). 1 km monthly temperature and precipitation dataset for China from 1901 to 2017. Earth System Science Data, 11, 1931–1946. https://doi.org/10.5194/essd-11-1931-2019"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Assessment of climate change trends over the Loess Plateau in China from 1901 to 2100",
+                "referenceCn": null,
+                "referenceEn": "Peng, S., Gang, C., Cao, Y., & Chen, Y. (2017). Assessment of climate change trends over the loess plateau in china from 1901 to 2100. International Journal of Climatology."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "大气",
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "最高/最低温度",
+                "nameEn": "Maximum/Minimum temperature"
+            },
+            {
+                "nameCn": "温度",
+                "nameEn": "Temperature"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "中国",
+                "keywordEn": "China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1901-2023",
+                "keywordEn": "1901-2023",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "第二次青藏高原综合科学考察研究",
+                "titleEn": "the Second Tibetan Plateau Scientific Expedition and Research Program"
+            },
+            {
+                "titleCn": "第二次青藏高原综合科学考察研究",
+                "titleEn": "The Second Tibetan Plateau Scientific Expedition and Research Program"
+            },
+            {
+                "titleCn": "变化环境下黄河中游生态水文模型及洪旱灾害风险评估（U2243226）",
+                "titleEn": "Ecological hydrological model and flood and drought disaster risk assessment in the middle reaches of the Yellow River under changing environment"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Investigating long-term drought trends is of great importance in coping with the adverse effects of global warming. Several recent studies have suggested that ongoing warming is accelerating evaporation and creating more spatiotemporal heterogeneity in precipitation than in the past. China is home to multiple climate zones that host important agricultural regions and other societally important activities that are likely to be affected by increased drought. Several indexes have been employed to investigate long-term drought, including the standardized precipitation index, the Palmer drought severity index, and the standardized precipitation evapotranspiration index (SPEI). Unlike the standardized precipitation index, the SPEI considers changes in both the precipitation and the potential evapotranspiration induced by temperature. The SPEI also allows for multiple temporal scales, unlike the Palmer drought severity index."
+            ],
+            "research objective": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI). We then developed a simple approach to quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) on SPEI variability, according to the meaning of the differentiating SPEI equation."
+            ],
+            "challenges": [
+                "However, little attention has been focused on studying the detailed spatial variability and attribution of drought variation in China."
+            ],
+            "methods": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI). We then developed a simple approach to quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) on SPEI variability, according to the meaning of the differentiating SPEI equation."
+            ],
+            "dataset": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI)."
+            ],
+            "findings": [
+                "The results indicated that the delta framework could accurately downscale and correct low-spatial-resolution monthly temperatures and precipitation from the Climatic Research Unit and general circulation models (GCMs). Of the 27 GCMs analyzed, the BNU-ESM, CESM1-CAM5, and GFDL-ESM2M were found to be the most accurate in modeling future temperatures and precipitation. We also found that, compared with the past (1901–2017), the climate in the future (2018–2100) will tend toward significant droughts, although both periods showed a high spatial heterogeneity across China. Moreover, the proportion of areas with significantly decreasing SPEI trends was far greater than the proportion of those with increasing trends in most cases, especially for northwestern and northern China. Finally, the proposed approach to quantifying precipitation and PET contributions performed well according to logical evaluations. Overall, our results provide detailed insights for planning flexible adaptation and mitigation strategies to cope with the adverse effects of climate drought across China."
+            ],
+            "backgroundCn": [
+                "研究长期干旱趋势对于应对全球变暖的负面影响至关重要。最近的几项研究表明，持续的变暖正在加速蒸发，并导致降水的时空异质性比以往更为显著。中国拥有多种气候带，涵盖了重要的农业区域和其他可能受到干旱加剧影响的社会活动。多种指数已被用于研究长期干旱，包括标准化降水指数、帕尔默干旱严重指数和标准化降水蒸发指数（SPEI）。与标准化降水指数不同，SPEI考虑了降水和由温度引起的潜在蒸发蒸发量的变化。与帕尔默干旱严重指数不同，SPEI还允许多种时间尺度的分析。"
+            ],
+            "research objectiveCn": [
+                "在本研究中，我们首先使用增量空间下采样方法生成了1901年至2100年间中国的1公里分辨率月度气候数据集，以评估标准化降水蒸发指数（SPEI）的变异性。然后，我们开发了一种简单的方法来量化水供应（降水）和需求（潜在蒸散发，PET）对SPEI变异性的贡献，这基于区分SPEI方程的含义。"
+            ],
+            "challengesCn": [
+                "然而，关于中国干旱变化的详细空间变异性和归因研究的关注较少。"
+            ],
+            "methodsCn": [
+                "在本研究中，我们首先使用增量空间下采样方法生成了1901年至2100年间中国地区的1公里分辨率月度气候数据集，以评估标准化降水蒸发指数（SPEI）的变异性。然后，我们开发了一种简单的方法来量化水供应（降水）和需求（潜在蒸散发，PET）对SPEI变异性的贡献，这基于SPEI方程的差异化含义。"
+            ],
+            "datasetCn": [
+                "在本研究中，我们首先使用增量空间降尺度方法生成了一个覆盖中国的1901年至2100年期间的1公里分辨率月度气候数据集，以评估标准化降水蒸发指数（SPEI）的变异性。"
+            ],
+            "findingsCn": [
+                "结果表明，delta框架能够准确地对来自气候研究单位和一般环流模型（GCMs）的低空间分辨率月度温度和降水进行下尺度化和校正。在分析的27个GCM中，BNU-ESM、CESM1-CAM5和GFDL-ESM2M被发现是模拟未来温度和降水最准确的模型。我们还发现，与过去（1901-2017年）相比，未来（2018-2100年）的气候将趋向于显著的干旱，尽管两个时期在中国的空间异质性都很高。此外，在大多数情况下，显著减少的SPEI趋势区域的比例远大于增加趋势区域的比例，尤其是在中国西北和北部地区。最后，所提出的量化降水和潜在蒸散发（PET）贡献的方法在逻辑评估中表现良好。总体而言，我们的结果为规划灵活的适应和减缓策略，以应对中国气候干旱的不利影响提供了详细的见解。"
+            ]
+        },
+        {
+            "background": [
+                "Climate change is at the forefront of scientific issues and poses a significant challenge to human survival and development, especially in China (Wang and Chen, 2014). The Loess Plateau (LP) in China is the most developed loess region in the world in terms of extent, thickness, and depositional sequence; it has an area of approximately 0.64×10^6 km² and assumes important service functions in China in terms of ecology and economy (Chen et al., 2015). Over the last 50 years, the annual precipitation has decreased and the air temperature has increased over the LP (Bi et al., 2009; Wang et al., 2012; Sun et al., 2015). These changes can damage the LP by altering its water availability and increasing the instances of soil erosion, droughts, and floods (Miao et al., 2016)."
+            ],
+            "research objective": [
+                "This study presents a detailed assessment of the climate change trends over the LP from 1901 to 2100 based on the 1-km spatial resolution climate data generated through delta downscaling."
+            ],
+            "challenges": [
+                "Despite showing improvements over CMIP3 models, CMIP5 models still show remarkable biases in depicting regional climate information. Spatial resolution continues to limit the capability of GCM data sets to represent complex topography, land surface characteristics, and other processes in the climate system."
+            ],
+            "methods": [
+                "The historical monthly precipitation and mean temperature data used in this study were obtained from the CRU TS3.23 dataset with a 0.5 ∘ spatial resolution (Harris et al., 2014). The GCM monthly precipitation and mean temperature data used in this study were obtained from the downscaled CMIP5 data set with a 0.5∘ resolution. Delta downscaling is used with the data described in the preceding section to produce monthly precipitation and mean temperature grids for the years 1901–2100 with a 1-km resolution. The surface observation data for monthly precipitation and mean temperature were obtained from 113 national weather stations in and around the LP; these data were used to evaluate the downscaled monthly precipitation and mean temperature grids from January 1991 to December 2014 in a time series (period of the available data)."
+            ],
+            "dataset": [
+                "The historical monthly precipitation and mean temperature data used in this study were obtained from the CRU TS3.23 dataset with a 0.5 ∘ spatial resolution (Harris et al., 2014). This data set presents the data for January 1901 to December 2014 in a time series. The GCM monthly precipitation and mean temperature data used in this study were obtained from the downscaled CMIP5 data set with a 0.5 ∘ resolution. This data set was processed from 28 raw GCMs data using the bias correction and delta downscaling methods described by Brekke et al. (2013). The high-resolution reference climatology data used in this study were gridded data on a 1-km (approximately 30 arcseconds) resolution as elaborated by the Chinese National Ecosystem Research Network (CNERN). These climatology data were processed by using spatial interpolation and geographic information systems with 740 national weather stations in China and a 1-km digital elevation model (DEM)."
+            ],
+            "findings": [
+                "Delta downscaling performs well in detecting the monthly precipitation and temperature over the LP based on the mean absolute error between downscaled data and independent surface observations. The annual precipitation over the entire LP shows no significant trends in the historical and future periods. By contrast, the annual temperature shows a significantly increasing trend with 0.097°C/10 year in the historical period (1901–2014) and with 0.113, 0.24, 0.355, and 0.558°C/10 year in the future period (2015–2100) under the RCP2.6, RCP4.5, RCP6.0, and RCP8.5 scenarios, respectively. The significantly increasing trends in precipitation and temperature at each grid of the LP present various spatial distributions in terms of their magnitude. The spatial results calculated by the downscaled data provide more detailed information about the locations and percentages of area, both of which are valuable in assessing the change trends in precipitation and temperature."
+            ],
+            "backgroundCn": [
+                "气候变化是科学问题的前沿，给人类生存和发展带来了重大挑战，尤其是在中国（王和陈，2014）。中国的黄土高原（LP）是世界上黄土地区发展最为成熟的区域，具有广泛的面积、厚度和沉积序列；其面积约为64万平方公里，在生态和经济方面对中国具有重要的服务功能（陈等，2015）。在过去的50年中，黄土高原的年降水量减少，气温上升（毕等，2009；王等，2012；孙等，2015）。这些变化可能通过改变水资源的可用性以及增加土壤侵蚀、干旱和洪水的发生频率来损害黄土高原（苗等，2016）。"
+            ],
+            "research objectiveCn": [
+                "本研究对1901年至2100年间的气候变化趋势进行了详细评估，基于通过增量降尺度生成的1公里空间分辨率气候数据。"
+            ],
+            "challengesCn": [
+                "尽管CMIP5模型在某些方面比CMIP3模型有所改善，但在描绘区域气候信息方面仍然存在显著偏差。空间分辨率仍然限制了全球气候模型数据集对复杂地形、陆面特征和气候系统中其他过程的表现能力。"
+            ],
+            "methodsCn": [
+                "本研究使用的历史月降水量和平均气温数据来自CRU TS3.23数据集，空间分辨率为0.5°（Harris et al., 2014）。本研究使用的GCM月降水量和平均气温数据来自下调的CMIP5数据集，分辨率为0.5°。使用前述数据进行增量下调，以生成1901年至2100年的月降水量和平均气温网格，分辨率为1公里。月降水量和平均气温的地面观测数据来自113个国家气象站，这些数据用于评估从1991年1月到2014年12月的下调月降水量和平均气温网格（可用数据的时间段）。"
+            ],
+            "datasetCn": [
+                "本研究使用的历史月降水量和平均气温数据来自CRU TS3.23数据集，空间分辨率为0.5°（Harris et al., 2014）。该数据集提供了从1901年1月到2014年12月的时间序列数据。本研究使用的GCM月降水量和平均气温数据来自下调的CMIP5数据集，分辨率为0.5°。该数据集是通过对28个原始GCM数据进行偏差校正和增量下调处理而得到的，具体方法详见Brekke et al.（2013）。本研究使用的高分辨率参考气候数据为1公里（约30弧秒）分辨率的网格数据，具体由中国国家生态系统研究网络（CNERN） elaborated。该气候数据通过使用空间插值和地理信息系统处理，基于740个中国国家气象站和1公里数字高程模型（DEM）。"
+            ],
+            "findingsCn": [
+                "Delta下缩放在检测LP地区的月降水量和温度方面表现良好，基于下缩放数据与独立地面观测之间的平均绝对误差。整个LP地区的年降水量在历史和未来时期均未显示出显著的趋势。相反，年温度在历史时期（1901-2014年）显示出显著的上升趋势，增幅为0.097°C/10年，而在未来时期（2015-2100年）则分别在RCP2.6、RCP4.5、RCP6.0和RCP8.5情景下显示出0.113、0.24、0.355和0.558°C/10年的显著上升趋势。LP地区每个网格的降水量和温度显著上升趋势在幅度上呈现出不同的空间分布。通过下缩放数据计算的空间结果提供了关于位置和面积百分比的更详细信息，这些信息在评估降水量和温度变化趋势时非常有价值。"
+            ]
+        },
+        {
+            "background": [
+                "High-spatial-resolution and long-term climate data are required for accurate investigations of changes in climate and climate-related phenomena that affect hydrology, vegetation cover, and crop production. Although meteorological observation networks are increasingly incorporating data from a greater number of weather stations and contributions from an increasing number of governments and researchers around the world, observation networks still suffer from low station density and spatial resolution, especially in mountainous areas, where the installation and maintenance of weather stations are challenging. Proxy monthly temperature (TMP) and precipitation (PRE) data products are released by several climate research organizations such as the general circulation models (GCMs) of the Intergovernmental Panel on Climate Change, the Climatic Research Unit (CRU) of the University of East Anglia, the Global Precipitation Climatology Centre (GPCC), and Willmott & Matsuura (W&M). Although CRU products offer the advantage of reflecting long-term climate effects, their low spatial resolution (30′, approximately 55 km) limits their ability to reflect the effects of complex topographies, land surface characteristics, and other processes on climate systems. China has a large area with abundant mountainous regions. As a result, even the establishment of additional weather stations has not fully satisfied the requirements for long-term, high-spatial-resolution climate data, especially at finer geographical scales and for mountainous areas. Furthermore, most weather stations in China were established after 1950, and thus long-term observational climate data are lacking."
+            ],
+            "research objective": [
+                "The objective of this study was to generate a long-term climate dataset with high spatial resolution for China by downscaling CRU time series data using a high-spatial-resolution reference climatology dataset."
+            ],
+            "challenges": [
+                "Although the new dataset was not evaluated before 1950 owing to data unavailability, the quality of the new dataset in the period of 1901–2017 depended on the quality of the original CRU and WorldClim datasets."
+            ],
+            "methods": [
+                "First, reference climatology data with different spatial resolutions and the 30′ original CRU time series data were evaluated through observations. Second, the 30′ original CRU time series data were spatially downscaled to four spatial resolutions (10′, 5′, 2.5′, and 0.5′) corresponding to the spatial resolutions of the reference climatology data using the delta downscaling framework. The downscaled data were validated through observations. Finally, the climatology data and annual trends in TMPs and PRE were investigated using the 30′ original CRU, 0.5′ downscaled, and observed data to demonstrate the performance of the 0.5′ downscaled data."
+            ],
+            "dataset": [
+                "The dataset presented in this article has been published in the Network Common Data Form (NetCDF) at https://doi.org/10.5281/zenodo.3114194 for precipitation and https://doi.org/10.5281/zenodo.3185722 for air temperatures at 2 m and includes 156 NetCDF files compressed in zip format and one user guidance text file. The monthly mean, maximum, and minimum air TMPs at 2 m as well as PRE were obtained for January 1901 to December 2017 with a spatial resolution of 30′ from the CRU TS v4.02 dataset. To downscale CRU TMPs and PRE time series data to higher spatial resolutions, we obtained four high-resolution reference datasets at spatial resolutions of 10′, 5′, 2.5′, and 0.5′ from WorldClim v2.0. To evaluate the performance of the downscaling procedure, the observed long-term monthly TMPs (i.e., mean, maximum, minimum air TMPs at 2 m) and PRE variables across China were obtained from the National Meteorological Information Center of China. This dataset included observations from 496 national weather stations during 1951–2016."
+            ],
+            "findings": [
+                "Compared with the evaluations of the 30′original CRU dataset, the mean absolute error of the new dataset (i.e., of the 0.5′dataset downscaled by bilinear interpolation) decreased by 35.4 %–48.7 % for TMPs and by 25.7 % for PRE. The root-mean-square error decreased by 32.4 %–44.9 % for TMPs and by 25.8 % for PRE. The Nash–Sutcliffe efficiency coefficients increased by 9.6 %–13.8 % for TMPs and by 31.6 % for PRE, and correlation coefficients increased by 0.2 %–0.4 % for TMPs and by 5.0 % for PRE. Overall, the downscaled datasets had higher accuracy than the original CRU dataset, especially the 0.5′dataset downscaled using the bilinear interpolation method, which is, therefore, the new dataset proposed by this study."
+            ],
+            "backgroundCn": [
+                "高空间分辨率和长期气候数据对于准确调查气候变化及其对水文、植被覆盖和农作物生产的影响是必需的。尽管气象观测网络越来越多地整合来自更多气象站的数据，以及来自世界各地越来越多的政府和研究人员的贡献，但观测网络仍然存在站点密度低和空间分辨率不足的问题，尤其是在山区，安装和维护气象站面临挑战。多个气候研究组织发布了代理月度温度（TMP）和降水（PRE）数据产品，例如气候变化政府间专门委员会（IPCC）的全球气候模型（GCMs）、东英吉利大学气候研究单位（CRU）、全球降水气候中心（GPCC）以及Willmott & Matsuura（W&M）。尽管CRU产品具有反映长期气候效应的优势，但其低空间分辨率（30′，约55公里）限制了其反映复杂地形、地表特征和其他过程对气候系统影响的能力。中国地大物博，山区丰富。因此，即使建立了更多的气象站，仍未能完全满足长期、高空间分辨率气候数据的需求，尤其是在更细的地理尺度和山区。此外，中国大多数气象站是在1950年后建立的，因此缺乏长期观测气候数据。"
+            ],
+            "research objectiveCn": [
+                "本研究的目的是通过使用高空间分辨率的参考气候数据集对CRU时间序列数据进行降尺度，生成中国的长期气候数据集，具有高空间分辨率。"
+            ],
+            "challengesCn": [
+                "尽管由于数据不可用，新数据集在1950年前没有进行评估，但1901年至2017年期间新数据集的质量依赖于原始CRU和WorldClim数据集的质量。"
+            ],
+            "methodsCn": [
+                "首先，通过观测评估了不同空间分辨率的气候数据与30′原始CRU时间序列数据。其次，使用增量下缩放框架将30′原始CRU时间序列数据空间下缩放到四个空间分辨率（10′、5′、2.5′和0.5′），对应参考气候数据的空间分辨率。下缩放的数据通过观测进行了验证。最后，使用30′原始CRU、0.5′下缩放和观测数据调查了气候数据以及TMP和PRE的年度趋势，以展示0.5′下缩放数据的性能。"
+            ],
+            "datasetCn": [
+                "本文中呈现的数据集已在网络通用数据格式（NetCDF）中发布，链接为：https://doi.org/10.5281/zenodo.3114194（降水）和 https://doi.org/10.5281/zenodo.3185722（2米空气温度），包括156个压缩为zip格式的NetCDF文件和一个用户指南文本文件。该数据集包含1901年1月至2017年12月的月均、月最大和月最小2米空气温度（TMPs）以及降水量（PRE），空间分辨率为30′，数据来源于CRU TS v4.02数据集。为了将CRU的TMPs和PRE时间序列数据下尺度到更高的空间分辨率，我们从WorldClim v2.0获取了四个高分辨率参考数据集，空间分辨率分别为10′、5′、2.5′和0.5′。为了评估下尺度过程的性能，我们从中国国家气象信息中心获取了中国地区的长期观测月TMPs（即2米空气TMPs的均值、最大值、最小值）和降水变量的数据。该数据集包含了1951年至2016年间496个国家气象站的观测数据。"
+            ],
+            "findingsCn": [
+                "与30′原始CRU数据集的评估相比，新数据集（即通过双线性插值下采样的0.5′数据集）在TMPs方面的平均绝对误差减少了35.4%–48.7%，在PRE方面减少了25.7%。根均方误差在TMPs方面减少了32.4%–44.9%，在PRE方面减少了25.8%。纳什–萨特克利夫效率系数在TMPs方面增加了9.6%–13.8%，在PRE方面增加了31.6%；相关系数在TMPs方面增加了0.2%–0.4%，在PRE方面增加了5.0%。总体而言，经过下采样的数据集比原始CRU数据集具有更高的准确性，特别是使用双线性插值方法下采样的0.5′数据集，因此这是本研究提出的新数据集。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Does the delta spatial downscaling method provide a reliable way to generate high-resolution climate datasets?",
+                "QuestionCn": "delta空间下采样方法是否提供了一种可靠的生成高分辨率气候数据集的方式？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Can the delta downscaling method accurately represent the spatial variability of climate data over complex topographies?",
+                "QuestionCn": "德尔塔降尺度方法能否准确表示复杂地形上气候数据的空间变异性？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Which data sources are more commonly used for high-resolution climate data in China: general circulation models, CRU datasets, or national weather stations?",
+                "QuestionCn": "在中国，高分辨率气候数据更常用的数据来源是：一般环流模型、CRU 数据集还是国家气象站？",
+                "AnswerEn": "CRU datasets and national weather stations",
+                "AnswerCn": "CRU 数据集和国家气象站",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What data collection method is used to achieve high spatial resolution for climate datasets in China?",
+                "QuestionCn": "在中国，为了获得高空间分辨率的气候数据集，使用了什么数据收集方法？",
+                "AnswerEn": "Delta spatial downscaling method",
+                "AnswerCn": "Delta空间降尺度方法",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Where can high-resolution reference climatology data be obtained to downscale climate data in China?",
+                "QuestionCn": "在中国，可以从哪里获得高分辨率的参考气候数据以进行气候数据的下尺度处理？",
+                "AnswerEn": "Chinese National Ecosystem Research Network, WorldClim",
+                "AnswerCn": "中国国家生态系统观测研究网络，WorldClim",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "When are the projected climate trends in China expected to show significant changes according to downscaled datasets?",
+                "QuestionCn": "根据下调数据集，预计中国的气候趋势何时会出现显著变化？",
+                "AnswerEn": "2018 to 2100",
+                "AnswerCn": "2018年至2100年",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method used to generate high-spatial-resolution climate datasets in China?",
+                "QuestionCn": "您能否提供一个用于生成中国高空间分辨率气候数据集的数据收集方法的例子？",
+                "AnswerEn": "The delta spatial downscaling method was used to generate a 1 km resolution monthly climate dataset for China, which involved using low-spatial-resolution datasets from the Climatic Research Unit and general circulation models, and applying corrections through downscaling techniques.",
+                "AnswerCn": "使用三角洲空间下采样方法生成了中国的1公里分辨率月度气候数据集，该方法涉及使用气候研究单位和一般环流模型的低空间分辨率数据集，并通过下采样技术应用修正。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge faced in collecting long-term climate data with high spatial resolution for regions with complex topographies?",
+                "QuestionCn": "在复杂地形区域收集高空间分辨率的长期气候数据时面临的一个挑战是什么？",
+                "AnswerEn": "A significant challenge is the low station density and spatial resolution of observation networks, particularly in mountainous areas where establishing and maintaining weather stations is difficult, as seen in China's mountainous regions.",
+                "AnswerCn": "一个显著的挑战是观测网络的站点密度低和空间分辨率差，特别是在山区，建立和维护气象站非常困难，这在中国的山区尤为明显。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What challenges are associated with generating high-spatial-resolution climate datasets in regions with complex topographies?",
+                "QuestionCn": "在地形复杂的地区生成高空间分辨率气候数据集面临哪些挑战？",
+                "AnswerEn": "low station density, spatial resolution limitations of GCM data, difficulty of installing and maintaining weather stations in mountainous areas",
+                "AnswerCn": "气象站密度低、全球气候模型数据的空间分辨率限制、在山区安装和维护气象站的困难。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the resolution of the climate dataset used for spatial downscaling in China from 1901 to 2100?",
+                "QuestionCn": "中国从1901年到2100年的气候数据集用于空间下采样的分辨率是多少？",
+                "AnswerEn": "1 km",
+                "AnswerCn": "1公里",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many national weather stations were used to validate the downscaled climate data in the Loess Plateau study?",
+                "QuestionCn": "在黄土高原研究中，用于验证下调气候数据的国家气象站数量是多少？",
+                "AnswerEn": "113",
+                "AnswerCn": "113",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the temporal range of the climate dataset that was downscaled using the delta framework to assess SPEI variability?",
+                "QuestionCn": "用于评估SPEI变异性的气候数据集的时间范围是什么？",
+                "AnswerEn": "1901-2100",
+                "AnswerCn": "1901-2100",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is the delta spatial downscaling method in the context of climate data collection?",
+                "QuestionCn": "在气候数据收集的背景下，delta空间下采样方法是一种用于将粗分辨率气候模型输出转换为更高分辨率数据的方法。该方法通过计算粗分辨率数据与观测数据之间的差异（即“delta”），然后将这些差异应用于高分辨率的基础气候数据，以生成更精细的气候预测。这种方法常用于气候变化影响评估和区域气候建模。",
+                "AnswerEn": "The delta spatial downscaling method involves generating high-resolution climate datasets by downscaling low-spatial-resolution data from sources such as the Climatic Research Unit and WorldClim. This method is used to create datasets with finer spatial resolution by applying adjustments based on reference climatology data.",
+                "AnswerCn": "德尔塔空间下采样方法涉及通过对来自气候研究单位和WorldClim等来源的低空间分辨率数据进行下采样，生成高分辨率气候数据集。该方法通过基于参考气候数据的调整来创建具有更细空间分辨率的数据集。",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the significance of using high-spatial-resolution reference climatology data in climate studies?",
+                "QuestionCn": "在气候研究中使用高空间分辨率参考气候数据的重要性是什么？",
+                "AnswerEn": "High-spatial-resolution reference climatology data are crucial in climate studies for accurately investigating changes in climate phenomena. These datasets enable detailed assessments of climate variations, especially in regions with complex topographies, by providing fine-scale data that traditional low-resolution datasets cannot capture.",
+                "AnswerCn": "高空间分辨率的参考气候数据在气候研究中至关重要，因为它们能够准确调查气候现象的变化。这些数据集使得对气候变化的详细评估成为可能，特别是在地形复杂的地区，因为它们提供了传统低分辨率数据集无法捕捉的细尺度数据。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "What are the differences in challenges faced when using CRU datasets versus downscaled CMIP5 datasets for assessing climate trends over regions like the Loess Plateau in China?",
+                "QuestionCn": "使用CRU数据集与下调CMIP5数据集在评估中国黄土高原等地区的气候趋势时面临的挑战有哪些不同？",
+                "AnswerEn": "One major challenge with CRU datasets is their low spatial resolution, which limits their ability to accurately reflect regional climate variability, especially in complex topographies. On the other hand, downscaled CMIP5 datasets, while having improved spatial resolution, still face biases in depicting regional climate information, posing limitations in representing complex topography and land surface characteristics.",
+                "AnswerCn": "CRU 数据集的一个主要挑战是其低空间分辨率，这限制了它们准确反映区域气候变异性的能力，尤其是在复杂地形中。另一方面，虽然下调的 CMIP5 数据集具有更高的空间分辨率，但在描绘区域气候信息时仍然存在偏差，这在表示复杂地形和地表特征方面也存在局限性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In what ways do the methodologies for downscaling climate data differ when generating high-resolution datasets for investigating drought variability versus general climate trends in China?",
+                "QuestionCn": "在生成高分辨率数据集以研究中国的干旱变异性与一般气候趋势时，气候数据的下采样方法有哪些不同之处？",
+                "AnswerEn": "When investigating drought variability, the focus is on generating a 1 km resolution dataset using delta downscaling to assess the variability of indices like the Standardized Precipitation Evaporation Index (SPEI). This involves quantifying contributions of water supply and demand. For general climate trends, the approach involves using historical monthly data and downscaling with reference climatology datasets to improve spatial resolution and validate against surface observations, as seen in studies focusing on regions like the Loess Plateau.",
+                "AnswerCn": "在研究干旱变异性时，重点是生成一个1公里分辨率的数据集，使用增量下采样来评估标准化降水蒸发指数（SPEI）的变异性。这涉及量化水供应和需求的贡献。对于一般气候趋势，该方法涉及使用历史月度数据，并通过参考气候数据集进行下采样，以提高空间分辨率并与地面观测进行验证，正如在关注黄土高原等地区的研究中所见。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How does the delta spatial downscaling method contribute to the accuracy and resolution of climate datasets, and what underlying principles can be inferred from its application?",
+                "QuestionCn": "德尔塔空间下采样方法如何提高气候数据集的准确性和分辨率，以及其应用中可以推断出的基本原理是什么。",
+                "AnswerEn": "The delta spatial downscaling method improves the accuracy and resolution of climate datasets by correcting low-spatial-resolution data from sources like the Climatic Research Unit and general circulation models (GCMs). By applying this method, researchers can infer that it effectively addresses the limitations of original datasets, providing a more detailed spatial representation of climatic variables, especially in complex topographies and varied climate zones.",
+                "AnswerCn": "德尔塔空间下采样方法通过修正来自气候研究单位和一般环流模型（GCMs）等来源的低空间分辨率数据，提高了气候数据集的准确性和分辨率。通过应用该方法，研究人员可以推断出它有效地解决了原始数据集的局限性，提供了气候变量的更详细空间表示，特别是在复杂地形和多样气候区中。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What challenges in capturing detailed spatial variability of climate data can be deduced from the use of the delta downscaling approach, especially in regions with complex topographies?",
+                "QuestionCn": "从使用增量降尺度方法中，可以推断出在捕捉气候数据的详细空间变异性方面面临的挑战，尤其是在地形复杂的地区。",
+                "AnswerEn": "The delta downscaling approach reveals that challenges in capturing detailed spatial variability arise from the biases in general circulation models and the inherent limitations of low-resolution datasets. The method highlights the need for high-resolution reference datasets to accurately represent complex topographies and climate processes, which are crucial for understanding localized climate phenomena and long-term trends.",
+                "AnswerCn": "三角洲降尺度方法揭示了由于一般环流模型中的偏差和低分辨率数据集的固有限制，捕捉详细空间变异性所面临的挑战。该方法强调了需要高分辨率参考数据集，以准确表示复杂的地形和气候过程，这对于理解局部气候现象和长期趋势至关重要。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What causes the need for high spatial resolution in climate data collection and analysis in China?",
+                "QuestionCn": "在中国，气候数据收集和分析中对高空间分辨率的需求主要由以下因素造成：",
+                "AnswerEn": "High-spatial-resolution and long-term climate data are required for accurate investigations of changes in climate and climate-related phenomena that affect hydrology, vegetation cover, and crop production. Low station density and spatial resolution, especially in mountainous areas, contribute to the need for high-resolution data to reflect the effects of complex topographies and land surface characteristics on climate systems.",
+                "AnswerCn": "高空间分辨率和长期气候数据对于准确研究气候变化及其对水文、植被覆盖和农作物生产的影响是必需的。尤其是在山区，气象站密度低和空间分辨率不足，进一步增加了对高分辨率数据的需求，以反映复杂地形和地表特征对气候系统的影响。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the reasons for observed biases in GCM datasets when depicting regional climate information for China?",
+                "QuestionCn": "在描绘中国区域气候信息时，全球气候模型（GCM）数据集观察到的偏差原因有哪些？",
+                "AnswerEn": "Despite improvements in models like CMIP5, there are still remarkable biases due to limitations in spatial resolution, which affect the representation of complex topography, land surface characteristics, and other climate system processes. These limitations hinder the ability to accurately model regional climate information, resulting in biases.",
+                "AnswerCn": "尽管像CMIP5这样的模型有所改进，但由于空间分辨率的限制，仍然存在显著的偏差，这影响了复杂地形、陆面特征和其他气候系统过程的表现。这些限制妨碍了准确建模区域气候信息的能力，导致了偏差。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What is the impact on climate modeling accuracy when employing delta spatial downscaling methods as opposed to using only low-spatial-resolution datasets?",
+                "QuestionCn": "使用增量空间下采样方法与仅使用低空间分辨率数据集相比，对气候模型准确性的影响是什么？",
+                "AnswerEn": "The delta spatial downscaling method can accurately downscale and correct low-spatial-resolution monthly temperatures and precipitation from sources like the Climatic Research Unit and general circulation models. This method has shown to improve the detailing of climate variables and accurately represent spatial heterogeneity, which is vital for effective climate modeling and analysis.",
+                "AnswerCn": "德尔塔空间下采样方法可以准确地对来自气候研究单位和一般环流模型的低空间分辨率月度温度和降水进行下采样和校正。该方法已被证明能够改善气候变量的细节表现，并准确表示空间异质性，这对于有效的气候建模和分析至关重要。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the potential consequences of using a high-resolution climate model to assess future climate scenarios in terms of drought trends across different regions in China?",
+                "QuestionCn": "使用高分辨率气候模型评估中国不同地区未来气候情景中的干旱趋势可能带来的潜在后果是什么？",
+                "AnswerEn": "High-resolution climate models provide more detailed insights into regional variations and trends, revealing significant spatial heterogeneity in future climate scenarios. For instance, they indicate a tendency towards increased droughts in future projections (2018-2100) compared to historical data (1901-2017), with significant implications for adaptation and mitigation strategies in regions like northwestern and northern China.",
+                "AnswerCn": "高分辨率气候模型提供了对区域变化和趋势的更详细洞察，揭示了未来气候情景中的显著空间异质性。例如，它们表明，与历史数据（1901-2017年）相比，未来预测（2018-2100年）中干旱的趋势有所增加，这对中国西北和北部地区的适应和减缓策略具有重要影响。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "Why is it important to generate a long-term climate dataset with high spatial resolution for China?",
+                "QuestionCn": "为什么为中国生成高空间分辨率的长期气候数据集很重要？",
+                "AnswerEn": "The objective of generating a long-term climate dataset with high spatial resolution for China is to accurately investigate changes in climate and climate-related phenomena that affect hydrology, vegetation cover, and crop production. This is crucial because existing meteorological observation networks suffer from low station density and spatial resolution, particularly in mountainous areas, making it challenging to reflect the effects of complex topographies and land surface characteristics on climate systems.",
+                "AnswerCn": "生成高空间分辨率的中国长期气候数据集的目标是准确调查影响水文、植被覆盖和农作物生产的气候变化及气候相关现象。这一点至关重要，因为现有的气象观测网络在站点密度和空间分辨率上存在不足，特别是在山区，这使得反映复杂地形和地表特征对气候系统影响的挑战加大。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is the purpose of employing the delta spatial downscaling method in climate data studies across China?",
+                "QuestionCn": "在中国的气候数据研究中，采用增量空间下采样方法的目的是为了提高气候模型的空间分辨率，从而更准确地捕捉和分析区域气候变化的细节。这种方法可以帮助研究人员更好地理解气候变化对地方生态、经济和社会的影响。",
+                "AnswerEn": "The purpose of employing the delta spatial downscaling method in climate data studies across China is to generate a 1 km resolution monthly climate dataset for assessing the variability of the Standardized Precipitation Evaporation Index (SPEI). This method helps in quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration) on SPEI variability, which is important for understanding detailed spatial variability and attribution of drought variation in China.",
+                "AnswerCn": "在中国的气候数据研究中，采用增量空间下采样方法的目的是生成1公里分辨率的月度气候数据集，以评估标准化降水蒸发指数（SPEI）的变异性。该方法有助于量化水供应（降水）和需求（潜在蒸散发）对SPEI变异性的贡献，这对于理解中国干旱变化的详细空间变异性和归因非常重要。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in generating a high-spatial-resolution climate dataset for a large geographical area using the delta spatial downscaling method?",
+                "QuestionCn": "生成大面积高空间分辨率气候数据集的delta空间下采样方法涉及的程序步骤包括：\n\n1. **选择基准气候数据**：获取高分辨率的气候模型输出或观测数据，作为下采样的基础。\n\n2. **获取低分辨率气候模型数据**：选择适当的低分辨率气候模型数据，通常是全球气候模型（GCM）或区域气候模型（RCM）的输出。\n\n3. **确定下采样区域**：明确需要生成高分辨率数据的地理区域，并收集该区域的相关地理信息。\n\n4. **计算气候变化信号**：分析低分辨率气候模型数据与基准气候数据之间的差异，提取气候变化信号。\n\n5. **应用delta方法**：使用计算出的气候变化信号对基准气候数据进行调整，生成高分辨率的气候数据集。\n\n6. **验证和校准**：对生成的数据进行验证，确保其准确性和可靠性，必要时进行校准。\n\n7. **数据输出和存储**：将生成的高分辨率气候数据集进行格式化，输出并存储，以便后续使用。\n\n8. **文档记录**：记录下采样过程中的所有步骤和参数，以便于将来的复现和参考。",
+                "AnswerEn": "The process involves first obtaining low-resolution climate data, such as the CRU TS3.23 dataset with a 0.5° spatial resolution. Then, using the delta spatial downscaling method, the data are downscaled to a finer spatial resolution, like 1 km, by integrating additional high-resolution reference climatology data. This involves spatial interpolation and validation using independent weather station observations to ensure accuracy.",
+                "AnswerCn": "该过程首先获取低分辨率气候数据，例如具有0.5°空间分辨率的CRU TS3.23数据集。然后，使用增量空间下采样方法，将数据下采样到更细的空间分辨率，如1公里，通过整合额外的高分辨率参考气候数据。这涉及空间插值和使用独立气象站观测进行验证，以确保准确性。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How can researchers effectively validate downscaled climate data to ensure its accuracy and reliability?",
+                "QuestionCn": "研究人员如何有效地验证下调气候数据，以确保其准确性和可靠性？",
+                "AnswerEn": "Validation of downscaled climate data involves comparing the downscaled data with independent surface observations from weather stations. For example, using 496 national weather stations' data across China, researchers can calculate mean absolute errors, root-mean-square errors, and other statistical measures to evaluate the accuracy of the downscaled dataset compared to the original data.",
+                "AnswerCn": "下调气候数据的验证涉及将下调数据与来自气象站的独立地面观测进行比较。例如，研究人员可以使用中国496个国家气象站的数据，计算平均绝对误差、均方根误差和其他统计指标，以评估下调数据集与原始数据的准确性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What methods can be used to assess the contributions of water supply and demand to climate variability when analyzing high-resolution climate datasets?",
+                "QuestionCn": "在分析高分辨率气候数据集时，可以使用哪些方法来评估水供应和需求对气候变异的贡献？",
+                "AnswerEn": "To assess the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) to climate variability, researchers can develop approaches based on the differentiating equations of indexes like the Standardized Precipitation Evaporation Index (SPEI). This involves generating high-resolution climate datasets and using these to quantify the impact of changes in precipitation and PET on SPEI variability.",
+                "AnswerCn": "为了评估水供应（降水）和需求（潜在蒸散发，PET）对气候变异的贡献，研究人员可以基于标准化降水蒸发指数（SPEI）的差分方程开发方法。这涉及生成高分辨率气候数据集，并利用这些数据量化降水和PET变化对SPEI变异的影响。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What data collection methods enable the generation of high-resolution climate datasets for long-term climate analysis in China?",
+                "QuestionCn": "哪些数据收集方法能够生成用于中国长期气候分析的高分辨率气候数据集？",
+                "AnswerEn": "The generation of high-resolution climate datasets is enabled by the use of delta spatial downscaling methods applied to existing datasets such as the CRU global 0.5° climate data and WorldClim's high-resolution climate datasets. These methods allow for the production of 1 km resolution monthly climate data by correcting low-spatial-resolution data through spatial interpolation and geographic information systems.",
+                "AnswerCn": "高分辨率气候数据集的生成得益于对现有数据集（如CRU全球0.5°气候数据和WorldClim的高分辨率气候数据集）应用的增量空间下采样方法。这些方法通过空间插值和地理信息系统，允许生成1公里分辨率的月度气候数据，从而对低空间分辨率数据进行修正。",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might a dataset using the delta downscaling method be expected to show improved representation of regional climate trends compared to global climate models?",
+                "QuestionCn": "使用增量降尺度方法的数据集可能会比全球气候模型更好地代表区域气候趋势，原因是什么？",
+                "AnswerEn": "The delta downscaling method can improve the representation of regional climate trends because it uses high-resolution reference data to adjust the coarser outputs of global climate models, thus providing more detailed information about local climatic conditions and reducing biases related to complex regional features.",
+                "AnswerCn": "三角洲降尺度方法可以改善区域气候趋势的表现，因为它利用高分辨率的参考数据来调整全球气候模型的粗糙输出，从而提供关于地方气候条件的更详细信息，并减少与复杂区域特征相关的偏差。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "In your opinion, what are the main challenges associated with collecting high-spatial-resolution climate data in regions with complex topography?",
+                "QuestionCn": "在复杂地形区域收集高空间分辨率气候数据的主要挑战是什么？",
+                "AnswerEn": "The primary challenges in collecting high-spatial-resolution climate data in regions with complex topography include low station density, difficulty in installing and maintaining weather stations, and the limitations of existing datasets in capturing the effects of topographical variations. These challenges necessitate advanced methods like spatial downscaling and high-resolution reference datasets to improve the representation of climate phenomena in such areas.",
+                "AnswerCn": "在地形复杂的地区收集高空间分辨率气候数据的主要挑战包括气象站密度低、安装和维护气象站的困难，以及现有数据集在捕捉地形变化影响方面的局限性。这些挑战需要采用先进的方法，如空间下采样和高分辨率参考数据集，以改善这些地区气候现象的表现。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I can't figure out how high-spatial-resolution climate data can be accurately generated for regions with complex topographies, especially in areas with sparse weather stations.",
+                "QuestionCn": "我无法弄清楚如何为地形复杂的地区，尤其是气象站稀少的地区，准确生成高空间分辨率的气候数据。",
+                "AnswerEn": "The generation of high-resolution climate data in such areas can be achieved by using spatial downscaling methods, like the delta spatial downscaling framework, which adjusts lower-resolution data from sources such as CRU and WorldClim datasets. This method involves interpolating and validating the data with observations from available weather stations to ensure accuracy, even in complex terrains.",
+                "AnswerCn": "在这些地区生成高分辨率气候数据可以通过使用空间下采样方法来实现，例如增量空间下采样框架，该框架调整来自CRU和WorldClim数据集的低分辨率数据。该方法涉及对数据进行插值和验证，以确保与可用气象站的观测数据相符，从而确保准确性，即使在复杂地形中也是如此。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please summarize the data collection techniques used for generating high-resolution climate datasets over extended periods in China.",
+                "QuestionCn": "总结用于生成中国长期高分辨率气候数据集的数据收集技术。",
+                "AnswerEn": "The data collection techniques include downscaling global climate datasets, such as those from the Climatic Research Unit and WorldClim, using the delta spatial downscaling framework. This method involves spatial interpolation and geographic information systems to process data from national weather stations, generating high-resolution climate datasets with spatial resolutions as fine as 1 km. Additionally, the datasets are validated using independent meteorological observation data from numerous weather stations across China.",
+                "AnswerCn": "数据收集技术包括使用delta空间下采样框架对全球气候数据集进行下采样，例如来自气候研究单位和WorldClim的数据。该方法涉及空间插值和地理信息系统，处理来自国家气象站的数据，生成空间分辨率高达1公里的高分辨率气候数据集。此外，这些数据集还使用来自中国众多气象站的独立气象观测数据进行验证。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Please analyze the challenges faced in collecting and validating high-resolution climate data in regions with complex topographies.",
+                "QuestionCn": "分析在复杂地形地区收集和验证高分辨率气候数据所面临的挑战。",
+                "AnswerEn": "Challenges include low station density and spatial resolution in mountainous areas, which complicates accurate climate data collection. The installation and maintenance of weather stations in these regions are difficult, resulting in limited long-term observational data. Furthermore, while downscaling techniques improve spatial resolution, they rely heavily on the quality of existing datasets, which may still contain biases from global climate models.",
+                "AnswerCn": "挑战包括在山区低站点密度和空间分辨率，这使得准确的气候数据收集变得复杂。在这些地区安装和维护气象站非常困难，导致长期观测数据有限。此外，尽管降尺度技术提高了空间分辨率，但它们在很大程度上依赖于现有数据集的质量，而这些数据集可能仍然存在来自全球气候模型的偏差。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Please explore potential strategies to enhance the accuracy and spatial resolution of climate datasets for future research in China.",
+                "QuestionCn": "探索增强中国未来研究气候数据集的准确性和空间分辨率的潜在策略。",
+                "AnswerEn": "Enhancing dataset accuracy and resolution can be achieved by integrating more high-resolution reference climatology datasets and employing advanced downscaling methods, such as delta downscaling combined with bias correction. Increasing the number of weather stations, especially in underrepresented areas like mountainous regions, and utilizing data assimilation techniques could also improve dataset reliability. Additionally, leveraging new technologies like remote sensing and machine learning may provide further improvements in capturing climate variability and trends.",
+                "AnswerCn": "提高数据集的准确性和分辨率可以通过整合更多高分辨率的参考气候数据集以及采用先进的降尺度方法来实现，例如结合偏差修正的增量降尺度。此外，增加气象站的数量，特别是在像山区这样的欠代表区域，以及利用数据同化技术，也可以提高数据集的可靠性。此外，利用遥感和机器学习等新技术可能进一步改善气候变异性和趋势的捕捉。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

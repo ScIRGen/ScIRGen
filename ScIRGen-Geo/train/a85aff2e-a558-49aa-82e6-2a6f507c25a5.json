@@ -1,0 +1,205 @@
+{
+    "id": "a85aff2e-a558-49aa-82e6-2a6f507c25a5",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Merged 3-Dimentional gridded temperature dataset among Indian Ocean (2005-2019)",
+            "titleCn": "印度洋三维格点化海温融合数据（2005-2019）",
+            "description": "Estimate of the thermal state of the ocean is of vital importance to understand the process of air-sea interaction and footprint of climate change in the Indian Ocean. However, the insufficiency and poor coverage of subsurface observation brings quite a large challenge to estimate the subsurface temperature changes accurately. Moreover, surface observation from satellite contains well sample and could also reflect the subsurface information partly. We derived the ‘synthetic profiles’ based on the ‘surface-subsurface regression’ method in order to enrich the subsurface profiles. Then the 3-dimentional gridded temperature dataset are established by combining both the in-situ and synthetic profiles through objective analysis technique. Inter-comparison between the previous released datasets, such as IAP, EN4 and Ishii, this dataset could capture main thermal signal among the Indian Ocean and shows more mesoscale signal because of its higher resolution.\nThis dataset provides monthly mean gridded subsurface temperature estimate among 30E-105E, 45S-30N, ranging from 2005 to 2018. We provide with dataset which has horizontal resolution in quarter degree and 42 vertical levels from surface to 2000-m depth in netCDF format.",
+            "descriptionCn": "印度洋是海气相互作用非常活跃的区域，它与太平洋共同构成的“印度洋-太平洋暖池”是全球海温最高、体积最大的暖水区，不仅通过季风将大量的热量和水汽输送到热带外海域，而且热带印度洋上空的强对流也在全球气候变化中扮演重要的角色。研究印度洋本身的热力性质以及海气相互作用，需要准确、可靠的格点化三维海温数据集。\n本数据集由印度洋三维格点温度构成，其水平范围覆盖印度洋（30°E-105°E，45°S-30°N），垂直方向从表层到2000米共41层，水平分辨率为1/4°，时间分辨率是逐月。数据采用“表层-次表层”反演技术和最优插值方案制作。首先，“表层-次表层”反演过程使用机器学习算法（广义神经网络）将遥感的海表面温、海表面高度异常等信息投影到次表层，形成反演剖面（或“伪”剖面）。进一步，挑选高质量的反演剖面，补充到英国气象局提供的海洋次表层现场剖面数据库中，使用最优插值方案进行融合，得到最终的融合数据集。通过与现有的IAP、EN4以及Ishii数据集相比，该数据集能够抓住印度洋主要的海温变化特征，高分辨率版本可以提取更多中小尺度信号。该数据集分辨率高，融合了现场剖面和遥感资料的优势，有望在印度洋海气相互作用方面发挥作用。",
+            "instructions": "This dataset provides monthly mean gridded subsurface temperature estimate among 30E-105E, 45S-30N, ranging from 2005 to 2019. We provide two kinds of horizontal resolution- 1 degree and quarter degree and 42 vertical levels from surface to 2000-m depth in netCDF format.\nData file nomination: 3-dimentioanl sea temperature data has been stored in netCDF format, and named as \"Merged_IO_Temp_YYYY_MM_Quarter.nc\", where YYYY represents the year and MM represents the month. For example, Merged_IO_Temp_2005_01_Quarter.nc represents the 3-dimentioanl sea temperature among the Indian Ocean in January 2005. \nData reading method: All netCDF files in this dataset can be read directly using Matlab, NCL, python and other languages.",
+            "instructionsCn": "该数据集时间范围：2005年1月至2019年9月。空间范围：29.875°E-104.875°E，45.125°S-29.875°N。空间分辨率：0.25度，时间分辨率：逐月。数据存储为netCDF格式。文件大小：每个文件约15MB，总计需2.64GB存储空间。\n数据命名方法及使用方法：\n文件命名：海温数据以netCDF格式存储，文件的名称为“Merged_IO_Temp_YYYY_MM_Quarter.nc”命名，其中YYYY代表年份，MM代表月份，比如Merged_IO_Temp_2005_01_Quarter.nc就代表2005年1月的印度洋的海温。\n数据读取方式：该数据集中所有的netCDF文件可直接使用Matlab、NCL、python等语言进行读取操作。",
+            "east": 104.875,
+            "west": 29.875,
+            "south": -45.125,
+            "north": 29.875,
+            "startTime": "2005-01-01 00:00:00",
+            "endTime": "2019-09-30 11:59:59",
+            "fileSize": 1474850179.0,
+            "cstr": "18406.11.Hydro.tpdc.271029",
+            "doi": "10.11888/Hydro.tpdc.271029",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "王公杰",
+                "nameEn": "WANG Gongjie",
+                "unitEn": "China Meteorological Administration, National Climate Center",
+                "unitCn": "国家气候中心"
+            },
+            {
+                "nameCn": "赵亮",
+                "nameEn": "ZHAO Liang",
+                "unitEn": "Institute of Atmospheric Physics, Chinese Academy of Sciences",
+                "unitCn": "中国科学院大气物理研究所"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Consensuses and Discrepancies of Basin-Scale Ocean Heat Content Changes in Different Ocean Analyses",
+                "referenceCn": null,
+                "referenceEn": "Wang, G.J., Cheng, L.J., John, A., and Li, C.Y. (2018). Consensuses and Discrepancies of Basin-Scale Ocean Heat Content Changes in Different Ocean Analyses. Climate Dynamics 50, no. 7, 2471–87. https://doi.org/10.1007/s00382-017-3751-5."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Benefits of CMIP5 multimodel ensemble in reconstructing historical ocean subsurface temperature variation",
+                "referenceCn": null,
+                "referenceEn": "Cheng L. and J. Zhu, 2016, Benefits of CMIP5 multimodel ensemble in reconstructing historical ocean subsurface temperature variation, Journal of Climate. 29(15),5393-5416,doi:10.1175/JCLI-D-15-0730.1"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "地表水",
+                "nameEn": "Surface Water"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "Hydrology"
+            },
+            {
+                "nameCn": "水温",
+                "nameEn": "Water temperature"
+            },
+            {
+                "nameCn": "海温",
+                "nameEn": "Sea temperature"
+            },
+            {
+                "nameCn": "温度",
+                "nameEn": "Temperature"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "印度洋",
+                "keywordEn": "Indian Ocean"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "月",
+                "keywordEn": "month",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "泛第三极环境变化与绿色丝绸之路建设",
+                "titleEn": "Pan-Third Pole Environment Study for a Green Silk Road-A CAS Strategic Priority A Program"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Quantification": [
+            {
+                "QuestionEn": "What is the vertical resolution of a dataset that measures sea temperature in the Indian Ocean?",
+                "QuestionCn": "测量印度洋海温的数据集的垂直分辨率是多少？",
+                "AnswerEn": "41 layers",
+                "AnswerCn": "41层",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the 'surface-subsurface' inversion technique using machine learning for generating a three-dimensional temperature dataset compare to traditional methods of ocean temperature data collection in terms of accuracy and reliability?",
+                "QuestionCn": "“表面-地下”反演技术利用机器学习生成三维温度数据集，与传统的海洋温度数据收集方法相比，在准确性和可靠性方面如何？",
+                "AnswerEn": "The 'surface-subsurface' inversion technique, which utilizes machine learning algorithms like generalized neural networks, provides a method for projecting remote sensing data such as sea surface temperature and sea surface height anomalies to subsurface levels, creating inversion profiles or 'pseudo' profiles. These profiles are then integrated with high-quality observational subsurface profiles using optimal interpolation. Compared to traditional methods that rely solely on in-situ measurements, this approach can potentially offer higher spatial and temporal resolution, capturing more small- to medium-scale oceanic signals and providing a more comprehensive understanding of the Indian Ocean's thermal properties and air-sea interactions.",
+                "AnswerCn": "“表面-地下”反演技术利用机器学习算法，如广义神经网络，提供了一种将遥感数据（如海表温度和海表高度异常）投影到地下水平的方法，从而创建反演剖面或“伪”剖面。这些剖面随后与高质量的观测地下剖面通过最优插值进行整合。与仅依赖现场测量的传统方法相比，这种方法有可能提供更高的空间和时间分辨率，捕捉更多小到中等尺度的海洋信号，并提供对印度洋热特性和空气-海洋相互作用的更全面理解。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How do the machine learning algorithms used in the 'surface-subsurface' inversion process contribute to the accuracy and reliability of three-dimensional ocean temperature datasets in the Indian Ocean region?",
+                "QuestionCn": "机器学习算法在“表面-地下”反演过程中如何提高印度洋区域三维海洋温度数据集的准确性和可靠性？",
+                "AnswerEn": "The machine learning algorithms, specifically generalized neural networks, are utilized to project remote sensing data such as sea surface temperature and sea surface height anomalies onto subsurface layers. This process creates inversion profiles or 'pseudo' profiles, which enhance the dataset's accuracy by providing detailed subsurface temperature information that complements surface observations.",
+                "AnswerCn": "机器学习算法，特别是广义神经网络，被用于将遥感数据如海表温度和海表高度异常投影到次表层。这一过程生成了反演剖面或“伪”剖面，通过提供详细的次表层温度信息来增强数据集的准确性，从而补充表面观测。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the development of high-resolution three-dimensional gridded sea temperature datasets in the Indian Ocean region?",
+                "QuestionCn": "影响印度洋地区高分辨率三维网格海温数据集发展的因素有哪些？",
+                "AnswerEn": "The development of high-resolution three-dimensional gridded sea temperature datasets in the Indian Ocean region is facilitated by the use of 'surface-subsurface' inversion techniques, optimal interpolation schemes, and machine learning algorithms like generalized neural networks. These methods enable the projection of remote sensing data, such as sea surface temperature and height anomalies, into subsurface profiles. High-quality inverted profiles are then selected and supplemented into existing subsurface profile databases, leading to a comprehensive and reliable merged dataset.",
+                "AnswerCn": "在印度洋区域，高分辨率三维网格海温数据集的开发得益于“表面-次表面”反演技术、最优插值方案以及像广义神经网络这样的机器学习算法。这些方法使得遥感数据（如海表温度和高度异常）能够投影到次表面剖面中。然后，选择高质量的反演剖面并补充到现有的次表面剖面数据库中，从而形成一个全面且可靠的合并数据集。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the purpose of developing a dataset that combines both remote sensing data and in-situ profiles for analyzing sea temperature variations in the Indian Ocean?",
+                "QuestionCn": "开发一个结合遥感数据和现场剖面数据的数据集，以分析印度洋海温变化的目的是什么？",
+                "AnswerEn": "The goal of developing such a dataset is to accurately and reliably characterize the thermal properties and air-sea interactions in the Indian Ocean, a region known for its active ocean-atmosphere interactions and significant role in global climate change. By merging remote sensing data, which provides broad spatial coverage, with high-quality in-situ profiles, the dataset leverages the strengths of both data sources. This fusion enables the capture of major sea temperature variation features and facilitates the extraction of more small-to-medium scale signals, thereby enhancing our understanding of the Indian Ocean's contribution to global heat and moisture transport.",
+                "AnswerCn": "开发这样一个数据集的目标是准确可靠地表征印度洋的热特性和海气相互作用，该地区以其活跃的海洋-大气相互作用和在全球气候变化中的重要作用而闻名。通过融合提供广泛空间覆盖的遥感数据与高质量的现场剖面数据，该数据集利用了两种数据源的优势。这种融合能够捕捉主要的海温变化特征，并促进提取更多的小到中等规模信号，从而增强我们对印度洋在全球热量和湿气输送中贡献的理解。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What are the procedural steps involved in creating a three-dimensional gridded sea temperature dataset for the Indian Ocean using remote sensing and subsurface profile data?",
+                "QuestionCn": "创建印度洋三维网格海温数据集的程序步骤包括以下内容：\n\n1. **数据收集**：\n   - 收集遥感数据，包括卫星观测的海表温度（SST）数据。\n   - 收集潜水器、浮标和其他海洋观测平台的水下温度剖面数据。\n\n2. **数据预处理**：\n   - 对遥感数据进行校正，去除云层、气溶胶等影响。\n   - 对剖面数据进行质量控制，剔除异常值和错误数据。\n\n3. **数据整合**：\n   - 将遥感数据和剖面数据进行空间和时间上的对齐。\n   - 选择合适的插值方法，将剖面数据转化为网格格式。\n\n4. **网格化处理**：\n   - 确定网格的空间分辨率和深度层次。\n   - 使用插值算法（如克里金插值、反距离加权等）将数据填充到三维网格中。\n\n5. **数据验证**：\n   - 使用独立的观测数据集对生成的网格数据进行验证。\n   - 评估数据的准确性和一致性。\n\n6. **数据存储与发布**：\n   - 将生成的三维网格海温数据集存储在数据库中。\n   - 提供数据访问接口，供研究人员和公众使用。\n\n7. **持续更新**：\n   - 定期更新数据集，纳入新的遥感和剖面数据。\n   - 监测数据质量，确保数据的时效性和准确性。",
+                "AnswerEn": "The process involves using a 'surface-to-subsurface' inversion technique and optimal interpolation scheme. Initially, a machine learning algorithm, specifically a generalized neural network, is used to project remote sensing data such as sea surface temperature and sea surface height anomalies onto subsurface layers to form inversion profiles or 'pseudo' profiles. High-quality inversion profiles are then selected and supplemented into the subsurface in-situ profile database provided by the UK Met Office. Finally, an optimal interpolation scheme is used to merge the data, resulting in a comprehensive three-dimensional sea temperature dataset.",
+                "AnswerCn": "该过程涉及使用“表面到次表面”的反演技术和最优插值方案。最初，使用一种机器学习算法，特别是广义神经网络，将遥感数据（如海表温度和海表高度异常）投影到次表层，以形成反演剖面或“伪”剖面。然后，选择高质量的反演剖面，并将其补充到英国气象局提供的次表面实测剖面数据库中。最后，使用最优插值方案合并数据，从而生成一个综合的三维海温数据集。",
+                "Level": "C3(Applying)"
+            }
+        ]
+    }
+}

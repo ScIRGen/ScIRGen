@@ -1,0 +1,162 @@
+{
+    "id": "4710b102-33fb-477d-b198-ecf042f4e2cb",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Long-time built-up land expansion in Hebei, Henan, Shandong, Anhui and Jiangsu,  Beijing and Tianjin from 1990 to 2019",
+            "titleCn": "河北，河南，山东，安徽，江苏，北京，天津7省/直辖市建设用地扩张时间序列集（1990-2019）",
+            "description": "1) Significance: construction land is one of the highest performance of human activities. The consumption of natural resources and the change of ecological environment can be closely linked with the development of construction land. This data reflects the evolution of high-precision construction land with 30 m spatial resolution from 1990 to 2019 in 7 provinces/municipalities directly under the central government of China, which are also important areas for rapid urbanization.\n2) Data sources: Landsat series satellite data; China regional surface meteorological element driven data set (1979-2018)\n3) Processing method: supervised classification method is adopted, random forest algorithm and Fourier transform are used to process characteristic bands, and control points are classified based on visual interpretation.\n    3-1) Obtaining spectral features: First, screen out Landsat images with transport volume <20%, and superimpose these images in units of 3 years, and then take the median of each superimposed pixel as the target pixel for pixel stitching. Obtain cloud-free images of the entire study area. This method can also better remove the banding influence of Landsat7 data.\n     3-2) Acquisition of time features: each pixel that has been superimposed for 3 years is screened for cloud cover, and discrete Fourier transform is performed following the minimum mean square error fitting principle to obtain the time latitude of each pixel. \"Crest\", \"Trough\" and \"Phase\". This method can better eliminate the influence of “bare land” on the extraction of construction land, because bare land may be covered by vegetation in spring and summer, and its time characteristics are quite different from construction land.\n     3-3) Extraction of meteorological and terrain features: The meteorological features are calculated from the China Regional Ground Meteorological Elements Driven Data Set (1979-2018): the data set is superimposed at the same time interval as Landsat, and each image is obtained The average value of yuan is used as the meteorological feature (due to the lack of meteorological data for 2019, the meteorological feature of the last period only calculates the average value of 2017 and 2018). Topographic features (elevation, slope) use SRTM-30m data.\nThe detailed method and code can be seen as follows: https://github.com/wangjinzhulala/North_ China_ Plain_ GEE_ Organized\n4) Data quality: the overall accuracy of all years is better than 94%.\n5) Application prospects: Simulation of regional urban expansion; estimation of environmental impact of urbanization; quantification of food security and sustainable development.",
+            "descriptionCn": "1）意义：建设用地是人类活动的最高级表现之一。自然资源的消耗与生态环境的变化可以与建设用地的发展紧密的联系起来。本数据反映了中国7个省/直辖市，同时也是城镇化快速推进的重要地区，从1990年到2019年的30m空间分辨率的高精度建设用地演变情况。\n2）数据来源：Landsat系列卫星数据；中国区域地面气象要素驱动数据集（1979-2018）；SRTM 30m 高程数据\n3）加工方法：采用监督分类的方法，利用随机森林算法和傅里叶变换处理特征波段，并基于目视解译的控制点进行分类。\n     3-1）光谱特征的获取：首先筛选出含运量<20%的Landsat图像，并以3年为单位将这些图像叠加，然后取每个叠加像元的中间值作为目标像进行拼接，得到整个研究区的无云图像。此方法也能较好的去除Landsat7数据的条带影响。\n     3-2）时间特征的获取：对云量筛选并进行3年叠加的每个像元，遵循最小均方差的拟合原则进行离散傅里叶变换，得到每个像元在时间纬度上的“波峰”，“波谷”和“相位”作为时间特征。 此方法能较好的消除“裸地”对建设用地提取的影响，因为裸地有可能在春夏季节被植被覆盖，其时间特征与建设用地具有较大的差别。\n     3-3）气象与地形特征的提取：气象特征由中国区域地面气象要素驱动数据集（1979-2018）计算获得：将该数据集按照与Landsat相同的时间间隔进行叠加，并且求得每个像元的平均值作为气象特征（由于缺少2019的气象数据，最后一期的气象特征由2017和2018两年数据计算得到）。地形特征（高程，坡度）采用SRTM-30m数据。\n详细方法和代码可见：https://github.com/wangjinzhulala/North_China_Plain_GEE_Organized\n4）数据质量：所有年限的总体精度均优于94%。\n5）应用前景：区域城市扩张模拟；城市化的环境影响估算；粮食安全和可持续发展量化。",
+            "instructions": "The data is a single TIF file. Its grid contains discrete values of 0-10. Among them, 0 is the background value, 10, 9, 8,..., 1 represents the expansion of built-up land in 1990-1992, 1993-1995, 1995-1997,..., 2017-2019 respectively.",
+            "instructionsCn": "数据为单一tif文件。其栅格包含0-10的离散值。其中0值为背景值，10,9,8, ... ,1分别表示1990-1992,1993-1995,1995-1997, ...,2017-2019年的建设用地扩张情况。",
+            "east": 122.71,
+            "west": 110.34,
+            "south": 29.39,
+            "north": 42.61,
+            "startTime": "1990-01-01 00:00:00",
+            "endTime": "2019-12-31 00:00:00",
+            "fileSize": 91932291.0,
+            "cstr": "18406.11.Socioeco.tpdc.271177",
+            "doi": "10.11888/Socioeco.tpdc.271177",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "王金柱",
+                "nameEn": "WANG Jinzhu",
+                "unitEn": "",
+                "unitCn": "迪肯大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Mapping Built-Up Land with High Accuracy Using Fourier Transformation and Temporal Correction",
+                "referenceCn": null,
+                "referenceEn": "Wang, J., Hadjikakou, M., Bryan, B. Mapping Built-Up Land with High Accuracy Using Fourier Transformation and Temporal Correction. Preprints 2020, 2020120105 (doi: 10.20944/preprints202012.0105.v1)."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "其他",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "城市空间格局",
+                "nameEn": "Spatial pattern of cities"
+            },
+            {
+                "nameCn": "陆地表层遥感",
+                "nameEn": "Terrestrial Surface Remote Sensing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "河南省；河北省；山东省；安徽省；江苏省",
+                "keywordEn": "Henan; Hebei; Shandong; Anhui; Jiangsu"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1990-2019",
+                "keywordEn": "1990-2019",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of a dataset focused on construction land expansion in urbanized regions over time?",
+                "QuestionCn": "一个专注于城市化地区随时间变化的建设用地扩展的数据集的特点包括：",
+                "AnswerEn": "high-resolution spatial data, 30m resolution, time span from 1990 to 2019, Landsat satellite imagery, ground meteorological data, elevation data from SRTM, supervised classification techniques, random forest algorithms, Fourier transform, high accuracy over 94%, cloud-free imagery, temporal characteristics like 'peaks,' 'troughs,' 'phases'",
+                "AnswerCn": "高分辨率空间数据，30米分辨率，时间跨度从1990年到2019年，Landsat卫星影像，地面气象数据，来自SRTM的高程数据，监督分类技术，随机森林算法，傅里叶变换，超过94%的高精度，无云影像，时间特征如“峰值”、“谷值”、“相位”。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential outcomes on urban planning and environmental management if a dataset on construction land expansion in regions like Hebei, Henan, and Shandong is utilized over a 30-year period?",
+                "QuestionCn": "如果利用关于河北、河南和山东等地区在30年期间的建设用地扩展数据，城市规划和环境管理可能会产生哪些潜在结果？",
+                "AnswerEn": "Utilizing a dataset on construction land expansion in regions such as Hebei, Henan, and Shandong over a 30-year period can lead to improved urban planning strategies by providing insights into historical trends and patterns of urban growth. This can facilitate predictive modeling of future urban expansion, allowing for better resource allocation and infrastructure development. Additionally, understanding these patterns can help assess the environmental impact of urbanization, aiding in the formulation of policies to mitigate negative effects on ecosystems and promote sustainable development.",
+                "AnswerCn": "利用关于河北、河南和山东等地区在30年期间的建设用地扩展数据集，可以通过提供历史趋势和城市增长模式的洞察，改善城市规划策略。这可以促进未来城市扩展的预测建模，从而更好地分配资源和发展基础设施。此外，了解这些模式可以帮助评估城市化对环境的影响，有助于制定减轻对生态系统负面影响的政策，促进可持续发展。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in using Landsat satellite data to classify and analyze urban land expansion over a region from 1990 to 2019?",
+                "QuestionCn": "使用Landsat卫星数据对1990年至2019年间一个地区的城市土地扩展进行分类和分析的程序步骤包括：\n\n1. 数据收集：获取1990年至2019年间的Landsat卫星影像数据。\n2. 数据预处理：对影像进行几何校正、辐射校正和大气校正，以确保数据的准确性。\n3. 数据选择：选择适合的时间段和影像，确保季节和天气条件的一致性。\n4. 特征提取：从影像中提取相关特征，如植被指数（NDVI）、水体指数等，以帮助区分城市和非城市区域。\n5. 分类方法选择：选择合适的分类算法，如监督分类（如支持向量机、随机森林）或非监督分类（如K均值聚类）。\n6. 分类实施：使用选定的分类算法对影像进行分类，识别城市区域及其扩展。\n7. 精度评估：通过混淆矩阵等方法评估分类结果的准确性，进行必要的调整。\n8. 时间序列分析：对不同时间点的分类结果进行比较，分析城市扩展的趋势和模式。\n9. 结果可视化：使用地图和图表展示城市扩展的结果，便于理解和传播。\n10. 结论与建议：根据分析结果提出关于城市扩展的结论和政策建议。",
+                "AnswerEn": "The process involves several key steps: First, select Landsat images with cloud cover less than 20% and aggregate them over 3-year intervals. This aggregation helps in creating a cloud-free composite image by taking the median value of each pixel stack. The composite image is then processed using supervised classification techniques, specifically employing the Random Forest algorithm and Fourier Transform to handle spectral feature extraction. Additionally, time series features are extracted through discrete Fourier Transform to identify unique characteristics such as 'peaks,' 'valleys,' and 'phases' of each pixel, which helps differentiate urban land from bare land. Meteorological and topographical features are also incorporated, using data from the Chinese regional surface meteorological elements dataset and SRTM-30m elevation data, respectively. The final classification is validated against visually interpreted control points, achieving an overall accuracy exceeding 94%.",
+                "AnswerCn": "该过程涉及几个关键步骤：首先，选择云覆盖率低于20%的Landsat影像，并在3年间隔内进行汇总。这种汇总有助于通过取每个像素堆栈的中位值来创建无云复合影像。然后，使用监督分类技术对复合影像进行处理，特别是采用随机森林算法和傅里叶变换来处理光谱特征提取。此外，通过离散傅里叶变换提取时间序列特征，以识别每个像素的独特特征，如“峰值”、“谷值”和“相位”，这有助于区分城市土地和裸土地。还结合了气象和地形特征，使用来自中国区域地面气象元素数据集的数据和SRTM-30m高程数据。最终分类通过与视觉解释的控制点进行验证，整体准确率超过94%。",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What data processing techniques enable the extraction of high-accuracy construction land expansion timelines from satellite imagery?",
+                "QuestionCn": "哪些数据处理技术能够从卫星图像中提取高精度的建设用地扩展时间线？",
+                "AnswerEn": "The use of supervised classification methods, such as the random forest algorithm combined with Fourier transform for processing spectral bands, enables the extraction of high-accuracy construction land expansion timelines. Control points obtained through visual interpretation are also used in the classification process to ensure accuracy.",
+                "AnswerCn": "使用监督分类方法，如随机森林算法结合傅里叶变换处理光谱波段，可以提取高精度的建设用地扩展时间线。通过视觉解译获得的控制点也用于分类过程，以确保准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

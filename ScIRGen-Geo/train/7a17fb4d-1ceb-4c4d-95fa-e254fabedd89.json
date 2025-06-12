@@ -1,0 +1,469 @@
+{
+    "id": "7a17fb4d-1ceb-4c4d-95fa-e254fabedd89",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Microscopic images dataset of heavy mineral grains from the Yarlung-Zangbo, Yangtze, and Pengqu rivers",
+            "titleCn": "雅鲁藏布江-长江-朋曲河流重矿物颗粒显微图像数据集",
+            "description": "The identification of sand grains under polarized-light microscopy is an important and fundamental task in geological research. The accurate identification of sand grain types and the rapid acquisition of their content can provide important information on physical origin, tectonics, regional erosion, paleoclimate and paleoenvironment. Previously, the identification of sand grains required manual observation, which required specialist geological knowledge and a huge amount of work, and therefore had problems such as low accuracy, time consuming and subjective factors. In particular, there are still many challenges in working with microscopic image-based heavy mineral identification systems. For example, previous methods generally required manual feature extraction, which relied on the expert's knowledge of the geological field, and the feature extraction process was time-consuming and labour-intensive, making it a challenge to effectively automate feature extraction. The use of only orthogonal polarised images or only single polarised images cannot adequately capture the important features of heavy minerals and therefore cannot effectively differentiate between heavy mineral classes. Thirdly, previous methods generally default to the training and test sets having the same data distribution (i.e. independent homogeneous distribution), but in practice, microscopic images of heavy minerals often carry information from many source areas, which may not be related to the heavy mineral class, but are highly dependent on the sample acquisition source area and the imaging environment, which is reflected in the final image. The imaging environment is reflected in the fact that the quality of the final image can be affected by the production and filming habits of different staff, as well as the use of different microscopes, different camera systems and other instruments, which results in inconsistent data distribution between the training and test sets from different fields of origin, and it is also a challenge to train a recognition model with better generalisation. To address the above three challenges, this research proposes a new deep neural network-based heavy mineral recognition model: twin adversarial networks, with a primary focus on higher recognition accuracy and better generalisation to samples from new domains (emerging source regions or imaging environments).\nAs there is little research on automatic heavy mineral identification and a lack of published available heavy mineral identification datasets, it is particularly important to photograph and produce a dataset that can be used for heavy mineral identification from microscopic images in order to explore the feasibility of microscopic image-based heavy mineral identification.\nThe samples of dataset is collected from the Yarlung Zangbo River (16A063, N29°19′13.5 ″, E88°51′28.4″, Congsong in Xigaze)，the Pengqu River (16B027, N28 ° 09 ′ 35.96 ″, E87 ° 20 ′ 45.87 ″, Qudang in Tingri), the Yangtze River (16A001, N 32°10′0.02″, E118°58′ 41.61″; Qixia mountain in Nanjing). The 3546 polarized photomicrographs of 1773 grains were collected by polarized microscope Nikon LD1000 in the School of Earth Sciences and Engineering, Nanjing University. The dataset contains 12 kinds of heavy minerals, namely amphibole，apatite，biotite，epidote，garnet, monazite, muscovite, pyroxene, rutile, spinel, tourmaline, and zircon.\nBased on three datasets of heavy mineral particle microscopy images from the Yarlung Tsangpo, Pengqu and Yangtze rivers, the samples can be stratified and sampled in a 7:3 ratio for each basin in a hybrid domain setting, and randomly divided into training and test sets. Training of classification algorithm models such as SVM, DT, RF, KNN, CART, VGG-16, ResNet34, SAN and automatic mineral identification tests were carried out on these datasets. A comprehensive comparison of all methods showed that deep learning methods significantly outperformed all traditional methods, while the new twin adversarial network scheme proposed in this study achieved the best overall results (84% accuracy, more than 10% higher than other traditional methods). The current study demonstrates that by effectively fusing the features of both polarised images through the structure of the twin network and removing domain-related information from the feature representation through adversarial training, the final model can effectively reduce the negative impact of domain characteristics on the recognition results, thus allowing for a model with better generalisation performance to unknown domains. Experimental results on real datasets validate the effectiveness of twin adversarial networks and their generalisation to unknown domains.\nThis dataset is one of the foundations for the automated identification and statistical development of heavy minerals, and our initial exploration not only demonstrates the value of this dataset, but also provide important lessons for future automated identification and machine learning of heavy minerals.\nThe paper related to this dataset has been published in: Huizhen Hao, Zhiwei Jiang, Shiping Ge, Cong Wang, Qing Gu, 2022, Siamese Adversarial Network for Image Classification of Heavy Mineral Grains. Computers & Geosciences, 159, 105016, doi: 10.1016/j.cageo.2021.105016.",
+            "descriptionCn": "识别偏光显微镜下的砂粒组分是地质研究中的一项重要而基础的工作。通过对砂粒类别的准确识别，含量的快速获得，能够获取物源、构造、区域侵蚀、古气候与环境等重要信息。以往对砂粒类别的鉴定需要通过人工观察的方式识别，需要具备地质专业知识且工作量巨大，因此存在准确度低、耗时长、易受主观因素影响等问题。尤其是，在基于显微图像的重矿物识别系统的工作中，仍然存在有很多挑战。例如，之前的方法一般需要进行人工特征抽取，这依赖于专家对地质领域的了解，且特征抽取过程费时费力，如何有效地进行自动特征抽取是一个挑战；其次，使用不同光学镜头，重矿物样本会体现出不同的光学特性，仅使用正交偏光图像或者仅使用单偏光图像，都无法充分地捕捉重矿物的重要特征，因而无法有效区分重矿物类别。如何综合多种偏光图像来进行矿物识别也是一个挑战；第三，之前的方法一般默认训练集和测试集具有相同的数据分布（即独立同分布），但在实际运用中，重矿物的显微图像往往会携带很多源区的信息，这些源区的信息可能与重矿物类别无关，而是高度依赖于样本的采集源区和成像环境，而成像环境体现在最终的图像质量会受不同工作人员的制片、拍片习惯，以及使用不同显微镜、不同照相系统等仪器的影响，这造成了来源不同领域的训练集和测试集的数据分布不一致，如何训练出一个泛化性更好的识别模型也是一个挑战。针对上面三个挑战，本次研究提出了一种新的基于深度神经网络的重矿物识别模型：孪生对抗网络，主要关注更高的识别准确度以及对新领域（新出现的物源区或成像环境）样本的更好的泛化能力。\n由于当前关于重矿物自动识别的工作非常少，且缺少公开可用的重矿物识别数据集，为了探索基于显微图像的重矿物识别的可行性，拍摄并制作一个可用于显微图像的重矿物识别的数据集显得尤为重要。\n本数据集重矿物样本采集自长江（16A001，GPS 32°10′0.02″，118°58′41.61″;南京栖霞山边滩）、雅鲁藏布江（16A063，GPS 29°19′13.5″，88°51′28.4″，日喀则丛松村心滩沉积）、朋曲河（16B027，GPS 28°09′35.96″，87°20′45.87″，定日县曲当乡边滩沉积）等3条发育于中国青藏高原的河流。在南京大学地球科学与工程学院用偏光显微镜Nikon LD1000拍摄了一系列高水平重矿物颗粒显微照片。该数据集，共包含12个重矿物类别（角闪石Amp, 磷灰石Ap, 黑云母Bt, 绿帘石Ep, 石榴石Grt, 独居石Mnz, 白云母Ms, 辉石Px, 金红石Rt, 尖晶石Spn, 电气石Tur, 锆石Zrn），每个样本包含正交偏光和单偏光两种类型的显微图像，总计有1773个样本，3546张显微图像。\n基于雅鲁藏布江, 朋曲, 长江三个流域重矿物颗粒显微图像数据集，在混合领域设置下，对于每个流域，其样本可以按照7:3的比例进行分层采样，随机划分为训练集和测试集。对这些数据集开展了SVM、DT、RF、KNN、CART、VGG-16、ResNet34、SAN等分类算法模型的训练和矿物自动鉴定检验。综合比较所有方法后显示，深度学习方法显著优于所有传统方法，而本次研究新提出的孪生对抗网络方案取得了总体最好的结果(准确率为84%，比其他传统方法高出10%以上)。本次研究证明了通过孪生网络的结构有效的融合两种偏光图像的特征，并通过对抗训练的方式剔除特征表示中与领域相关的信息，使最终的模型可以有效地降低领域特性对识别效果的负面影响，从而可以得到对未知领域泛化性能更好的模型。在真实数据集上的实验结果验证了孪生对抗网络的有效性以及对未知领域的泛化性。\n该数据集是重矿物的自动鉴定与统计研发的基础之一，我们的初步探索不仅体现了该基础数据的价值，也可对未来重矿物的自动识别与机器学习研发提供重要的借鉴。\n本数据集相关的论文发表在：Huizhen Hao, Zhiwei Jiang, Shiping Ge, Cong Wang, Qing Gu, 2022, Siamese Adversarial Network for Image Classification of Heavy Mineral Grains. Computers & Geosciences, 159, 105016, doi: 10.1016/j.cageo.2021.105016.",
+            "instructions": "File name: the image is stored in JPG format. The images were numbered as sample numbers of heavy mineral grains. The images of the same region were stored in the first-level folder, and the images of the same category were stored in the second-level folder.\nData reading method: Images in the data set can be read by the image reading tool software",
+            "instructionsCn": "文件命名：图像以JPG格式存储，文件名为重矿物颗粒编号，同一流域图像保存至一级文件夹，同类矿物图像保存至二级文件夹。\n数据读取方式：数据集中图像可以由图像读取工具软件读取",
+            "east": 118.0,
+            "west": 87.0,
+            "south": 28.0,
+            "north": 32.0,
+            "startTime": "2016-10-01 00:00:00",
+            "endTime": "2018-12-30 11:59:59",
+            "fileSize": 720765864.0,
+            "cstr": "18406.11.Terre.tpdc.272535",
+            "doi": "10.11888/Terre.tpdc.272535",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "郝慧珍",
+                "nameEn": "HAO Huizhen ",
+                "unitEn": "Nanjing Institute of technology",
+                "unitCn": "南京工程学院"
+            },
+            {
+                "nameCn": "胡修棉",
+                "nameEn": "HU Xiumian",
+                "unitEn": "",
+                "unitCn": "南京大学"
+            },
+            {
+                "nameCn": "赖文",
+                "nameEn": "LAI Wen",
+                "unitEn": "",
+                "unitCn": "南京大学地理与海洋科学学院"
+            },
+            {
+                "nameCn": "郭荣华",
+                "nameEn": "GUO Ronghua",
+                "unitEn": "",
+                "unitCn": "南京大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Siamese adversarial network for image classification of heavy mineral grains",
+                "referenceCn": null,
+                "referenceEn": "Hao, H.Z., Jiang, Z.W., Ge, S.P., Wang, C., & Gu, Q. (2022). Siamese adversarial network for image classification of heavy mineral grains. Computers and Geosciences, 159, 105016."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "固体地球",
+                "nameEn": "Solid earth"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "偏光显微图像",
+                "nameEn": "polarised images"
+            },
+            {
+                "nameCn": "其他",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "岩石/矿物",
+                "nameEn": "Rocks/Minerals"
+            },
+            {
+                "nameCn": "水系固体物质",
+                "nameEn": "Fluvial sediments"
+            },
+            {
+                "nameCn": "沉积记录",
+                "nameEn": "Sedimentary Record"
+            },
+            {
+                "nameCn": "重矿物",
+                "nameEn": "heavy minerals"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "朋曲",
+                "keywordEn": "Pengqu"
+            },
+            {
+                "keywordCn": "长江",
+                "keywordEn": "Yangtze"
+            },
+            {
+                "keywordCn": "雅鲁藏布江",
+                "keywordEn": "Yarlung Zangbo"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "现代河流沉积物",
+                "keywordEn": "modern fluvial deposits",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "水系固体物质源-汇过程与演变",
+                "titleEn": "source-to-sink process and evolution of solid matter in the water system"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "龙门山断裂带同震波速降低和震后加速愈合过程（2000-2014）",
+                "titleEn": "Seismic velocity reduction and accelerated recovery due to earthquakes on the Longmenshan fault (2000-2014)"
+            },
+            {
+                "titleCn": "中国西部1:100万数字地貌数据集",
+                "titleEn": "1:1,000,000 geomorphological map of  Western China"
+            },
+            {
+                "titleCn": "全球强震时空分布数据集（1989-2018）",
+                "titleEn": "Dataset of spatial and temporal distribution of global strong earthquakes (1989-2018)"
+            },
+            {
+                "titleCn": "伦坡拉盆地古地磁数据",
+                "titleEn": "Paleomagnetic data from the lunpola basin"
+            },
+            {
+                "titleCn": "云南小景谷地区古新世地层钻孔400m岩心地层描述",
+                "titleEn": "Lithology description of a 400 m-thick Paleocene strata borehole in the Xiaojinggu area, Yunnan"
+            },
+            {
+                "titleCn": "云南曲靖地区渐新世地层钻孔300m岩心地层描述",
+                "titleEn": "Lithology description of a 300m-thick Oligocene borehole strata in the Qujing area, Yunnan"
+            },
+            {
+                "titleCn": "青藏高原北部索尔库里剖面同位素数据集",
+                "titleEn": "Stable Isotope  Dataset of the Eocene deposits from the Suoerkuli Basin in the northeastern Tibetan Plateau"
+            },
+            {
+                "titleCn": "藏南定日和岗巴地区古新世-始新世极热事件地球化学数据集",
+                "titleEn": "Geochemical data set of the Paleocene-Eocene  thermal maximum at Gamba and Tingri, southern Tibet"
+            },
+            {
+                "titleCn": "泛第三极早、中、晚三叠世气候古地理图（3张）",
+                "titleEn": "Palaeogeographic distribution of Early, Middle and Late Triassic lithofacies in Pan-Third Pole area"
+            },
+            {
+                "titleCn": "云南曲靖地区渐新世地层钻孔300m岩心古地磁数据",
+                "titleEn": "Magnetic stratigraphy results of a 300-meter-thick Oligocene strata borehole  in the Qujing region, Yunnan"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Heavy minerals refer to the mineral components with high density (> 2.9 g/cm3) in siliciclastic sediments. Identifying the category of heavy minerals accurately is of great significance to the study of sedimentary petrology, which can supply a convenient and effective research method on sediments source-to-sink processing, transport path tracking, and locating potential economic deposits."
+            ],
+            "research objective": [
+                "Here we propose the Siamese Adversarial Network (SAN) for image classification of the heavy mineral grains, which is the first time to focus on addressing the domain difference of heavy mineral images from different basins."
+            ],
+            "challenges": [
+                "However, due to the variety and complexity of mineral images, the existing models are difficult to accurately recognize heavy mineral grains in microscopic images."
+            ],
+            "methods": [
+                "In our research, heavy mineral grains collected from three different rivers were divided into three corresponding domains according to which river the grains collected from. Adversarial training was employed to eliminate the domain-related information of the three domains, so that the feature representation of the images only contains the distinguishing information of heavy mineral categories. The SFE receives two images of the same sample, and extracts features of the cross-polarized and plane-polarized heavy mineral images, respectively. The HMC identifies the category of the input sample through classifying the sample feature vector, whereas the DD receives those vectors as the input to identify the domain of the input sample."
+            ],
+            "dataset": [
+                "The heavy mineral samples are collected from three different rivers, namely the Yangtze River, the Yarlung Zangbo River, and the PumQu River in the Tibetan plateau."
+            ],
+            "findings": [
+                "The identification performance of the models under the three mixed domain experiments is consistently higher than the performance under the same domain settings respectively which shows that the model we proposed achieves a great generalization ability on unseen domains."
+            ],
+            "backgroundCn": [
+                "重矿物是指在硅质碎屑沉积物中密度较高（> 2.9 g/cm3）的矿物成分。准确识别重矿物的类别对沉积岩石学研究具有重要意义，这可以为沉积物的源-汇过程、运输路径追踪以及潜在经济矿床的定位提供一种便捷有效的研究方法。"
+            ],
+            "research objectiveCn": [
+                "我们提出了Siamese对抗网络（SAN）用于重矿物颗粒的图像分类，这是首次关注来自不同盆地的重矿物图像的领域差异。"
+            ],
+            "challengesCn": [
+                "然而，由于矿物图像的多样性和复杂性，现有模型在显微图像中准确识别重矿物颗粒方面存在困难。"
+            ],
+            "methodsCn": [
+                "在我们的研究中，从三条不同的河流收集的重矿物颗粒被分为三个相应的领域，依据颗粒的来源河流。采用对抗训练来消除这三个领域的领域相关信息，以便图像的特征表示仅包含重矿物类别的区分信息。SFE接收同一样本的两幅图像，分别提取交叉偏振和平面偏振重矿物图像的特征。HMC通过对样本特征向量进行分类来识别输入样本的类别，而DD则接收这些向量作为输入，以识别输入样本的领域。"
+            ],
+            "datasetCn": [
+                "重矿物样本来自三个不同的河流，即长江、雅鲁藏布江和普姆渠河，均位于青藏高原。"
+            ],
+            "findingsCn": [
+                "在三个混合领域实验中，模型的识别性能始终高于相应的同领域设置下的性能，这表明我们提出的模型在未见领域上具有很强的泛化能力。"
+            ]
+        }
+    ],
+    "query": {
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the challenges faced in the data collection process for heavy mineral grain classification using microscopic images?",
+                "QuestionCn": "在使用显微图像进行重矿物颗粒分类的数据收集过程中面临的挑战有哪些？",
+                "AnswerEn": "manual feature extraction",
+                "AnswerCn": "手动特征提取",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What data collection method was employed to address the domain differences in heavy mineral images from different basins?",
+                "QuestionCn": "为了应对来自不同盆地的重矿物图像的领域差异，采用了什么数据收集方法？",
+                "AnswerEn": "adversarial training",
+                "AnswerCn": "对抗训练",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Where were the heavy mineral samples collected to develop a potential dataset for image classification?",
+                "QuestionCn": "重矿物样本的采集地点是为了开发潜在的数据集用于图像分类。",
+                "AnswerEn": "Yangtze River, Yarlung Zangbo River, PumQu River",
+                "AnswerCn": "长江，雅鲁藏布江，朋曲河",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method used to gather microscopic images of heavy mineral grains for automatic identification?",
+                "QuestionCn": "您能否提供一个用于收集重矿物颗粒显微图像以进行自动识别的数据收集方法的示例？",
+                "AnswerEn": "A data collection method involves using a polarized microscope, such as the Nikon LD1000, to capture high-resolution images of heavy mineral grains. Samples are collected from different river basins like the Yangtze River, the Yarlung Zangbo River, and the PumQu River, and imaged under both cross-polarized and plane-polarized light to capture essential optical characteristics.",
+                "AnswerCn": "一种数据收集方法涉及使用偏光显微镜，如尼康LD1000，捕捉重矿物颗粒的高分辨率图像。样本来自不同的河流流域，如长江、雅鲁藏布江和普姆渠河，并在交叉偏光和面偏光下成像，以捕捉重要的光学特征。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a dataset used for training deep learning models for heavy mineral image classification?",
+                "QuestionCn": "用于训练深度学习模型进行重矿物图像分类的数据集示例是什么？",
+                "AnswerEn": "An example of a dataset is composed of 1773 samples of heavy mineral grains from the Yangtze River, Yarlung Zangbo River, and PumQu River, totaling 3546 microscopic images. This dataset includes 12 heavy mineral categories and utilizes images captured under both cross-polarized and plane-polarized conditions for comprehensive feature extraction.",
+                "AnswerCn": "一个数据集由1773个来自长江、雅鲁藏布江和普姆渠河的重矿物颗粒样本组成，总计3546幅显微图像。该数据集包括12个重矿物类别，并利用在交叉偏振和平面偏振条件下捕获的图像进行全面特征提取。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of the image data used for identifying heavy mineral grains in geological research?",
+                "QuestionCn": "用于识别地质研究中重矿物颗粒的图像数据的特征是什么？",
+                "AnswerEn": "microscopic images, cross-polarized light, plane-polarized light, 12 categories of heavy minerals",
+                "AnswerCn": "显微图像，交叉偏振光，平面偏振光，12类重矿物",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What are the challenges in collecting and utilizing a dataset for heavy mineral identification, especially in terms of data distribution and domain differences?",
+                "QuestionCn": "在收集和利用重矿物识别的数据集时，尤其是在数据分布和领域差异方面，面临的挑战包括：",
+                "AnswerEn": "variation in image data distribution, domain differences, unrelated information from imaging conditions and sample collection methods",
+                "AnswerCn": "图像数据分布的变化、领域差异、与成像条件和样本收集方法无关的信息。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many heavy mineral samples are included in a dataset for microscopic image classification?",
+                "QuestionCn": "该数据集中包含多少个重矿物样本用于显微图像分类？",
+                "AnswerEn": "1773",
+                "AnswerCn": "1773",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the total number of microscopic images available in a dataset that includes both cross-polarized and plane-polarized images?",
+                "QuestionCn": "在一个包含交叉偏振和面偏振图像的数据集中，微观图像的总数是多少？",
+                "AnswerEn": "3546",
+                "AnswerCn": "3546",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many different heavy mineral categories are identified in a dataset using the proposed identification model?",
+                "QuestionCn": "在使用提议的识别模型的 dataset 中识别出多少种不同的重矿物类别？",
+                "AnswerEn": "12",
+                "AnswerCn": "12",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does 'domain difference' mean in relation to heavy mineral image classification?",
+                "QuestionCn": "在重矿物图像分类中，“域差异”指的是不同域之间的特征或属性差异，这可能影响分类算法的性能。",
+                "AnswerEn": "'Domain difference' in relation to heavy mineral image classification refers to the variations and inconsistencies in image data that arise from different environmental conditions, such as different imaging equipment, imaging environments, or sample sources, which can impact the generalization ability of classification models across diverse datasets.",
+                "AnswerCn": "“领域差异”在重矿物图像分类中指的是由于不同的环境条件（例如不同的成像设备、成像环境或样本来源）而导致的图像数据的变化和不一致性，这可能影响分类模型在不同数据集上的泛化能力。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do data collection methods for heavy mineral identification using polarized microscopy compare to traditional manual observation techniques in terms of accuracy and efficiency?",
+                "QuestionCn": "重矿物鉴定的数据收集方法使用偏光显微镜与传统的手动观察技术在准确性和效率方面如何比较？",
+                "AnswerEn": "Data collection methods using polarized microscopy for heavy mineral identification aim to automate feature extraction, which is traditionally done manually. This approach addresses challenges like low accuracy, time consumption, and subjectivity associated with manual observation. The use of deep learning models, such as Siamese Adversarial Network, has shown improved accuracy and efficiency over traditional methods by effectively capturing mineral features and generalizing across different domains.",
+                "AnswerCn": "使用偏光显微镜进行重矿物识别的数据收集方法旨在自动化特征提取，这一过程传统上是手动完成的。这种方法解决了手动观察所带来的低准确性、耗时和主观性等挑战。深度学习模型，如孪生对抗网络，已显示出比传统方法更高的准确性和效率，能够有效捕捉矿物特征并在不同领域中进行泛化。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "In what ways do the challenges of feature extraction in automated heavy mineral identification differ when using single-polarized images versus cross-polarized images?",
+                "QuestionCn": "在使用单偏振图像与交叉偏振图像进行自动重矿物识别时，特征提取的挑战有哪些不同之处？",
+                "AnswerEn": "The challenges of feature extraction in automated heavy mineral identification differ between single-polarized and cross-polarized images because single-polarized images may not adequately capture important optical characteristics of heavy minerals. Cross-polarized images, used in conjunction with single-polarized images, can provide complementary information that improves feature extraction and mineral classification accuracy. The integration of both image types helps overcome limitations associated with using only one type of image.",
+                "AnswerCn": "在自动重矿物识别中，特征提取的挑战在单偏振图像和交叉偏振图像之间有所不同，因为单偏振图像可能无法充分捕捉重矿物的重要光学特征。交叉偏振图像与单偏振图像结合使用，可以提供互补信息，从而提高特征提取和矿物分类的准确性。两种图像类型的结合有助于克服仅使用一种图像所带来的局限性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What is the difference in the generalization ability of heavy mineral classification models when trained on datasets from a single river basin versus mixed datasets from multiple river basins?",
+                "QuestionCn": "当重矿物分类模型在单一河流流域的数据集上训练时，与在多个河流流域的混合数据集上训练时，其泛化能力有什么区别？",
+                "AnswerEn": "The generalization ability of heavy mineral classification models is notably higher when trained on mixed datasets from multiple river basins compared to datasets from a single basin. Models trained on mixed datasets can better address domain differences and perform well on unseen domains by eliminating domain-related information and focusing on distinguishing mineral categories, leading to improved performance across diverse environments.",
+                "AnswerCn": "重矿物分类模型的泛化能力在使用来自多个河流流域的混合数据集进行训练时明显高于仅使用单一流域的数据集。经过混合数据集训练的模型能够更好地应对领域差异，并在未见领域上表现良好，因为它们消除了与领域相关的信息，专注于区分矿物类别，从而在多样化环境中提高了性能。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can the challenges of capturing heavy mineral features from different imaging environments be addressed to improve the accuracy of mineral identification?",
+                "QuestionCn": "如何解决来自不同成像环境中捕捉重矿物特征的挑战，以提高矿物识别的准确性？",
+                "AnswerEn": "The challenges can be addressed by using a deep learning approach, specifically a Siamese Adversarial Network, which focuses on effectively extracting features from polarized images and removing domain-specific information through adversarial training, thereby improving accuracy.",
+                "AnswerCn": "这些挑战可以通过使用深度学习方法，特别是孪生对抗网络来解决，该方法专注于有效提取极化图像的特征，并通过对抗训练去除领域特定信息，从而提高准确性。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What potential methods could be employed to ensure that the features extracted from heavy mineral images generalize well across different sediment source areas?",
+                "QuestionCn": "可以采用哪些潜在方法来确保从重矿物图像中提取的特征在不同沉积源区域之间具有良好的泛化能力？",
+                "AnswerEn": "Adversarial training techniques can be utilized to eliminate domain-related information, ensuring that the features extracted are representative of the mineral categories themselves rather than the source area, thus enhancing generalization across different sediment sources.",
+                "AnswerCn": "对抗训练技术可以用于消除与领域相关的信息，确保提取的特征代表矿物类别本身，而不是来源区域，从而增强不同沉积源之间的泛化能力。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "In what ways could the development of a comprehensive dataset of heavy mineral grains contribute to advancements in automated mineral identification systems?",
+                "QuestionCn": "开发一个全面的重矿物颗粒数据集将如何促进自动矿物识别系统的进步？",
+                "AnswerEn": "A comprehensive dataset allows for training robust models that can automatically identify mineral categories by being exposed to diverse image characteristics and domain variations, thus fostering advancements in the accuracy and generalization of automated identification systems.",
+                "AnswerCn": "一个全面的数据集可以训练出强大的模型，通过接触多样的图像特征和领域变异，自动识别矿物类别，从而促进自动识别系统在准确性和泛化能力上的进步。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the difficulty in accurately identifying heavy mineral grains in microscopic images from different river basins?",
+                "QuestionCn": "在不同河流流域的显微图像中，准确识别重矿物颗粒的困难因素有哪些？",
+                "AnswerEn": "The difficulty arises from the variety and complexity of mineral images, which existing models find challenging to recognize accurately. Additionally, different optical characteristics displayed by samples under various lenses, and the influence of imaging environments, such as sample collection source and imaging conditions, contribute to the challenge.",
+                "AnswerCn": "困难在于矿物图像的多样性和复杂性，现有模型难以准确识别。此外，样本在不同镜头下显示的光学特性以及成像环境的影响，如样本采集来源和成像条件，也增加了挑战。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is there a need for adversarial training in the image classification of heavy mineral grains from different basins?",
+                "QuestionCn": "为什么在不同盆地的重矿物颗粒图像分类中需要对抗训练？",
+                "AnswerEn": "Adversarial training is necessary to eliminate domain-related information from images collected from different river basins. This approach ensures that the feature representation of the images only contains distinguishing information of heavy mineral categories, thereby enhancing the model's generalization ability across different domains.",
+                "AnswerCn": "对抗训练是消除来自不同河流流域的图像中的领域相关信息所必需的。这种方法确保图像的特征表示仅包含重矿物类别的区分信息，从而增强模型在不同领域的泛化能力。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What causes the lack of publicly available datasets for heavy mineral recognition in the field of geological research?",
+                "QuestionCn": "导致地质研究领域缺乏公开可用的重矿物识别数据集的原因是什么？",
+                "AnswerEn": "The lack of publicly available datasets is attributed to the limited focus on automatic recognition work for heavy minerals, which has led to a scarcity of such datasets. Additionally, the traditional reliance on expert manual observation for mineral identification, which is time-consuming and requires specialized geological knowledge, has hindered the development and sharing of comprehensive datasets.",
+                "AnswerCn": "缺乏公开可用的数据集归因于对重矿物自动识别工作的关注有限，这导致此类数据集的稀缺。此外，传统上依赖专家手动观察进行矿物识别，这一过程耗时且需要专业的地质知识，进一步阻碍了全面数据集的开发和共享。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What outcomes might result from employing adversarial training techniques in the development of mineral classification models?",
+                "QuestionCn": "在矿物分类模型的开发中采用对抗训练技术可能会产生哪些结果？",
+                "AnswerEn": "Employing adversarial training techniques can lead to models that effectively eliminate domain-related information, resulting in feature representations that are more focused on distinguishing heavy mineral categories. This can improve the model's generalization ability across different domains and enhance accuracy in identifying unseen mineral samples.",
+                "AnswerCn": "采用对抗训练技术可以使模型有效消除与领域相关的信息，从而使特征表示更专注于区分重矿物类别。这可以提高模型在不同领域的泛化能力，并增强在识别未见矿物样本时的准确性。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "How might the creation of a comprehensive heavy mineral image dataset impact future geological research and applications?",
+                "QuestionCn": "创建一个全面的重矿物图像数据集将如何影响未来的地质研究和应用？",
+                "AnswerEn": "The creation of a comprehensive heavy mineral image dataset can significantly impact geological research by providing a foundational resource for automatic identification and statistical analysis of heavy minerals. It can facilitate advancements in machine learning applications for mineral recognition, aid in understanding sedimentary petrology, and support studies related to sediment source-to-sink processes, transport path tracking, and economic deposit location.",
+                "AnswerCn": "创建一个全面的重矿物图像数据集可以显著影响地质研究，因为它为重矿物的自动识别和统计分析提供了基础资源。它可以促进矿物识别的机器学习应用的发展，帮助理解沉积岩石学，并支持与沉积物源到汇过程、运输路径追踪和经济矿床位置相关的研究。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "Why is it important to develop a deep neural network model for the classification of heavy mineral grains under varying imaging conditions?",
+                "QuestionCn": "开发深度神经网络模型以在不同成像条件下对重矿物颗粒进行分类的重要性是什么？",
+                "AnswerEn": "Developing a deep neural network model is important because traditional methods require manual feature extraction, which is labor-intensive and depends heavily on expert knowledge. The model focuses on improving recognition accuracy and generalization to new domains by effectively merging features from different polarized images and eliminating domain-specific information, thus overcoming challenges posed by different imaging conditions and domain discrepancies.",
+                "AnswerCn": "开发深度神经网络模型很重要，因为传统方法需要手动特征提取，这既费力又高度依赖专家知识。该模型旨在通过有效融合来自不同极化图像的特征并消除特定领域的信息，从而提高识别准确性和对新领域的泛化能力，克服不同成像条件和领域差异带来的挑战。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is the significance of overcoming domain differences in datasets for heavy mineral image classification?",
+                "QuestionCn": "克服数据集中领域差异在重矿物图像分类中的重要性是什么？",
+                "AnswerEn": "Overcoming domain differences is significant as it enhances the model's generalization ability, ensuring that it performs well on unseen domains, which is crucial for practical applications. This allows the model to be more robust and effective in real-world scenarios where imaging conditions, sample collection sites, and imaging equipment may vary, thus ensuring reliable identification of heavy mineral grains across different environments.",
+                "AnswerCn": "克服领域差异是重要的，因为它增强了模型的泛化能力，确保模型在未见领域中表现良好，这对实际应用至关重要。这使得模型在现实场景中更加稳健和有效，因为成像条件、样本采集地点和成像设备可能会有所不同，从而确保在不同环境中可靠地识别重矿物颗粒。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedures are followed to capture and prepare microscopic images of heavy mineral grains for classification purposes?",
+                "QuestionCn": "为了分类目的，捕获和准备重矿物颗粒的显微图像所遵循的程序是什么？",
+                "AnswerEn": "The procedures involve using a polarized microscope, specifically the Nikon LD1000, to capture high-level microscopic images of heavy mineral grains. These images include both cross-polarized and plane-polarized types to effectively capture the mineral characteristics. The samples are collected from specific locations along the Yangtze River, Yarlung Zangbo River, and PumQu River, and the dataset includes different mineral categories such as amphibole, zircon, and garnet.",
+                "AnswerCn": "这些程序涉及使用偏光显微镜，特别是尼康LD1000，捕捉重矿物颗粒的高水平显微图像。这些图像包括交叉偏光和平面偏光类型，以有效捕捉矿物特征。样本来自长江、雅鲁藏布江和澜沧江沿线的特定地点，数据集包括不同的矿物类别，如角闪石、锆石和石榴石。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How can adversarial training be incorporated into the process of eliminating domain-related information from heavy mineral images?",
+                "QuestionCn": "如何将对抗性训练融入消除重矿物图像中的领域相关信息的过程中？",
+                "AnswerEn": "Adversarial training is employed to remove domain-related information from images collected from different basins, ensuring that the feature representation of the images focuses solely on distinguishing heavy mineral categories. This involves training a Siamese Adversarial Network where domain-related features are minimized, enhancing the model's ability to generalize across different domains.",
+                "AnswerCn": "对抗训练被用来去除从不同流域收集的图像中的领域相关信息，确保图像的特征表示仅专注于区分重矿物类别。这涉及到训练一个孪生对抗网络，在该网络中最小化领域相关特征，从而增强模型在不同领域之间的泛化能力。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What technological advancements enable the effective combination of cross-polarized and plane-polarized images for mineral classification in geological studies?",
+                "QuestionCn": "哪些技术进步使得在地质研究中有效结合交叉偏振和平面偏振图像以进行矿物分类成为可能？",
+                "AnswerEn": "The use of deep learning models, such as the Siamese Adversarial Network (SAN), effectively combines cross-polarized and plane-polarized images by extracting distinct features from both types of images, which enhances the identification and classification of heavy mineral grains.",
+                "AnswerCn": "深度学习模型，如Siamese对抗网络（SAN），有效地结合了交叉偏振和面偏振图像，通过提取两种类型图像的独特特征，从而增强了重矿物颗粒的识别和分类。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In what ways does the collection of mineral samples from diverse river basins enable the development of a robust dataset for testing classification models?",
+                "QuestionCn": "从不同河流流域收集矿物样本的方式如何促进了开发一个强大的数据集，以测试分类模型？",
+                "AnswerEn": "Collecting mineral samples from diverse river basins, such as the Yangtze River, Yarlung Zangbo River, and PumQu River, provides varied data domains that challenge classification models to generalize their performance across different environmental conditions and source regions.",
+                "AnswerCn": "从不同的河流流域（如长江、雅鲁藏布江和普姆渠河）收集矿物样本，提供了多样的数据领域，这对分类模型在不同环境条件和来源区域之间的泛化性能提出了挑战。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might it be expected that deep learning approaches outperform traditional classification methods in heavy mineral identification?",
+                "QuestionCn": "为什么人们可能会预期深度学习方法在重矿物识别中优于传统分类方法？",
+                "AnswerEn": "Deep learning approaches, particularly those employing adversarial networks, can effectively integrate features from multiple polarized images and remove domain-related information, leading to improved generalization and accuracy compared to traditional methods that do not handle such complexities effectively.",
+                "AnswerCn": "深度学习方法，特别是采用对抗网络的方法，可以有效地整合来自多个极化图像的特征，并去除与领域相关的信息，从而提高泛化能力和准确性，相较于不有效处理此类复杂性的传统方法。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What are the potential challenges in collecting and preparing samples from different river basins for the purpose of creating a comprehensive dataset on heavy mineral grain images?",
+                "QuestionCn": "在收集和准备来自不同河流流域的样本以创建重矿物颗粒图像的综合数据集时，可能面临的挑战包括：",
+                "AnswerEn": "Challenges include ensuring consistent image quality despite variations in imaging environments, dealing with the influence of sample collection sources, and addressing discrepancies in data distribution due to different imaging techniques and equipment.",
+                "AnswerCn": "挑战包括确保尽管成像环境存在变化，图像质量仍然一致，处理样本采集来源的影响，以及解决由于不同成像技术和设备导致的数据分布差异。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In what ways could the integration of multiple polarized light images improve the accuracy of heavy mineral recognition, and what are the implications for future data collection protocols?",
+                "QuestionCn": "多幅偏振光图像的整合如何提高重矿物识别的准确性，以及对未来数据收集协议的影响是什么？",
+                "AnswerEn": "Integrating multiple polarized light images, like cross-polarized and plane-polarized images, captures more comprehensive mineral characteristics, leading to higher recognition accuracy. This suggests future data collection protocols should incorporate diverse imaging to enhance feature extraction and model performance.",
+                "AnswerCn": "整合多种偏振光图像，如交叉偏振和面偏振图像，可以捕捉更全面的矿物特征，从而提高识别准确性。这表明未来的数据收集协议应纳入多样化的成像，以增强特征提取和模型性能。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please analyze the effectiveness of various machine learning algorithms, including deep learning networks, in improving the accuracy and efficiency of heavy mineral identification from microscopic images.",
+                "QuestionCn": "请分析各种机器学习算法，包括深度学习网络，在提高显微图像中重矿物识别的准确性和效率方面的有效性。",
+                "AnswerEn": "The research compared several algorithms such as SVM, DT, RF, KNN, CART, VGG-16, ResNet34, and SAN. Deep learning methods, particularly the Siamese Adversarial Network (SAN), significantly outperformed traditional methods, achieving an accuracy rate of 84%, which is more than 10% higher than other traditional methods. The SAN effectively integrates features from both cross-polarized and single-polarized images and uses adversarial training to reduce domain-specific information, enhancing the model's generalization ability.",
+                "AnswerCn": "该研究比较了几种算法，如支持向量机（SVM）、决策树（DT）、随机森林（RF）、K近邻（KNN）、分类与回归树（CART）、VGG-16、ResNet34和Siamese对抗网络（SAN）。深度学习方法，特别是Siamese对抗网络（SAN），显著优于传统方法，达到了84%的准确率，比其他传统方法高出10%以上。SAN有效整合了交叉极化和单极化图像的特征，并利用对抗训练减少领域特定信息，从而增强了模型的泛化能力。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Please propose potential strategies for expanding and refining datasets used for heavy mineral identification, considering the challenges of domain differences and imaging variations.",
+                "QuestionCn": "请提出潜在的策略，以扩展和完善用于重矿物识别的数据集，考虑到领域差异和成像变化的挑战。",
+                "AnswerEn": "To address domain differences and imaging variations, one could expand datasets by including more diverse samples from additional river basins or geographical locations. Incorporating augmented imaging techniques that simulate different environmental conditions could also help. Additionally, employing adaptive learning models that account for varying domain characteristics and integrating multi-source data could refine dataset robustness and improve model generalization.",
+                "AnswerCn": "为了应对领域差异和成像变化，可以通过从其他河流流域或地理位置纳入更多样本来扩展数据集。引入模拟不同环境条件的增强成像技术也可以有所帮助。此外，采用能够考虑不同领域特征的自适应学习模型，并整合多源数据，可以提高数据集的稳健性并改善模型的泛化能力。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

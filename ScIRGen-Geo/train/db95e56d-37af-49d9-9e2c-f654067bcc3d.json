@@ -1,0 +1,229 @@
+{
+    "id": "db95e56d-37af-49d9-9e2c-f654067bcc3d",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "An integrated dataset of daily lake surface temperature over Tibetan Plateau (LSWT_TPv1) (1978~2017)",
+            "titleCn": "青藏高原日尺度湖面温度数据集（1978~2017）",
+            "description": "This dataset is a daily lake surface water temperature (LSWT) products of 164 lakes in Tibetan Plateau from 1978 to 2017. Firstly, we calculate the mean values of lake surface pixels based on MOD11A1 products to obtained the daily lake surface temperature series from 2000 to 2017. Secondly, we modified the air2water model to simulate the lake surface temperature continuously.  The daily air temperature from meteorological stations were used as forcing data, and the lake surface temperature monitored by MOD11A1 as the model calibration and validation data. Finally, the daily lake surface temperature across Tibet Plateau from 1978 to 2017 were reconstructed. Compared with the results from remote sensing monitoring, the Nash-Sutcliffe efficiency coefficients of all lakes are higher than 0.6 with bias ranging at ±0.55℃. The dataset is suitable to analyze the long-term changes of lake surface temperature over the past decades, which is of great significance for assessing the impacts of climate warming on the water and heat balance, water quality and lake ecosystem changes on the Tibetan Plateau.",
+            "descriptionCn": "本数据集为青藏高原164个湖泊1978~2017年日尺度湖面温度产品。首先基于MOD11A1产品获取湖面像元均值得到2000~2017年日尺度湖面温度序列。其次改进湖泊水温模型air2water以实现全年湖面温度的逐日连续模拟。进而以气象站逐日气温数据为模型驱动数据，MOD11A1监测的湖面温度为模型率定和验证数据，重建青藏高原1978~2017年日尺度湖面温度序列。与遥感监测结果相比，所有湖泊纳什效率系数高于0.6，偏差分布于±055℃之间。数据集可用于分析青藏高原湖面温度过去几十年的长时序变化，对于评估气候变暖对青藏高原湖泊水热平衡、水质及湖泊生态系统变化具有重要意义。",
+            "instructions": "There are 164 CSV files of Lake temperature data, named as \"xxxxx\"_ Lswt. CSV \", where xxxxx is the lake number. Each CSV file contains 7 columns:\nYear \t\t\t\t\t year\nMonth \t\t\t\t\t month\nDay \t\t\t\t\t day\nMOD11A1_ DT \t\t\t LSWT derived from MOD11A1 daytime products, no data is filled  by '-999', unit: degree centigrade (℃)\nMOD11A1_ NT \t\t\t LSWT derived from MOD11A1 nighttime products, no data is filled by '-999', unit: degree centigrade (℃) \nMOD11A1_DM                      mean of MOD11A1_DT and MOD11A1_NT, which is used for calibration and validation in the model, no data is filled  by '-999', unit: degree centigrade (℃)\nAir2Water_ DM \t\t\tmodel-based daily lake surface water temperature, unit: degree  centigrade (℃)",
+            "instructionsCn": "湖温数据共164个CSV文件，命名方式为\"XXXXX_LSWT.csv\"，其中XXXXX是湖泊编号。每个CSV文件包含7列:\n        Year\t\t\t\t\t年\n\tMonth\t\t\t\t\t月\n\tDay\t\t\t\t\t\t日\n\tMOD11A1_DT\t\t\t基于MOD11A1的日间湖面温度（℃），无效值为-999\n\tMOD11A1_NT\t\t\t基于MOD11A1的夜间湖面温度（℃），无效值为-999\n\tMOD11A1_DM \t\t\t用于模型率定和验证的湖面温度（℃），MOD11A1_DT与MOD11A1_NT的均值，无效值为-999\n\tAir2Water_DM\t\t\t模拟湖面温度（℃）",
+            "east": 103.0,
+            "west": 74.0,
+            "south": 28.0,
+            "north": 39.0,
+            "startTime": "1978-01-01 00:00:00",
+            "endTime": "2017-12-31 00:00:00",
+            "fileSize": 119197962.0,
+            "cstr": null,
+            "doi": "10.5281/zenodo.4718437",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "郭立男",
+                "nameEn": "GUO Linan",
+                "unitEn": "",
+                "unitCn": "中国科学院空天信息创新研究院"
+            },
+            {
+                "nameCn": "吴艳红",
+                "nameEn": "WU Yanhong",
+                "unitEn": "",
+                "unitCn": "中国科学院空天信息创新研究院"
+            },
+            {
+                "nameCn": "郑红星",
+                "nameEn": "ZHENG Hongxing",
+                "unitEn": "",
+                "unitCn": "澳大利亚联邦科学与工业研究组织水土资源部"
+            },
+            {
+                "nameCn": "张兵",
+                "nameEn": "ZHANG Bing ",
+                "unitEn": "Aerospace Information Research Institute, CAS",
+                "unitCn": "中国科学院空天信息创新研究院"
+            },
+            {
+                "nameCn": "文梦宣",
+                "nameEn": "WEN Mengxuan ",
+                "unitEn": "Aerospace Information Research Institute, CAS",
+                "unitCn": "中国科学院空天信息创新研究院"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Responses of Lake Ice Phenology to Climate Change at Tibetan Plateau",
+                "referenceCn": null,
+                "referenceEn": "Guo, L., Zheng, H., Wu, Y., Zhang, T., & Zhang, B. (2020). Responses of lake ice phenology to climate change at tibetan plateau. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 13, 3856-3861."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Prediction of lake surface temperature using the air2water model: guidelines, challenges, and future perspectives",
+                "referenceCn": null,
+                "referenceEn": "Piccolroaz, S.  (2016). Prediction of lake surface temperature using the air2water model: guidelines, challenges, and future perspectives. Advances in Oceanography and Limnology, 7(1), 36-50."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "地表水",
+                "nameEn": "Surface Water"
+            },
+            {
+                "nameCn": "水温",
+                "nameEn": "Water temperature"
+            },
+            {
+                "nameCn": "湖泊",
+                "nameEn": "Lakes"
+            },
+            {
+                "nameCn": "湖面温度",
+                "nameEn": "Lake surface temperature"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "青藏高原",
+                "keywordEn": "Tibetan Plateau"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1978-2017",
+                "keywordEn": "1978-2017",
+                "type": "temporal"
+            },
+            {
+                "keywordCn": "日尺度",
+                "keywordEn": "Daily",
+                "type": "temporal"
+            },
+            {
+                "keywordCn": "长时序",
+                "keywordEn": "Long time series",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "第二次青藏高原综合科学考察研究",
+                "titleEn": "Second Tibetan Plateau Scientific Expedition and Research Programme (STEP)"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of the data collection methods used to simulate and validate daily lake surface temperatures over multiple decades in the Tibetan Plateau?",
+                "QuestionCn": "用于模拟和验证青藏高原多个十年间日湖面温度的数据收集方法的特点是什么？",
+                "AnswerEn": "lake surface pixel averages from MOD11A1, daily lake surface temperature sequences from 2000 to 2017, improved lake water temperature model air2water, meteorological station daily temperature data, Nash efficiency coefficients above 0.6, deviations within ±0.55℃",
+                "AnswerCn": "湖面像素平均值来自MOD11A1，2000年至2017年的每日湖面温度序列，改进的湖水温度模型air2water，气象站每日温度数据，Nash效率系数高于0.6，偏差在±0.55℃以内。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many lakes on the Tibetan Plateau are included in a dataset covering lake surface temperature from 1978 to 2017?",
+                "QuestionCn": "在1978年至2017年的湖面温度数据集中，包含了多少个青藏高原的湖泊？",
+                "AnswerEn": "164",
+                "AnswerCn": "164",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the method of using MOD11A1 product data to derive daily lake surface temperature values compare to the improved air2water lake temperature model for simulating continuous lake surface temperatures throughout the year?",
+                "QuestionCn": "使用MOD11A1产品数据推导每日湖面温度值的方法与改进的air2water湖温度模型在全年模拟连续湖面温度方面的比较如何？",
+                "AnswerEn": "The method of using MOD11A1 product data involves obtaining pixel mean values to create a daily lake surface temperature sequence from 2000 to 2017. In contrast, the improved air2water lake temperature model allows for the daily continuous simulation of lake surface temperatures throughout the year. The former relies on remote sensing data, while the latter uses meteorological station daily air temperature data as model driving data and MOD11A1 monitored lake surface temperature for model calibration and validation. Both methods are used in conjunction to reconstruct a long-term series of daily lake surface temperatures from 1978 to 2017, achieving high Nash efficiency coefficients and minimal biases in comparison to remote sensing results.",
+                "AnswerCn": "使用MOD11A1产品数据的方法涉及获取像素均值，以创建2000年至2017年的每日湖面温度序列。相比之下，改进的air2water湖温度模型允许全年每日连续模拟湖面温度。前者依赖于遥感数据，而后者使用气象站的每日气温数据作为模型驱动数据，并利用MOD11A1监测的湖面温度进行模型校准和验证。这两种方法结合使用，以重建1978年至2017年的长期每日湖面温度序列，取得了高纳什效率系数和与遥感结果相比的最小偏差。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can the use of MOD11A1 products to derive daily lake surface temperature values help in understanding the long-term climate trends on the Tibetan Plateau?",
+                "QuestionCn": "使用MOD11A1产品来推导每日湖面温度值如何有助于理解青藏高原的长期气候趋势。",
+                "AnswerEn": "Using MOD11A1 products to derive daily lake surface temperature values allows researchers to create a comprehensive temperature sequence from 2000 to 2017. This approach, combined with the air2water model and meteorological station temperature data, facilitates the reconstruction of a continuous daily lake surface temperature series for the period 1978 to 2017. This reconstructed temperature data provides valuable insights into the long-term climate trends on the Tibetan Plateau by enabling analysis of the changes in lake surface temperature over several decades.",
+                "AnswerCn": "使用MOD11A1产品来推导每日湖面温度值，使研究人员能够从2000年到2017年创建一个全面的温度序列。这种方法结合air2water模型和气象站温度数据，有助于重建1978年至2017年的连续每日湖面温度系列。这一重建的温度数据为分析青藏高原长期气候趋势提供了宝贵的见解，使得研究数十年来湖面温度变化成为可能。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the primary objective behind developing a dataset that focuses on the daily surface temperature of lakes on the Tibetan Plateau from 1978 to 2017?",
+                "QuestionCn": "开发一个关注1978年至2017年间青藏高原湖泊日表面温度的数据集的主要目标是什么？",
+                "AnswerEn": "The primary objective is to analyze the long-term changes in lake surface temperature over several decades on the Tibetan Plateau. This analysis is crucial for assessing the impact of climate warming on the region’s lake water heat balance, water quality, and ecosystem changes. The dataset serves as a significant resource for understanding how these factors have evolved over time and assists in evaluating the broader implications of climate change in the area.",
+                "AnswerCn": "主要目标是分析青藏高原湖泊表面温度在几十年间的长期变化。这一分析对于评估气候变暖对该地区湖水热平衡、水质和生态系统变化的影响至关重要。该数据集作为理解这些因素如何随时间演变的重要资源，有助于评估气候变化在该地区的更广泛影响。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in using MOD11A1 products to generate a daily lake surface temperature sequence for lakes on the Qinghai-Tibet Plateau?",
+                "QuestionCn": "使用MOD11A1产品生成青藏高原湖泊的日湖面温度序列涉及的程序步骤如下：",
+                "AnswerEn": "To generate a daily lake surface temperature sequence using MOD11A1 products for lakes on the Qinghai-Tibet Plateau, one must first extract the average pixel values of the lake surface from the MOD11A1 products to obtain the daily temperature series from 2000 to 2017. Next, an improved lake water temperature model, air2water, is used to simulate daily continuous lake surface temperatures throughout the year. This model uses daily air temperature data from meteorological stations as the driving data and calibrates and validates the model using the lake surface temperature monitored by MOD11A1. This process helps reconstruct the daily lake surface temperature sequence from 1978 to 2017 for the Qinghai-Tibet Plateau.",
+                "AnswerCn": "要使用MOD11A1产品生成青藏高原湖泊的每日湖面温度序列，首先需要提取MOD11A1产品中湖面平均像素值，以获得2000年至2017年的每日温度系列。接下来，使用改进的湖水温度模型air2water，模拟全年每日连续的湖面温度。该模型使用气象站的每日气温数据作为驱动数据，并利用MOD11A1监测的湖面温度对模型进行校准和验证。这个过程有助于重建1978年至2017年青藏高原的每日湖面温度序列。",
+                "Level": "C3(Applying)"
+            }
+        ]
+    }
+}

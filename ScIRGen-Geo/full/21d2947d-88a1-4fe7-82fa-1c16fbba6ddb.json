@@ -1,0 +1,196 @@
+{
+    "id": "21d2947d-88a1-4fe7-82fa-1c16fbba6ddb",
+    "relatedPaper": 0,
+    "context": {
+        "metadata": {
+            "titleEn": "Simulation results of eco hydrological model in the middle and lower reaches of Heihe river v1.0 (2001-2012)",
+            "titleCn": "黑河中下游生态水文模型模拟结果V1.0 (2001-2012)",
+            "description": "This project use distributed HEIFLOW Ecological hydrology model (Hydrological - Ecological Integrated watershed - scale FLOW model) of heihe river middle and lower reaches of the eco Hydrological process simulation.The model USES the dynamic land use function, and adopts the land use data of the three phases of 2000, 2007 and 2011 provided by hu xiaoli et al.\nThe space-time range and accuracy of simulation are as follows:\nSimulation period: 2000-2012, of which 2000 is the model warm-up period\nAnalog step size: day by day\nSimulation space range: the middle and lower reaches of heihe river, model area 90589 square kilometers\nSpatial accuracy of the simulation: 1km×1km grid was used on both the surface and underground, and there were 90589 hydrological response units on the surface.Underground is divided into 5 layers, each layer 90589 mobile grid\nThe data set of HEIFLOW model simulation results includes the following variables:\n(1) precipitation (unit: mm/month)\n(2) observed values of main outbound runoff in the upper reaches of heihe river (unit: m3 / s)\n(3) evapotranspiration (unit: mm/month)\n(4) soil infiltration amount (unit: mm/month)\n(5) surface yield flow (unit: mm/month)\n(6) shallow groundwater head (unit: m)\n(7) groundwater evaporation (unit: m3 / month)\n(8) supply of shallow groundwater (unit: m3 / month)\n(9) groundwater exposure (unit: m3 / month)\n(10) river-groundwater exchange (unit: m3 / month)\n(11) simulated river flow value of four hydrological stations of heihe main stream (gaoya, zhengyi gorge, senmaying, langxin mountain) (unit: cubic meter/second)\nThe first two variables above are model-driven data, and the rest are model simulation quantities.The time range of all variables is 2001-2012, and the time scale is month.The spatial distributed data precision is 1km×1km, and the data format is tif.\nIn the above variables, if the negative value is encountered, it represents the groundwater excretion (such as groundwater evaporation, groundwater exposure, groundwater recharge channel, etc.).If groundwater depth is required, the groundwater head data can be subtracted from the surface elevation data of the model. In some areas, the groundwater head may be higher than the surface, indicating the presence of groundwater exposure.\nIn addition, the dataset provides:\nMiddle and downstream model modeling scope (format:.shp)\nSurface elevation of the middle and downstream model (in the format of. Tif)\nAll the above data are in the frame of WGS_1984_UTM_Zone_47N.\nTake heiflow_v1_et_2001m01.tif as an example to illustrate the naming rules of data files:\nHEIFLOW: model name\nV1: data set version 1.0\nET: variable name\n2001M01: January 2000, where M represents month",
+            "descriptionCn": "本项目利用分布式生态水文模型HEIFLOW(Hydrological-Ecological Integrated watershed-scale FLOW model)对黑河中下游开展了生态水文过程模拟。模型使用了动态土地利用功能，采用了由胡晓利等提供的2000、2007、2011三期土地利用数据。\n模拟的时空范围及精度如下：\n模拟期：2000-2012年，其中2000年为模型预热期\n模拟步长：逐日\n模拟的空间范围：黑河中下游，模型面积90589平方公里\n模拟的空间精度：地表和地下均采用1km×1km网格，地表共90589个水文响应单元；地下分5层，每层90589个活动网格\n\nHEIFLOW模型模拟结果数据集包含以下变量：\n（1）降水量（单位：毫米/月）\n（2）黑河上游主要出山径流量观测值（单位：立方米/秒）\n（3）蒸散发量（单位：毫米/月）\n（4）土壤入渗量（单位：毫米/月）\n（5）地表产流量（单位：毫米/月）\n（6）浅层地下水水头（单位：米）\n（7）地下水潜水蒸发量（单位：立方米/月）\n（8）浅层地下水面上补给量（单位：立方米/月）\n（9）地下水出露量（单位：立方米/月）\n（10）河流-地下水交换量（单位：立方米/月）\n（11）黑河干流四个水文站（高崖、正义峡、哨马营、狼心山）河道流量模拟值（单位：立方米/秒）\n上述前两个变量为模型驱动数据，其余均为模型模拟量。所有变量时间范围为2001-2012，时间尺度为月。空间分布式数据精度为1km×1km，数据格式为tif。\n上述变量中，如遇负值，表示地下水排泄量（如地下水潜水蒸发量、地下水出露量、地下水补给河道量等）。如需地下水埋深，使用模型地面高程数据减去地下水水头数据即可，部分区域地下水水头可能高于地表，表明该处存在地下水出露。\n\n此外，数据集还提供：\n中下游模型建模范围（格式为.shp）\n中下游模型地表高程（格式为.tif）\n\n上述数据全部使用WGS_1984_UTM_Zone_47N坐标系。\n\n以HEIFLOW_V1_ ET_2001M01.tif为例，说明数据文件命名规则：\nHEIFLOW：\t模型名称\nV1:\t数据集版本号1.0\nET：\t变量名\n2001M01：2000年1月，其中M表示月份",
+            "instructions": "Data is stored in raster tif format. Take heiflow_v1_et_2001m01.tif as an example to illustrate the naming rules of data files: HEIFLOW: model name V1: data set version number 1.0ET: variable name 2001m01:2000, where M represents month.\nArcgis, Qgis and other remote sensing software can be used to open and read",
+            "instructionsCn": "数据以栅格tif格式存储，以HEIFLOW_V1_ ET_2001M01.tif为例，说明数据文件命名规则：HEIFLOW：模型名称V1:\t数据集版本号1.0ET：变量名2001M01：2000年1月，其中M表示月份。\n可用Arcgis、Qgis等遥感软件打开读取",
+            "east": 102.14,
+            "west": 97.8,
+            "south": 38.04,
+            "north": 42.67,
+            "startTime": "2001-01-10 16:00:00",
+            "endTime": "2013-01-09 16:00:00",
+            "fileSize": 975301102.0,
+            "cstr": "18406.11.Hydro.tpdc.270844",
+            "doi": "10.11888/Hydro.tpdc.270844",
+            "dataFormat": "TIF",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "郑春苗",
+                "nameEn": "ZHENG Chunmiao",
+                "unitEn": "",
+                "unitCn": "北京大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Exploring scale‐dependent ecohydrological responses in a large endorheic river basin through integrated surface water‐groundwater modeling",
+                "referenceCn": null,
+                "referenceEn": "Tian, Y., Zheng, Y., Zheng, C., et al (2015). Exploring scale‐dependent ecohydrological responses in a large endorheic river basin through integrated surface water‐groundwater modeling. Water Resources Research, 51(6): 4065-4085."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "地表水",
+                "nameEn": "Surface Water"
+            },
+            {
+                "nameCn": "水位",
+                "nameEn": "Stage height"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "Hydrology"
+            },
+            {
+                "nameCn": "蒸散发",
+                "nameEn": "Evapotranspiration"
+            },
+            {
+                "nameCn": "降水",
+                "nameEn": "Precipitation"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "黑河中下游",
+                "keywordEn": "The middle and lower of Heihe"
+            },
+            {
+                "keywordCn": "黑河流域",
+                "keywordEn": "Heihe River Basin"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2001.01-2012.12",
+                "keywordEn": "2001.01-2012.12",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": null,
+        "projectList": [
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": null,
+    "query": {
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of how dynamic land use data is integrated into hydrological-ecological watershed-scale flow models for simulating ecological processes?",
+                "QuestionCn": "您能否提供一个示例，说明动态土地利用数据如何集成到水文-生态流域尺度流动模型中，以模拟生态过程？",
+                "AnswerEn": "An example of integrating dynamic land use data into a hydrological-ecological model is the use of the HEIFLOW model for simulating ecological processes in the middle and lower reaches of the Heihe River. The model utilized dynamic land use functions by incorporating land use data from 2000, 2007, and 2011, which were provided by researchers such as Hu Xiaoli. This integration allowed for accurate simulation of ecological and hydrological processes over the period 2001-2012.",
+                "AnswerCn": "将动态土地利用数据整合到水文生态模型中的一个例子是使用HEIFLOW模型模拟黑河中下游的生态过程。该模型通过整合2000年、2007年和2011年的土地利用数据（由胡晓丽等研究人员提供），采用动态土地利用函数。这一整合使得在2001年至2012年期间能够准确模拟生态和水文过程。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the specific characteristics of the spatial and temporal resolution in an ecological hydrological model simulation?",
+                "QuestionCn": "生态水文模型模拟中的空间和时间分辨率的具体特征是什么？",
+                "AnswerEn": "1km×1km grids, 90589 square kilometers, surface and subsurface modeled, 2000 to 2012, daily timestep",
+                "AnswerCn": "1公里×1公里网格，90589平方公里，地表和地下建模，2000年至2012年，日时间步长。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the total area covered by the spatial grid used in the ecological hydrological model simulation for the middle and lower reaches of the Heihe River?",
+                "QuestionCn": "中下游黑河生态水文模型模拟所使用的空间网格覆盖的总面积是多少？",
+                "AnswerEn": "90,589 square kilometers",
+                "AnswerCn": "90,589平方公里",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does the term 'dynamic land use function' mean in the context of ecological hydrological modeling?",
+                "QuestionCn": "在生态水文模型的背景下，“动态土地利用功能”一词指的是土地利用类型及其变化对水文过程和生态系统功能的影响。这种功能考虑了土地利用的动态变化如何影响水流、土壤水分、植被生长和生态系统服务等方面。",
+                "AnswerEn": "In the context of ecological hydrological modeling, 'dynamic land use function' refers to the capability of a model to incorporate changes in land use over time, allowing for the simulation of ecological and hydrological processes that account for variations in land use. This involves using land use data from multiple time periods, such as the years 2000, 2007, and 2011, to accurately simulate and analyze the impact of land use changes on hydrological processes.",
+                "AnswerCn": "在生态水文模型的背景下，“动态土地利用功能”指的是模型能够纳入随时间变化的土地利用，允许模拟考虑土地利用变化的生态和水文过程。这涉及使用来自多个时间段的土地利用数据，例如2000年、2007年和2011年，以准确模拟和分析土地利用变化对水文过程的影响。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What causes potential inaccuracies or challenges in the simulation of ecological and hydrological processes using distributed models like HEIFLOW?",
+                "QuestionCn": "使用像HEIFLOW这样的分布式模型模拟生态和水文过程时，可能导致不准确性或挑战的原因是什么？",
+                "AnswerEn": "Potential inaccuracies or challenges in the simulation of ecological and hydrological processes using distributed models like HEIFLOW can arise from several factors, including the quality and resolution of input data such as land use data, the accuracy of model parameters, the complexity of ecological and hydrological interactions that may not be fully captured by the model, and the spatial and temporal resolution of the model itself. The model uses dynamic land use data with specific temporal snapshots (2000, 2007, 2011), which may not fully capture rapid land use changes. Additionally, any errors in driving data like precipitation and upstream runoff observations can propagate through the simulation, affecting the accuracy of variables like evapotranspiration, soil infiltration, and groundwater interactions.",
+                "AnswerCn": "使用像HEIFLOW这样的分布式模型模拟生态和水文过程时，可能会出现潜在的不准确性或挑战，这些问题可能源于多个因素，包括输入数据的质量和分辨率，例如土地利用数据，模型参数的准确性，生态和水文相互作用的复杂性，这些相互作用可能未被模型充分捕捉，以及模型本身的空间和时间分辨率。该模型使用具有特定时间快照的动态土地利用数据（2000年、2007年、2011年），这可能无法充分捕捉快速的土地利用变化。此外，任何驱动数据（如降水和上游径流观测）的错误都可能在模拟中传播，影响蒸散发、土壤入渗和地下水相互作用等变量的准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedures are involved in utilizing dynamic land use data to enhance the accuracy of ecological hydrological process simulations in river basins?",
+                "QuestionCn": "利用动态土地利用数据提高河流流域生态水文过程模拟准确性的程序包括哪些步骤？",
+                "AnswerEn": "The procedures involve using dynamic land use data from different years (e.g., 2000, 2007, 2011) to inform ecological hydrological models like HEIFLOW. This allows the model to account for changes in land use over time, which can affect hydrological processes. The model then simulates ecological hydrological processes with a spatial resolution of 1km×1km, ensuring detailed analysis of the river basin's dynamics. These procedures help capture temporal and spatial variations that are critical for accurate simulations.",
+                "AnswerCn": "这些程序涉及使用不同年份（例如2000年、2007年、2011年）的动态土地利用数据，以便为生态水文模型如HEIFLOW提供信息。这使得模型能够考虑土地利用随时间的变化，这可能会影响水文过程。然后，模型以1km×1km的空间分辨率模拟生态水文过程，确保对流域动态的详细分析。这些程序有助于捕捉对准确模拟至关重要的时间和空间变化。",
+                "Level": "C3(Applying)"
+            }
+        ]
+    }
+}

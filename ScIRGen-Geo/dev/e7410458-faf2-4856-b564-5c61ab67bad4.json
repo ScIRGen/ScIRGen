@@ -1,0 +1,389 @@
+{
+    "id": "e7410458-faf2-4856-b564-5c61ab67bad4",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Dataset on the freeze-thaw process in Antarctic and Arctic ice sheets (1978-2015)",
+            "titleCn": "南北极冰盖冻融数据集（1978-2015）",
+            "description": "This dataset is the spatial distribution map of the marshes in the source area of the Yellow River near the Zaling Lake-Eling Lake, covering an area of about 21,000 square kilometers. The data set is classified by the Landsat 8 image through an expert decision tree and corrected by manual visual interpretation. The spatial resolution of the image is 30m, using the WGS 1984 UTM projected coordinate system, and the data format is grid format. The image is divided into five types of land, the land type 1 is “water body”, the land type 2 is “high-cover vegetation”, the land type 3 is “naked land”, and the land type 4 is “low-cover vegetation”, and the land type 5 is For \"marsh\", low-coverage vegetation and high-coverage vegetation are distinguished by vegetation coverage. The threshold is 0.1 to 0.4 for low-cover vegetation and 0.4 to 1 for high-cover vegetation.",
+            "descriptionCn": "南北极冰盖冻融数据集采用微波辐射计和微波散射计两种数据获取。微波辐射计数据覆盖时间从1978年到2015年，空间分辨率为25 km；微波散射计数据覆盖时间从2000年到2015年，空间分辨率为4.45km.时间分辨率为逐日，覆盖范围为南北极冰盖。基于微波辐射计的遥感反演方法采用改进的基于小波冰盖冻融探测算法，算法考虑冰盖冻融亮温特性在时间上的变化，首先利用小波变换对格陵兰所有冰盖区域的长时间亮度温度数据进行小波多尺度分解，在不同尺度下对边缘信息进行分析。再次，采用方差分析的方法将冰盖融化和重新冻结过程产生的边缘信息从噪声中分离出来。基于已提取的冰盖长时间亮度温度变化边缘信息，利用广义高斯模型来确定干雪和湿雪分类的最优边缘阈值， 从而探测出格陵兰冰盖发生融化的区域。最后，基于空间自动纠错的原理，运用空间邻域纠错算子对由噪音引起的错误结果进行探测，并进行人工纠错。长时间序列星载被动微波亮度温度数据来自SMMR、SSM/I和SSMI/S三个传感器。为保证不同传感器亮度温度在时间上的一致性，在冻融提取之前对不同传感器亮度温度进行了交叉订正。通过实测站点的验证表明格陵兰冰盖冻融探测精度在70%以上。基于微波辐射计的遥感反演方法考虑积雪特性在时空和空间上的变化，首先提取散射计数据的DVPR时间序列数据，有效利用散射计数据的高时间分辨率，同时利用通道差去除地形带来的影响；随后利用广义高斯模型对每一个采样点时间序列的方差值进行拟，以此来区分出干湿雪点，即确定融化范围，这种广义高斯模型相比于传统的双高斯模型需要的输入参数少，得到的阈值也具有唯一性；最后利用移动窗分割算法来精确找到湿雪点的融化开始时间、 结束时间以及持续时间， 可以有效地去除融化或非融化时期的温度突变所带来的影响。长时间序列星载微波散射计数据来自QSCAT和ASCAT两个传感器。通过实测站点的验证表明南极冰盖冻融探测精度在70%以上。数据每一天存放一个bin文件，基于微波辐射计的南极冻融数据每个文件由316*332的栅格组成，格陵兰冰盖冻融数据每个文件由304*448的栅格组成；基于微波散射计的南极冻融数据每个文件由810*680的栅格组成，格陵兰冰盖冻融数据每个文件由810*680的栅格组成（0值：非融化区域，1值：融化区域）。",
+            "instructions": "The dataset files are uniformly packaged in the “result” folder, and the “resultgrid” grid format file can be opened using ArcGis software to view the classification results of the Yellow River source marsh. You can use the ArcGis Import Symbology feature to import a preset layer by opening the \"resultgrid.lyr\" layer file.",
+            "instructionsCn": "",
+            "east": 360.0,
+            "west": null,
+            "south": -90.0,
+            "north": -60.0,
+            "startTime": "1978-10-28 00:00:00",
+            "endTime": "2016-01-06 00:00:00",
+            "fileSize": 45494154.0,
+            "cstr": "18406.11.GlaciolGeocryol.tpe.00000032.file",
+            "doi": "10.11888/GlaciolGeocryol.tpe.00000032.file",
+            "dataFormat": "bin",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "李新武",
+                "nameEn": "Li Xinwu",
+                "unitEn": "Institute of Remote Sensing and Digital Earth, Chinses Academy of Sciences",
+                "unitCn": "中国科学院遥感与数字地球研究所"
+            },
+            {
+                "nameCn": "梁雷",
+                "nameEn": "Liang Lei",
+                "unitEn": "Institute of Remote Sensing and Digital Earth, Chinses Academy of Sciences",
+                "unitCn": "中国科学院遥感与数字地球研究所"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Automated ice-sheet snowmelt detection using microwave radiometer measurements [J]",
+                "referenceCn": null,
+                "referenceEn": "Lei Liang, Huadong Guo, Xinwu Li & Xiao Cheng. Automated ice-sheet snowmelt detection using microwave radiometer measurements [J]. Polar Research, 2013, 32, 19746, http://dx.doi.org/10.3402/polar.v32i0.19746."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "冰冻圈",
+                "nameEn": "Cryosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "冰川（含冰盖）",
+                "nameEn": "Glacier(Ice Sheet)"
+            },
+            {
+                "nameCn": "冻土",
+                "nameEn": "Frozen Ground"
+            },
+            {
+                "nameCn": "冻融",
+                "nameEn": "Freeze thawing"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "北极",
+                "keywordEn": "Arctic"
+            },
+            {
+                "keywordCn": "南极",
+                "keywordEn": "Antarctica"
+            },
+            {
+                "keywordCn": "格陵兰",
+                "keywordEn": "Greenland"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1978-2015",
+                "keywordEn": "1978-2015",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "地球大数据科学工程专项时空三极环境项目",
+                "titleEn": "CASEarth:Big Earth Data for Three Poles"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山地区冰川边界（2018）",
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleCn": "三极人口&GDP数据集（1970-2006）",
+                "titleEn": "Three-pole population &GDP dataset (1970-2006)"
+            },
+            {
+                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleCn": "北半球湖冰物候数据集（1978-2018）",
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            },
+            {
+                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+            },
+            {
+                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Monitoring ice-sheet snowmelt is fundamental to understanding global climate change. Different ice-sheet snowmelt detection methods are based on a variety of thresholding schemes using different melt signals for dry and wet snow; these complicate the regular operation of an ice-sheet snowmelt monitoring."
+            ],
+            "research objective": [
+                "We propose an automated melt signal detection method developed using melt signals derived from the cross-gradient polarization ratio snowmelt detection."
+            ],
+            "challenges": [],
+            "methods": [
+                "We processed the data spanning from 25 October 1978 to 30 June 2010 in Antarctica, and from 1 July 1988 to 30 June 1995 in Greenland. We employed the 18-GHz horizontal polarization channel and 37-GHz vertically polarized channel from the SMMR data, and the 19-GHz horizontal channel and 37-GHz vertically polarized channel from the SSM/I and SSMIS data. Using the regression coefficients presented by Liu et al. (2005), Jezek et al. (1991) and Abdalati et al. (1995), the SMMR, SSM/I F11 and SSM/I F13 data are converted into SSM/I F8 equivalent values for the Antarctic and Greenland ice sheets. In addition, to validate the result, the temperature measurements of automatic weather stations (AWSs) in Antarctica and Greenland were also collected. We use in situ data to validate the daily snowmelt detection results of each method. For processing the AWS data, we chose the daily mean air temperature data from the summer months (November /C1 March) in Antarctica. Once the corresponding daily detection results have been obtained by using the snowmelt detection method, the following defined quantities (Celik 2010) are computed for comparing the daily detection results against the corresponding daily mean air temperature data."
+            ],
+            "dataset": [
+                "The test sites we selected in this study are the Antarctic continent and Greenland. The satellite passive microwave data used for this analysis are from the Scanning Multi-channel Microwave Radiometer (SMMR) data collected by the US National Aeronautical and Space Administration’s Nimbus-7 satellite, the Special Sensor Microwave/Imager (SSM/I) data collected by the DMSP-F8, -F11 and -F13 satellites and the Special Sensor Microwave Imager Sounder (SSMIS) data collected by the DMSP-F17 satellite. We processed the data spanning from 25 October 1978 to 30 June 2010 in Antarctica, and from 1 July 1988 to 30 June 1995 in Greenland. In addition, to validate the result, the temperature measurements of automatic weather stations (AWSs) in Antarctica and Greenland were also collected."
+            ],
+            "findings": [
+                "Using temperature data to validate the snowmelt detection results of the modified XPGR detection method and the modified wavelet transformation-based method shows that they have relatively high precision."
+            ],
+            "backgroundCn": [
+                "监测冰盖雪融化对于理解全球气候变化至关重要。不同的冰盖雪融化检测方法基于各种阈值方案，使用干雪和湿雪的不同融化信号；这些复杂化了冰盖雪融化监测的常规操作。"
+            ],
+            "research objectiveCn": [
+                "我们提出了一种自动化的融化信号检测方法，该方法是基于交叉梯度极化比雪融化检测所获得的融化信号开发的。"
+            ],
+            "challengesCn": [],
+            "methodsCn": [
+                "我们处理了从1978年10月25日到2010年6月30日的南极数据，以及从1988年7月1日到1995年6月30日的格林兰数据。我们使用了来自SMMR数据的18-GHz水平极化通道和37-GHz垂直极化通道，以及来自SSM/I和SSMIS数据的19-GHz水平通道和37-GHz垂直极化通道。利用Liu等人（2005年）、Jezek等人（1991年）和Abdalati等人（1995年）提出的回归系数，将SMMR、SSM/I F11和SSM/I F13数据转换为南极和格林兰冰盖的SSM/I F8等效值。此外，为了验证结果，还收集了南极和格林兰自动气象站（AWSs）的温度测量数据。我们使用现场数据来验证每种方法的每日融雪检测结果。在处理AWS数据时，我们选择了南极夏季月份（11月至次年3月）的日均气温数据。一旦通过融雪检测方法获得了相应的每日检测结果，就会计算出以下定义的量（Celik 2010），以便将每日检测结果与相应的日均气温数据进行比较。"
+            ],
+            "datasetCn": [
+                "本研究中选择的测试地点是南极洲和格林兰。用于本分析的卫星被动微波数据来自美国国家航空航天局的Nimbus-7卫星收集的扫描多通道微波辐射计（SMMR）数据、由DMSP-F8、-F11和-F13卫星收集的特殊传感器微波/成像仪（SSM/I）数据，以及由DMSP-F17卫星收集的特殊传感器微波成像仪声纳（SSMIS）数据。我们处理的数据涵盖了1978年10月25日至2010年6月30日在南极洲的时间段，以及1988年7月1日至1995年6月30日在格林兰的时间段。此外，为了验证结果，还收集了南极洲和格林兰自动气象站（AWSs）的温度测量数据。"
+            ],
+            "findingsCn": [
+                "使用温度数据验证改进的XPGR检测方法和改进的基于小波变换的方法的融雪检测结果表明，它们具有相对较高的精度。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Is the precision of ice-sheet snowmelt detection methods validated using temperature measurements from automatic weather stations?",
+                "QuestionCn": "冰盖雪融检测方法的精度是否使用自动气象站的温度测量进行了验证？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Does the data collection method for snowmelt detection involve using different frequency channels from satellite-based passive microwave sensors?",
+                "QuestionCn": "雪融检测的数据收集方法是否涉及使用来自卫星被动微波传感器的不同频率通道？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Which remote sensing technique is more applicable for detecting ice-sheet snowmelt, microwave radiometer data or microwave scatterometer data?",
+                "QuestionCn": "哪种遥感技术更适用于检测冰盖雪融化，微波辐射计数据还是微波散射计数据？",
+                "AnswerEn": "Microwave radiometer data",
+                "AnswerCn": "微波辐射计数据",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What data sources are used to monitor ice-sheet snowmelt in the Antarctic and Greenland regions?",
+                "QuestionCn": "用于监测南极和格林兰地区冰盖融雪的数据来源有哪些？",
+                "AnswerEn": "Scanning Multi-channel Microwave Radiometer (SMMR), Special Sensor Microwave/Imager (SSM/I), Special Sensor Microwave Imager Sounder (SSMIS)",
+                "AnswerCn": "扫描多通道微波辐射计 (SMMR)、特种传感器微波成像仪 (SSM/I)、特种传感器微波成像仪声测器 (SSMIS)",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What methodological challenges are associated with detecting ice-sheet snowmelt using microwave radiometer data?",
+                "QuestionCn": "使用微波辐射计数据检测冰盖融雪时面临哪些方法论挑战？",
+                "AnswerEn": "variations in brightness temperature characteristics",
+                "AnswerCn": "亮温特征的变化",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method used for monitoring ice-sheet snowmelt that effectively separates dry and wet snow signals?",
+                "QuestionCn": "您能否提供一种用于监测冰盖雪融的数据显示方法，该方法有效区分干雪和湿雪信号？",
+                "AnswerEn": "An example of a data collection method for monitoring ice-sheet snowmelt is using the cross-gradient polarization ratio to derive melt signals. This method employs microwave radiometer data, utilizing different frequency channels to distinguish between dry and wet snow conditions.",
+                "AnswerCn": "监测冰盖融雪的一种数据收集方法是使用交叉梯度极化比来推导融化信号。该方法利用微波辐射计数据，使用不同频率通道来区分干雪和湿雪条件。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Can you give an example of a dataset that spans multiple decades and is used to monitor changes in the ice-sheet snowmelt of Antarctica and Greenland?",
+                "QuestionCn": "您能否提供一个跨越多个十年的数据集，用于监测南极和格林兰冰盖融雪变化的例子？",
+                "AnswerEn": "A dataset example is the long-term microwave radiometer data that covers Antarctica from 1978 to 2010 and Greenland from 1988 to 1995. This dataset includes data from the SMMR, SSM/I, and SSMIS sensors, which have been cross-corrected for consistency across different sensors.",
+                "AnswerCn": "一个数据集的例子是覆盖南极洲的长期微波辐射计数据，时间范围从1978年到2010年，以及格林兰的数据显示，时间范围从1988年到1995年。该数据集包括来自SMMR、SSM/I和SSMIS传感器的数据，这些数据经过交叉校正，以确保不同传感器之间的一致性。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the spatial resolution of the microwave scatterometer data used in the ice-sheet melt detection datasets?",
+                "QuestionCn": "用于冰盖融化检测数据集的微波散射计数据的空间分辨率是多少？",
+                "AnswerEn": "4.45 km",
+                "AnswerCn": "4.45公里",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How might the integration of different satellite microwave sensors enhance the precision of detecting ice-sheet snowmelt patterns over extended time periods?",
+                "QuestionCn": "不同卫星微波传感器的集成如何提高对冰盖融雪模式在较长时间内检测的精确度？",
+                "AnswerEn": "The integration of different satellite microwave sensors, such as the SMMR, SSM/I, and SSMIS, provides a means to cross-validate and correct brightness temperature data across varying time frames and spatial resolutions. This approach ensures temporal consistency and improves the accuracy of ice-sheet snowmelt detection by utilizing regression coefficients to convert data into equivalent values. Additionally, high temporal resolution from scatterometer data aids in distinguishing dry and wet snow, contributing to more precise detection of melt signals.",
+                "AnswerCn": "不同卫星微波传感器的集成，如SMMR、SSM/I和SSMIS，为跨时间框架和空间分辨率的亮度温度数据提供了交叉验证和校正的手段。这种方法确保了时间一致性，并通过利用回归系数将数据转换为等效值，从而提高了冰盖雪融检测的准确性。此外，来自散射计数据的高时间分辨率有助于区分干雪和湿雪，从而更精确地检测融化信号。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What methodological considerations are necessary when using wavelet transformation and variance analysis in detecting ice-sheet snowmelt, and how do these methods address noise in the data?",
+                "QuestionCn": "在使用小波变换和方差分析检测冰盖雪融时，哪些方法论考虑是必要的，这些方法如何处理数据中的噪声？",
+                "AnswerEn": "Wavelet transformation allows for the multi-scale decomposition of long-term brightness temperature data, enabling detailed analysis of edge information that indicates snowmelt. Variance analysis helps separate melt-induced edge information from noise. The combination of these methods effectively distinguishes true melt signals from noise by identifying optimal edge thresholds for dry and wet snow classification. Furthermore, spatial error correction principles are applied to detect and rectify errors caused by noise, enhancing the reliability of the results.",
+                "AnswerCn": "小波变换允许对长期亮温数据进行多尺度分解，从而能够详细分析指示融雪的边缘信息。方差分析有助于将融化引起的边缘信息与噪声分离。这些方法的结合有效地区分真实的融化信号和噪声，通过识别干雪和湿雪分类的最佳边缘阈值。此外，应用空间误差修正原理来检测和纠正由噪声引起的错误，从而增强结果的可靠性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the complexity of detecting ice-sheet snowmelt using microwave radiometer and scatterometer data?",
+                "QuestionCn": "检测冰盖融雪的复杂性受到多个因素的影响，包括微波辐射计和散射计数据的使用。",
+                "AnswerEn": "The complexity arises from the use of different thresholding schemes for dry and wet snow, which require careful analysis of melt signals, as well as the need to account for the brightness temperature changes over time and space. The process involves techniques like wavelet transformation and variance analysis to separate noise and identify melt areas accurately.",
+                "AnswerCn": "复杂性源于干雪和湿雪使用不同的阈值方案，这需要对融化信号进行仔细分析，并考虑亮温随时间和空间的变化。该过程涉及小波变换和方差分析等技术，以准确分离噪声并识别融化区域。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential consequences on data accuracy when utilizing microwave radiometer data over a long time series for detecting ice sheet snowmelt?",
+                "QuestionCn": "在长时间序列中利用微波辐射计数据检测冰盖融雪时，数据准确性可能面临的潜在后果是什么？",
+                "AnswerEn": "Utilizing microwave radiometer data over a long time series for detecting ice sheet snowmelt, as described in the field, results in high precision snowmelt detection due to consistent processing methods and validation through temperature measurements from automatic weather stations.",
+                "AnswerCn": "利用长时间序列的微波辐射计数据检测冰盖雪融，如所述，因一致的处理方法和通过自动气象站的温度测量进行验证，导致雪融检测具有高精度。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How might the integration of both microwave radiometer and scatterometer data influence the detection of melt and refreeze processes in polar ice sheets?",
+                "QuestionCn": "微波辐射计和散射计数据的结合如何影响极地冰盖融化和再冻结过程的检测？",
+                "AnswerEn": "The integration of microwave radiometer and scatterometer data allows for improved detection of melt and refreeze processes by leveraging the high spatial resolution of scatterometer data and the temporal consistency of radiometer data, resulting in more accurate threshold determination and snow classification.",
+                "AnswerCn": "微波辐射计和散射计数据的集成可以通过利用散射计数据的高空间分辨率和辐射计数据的时间一致性，改善融化和再冻结过程的检测，从而实现更准确的阈值确定和雪的分类。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What effects could the application of an automated melt signal detection method have on the operational efficiency of ice-sheet monitoring?",
+                "QuestionCn": "自动融化信号检测方法的应用对冰盖监测的操作效率可能产生哪些影响？",
+                "AnswerEn": "The application of an automated melt signal detection method enhances operational efficiency by simplifying the monitoring process, reducing manual intervention, and providing a reliable means of distinguishing between dry and wet snow, which is crucial for accurate ice-sheet snowmelt detection.",
+                "AnswerCn": "自动融化信号检测方法的应用通过简化监测过程、减少人工干预，并提供可靠的手段来区分干雪和湿雪，从而提高了操作效率，这对于准确检测冰盖雪融化至关重要。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the purpose of employing microwave radiometers and scatterometers in the data collection method for monitoring ice-sheet snowmelt?",
+                "QuestionCn": "使用微波辐射计和散射计监测冰盖融雪的数据收集方法的目的是什麼？",
+                "AnswerEn": "The purpose is to utilize the strengths of microwave radiometers and scatterometers in capturing long-term brightness temperature data and high-resolution temporal data, respectively, to effectively detect snowmelt on polar ice sheets. These instruments allow for the application of advanced algorithms to analyze the temporal changes and spatial characteristics of the ice sheets, leading to accurate detection of melt and freeze processes.",
+                "AnswerCn": "目的是利用微波辐射计和散射计的优势，捕捉长期的亮温数据和高分辨率的时间数据，以有效检测极地冰盖的融雪。这些仪器允许应用先进的算法来分析冰盖的时间变化和空间特征，从而准确检测融化和冻结过程。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Why is it important to develop an automated melt signal detection method using cross-gradient polarization ratio in ice-sheet snowmelt studies?",
+                "QuestionCn": "在冰盖融雪研究中，开发一种基于交叉梯度极化比的自动化融化信号检测方法的重要性是什么？",
+                "AnswerEn": "Developing an automated melt signal detection method is important to streamline and standardize the monitoring process of ice-sheet snowmelt, minimizing complications arising from various thresholding schemes. This method aims to improve the accuracy and reliability of detecting melt signals by addressing the challenges of differentiating between dry and wet snow, thus enhancing our understanding of ice-sheet dynamics in the context of global climate change.",
+                "AnswerCn": "开发一种自动化融化信号检测方法对于简化和标准化冰盖雪融监测过程至关重要，能够最小化由于各种阈值方案引起的复杂性。该方法旨在通过解决干雪和湿雪之间的区分挑战，提高融化信号检测的准确性和可靠性，从而增强我们对全球气候变化背景下冰盖动态的理解。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What methodologies can be employed to ensure consistency in brightness temperature data across different microwave radiometers for ice-sheet melt detection?",
+                "QuestionCn": "可以采用哪些方法来确保不同微波辐射计之间的亮温数据一致性，以便检测冰盖融化？",
+                "AnswerEn": "To ensure consistency in brightness temperature data across different microwave radiometers, cross-sensor calibration is applied. This involves using regression coefficients from previous studies to convert data from sensors like SMMR, SSM/I, and SSMIS into equivalent values. Additionally, cross-correction is performed before extracting freeze-thaw information to maintain temporal consistency.",
+                "AnswerCn": "为了确保不同微波辐射计之间亮温数据的一致性，采用了传感器间的交叉校准。这涉及使用先前研究中的回归系数，将SMMR、SSM/I和SSMIS等传感器的数据转换为等效值。此外，在提取冻融信息之前进行交叉修正，以保持时间上的一致性。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What steps are taken to validate snowmelt detection results using in situ temperature data from automatic weather stations?",
+                "QuestionCn": "为了验证雪融检测结果，通常会采取以下步骤，使用来自自动气象站的现场温度数据：\n\n1. 收集自动气象站的温度数据，确保数据的时间范围与雪融检测结果一致。\n2. 对比气象站的温度数据与雪融检测结果，分析两者之间的关系。\n3. 识别雪融发生的关键温度阈值，通常是0°C或其他相关温度。\n4. 进行统计分析，例如计算相关系数，以评估温度数据与雪融检测结果之间的相关性。\n5. 进行时间序列分析，观察温度变化与雪融事件的时间匹配情况。\n6. 通过现场观察或其他验证方法，确认雪融事件的实际发生情况。\n7. 根据分析结果调整雪融检测模型，以提高其准确性和可靠性。",
+                "AnswerEn": "Validation involves collecting temperature data from automatic weather stations (AWSs) in Antarctica and Greenland. The daily mean air temperature from summer months is used to compare against snowmelt detection results. By computing defined quantities such as the mean and variance, the accuracy of the detection method is assessed, ensuring reliable snowmelt monitoring.",
+                "AnswerCn": "验证涉及从南极和格林兰的自动气象站（AWSs）收集温度数据。夏季月份的日均气温用于与雪融检测结果进行比较。通过计算定义的量，如均值和方差，评估检测方法的准确性，以确保可靠的雪融监测。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What remote sensing technologies enable the detection of ice-sheet snowmelt over extensive time periods?",
+                "QuestionCn": "哪些遥感技术能够在较长时间内检测冰盖的融雪情况？",
+                "AnswerEn": "The use of microwave radiometers and scatterometers, specifically sensors like SMMR, SSM/I, and SSMIS, enable the detection of ice-sheet snowmelt by providing long-term passive microwave brightness temperature data. These technologies allow for the monitoring of snowmelt phenomena over extensive periods, from 1978 to 2015, with varying spatial resolutions.",
+                "AnswerCn": "微波辐射计和散射计的使用，特别是像SMMR、SSM/I和SSMIS这样的传感器，使得通过提供长期的被动微波亮度温度数据来检测冰盖雪融成为可能。这些技术能够监测从1978年到2015年的雪融现象，具有不同的空间分辨率。",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What factors facilitate the validation of snowmelt detection results derived from satellite data?",
+                "QuestionCn": "促进基于卫星数据的融雪检测结果验证的因素有哪些？",
+                "AnswerEn": "Validation of snowmelt detection results is facilitated by comparing satellite data with in situ temperature measurements from automatic weather stations in Antarctica and Greenland. This comparison ensures that the snowmelt detection methods align with actual temperature variations, thereby confirming their accuracy and reliability.",
+                "AnswerCn": "雪融检测结果的验证通过将卫星数据与南极和格林兰的自动气象站的现场温度测量进行比较来实现。这种比较确保了雪融检测方法与实际温度变化的一致性，从而确认了它们的准确性和可靠性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might researchers expect challenges in validating snowmelt detection results using temperature measurements from automatic weather stations?",
+                "QuestionCn": "研究人员可能会预期在使用自动气象站的温度测量来验证雪融检测结果时面临挑战。",
+                "AnswerEn": "Researchers might face challenges in validating snowmelt detection results with automatic weather station temperature data because the spatial resolution of satellite data is much coarser than point measurements from weather stations. This mismatch can lead to discrepancies when comparing remote sensing-based snowmelt detection results with localized temperature readings.",
+                "AnswerCn": "研究人员在使用自动气象站温度数据验证雪融检测结果时可能会面临挑战，因为卫星数据的空间分辨率远低于气象站的点测量。这种不匹配可能导致在比较基于遥感的雪融检测结果与局部温度读数时出现差异。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "In your opinion, how can data collection methods be improved to enhance the precision of ice sheet melt detection using spaceborne microwave sensors?",
+                "QuestionCn": "在我看来，可以通过改进数据收集方法来增强使用空间微波传感器检测冰盖融化的精度。",
+                "AnswerEn": "To enhance precision, data collection methods could potentially incorporate higher spatial resolution sensors and more advanced algorithms that consider both spatial and temporal variations in snow characteristics, as well as improved noise correction techniques to refine melt detection thresholds.",
+                "AnswerCn": "为了提高精度，数据收集方法可以潜在地采用更高空间分辨率的传感器和更先进的算法，这些算法考虑了雪特征的空间和时间变化，以及改进的噪声校正技术，以细化融化检测阈值。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I can't figure out why different snowmelt detection methods would complicate the regular monitoring of ice-sheet snowmelt.",
+                "QuestionCn": "我无法理解为什么不同的雪融检测方法会使冰盖雪融的常规监测变得复杂。",
+                "AnswerEn": "Different snowmelt detection methods use various thresholding schemes for distinguishing melt signals in dry and wet snow, which can introduce complexities in standardizing and automating ice-sheet snowmelt monitoring processes.",
+                "AnswerCn": "不同的融雪检测方法使用各种阈值方案来区分干雪和湿雪中的融化信号，这可能会给冰盖融雪监测过程的标准化和自动化带来复杂性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please describe the methods used to ensure consistency in brightness temperature data across different sensors in long-term ice-sheet monitoring datasets.",
+                "QuestionCn": "请描述用于确保长期冰盖监测数据集中不同传感器之间亮温数据一致性的方法。",
+                "AnswerEn": "To ensure consistency in brightness temperature data across different sensors, a cross-correction of brightness temperatures is performed before melt detection. This involves using regression coefficients to convert SMMR, SSM/I F11, and SSM/I F13 data into SSM/I F8 equivalent values for the Antarctic and Greenland ice sheets. This step is crucial for maintaining temporal consistency in the datasets used for monitoring the ice-sheet snowmelt.",
+                "AnswerCn": "为了确保不同传感器之间亮温数据的一致性，在融化检测之前会进行亮温的交叉校正。这涉及使用回归系数将SMMR、SSM/I F11和SSM/I F13的数据转换为SSM/I F8的等效值，适用于南极和格陵兰冰盖。这一步对于保持用于监测冰盖雪融的时间一致性至关重要。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Please explore the potential challenges in utilizing microwave radiometer and scatterometer data for polar ice-sheet melt detection.",
+                "QuestionCn": "探讨利用微波辐射计和散射计数据进行极地冰盖融化检测的潜在挑战。",
+                "AnswerEn": "Some potential challenges in utilizing microwave radiometer and scatterometer data include dealing with the temporal and spatial variability of snow properties, ensuring data consistency across different sensors, and removing noise-induced errors. Techniques such as wavelet transformation and variance analysis are used to manage these challenges by extracting and analyzing edge information and distinguishing melt processes. Additionally, spatial neighborhood error correction operators help address errors caused by noise.",
+                "AnswerCn": "利用微波辐射计和散射计数据的一些潜在挑战包括处理雪特性的时间和空间变异性、确保不同传感器之间的数据一致性，以及消除噪声引起的错误。波形变换和方差分析等技术被用来管理这些挑战，通过提取和分析边缘信息以及区分融化过程。此外，空间邻域误差修正算子有助于解决由噪声引起的错误。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

@@ -1,0 +1,625 @@
+{
+    "id": "64af7bad-7d04-4563-9ed3-114faeb78b82",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Dataset of ground truth land surface evapotranspiration at the satellite pixel scale in the Heihe River Basin (from the single station observation to satellite pixel scale) Version 1.0",
+            "titleCn": "黑河流域卫星像元尺度地表蒸散发相对真值数据集（单站点观测-像元尺度）Version 1.0",
+            "description": "The evapotranspiration (ET) is an important variable connecting land energy balance, water cycle and carbon cycle. Accurate monitoring and estimations of ET are essential not only for water resources management but also for simulating regional, global climate, and hydrological cycles.  Remote sensing technology is an effective method to monitor ET. At present, a variety of ET remote sensing products have been produced and released. However, in the process of validation, there is a problem of spatial scale mismatch between ET remote sensing estimation value and station observation value, especially on heterogeneous surface. Therefore, it is very important to obtain the ground truth ET values at the satellite pixel scale by upscaling method on heterogeneous surface. In this study, using the station observation data and multi-source remote sensing information, the ET observed at a single ground station is upscaled to the satellite pixel scale, and the ground truth ET values at the satellite pixel scale in Heihe River Basin is obtained.\nBased on the ET data observed by the eddy covariance (EC) at 15 stations (3 superstations and 12 ordinary stations) in the Heihe integrated observatory network, combined with the fused high-resolution remote sensing data (surface temperature, vegetation index, net radiation, etc.) and atmospheric reanalysis data, the upscaling is carried out to obtain the ground truth ET at the satellite pixel scale. The distribution diagram is shown in Figure 1. Specifically, firstly, the spatial heterogeneity of the spatial heterogeneity of the land surface hydrothermal conditions was evaluated; Secondly, nine upscaling methods (the integrated Priestley-Taylor equation method, the Penman-Monteith equation combined with EnKF method, the Penman-Monteith equation combined with SCE_UA method, EC observation value, artificial neural network, Bayesian linear regression, deep belief network, Gaussian process regression, and random fores and directly taking the EC observation value as the ground truth ET) were compared and analyzed through direct validation and cross-validation; Finally, a comprehensive method (directly using the EC observation value on the homogeneous underlying surface; using the Gaussian process regression method for upscaling on the moderately heterogeneous underlying surface and highly heterogeneous underlying surface) was optimized to obtain the groud truth ET at the satellite pixel scale at 15 typical underlying surfaces in Heihe River Basin (2010-2016, spatial resolution of 1km). The results showed that the ground truth ET at the satellite pixel scale is relatively reliable. Compared with the pixel scale reference value (LAS observation value), the MAPE of the ground turth ET at the satellite pixel scale at the three superstations are 1.57%, 3.23% and 4.59% respectively, which can meet the needs of the validation of ET remote sensing products. For all site information and data processing, please refer to Liu et al. (2018), and for upscaling methods, please refer to Li et al. (2021).",
+            "descriptionCn": "地表蒸散发（Evapotranspiration，ET）是连接着陆地能量平衡、水循环以及碳循环等的重要变量，地表蒸散发的准确获取有助于全球气候变化、作物估产、干旱监测等研究，并且对区域与全球的水资源规划管理具有重要的意义。遥感技术是监测蒸散发的有效手段，目前已经生产和发布了多种蒸散发遥感产品，然而，在真实性检验过程中，存在地表蒸散发遥感估算值与站点观测值的空间尺度不匹配问题，在异质性地表尤为严重。因此，在异质性地表，通过尺度扩展方法获取卫星像元尺度地表蒸散发相对真值十分关键。本研究利用站点观测数据，结合多源遥感信息，将地面单站点观测的蒸散发扩展至卫星像元尺度，获得了黑河流域卫星像元尺度地表蒸散发相对真值数据集。\n以黑河流域地表过程综合观测网中15个站点（3个超级站和12个普通站）的涡动相关仪观测的地表蒸散发数据为基础，结合融合的高分辨率遥感数据（地表温度、植被指数、净辐射等）、大气再分析数据开展尺度扩展，获取卫星像元尺度地表蒸散发相对真值。分布图见图1。具体来说，首先进行地表水热状况空间异质性评价；其次通过直接检验和交叉检验对九种尺度扩展方法（基于Priestley-Taylor公式的方法、Penman-Monteith公式结合EnKF的方法、Penman-Monteith结合SCE_UA的方法、人工神经网络、贝叶斯线性回归、深度信念网络、高斯过程回归、随机森林以及直接把涡动相关仪观测值作为像元尺度相对真值）进行比较和分析，最终优选一种综合的方法（在均匀下垫面，直接采用涡动相关仪观测值；在中度和高度非均匀下垫面，采用高斯过程回归方法进行尺度扩展），获取了黑河流域15个主要下垫面的逐日卫星像元尺度地表蒸散发相对真值（2010-2016，空间分辨率为1km）。结果表明，卫星像元尺度地表蒸散发相对真值较为可靠。与像元尺度参考值（LAS观测值）相比，三个超级站的MAPE分别为1.57%、3.23%和4.59%，能够满足地表蒸散发遥感产品真实性检验的需求。所有站点信息和数据处理请参考Liu et al. (2018)，尺度扩展方法请参考Li et al. (2021)。",
+            "instructions": "Named by site name, grid TIF format\nCan be opened with ArcGIS software",
+            "instructionsCn": "按照站点名称命名，栅格tif格式\n可以用arcgis软件打开",
+            "east": 102.0,
+            "west": 97.0,
+            "south": 37.8,
+            "north": 42.7,
+            "startTime": "2010-01-01 00:00:00",
+            "endTime": "2016-12-31 00:00:00",
+            "fileSize": 7779265.0,
+            "cstr": "18406.11.Atmos.tpdc.272509",
+            "doi": "10.11888/Atmos.tpdc.272509",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "刘绍民",
+                "nameEn": "LIU Shaomin",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "李相",
+                "nameEn": "LI Xiang ",
+                "unitEn": "Beijing normal university",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "徐自为",
+                "nameEn": "XU Ziwei",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Upscaling evapotranspiration from a single-site to satellite pixel scale",
+                "referenceCn": null,
+                "referenceEn": "Li, X., Liu, S.M., Yang, X.F., Ma, Y.F., He X.L., Xu, Z.W., Xu, T.R., Song, L.S., Zhang, Y., Hu, X., Ju, Q., &Zhang X.D. (2021). Upscaling evapotranspiration from a single-site to satellite pixel scale. Remote Sensing, 13(20), 4072. doi.org/10.3390/rs13204072."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China",
+                "referenceCn": null,
+                "referenceEn": "Liu, S., Li, X., Xu, Z., Che, T., Xiao, Q., Ma, M., Liu, Q., Jin, R., Guo, J., Wang, L., Wang, W., Qi, Y., Li, H., Xu, T., Ran, Y., Hu, X., Shi, S., Zhu, Z., Tan, J., Zhang, Y., Ren, Z. (2018). The Heihe Integrated Observatory Network: A basin‐scale land surface processes observatory in China. Vadose Zone Journal, 17,180072. https://doi.org/10.2136/vzj2018.04.0072."
+            },
+            {
+                "titleCn": "地表蒸散发遥感产品真实性检验",
+                "titleEn": null,
+                "referenceCn": "刘绍民, 贾贞贞, 徐同仁, 马燕飞, 周会珍, 李新, 徐自为, 张圆, 宋立生, 姚云军, 刘照言. (2021). 国家标准《地表蒸散发遥感产品真实性检验》. GB/T 40033-2021.",
+                "referenceEn": null
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Exploring evapotranspiration changes in a typical endorheic basin through the integrated observatory network",
+                "referenceCn": null,
+                "referenceEn": "Xu, Z.W., Liu, S.M., Zhu, Z.L., Zhou, J., Shi, W.J., Xu, T.R., Yang, X.F., Zhang, Y., & He, X.L. (2020). Exploring evapotranspiration changes in a typical endorheic basin through the integrated observatory network. Agricultural and Forest Meteorology, 290, 108010."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Intercomparison of six upscaling evapotranspiration methods: From site to the satellite pixel",
+                "referenceCn": null,
+                "referenceEn": "Li, X., Liu, S.M., Li, H.X., Ma, Y.F., Wang, J.H., Zhang, Y., Xu, Z.W., Xu, T.R., Song, L.S., Yang, X.F., Lu, Z., Wang, Z.Y., Guo, Z.X. (2018). Intercomparison of six upscaling evapotranspiration methods: From site to the satellite pixel. Journal of Geophysical Research: Atmospheres, 123(13), 6777-6803. https://doi.org/10.1029/2018JD028422."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Estimation of daily evapotranspiration and irrigation water efficiency at a Landsat-like scale for an arid irrigation area using multi-source remote sensing data",
+                "referenceCn": null,
+                "referenceEn": "Ma, Y.F., Liu, S.M., Song, L.S., Xu, Z.W., Liu, Y.L., Xu, T.R., Zhu, Z.L. (2018). Estimation of daily evapotranspiration and irrigation water efficiency at a Landsat-like scale for an arid irrigation area using multi-source remote sensing data. Remote Sensing of Environment, 216, 715-734. doi:10.1016/j.rse.2018.07.019."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system",
+                "referenceCn": null,
+                "referenceEn": "Li, X., Liu, S.M., Xiao, Q., Ma, M.G., Jin, R., Che, T., Wang, W.Z., Hu, X.L., Xu, Z.W., Wen, J.G., Wang, L.X. (2017). A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system. Scientific Data, 4, 170083. doi:10.1038/sdata.2017.83."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Estimation of turbulent heat fluxes by assimilation of land surface temperature observations from GOES satellites into an ensemble Kalman smoother framework",
+                "referenceCn": null,
+                "referenceEn": "Xu TR, Bateni S.M., Neale C.M.U., Auligne T., Liu SM. Estimation of turbulent heat fluxes by assimilation of land surface temperature observations from GOES satellites into an ensemble Kalman smoother framework. Journal of Geophysical Research: Atmospheres, 2018, 123(5): 2409-2423. doi: 10.1002/2017JD027732."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Area-averaged evapotranspiration over a heterogeneous land surface: Aggregation of multi-point EC flux measurements with high-resolution land-cover map and footprint analysis",
+                "referenceCn": null,
+                "referenceEn": "Xu, FN, Wang, WZ, Wang, JM, Xu, ZW, Qi, Y, Wu, YR. Area-averaged evapotranspiration over a heterogeneous land surface: Aggregation of multi-point EC flux measurements with high-resolution land-cover map and footprint analysis. Hydrology and Earth System Sciences, 2017, 21(8), 4037–4051. doi:10.5194/hess-21-4037-2017."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Assessment of the energy balance closure under advective conditions and its impact using remote sensing data",
+                "referenceCn": null,
+                "referenceEn": "Xu, Z.W., Ma, Y.F., Liu, S.M., Shi, S.J., & Wang, J.M. (2017). Assessment of the energy balance closure under advective conditions and its impact using remote sensing data. Journal of Applied Meteorology and Climatology, 56, 127-140."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Upscaling evapotranspiration measurements from multi-site to the satellite pixel scale over heterogeneous land surfaces",
+                "referenceCn": null,
+                "referenceEn": "Liu, S.M., Xu, Z.W., Song, L.S., Zhao, Q.Y., Ge, Y., Xu, T.R., Ma, Y.F., Zhu, Z.L., Jia, Z.Z., & Zhang, F. (2016). Upscaling evapotranspiration measurements from multi-site to the satellite pixel scale over heterogeneous land surfaces. Agricultural and Forest Meteorology, 230-231, 97-113."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Applications of a thermal-based two-source energy balance model using Priestley-Taylor approach for surface temperature partitioning under advective conditions",
+                "referenceCn": null,
+                "referenceEn": "Song, L.S., Kustas WP, Liu, S.M., Colaizzi PD, Nieto H, Xu, Z.W., Ma, Y.F., Li, M.S., Xu, T.R., Agam, N., Tolk, J., & Evett, S. (2016). Applications of a thermal-based two-source energy balance model using Priestley-Taylor approach for surface temperature partitioning under advective conditions. Journal of Hydrology,  doi:10.1016/j.jhydrol.2016.06.034."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Application of remote sensing-based two-source energy balance model for mapping field surface fluxes with composite and component surface temperatures",
+                "referenceCn": null,
+                "referenceEn": "Song, L.S., Liu, S.M., Kustas, W.P., Zhou, J., Xu, Z.W., Xia, T., & Li, M.S. (2016). Application of remote sensing-based two-source energy balance model for mapping field surface fluxes with composite and component surface temperatures. Agricultural and Forest Meteorology, 230-231, 8-19."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Partitioning Evapotranspiration into Soil Evaporation and Canopy Transpiration via a Two-Source Variational Data Assimilation System",
+                "referenceCn": null,
+                "referenceEn": "Xu TR, Bateni SM, Margulis SA, Song LS, Liu SM, Xu ZW. Partitioning Evapotranspiration into Soil Evaporation and Canopy Transpiration via a Two-Source Variational Data Assimilation System. Journal of Hydrometeorology, 2016, 17(9), 2353-2370. doi: 10.1175/JHM-D-15-0178.1.10."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Assessment of uncertainties in eddy covariance flux measurement based on intensive flux matrix of HiWATER-MUSOEXE",
+                "referenceCn": null,
+                "referenceEn": "Wang, J.M., Zhuang, J.X., Wang, W.Z., Liu, S.M., & Xu, Z.W. (2015). Assessment of uncertainties in eddy covariance flux measurement based on intensive flux matrix of HiWATER-MUSOEXE. IEEE Geoscience and Remote Sensing Letters, 12(2), 259-263."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Associated growth of C3 and C4 desert plants helps the C3 species at the cost of the C4 species",
+                "referenceCn": null,
+                "referenceEn": "Su, P.X., Yan, Q.D., Xie, T.T., Zhou,Z.J., & Gao, S. (2012). Associated growth of C3 and C4 desert plants helps the C3 species at the cost of the C4 species. Acta Physiologiae Plantarum, 34(6), 2057-2068."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Upscaling sensible heat fluxes with area-to-area regression kriging",
+                "referenceCn": null,
+                "referenceEn": "Ge, Y., Liang, Y.Z., Wang, J.H., Zhao, Q.Y., &Liu, S.M. (2015). Upscaling sensible heat fluxes with area-to-area regression kriging. IEEE Geoscience and Remote Sensing Letters, 12(3), 656-660."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Characterizing the Footprint of Eddy Covariance System and Large Aperture Scintillometer Measurements to Validate Satellite-Based Surface Fluxes",
+                "referenceCn": null,
+                "referenceEn": "Bai, J., Jia, L., Liu, S., Xu, Z., Hu, G., Zhu, M., &Song, L. (2015). Characterizing the Footprint of Eddy Covariance System and Large Aperture Scintillometer Measurements to Validate Satellite-Based Surface Fluxes. IEEE Geoscience and Remote Sensing Letters, 12(5), 943-947."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Scaling Flux Tower Observations of Sensible Heat Flux Using Weighted Area-to-Area Regression Kriging",
+                "referenceCn": null,
+                "referenceEn": "Hu, M.G., Wang, J.H., Ge, Y., Liu, M.X., Liu, S.M., Xu, Z.W., &Xu, T.R. (2015). Scaling Flux Tower Observations of Sensible Heat Flux Using Weighted Area-to-Area Regression Kriging. Atmosphere, 6(8), 1032-1044."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design",
+                "referenceCn": null,
+                "referenceEn": "Li X, Cheng GD, Liu SM, Xiao Q, Ma MG, Jin R, Che T, Liu QH, Wang WZ, Qi Y, Wen JG, Li HY, Zhu GF, Guo JW, Ran YH, Wang SG, Zhu ZL, Zhou J, Hu XL, Xu ZW. Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design. Bulletin of the American Meteorological Society, 2013, 94(8): 1145-1160, 10.1175/BAMS-D-12-00154.1."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Intercomparison of surface energy flux measurement systems used during the HiWATER-MUSOEXE",
+                "referenceCn": null,
+                "referenceEn": "Xu, Z.W., Liu, S.M., Li, X., Shi, S.J., Wang, J.M., Zhu, Z.L., Xu, T.R., Wang, W.Z., & Ma, M.G. (2013). Intercomparison of surface energy flux measurement systems used during the HiWATER-MUSOEXE. Journal of Geophysical Research, 118, 13140-13157, doi:10.1002/2013JD020260."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A comparison of eddy-covariance and large aperture scintillometer measurements with respect to the energy balance closure problem",
+                "referenceCn": null,
+                "referenceEn": "Liu, S.M., Xu, Z.W., Wang, W.Z., Bai, J., Jia, Z., Zhu, M., & Wang, J.M. (2011). A comparison of eddy-covariance and large aperture scintillometer measurements with respect to the energy balance closure problem. Hydrology and Earth System Sciences, 15(4), 1291-1306."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "大气",
+                "nameEn": "Atmosphere"
+            },
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "大气水汽",
+                "nameEn": "Atmospheric Water Vapor"
+            },
+            {
+                "nameCn": "水文",
+                "nameEn": "Hydrology"
+            },
+            {
+                "nameCn": "蒸发",
+                "nameEn": "Lysimeter"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "黑河流域",
+                "keywordEn": "Heihe River Basin"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2010-2016",
+                "keywordEn": "2010-2016",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "陆表遥感产品真实性检验中的关键理论与方法研究",
+                "titleEn": "Key Program of the National Natural Science Foundation of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Upscaling of eco-hydrological processes on a heterogeneous surface is a grand challenge. Progress in this field is hindered by the poor availability of multiscale observations. HiWATER is an experiment designed to address this challenge through instrumentation on hierarchically nested scales to obtain multiscale and multidisciplinary data."
+            ],
+            "research objective": [],
+            "challenges": [
+                "Progress in this field is hindered by the poor availability of multiscale observations."
+            ],
+            "methods": [
+                "Several intensive observation periods (IOPs) and continuous hydrometeorological observations were carried out during HiWATER. Only data collected during the IOP in 2012 are presented in this paper. Instruments for the oasis-desert system were arranged in hierarchically nested scales to capture multi-scale eco-hydrological processes. We established a sparse network to investigate the oasis-desert interaction. One superstation was constructed within the oasis, and four EC towers and four two-layer automatic meteorological stations (AMSs) were installed in different landscapes surrounding the oasis, including sandy desert, desert pavement, desert steppe, and wetland. Intensive observations were implemented at the irrigation district scale. A total of 12 airborne remote sensing missions were conducted to cover the FEA using LiDAR, an imaging spectrometer, a multi-angle thermal imager, and an L-band microwave radiometer."
+            ],
+            "dataset": [
+                "We introduce a multiscale dataset obtained from Heihe Watershed Allied Telemetry Experimental Research (HiWATER) in an oasis-desert area in 2012. The HiWATER observation system consists of a flux observation matrix of eddy covariance towers, large aperture scintillometers, and automatic meteorological stations; an eco-hydrological sensor network of soil moisture and leaf area index; hyper-resolution airborne remote sensing using LiDAR, imaging spectrometer, multi-angle thermal imager, and L-band microwave radiometer; and synchronical ground measurements of vegetation dynamics and photosynthesis processes. All observational data were carefully quality controlled throughout sensor calibration, data collection, data processing, and datasets generation. The data are freely available at figshare and the Cold and Arid Regions Science Data Centre."
+            ],
+            "findings": [],
+            "backgroundCn": [
+                "生态水文过程在异质表面的上尺度化是一个重大挑战。该领域的进展受到多尺度观测数据稀缺的制约。HiWATER实验旨在通过在层次嵌套的尺度上进行仪器布置，以获取多尺度和多学科的数据，从而应对这一挑战。"
+            ],
+            "research objectiveCn": [],
+            "challengesCn": [
+                "该领域的进展受到多尺度观测稀缺的阻碍。"
+            ],
+            "methodsCn": [
+                "在HiWATER期间进行了几次强烈观测期（IOPs）和连续的水文气象观测。本文仅展示了2012年IOP期间收集的数据。为捕捉多尺度生态水文过程，绿洲-沙漠系统的仪器按照层次嵌套的尺度进行布置。我们建立了一个稀疏网络，以研究绿洲-沙漠的相互作用。在绿洲内建造了一个超级站，并在绿洲周围不同的景观中安装了四个EC塔和四个两层自动气象站（AMS），这些景观包括沙质沙漠、沙漠铺装、沙漠草原和湿地。在灌溉区尺度上实施了强烈观测。共进行了12次空中遥感任务，使用了LiDAR、成像光谱仪、多角度热成像仪和L波段微波辐射计覆盖FEA。"
+            ],
+            "datasetCn": [
+                "我们介绍了一个多尺度数据集，该数据集来自2012年在绿洲-沙漠地区进行的黑河流域联合遥测实验研究（HiWATER）。HiWATER观测系统由涡度协方差塔、大孔径闪烁仪和自动气象站组成的通量观测矩阵；土壤湿度和叶面积指数的生态水文传感器网络；使用激光雷达、成像光谱仪、多角度热成像仪和L波段微波辐射计的超高分辨率航空遥感；以及同步的植被动态和光合作用过程的地面测量。所有观测数据在传感器校准、数据收集、数据处理和数据集生成过程中都经过了严格的质量控制。这些数据可在figshare和寒区与干旱区科学数据中心免费获取。"
+            ],
+            "findingsCn": []
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Do current methodologies for scaling up site-specific observations to satellite pixel scale include both direct and cross-validation techniques?",
+                "QuestionCn": "当前用于将特定地点观测数据扩展到卫星像素尺度的方法是否包括直接和交叉验证技术？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Is the availability of multiscale observations critical for addressing challenges in upscaling eco-hydrological processes on heterogeneous surfaces?",
+                "QuestionCn": "多尺度观测的可用性对于解决异质表面上生态水文过程的上行尺度挑战是否至关重要？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Is the challenge of obtaining accurate evapotranspiration measurements in heterogeneous surfaces mainly due to the lack of multiscale observations, issues with data processing, or limitations in remote sensing technology?",
+                "QuestionCn": "在异质表面上获得准确的蒸散发测量的挑战主要是由于缺乏多尺度观测、数据处理问题还是遥感技术的局限性？",
+                "AnswerEn": "lack of multiscale observations",
+                "AnswerCn": "缺乏多尺度观测",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What methods are used to upscale surface evapotranspiration observations to satellite pixel scale?",
+                "QuestionCn": "用于将表面蒸散发观测值上升到卫星像素尺度的方法有哪些？",
+                "AnswerEn": "Priestley-Taylor formula-based methods, Penman-Monteith formula combined with EnKF or SCE_UA methods, artificial neural networks, Bayesian linear regression, deep belief networks, Gaussian process regression, random forests, eddy covariance observations",
+                "AnswerCn": "Priestley-Taylor公式方法，Penman-Monteith公式结合EnKF或SCE_UA方法，人工神经网络，贝叶斯线性回归，深度信念网络，高斯过程回归，随机森林，涡度相关观测。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "Where are the observational stations located for collecting data on surface evapotranspiration in the Heihe River Basin?",
+                "QuestionCn": "在黑河流域，收集地表蒸散发数据的观测站位置在哪里？",
+                "AnswerEn": "Heihe River Basin",
+                "AnswerCn": "黑河流域",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with verifying the accuracy of remote sensing evapotranspiration products?",
+                "QuestionCn": "验证遥感蒸散发产品准确性所面临的挑战有哪些？",
+                "AnswerEn": "Spatial scale mismatch",
+                "AnswerCn": "空间尺度不匹配",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method used to upscale eco-hydrological processes on a heterogeneous surface?",
+                "QuestionCn": "您能否提供一个用于在异质表面上提升生态水文过程的数据收集方法的示例？",
+                "AnswerEn": "One example of a data collection method used to upscale eco-hydrological processes on a heterogeneous surface is the use of hierarchically nested instrumentation scales during the HiWATER experiment. This method involves setting up a sparse network of instruments, including a superstation within an oasis and several eddy covariance towers and automatic meteorological stations across different landscapes, to capture multiscale eco-hydrological processes.",
+                "AnswerCn": "一种用于在异质表面上提升生态水文过程的数据收集方法是使用分层嵌套的仪器尺度，这在HiWATER实验中得到了应用。该方法涉及在一个绿洲内设置一个稀疏的仪器网络，包括一个超级站，以及在不同景观中设置多个涡度协方差塔和自动气象站，以捕捉多尺度的生态水文过程。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge associated with obtaining multiscale observations for evapotranspiration studies?",
+                "QuestionCn": "获取蒸散发研究的多尺度观测所面临的一个挑战是什么？",
+                "AnswerEn": "A challenge associated with obtaining multiscale observations for evapotranspiration studies is the poor availability of multiscale observations, which hinders progress in accurately upscaling eco-hydrological processes.",
+                "AnswerCn": "获取蒸散发研究的多尺度观测数据面临的一个挑战是多尺度观测的可用性较差，这阻碍了准确上尺度生态水文过程的进展。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you provide an example of a dataset that integrates both ground observations and remote sensing data for evapotranspiration analysis?",
+                "QuestionCn": "您能否提供一个将地面观测数据和遥感数据结合用于蒸散发分析的数据集示例？",
+                "AnswerEn": "An example of a dataset that integrates both ground observations and remote sensing data for evapotranspiration analysis is the multiscale dataset from the HiWATER experiment. This dataset includes data from a flux observation matrix, eco-hydrological sensor network, and hyper-resolution airborne remote sensing, which together provide comprehensive data on soil moisture, vegetation dynamics, and other factors affecting evapotranspiration.",
+                "AnswerCn": "一个整合了地面观测和遥感数据用于蒸散发分析的数据集的例子是HiWATER实验的多尺度数据集。该数据集包括来自通量观测矩阵、生态水文传感器网络和超高分辨率空中遥感的数据，这些数据共同提供了关于土壤湿度、植被动态和影响蒸散发的其他因素的综合信息。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of multiscale data collection methods used in capturing eco-hydrological processes on heterogeneous surfaces?",
+                "QuestionCn": "多尺度数据收集方法在捕捉异质表面的生态水文过程中的特点是什么？",
+                "AnswerEn": "instrumentation on hierarchically nested scales, hyper-resolution airborne remote sensing technologies, capture eco-hydrological processes at different scales, heterogeneous environments",
+                "AnswerCn": "分层嵌套尺度的仪器、超高分辨率机载遥感技术、在不同尺度上捕捉生态水文过程、异质环境。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with obtaining accurate satellite pixel-scale relative true value datasets for surface evapotranspiration?",
+                "QuestionCn": "获取表面蒸散发的准确卫星像素尺度相对真实值数据集面临哪些挑战？",
+                "AnswerEn": "spatial scale mismatch, scalability of observations, moderate to high surface heterogeneity",
+                "AnswerCn": "空间尺度不匹配，观测的可扩展性，中等到高的表面异质性",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the essential features of the data quality control process for multiscale eco-hydrological datasets?",
+                "QuestionCn": "多尺度生态水文数据集的数据质量控制过程的基本特征是什么？",
+                "AnswerEn": "sensor calibration, data collection, data processing, dataset generation, accuracy, reliability",
+                "AnswerCn": "传感器校准、数据收集、数据处理、数据集生成、准确性、可靠性",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many eddy covariance towers are utilized in the Heihe Watershed Allied Telemetry Experimental Research (HiWATER) observation system?",
+                "QuestionCn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER) 观测系统中使用了多少个涡度协方差塔？",
+                "AnswerEn": "4",
+                "AnswerCn": "4",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the spatial resolution of the satellite pixel-scale surface evapotranspiration relative true value dataset for the Heihe River Basin?",
+                "QuestionCn": "河西河流域卫星像素尺度表面蒸散发相对真实值数据集的空间分辨率是多少？",
+                "AnswerEn": "1 km",
+                "AnswerCn": "1公里",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many stations provided surface evapotranspiration data as a basis for obtaining the satellite pixel-scale relative true value in the Heihe River Basin?",
+                "QuestionCn": "在黑河流域，有多少个站点提供了地表蒸散发数据，以作为获取卫星像素尺度相对真实值的基础？",
+                "AnswerEn": "15",
+                "AnswerCn": "15",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does 'scale extension' mean in the context of evapotranspiration data collection?",
+                "QuestionCn": "在蒸散发数据收集的背景下，“尺度扩展”是什么意思？",
+                "AnswerEn": "'Scale extension' refers to the process of expanding ground-based single-point observations of evapotranspiration to satellite pixel scale by using site observation data combined with multi-source remote sensing information. This involves evaluating spatial heterogeneity in surface water and heat conditions and comparing various methods to determine the best approach for obtaining satellite pixel-scale surface evapotranspiration relative truth values.",
+                "AnswerCn": "“尺度扩展”是指通过结合现场观测数据和多源遥感信息，将基于地面的单点蒸散发观测扩展到卫星像素尺度的过程。这涉及评估地表水分和热量条件的空间异质性，并比较各种方法，以确定获取卫星像素尺度表面蒸散发相对真实值的最佳方法。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do the multiscale observations obtained from the HiWATER experiment compare to the data collection methods used for upscaling eco-hydrological processes in the Heihe River Basin?",
+                "QuestionCn": "HiWATER实验获得的多尺度观测数据与用于对黑河流域生态水文过程进行上尺度处理的数据收集方法相比如何？",
+                "AnswerEn": "The HiWATER experiment employs a hierarchical observation system incorporating flux observation matrices, eco-hydrological sensor networks, and hyper-resolution airborne remote sensing, focused on capturing multiscale eco-hydrological processes. In contrast, the Heihe River Basin dataset uses site-specific eddy covariance observations and high-resolution remote sensing data to upscale evapotranspiration across satellite pixel scales. Both approaches integrate remote sensing and ground-based observations but differ in the scale and integration of diverse data sources.",
+                "AnswerCn": "HiWATER实验采用了一个分层观察系统，结合了通量观测矩阵、生态水文传感器网络和超高分辨率的航空遥感，专注于捕捉多尺度的生态水文过程。相比之下，黑河流域数据集使用特定地点的涡度协方差观测和高分辨率遥感数据，以在卫星像素尺度上进行蒸散发的上行尺度处理。这两种方法都整合了遥感和地面观测，但在多样数据源的尺度和整合上存在差异。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are the differences in challenges faced during data collection for evapotranspiration measurement in heterogeneous surfaces compared to oasis-desert interactions?",
+                "QuestionCn": "在异质表面进行蒸散发测量的数据收集面临的挑战与绿洲-沙漠相互作用中的挑战有什么不同？",
+                "AnswerEn": "For evapotranspiration measurement in heterogeneous surfaces, a key challenge is the spatial scale mismatch between remote sensing estimates and ground observations, requiring advanced upscaling methods. In contrast, oasis-desert interactions face challenges due to the poor availability of multiscale observations, necessitating the arrangement of instruments in hierarchically nested scales to effectively capture eco-hydrological processes.",
+                "AnswerCn": "在异质表面的蒸散发测量中，一个关键挑战是遥感估计与地面观测之间的空间尺度不匹配，这需要先进的上尺度方法。相比之下，绿洲-沙漠相互作用面临的挑战是多尺度观测的可用性较差，因此需要在层次嵌套的尺度上布置仪器，以有效捕捉生态水文过程。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How does the use of multiple remote sensing technologies in the HiWATER dataset compare to the methods used in obtaining satellite pixel scale evapotranspiration relative truth values in the Heihe River Basin?",
+                "QuestionCn": "HiWATER数据集中多种遥感技术的使用与在黑河流域获取卫星像素尺度蒸散发相对真实值的方法相比如何？",
+                "AnswerEn": "The HiWATER dataset employs LiDAR, imaging spectrometer, multi-angle thermal imager, and L-band microwave radiometer to capture diverse eco-hydrological dynamics at multiple scales. In the Heihe River Basin, high-resolution remote sensing data like surface temperature and vegetation indices are integrated with atmospheric reanalysis data and site-specific observations to upscale evapotranspiration. Both utilize advanced remote sensing technologies but differ in the specific combination and scale of data integration.",
+                "AnswerCn": "HiWATER 数据集利用激光雷达、成像光谱仪、多角度热成像仪和 L 波段微波辐射计捕捉多尺度的生态水文动态。在黑河流域，高分辨率遥感数据如地表温度和植被指数与大气再分析数据和特定地点观测数据相结合，以提升蒸散发的估算。两者都利用了先进的遥感技术，但在数据集成的具体组合和尺度上有所不同。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the need for scale expansion methods when collecting evapotranspiration data from remote sensing?",
+                "QuestionCn": "在从遥感收集蒸散发数据时，导致需要规模扩展方法的因素有哪些？",
+                "AnswerEn": "The mismatch between the spatial scales of remote sensing estimates and ground-based observations, especially over heterogeneous surfaces, necessitates scale expansion methods to accurately obtain satellite pixel-scale evapotranspiration values.",
+                "AnswerCn": "遥感估计与地面观测之间的空间尺度不匹配，尤其是在异质表面上， necessitates 规模扩展方法以准确获取卫星像素尺度的蒸散发值。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is it challenging to directly use eddy covariance measurements as pixel-scale relative truth values for remote sensing validation?",
+                "QuestionCn": "直接使用涡度协方差测量作为遥感验证的像素尺度相对真实值是具有挑战性的，原因如下：",
+                "AnswerEn": "Eddy covariance measurements capture point-specific data, which may not represent the broader spatial variability seen in satellite data, particularly in areas with heterogeneous land surfaces, leading to challenges in using them directly as pixel-scale truth values.",
+                "AnswerCn": "涡度协方差测量捕捉的是点特定数据，这可能无法代表卫星数据中所见的更广泛空间变异性，特别是在具有异质土地表面的区域，这导致直接将其用作像素级真实值时面临挑战。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What causes the reliability of satellite pixel-scale evapotranspiration values to be questioned, and how are these challenges addressed?",
+                "QuestionCn": "导致卫星像素尺度蒸散发值可靠性受到质疑的原因是什么，这些挑战是如何解决的？",
+                "AnswerEn": "The spatial heterogeneity of land surfaces can lead to discrepancies between remote sensing estimates and observed values. This is addressed by employing methods such as Gaussian process regression for scale expansion, ensuring more reliable satellite pixel-scale evapotranspiration values.",
+                "AnswerCn": "土地表面的空间异质性可能导致遥感估计值与观测值之间的差异。为了解决这个问题，可以采用高斯过程回归等方法进行尺度扩展，从而确保卫星像素尺度的蒸散发值更加可靠。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential impacts on the accuracy of evapotranspiration data when using a combination of site observations and high-resolution remote sensing data?",
+                "QuestionCn": "使用现场观测和高分辨率遥感数据的组合时，对蒸散发数据准确性的潜在影响是什么？",
+                "AnswerEn": "Using a combination of site observations and high-resolution remote sensing data can significantly enhance the accuracy of evapotranspiration data by addressing the spatial scale mismatch between remote sensing estimates and site observations. This approach allows for the extension of point-scale observations to satellite pixel scale, providing a more reliable representation of surface evapotranspiration across heterogeneous landscapes.",
+                "AnswerCn": "使用现场观察和高分辨率遥感数据的结合可以显著提高蒸散发数据的准确性，解决遥感估算与现场观察之间的空间尺度不匹配问题。这种方法允许将点尺度观察扩展到卫星像素尺度，从而在异质景观中提供更可靠的表面蒸散发表示。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What are the goals of upscaling single-point observation data to satellite pixel scale for evapotranspiration measurements in heterogeneous landscapes?",
+                "QuestionCn": "将单点观测数据上升到卫星像素尺度的目标是什么，以便在异质景观中测量蒸散发？",
+                "AnswerEn": "The goal is to accurately obtain surface evapotranspiration at the satellite pixel scale, which is critical for studies on global climate change, crop yield estimation, drought monitoring, and regional and global water resource management. This upscaling helps address the mismatch in spatial scales between remote sensing estimates and ground observations, especially in heterogeneous landscapes.",
+                "AnswerCn": "目标是准确获取卫星像素尺度上的表面蒸散发，这对于全球气候变化研究、作物产量估算、干旱监测以及区域和全球水资源管理至关重要。这种上采样有助于解决遥感估计与地面观测之间在空间尺度上的不匹配，特别是在异质景观中。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Why is it important to evaluate the spatial heterogeneity of land surface water and heat conditions when developing evapotranspiration datasets?",
+                "QuestionCn": "在开发蒸散发数据集时，评估土地表面水分和热量条件的空间异质性是重要的原因是什么？",
+                "AnswerEn": "Evaluating spatial heterogeneity is crucial to ensure the reliability of the upscaled evapotranspiration data, as it affects the accuracy of the remote sensing products in heterogeneous land surfaces. Understanding this heterogeneity allows for the selection and optimization of scaling methods, which enhances the quality and applicability of the evapotranspiration datasets for various environmental and climatic studies.",
+                "AnswerCn": "评估空间异质性对于确保上尺度蒸散发数据的可靠性至关重要，因为它影响了遥感产品在异质土地表面的准确性。理解这种异质性有助于选择和优化尺度方法，从而提高蒸散发数据集在各种环境和气候研究中的质量和适用性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in upscaling evapotranspiration data from single ground observation sites to satellite pixel scales in a heterogeneous landscape?",
+                "QuestionCn": "将单个地面观测站的蒸散发数据上升到异质景观的卫星像素尺度涉及哪些程序步骤？",
+                "AnswerEn": "To upscale evapotranspiration data from single ground observation sites to satellite pixel scales in a heterogeneous landscape, the process involves using site observation data combined with multi-source remote sensing information. The steps include evaluating spatial heterogeneity of surface water and energy conditions, testing and comparing nine different upscaling methods like Gaussian process regression, and selecting an optimal method based on landscape uniformity. For uniform surfaces, direct eddy covariance observations are used, while for moderately to highly heterogeneous surfaces, Gaussian process regression is applied.",
+                "AnswerCn": "将单个地面观测站的蒸散发数据上升到卫星像素尺度的过程涉及使用现场观测数据结合多源遥感信息。步骤包括评估地表水和能量条件的空间异质性，测试和比较九种不同的上升方法，如高斯过程回归，并根据景观均匀性选择最佳方法。对于均匀表面，使用直接的涡度协方差观测，而对于中等到高度异质的表面，则应用高斯过程回归。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How are multiple sources of data integrated to achieve high-resolution evapotranspiration estimates in the Heihe River Basin?",
+                "QuestionCn": "如何整合多个数据源以实现河西河流域的高分辨率蒸散发估算？",
+                "AnswerEn": "In the Heihe River Basin, multiple data sources are integrated by combining eddy covariance data from 15 observation sites with high-resolution remote sensing data, including surface temperature, vegetation index, and net radiation. This integration, supported by atmospheric reanalysis data, is part of a scale expansion method to obtain satellite pixel-scale evapotranspiration estimates. Various upscaling techniques are evaluated to ensure the accuracy of the estimates, and the data is subjected to rigorous quality control measures.",
+                "AnswerCn": "在黑河流域，通过将来自15个观测站的涡度协方差数据与高分辨率遥感数据（包括地表温度、植被指数和净辐射）相结合，整合了多个数据源。这种整合得到了大气重分析数据的支持，作为一种尺度扩展方法，以获得卫星像素尺度的蒸散发估算。评估了各种上采样技术，以确保估算的准确性，并对数据进行了严格的质量控制措施。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the key procedural challenges in ensuring the accuracy of remote sensing evapotranspiration products when compared to ground-truth measurements?",
+                "QuestionCn": "确保遥感蒸散发产品与地面实测数据相比准确性的关键程序挑战是什么？",
+                "AnswerEn": "The key procedural challenges include addressing the spatial scale mismatch between remote sensing estimates and ground-truth measurements, particularly in heterogeneous landscapes. This involves assessing surface water and energy condition heterogeneity, choosing appropriate upscaling methods, and conducting direct and cross-validation tests of these methods. Ensuring accuracy also requires careful selection of data integration techniques and validation against reference measurements, such as those obtained from large aperture scintillometers at superstations.",
+                "AnswerCn": "关键的程序挑战包括解决遥感估计与地面真实测量之间的空间尺度不匹配，特别是在异质性景观中。这涉及评估表面水和能量条件的异质性，选择适当的上尺度方法，并对这些方法进行直接和交叉验证测试。确保准确性还需要仔细选择数据集成技术，并与参考测量进行验证，例如从超级站的大孔径闪烁仪获得的测量。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What conditions and technological approaches enable the extension of ground-based evapotranspiration observations to satellite pixel scales in heterogeneous landscapes?",
+                "QuestionCn": "哪些条件和技术方法使得在异质景观中将地面蒸散发观测扩展到卫星像素尺度成为可能？",
+                "AnswerEn": "The extension of ground-based evapotranspiration observations to satellite pixel scales in heterogeneous landscapes is enabled by using eddy covariance data from multiple observation sites combined with high-resolution remote sensing data (e.g., surface temperature, vegetation index, net radiation), atmospheric reanalysis data, and applying scaling methods such as Gaussian process regression and other nine methods.",
+                "AnswerCn": "将地面蒸散发观测扩展到异质景观的卫星像素尺度是通过结合多个观测站的涡度协方差数据与高分辨率遥感数据（如地表温度、植被指数、净辐射）、大气再分析数据，并应用高斯过程回归及其他九种方法来实现的。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How do nested observation scales and instrumentation contribute to overcoming the challenge of multiscale data availability in eco-hydrological studies?",
+                "QuestionCn": "嵌套观察尺度和仪器如何有助于克服生态水文研究中多尺度数据可用性的挑战？",
+                "AnswerEn": "Nested observation scales and instrumentation contribute by deploying a hierarchical network of flux observation systems, including eddy covariance towers, large aperture scintillometers, and automatic meteorological stations, as well as conducting airborne remote sensing missions with LiDAR, imaging spectrometer, multi-angle thermal imager, and L-band microwave radiometer to capture multiscale eco-hydrological processes and improve data availability.",
+                "AnswerCn": "嵌套观测尺度和仪器通过部署层次化的通量观测系统网络，包括涡度协方差塔、大孔径闪烁仪和自动气象站，以及进行搭载激光雷达、成像光谱仪、多角度热成像仪和L波段微波辐射计的航空遥感任务，以捕捉多尺度生态水文过程并提高数据可用性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the methodological advancements that enable reliable satellite pixel-scale evapotranspiration estimates for heterogeneous surfaces?",
+                "QuestionCn": "哪些方法论进展使得能够对异质表面进行可靠的卫星像素尺度蒸散发估计？",
+                "AnswerEn": "Methodological advancements include the assessment of space heterogeneity of surface water and heat conditions, direct and cross-validation of scaling methods like Gaussian process regression, and the strategic selection of appropriate scaling methods based on surface uniformity, leading to reliable satellite pixel-scale evapotranspiration estimates.",
+                "AnswerCn": "方法学的进展包括对地表水和热条件的空间异质性评估、对高斯过程回归等缩放方法的直接和交叉验证，以及基于地表均匀性的战略选择适当的缩放方法，从而得出可靠的卫星像素尺度蒸散发估计。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might there be challenges in obtaining accurate multiscale observations for eco-hydrological processes on heterogeneous surfaces?",
+                "QuestionCn": "在获取异质表面生态水文过程的准确多尺度观测时，可能会面临哪些挑战？",
+                "AnswerEn": "Progress in this field is hindered by the poor availability of multiscale observations, which is crucial for accurately upscaling eco-hydrological processes in heterogeneous environments.",
+                "AnswerCn": "该领域的进展受到多尺度观测稀缺的限制，而这些观测对于在异质环境中准确地进行生态水文过程的上尺度处理至关重要。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the expected challenges in ensuring the reliability of remote sensing evapotranspiration products, and how might these be addressed?",
+                "QuestionCn": "确保遥感蒸散发产品可靠性所面临的预期挑战是什么，以及如何应对这些挑战？",
+                "AnswerEn": "The reliability of remote sensing evapotranspiration products is challenged by spatial scale mismatches between remote sensing estimates and site observations, particularly in heterogeneous landscapes. Addressing this requires methods for spatial heterogeneity evaluation and the application of scale extension techniques, such as Gaussian process regression, to reliably upscale site data to satellite pixel scales.",
+                "AnswerCn": "遥感蒸散发产品的可靠性受到遥感估计与现场观测之间空间尺度不匹配的挑战，特别是在异质景观中。解决这一问题需要评估空间异质性的方法，以及应用尺度扩展技术，如高斯过程回归，以可靠地将现场数据上升到卫星像素尺度。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "How would you evaluate the effectiveness of using multi-source remote sensing information in addressing the spatial scale mismatch in evapotranspiration data collection?",
+                "QuestionCn": "您将如何评估使用多源遥感信息在解决蒸散发数据收集中的空间尺度不匹配问题的有效性？",
+                "AnswerEn": "The use of multi-source remote sensing information is highly effective in addressing spatial scale mismatches, as it allows for the integration of diverse data types, such as surface temperature and vegetation indices, enabling more accurate representation of the heterogeneous surface conditions in evapotranspiration studies.",
+                "AnswerCn": "多源遥感信息的使用在解决空间尺度不匹配方面非常有效，因为它允许整合多种数据类型，如地表温度和植被指数，从而在蒸散发研究中更准确地表征异质的地表条件。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is your opinion on the challenges faced in ensuring the accuracy of evapotranspiration remote sensing products in heterogeneous landscapes?",
+                "QuestionCn": "我对在异质景观中确保蒸散发遥感产品准确性所面临的挑战的看法是什么？",
+                "AnswerEn": "One of the main challenges is the spatial heterogeneity of the landscape, which can cause discrepancies between remote sensing estimates and ground observations. This is particularly problematic in areas with varying land cover and surface conditions, necessitating advanced methods like scale extension techniques for accurate data representation.",
+                "AnswerCn": "主要挑战之一是景观的空间异质性，这可能导致遥感估计与地面观测之间的差异。这在土地覆盖和表面条件变化较大的地区尤其成问题，因此需要采用先进的方法，如尺度扩展技术，以实现准确的数据表示。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "How would you assess the potential of using advanced machine learning techniques, such as Gaussian process regression, in improving the reliability of evapotranspiration estimates at the satellite pixel scale?",
+                "QuestionCn": "如何评估使用先进的机器学习技术，如高斯过程回归，在提高卫星像素尺度蒸散发估计的可靠性方面的潜力？",
+                "AnswerEn": "Advanced machine learning techniques like Gaussian process regression show great potential in improving the reliability of evapotranspiration estimates, especially in moderately to highly heterogeneous landscapes, by effectively capturing complex relationships between observed variables and providing robust scale extension capabilities.",
+                "AnswerCn": "高级机器学习技术，如高斯过程回归，在提高蒸散发估计的可靠性方面显示出巨大的潜力，特别是在中等到高度异质的景观中，能够有效捕捉观测变量之间的复杂关系，并提供稳健的尺度扩展能力。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don't understand how multiscale observations can effectively address the challenges of eco-hydrological process upscaling on heterogeneous surfaces.",
+                "QuestionCn": "我不明白多尺度观测如何有效解决异质表面上生态水文过程上尺度化的挑战。",
+                "AnswerEn": "Multiscale observations are critical in capturing eco-hydrological processes across different scales. The HiWATER experiment addresses this by using instrumentation on hierarchically nested scales, including a flux observation matrix of eddy covariance towers, large aperture scintillometers, and automatic meteorological stations. This strategy helps in obtaining multiscale and multidisciplinary data, which is essential for understanding and modeling complex interactions in heterogeneous surfaces.",
+                "AnswerCn": "多尺度观测在捕捉不同尺度的生态水文过程方面至关重要。HiWATER实验通过在层次嵌套的尺度上使用仪器来解决这一问题，包括涡度协方差塔、大孔径闪烁仪和自动气象站的通量观测矩阵。这一策略有助于获取多尺度和多学科的数据，这对于理解和建模异质表面中的复杂相互作用至关重要。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I'm unsure about how the spatial heterogeneity of a landscape impacts the accuracy of evapotranspiration remote sensing products.",
+                "QuestionCn": "我不确定景观的空间异质性如何影响蒸散发遥感产品的准确性。",
+                "AnswerEn": "Spatial heterogeneity can cause discrepancies between remote sensing estimates and ground-based observations of evapotranspiration. To tackle this, a dataset employs a scale extension method using site observation data and high-resolution remote sensing data. This approach helps to align satellite pixel-scale evapotranspiration estimates with ground-truth values, particularly in areas with moderate to high heterogeneity, where methods like Gaussian process regression are employed for more reliable estimates.",
+                "AnswerCn": "空间异质性可能导致遥感估计与地面观测的蒸散发之间存在差异。为了解决这个问题，某个数据集采用了一种尺度扩展方法，利用现场观测数据和高分辨率遥感数据。这种方法有助于将卫星像素尺度的蒸散发估计与地面真实值对齐，特别是在中等到高异质性区域，采用高斯过程回归等方法以获得更可靠的估计。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "I can't make sense of how different data collection techniques are integrated to provide a reliable dataset for evapotranspiration analysis in the Heihe watershed.",
+                "QuestionCn": "我无法理解不同的数据收集技术是如何整合在一起，以提供可靠的蒸散发分析数据集在黑河流域。",
+                "AnswerEn": "In the Heihe watershed, data collection techniques are integrated through a combination of direct site observations, remote sensing data fusion, and atmospheric reanalysis data. These methods involve using eddy covariance measurements, high-resolution satellite data (such as land surface temperature and vegetation indices), and various scale extension methods to obtain satellite pixel-scale evapotranspiration relative true values. This integration ensures a comprehensive dataset that captures the complexity of evapotranspiration processes across different scales.",
+                "AnswerCn": "在黑河流域，数据收集技术通过直接现场观察、遥感数据融合和大气再分析数据的结合进行整合。这些方法涉及使用涡度协方差测量、高分辨率卫星数据（如地表温度和植被指数）以及各种尺度扩展方法，以获得卫星像素尺度的蒸散发相对真实值。这种整合确保了一个全面的数据集，捕捉了不同尺度上蒸散发过程的复杂性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please conduct an analysis of the existing challenges in acquiring multiscale observations for eco-hydrological processes and propose potential solutions.",
+                "QuestionCn": "请对获取生态水文过程的多尺度观测所面临的现有挑战进行分析，并提出潜在的解决方案。",
+                "AnswerEn": "The primary challenge is the limited availability of multiscale observations necessary for accurately capturing eco-hydrological processes on heterogeneous surfaces. To address this, the HiWATER experiment implemented a hierarchical instrumentation approach, including a sparse network of observation stations, EC towers, and automatic meteorological stations across various landscapes, and conducted intensive observation periods. The use of advanced remote sensing technologies like LiDAR, imaging spectrometers, and multi-angle thermal imagers further aided in obtaining comprehensive data. These strategies help bridge the gap in multiscale observations.",
+                "AnswerCn": "主要挑战是多尺度观测的有限可用性，这对于准确捕捉异质表面的生态水文过程至关重要。为了解决这个问题，HiWATER实验实施了分层仪器方法，包括在各种景观中设置稀疏的观测站网络、生态系统（EC）塔和自动气象站，并进行了密集观测期。使用激光雷达、成像光谱仪和多角度热成像仪等先进遥感技术进一步帮助获取全面数据。这些策略有助于弥补多尺度观测的缺口。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "Please identify and describe the steps taken to ensure the quality and reliability of data collected in eco-hydrological research, particularly concerning evapotranspiration measurement.",
+                "QuestionCn": "请识别并描述在生态水文研究中确保收集数据的质量和可靠性的步骤，特别是关于蒸散发测量的步骤。",
+                "AnswerEn": "Quality and reliability of the data are ensured through careful calibration of sensors, systematic data collection, and thorough data processing, which includes quality control measures. The HiWATER observation system comprised various instruments like eddy covariance towers, large aperture scintillometers, and automatic meteorological stations. Additionally, eco-hydrological sensors and remote sensing tools such as LiDAR and imaging spectrometers were employed. The datasets generated are subjected to rigorous quality checks before being made available on platforms like figshare and the Cold and Arid Regions Science Data Centre.",
+                "AnswerCn": "数据的质量和可靠性通过对传感器的精确校准、系统的数据收集和全面的数据处理（包括质量控制措施）得以确保。HiWATER观测系统由多种仪器组成，如涡度协方差塔、大孔径闪烁仪和自动气象站。此外，还使用了生态水文传感器和遥感工具，如激光雷达和成像光谱仪。生成的数据集在发布到figshare和寒区科学数据中心等平台之前，经过严格的质量检查。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

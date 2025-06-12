@@ -1,0 +1,503 @@
+{
+    "id": "ede25d76-b382-45cf-966b-d2d1d83d50f2",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "HiWATER: The multi-scale observation experiment on evapotranspiration over heterogeneous land surfaces 2012 (MUSOEXE-12)-dataset of flux observation matrix (cosmic-ray soil moisture)",
+            "titleCn": "黑河生态水文遥感试验：非均匀下垫面地表蒸散发的多尺度观测试验-通量观测矩阵数据集（宇宙射线土壤水分）",
+            "description": "This dataset includes the observational data that were collected by two sets of Cosmic-ray Soil Moisture Observation System (COSMOS), named crs_a and crs_b, which were installed near the Daman Superstation in the flux observation matrix from 1 June through 20 September 2012. The land cover in the footprint was maize crop, and the site was located with the cropland of the Daman Irrigation District, Zhangye, Gansu Province. Crs_a was located at 100.36975° E, 38.85385° N and 1557.16 m above sea level; Crs_b was located at 100.37225° E, 38.85557° N and 1557.16 m above sea level. The bottom of the probe was 0.5 m above the ground; the sampling interval was 1 hour.\nThe raw COSMOS data include the following: battery (Batt, V), temperature (T, ℃), relative humidity (RH, %), air pressure (P, hPa), fast neutron counts (N1C, counts per hour), thermal neutron counts (N2C, counts per hour), sample time of fast neutrons (N1ET, s), and sample time of thermal neutrons (N2ET, s). The distributed data include the following variables: Date, Time, P, N1C, N1C_cor (corrected fast neutron counts) and VWC (volume soil moisture, %), which were processed as follows:\n1) Quality control\nData were removed and replaced by -6999 when (a) the battery voltage was less than 11.8 V, (b) the relative humidity was greater than 80% inside the probe box, (c) the counting data were not of one-hour duration and (d) then neutron count differed from the previous value by more than 20%.\n2) Air pressure correction\nAn air pressure correction was applied to the quality-controlled raw data according to the equation contained in the equipment manual. The procedure was previously described by Jiao et al. (2013) and Zreda et al. (2012).\n3) Calibration\nAfter the quality control and corrections were applied, soil moisture was calculated using the equation in Desilets et al. (2010), where N0 is the neutron counts above dry soil and the other variables are fitted constants that define the shape of the calibration function. Here, the parameter N0 must be calibrated using the in situ observed soil moisture within the footprint. This procedure was previously described by Jiao et al. (2013) and Zreda et al. (2012)\n4) Computing the soil moisture \nBased on the calibrated N0 and corrected N1C, the hourly soil moisture was computed using the equation from the equipment manual. This procedure was previously described by Jiao et al, (2013) and Zreda et al. (2012)\nFor more information, please refer to Liu et al. (2016) (for multi-scale observation experiment or sites information), Zhu et al. (2015) (for data processing) in the Citation section.",
+            "descriptionCn": "该数据集包含了2012年6月1日至9月20日的通量观测矩阵中两台宇宙射线仪器（crs_a和crs_b）的观测数据。站点位于甘肃省张掖市盈科灌区农田内，下垫面是玉米地。crs_a观测点的经纬度是100.36975E, 38.85385N，海拔1557.16m，crs_b观测点的经纬度是100.37225E, 38.85557N，海拔1557.16m，仪器探头底部距地面0.5m，采样频率是1小时。\n宇宙射线仪器的原始观测项目包括：电压Batt（V）、温度T（℃）、相对湿度RH（%）、气压P（hPa）、快中子数N1C（个/小时）、热中子数N2C（个/小时）、快中子采样时间N1ET（s）及热中子采样时间N2ET（s）。发布的数据为经过处理计算后的数据，数据表头包括Date Time（日期 时间）、P（气压 hPa）、N1C（快中子数 个/小时）、N1C_cor（气压订正的快中子数 个/小时）和VWC（土壤体积含水量 %），其处理的主要步骤包括：\n1）\t数据筛选\n数据筛选共四条标准：（1）剔除电压小于和等于11.8伏特的数据；（2）剔除空气相对湿度大于和等于80%的数据；（3）剔除采样时间间隔不在60±1分钟内的数据；（4） 剔除快中子数较前后一小时变化大于200的数据。此外缺失数据用-6999补充。\n2）\t气压订正\n根据仪器说明手册中提到的快中子气压订正公式，对原始数据进行气压订正，得到订正后的快中子数N1C_cor，具体见数据引用文献.\n3）\t仪器率定\n在计算土壤水分的过程中需要对计算公式中的N0进行率定。N0为土壤干燥条件下的快中子数，通常使用测量源区内的土样得到实测土壤水分（或者通过比较密集的土壤水分无线传感器获取）θm（Zreda et al. 2012）和对应时间段内的快中子校正数据N，再反求得到N0。具体见数据引用文献.\n在此，根据两台仪器源区内的Soilnet土壤水分数据对仪器进行率定，并根据实际情况之间建立土壤体积含水量θv和快中子之间的关系，即将公式（2）中的θm换作θv处理。分别选取干湿状况差异比较明显的6月26日-27日和7月16日-17日四天的数据，其中6月26日-27日率定数据显示土壤水分较小，因此选取4厘米、10厘米和20厘米的三个值平均值作为率定数据，其变化范围为22%-30%，而7月16日-17日率定数据显示土壤水分较大，因此选取4厘米、10厘米的两个值平均值作为率定数据，其变化范围为28%-39%，最后平均得到crs_a和crs_b的值N0分别为3252、3597。\n4）\t土壤水分计算\n计算得到每小时的土壤含水量数据。具体计算公式见数据引用文献.\n多尺度观测试验或站点信息请参考Liu et al. (2016)，观测数据处理请参考Zhu et al.(2015)。",
+            "instructions": "",
+            "instructionsCn": "",
+            "east": 100.3698,
+            "west": 100.3698,
+            "south": 38.8539,
+            "north": 38.8539,
+            "startTime": "2012-06-09 16:02:00",
+            "endTime": "2012-09-28 16:03:00",
+            "fileSize": 351516.0,
+            "cstr": "18406.11.hiwater.107.2013.db",
+            "doi": "10.3972/hiwater.107.2013.db",
+            "dataFormat": "文本",
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "刘绍民",
+                "nameEn": "LIU Shaomin",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "朱忠礼",
+                "nameEn": "ZHU Zhongli",
+                "unitEn": "",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "徐自为",
+                "nameEn": "XU Ziwei",
+                "unitEn": "Beijing Normal University",
+                "unitCn": "北京师范大学"
+            },
+            {
+                "nameCn": "李新",
+                "nameEn": "LI Xin",
+                "unitEn": "",
+                "unitCn": "中国科学院青藏高原研究所"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system",
+                "referenceCn": null,
+                "referenceEn": "Li, X., Liu, S.M., Xiao, Q., Ma, M.G., Jin, R., Che, T., Wang, W.Z., Hu, X.L., Xu, Z.W., Wen, J.G., Wang, L.X. (2017). A multiscale dataset for understanding complex eco-hydrological processes in a heterogeneous oasis system. Scientific Data, 4, 170083. doi:10.1038/sdata.2017.83."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Observation and simulation of lake-air heat and water transfer processes in a high-altitude shallow lake on the Tibetan Plateau",
+                "referenceCn": null,
+                "referenceEn": "Wang, Binbin, Ma, Yaoming, Chen, Xuelong, Ma, Weiqiang, Su, Zhongbo, Menenti, Massimo. Observation and simulation of lake-air heat and water transfer processes in a high-altitude shallow lake on the Tibetan Plateau. Journal of Geophysical Research: Atmospheres, 2015, 120(24):2015JD023863. doi:10.1002/2015JD023863"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Upscaling evapotranspiration measurements from multi-site to the satellite pixel scale over heterogeneous land surfaces",
+                "referenceCn": null,
+                "referenceEn": "Liu, S.M., Xu, Z.W., Song, L.S., Zhao, Q.Y., Ge, Y., Xu, T.R., Ma, Y.F., Zhu, Z.L., Jia, Z.Z., & Zhang, F. (2016). Upscaling evapotranspiration measurements from multi-site to the satellite pixel scale over heterogeneous land surfaces. Agricultural and Forest Meteorology, 230-231, 97-113."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Assessment of the energy balance closure under advective conditions and its impact using remote sensing data",
+                "referenceCn": null,
+                "referenceEn": "Xu, Z.W., Ma, Y.F., Liu, S.M., Shi, S.J., & Wang, J.M. (2017). Assessment of the energy balance closure under advective conditions and its impact using remote sensing data. Journal of Applied Meteorology and Climatology, 56, 127-140."
+            },
+            {
+                "titleCn": "黑河流域生态—水文过程综合遥感观测联合试验总体设计",
+                "titleEn": null,
+                "referenceCn": "李新, 刘绍民, 马明国, 肖青, 柳钦火, 晋锐, 车涛, 王维真, 祁元, 李弘毅, 朱高峰, 郭建文, 冉有华, 闻建光, 王树果. (2012). 黑河流域生态-水文过程综合遥感观测联合试验总体设计. 地球科学进展, 27(5), 481-498. doi:10.11867/j.issn.1001-8166.2012.05.0481.",
+                "referenceEn": null
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland",
+                "referenceCn": null,
+                "referenceEn": "Han, X.J., Jin, R., Li, X., & Wang, S.G. (2014). Soil Moisture Estimation Using Cosmic-Ray Soil Moisture Sensing at Heterogeneous Farmland. IEEE Geoscience and Remote Sensing Letters, 11(9), 1659-1663."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Estimating the spatial distribution of soil moisture based on Bayesian maximum entropy method with auxiliary data from remote sensing",
+                "referenceCn": null,
+                "referenceEn": "Gao, S.G., Zhu, Z.L., Liu, S.M., Jin, R., Yang, G.C., Tan, L. (2014). Estimating spatial distribution of soil moisture based on Bayesian maximum entropy method with auxiliary data from remote sensing. International Journal of Applied Earth Observation and Geoinformation, 32, 54-66. doi:10.1016/j.jag.2014.03.003."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Correction of systematic model forcing bias of CLM using assimilation of cosmic-ray Neutrons and land surface temperature: a study in the Heihe Catchment, China",
+                "referenceCn": null,
+                "referenceEn": "Han XJ, Franssen HJH, Rosolem R, Jin R, Li X, Vereecken H. Correction of systematic model forcing bias of CLM using assimilation of Cosmic-Ray neutrons and land surface temperature: a study in the Heihe Catchment, China. Hydrology and Earth System Sciences, 2015, 19, 615-629."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design",
+                "referenceCn": null,
+                "referenceEn": "Li X, Cheng GD, Liu SM, Xiao Q, Ma MG, Jin R, Che T, Liu QH, Wang WZ, Qi Y, Wen JG, Li HY, Zhu GF, Guo JW, Ran YH, Wang SG, Zhu ZL, Zhou J, Hu XL, Xu ZW. Heihe Watershed Allied Telemetry Experimental Research (HiWATER): Scientific objectives and experimental design. Bulletin of the American Meteorological Society, 2013, 94(8): 1145-1160, 10.1175/BAMS-D-12-00154.1."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "土壤",
+                "nameEn": "Soil"
+            },
+            {
+                "nameCn": "土壤湿度/水分含量",
+                "nameEn": "Soil moisture/Water content"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "中游人工绿洲试验区",
+                "keywordEn": "the artificial oasis experimental area in the middle reaches"
+            },
+            {
+                "keywordCn": "通量观测矩阵",
+                "keywordEn": "flux observation matrix"
+            },
+            {
+                "keywordCn": "黑河流域",
+                "keywordEn": "Heihe River Basin"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2012",
+                "keywordEn": "2012",
+                "type": "temporal"
+            },
+            {
+                "keywordCn": "2012-06-01至2012-09-20",
+                "keywordEn": "2012-06-01 to 2012-09-20",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "黑河流域生态-水文过程综合遥感观测试验：水文气象要素与多尺度蒸散发观测",
+                "titleEn": "Heihe Watershed Allied Telemetry Experimental Research (HiWATER)"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            },
+            {
+                "titleCn": "数字黑河",
+                "titleEn": "Digital heihe"
+            },
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区30m ASTER-GDEM数据集（2018）",
+                "titleEn": "30m aster-gdem data  in Qilian Mountain Area (2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Upscaling of eco-hydrological processes on a heterogeneous surface is a grand challenge. Progress in this field is hindered by the poor availability of multiscale observations. HiWATER is an experiment designed to address this challenge through instrumentation on hierarchically nested scales to obtain multiscale and multidisciplinary data."
+            ],
+            "research objective": [],
+            "challenges": [
+                "Progress in this field is hindered by the poor availability of multiscale observations."
+            ],
+            "methods": [
+                "Several intensive observation periods (IOPs) and continuous hydrometeorological observations were carried out during HiWATER. Only data collected during the IOP in 2012 are presented in this paper. Instruments for the oasis-desert system were arranged in hierarchically nested scales to capture multi-scale eco-hydrological processes. We established a sparse network to investigate the oasis-desert interaction. One superstation was constructed within the oasis, and four EC towers and four two-layer automatic meteorological stations (AMSs) were installed in different landscapes surrounding the oasis, including sandy desert, desert pavement, desert steppe, and wetland. Intensive observations were implemented at the irrigation district scale. A total of 12 airborne remote sensing missions were conducted to cover the FEA using LiDAR, an imaging spectrometer, a multi-angle thermal imager, and an L-band microwave radiometer."
+            ],
+            "dataset": [
+                "We introduce a multiscale dataset obtained from Heihe Watershed Allied Telemetry Experimental Research (HiWATER) in an oasis-desert area in 2012. The HiWATER observation system consists of a flux observation matrix of eddy covariance towers, large aperture scintillometers, and automatic meteorological stations; an eco-hydrological sensor network of soil moisture and leaf area index; hyper-resolution airborne remote sensing using LiDAR, imaging spectrometer, multi-angle thermal imager, and L-band microwave radiometer; and synchronical ground measurements of vegetation dynamics and photosynthesis processes. All observational data were carefully quality controlled throughout sensor calibration, data collection, data processing, and datasets generation. The data are freely available at figshare and the Cold and Arid Regions Science Data Centre."
+            ],
+            "findings": [],
+            "backgroundCn": [
+                "生态水文过程在异质表面上的放大是一个重大挑战。该领域的进展受到多尺度观测数据稀缺的制约。HiWATER实验旨在通过在分层嵌套尺度上进行仪器布置，以获取多尺度和多学科的数据，从而解决这一挑战。"
+            ],
+            "research objectiveCn": [],
+            "challengesCn": [
+                "该领域的进展受到多尺度观测稀缺的阻碍。"
+            ],
+            "methodsCn": [
+                "在HiWATER期间进行了几次强烈观测期（IOPs）和连续的水文气象观测。本文仅展示了2012年IOP期间收集的数据。为了捕捉多尺度生态水文过程，绿洲-沙漠系统的仪器按照层次嵌套的尺度进行布置。我们建立了一个稀疏网络，以研究绿洲-沙漠的相互作用。在绿洲内建造了一个超级站，并在绿洲周围不同的景观中安装了四个EC塔和四个两层自动气象站（AMS），这些景观包括沙漠、沙漠铺装、沙漠草原和湿地。在灌溉区尺度上实施了密集观测。共进行了12次空中遥感任务，使用了LiDAR、成像光谱仪、多角度热成像仪和L波段微波辐射计覆盖FEA。"
+            ],
+            "datasetCn": [
+                "我们介绍了一个多尺度数据集，该数据集来自2012年在绿洲-沙漠地区进行的黑河流域联合遥测实验研究（HiWATER）。HiWATER观测系统由涡度协方差塔、大孔径闪烁仪和自动气象站组成的通量观测矩阵；土壤湿度和叶面积指数的生态水文传感器网络；使用激光雷达、成像光谱仪、多角度热成像仪和L波段微波辐射计的超高分辨率航空遥感；以及同步的植被动态和光合作用过程的地面测量。所有观测数据在传感器校准、数据收集、数据处理和数据集生成过程中都经过了严格的质量控制。这些数据可以在figshare和寒区与干旱区科学数据中心免费获取。"
+            ],
+            "findingsCn": []
+        }
+    ],
+    "query": {
+        "Disjunctive": [
+            {
+                "QuestionEn": "For correcting neutron count data, is air pressure correction, temperature adjustment, or relative humidity correction more commonly used?",
+                "QuestionCn": "对于修正中子计数数据，空气压力修正、温度调整或相对湿度修正哪种更常用？",
+                "AnswerEn": "Air pressure correction",
+                "AnswerCn": "气压校正",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Are intensive observation periods (IOPs), continuous observations, or sporadic measurements more advantageous for capturing multiscale eco-hydrological processes?",
+                "QuestionCn": "密集观测期（IOPs）、连续观测或偶发测量在捕捉多尺度生态水文过程方面，哪种更具优势？",
+                "AnswerEn": "Intensive observation periods (IOPs) and continuous observations",
+                "AnswerCn": "密集观测期（IOPs）和连续观测",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the data collection methods used for measuring soil moisture in heterogeneous landscapes?",
+                "QuestionCn": "在异质景观中测量土壤湿度的数据收集方法有哪些？",
+                "AnswerEn": "cosmic-ray soil moisture sensors",
+                "AnswerCn": "宇宙射线土壤湿度传感器",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "When was the data for the flux observation matrix collected during the Heihe Watershed experiment?",
+                "QuestionCn": "Heihe流域实验期间，通量观测矩阵的数据收集是在什么时候进行的？",
+                "AnswerEn": "June 1 to September 20, 2012",
+                "AnswerCn": "2012年6月1日至9月20日",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method that addresses the challenge of upscaling eco-hydrological processes on a heterogeneous surface?",
+                "QuestionCn": "您能否提供一个数据收集方法的例子，以应对在异质表面上提升生态水文过程的挑战？",
+                "AnswerEn": "The HiWATER experiment provides an example of addressing this challenge through instrumentation on hierarchically nested scales to obtain multiscale and multidisciplinary data. Instruments for the oasis-desert system were arranged in hierarchically nested scales to capture multi-scale eco-hydrological processes, including a sparse network to investigate oasis-desert interaction and a superstation within the oasis.",
+                "AnswerCn": "HiWATER实验通过在层次嵌套的尺度上进行仪器布置，以获取多尺度和多学科的数据，提供了应对这一挑战的一个例子。针对绿洲-沙漠系统的仪器按照层次嵌套的尺度进行安排，以捕捉多尺度的生态水文过程，包括一个稀疏网络用于研究绿洲-沙漠相互作用，以及一个位于绿洲内的超级站。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you give an example of a dataset that encompasses multiscale observations to study eco-hydrological processes in an oasis-desert area?",
+                "QuestionCn": "您能否提供一个数据集的例子，该数据集涵盖多尺度观测，以研究绿洲-沙漠地区的生态水文过程？",
+                "AnswerEn": "An example of such a dataset is the multiscale dataset obtained from the Heihe Watershed Allied Telemetry Experimental Research (HiWATER) in 2012. It includes data from eddy covariance towers, large aperture scintillometers, automatic meteorological stations, an eco-hydrological sensor network, and hyper-resolution airborne remote sensing with LiDAR and imaging spectrometer.",
+                "AnswerCn": "这样的数据集的一个例子是2012年获得的来自黑河流域联合遥测实验研究（HiWATER）的多尺度数据集。它包括来自涡度协方差塔、大孔径闪烁仪、自动气象站、生态水文传感器网络以及高分辨率航空遥感（激光雷达和成像光谱仪）的数据。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of challenges faced in collecting multiscale eco-hydrological data, and how are they addressed?",
+                "QuestionCn": "收集多尺度生态水文数据面临的挑战的一个例子是什么，以及如何解决这些挑战？",
+                "AnswerEn": "A challenge in this field is the poor availability of multiscale observations. This is addressed in the HiWATER experiment by conducting several intensive observation periods and continuous hydrometeorological observations, utilizing a combination of ground-based and airborne remote sensing technologies to collect comprehensive data.",
+                "AnswerCn": "该领域面临的一个挑战是多尺度观测的可用性差。HiWATER实验通过进行多个强化观测期和持续的水文气象观测，利用地面和空中遥感技术的结合来收集全面的数据，从而解决这一问题。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of data collection methods used for measuring soil moisture content in a heterogeneous landscape?",
+                "QuestionCn": "用于测量异质景观中土壤湿度含量的数据收集方法的特征是什么？",
+                "AnswerEn": "cosmic ray soil moisture instruments, voltage, temperature, relative humidity, air pressure, neutron counts, height of 0.5 meters above the ground, hourly frequency, data screening, pressure correction, instrument calibration",
+                "AnswerCn": "宇宙射线土壤湿度仪器、电压、温度、相对湿度、气压、中子计数、距地面0.5米的高度、每小时频率、数据筛选、压力校正、仪器校准。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What attributes are crucial for the calibration of instruments used in eco-hydrological observations?",
+                "QuestionCn": "生态水文观测中仪器校准的关键属性有哪些？",
+                "AnswerEn": "measurement of soil moisture, dry neutron count (N0), varying soil moisture conditions, average values at different depths, relationship between soil volume water content and neutron counts",
+                "AnswerCn": "土壤湿度测量、干中子计数（N0）、不同土壤湿度条件下的变化、不同深度的平均值、土壤体积含水量与中子计数之间的关系。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the features of the multiscale dataset obtained in eco-hydrological experiments?",
+                "QuestionCn": "生态水文实验中获得的多尺度数据集的特征是什么？",
+                "AnswerEn": "diverse range of data, flux observation matrix, eco-hydrological sensor network, hyper-resolution airborne remote sensing, eddy covariance towers, automatic meteorological stations, soil moisture sensors, remote sensing data, LiDAR, imaging spectrometer, multi-angle thermal imager, L-band microwave radiometer, various scales, various disciplines",
+                "AnswerCn": "多样化的数据范围，通量观测矩阵，生态水文传感器网络，超高分辨率机载遥感，涡度相关塔，自动气象站，土壤湿度传感器，遥感数据，激光雷达，成像光谱仪，多角度热成像仪，L波段微波辐射计，各种尺度，各个学科。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the sampling frequency of the cosmic-ray instruments used in the flux observation matrix dataset?",
+                "QuestionCn": "宇宙射线仪器在通量观测矩阵数据集中使用的采样频率是多少？",
+                "AnswerEn": "1 hour",
+                "AnswerCn": "1小时",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many airborne remote sensing missions were conducted during the HiWATER experiment in 2012?",
+                "QuestionCn": "在2012年的HiWATER实验中进行了多少次空中遥感任务？",
+                "AnswerEn": "12",
+                "AnswerCn": "12",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does the term 'flux observation matrix' refer to in the context of eco-hydrological data collection?",
+                "QuestionCn": "在生态水文数据收集的背景下，“通量观测矩阵”一词指的是用于记录和分析生态系统中水分、碳和其他物质通量的系统化数据结构。",
+                "AnswerEn": "A flux observation matrix refers to a structured setup of instruments, such as eddy covariance towers, used to capture multiscale eco-hydrological processes. This matrix is part of a comprehensive observation system designed to gather multiscale and multidisciplinary data, including meteorological and soil moisture measurements, within a given experiment like HiWATER.",
+                "AnswerCn": "通量观测矩阵是指一组结构化的仪器设置，例如涡度协方差塔，用于捕捉多尺度生态水文过程。该矩阵是一个综合观测系统的一部分，旨在收集多尺度和多学科的数据，包括气象和土壤湿度测量，在像HiWATER这样的实验中进行。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "In what ways do the multiscale observation techniques used in the HiWATER experiment differ from traditional hydrometeorological observation methods?",
+                "QuestionCn": "HiWATER实验中使用的多尺度观测技术与传统水文气象观测方法有何不同？",
+                "AnswerEn": "The multiscale observation techniques used in the HiWATER experiment involve hierarchically nested scales capturing multiple eco-hydrological processes with a combination of eddy covariance towers, large aperture scintillometers, and remote sensing tools like LiDAR, which differs from traditional hydrometeorological methods that might not integrate such diverse and hierarchical data collection approaches.",
+                "AnswerCn": "HiWATER实验中使用的多尺度观测技术涉及分层嵌套的尺度，捕捉多个生态水文过程，结合了涡度协方差塔、大孔径闪烁仪和激光雷达等遥感工具，这与传统的水文气象方法不同，后者可能没有整合如此多样化和分层的数据收集方法。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How might the presence of multiscale observations in a dataset enhance our understanding of heterogeneous eco-hydrological processes?",
+                "QuestionCn": "多尺度观测在数据集中的存在如何增强我们对异质生态水文过程的理解？",
+                "AnswerEn": "Multiscale observations allow researchers to capture eco-hydrological processes across different hierarchical scales, providing a comprehensive view of interactions and dynamics in heterogeneous surfaces, as highlighted by the HiWATER experiment's approach.",
+                "AnswerCn": "多尺度观测使研究人员能够在不同层次的尺度上捕捉生态水文过程，从而全面了解异质表面中的相互作用和动态，这一点在HiWATER实验的方法中得到了强调。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What challenges might arise from the use of cosmic-ray soil moisture instruments in data collection, and how could they be addressed?",
+                "QuestionCn": "使用宇宙射线土壤湿度仪进行数据收集可能会出现哪些挑战，以及如何解决这些挑战？",
+                "AnswerEn": "Challenges include ensuring data accuracy under varying environmental conditions, such as voltage and humidity fluctuations. These can be addressed through rigorous data screening, pressure correction, and instrument calibration, as demonstrated by the outlined methodologies.",
+                "AnswerCn": "挑战包括在不同环境条件下（如电压和湿度波动）确保数据的准确性。这些问题可以通过严格的数据筛选、压力修正和仪器校准来解决，正如所述的方法论所示。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "In what ways could the integration of remote sensing technologies contribute to the refinement of eco-hydrological datasets?",
+                "QuestionCn": "遥感技术的整合可以通过以下几种方式促进生态水文数据集的完善：",
+                "AnswerEn": "Remote sensing technologies like LiDAR, imaging spectrometers, and thermal imagers provide high-resolution data that can enhance the spatial and temporal detail of eco-hydrological datasets, allowing for more precise analysis of vegetation dynamics and surface interactions.",
+                "AnswerCn": "遥感技术如激光雷达（LiDAR）、成像光谱仪和热成像仪提供高分辨率数据，可以增强生态水文数据集的空间和时间细节，从而允许对植被动态和地表相互作用进行更精确的分析。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the challenges in upscaling eco-hydrological processes on heterogeneous surfaces?",
+                "QuestionCn": "影响在异质表面上扩大生态水文过程的挑战的因素有哪些？",
+                "AnswerEn": "Challenges in upscaling eco-hydrological processes arise from the spatial and temporal variability of these processes, the complexity of interactions across different landscape types, and the scarcity of multiscale observational data. Addressing these challenges requires a robust experimental setup, such as the one used in the HiWATER project, which combines various observational tools and methodologies to gather comprehensive data across scales.",
+                "AnswerCn": "在生态水文过程的升级中，面临的挑战包括这些过程的空间和时间变异性、不同景观类型之间相互作用的复杂性，以及多尺度观测数据的稀缺。解决这些挑战需要一个强大的实验设置，例如HiWATER项目所使用的，该项目结合了各种观测工具和方法，以在不同尺度上收集全面的数据。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential consequences of using multiscale and multidisciplinary data in understanding eco-hydrological processes on a heterogeneous surface?",
+                "QuestionCn": "使用多尺度和多学科数据来理解异质表面的生态水文过程的潜在后果是什么？",
+                "AnswerEn": "Using multiscale and multidisciplinary data can address the challenge of upscaling eco-hydrological processes by providing comprehensive observations. This approach can improve the understanding of these processes and facilitate more accurate modeling and predictions, as demonstrated by the HiWATER experiment's use of hierarchically nested instrumentation and diverse data collection methods.",
+                "AnswerCn": "使用多尺度和多学科数据可以通过提供全面的观测来解决生态水文过程上升尺度的挑战。这种方法可以提高对这些过程的理解，并促进更准确的建模和预测，正如HiWATER实验所展示的那样，采用了分层嵌套的仪器和多样的数据收集方法。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the implications of employing a sparse network of instruments to investigate oasis-desert interactions in terms of data collection and analysis?",
+                "QuestionCn": "采用稀疏的仪器网络来研究绿洲与沙漠之间的相互作用，在数据收集和分析方面有什么影响？",
+                "AnswerEn": "Employing a sparse network of instruments to investigate oasis-desert interactions allows for the focused collection of data at critical points, facilitating the study of interactions across different landscapes. This strategy helps in capturing essential eco-hydrological processes, enhancing the understanding of spatial variability, and improving the accuracy of the analysis, as implemented in the HiWATER experiment.",
+                "AnswerCn": "利用稀疏的仪器网络来研究绿洲与沙漠之间的相互作用，可以在关键点集中收集数据，从而促进对不同景观之间相互作用的研究。这一策略有助于捕捉重要的生态水文过程，增强对空间变异性的理解，并提高分析的准确性，正如在HiWATER实验中所实施的那样。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the primary objective of employing a flux observation matrix in eco-hydrological studies on heterogeneous surfaces?",
+                "QuestionCn": "在生态水文研究中，使用通量观测矩阵的主要目标是什么？",
+                "AnswerEn": "The primary objective is to address the challenge of upscaling eco-hydrological processes on heterogeneous surfaces by obtaining multiscale and multidisciplinary data through hierarchically nested instrumentation.",
+                "AnswerCn": "主要目标是通过分层嵌套的仪器获取多尺度和多学科的数据，以解决在异质表面上提升生态水文过程的挑战。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are the goals behind conducting intensive observation periods and continuous hydrometeorological observations in eco-hydrological research?",
+                "QuestionCn": "在生态水文研究中，进行密集观察期和持续的水文气象观测的目标是什么？",
+                "AnswerEn": "The goals are to thoroughly investigate and document eco-hydrological processes across various scales and landscapes, thereby enhancing the understanding of the interaction between oasis and desert environments and improving data availability for research.",
+                "AnswerCn": "目标是全面调查和记录不同尺度和景观下的生态水文过程，从而增强对绿洲与沙漠环境之间相互作用的理解，并改善研究的数据可用性。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What multi-scale instrumentation techniques are utilized in eco-hydrological data collection to address the complexity of heterogeneous surfaces?",
+                "QuestionCn": "在生态水文数据收集中，采用了哪些多尺度仪器技术来应对异质表面的复杂性？",
+                "AnswerEn": "The data collection for eco-hydrological processes on heterogeneous surfaces involves using hierarchically nested instrumentation, such as a flux observation matrix with eddy covariance towers, large aperture scintillometers, and automatic meteorological stations. Additionally, hyper-resolution airborne remote sensing is employed using LiDAR, imaging spectrometer, multi-angle thermal imager, and L-band microwave radiometer, complemented by a sensor network for soil moisture and leaf area index.",
+                "AnswerCn": "生态水文过程在异质表面的数据收集涉及使用分层嵌套的仪器，例如带有涡度协方差塔的大气通量观测矩阵、大孔径闪烁仪和自动气象站。此外，还采用超高分辨率的航空遥感技术，使用激光雷达、成像光谱仪、多角度热成像仪和L波段微波辐射计，并辅以土壤湿度和叶面积指数的传感器网络。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What conditions or resources enable the integration of multiscale observations to address challenges in eco-hydrological processes on heterogeneous surfaces?",
+                "QuestionCn": "哪些条件或资源能够促进多尺度观测的整合，以应对异质表面上生态水文过程的挑战？",
+                "AnswerEn": "The integration of multiscale observations is enabled by the HiWATER experiment, which uses a hierarchical arrangement of instruments to capture eco-hydrological processes across different scales. This includes a flux observation matrix with eddy covariance towers, automatic meteorological stations, and eco-hydrological sensor networks for soil moisture and vegetation dynamics.",
+                "AnswerCn": "HiWATER实验通过层次化的仪器安排，促进了多尺度观测的整合，以捕捉不同尺度上的生态水文过程。这包括一个通量观测矩阵，配备涡度协方差塔、自动气象站以及用于土壤湿度和植被动态的生态水文传感器网络。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How does the use of cosmic ray soil moisture instruments enable the collection of soil moisture data in agricultural settings?",
+                "QuestionCn": "宇宙射线土壤湿度仪的使用如何在农业环境中收集土壤湿度数据？",
+                "AnswerEn": "Cosmic ray soil moisture instruments enable the collection of soil moisture data by using raw observations such as voltage, temperature, and neutron counts to calculate soil moisture. The dataset includes hourly data, corrected for atmospheric pressure, and involves calibration using soil samples to determine dry soil neutron numbers.",
+                "AnswerCn": "宇宙射线土壤湿度仪器通过使用原始观测数据（如电压、温度和中子计数）来收集土壤湿度数据。该数据集包括每小时的数据，经过大气压力校正，并涉及使用土壤样本进行校准，以确定干土中子的数量。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might researchers expect challenges in obtaining multiscale observations for eco-hydrological processes on heterogeneous surfaces?",
+                "QuestionCn": "研究人员可能会预期在获取异质表面生态水文过程的多尺度观测时面临挑战。",
+                "AnswerEn": "Progress in this field is hindered by the poor availability of multiscale observations, as capturing the varied interactions and processes across different scales requires a complex arrangement of instruments and observation techniques.",
+                "AnswerCn": "该领域的进展受到多尺度观测稀缺的制约，因为捕捉不同尺度之间的多样交互和过程需要复杂的仪器和观测技术的安排。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might researchers anticipate integrating remote sensing technologies in the collection of eco-hydrological data in oasis-desert interactions?",
+                "QuestionCn": "研究人员可能预期在绿洲-沙漠相互作用的生态水文数据收集中整合遥感技术。",
+                "AnswerEn": "The use of hyper-resolution airborne remote sensing technologies like LiDAR, imaging spectrometers, and multi-angle thermal imagers is anticipated to effectively capture the diverse and intricate eco-hydrological processes across oasis-desert landscapes, providing comprehensive datasets.",
+                "AnswerCn": "预计使用超高分辨率的航空遥感技术，如激光雷达、成像光谱仪和多角度热成像仪，将有效捕捉绿洲-沙漠景观中多样而复杂的生态水文过程，提供全面的数据集。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "How would you evaluate the effectiveness of using cosmic ray soil moisture sensors in capturing multi-scale eco-hydrological processes in heterogeneous surfaces?",
+                "QuestionCn": "如何评估使用宇宙射线土壤湿度传感器在捕捉异质表面多尺度生态水文过程中的有效性？",
+                "AnswerEn": "Cosmic ray soil moisture sensors are effective in capturing multi-scale eco-hydrological processes on heterogeneous surfaces as they provide continuous and wide-area measurements of soil moisture. This is crucial for understanding eco-hydrological dynamics, especially in complex landscapes like those studied in HiWATER.",
+                "AnswerCn": "宇宙射线土壤湿度传感器能够有效捕捉异质表面上的多尺度生态水文过程，因为它们提供了连续和广泛的土壤湿度测量。这对于理解生态水文动态至关重要，尤其是在像HiWATER研究的复杂景观中。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is your opinion on the challenges faced in acquiring multiscale observations for eco-hydrological processes, and how might they be overcome?",
+                "QuestionCn": "我对获取生态水文过程的多尺度观测所面临的挑战的看法是什么，以及如何克服这些挑战？",
+                "AnswerEn": "One major challenge is the poor availability of multiscale observations, which hinders progress in understanding eco-hydrological processes. This could be overcome by implementing advanced sensor networks, such as those used in HiWATER, which include a combination of eddy covariance towers, remote sensing, and eco-hydrological sensors to capture detailed data across scales.",
+                "AnswerCn": "一个主要挑战是多尺度观测的可用性差，这阻碍了对生态水文过程的理解。可以通过实施先进的传感器网络来克服这一问题，例如HiWATER中使用的网络，它包括涡度协方差塔、遥感和生态水文传感器的组合，以捕获跨尺度的详细数据。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I'm unsure how the challenges of multiscale observation availability are addressed in eco-hydrological data collection.",
+                "QuestionCn": "我不确定如何解决生态水文数据收集中多尺度观测可用性的问题。",
+                "AnswerEn": "The challenges are addressed by implementing a comprehensive observation system that includes intensive observation periods and continuous hydrometeorological observations. Instruments are arranged in hierarchically nested scales, and a sparse network is established to study interactions such as oasis-desert interactions. This approach helps obtain multiscale and multidisciplinary data.",
+                "AnswerCn": "这些挑战通过实施一个综合观察系统来解决，该系统包括密集的观察周期和持续的水文气象观测。仪器按层次嵌套的尺度排列，并建立了一个稀疏网络，以研究诸如绿洲-沙漠相互作用等交互作用。这种方法有助于获取多尺度和多学科的数据。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I can't figure out how datasets from eco-hydrological studies are processed to achieve meaningful insights.",
+                "QuestionCn": "我无法弄清楚生态水文研究中的数据集是如何处理的，以获得有意义的见解。",
+                "AnswerEn": "Datasets are processed by implementing a series of steps including data screening based on specific criteria, pressure correction using formulas from instrument manuals, and calibration against soil moisture data obtained from sources like Soilnet. These steps ensure that the datasets are accurate and can be used to calculate metrics such as soil volumetric water content and fast neutron counts, providing insights into eco-hydrological processes.",
+                "AnswerCn": "数据集通过实施一系列步骤进行处理，包括根据特定标准进行数据筛选、使用仪器手册中的公式进行压力修正，以及根据来自 Soilnet 等来源获得的土壤湿度数据进行校准。这些步骤确保数据集的准确性，并可以用于计算土壤体积含水量和快速中子计数等指标，从而提供对生态水文过程的洞察。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please describe the challenges in obtaining multiscale observations for eco-hydrological processes on heterogeneous surfaces and how these challenges are addressed.",
+                "QuestionCn": "获取异质表面生态水文过程的多尺度观测面临的挑战以及如何应对这些挑战。",
+                "AnswerEn": "Challenges in obtaining multiscale observations for eco-hydrological processes include the poor availability of multiscale observations. This is addressed by using a multiscale and multidisciplinary approach, such as the HiWATER experiment, which employs a flux observation matrix, eco-hydrological sensor networks, and hyper-resolution airborne remote sensing.",
+                "AnswerCn": "获取生态水文过程的多尺度观测面临的挑战包括多尺度观测的可用性差。为了解决这个问题，采用了多尺度和多学科的方法，例如HiWATER实验，该实验利用了通量观测矩阵、生态水文传感器网络和超高分辨率的航空遥感技术。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

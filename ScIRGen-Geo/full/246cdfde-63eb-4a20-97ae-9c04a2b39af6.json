@@ -1,0 +1,523 @@
+{
+    "id": "246cdfde-63eb-4a20-97ae-9c04a2b39af6",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Global long-term gap-free daily surface soil moisture dataset from 2002 to 2020",
+            "titleCn": "全球日尺度时空连续地表土壤水分数据集（2002-2020）",
+            "description": "Soil moisture is an important state variable in the terrestrial water cycle and plays an important role in the study of land-atmosphere interactions, regional hydrological processes, and water resource management. Microwave remote sensing is an effective method for soil moisture monitoring and has many advantages, such as high sensitivity to soil moisture, all-weather observation capability, large spatial coverage, and frequent revisits. However, the global soil moisture datasets produced from satellite-based microwave observations usually suffer from gaps due to the satellite orbits, environmental factors, and retrieval algorithms, and these gaps affect their further applications in global climate change and hydrological process analysis. To solve this problem, we proposed a gap-filling method by applying the machine learning (Random Forest) algorithm in a pixel-by-pixel manner to reconstruct global surface soil moisture products, taking into account the nonlinear relationship between surface soil moisture and the related surface environmental variables. The gap-filling method was applied to the long-term global daily soil moisture dataset derived from AMSR-E and AMSR2 (NN-SM) (https://doi.org/10.11888/Soil.tpdc.270960), and a global daily gap-free surface soil moisture dataset from 2002 to 2020 was then generated accordingly. The accuracy of the reconstructed surface soil moisture dataset was evaluated using in situ surface soil moisture observations from sites in the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network, and good accuracy was indicated with an ubRMSE of 0.051 m3/m3. Overall, the reconstructed surface soil moisture dataset retained the good characteristics of the original NN-SM product, such as high accuracy and reliable spatiotemporal pattern, while having the advantage of continuous spatiotemporal coverage, which makes it more suitable for further applications in the analysis of global surface soil moisture trends, land surface hydrological processes, and land-atmosphere energy and water exchanges, etc.",
+            "descriptionCn": "土壤水分是陆地水循环中的重要状态变量，在陆-气相互作用研究、区域水文过程及水资源管理等研究领域具有重要作用。微波遥感技术是一种非常有效的土壤水分监测方法，其敏感性、全天候性、空间范围大和重复周期短等优点为土壤水分监测提供了便利。然而，由于受卫星传感器观测轨道观测范围、环境因素、以及反演算法等影响，卫星遥感反演地表土壤水分数据产品存在数据缺失，影响其在区域气候变化和水文过程分析等应用中的适用性。因此，我们以“基于AMSR-E和AMSR2数据的全球长时序日尺度土壤水分数据集（2002-2020）”（https://doi.org/10.11888/Soil.tpdc.270960）为基础（以下简称NN-SM），考虑土壤水分与其它地表变量（植被指数、地表温度、降水、土地覆盖类型和地理位置信息）的相互关系，发展了基于逐像元随机森林算法的土壤水分重建模型，研发了2002-2020年全球时空连续地表土壤水分数据集。利用国际土壤水分网络站点和长期农业生态系统研究的观测网络的地面观测数据作为参考，对构建的数据集进行了精度评估，表明重建后的时空连续地表土壤水分无偏均方根误差（ubRMSE）为 0.051 m3/m3。本数据集时间分辨率为逐日，空间分辨率为36km，时间跨度为2002年-2020年，空间范围覆盖全球。数据集保留了NN-SM产品的精度高、时空分布格局可靠等特点，同时具有时空连续覆盖的优势，适合进一步应用于全球土壤水分分析、地表水文过程、地气能量和水交换等研究。",
+            "instructions": "The dataset contains surface soil moisture and data flags, stored in geotiff format. The file name of soil moisture data is “reconstructed_sm_yyyydoy.tif”, where yyyy represents the year and ddd represents the Julian date. For example, “reconstructed_sm_2004001.tif” represents the global soil moisture distribution on the first day of 2004, and the corresponding file name of data flags is “reconstructed_sm_yyyydoy_flag.tif”. The data flags are as follows: “0” represents the original value of surface soil moisture from NN-SM; “1” represents the gap-filled value of surface soil moisture; “2” represents the pixels covered by water or snow/ice, and frozen soils. Data reading method: The data can be read by any software or computer language that can read geotiff format, such as ArcGIS, ENVI, IDL, Matlab and so on.",
+            "instructionsCn": "数据集中包含表层土壤水分和数据标识，数据存储为geotiff格式，土壤水分数据文件名称为“reconstructed_sm_yyyydoy.tif”，其中yyyy代表年，doy代表日序数，比如“reconstructed_sm_2004001.tif”就代表这个文件描述2004年第一天全球土壤水分分布情况，对应数据标识文件名称为“reconstructed_sm_yyyydoy_flag.tif”。数据标识如下：“0”代表来自NN-SM的原始地表土壤水分值；“1”代表重建的土壤水分值；“2”表示被水或雪/冰和冻土覆盖的排除像素。数据读取方式：可读取geotiff的软件或计算机语言均可读取该数据，如ArcGIS、ENVI、IDL、Matlab等。",
+            "east": 179.82,
+            "west": -179.82,
+            "south": -83.64,
+            "north": 83.64,
+            "startTime": "2002-07-04 00:00:00",
+            "endTime": "2020-12-31 00:00:00",
+            "fileSize": 21176776584.0,
+            "cstr": null,
+            "doi": "10.3390/rs15082116",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameCn": "米佩",
+                "nameEn": "MI Pei",
+                "unitEn": "",
+                "unitCn": "中国科学院空天信息创新研究院"
+            },
+            {
+                "nameCn": "郑超磊",
+                "nameEn": "ZHENG Chaolei ",
+                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+                "unitCn": "中国科学院空天信息创新研究院"
+            },
+            {
+                "nameCn": "贾立",
+                "nameEn": "JIA Li ",
+                "unitEn": "Aerospace Information Research Institute, Chinese Academy of Sciences",
+                "unitCn": "中国科学院空天信息创新研究院"
+            },
+            {
+                "nameCn": "白瑜",
+                "nameEn": "BAI Yu",
+                "unitEn": "",
+                "unitCn": "中国科学院空天信息创新研究院"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Reconstruction of Global Long-Term Gap-Free Daily Surface Soil Moisture from 2002 to 2020 Based on a Pixel-Wise Machine Learning Method",
+                "referenceCn": null,
+                "referenceEn": "Mi, P., Zheng, C., Jia, L., & Bai, Y. (2023). Reconstruction of Global Long-Term Gap-Free Daily Surface Soil Moisture from 2002 to 2020 Based on a Pixel-Wise Machine Learning Method. Remote Sensing, 15(8). doi:10.3390/rs15082116"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "A long term global daily soil moisture dataset derived from AMSR-E and AMSR2 (2002-2019)",
+                "referenceCn": null,
+                "referenceEn": "Yao, P., Lu, H., Shi, J., Zhao, T., Yang, K., Cosh, M. H., Gianotti, D. J. S., & Entekhabi, D. (2021). A long term global daily soil moisture dataset derived from AMSR-E and AMSR2 (2002-2019). Scientific Data, 8(1). doi:10.1038/s41597-021-00925-8"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "遥感",
+                "nameEn": "Remote Sensing Technology"
+            },
+            {
+                "nameCn": "陆地表层",
+                "nameEn": "Terrestrial Surface"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "其他",
+                "nameEn": "Others"
+            },
+            {
+                "nameCn": "土壤",
+                "nameEn": "Soil"
+            },
+            {
+                "nameCn": "土壤水分",
+                "nameEn": "Soil moisture"
+            },
+            {
+                "nameCn": "微波遥感",
+                "nameEn": "Microwave Remote Sensing"
+            },
+            {
+                "nameCn": "机器学习",
+                "nameEn": "Machine Learning"
+            },
+            {
+                "nameCn": "逐像元算法",
+                "nameEn": "Pixel-wise model"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "全球",
+                "keywordEn": "global"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2002-2020",
+                "keywordEn": "2002-2020",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "陆地水循环关键参量时空多尺度智慧化遥感",
+                "titleEn": "Major Research plan of the National Natural Science Foundation of China"
+            },
+            {
+                "titleCn": "国家自然科学基金",
+                "titleEn": "National Natural Science Foundation of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：祁连山植物多样性监测（植物调查数据-2018年）",
+                "titleEn": "Qilian Mountain comprehensive observation network: Plant diversity monitoring in Qilian Mountain (plant survey data - 2018)"
+            },
+            {
+                "titleCn": "祁连山地区基于MODIS的逐日地表蒸散发数据（2018)（ETHi-merge V1）",
+                "titleEn": "Daily MODIS-based land surface evapotranspiration dataset in Qilian Mountain Area (ETHi-merge V1) (2018)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation dataset of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (leaf area index of Sidaoqiao, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站叶面积指数-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (Leaf area index of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山地区水体指数产品（2018）",
+                "titleEn": "Water index in the Qilian Mountain Area in 2018 "
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（混合林站物候相机观测数据集-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (phenology camera observation data set of mixed forest superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Soil moisture (SM) is considered as one of the most important factors in hydrology, ecology, meteorology, and soil science. Soil moisture data are mainly obtained by three methods: in situ observations, land surface model simulations, and satellite remote sensing observations. In recent years, with the continuous development of space technology, satellite remote sensing observation has become one of the most important means to obtain SM products for use at regional and global scales. The remote sensing-based SM is usually referred to as the volumetric soil water content in the surface layer (generally with depth less than 5 cm), hereafter referred to as surface soil moisture (SSM) in this study. Previous studies have shown that the surface soil moisture product from Soil Moisture Active Passive (SMAP) is currently the most accurate with ubRMSE close to 0.04 m3/m3. However, it has relatively short temporal coverage, i.e., from 2015 to present. Efforts have been made to improve the accuracy and the temporal coverage of remote sensing surface soil moisture by fusing different satellite data. However, due to the impacts of the satellite orbit, radio frequency interference, vegetation interference, presence of ice, and snow or frozen ground, the acquired surface soil moisture products always have gaps in many areas. Therefore, an effective strategy to reconstruct the missing data in the surface soil moisture product is required to improve the spatiotemporal integrity of the SM products."
+            ],
+            "research objective": [
+                "Considering the critical role of spatio-temporally continuous surface soil moisture data and the capability of the machine learning method, this study attempts to generate a long-term surface soil moisture dataset at the global scale with spatiotemporal continuity. The main objectives are: (1) to develop a surface soil moisture reconstruction model using the Random Forest algorithm based on the correlation between surface soil moisture and various influencing factors of multiple surface environmental variables; (2) to generate a global spatiotemporal continuous daily gap-free surface soil moisture dataset from 2002 to 2020 by reconstructing the missing soil moisture data in the NN-SM product; (3) to demonstrate the reliability of the reconstructed gap-free surface soil moisture product by comparison with in situ observations."
+            ],
+            "challenges": [
+                "However, soil moisture products produced from satellite observations have data gaps due to the limited capabilities of satellite orbit/swath and retrieval algorithms, which limit the regional and global applications of soil moisture data in hydrology and agriculture studies. The fractional number of valid observations in GDSMFD is 67.2%, and the fractional number of valid observations was low in high-altitude and high-latitude regions. This phenomenon makes it difficult to achieve spatial continuity in these surface soil moisture datasets and greatly hinders subsequent applications. Furthermore, the data gaps vary with time and locations, making it difficult to analyze surface soil moisture characteristics in specific regions and time periods."
+            ],
+            "methods": [
+                "The workflow of our study method is shown in Figure 1. The overall structure of this study is divided into three parts: (1) selection of feature variables that are strongly associated with surface soil moisture and can serve as independent variables for the surface soil moisture gap-filling model; (2) model training and application to establish the surface soil moisture gap-filling model by training a machine learning algorithm to identify the relationship between surface soil moisture and other independent environmental features on a pixel-by-pixel basis to generate the gap-free SM dataset at the global scale (special pixels were excluded, e.g., water, snow, ice, frozen soils or others); and (3) validation of the results by comparison with the in situ observations to illustrate the reliability of the reconstructed surface soil moisture dataset."
+            ],
+            "dataset": [
+                "The gap-filling method was applied to the NN-SM surface soil moisture product, which has a fraction of data gaps of around 50% globally on a multi-year average. A global daily gap-free surface soil moisture dataset from 2002 to 2020 was then generated. The accuracy of the reconstructed surface soil moisture dataset was evaluated using in situ observations of surface soil moisture at 12 sites from the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network."
+            ],
+            "findings": [
+                "The reconstructed values of several sub-regions after manually eliminating the original values were cross-verified with the original data, and this clearly demonstrated the reliability of the reconstruction method with the correlation coefficient (R) ranging between 0.770 and 0.918, the Root Mean Square Error (RMSE) between 0.057 and 0.082 m3/m3, the unbiased Root Mean Square Error (ubRMSE) between 0.053 and 0.081 m3/m3, and Bias between −0.012 and 0.008 m3/m3. The results showed good accuracy in terms of R (0.610), RMSE (0.067 m3/m3), ubRMSE (0.045 m3/m3), and Bias (0.031 m3/m3). Overall, the reconstructed surface soil moisture dataset retained the characteristics of the NN-SM product, such as high accuracy and good spatiotemporal pattern."
+            ],
+            "backgroundCn": [
+                "土壤湿度（SM）被认为是水文学、生态学、气象学和土壤科学中最重要的因素之一。土壤湿度数据主要通过三种方法获得：现场观测、陆面模型模拟和卫星遥感观测。近年来，随着空间技术的不断发展，卫星遥感观测已成为获取区域和全球尺度土壤湿度产品的重要手段之一。基于遥感的土壤湿度通常被称为表层土壤水分（SSM），指的是表层（一般深度小于5厘米）的体积土壤水分。在本研究中，表层土壤湿度产品来自土壤湿度主动被动（SMAP）卫星，已有研究表明其准确性最高，均方根误差（ubRMSE）接近0.04 m3/m3。然而，它的时间覆盖相对较短，仅从2015年至今。为了提高遥感表层土壤湿度的准确性和时间覆盖，已经采取了融合不同卫星数据的努力。然而，由于卫星轨道、射频干扰、植被干扰、冰雪或冻土的存在，获取的表层土壤湿度产品在许多地区总是存在缺口。因此，需要一种有效的策略来重建表层土壤湿度产品中的缺失数据，以提高土壤湿度产品的时空完整性。"
+            ],
+            "research objectiveCn": [
+                "考虑到时空连续的表层土壤湿度数据的重要性以及机器学习方法的能力，本研究旨在生成一个具有时空连续性的全球范围内的长期表层土壤湿度数据集。主要目标包括：(1) 基于表层土壤湿度与多种表面环境变量的影响因素之间的相关性，使用随机森林算法开发表层土壤湿度重建模型；(2) 通过重建NN-SM产品中缺失的土壤湿度数据，生成2002年至2020年的全球时空连续的每日无缺失表层土壤湿度数据集；(3) 通过与现场观测数据的比较，验证重建的无缺失表层土壤湿度产品的可靠性。"
+            ],
+            "challengesCn": [
+                "然而，由卫星观测产生的土壤湿度产品由于卫星轨道/扫描和反演算法的有限能力，存在数据缺口，这限制了土壤湿度数据在水文学和农业研究中的区域和全球应用。GDSMFD中有效观测的分数为67.2%，而在高海拔和高纬度地区有效观测的分数较低。这一现象使得在这些表层土壤湿度数据集中实现空间连续性变得困难，并极大地阻碍了后续应用。此外，数据缺口随时间和地点变化，使得在特定区域和时间段分析表层土壤湿度特征变得困难。"
+            ],
+            "methodsCn": [
+                "我们研究方法的工作流程如图1所示。本研究的整体结构分为三个部分：（1）选择与表层土壤湿度强相关的特征变量，这些变量可以作为表层土壤湿度缺口填补模型的自变量；（2）模型训练和应用，通过训练机器学习算法，建立表层土壤湿度缺口填补模型，以识别表层土壤湿度与其他独立环境特征之间的关系，从而在全球范围内生成无缺口的土壤湿度数据集（特殊像素被排除，例如水体、雪、冰、冻土或其他）；（3）通过与现场观测结果的比较来验证结果，以说明重建的表层土壤湿度数据集的可靠性。"
+            ],
+            "datasetCn": [
+                "采用缺口填补方法对NN-SM表层土壤湿度产品进行了处理，该产品在多年的平均值上全球数据缺口约为50%。随后生成了一个从2002年到2020年的全球日常无缺口表层土壤湿度数据集。通过使用国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的12个站点的现场土壤湿度观测数据，对重建的表层土壤湿度数据集的准确性进行了评估。"
+            ],
+            "findingsCn": [
+                "经过手动消除原始值后，对多个子区域的重建值进行了交叉验证，并清楚地证明了重建方法的可靠性，相关系数（R）范围在0.770到0.918之间，均方根误差（RMSE）在0.057到0.082 m3/m3之间，无偏均方根误差（ubRMSE）在0.053到0.081 m3/m3之间，偏差在−0.012到0.008 m3/m3之间。结果显示，在R（0.610）、RMSE（0.067 m3/m3）、ubRMSE（0.045 m3/m3）和偏差（0.031 m3/m3）方面具有良好的准确性。总体而言，重建的表层土壤湿度数据集保留了NN-SM产品的特征，如高准确性和良好的时空模式。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Are in situ observations used to validate the reconstructed surface soil moisture dataset?",
+                "QuestionCn": "原位观测是否用于验证重建的表层土壤湿度数据集？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Does the reconstructed surface soil moisture dataset cover the period from 2002 to 2020?",
+                "QuestionCn": "重建的表层土壤湿度数据集是否覆盖2002年至2020年期间？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Which machine learning method is more suitable for reconstructing surface soil moisture datasets: Random Forest, Support Vector Machines, or Neural Networks?",
+                "QuestionCn": "哪种机器学习方法更适合重建表层土壤湿度数据集：随机森林、支持向量机还是神经网络？",
+                "AnswerEn": "Random Forest",
+                "AnswerCn": "随机森林",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What is the primary method used for reconstructing missing data in soil moisture datasets?",
+                "QuestionCn": "在土壤湿度数据集中，重建缺失数据的主要方法是什么？",
+                "AnswerEn": "Random Forest algorithm",
+                "AnswerCn": "随机森林算法",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Where are the in situ observations used for validating the soil moisture dataset collected from?",
+                "QuestionCn": "用于验证土壤湿度数据集的原位观测数据来自哪里？",
+                "AnswerEn": "International Soil Moisture Network, Long-Term Agroecosystem Research network",
+                "AnswerCn": "国际土壤湿度网络，长期农业生态系统研究网络",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenges affect the spatial continuity of satellite-based soil moisture data products?",
+                "QuestionCn": "影响卫星土壤湿度数据产品空间连续性的挑战有哪些？",
+                "AnswerEn": "Data gaps",
+                "AnswerCn": "数据缺口",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method that effectively addresses gaps in satellite-derived soil moisture datasets?",
+                "QuestionCn": "您能否提供一个有效解决卫星衍生土壤湿度数据集缺口的数据收集方法的例子？",
+                "AnswerEn": "A data collection method that effectively addresses gaps in satellite-derived soil moisture datasets is the use of a machine learning algorithm, such as the Random Forest algorithm, which reconstructs missing data by leveraging the correlation between soil moisture and other environmental variables.",
+                "AnswerCn": "一种有效解决卫星衍生土壤湿度数据集缺口的数据收集方法是使用机器学习算法，例如随机森林算法，通过利用土壤湿度与其他环境变量之间的相关性来重建缺失数据。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge faced when using satellite remote sensing for soil moisture data collection, and how has it been addressed?",
+                "QuestionCn": "使用卫星遥感进行土壤湿度数据收集时面临的一个挑战是什么，以及如何解决这个问题？",
+                "AnswerEn": "A challenge in using satellite remote sensing for soil moisture data collection is the presence of data gaps due to limitations in satellite orbit and retrieval algorithms. This challenge has been addressed by developing a reconstruction model using machine learning techniques to generate a spatiotemporally continuous dataset.",
+                "AnswerCn": "使用卫星遥感进行土壤湿度数据收集的一大挑战是由于卫星轨道和检索算法的限制而导致的数据缺口。为了解决这一挑战，开发了一种重建模型，利用机器学习技术生成时空连续的数据集。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you provide an example of how datasets are validated using ground observations in soil moisture research?",
+                "QuestionCn": "您能否提供一个例子，说明在土壤湿度研究中如何使用地面观测来验证数据集？",
+                "AnswerEn": "In soil moisture research, datasets are validated using ground observations by comparing the reconstructed soil moisture values with in situ observations from networks such as the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network, ensuring the dataset's accuracy and reliability.",
+                "AnswerCn": "在土壤湿度研究中，数据集通过与国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的现场观测进行比较，验证重建的土壤湿度值与现场观测值的一致性，从而确保数据集的准确性和可靠性。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What techniques are used to address data gaps in satellite-derived soil moisture datasets?",
+                "QuestionCn": "用于解决卫星衍生土壤湿度数据集中的数据缺口的技术有哪些？",
+                "AnswerEn": "Random Forest algorithm, relationship between surface soil moisture and other independent environmental features",
+                "AnswerCn": "随机森林算法，地表土壤湿度与其他独立环境特征之间的关系",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What factors are considered when developing a model to reconstruct surface soil moisture data?",
+                "QuestionCn": "在开发重建表层土壤湿度数据的模型时，需要考虑哪些因素？",
+                "AnswerEn": "vegetation index, surface temperature, precipitation, land cover type, geographical location",
+                "AnswerCn": "植被指数、地表温度、降水量、土地覆盖类型、地理位置",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the temporal coverage of the global daily gap-free surface soil moisture dataset?",
+                "QuestionCn": "全球日间无缝表层土壤湿度数据集的时间覆盖范围是什么？",
+                "AnswerEn": "2002-2020",
+                "AnswerCn": "2002-2020",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the spatial resolution of the reconstructed global surface soil moisture dataset?",
+                "QuestionCn": "重建的全球表层土壤湿度数据集的空间分辨率是多少？",
+                "AnswerEn": "36 km",
+                "AnswerCn": "36公里",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the unbiased Root Mean Square Error (ubRMSE) range achieved in the reconstructed surface soil moisture dataset?",
+                "QuestionCn": "重建的表层土壤湿度数据集所达到的无偏根均方误差（ubRMSE）范围是多少？",
+                "AnswerEn": "0.053-0.081 m3/m3",
+                "AnswerCn": "0.053-0.081 立方米/立方米",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does 'spatiotemporal continuity' mean in the context of soil moisture datasets?",
+                "QuestionCn": "在土壤湿度数据集的上下文中，“时空连续性”指的是数据在时间和空间上的一致性和连贯性。",
+                "AnswerEn": "In the context of soil moisture datasets, 'spatiotemporal continuity' refers to the consistent and uninterrupted coverage of soil moisture data across both space and time. This involves generating a dataset that has no gaps in the data, ensuring that soil moisture information is available for every location and every time point within the specified range, which is crucial for comprehensive analysis in hydrology, ecology, and agriculture.",
+                "AnswerCn": "在土壤湿度数据集的背景下，“时空连续性”指的是在空间和时间上对土壤湿度数据的一致和不间断的覆盖。这涉及生成一个没有数据缺口的数据集，确保在指定范围内每个位置和每个时间点都有土壤湿度信息可用，这对于水文学、生态学和农业的综合分析至关重要。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are some challenges associated with soil moisture data collection from satellite observations?",
+                "QuestionCn": "从卫星观测中收集土壤湿度数据面临的一些挑战包括：",
+                "AnswerEn": "Challenges associated with soil moisture data collection from satellite observations include gaps in data due to limitations of satellite orbit, retrieval algorithms, and environmental interferences such as vegetation, ice, snow, and frozen ground. These gaps hinder the spatiotemporal continuity of datasets, complicating their use in regional and global hydrology and agriculture studies.",
+                "AnswerCn": "从卫星观测中收集土壤湿度数据所面临的挑战包括由于卫星轨道、反演算法以及环境干扰（如植被、冰雪和冻土）造成的数据缺口。这些缺口妨碍了数据集的时空连续性， complicating 了它们在区域和全球水文学及农业研究中的应用。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do the data collection methods for surface soil moisture using in situ observations compare to those using satellite remote sensing observations in terms of spatiotemporal coverage and data gaps?",
+                "QuestionCn": "地面土壤湿度的实地观测数据收集方法与卫星遥感观测方法在时空覆盖和数据缺口方面有何比较？",
+                "AnswerEn": "In situ observations provide localized, high-accuracy soil moisture data but lack broad spatial coverage. Satellite remote sensing observations offer extensive spatial coverage and continuous monitoring over time. However, satellite data often have gaps due to limitations in satellite orbit, environmental factors, and retrieval algorithms, impacting their spatiotemporal integrity.",
+                "AnswerCn": "原位观测提供了局部的、高精度的土壤湿度数据，但缺乏广泛的空间覆盖。卫星遥感观测则提供了广泛的空间覆盖和持续的时间监测。然而，由于卫星轨道、环境因素和反演算法的限制，卫星数据往往存在间隙，影响其时空完整性。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are the differences in challenges faced when generating a global surface soil moisture dataset using a Random Forest reconstruction model compared to relying solely on satellite remote sensing data?",
+                "QuestionCn": "使用随机森林重建模型生成全球表层土壤湿度数据集与仅依赖卫星遥感数据相比，面临的挑战有哪些不同？",
+                "AnswerEn": "Generating a global dataset with a Random Forest reconstruction model addresses data gaps by using correlations with other environmental variables, improving spatiotemporal continuity. In contrast, relying solely on satellite data often results in significant data gaps due to satellite orbit limitations and environmental interferences, which hinder comprehensive global applications.",
+                "AnswerCn": "生成一个全球数据集的随机森林重建模型通过利用其他环境变量之间的相关性来解决数据缺口问题，从而改善时空连续性。相比之下，单靠卫星数据往往由于卫星轨道限制和环境干扰而导致显著的数据缺口，这妨碍了全面的全球应用。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "What can be inferred about the effectiveness of machine learning techniques like the Random Forest algorithm in reconstructing missing data in soil moisture datasets?",
+                "QuestionCn": "可以推断出，像随机森林算法这样的机器学习技术在重建土壤湿度数据集中的缺失数据方面是有效的。",
+                "AnswerEn": "The use of the Random Forest algorithm for reconstructing missing data in soil moisture datasets suggests its potential in enhancing spatiotemporal integrity by identifying relationships between soil moisture and various environmental variables on a pixel-by-pixel basis. This method demonstrated reliability and accuracy, as indicated by correlation coefficients and RMSE values, in creating a gap-free dataset.",
+                "AnswerCn": "随机森林算法在土壤湿度数据集中重建缺失数据的应用表明，它在通过识别土壤湿度与各种环境变量之间的关系来增强时空完整性方面具有潜力，且是逐像素进行的。这种方法在创建无缺口数据集方面表现出可靠性和准确性，相关系数和均方根误差（RMSE）值均表明了这一点。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What underlying trends might be observed in soil moisture data when integrating in situ observations with satellite remote sensing, and how does this integration enhance data accuracy?",
+                "QuestionCn": "在将地面观测与卫星遥感相结合时，可能观察到土壤湿度数据中的一些潜在趋势，这种整合能够提高数据的准确性。",
+                "AnswerEn": "Integrating in situ observations with satellite remote sensing data may reveal trends that enhance spatial and temporal coverage, filling gaps left by satellite data alone. This integration allows for cross-validation and increases accuracy, as demonstrated by improved correlation and reduced errors (RMSE, ubRMSE) when comparing reconstructed values with original in situ data.",
+                "AnswerCn": "将现场观测与卫星遥感数据相结合，可以揭示趋势，从而增强空间和时间覆盖，填补仅靠卫星数据留下的空白。这种整合允许交叉验证并提高准确性，正如在比较重建值与原始现场数据时，相关性改善和误差（RMSE，ubRMSE）减少所证明的那样。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What causes data gaps in surface soil moisture datasets obtained from satellite observations?",
+                "QuestionCn": "导致从卫星观测获得的表层土壤湿度数据集出现数据缺口的原因是什么？",
+                "AnswerEn": "Data gaps in surface soil moisture datasets from satellite observations are caused by the limited capabilities of satellite orbit/swath, retrieval algorithms, and environmental interferences such as vegetation, ice, or snow, which restrict the availability of continuous data coverage.",
+                "AnswerCn": "卫星观测的表层土壤湿度数据集中的数据缺口是由于卫星轨道/扫描的有限能力、反演算法的局限性以及植被、冰雪等环境干扰造成的，这些因素限制了连续数据覆盖的可用性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What potential outcomes can arise from the availability of a global spatiotemporal continuous soil moisture dataset for hydrology and agriculture studies?",
+                "QuestionCn": "全球时空连续土壤湿度数据集的可用性可能会对水文学和农业研究产生以下潜在结果：",
+                "AnswerEn": "The availability of a global spatiotemporal continuous soil moisture dataset can significantly enhance regional and global applications in hydrology and agriculture studies. It provides a comprehensive view of soil moisture variations, supporting better water resource management, improving understanding of land-atmosphere interactions, and facilitating more accurate climatic and hydrological modeling. The dataset's continuity and accuracy also enable more precise monitoring of soil moisture dynamics over time and space.",
+                "AnswerCn": "全球时空连续土壤湿度数据集的可用性可以显著增强水文学和农业研究中的区域和全球应用。它提供了土壤湿度变化的全面视角，支持更好的水资源管理，改善对陆气相互作用的理解，并促进更准确的气候和水文建模。该数据集的连续性和准确性还使得对土壤湿度动态在时间和空间上的更精确监测成为可能。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the primary objective of developing a surface soil moisture reconstruction model using a machine learning algorithm in the context of spatio-temporal data continuity?",
+                "QuestionCn": "在时空数据连续性的背景下，开发表层土壤湿度重建模型的主要目标是利用机器学习算法。",
+                "AnswerEn": "The primary objective is to generate a long-term surface soil moisture dataset at the global scale with spatiotemporal continuity by reconstructing missing data in the soil moisture product, which enhances the dataset's reliability for hydrological and agricultural applications.",
+                "AnswerCn": "主要目标是通过重建土壤湿度产品中的缺失数据，生成一个具有时空连续性的全球范围长期表层土壤湿度数据集，从而提高该数据集在水文和农业应用中的可靠性。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Why is it important to validate reconstructed soil moisture datasets with in situ observations from networks like ISMN and LTAR?",
+                "QuestionCn": "为什么使用像ISMN和LTAR这样的网络的现场观测数据来验证重建的土壤湿度数据集是重要的？",
+                "AnswerEn": "Validation with in situ observations is crucial to demonstrate the reliability and accuracy of the reconstructed gap-free surface soil moisture product, ensuring its applicability for regional and global hydrology and ecology studies.",
+                "AnswerCn": "与原位观测的验证对于展示重建的无缝表层土壤湿度产品的可靠性和准确性至关重要，确保其在区域和全球水文学及生态学研究中的适用性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What procedural steps are involved in developing a soil moisture reconstruction model using machine learning?",
+                "QuestionCn": "开发土壤湿度重建模型的程序步骤包括以下几个方面：\n\n1. **数据收集**：收集与土壤湿度相关的各种数据，包括气象数据（如降水、温度、湿度）、土壤特性（如土壤类型、土壤深度）和地理信息（如地形、土地利用）。\n\n2. **数据预处理**：对收集到的数据进行清洗和整理，包括处理缺失值、去除异常值、标准化或归一化数据等。\n\n3. **特征选择**：根据相关性分析和领域知识选择对土壤湿度有影响的特征，以减少模型复杂性和提高模型性能。\n\n4. **数据划分**：将数据集划分为训练集、验证集和测试集，以便于模型的训练和评估。\n\n5. **模型选择**：选择适合的机器学习算法（如线性回归、决策树、随机森林、支持向量机、神经网络等）来构建土壤湿度重建模型。\n\n6. **模型训练**：使用训练集对选择的模型进行训练，调整模型参数以优化性能。\n\n7. **模型验证**：在验证集上评估模型的性能，使用适当的评估指标（如均方误差、决定系数等）来判断模型的准确性。\n\n8. **模型调优**：根据验证结果进行超参数调优，可能需要使用交叉验证等技术来进一步提高模型性能。\n\n9. **模型测试**：在测试集上评估最终模型的性能，确保模型在未见数据上的泛化能力。\n\n10. **结果分析与可视化**：分析模型的输出结果，使用可视化工具展示土壤湿度的时空变化特征。\n\n11. **模型部署**：将训练好的模型部署到实际应用中，进行实时土壤湿度监测或预测。\n\n12. **模型维护与更新**：定期更新模型以适应新的数据和环境变化，确保模型的长期有效性。",
+                "AnswerEn": "The process involves selecting feature variables that strongly associate with surface soil moisture, training a machine learning algorithm to identify relationships between soil moisture and these features on a pixel-by-pixel basis, and applying the model to generate a gap-free soil moisture dataset. Validation is then conducted by comparing the reconstructed data with in situ observations to ensure reliability.",
+                "AnswerCn": "该过程涉及选择与表层土壤湿度强相关的特征变量，训练机器学习算法以识别土壤湿度与这些特征之间的关系，采用逐像素的方式进行建模，并应用该模型生成无缝土壤湿度数据集。随后，通过将重建的数据与现场观测进行比较来进行验证，以确保其可靠性。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How can the accuracy of a global surface soil moisture dataset be evaluated using in situ observations?",
+                "QuestionCn": "如何使用地面观测数据评估全球表层土壤湿度数据集的准确性？",
+                "AnswerEn": "The accuracy can be evaluated by comparing the reconstructed surface soil moisture dataset with in situ observations from networks such as the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network. Metrics such as correlation coefficient, Root Mean Square Error (RMSE), unbiased RMSE, and Bias are used to assess the dataset's reliability.",
+                "AnswerCn": "准确性可以通过将重建的表层土壤湿度数据集与国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的现场观测进行比较来评估。使用相关系数、均方根误差（RMSE）、无偏均方根误差和偏差等指标来评估数据集的可靠性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What methodological challenges need to be addressed when reconstructing missing data in surface soil moisture products?",
+                "QuestionCn": "在重建表层土壤湿度产品中的缺失数据时，需要解决哪些方法论挑战？",
+                "AnswerEn": "Challenges include dealing with data gaps due to satellite observation limitations, such as orbit/swath constraints and retrieval algorithm issues. Additionally, maintaining spatial continuity in regions with low fractional valid observations, such as high-altitude and high-latitude areas, is crucial. The varying nature of data gaps over time and location also complicates the analysis of soil moisture characteristics.",
+                "AnswerCn": "挑战包括由于卫星观测限制（如轨道/扫描约束和反演算法问题）导致的数据缺口。此外，在低有效观测比例的区域（如高海拔和高纬度地区）维持空间连续性也至关重要。数据缺口在时间和地点上的变化特性也使得土壤湿度特征的分析变得复杂。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What machine learning techniques enable the reconstruction of missing soil moisture data in datasets for improved spatiotemporal integrity?",
+                "QuestionCn": "哪些机器学习技术可以实现缺失土壤湿度数据的重建，以提高时空完整性？",
+                "AnswerEn": "The use of the Random Forest algorithm facilitates the reconstruction of missing soil moisture data by identifying the relationship between surface soil moisture and other independent environmental features on a pixel-by-pixel basis, thereby generating a global gap-free soil moisture dataset.",
+                "AnswerCn": "随机森林算法的使用通过识别表层土壤湿度与其他独立环境特征之间的关系，逐像素地重建缺失的土壤湿度数据，从而生成全球无缝的土壤湿度数据集。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "In what ways does the integration of in situ observations enhance the validation and accuracy of soil moisture datasets?",
+                "QuestionCn": "现场观测的整合如何增强土壤湿度数据集的验证和准确性？",
+                "AnswerEn": "The integration of in situ observations enhances the validation and accuracy of soil moisture datasets by providing reference data for accuracy assessment, as demonstrated through comparisons with in situ observations from networks like the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network, resulting in reliable reconstruction with high correlation and low error metrics.",
+                "AnswerCn": "现场观测的整合通过提供准确性评估的参考数据，增强了土壤湿度数据集的验证和准确性，正如通过与国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的现场观测进行比较所示，最终实现了高相关性和低误差指标的可靠重建。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might there be challenges in achieving spatial continuity in surface soil moisture datasets despite advancements in remote sensing technologies?",
+                "QuestionCn": "尽管遥感技术取得了进步，但在实现表层土壤湿度数据集的空间连续性方面可能仍面临挑战。",
+                "AnswerEn": "Challenges in achieving spatial continuity in surface soil moisture datasets arise due to data gaps caused by limited satellite orbit capabilities, retrieval algorithm limitations, and environmental interferences such as vegetation, ice, and snow. These factors result in incomplete datasets that hinder regional and global applications in hydrology and agriculture.",
+                "AnswerCn": "在表层土壤湿度数据集的空间连续性实现中，面临的挑战源于数据缺口，这些缺口是由于卫星轨道能力有限、反演算法的局限性以及植被、冰雪等环境干扰造成的。这些因素导致数据集不完整，从而妨碍了在水文学和农业等领域的区域和全球应用。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What could be the reasons for using machine learning methods like the Random Forest algorithm in reconstructing spatiotemporal soil moisture datasets?",
+                "QuestionCn": "使用机器学习方法如随机森林算法重建时空土壤湿度数据集的原因可能包括：",
+                "AnswerEn": "Machine learning methods like the Random Forest algorithm are used for reconstructing spatiotemporal soil moisture datasets due to their capability to model complex relationships between soil moisture and various environmental variables. These methods help fill data gaps by identifying patterns and correlations on a pixel-by-pixel basis, ensuring a more comprehensive dataset.",
+                "AnswerCn": "机器学习方法，如随机森林算法，被用于重建时空土壤湿度数据集，因为它们能够建模土壤湿度与各种环境变量之间的复杂关系。这些方法通过识别像素级的模式和相关性，帮助填补数据空缺，从而确保数据集更加全面。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What challenges do you perceive in achieving spatial continuity in global soil moisture datasets, particularly in high-altitude and high-latitude regions?",
+                "QuestionCn": "在全球土壤湿度数据集实现空间连续性方面，特别是在高海拔和高纬度地区，您认为面临哪些挑战？",
+                "AnswerEn": "Achieving spatial continuity in global soil moisture datasets is challenged by data gaps due to satellite orbit limitations, radio frequency interference, and environmental factors such as vegetation and frozen ground. These issues are particularly pronounced in high-altitude and high-latitude regions, where the fractional number of valid observations is lower, making it difficult to maintain spatial continuity.",
+                "AnswerCn": "在全球土壤湿度数据集中，实现空间连续性面临挑战，原因是由于卫星轨道限制、无线电频率干扰以及环境因素（如植被和冻土）导致的数据缺口。这些问题在高海拔和高纬度地区尤为明显，在这些地区有效观测的比例较低，使得维持空间连续性变得困难。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "In your opinion, what are the critical factors to consider when developing a machine learning model for soil moisture data reconstruction?",
+                "QuestionCn": "在开发土壤湿度数据重建的机器学习模型时，需要考虑的关键因素包括：",
+                "AnswerEn": "Critical factors to consider include selecting feature variables strongly associated with soil moisture, ensuring the model can handle spatial and temporal variability, and validating the model with in situ observations. Excluding special pixels, such as water, snow, and ice, is also important to improve the model's applicability and accuracy in generating a gap-free soil moisture dataset.",
+                "AnswerCn": "关键因素包括选择与土壤湿度强相关的特征变量，确保模型能够处理空间和时间的变异性，并通过现场观测验证模型。排除特殊像素，如水、雪和冰，也很重要，以提高模型在生成无缝土壤湿度数据集中的适用性和准确性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I can't figure out why the soil moisture data collection from satellites results in data gaps and how these gaps impact the use of the data in hydrology and agriculture studies.",
+                "QuestionCn": "我无法弄清楚为什么卫星收集的土壤湿度数据会出现数据缺口，这些缺口如何影响在水文学和农业研究中使用这些数据。",
+                "AnswerEn": "Soil moisture data collected from satellites have gaps due to the limited capabilities of satellite orbit/swath and retrieval algorithms. These gaps, which occur due to factors like radio frequency interference, vegetation interference, and the presence of ice or snow, limit the regional and global application of soil moisture data in hydrology and agriculture studies.",
+                "AnswerCn": "从卫星收集的土壤湿度数据存在间隙，这些间隙是由于卫星轨道/扫描范围和检索算法的有限能力造成的。这些间隙的出现是由于无线电频率干扰、植被干扰以及冰雪的存在等因素，限制了土壤湿度数据在水文学和农业研究中的区域和全球应用。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "I don’t understand how machine learning can be used to reconstruct missing surface soil moisture data to ensure spatiotemporal continuity.",
+                "QuestionCn": "我不明白机器学习如何用于重建缺失的表层土壤湿度数据，以确保时空连续性。",
+                "AnswerEn": "Machine learning, particularly the Random Forest algorithm, is used to reconstruct missing surface soil moisture data by identifying the relationship between surface soil moisture and various influencing factors of multiple surface environmental variables on a pixel-by-pixel basis. This method generates a spatiotemporally continuous, gap-free dataset by using these correlations.",
+                "AnswerCn": "机器学习，特别是随机森林算法，用于通过识别表层土壤湿度与多种表面环境变量的影响因素之间的关系，重建缺失的表层土壤湿度数据。这种方法通过利用这些相关性生成一个时空连续、无缺口的数据集。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I'm not sure why evaluating the reconstructed soil moisture dataset's accuracy with in situ observations is important.",
+                "QuestionCn": "我不确定为什么使用现场观测来评估重建的土壤湿度数据集的准确性很重要。",
+                "AnswerEn": "Evaluating the reconstructed soil moisture dataset's accuracy with in situ observations is important to demonstrate the reliability of the reconstructed dataset. This comparison helps to validate the results and ensure that the reconstructed values are accurate and maintain the characteristics of the original dataset, such as high accuracy and good spatiotemporal pattern.",
+                "AnswerCn": "评估重建土壤湿度数据集的准确性与现场观测数据的比较非常重要，以证明重建数据集的可靠性。这种比较有助于验证结果，并确保重建值的准确性，同时保持原始数据集的特征，例如高准确性和良好的时空模式。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please explore how machine learning algorithms can be utilized to improve the spatiotemporal continuity of soil moisture datasets by addressing data gaps due to satellite observation limitations.",
+                "QuestionCn": "请探讨如何利用机器学习算法来改善土壤湿度数据集的时空连续性，以解决由于卫星观测限制而导致的数据缺口。",
+                "AnswerEn": "The Random Forest algorithm was employed to reconstruct a global spatiotemporal continuous daily gap-free surface soil moisture dataset from 2002 to 2020. The algorithm utilizes the correlation between surface soil moisture and various influencing factors of multiple surface environmental variables, effectively addressing data gaps caused by satellite observation limitations. This approach allows for the generation of a dataset with improved spatiotemporal coverage.",
+                "AnswerCn": "随机森林算法被用于重建2002年至2020年的全球时空连续日间无缝表层土壤湿度数据集。该算法利用表层土壤湿度与多种表面环境变量的影响因素之间的相关性，有效解决了由于卫星观测限制导致的数据缺口。此方法能够生成具有更好时空覆盖的数据集。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "Please investigate the challenges associated with using remote sensing data for surface soil moisture measurement, particularly in high-altitude and high-latitude regions.",
+                "QuestionCn": "请调查在高海拔和高纬度地区使用遥感数据进行表层土壤湿度测量所面临的挑战。",
+                "AnswerEn": "Remote sensing data for surface soil moisture measurement can have gaps due to the satellite orbit/swath and retrieval algorithms, which are particularly problematic in high-altitude and high-latitude regions. These gaps hinder the spatial continuity of datasets and complicate the analysis of soil moisture characteristics over specific regions and time periods.",
+                "AnswerCn": "遥感数据在表层土壤湿度测量中可能由于卫星轨道/扫描和反演算法而出现缺口，这在高海拔和高纬度地区尤为明显。这些缺口阻碍了数据集的空间连续性，并使得对特定区域和时间段的土壤湿度特征分析变得复杂。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Please describe the data collection methods used to validate reconstructed surface soil moisture datasets and evaluate their accuracy.",
+                "QuestionCn": "请描述用于验证重建表层土壤湿度数据集和评估其准确性的数据收集方法。",
+                "AnswerEn": "Reconstructed surface soil moisture datasets were validated using in situ observations from the International Soil Moisture Network (ISMN) and the Long-Term Agroecosystem Research (LTAR) network. These ground-based observations were used to evaluate the accuracy of the datasets, yielding correlation coefficients ranging between 0.770 and 0.918, and demonstrating good accuracy in terms of RMSE, ubRMSE, and Bias.",
+                "AnswerCn": "重建的表层土壤湿度数据集使用国际土壤湿度网络（ISMN）和长期农业生态系统研究（LTAR）网络的现场观测数据进行了验证。这些基于地面的观测数据用于评估数据集的准确性，相关系数范围在0.770到0.918之间，且在均方根误差（RMSE）、无偏均方根误差（ubRMSE）和偏差（Bias）方面表现出良好的准确性。",
+                "Level": "C5(Evaluating)"
+            }
+        ]
+    }
+}

@@ -1,0 +1,484 @@
+{
+    "id": "7cdfd06c-0f2e-4ebb-a69d-54780b89951e",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Antarctic sea ice daily 1 km cloud-reconstructed albedo dataset (2012-2021)",
+            "titleCn": "南极海冰逐日1km云重建反照率数据集（2012-2021）",
+            "description": "The Antarctic sea ice cloud-reconstructed albedo dataset, with spatial resolution of 1 km and temporal resolution of 1 day, covering the period from January 2012 to December 2021. Due to the snow and ice albedo feedback mechanism, the Antarctic sea ice albedo plays a crucial role in regulating the Earth's radiation budget and controlling polar climate change. The production of this dataset uses the VIIRS 1 km surface reflectance product (VNP09GA) as one of the main input data. The Multiband Reflectance Iteration algorithm (MBRI) is used for the retrieval of sea ice albedo under clear-sky condition, and the sea ice albedo under the cloudy condition is reconstructed by combining spatiotemporal filtering and physical model. Validation compared with the sea ice albedo measurements from two automatic weather stations of the Baseline Surface Radiation Network (BSRN) suggests that the biases at the two stations are -0.0221 and -0.0363, and root mean square error (RMSE) values are 0.0664 and 0.0754. These results indicate that this dataset exhibits superior spatiotemporal resolution and accuracy compared to existing products. This dataset is stored in GeoTIFF format, with the variable being the true albedo of sea ice, also known as blue-sky albedo. In addition, multiband reflectance data covering the shortwave range was used in the calculation process, so the dataset represents the broadband albedo of the shortwave range. The albedo is a dimensionless parameter and needs to be multiplied by a scale factor of 0.0001 when used. This dataset adopts SIN projection, with a longitude range of 180 ° W~180 ° E and a latitude range of 50 ° S~80 ° S, covering a total of 53 tiles (v14: h06~h29; v15: h09~h26; v16: h11~h17, h21~h24). The v16 tiles encompass portions of the Antarctic ice sheet and these areas need to be cropped when using the data. The ocean water area is set to a filling value of -1. This data can be used for evaluating and predicting the radiation budget and loss status of Antarctic sea ice, as well as research on climate change and other aspects.",
+            "descriptionCn": "南极海冰云重建反照率数据集，空间分辨率为1 km，时间分辨率为1天，时间覆盖范围为2012年1月~2021年12月。由于冰雪反照率反馈机制的存在，使得南极海冰反照率在调节地球辐射收支和控制极地气候变化等方面起着至关重要的作用。生产过程中以VIIRS的1 km地表反射率（VNP09GA）产品作为主要输入数据之一，采用多波段反射率迭代算法（Multiband Reflectance Iteration Algorithm，MBRI）反演得到晴空下的海冰反照率，并通过基于时空滤波和物理模型结合的方法对云空条件下的海冰反照率进行重建，最终得到完整的无云空缺的南极海冰反照率数据集。与BSRN两个气象站点的观测结果的对比表明，本数据集的平均偏差（Bias）为-0.0221和-0.0363，均方根误差（RMSE）为0.0664和0.0754，在时空分辨率和精度上均优于国际上的同类产品。本数据集以GeoTIFF格式存储，变量为海冰的真实反照率，或称为蓝空反照率。此外，计算过程中采用了覆盖短波范围的多波段反射率数据，因此数据集代表着短波范围的宽波段反照率。反照率为无量纲参数，使用时需乘以尺度因子0.0001。本数据集采用正弦（SIN）投影，经度范围为180°W~180°E，纬度范围为50°S~80°S，共覆盖53个tiles（v14：h06~h29；v15：h09~h26；v16：h11~h17，h21~h24），其中v16的tiles包含部分南极冰盖，使用时应将此区域进行裁剪。海水区域设为填充值-1。本数据可以用于南极海冰辐射收支和亏损状态评估及预测，以及气候变化等方面的研究。",
+            "instructions": "File Naming: data is stored in GeoTIFF format, the file name is \"Antarctic_Sea_Ice_Albedo_ {yyyyddd}_ {hv}_v01.tif ”, where yyyy represents year, ddd represents day of the year, hv represents the number of the tile, and v01 represents the version 01. For example, \"Antarctic_Sea_Ice_Albedo_2014270_h18v15_v01. tif\" represents the sea ice albedo data of the h18v15 area on the 270th day of 2014. Data reading method: It can be opened and read using software or computer languages such as ArcGIS, Envi, Python, Matlab, etc.",
+            "instructionsCn": "文件命名：数据以GeoTIFF格式存储，文件名称为“Antarctic_Sea_Ice_Albedo_{yyyyddd}_{hv}_v01.tif”，其中yyyy代表年，ddd代表年积日，hv代表该tile的编号，v01代表版本为01，比如“Antarctic_Sea_Ice_Albedo_2014270_h18v15_v01.tif”代表2014年第270天的h18v15区域的海冰反照率数据。数据读取方式：可使用ArcGIS、Envi、Python、Matlab等软件或语言进行打开和读取。",
+            "east": 180.0,
+            "west": -180.0,
+            "south": -80.0,
+            "north": -50.0,
+            "startTime": "2012-01-19 20:43:08",
+            "endTime": "2021-12-31 20:43:08",
+            "fileSize": 67667332736.0,
+            "cstr": "18406.11.Cryos.tpdc.301171",
+            "doi": "10.11888/Cryos.tpdc.301171",
+            "dataFormat": null,
+            "license": "1"
+        },
+        "authorList": [
+            {
+                "nameCn": "郝卫峰",
+                "nameEn": "HAO Weifeng",
+                "unitEn": "",
+                "unitCn": "武汉大学中国南极测绘研究中心"
+            },
+            {
+                "nameCn": "马超",
+                "nameEn": "MA Chao",
+                "unitEn": "",
+                "unitCn": "武汉大学中国南极测绘研究中心"
+            },
+            {
+                "nameCn": "程青",
+                "nameEn": "CHENG Qing",
+                "unitEn": "",
+                "unitCn": "中国地质大学（武汉）"
+            },
+            {
+                "nameCn": "李斐",
+                "nameEn": "LI Fei",
+                "unitEn": "",
+                "unitCn": "武汉大学中国南极测绘研究中心"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Daily Arctic Sea-Ice Albedo Retrieval With a Multiband Reflectance Iteration Algorithm",
+                "referenceCn": null,
+                "referenceEn": "Cheng, Q., Hao, W.F., Ma, C., Ye, F., Luo, J., & Qu, Y. (2023). Daily Arctic Sea-Ice Albedo Retrieval With a Multiband Reflectance Iteration Algorithm. IEEE Transactions on Geoscience and Remote Sensing. 61, 4302712. https://doi.org/10.1109/TGRS.2023.3323506"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Reconstructing daily snow and ice albedo series for Greenland by coupling spatiotemporal and physics-informed models",
+                "referenceCn": null,
+                "referenceEn": "Ye, F., Cheng, Q., Hao, W.F., Yu, D.Y., Ma, C., Liang, D., & Shen, H.F. (2023). Reconstructing daily snow and ice albedo series for Greenland by coupling spatiotemporal and physics-informed models. International Journal of Applied Earth Observation and Geoinformation. 124, 103519. https://doi.org/10.1016/j.jag.2023.103519"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "冰冻圈",
+                "nameEn": "Cryosphere"
+            },
+            {
+                "nameCn": "遥感",
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "冰冻圈遥感",
+                "nameEn": "Surface Freeze-thaw Cycle/state Remote Sensing"
+            },
+            {
+                "nameCn": "冰冻圈遥感产品",
+                "nameEn": "Cryosphere remote sensing products"
+            },
+            {
+                "nameCn": "反照率反演",
+                "nameEn": "Albedo retrieval"
+            },
+            {
+                "nameCn": "海冰",
+                "nameEn": "Sea Ice"
+            },
+            {
+                "nameCn": "海冰反照率",
+                "nameEn": "Sea ice albedo"
+            },
+            {
+                "nameCn": "遥感技术",
+                "nameEn": "Remote Sensing Technology"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "南极",
+                "keywordEn": "Antarctic"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "2012-2021",
+                "keywordEn": "2012-2021",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "“冰冻圈和极地环境变化关键参数观测与反演”第四课题“极地海冰及其反照率变化的反演方法和产品研制”",
+                "titleEn": "National Key Research and Development Program of China"
+            },
+            {
+                "titleCn": "极地冰雪典型参量数据时空无缝重建与融合方法研究",
+                "titleEn": "Spatial-temporal seamless reconstruction and fusion of polar ice and snow typical quantitative data"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山重点区域30m人类活动参数产品数据集（V1.0）",
+                "titleEn": "Human activity parameters in Qilian Mountain area (V1.0)"
+            },
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山重点区域土地覆盖/利用数据集（2018）",
+                "titleEn": "The land cover/use data in key areas of the Qilian Mountain (2018)"
+            },
+            {
+                "titleCn": "祁连山地区冰川边界（2018）",
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleCn": "祁连山重点区域人类活动数据集 (2018)",
+                "titleEn": "The human activity dataset in key area of Qilian Mountaion (2018)"
+            },
+            {
+                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleCn": "北半球湖冰物候数据集（1978-2018）",
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "The Greenland Ice Sheet (GrIS), the second largest ice sheet on Earth (after the Antarctic Ice Sheet), is particularly sensitive to surface energy balance and sea-level changes. Surface broadband albedo, hereafter referred to as albedo, is defined as the ratio of the reflected solar radiation flux to the incident flux on the surface. In the ice- and snow-covered parts of the Arctic, albedo is a crucial indicator of the surface energy budget. A slight change in snow surface albedo can generate significant feedback on the energy budget of the surface – air system, leading to a substantial fluctuation in the energy flux on the surface of GrIS. Therefore, GrIS’s snow and ice albedo is a critical input parameter for global climate change models. With the rapid development of Earth observation (EO) and information processing technology from the 1980s until the present, the inversion of albedo by EO data has been proven to be an effective scientific method. At present, available albedo products in GrIS include the Advanced Very High Resolution Radiometer (AVHRR), the Satellite Application Facility on Climate Monitoring, the GlobAlbedo, the Multi-angle Imaging Spectroradiometer (MISR), and the Global Land Surface Satellite (GLASS) albedo products. All the aforementioned albedo products have a temporal resolution of 8 days to 1 month and a spatial resolution of 1 – 25 km. Given their coarse spatial and temporal resolutions, meeting the needs of climate change and other related studies is difficult. In recent years, albedo products with finer resolution have been widely used. They include Visible Infrared Imaging Radiometer Suite (VIIRS) and Moderate-Resolution Imaging Spectroradiometer (MODIS) albedo products, with daily temporal resolution and spatial resolution of 500 m and 750 m. MODIS products have been shown to have the highest potential for snow and ice research because of their high spatiotemporal resolution, long time span, and free access. Numerous studies have demonstrated the excellent monitoring capability of MODIS albedo products.",
+                "To improve the spatiotemporal continuity of albedo products, considerable effort has been exerted to the tasks of cloud removal and albedo reconstruction. Studies on reconstructing albedo can be generally categorized into indirect and direct processing strategies. An indirect processing strategy aims to reconstruct albedo by improving the quality of the bidirectional reflectance distribution function (BRDF) for estimating albedo. By contrast, a direct processing strategy fills the missing pixels of existing albedo products. All the aforementioned reconstruction techniques are based on spatiotemporal information to fill albedo under clear sky condition, without considering the albedo of snow and ice in real cloudy-sky cases. In fact, clouds affect the feedback of snow and ice albedo by decreasing the short-wave radiation that reaches the surface and increasing downward long-wave radiation. Therefore, incorporating the physical role of clouds on snow and ice albedo is important, particularly in regions such as GrIS, where large amounts of snow and ice accumulate on the surface and clouds are persistent. Moreover, the high frequency of clouds in the polar regions leads to large spatial and temporal lack of remote sensing data, which is difficult to handle by most of the existing methods.",
+                "To overcome these problems, this study proposes a method for reconstructing snow and ice albedo under cloudy skies by combining spatiotemporal and physics-informed models, referred to as STPM hereafter. Among MODIS albedo products, MOD10A1 daily snow albedo developed by Klein and Stroeve on the basis of the snow bidirectional reflectance model has been validated in GrIS by Stroeve et al. and widely used. The proposed method utilizes auxiliary data, including cloud optical thickness and solar zenith angle.",
+                "The integration of spatiotemporal information and physics-informed models opens new frontiers in remote sensing data reconstruction, promising advancements in challenging environmental contexts."
+            ],
+            "research objective": [
+                "On the basis of such facts, this study proposes a reconstruction method for snow and ice albedo that combines spatiotemporal information with a physics-informed model.",
+                "The objectives of the proposed method are to reconstruct albedo data continuously and to correct the effect of clouds on snow and ice albedo.",
+                "In this study, we introduce the STPM as a novel approach to reconstructing daily snow and ice albedo series in Greenland.",
+                "This paper presents a new method that couples spatiotemporal and physics-informed models to reconstruct daily snow and ice albedo series, addressing the challenge of the lack of spatiotemporal continuous albedo data for climate change studies."
+            ],
+            "challenges": [
+                "However, optical satellite-derived albedo products have many voids due to the persistent cloud cover over the Greenland ice sheet. However, daily MODIS albedo products typically contain a significant number of missing data due to cloud occlusion, sensor malfunctions, and other factors. In the Arctic region, continuous cloud coverage reaches 60% – 90%, limiting the subsequent applications of MODIS albedo products.",
+                "All the aforementioned reconstruction techniques are based on spatiotemporal information to fill albedo under clear sky condition, without considering the albedo of snow and ice in real cloudy-sky cases. Moreover, the high frequency of clouds in the polar regions leads to large spatial and temporal lack of remote sensing data, which is difficult to handle by most of the existing methods.",
+                "MOD10A1 albedo data for the study area are highly incomplete in temporal and spatial terms.",
+                "Considering the effect of clouds improves the accuracy of reconstructed snow and ice albedos compared to existing methods, and the accuracy remains stable in the accumulation and ablation zones."
+            ],
+            "methods": [
+                "This method uses spatio-temporal nonlocal filtering to generate the initial reference albedo for missing pixels. Then, the hypothetical clear-sky albedo is reconstructed using the Whittaker iterator. Finally, cloudy albedo is obtained on the basis of the empirical relationship between clear-sky and cloudy-sky albedos. We reconstruct albedo based on MOD10A1 for the whole Greenland region from 2001 to 2020.",
+                "First, we use a nonlocal filter model to estimate the missing albedo on the basis of spatiotemporal similar pixels. Then, we fit the variation of snow and ice albedo long time-series data by using the Whittaker iterator. Finally, cloudy pixels are estimated on the basis of the physical conversion relationship between clear-sky albedo and cloudy albedo to recover the cloudy-sky albedo of snow and ice. In practice, we set up a 100 × 100 search box within a neighborhood that is centered on the target pixel to find similar pixels. We employ a weight of each point to indicate the importance of each point in the fitting process, providing higher weights to the points with larger differences between the initial and long-term trend albedos. We randomly select 2 years of measured albedo and reconstructed clear-sky albedo for the period of 2001 – 2020 to fit the regression coefficients of the empirical relationship, which, in this study, are selected for 2010 and 2012.",
+                "The STPM method is applied to GrIS and validated using 20 years of field data from 28 widely distributed sites."
+            ],
+            "dataset": [
+                "Among MODIS albedo products, MOD10A1 daily snow albedo developed by Klein and Stroeve on the basis of the snow bidirectional reflectance model has been validated in GrIS by Stroeve et al. and widely used. It's worth noting that we utilize cloud optical thickness data from the PATMOS-x/AVHRR cloud climatology, which currently offers the highest resolution data available for the GrIS region. Within the MODIS v006 ensemble, the MCD43A3 albedo with a spatial resolution of 500 m is the latest version of the albedo product. In addition, we use the GLASS02B06 albedo product, an eight-day MODIS-based dataset from the GLASS albedo series with an initial resolution of 1 km.",
+                "The in situ measurements of albedos from 12 GC-NET AWSs located in the accumulation area of GrIS from 2001 to 2020 (except 2010 and 2012) are used to validate the reconstructed snow and ice albedo. We used PROMICE albedo for 16 sites from 2001 to 2020 (except 2010 and 2012) to verify the reconstructed albedo’s accuracy."
+            ],
+            "findings": [
+                "A comparison between the reconstruction results and ground measurements exhibits satisfactory accuracy with an R-value of 0.8162, a root-mean-square error of 0.0669, a mean absolute error of 0.0486, and a bias of 0.00001. Moreover, the proposed method demonstrates the advantages of being more accurate and robust than other classical methods.",
+                "Our research underscores the exceptional accuracy of the STPM method in reconstructing daily snow and ice albedo in Greenland. The reconstructed albedo outperforms existing products like MCD43A3 and GLASS in terms of accuracy and spatial coverage.",
+                "Compared to MCD43A3 and GLASS data, reconstructed data captures more accurate albedo variations. The contribution of this paper is to provide a method to seamlessly reconstruct GrIS daily snow and ice albedo data, suggesting a new solution to the albedo remote sensing data reconstruction problem."
+            ],
+            "backgroundCn": [
+                "格陵兰冰盖（GrIS）是地球上第二大冰盖（仅次于南极冰盖），对表面能量平衡和海平面变化特别敏感。表面宽波段反照率，以下简称反照率，定义为反射的太阳辐射通量与表面入射通量的比率。在北极的冰雪覆盖区域，反照率是表面能量预算的重要指标。雪面反照率的微小变化可以对表面-空气系统的能量预算产生显著反馈，导致格陵兰冰盖表面能量通量的显著波动。因此，格陵兰冰盖的雪和冰反照率是全球气候变化模型的重要输入参数。自1980年代以来，随着地球观测（EO）和信息处理技术的快速发展，通过EO数据反演反照率已被证明是一种有效的科学方法。目前，格陵兰冰盖可用的反照率产品包括高级非常高分辨率辐射计（AVHRR）、气候监测卫星应用设施、GlobAlbedo、多角度成像光谱仪（MISR）和全球陆地表面卫星（GLASS）反照率产品。上述所有反照率产品的时间分辨率为8天到1个月，空间分辨率为1-25公里。由于它们的空间和时间分辨率较粗，难以满足气候变化和其他相关研究的需求。近年来，具有更细分辨率的反照率产品被广泛使用，包括可见光红外成像辐射计套件（VIIRS）和中分辨率成像光谱仪（MODIS）反照率产品，具有每日时间分辨率和500米及750米的空间分辨率。MODIS产品因其高时空分辨率、长时间跨度和免费访问的特点，被证明在雪和冰研究中具有最高的潜力。众多研究表明，MODIS反照率产品具有出色的监测能力。",
+                "为了改善反照率产品的时空连续性，已经在云去除和反照率重建的任务上付出了相当大的努力。关于重建反照率的研究通常可以分为间接处理策略和直接处理策略。间接处理策略旨在通过改善双向反射分布函数（BRDF）的质量来重建反照率。相反，直接处理策略则是填补现有反照率产品的缺失像素。所有上述重建技术都是基于时空信息来填补晴天条件下的反照率，而没有考虑在真实多云天气情况下雪和冰的反照率。实际上，云层通过减少到达地表的短波辐射和增加向下的长波辐射，影响雪和冰的反照率反馈。因此，考虑云层对雪和冰反照率的物理作用是重要的，特别是在格陵兰冰盖等地区，这里表面积累了大量的雪和冰，并且云层持续存在。此外，极地地区云层的高频率导致遥感数据在空间和时间上存在大量缺失，这对于大多数现有方法来说是难以处理的。",
+                "为了解决这些问题，本研究提出了一种在多云天空下重建雪和冰反照率的方法，称为STPM，该方法结合了时空模型和物理信息模型。在MODIS反照率产品中，Klein和Stroeve开发的MOD10A1每日雪反照率基于雪的双向反射模型，已被Stroeve等人验证并广泛使用。该方法利用辅助数据，包括云光学厚度和太阳天顶角。",
+                "时空信息与物理信息模型的结合为遥感数据重建开辟了新的前沿，承诺在具有挑战性的环境背景中取得进展。"
+            ],
+            "research objectiveCn": [
+                "基于这些事实，本研究提出了一种结合时空信息与物理信息模型的雪和冰反照率重建方法。",
+                "所提方法的目标是连续重建反照率数据，并纠正云对雪和冰反照率的影响。",
+                "在本研究中，我们引入了STPM作为一种新颖的方法，用于重建格林兰的每日雪和冰反照率系列。",
+                "本文提出了一种新方法，将时空模型与物理信息模型相结合，以重建每日雪和冰的反照率序列，解决了气候变化研究中缺乏时空连续反照率数据的挑战。"
+            ],
+            "challengesCn": [
+                "然而，光学卫星衍生的反照率产品由于格陵兰冰盖上持续的云层覆盖而存在许多空缺。然而，日常的MODIS反照率产品通常由于云遮挡、传感器故障和其他因素而包含大量缺失数据。在北极地区，持续的云覆盖率达到60%至90%，限制了MODIS反照率产品的后续应用。",
+                "所有上述重建技术都是基于时空信息来填补晴天条件下的反照率，而没有考虑在真实多云天空情况下雪和冰的反照率。此外，极地地区云层频繁，导致遥感数据在空间和时间上存在大量缺失，这使得大多数现有方法难以处理。",
+                "MOD10A1反照率数据在时间和空间上对研究区域来说非常不完整。",
+                "考虑到云的影响，重建的雪和冰的反照率的准确性比现有方法更高，并且在积累区和消融区的准确性保持稳定。"
+            ],
+            "methodsCn": [
+                "该方法使用时空非局部滤波生成缺失像素的初始参考反照率。然后，使用Whittaker迭代器重建假设的晴空反照率。最后，基于晴空和多云天空反照率之间的经验关系获得多云反照率。我们基于MOD10A1重建了2001年至2020年整个格林兰地区的反照率。",
+                "首先，我们使用非局部滤波模型根据时空相似像素估计缺失的反照率。然后，我们利用Whittaker迭代器拟合雪和冰反照率的长期变化时间序列数据。最后，基于晴空反照率与多云反照率之间的物理转换关系，估计多云像素，以恢复雪和冰的多云天空反照率。在实践中，我们在以目标像素为中心的邻域内设置一个100 × 100的搜索框，以寻找相似像素。我们为每个点分配一个权重，以指示每个点在拟合过程中的重要性，对初始反照率与长期趋势反照率差异较大的点给予更高的权重。我们随机选择2001年至2020年期间的2年测量反照率和重建的晴空反照率，以拟合经验关系的回归系数，本研究中选择的年份为2010年和2012年。",
+                "STPM方法应用于格陵兰冰盖，并使用来自28个广泛分布地点的20年现场数据进行验证。"
+            ],
+            "datasetCn": [
+                "在MODIS反照率产品中，由Klein和Stroeve开发的MOD10A1每日雪反照率基于雪的双向反射模型，已在格陵兰冰盖（GrIS）中经过Stroeve等人的验证并被广泛使用。值得注意的是，我们利用来自PATMOS-x/AVHRR云气候学的云光学厚度数据，该数据目前为GrIS地区提供了最高分辨率的数据。在MODIS v006集合中，MCD43A3反照率是最新版本的反照率产品，空间分辨率为500米。此外，我们还使用GLASS02B06反照率产品，这是来自GLASS反照率系列的一个八天MODIS基础数据集，初始分辨率为1公里。",
+                "我们使用2001年至2020年（2010年和2012年除外）位于格陵兰冰盖积累区的12个GC-NET自动气象站（AWS）进行的现场测量的反照率数据来验证重建的雪和冰反照率。我们使用PROMICE在2001年至2020年（2010年和2012年除外）对16个站点的反照率数据来验证重建反照率的准确性。"
+            ],
+            "findingsCn": [
+                "重建结果与地面测量的比较显示出令人满意的准确性，R值为0.8162，均方根误差为0.0669，平均绝对误差为0.0486，偏差为0.00001。此外，所提出的方法在准确性和稳健性方面优于其他经典方法。",
+                "我们的研究强调了STPM方法在重建格林兰日常雪冰反照率方面的卓越准确性。重建的反照率在准确性和空间覆盖方面优于现有产品，如MCD43A3和GLASS。",
+                "与MCD43A3和GLASS数据相比，重建数据捕捉到了更准确的反照率变化。本文的贡献在于提供了一种无缝重建格陵兰冰盖每日雪和冰反照率数据的方法，提出了一种新的解决方案来应对反照率遥感数据重建问题。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Is the Multiband Reflectance Iteration Algorithm used for reconstructing albedo under clear sky conditions?",
+                "QuestionCn": "多波段反射率迭代算法是否用于在晴空条件下重建反照率？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Is the GeoTIFF format used for storing data related to sea ice albedo?",
+                "QuestionCn": "GeoTIFF格式用于存储与海冰反照率相关的数据吗？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "For reconstructing albedo in icy regions, is it more effective to use MODIS albedo products, GLASS albedo products, or other available datasets?",
+                "QuestionCn": "在冰冷地区重建反照率，使用MODIS反照率产品、GLASS反照率产品或其他可用数据集，哪种更有效？",
+                "AnswerEn": "MODIS albedo products",
+                "AnswerCn": "MODIS 反照率产品",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What is the significance of considering clouds in the reconstruction of albedo data?",
+                "QuestionCn": "考虑云层在反射率数据重建中的重要性是什么？",
+                "AnswerEn": "clouds",
+                "AnswerCn": "云朵",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method used to reconstruct albedo under cloudy skies in polar regions?",
+                "QuestionCn": "您能否提供一种用于在极地地区重建多云天空下反照率的数据收集方法的示例？",
+                "AnswerEn": "One example is the use of spatiotemporal nonlocal filtering to generate initial reference albedo for missing pixels, followed by the Whittaker iterator to reconstruct hypothetical clear-sky albedo, and finally estimating cloudy albedo based on the empirical relationship between clear-sky and cloudy-sky albedos.",
+                "AnswerCn": "一个例子是使用时空非局部滤波生成缺失像素的初始参考反照率，随后使用Whittaker迭代器重建假设的晴空反照率，最后根据晴空和多云天空反照率之间的经验关系估计多云反照率。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the spatial resolution of the primary albedo datasets used in this domain?",
+                "QuestionCn": "该领域使用的主要反照率数据集的空间分辨率是多少？",
+                "AnswerEn": "500 m - 1 km",
+                "AnswerCn": "500米 - 1公里",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What does 'albedo reconstruction' mean in the context of polar ice studies?",
+                "QuestionCn": "在极地冰层研究的背景下，“反照率重建”指的是对历史时期冰层或冰盖表面反照率的估算和重建。这通常涉及使用冰芯数据、气候模型和其他地球科学方法，以了解过去的气候变化及其对冰层的影响。",
+                "AnswerEn": "Albedo reconstruction in the context of polar ice studies refers to the process of generating accurate albedo values under various conditions, such as cloudy skies, by using models and algorithms that incorporate spatiotemporal information and the physical effects of clouds. This involves strategies to fill in data gaps typically caused by cloud cover or sensor malfunctions, using methods like spatio-temporal nonlocal filtering and empirical relationships between clear-sky and cloudy-sky albedos.",
+                "AnswerCn": "在极地冰盖研究中，反照率重建是指在各种条件下生成准确反照率值的过程，例如在多云天空下。该过程使用模型和算法，结合时空信息和云的物理效应。这涉及到填补通常由于云层覆盖或传感器故障而造成的数据缺口的策略，使用的方法包括时空非局部滤波和晴空与多云天空反照率之间的经验关系。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "How is 'spatiotemporal continuity' achieved in albedo datasets?",
+                "QuestionCn": "在反照率数据集中，如何实现“时空连续性”？",
+                "AnswerEn": "Spatiotemporal continuity in albedo datasets is achieved by employing methods that address the gaps in data caused by factors such as cloud cover. Techniques include spatio-temporal nonlocal filtering to estimate missing data, and the use of physics-informed models that consider the impact of clouds on albedo. These methods ensure continuous and accurate albedo data over time and space, which is crucial for climate change studies.",
+                "AnswerCn": "在反照率数据集中，通过采用方法来解决由于云层覆盖等因素造成的数据缺口，从而实现时空连续性。这些技术包括时空非局部滤波，用于估计缺失数据，以及使用考虑云层对反照率影响的物理信息模型。这些方法确保了反照率数据在时间和空间上的连续性和准确性，这对于气候变化研究至关重要。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What is the role of 'cloud optical thickness' in reconstructing albedo datasets?",
+                "QuestionCn": "“云光学厚度”在重建反照率数据集中的作用是什么？",
+                "AnswerEn": "Cloud optical thickness plays a crucial role in reconstructing albedo datasets by providing auxiliary information that helps in estimating the albedo under cloudy conditions. It is used in models to correct the effects of clouds on the albedo data, thereby improving the accuracy of the reconstructed albedo, especially in regions with persistent cloud cover like the polar ice sheets.",
+                "AnswerCn": "云光学厚度在重建反照率数据集方面发挥着至关重要的作用，它提供了辅助信息，有助于在多云条件下估计反照率。它被用于模型中，以修正云对反照率数据的影响，从而提高重建反照率的准确性，特别是在像极地冰盖这样的持续云覆盖区域。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do the data collection methods for the Antarctic sea ice albedo dataset compare to those used in reconstructing albedo under cloudy skies in Greenland, particularly in terms of handling cloud cover and data gaps?",
+                "QuestionCn": "南极海冰反照率数据集的数据收集方法与格林兰在多云天气下重建反照率的方法相比，特别是在处理云层覆盖和数据缺口方面，有何不同？",
+                "AnswerEn": "The Antarctic sea ice albedo dataset uses a multiband reflectance iteration algorithm to reconstruct albedo under cloud cover, incorporating spatiotemporal filtering and physical models to fill gaps. In contrast, the Greenland albedo reconstruction method combines spatiotemporal information with physics-informed models, specifically addressing cloud effects by using spatio-temporal nonlocal filtering and empirical relationships to reconstruct albedo under cloudy conditions. Both methods aim to improve the spatial and temporal continuity of albedo data in the presence of cloud cover.",
+                "AnswerCn": "南极海冰反照率数据集使用多波段反射率迭代算法在云层覆盖下重建反照率，结合时空滤波和物理模型来填补空白。相比之下，格林兰反照率重建方法结合时空信息与物理模型，特别通过使用时空非局部滤波和经验关系来解决云层影响，以重建云层条件下的反照率。这两种方法旨在改善在云层覆盖下反照率数据的空间和时间连续性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the similarities and differences between the spatial and temporal resolutions of the Antarctic sea ice albedo dataset and the MODIS-based albedo products used for Greenland, and how might these affect the application of each dataset in climate studies?",
+                "QuestionCn": "南极海冰反照率数据集与基于MODIS的格林兰反照率产品在空间和时间分辨率上的相似性和差异，以及这些差异如何影响每个数据集在气候研究中的应用。",
+                "AnswerEn": "The Antarctic sea ice albedo dataset offers a spatial resolution of 1 km and a daily temporal resolution, covering a period from 2012 to 2021. The MODIS-based products for Greenland, such as MOD10A1 and MCD43A3, provide spatial resolutions of 500 m and 750 m with daily temporal resolution. These differences in resolution may influence their application in climate studies, with the Antarctic dataset potentially offering broader spatial coverage while the MODIS products provide finer spatial details, which can be crucial for detecting local albedo variations in climate models.",
+                "AnswerCn": "南极海冰反照率数据集提供1公里的空间分辨率和每日的时间分辨率，覆盖2012年至2021年期间。格林兰的MODIS产品，如MOD10A1和MCD43A3，提供500米和750米的空间分辨率，并具有每日的时间分辨率。这些分辨率的差异可能会影响它们在气候研究中的应用，南极数据集可能提供更广泛的空间覆盖，而MODIS产品则提供更细的空间细节，这对于在气候模型中检测局部反照率变化至关重要。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In what ways do the challenges of persistent cloud cover and missing data affect the reconstruction accuracy of albedo datasets in Antarctic and Greenland regions, and how do the respective methodologies address these challenges?",
+                "QuestionCn": "持久云层和缺失数据的挑战如何影响南极和格林兰地区反照率数据集的重建准确性，以及各自的方法论如何应对这些挑战？",
+                "AnswerEn": "Persistent cloud cover and missing data are significant challenges in both regions. The Antarctic dataset addresses these by using a combination of multiband reflectance iteration and spatiotemporal filtering to reconstruct albedo under cloudy conditions. The Greenland methodology uses spatio-temporal nonlocal filtering and empirical relationships to estimate cloudy-sky albedo, focusing on correcting cloud effects on snow and ice albedo. Both approaches aim to mitigate data voids caused by clouds, enhancing the reconstruction accuracy of albedo datasets.",
+                "AnswerCn": "持久的云层覆盖和缺失数据是两个地区面临的重大挑战。南极数据集通过使用多波段反射率迭代和时空过滤的组合来重建云层条件下的反照率。格林兰的方法则采用时空非局部过滤和经验关系来估计多云天空下的反照率，重点是修正云层对雪和冰反照率的影响。这两种方法旨在减轻由于云层造成的数据空缺，提高反照率数据集的重建准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can data collection methods be refined to better capture snow and ice albedo under persistent cloudy conditions in polar regions?",
+                "QuestionCn": "如何改进数据收集方法，以更好地捕捉极地地区持续阴云条件下的雪和冰的反照率？",
+                "AnswerEn": "To address the challenges of persistent cloud cover affecting albedo data, a combination of spatiotemporal and physics-informed models can be utilized. This approach involves reconstructing albedo by integrating cloud optical thickness and solar zenith angle data, which helps in estimating clear-sky and cloudy-sky albedo more accurately.",
+                "AnswerCn": "为了解决持续云层覆盖对反照率数据的影响，可以利用时空和物理信息模型的组合。这种方法通过整合云光学厚度和太阳天顶角数据来重建反照率，从而更准确地估计晴空和多云天空的反照率。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What are the key challenges in ensuring the accuracy and completeness of datasets used for reconstructing albedo data in polar ice regions?",
+                "QuestionCn": "确保用于重建极地冰区反照率数据的数据集的准确性和完整性面临的关键挑战是什么？",
+                "AnswerEn": "Key challenges include dealing with the high frequency of clouds that cause significant data voids, sensor malfunctions, and the need for reconstruction techniques that can fill these gaps without compromising the accuracy of snow and ice albedo measurements. Existing methods often struggle with the spatial and temporal continuity of data due to these factors.",
+                "AnswerCn": "主要挑战包括应对高频率的云层，这导致显著的数据空缺、传感器故障，以及需要重建技术来填补这些空缺而不影响雪和冰反照率测量的准确性。现有方法通常因这些因素而在数据的空间和时间连续性方面面临困难。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What causes the need for cloud removal and albedo reconstruction in albedo datasets for polar regions?",
+                "QuestionCn": "导致极地地区反照率数据集需要去云和反照率重建的原因是什么？",
+                "AnswerEn": "The high frequency of clouds in polar regions leads to significant spatial and temporal gaps in remote sensing data, necessitating cloud removal and albedo reconstruction to improve the spatiotemporal continuity of albedo products.",
+                "AnswerCn": "极地地区云层频繁，导致遥感数据存在显著的空间和时间间隙，因此需要进行云去除和反照率重建，以改善反照率产品的时空连续性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is it important to incorporate the physical role of clouds in the reconstruction of snow and ice albedo datasets?",
+                "QuestionCn": "在重建雪和冰的反照率数据集时，考虑云的物理作用是重要的原因是什么？",
+                "AnswerEn": "Incorporating the physical role of clouds is crucial because clouds affect the feedback of snow and ice albedo by decreasing the short-wave radiation reaching the surface and increasing downward long-wave radiation, which is particularly significant in regions with persistent cloud cover.",
+                "AnswerCn": "云的物理作用至关重要，因为云会通过减少到达地表的短波辐射和增加向下的长波辐射来影响雪和冰的反照率反馈，这在持续云覆盖的地区尤为显著。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What factors contribute to the challenges in maintaining the accuracy and consistency of albedo data in areas like Greenland Ice Sheet?",
+                "QuestionCn": "在格林兰冰盖等地区，维护反照率数据的准确性和一致性面临的挑战包括哪些因素？",
+                "AnswerEn": "Persistent cloud cover, sensor malfunctions, and the high frequency of clouds contribute to significant gaps and voids in optical satellite-derived albedo products, impacting the accuracy and consistency of albedo data in areas like the Greenland Ice Sheet.",
+                "AnswerCn": "持续的云层覆盖、传感器故障以及高频率的云层导致光学卫星衍生的反照率产品存在显著的缺口和空白，影响了格陵兰冰盖等地区反照率数据的准确性和一致性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential consequences of using a multiband reflectance iteration algorithm for reconstructing albedo under cloudy conditions in polar regions?",
+                "QuestionCn": "在极地地区使用多波段反射率迭代算法重建云层条件下的反照率可能产生的后果是什么？",
+                "AnswerEn": "Using a multiband reflectance iteration algorithm can lead to improved accuracy and spatiotemporal resolution of albedo datasets by effectively reconstructing albedo under cloudy conditions. This approach enhances the dataset's ability to regulate Earth's radiation budget and control polar climate changes, which are crucial for climate change research.",
+                "AnswerCn": "使用多波段反射率迭代算法可以提高反照率数据集的准确性和时空分辨率，通过有效重建阴天条件下的反照率。这种方法增强了数据集调节地球辐射预算和控制极地气候变化的能力，这对气候变化研究至关重要。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What are the intended objectives of reconstructing albedo data for snow and ice under cloudy conditions using spatiotemporal and physics-informed models?",
+                "QuestionCn": "重建雪和冰在多云条件下的反照率数据的预期目标是什么，使用时空和物理信息模型？",
+                "AnswerEn": "The objectives are to continuously reconstruct albedo data and to correct the effect of clouds on snow and ice albedo, which is essential for addressing the lack of spatiotemporal continuous albedo data needed for climate change studies.",
+                "AnswerCn": "目标是持续重建反照率数据，并纠正云对雪和冰反照率的影响，这对于解决气候变化研究中所需的时空连续反照率数据的缺乏至关重要。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Why is there a need to develop datasets with high spatiotemporal resolution for monitoring snow and ice albedo in polar regions?",
+                "QuestionCn": "为什么需要开发具有高时空分辨率的数据集来监测极地地区的雪和冰的反照率？",
+                "AnswerEn": "High spatiotemporal resolution is needed because existing albedo products often have large voids due to persistent cloud cover, leading to significant gaps in data that can impede the understanding and monitoring of climate change effects in these regions.",
+                "AnswerCn": "高时空分辨率是必要的，因为现有的反照率产品往往由于持续的云层覆盖而存在较大的空白，这导致数据中出现显著的缺口，从而妨碍对这些地区气候变化影响的理解和监测。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What are the procedural steps involved in reconstructing snow and ice albedo data under cloudy conditions to improve spatiotemporal continuity?",
+                "QuestionCn": "在多云条件下重建雪和冰反照率数据以改善时空连续性所涉及的程序步骤是什么？",
+                "AnswerEn": "The reconstruction of snow and ice albedo data under cloudy conditions involves using a spatio-temporal nonlocal filtering method to generate initial reference albedo for missing pixels, reconstructing hypothetical clear-sky albedo using the Whittaker iterator, and obtaining cloudy albedo based on the empirical relationship between clear-sky and cloudy-sky albedos. This method combines spatiotemporal information with physics-informed models to handle the lack of continuous data due to cloud cover.",
+                "AnswerCn": "在多云条件下，雪和冰的反照率数据重建涉及使用时空非局部滤波方法生成缺失像素的初始参考反照率，利用惠特克迭代器重建假设的晴空反照率，并根据晴空和多云天空反照率之间的经验关系获得多云反照率。这种方法结合了时空信息和物理知识模型，以处理由于云层覆盖导致的连续数据缺失问题。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What methodological approach is adopted to ensure the accuracy of reconstructed albedo data in regions with high cloud coverage?",
+                "QuestionCn": "为了确保在高云覆盖区域重建的反照率数据的准确性，采用了什么方法论方法？",
+                "AnswerEn": "To ensure accuracy in regions with high cloud coverage, a methodological approach that combines spatiotemporal information and physics-informed models is adopted. This involves using a nonlocal filter to estimate missing albedo values, applying the Whittaker iterator for clear-sky albedo reconstruction, and establishing a physical conversion relationship between clear-sky and cloudy-sky albedos. Additionally, empirical relationships are fitted using measured albedo data to refine the reconstruction process.",
+                "AnswerCn": "为了确保在高云覆盖区域的准确性，采用了一种结合时空信息和物理知识模型的方法。这涉及使用非局部滤波器来估计缺失的反照率值，应用惠特克迭代器进行晴空反照率重建，并建立晴空与多云天空反照率之间的物理转换关系。此外，使用测量的反照率数据拟合经验关系，以优化重建过程。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What methods enable the reconstruction of albedo data under cloudy conditions for polar regions?",
+                "QuestionCn": "哪些方法可以在极地地区的多云条件下重建反照率数据？",
+                "AnswerEn": "Combining spatiotemporal information with physics-informed models, such as the Multiband Reflectance Iteration Algorithm (MBRI) and spatio-temporal nonlocal filtering, enables the reconstruction of albedo data under cloudy conditions. This approach helps to integrate the physical role of clouds in the albedo feedback mechanism, particularly in regions with persistent cloud cover like the polar regions.",
+                "AnswerCn": "将时空信息与物理信息模型相结合，例如多波段反射率迭代算法（MBRI）和时空非局部滤波，可以在多云条件下重建反照率数据。这种方法有助于整合云在反照率反馈机制中的物理作用，特别是在像极地这样的持续云覆盖区域。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What technological advancements have enabled the generation of high-resolution albedo datasets for climate change studies?",
+                "QuestionCn": "哪些技术进步使得生成高分辨率反照率数据集成为可能，以用于气候变化研究？",
+                "AnswerEn": "Technological advancements in Earth observation and information processing, such as the use of VIIRS 1 km surface reflectance products and MODIS albedo products, have enabled the generation of high-resolution albedo datasets. These advancements include improved spatial and temporal resolutions, allowing for more precise monitoring of snow and ice albedo, which is critical for climate change studies.",
+                "AnswerCn": "地球观测和信息处理的技术进步，例如使用VIIRS 1公里表面反射率产品和MODIS反照率产品，使得高分辨率反照率数据集的生成成为可能。这些进步包括提高的空间和时间分辨率，使得对雪和冰反照率的更精确监测成为可能，这对气候变化研究至关重要。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might albedo reconstruction methods often face challenges in handling the high frequency of clouds in polar regions?",
+                "QuestionCn": "反照率重建方法在处理极地地区高频云层时常常面临挑战的原因是什么？",
+                "AnswerEn": "Albedo reconstruction methods face challenges in handling the high frequency of clouds in polar regions because continuous cloud coverage leads to large spatial and temporal gaps in remote sensing data, which are difficult to address with most existing methods. Additionally, these methods typically focus on clear sky conditions without considering the albedo of snow and ice under actual cloudy-sky cases.",
+                "AnswerCn": "反照率重建方法在处理极地地区高频云层时面临挑战，因为持续的云层覆盖导致遥感数据中存在较大的空间和时间空白，这对于大多数现有方法来说很难解决。此外，这些方法通常专注于晴天条件，而没有考虑在实际多云情况下雪和冰的反照率。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the expected advantages of integrating spatiotemporal information with physics-informed models for albedo data reconstruction?",
+                "QuestionCn": "将时空信息与物理信息模型结合用于反照率数据重建的预期优势是什么？",
+                "AnswerEn": "Integrating spatiotemporal information with physics-informed models for albedo data reconstruction opens new frontiers in remote sensing data reconstruction. This integration promises advancements in challenging environmental contexts, such as improving the accuracy of reconstructed snow and ice albedos by considering the physical effects of clouds.",
+                "AnswerCn": "将时空信息与物理信息模型相结合，用于反射率数据重建，为遥感数据重建开辟了新的前沿。这种整合有望在具有挑战性的环境背景下取得进展，例如通过考虑云的物理效应，提高重建雪和冰反射率的准确性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Why is the reconstruction of snow and ice albedo under cloudy skies considered important for climate change studies?",
+                "QuestionCn": "在气候变化研究中，重建多云天空下的雪和冰的反照率被认为是重要的，因为它有助于更准确地理解和预测气候系统的反馈机制。",
+                "AnswerEn": "Reconstructing snow and ice albedo under cloudy skies is considered important for climate change studies because clouds affect the feedback mechanism of snow and ice albedo by decreasing short-wave radiation reaching the surface and increasing downward long-wave radiation. Addressing these factors improves the continuity and accuracy of albedo data, which is crucial for climate models and understanding polar climate dynamics.",
+                "AnswerCn": "在气候变化研究中，重建多云天空下的雪和冰的反照率被认为是重要的，因为云层通过减少到达地表的短波辐射和增加向下的长波辐射来影响雪和冰反照率的反馈机制。考虑这些因素可以提高反照率数据的连续性和准确性，这对于气候模型和理解极地气候动态至关重要。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "How effective do you find the use of the Multiband Reflectance Iteration Algorithm (MBRI) in reconstructing the albedo under cloud conditions for improving data accuracy?",
+                "QuestionCn": "您认为多波段反射率迭代算法（MBRI）在云条件下重建反照率以提高数据准确性方面的有效性如何？",
+                "AnswerEn": "The Multiband Reflectance Iteration Algorithm (MBRI) is effective in reconstructing albedo under cloud conditions as it allows for the derivation of cloud-free sea ice albedo, which improves the dataset's temporal and spatial continuity. The comparison with BSRN stations indicates a lower bias and RMSE, demonstrating its superior accuracy over similar international products.",
+                "AnswerCn": "多波段反射率迭代算法（MBRI）在云条件下有效地重建反照率，因为它允许推导无云的海冰反照率，从而改善数据集的时间和空间连续性。与BSRN站点的比较表明，其偏差和均方根误差（RMSE）较低，显示出其相较于类似国际产品的优越准确性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I'm unsure how cloud cover impacts the accuracy of albedo data collection methods in polar regions.",
+                "QuestionCn": "我不确定云层覆盖如何影响极地地区反照率数据收集方法的准确性。",
+                "AnswerEn": "Clouds affect the feedback of snow and ice albedo by decreasing the short-wave radiation that reaches the surface and increasing downward long-wave radiation. In regions like Greenland, where clouds are persistent, incorporating the physical role of clouds is important for accurate albedo reconstruction.",
+                "AnswerCn": "云对雪和冰的反照率反馈有影响，因为它们减少了到达地表的短波辐射，并增加了向下的长波辐射。在格林兰等云层持久的地区，考虑云的物理作用对于准确重建反照率是重要的。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "I can't make sense of why existing albedo products have limitations for climate change studies.",
+                "QuestionCn": "我无法理解为什么现有的反照率产品在气候变化研究中存在局限性。",
+                "AnswerEn": "Existing albedo products often have coarse spatial and temporal resolutions, which can be inadequate for detailed climate change studies. Recent advancements include higher resolution products like VIIRS and MODIS, which offer better spatiotemporal continuity and accuracy.",
+                "AnswerCn": "现有的反照率产品通常具有较粗的空间和时间分辨率，这对于详细的气候变化研究可能不够充分。最近的进展包括更高分辨率的产品，如VIIRS和MODIS，它们提供了更好的时空连续性和准确性。",
+                "Level": "C4(Analyzing)"
+            }
+        ]
+    }
+}

@@ -1,0 +1,545 @@
+{
+    "id": "b7a5c363-3f63-4921-b657-8a4229476ec1",
+    "relatedPaper": 3,
+    "context": {
+        "metadata": {
+            "titleEn": "1-km annual arid index dataset for China (1901-2023)",
+            "titleCn": "中国1km逐年干燥度数据集（1901-2023）",
+            "description": "The dataset is China's annual arid index (AI), with a spatial resolution of 0.0083333 ° (about 1km) and a time of 1901-2023, it is a ratio without the unit. This dataset is based on the monthly precipitation (PRE) and potential evapotranspiration (PET) dataset of 1km in China (published by this station) and obtained by annual PET/ annual PRE. The data are single format and stored in NC (NetCDF) files. NC data can be opened by ArcMap software and extracted and processed by MATLAB and R software. The data suggest using WGS84 coordinate system. AI is an indicator to characterize the degree of dryness and wetness of a region. Generally, according to AI classification, the region can be broadly divided into humid (AI<1, equivalent to forest), semi-humid (AI in 1-1.5, equivalent to forest grassland), semi-arid (AI in 1.5-4, equivalent to dry grassland) and arid (AI≥4, equivalent to desert).",
+            "descriptionCn": "数据集为中国逐年干燥度指数，空间分辨率为0.0083333°（约1km），时间为1901-2023，为比值，没有单位。该数据集是基于中国1km逐月潜在蒸散发（PET）和降水量（PRE）（本站已发布），采用比值法计算式得到（年AI =年PET/年PRE）。 数据均为single型存于nc（NETCDF）文件中。nc数据可用ArcMAP软件打开制图，并可用Matlab、R软件提取处理。数据坐标系统建议使用WGS84。AI是表征一个地区干湿程度的指标，一般来说，根据AI分类可以概括地把区域分为湿润（AI<1，相当于森林）、半湿润（AI在1-1.5，相当于森林草原）、半干旱（AI在1.5-4，相当于干草原）和干旱地区（AI≥4，相当于荒漠）。",
+            "instructions": "Stored in NC format, the file name is \"AI_annual_yyyy.nc\", where yyyy is the year, and each NC file contains one layer. In order to reduce the storage capacity, compressed files have been stored, such as AI_annual_yyyy.rar. NC format can be opened with ArcMap multidimensional data tool, or MATLAB, R, etc.",
+            "instructionsCn": "以nc格式为存储，文件名称为“AI_annual_yyyy.nc”，其中yyyy为年份，每个nc文件包含一个图层。为减少存储量，均已压缩文件存放，如AI_annual_yyyy.rar。nc格式可用arcmap多维数据工具打开，或者Matlab、R等等。注意：nc文件可以在ArcMap工具箱Multidimension Tools下面的Make NetCDF Raster Layer工具打开。如在ArcMap中进行栅格计算等操作，建议将nc数据导出为一个栅格数据实体存于硬盘，因为加载的nc数据仍为一个临时数据在内存中。导出为栅格数据实体后，建议给WGS84坐标系统，然后开始操作分析。给WGS84时，在Catalog中找到导出的栅格数据实体，点开其属性，找到Spatial Reference属性，点开Edit打开坐标系统选项，在Geographic Coordinate Systems（也就是大地坐标系统）找到World，选择其下WGS 1984。其后才可以赋予投影系统等等操作，如需要的话。",
+            "east": 136.694222005205,
+            "west": 71.285888671875,
+            "south": 15.752124025163,
+            "north": 58.6354573584943,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 10417217506.0,
+            "cstr": "18406.11.Atmos.tpdc.300560",
+            "doi": "10.11888/Atmos.tpdc.300560",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "彭守璋",
+                "nameEn": "PENG Shouzhang",
+                "unitEn": "",
+                "unitCn": "西北农林科技大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100",
+                "referenceCn": null,
+                "referenceEn": "Peng, S.Z., Ding, Y.X., Wen, Z.M., Chen, Y.M., Cao, Y., & Ren, J.Y. (2017). Spatiotemporal change and trend analysis of potential evapotranspiration over the Loess Plateau of China during 2011-2100. Agricultural and Forest Meteorology, 233, 183-194. https://doi.org/10.1016/j.agrformet.2016.11.129"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Spatiotemporal trends and attribution of drought across China from 1901–2100",
+                "referenceCn": null,
+                "referenceEn": "Ding, Y.X., & Peng, S.Z. (2020). Spatiotemporal trends and attribution of drought across China from 1901–2100. Sustainability, 12(2), 477."
+            },
+            {
+                "titleCn": null,
+                "titleEn": "Spatiotemporal change and attribution of potential evapotranspiration over China from 1901 to 2100",
+                "referenceCn": null,
+                "referenceEn": "Ding, Y.X., Peng, S.Z. (2021). Spatiotemporal change and attribution of potential evapotranspiration over China from 1901 to 2100. Theoretical and Applied Climatology. https://doi.org/10.1007/s00704-021-03625-w"
+            },
+            {
+                "titleCn": null,
+                "titleEn": "1 km monthly temperature and precipitation dataset for China from 1901 to 2017",
+                "referenceCn": null,
+                "referenceEn": "Peng, S.Z., Ding, Y.X., Liu, W.Z., & Li, Z. (2019). 1 km monthly temperature and precipitation dataset for China from 1901 to 2017. Earth System Science Data, 11, 1931–1946. https://doi.org/10.5194/essd-11-1931-2019"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "大气",
+                "nameEn": "Atmosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "干燥度指数",
+                "nameEn": "Arid Index"
+            },
+            {
+                "nameCn": "湿度/干燥度",
+                "nameEn": "Humidity/Dryness"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "中国",
+                "keywordEn": "China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1901-2023",
+                "keywordEn": "1901-2023",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "第二次青藏高原综合科学考察研究",
+                "titleEn": "the Second Tibetan Plateau Scientific Expedition and Research Program"
+            },
+            {
+                "titleCn": "变化环境下黄河中游生态水文模型及洪旱灾害风险评估（U2243226）",
+                "titleEn": "Ecological hydrological model and flood and drought disaster risk assessment in the middle reaches of the Yellow River under changing environment"
+            },
+            {
+                "titleCn": "气候变化下黄土高原潜在植被群落时空演变研究",
+                "titleEn": "National Natural Science Foundation of China"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（花寨子站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Huazhaizi station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（四道桥超级站气象要素梯度观测系统-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (an observation system of meteorological elements gradient of Sidaoqiao superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（景阳岭站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Jingyangling station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (automatic weather station of desert station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：青海湖流域地表过程综合观测网（混合草原超级站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Qinghai Lake integrated observatory network (eddy covariance system of Alpine meadow and grassland ecosystem Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（黑河遥感站自动气象站-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of the Heihe River Basin integrated observatory network (automatic weather station of Heihe remote sensing station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站大孔径闪烁仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (large aperture scintillometer of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（大满超级站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Daman Superstation, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（张掖湿地站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of Zhangye wetland station, 2018)"
+            },
+            {
+                "titleCn": "祁连山综合观测网：黑河流域地表过程综合观测网（荒漠站涡动相关仪-2018）",
+                "titleEn": "Qilian Mountains integrated observatory network: Dataset of Heihe integrated observatory network (eddy covariance system of desert station, 2018)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Global warming has become an indisputable fact and has large long-term effects on water resources, plant growth, crop yields, and economic behavior (Naumann et al., 2018). Its impacts on water resources are the most obvious and extensive, because it can directly and quickly increase surface evaporation (Cook et al., 2014). Potential evapotranspiration (PET), a crucial hydrological variable that can quantify the water loss of a region, could be used to calculate actual evapotranspiration (Aouissi et al., 2016), plan crop irrigation (Fan et al., 2018), project vegetation dynamics (Peng and Li, 2018), and could act as input for ecosystem or hydrological models (Odusanya et al., 2019). Numerous approaches have been employed to estimate PET, including Budyko (Budyko, 1974), Priestley–Taylor (Priestley and Taylor, 1972), Hargreaves (Hargreaves and Samani, 1985), and FAO Penman–Monteith (Allen et al., 1998) models. However, the Hargreaves model is more suitable than the FAO Penman–Monteith model for use in a drier climate and for longer time periods (Hargreaves and Allen, 2003; Odusanya et al., 2019). The Hargreaves model adopts monthly minimum, maximum, and mean temperatures (TMN, TMX, and TMP, respectively) to calculate PET and thus can better attribute long-term PET variations to changes of these temperature variables, which in turn would enhance our understanding of how global warming induces surface water loss. Currently, climate data used to calculate PET typically comes from either station observations (Ning et al., 2016; Zheng et al., 2009) or proxy climate data (Cook et al., 2014; Yang et al., 2017). Although these data can produce reliable and long-term PET results, respectively, they cannot elucidate the detailed spatial patterns of PET because of poor weather station density and climatic proxy data spatial resolution (e.g., >50 km) (Gao et al., 2018; Harris et al., 2014). Several studies reported that the Delta downscaling method can be used to generate the high-spatial-resolution climate datasets (Brekke et al., 2013; Peng et al., 2017; Wang and Chen, 2014). To date, many investigations regarding PET have been completed for China. However, these studies were conducted using datasets based on low-density weather stations with short time series (Chang et al., 2019; Jiang et al., 2019; Li et al., 2019; Liu et al., 2019; Xu et al., 2019) or climatic proxy data with low spatial resolution (Chai et al., 2018; Tian et al., 2018; Wang et al., 2019). Limited knowledge on the detailed spatial patterns of PET over China impedes the development of sustainable strategies to adapt and mitigate the climatic warming of China."
+            ],
+            "research objective": [
+                "This study investigates in detail the change and attribution of potential evapotranspiration (PET) across China from 1901 to 2100 by the Hargreaves model, based on a 1-km temperature dataset downscaled from the low-spatial-resolution datasets using a Delta downscaling framework. Therefore, the Hargreaves model should be employed to investigate long-term PET changes and the attribution of such changes to a warmer climate. Current work studied the changes and attribution of long-term PET in China. Specifically, the Delta downscaling framework and Hargreaves model were employed to generate high-spatial-resolution temperature time series and calculate PET for China, respectively."
+            ],
+            "challenges": [
+                "Limited knowledge on the detailed spatial patterns of PET over China impedes the development of sustainable strategies to adapt and mitigate the climatic warming of China. Although these data can produce reliable and long-term PET results, respectively, they cannot elucidate the detailed spatial patterns of PET because of poor weather station density and climatic proxy data spatial resolution. To cut down uncertainty of future temperature data, this study evaluated 27 GCMs by comparing historic downscaled temperatures from GCM and observations."
+            ],
+            "methods": [
+                "The Delta method was employed to downscale the CRU and CMIP5 temperature data to 1-km temperature dataset over China. This study employed the Hargreaves model (Hargreaves and Samani, 1985) to calculate monthly PET based on downscaled 0.5’ monthly temperature data. To evaluate the 0.5’ downscaled temperatures, this study employed mean absolute error (MAE), the Nash–Sutcliffe efficiency coefficient (NSE), and root mean square error (RMSE). To detect PET trends, the linear regression relationship between annual PET and time was established at each grid point over China. Following the Hargreaves model, PET is a function of Ra, TMP, TMX, and TMN, and can be expressed as a sensitivity of PET to an independent variable x was calculated from the derivative of PET with respect to x."
+            ],
+            "dataset": [
+                "This study used the Climatic Research Unit (CRU) TS v. 4.02 datasets and CMIP5 datasets simulated by 27 general circulation models (GCMs) with 30’ (approximately 55 km) as the climatic proxy data, including monthly TMN, TMX, and TMP. For generating high-spatial-resolution climate dataset based on these two datasets, the dataset with 0.5’ (approximately 1 km) obtained from the WorldClim v. 2.0 was seen as the reference data. Monthly observed TMN, TMX, and TMP data during 1951–2016 and from 745 national weather stations was downloaded from the National Meteorological Information Center of China, for evaluating the accuracy of downscaled data. In addition, the monthly mean observed pan evaporation from 1981 to 2010 were obtained from 1795 national weather stations across China; this dataset was used to validate the calculated PET."
+            ],
+            "findings": [
+                "Results showed that (1) relative to 1961–1990, PET increased by 0.62% in the historic period (1901–2017) and 6.43–12.89% for the future period (2018–2100), suggesting considerable future drying for China. PET variations during the historic period were most sensitive to mean temperature (TMP), while in the future period it was more sensitive to maximum temperature (TMX), suggesting a change in the primary sensitivity factor due to global warming. Minimum temperature (TMN) made the largest contribution (45%) to PET variations during the historic period, while TMX had the largest contribution (36–40%) in the future period. Therefore, the primary contributing factor might transform from TMN to TMX under climate change. Overall, the results present a deep insight for planning coping strategies of global warming in China."
+            ],
+            "backgroundCn": [
+                "全球变暖已成为不争的事实，并对水资源、植物生长、作物产量和经济行为产生了重大长期影响（Naumann et al., 2018）。其对水资源的影响最为明显和广泛，因为它可以直接且迅速地增加地表蒸发（Cook et al., 2014）。潜在蒸散发（PET）是一个关键的水文变量，可以量化一个地区的水分损失，可用于计算实际蒸散发（Aouissi et al., 2016）、规划作物灌溉（Fan et al., 2018）、预测植被动态（Peng and Li, 2018），并可作为生态或水文模型的输入（Odusanya et al., 2019）。已经采用多种方法来估算PET，包括Budyko模型（Budyko, 1974）、Priestley–Taylor模型（Priestley and Taylor, 1972）、Hargreaves模型（Hargreaves and Samani, 1985）和FAO Penman–Monteith模型（Allen et al., 1998）。然而，Hargreaves模型比FAO Penman–Monteith模型更适合在干旱气候和较长时间段内使用（Hargreaves and Allen, 2003；Odusanya et al., 2019）。Hargreaves模型采用月最低、最高和平均温度（TMN、TMX和TMP）来计算PET，因此可以更好地将长期PET变化归因于这些温度变量的变化，从而增强我们对全球变暖如何引起地表水损失的理解。目前，用于计算PET的气候数据通常来自气象站观测（Ning et al., 2016；Zheng et al., 2009）或气候代理数据（Cook et al., 2014；Yang et al., 2017）。尽管这些数据可以产生可靠的长期PET结果，但由于气象站密度低和气候代理数据空间分辨率（例如，>50公里）（Gao et al., 2018；Harris et al., 2014），它们无法阐明PET的详细空间模式。一些研究报告称，Delta下行缩放方法可以用于生成高空间分辨率的气候数据集（Brekke et al., 2013；Peng et al., 2017；Wang and Chen, 2014）。迄今为止，关于中国的PET的许多研究已经完成。然而，这些研究是基于低密度气象站的短时间序列数据（Chang et al., 2019；Jiang et al., 2019；Li et al., 2019；Liu et al., 2019；Xu et al., 2019）或低空间分辨率的气候代理数据（Chai et al., 2018；Tian et al., 2018；Wang et al., 2019）进行的。对中国PET的详细空间模式的有限了解阻碍了可持续适应和减缓中国气候变暖的战略的发展。"
+            ],
+            "research objectiveCn": [
+                "本研究详细调查了1901年至2100年间中国潜在蒸散发（PET）的变化及归因，采用Hargreaves模型，基于从低空间分辨率数据集通过Delta降尺度框架降尺度得到的1公里温度数据集。因此，Hargreaves模型应被用于研究长期PET变化及其归因于气候变暖的情况。目前的工作研究了中国长期PET的变化及归因。具体而言，采用Delta降尺度框架和Hargreaves模型生成高空间分辨率的温度时间序列，并计算中国的PET。"
+            ],
+            "challengesCn": [
+                "对中国潜在蒸散发（PET）详细空间模式的有限了解阻碍了可持续适应和减缓中国气候变暖的策略的发展。尽管这些数据可以产生可靠的长期PET结果，但由于气象站密度不足和气候代理数据空间分辨率较低，它们无法阐明PET的详细空间模式。为了减少未来温度数据的不确定性，本研究通过比较气候模型（GCM）和观测的历史下调温度，评估了27个气候模型。"
+            ],
+            "methodsCn": [
+                "本研究采用Delta方法将CRU和CMIP5温度数据下尺度至中国1公里温度数据集。研究中使用Hargreaves模型（Hargreaves和Samani，1985）基于下尺度的0.5°月度温度数据计算月度潜在蒸散发（PET）。为了评估0.5°下尺度温度，本研究采用了平均绝对误差（MAE）、纳什–沙普利效率系数（NSE）和均方根误差（RMSE）。为了检测PET趋势，在中国的每个网格点建立了年PET与时间之间的线性回归关系。根据Hargreaves模型，PET是光辐射（Ra）、平均温度（TMP）、最高温度（TMX）和最低温度（TMN）的函数，可以通过对PET关于独立变量x的导数计算PET对x的敏感性。"
+            ],
+            "datasetCn": [
+                "本研究使用了气候研究单位（CRU）TS v. 4.02 数据集和由27个大气环流模型（GCMs）模拟的CMIP5数据集，气候代理数据的空间分辨率为30'（大约55公里），包括每月的最低气温（TMN）、最高气温（TMX）和平均气温（TMP）。为了基于这两个数据集生成高空间分辨率的气候数据集，使用了来自WorldClim v. 2.0的0.5'（大约1公里）数据集作为参考数据。下载了1951年至2016年期间745个国家气象站的每月观测TMN、TMX和TMP数据，以评估降尺度数据的准确性。此外，还获得了1981年至2010年间来自中国1795个国家气象站的每月平均蒸发量数据；该数据集用于验证计算的潜在蒸发量（PET）。"
+            ],
+            "findingsCn": [
+                "结果显示，相较于1961–1990年，历史时期（1901–2017年）潜在蒸散发（PET）增加了0.62%，而未来时期（2018–2100年）则增加了6.43%至12.89%，这表明中国未来将面临显著的干旱。历史时期的PET变化对平均温度（TMP）最为敏感，而在未来时期则对最高温度（TMX）更为敏感，这表明由于全球变暖，主要敏感因素发生了变化。最低温度（TMN）在历史时期对PET变化的贡献最大（45%），而在未来时期TMX的贡献最大（36%至40%）。因此，主要贡献因素可能会在气候变化下从TMN转变为TMX。总体而言，结果为中国应对全球变暖的规划策略提供了深刻的见解。"
+            ]
+        },
+        {
+            "background": [
+                "Investigating long-term drought trends is of great importance in coping with the adverse effects of global warming. Several recent studies have suggested that ongoing warming is accelerating evaporation and creating more spatiotemporal heterogeneity in precipitation than in the past. China is home to multiple climate zones that host important agricultural regions and other societally important activities that are likely to be affected by increased drought. Several indexes have been employed to investigate long-term drought, including the standardized precipitation index, the Palmer drought severity index, and the standardized precipitation evapotranspiration index (SPEI). Unlike the standardized precipitation index, the SPEI considers changes in both the precipitation and the potential evapotranspiration induced by temperature. The SPEI also allows for multiple temporal scales, unlike the Palmer drought severity index."
+            ],
+            "research objective": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI). We then developed a simple approach to quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) on SPEI variability, according to the meaning of the differentiating SPEI equation."
+            ],
+            "challenges": [
+                "However, little attention has been focused on studying the detailed spatial variability and attribution of drought variation in China."
+            ],
+            "methods": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI). We then developed a simple approach to quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) on SPEI variability, according to the meaning of the differentiating SPEI equation."
+            ],
+            "dataset": [
+                "In this study, we first generated a 1 km resolution monthly climate dataset for the period 1901–2100 across China using the delta spatial downscaling method to assess the variability of the Standardized Precipitation Evaporation Index (SPEI)."
+            ],
+            "findings": [
+                "The results indicated that the delta framework could accurately downscale and correct low-spatial-resolution monthly temperatures and precipitation from the Climatic Research Unit and general circulation models (GCMs). Of the 27 GCMs analyzed, the BNU-ESM, CESM1-CAM5, and GFDL-ESM2M were found to be the most accurate in modeling future temperatures and precipitation. We also found that, compared with the past (1901–2017), the climate in the future (2018–2100) will tend toward significant droughts, although both periods showed a high spatial heterogeneity across China. Moreover, the proportion of areas with significantly decreasing SPEI trends was far greater than the proportion of those with increasing trends in most cases, especially for northwestern and northern China. Finally, the proposed approach to quantifying precipitation and PET contributions performed well according to logical evaluations. Overall, our results provide detailed insights for planning flexible adaptation and mitigation strategies to cope with the adverse effects of climate drought across China."
+            ],
+            "backgroundCn": [
+                "研究长期干旱趋势对于应对全球变暖的负面影响至关重要。最近的几项研究表明，持续的变暖正在加速蒸发，并导致降水的时空异质性比以往更为显著。中国拥有多种气候区，涵盖了重要的农业区域和其他可能受到干旱加剧影响的社会活动。多种指标已被用于研究长期干旱，包括标准化降水指数、帕尔默干旱严重指数和标准化降水蒸发指数（SPEI）。与标准化降水指数不同，SPEI考虑了降水和由温度引起的潜在蒸发量的变化。与帕尔默干旱严重指数不同，SPEI还允许多种时间尺度的分析。"
+            ],
+            "research objectiveCn": [
+                "在本研究中，我们首先生成了一个覆盖中国的1901年至2100年期间的1公里分辨率月度气候数据集，采用了增量空间降尺度方法，以评估标准化降水蒸发指数（SPEI）的变异性。然后，我们开发了一种简单的方法来量化水供应（降水）和需求（潜在蒸散发，PET）对SPEI变异性的贡献，这基于SPEI方程的差异化含义。"
+            ],
+            "challengesCn": [
+                "然而，关于中国干旱变化的详细空间变异性和归因研究的关注较少。"
+            ],
+            "methodsCn": [
+                "在本研究中，我们首先生成了一个覆盖中国的1公里分辨率的月度气候数据集，时间范围为1901年至2100年，采用了增量空间降尺度方法，以评估标准化降水蒸发指数（SPEI）的变异性。然后，我们开发了一种简单的方法来量化水供应（降水）和需求（潜在蒸散发，PET）对SPEI变异性的贡献，这基于SPEI方程的差异化意义。"
+            ],
+            "datasetCn": [
+                "在本研究中，我们首先使用增量空间下采样方法生成了一个覆盖中国的1901年至2100年期间的1公里分辨率月度气候数据集，以评估标准化降水蒸发指数（SPEI）的变异性。"
+            ],
+            "findingsCn": [
+                "结果表明，delta框架能够准确地对来自气候研究单位和一般环流模型（GCMs）的低空间分辨率月度温度和降水进行下尺度化和校正。在分析的27个GCM中，BNU-ESM、CESM1-CAM5和GFDL-ESM2M被发现是模拟未来温度和降水最准确的模型。我们还发现，与过去（1901-2017年）相比，未来（2018-2100年）的气候将趋向于显著干旱，尽管两个时期在中国的空间异质性都很高。此外，在大多数情况下，显著减少的SPEI趋势区域的比例远大于显著增加趋势区域的比例，尤其是在中国西北和北部地区。最后，所提出的量化降水和潜在蒸散发（PET）贡献的方法在逻辑评估中表现良好。总体而言，我们的结果为规划灵活的适应和减缓策略以应对中国气候干旱的不利影响提供了详细的见解。"
+            ]
+        },
+        {
+            "background": [
+                "High-spatial-resolution and long-term climate data are required for accurate investigations of changes in climate and climate-related phenomena that affect hydrology, vegetation cover, and crop production. Although meteorological observation networks are increasingly incorporating data from a greater number of weather stations and contributions from an increasing number of governments and researchers around the world, observation networks still suffer from low station density and spatial resolution, especially in mountainous areas, where the installation and maintenance of weather stations are challenging. Proxy monthly temperature (TMP) and precipitation (PRE) data products are released by several climate research organizations such as the general circulation models (GCMs) of the Intergovernmental Panel on Climate Change, the Climatic Research Unit (CRU) of the University of East Anglia, the Global Precipitation Climatology Centre (GPCC), and Willmott & Matsuura (W&M). Although CRU products offer the advantage of reflecting long-term climate effects, their low spatial resolution (30′, approximately 55 km) limits their ability to reflect the effects of complex topographies, land surface characteristics, and other processes on climate systems. China has a large area with abundant mountainous regions. As a result, even the establishment of additional weather stations has not fully satisfied the requirements for long-term, high-spatial-resolution climate data, especially at finer geographical scales and for mountainous areas. Furthermore, most weather stations in China were established after 1950, and thus long-term observational climate data are lacking."
+            ],
+            "research objective": [
+                "The objective of this study was to generate a long-term climate dataset with high spatial resolution for China by downscaling CRU time series data using a high-spatial-resolution reference climatology dataset."
+            ],
+            "challenges": [
+                "Although the new dataset was not evaluated before 1950 owing to data unavailability, the quality of the new dataset in the period of 1901–2017 depended on the quality of the original CRU and WorldClim datasets."
+            ],
+            "methods": [
+                "First, reference climatology data with different spatial resolutions and the 30′ original CRU time series data were evaluated through observations. Second, the 30′ original CRU time series data were spatially downscaled to four spatial resolutions (10′, 5′, 2.5′, and 0.5′) corresponding to the spatial resolutions of the reference climatology data using the delta downscaling framework. The downscaled data were validated through observations. Finally, the climatology data and annual trends in TMPs and PRE were investigated using the 30′ original CRU, 0.5′ downscaled, and observed data to demonstrate the performance of the 0.5′ downscaled data."
+            ],
+            "dataset": [
+                "The dataset presented in this article has been published in the Network Common Data Form (NetCDF) at https://doi.org/10.5281/zenodo.3114194 for precipitation and https://doi.org/10.5281/zenodo.3185722 for air temperatures at 2 m and includes 156 NetCDF files compressed in zip format and one user guidance text file. The monthly mean, maximum, and minimum air TMPs at 2 m as well as PRE were obtained for January 1901 to December 2017 with a spatial resolution of 30′ from the CRU TS v4.02 dataset. To downscale CRU TMPs and PRE time series data to higher spatial resolutions, we obtained four high-resolution reference datasets at spatial resolutions of 10′, 5′, 2.5′, and 0.5′ from WorldClim v2.0. To evaluate the performance of the downscaling procedure, the observed long-term monthly TMPs (i.e., mean, maximum, minimum air TMPs at 2 m) and PRE variables across China were obtained from the National Meteorological Information Center of China. This dataset included observations from 496 national weather stations during 1951–2016."
+            ],
+            "findings": [
+                "Compared with the evaluations of the 30′original CRU dataset, the mean absolute error of the new dataset (i.e., of the 0.5′dataset downscaled by bilinear interpolation) decreased by 35.4 %–48.7 % for TMPs and by 25.7 % for PRE. The root-mean-square error decreased by 32.4 %–44.9 % for TMPs and by 25.8 % for PRE. The Nash–Sutcliffe efficiency coefficients increased by 9.6 %–13.8 % for TMPs and by 31.6 % for PRE, and correlation coefficients increased by 0.2 %–0.4 % for TMPs and by 5.0 % for PRE. Overall, the downscaled datasets had higher accuracy than the original CRU dataset, especially the 0.5′dataset downscaled using the bilinear interpolation method, which is, therefore, the new dataset proposed by this study."
+            ],
+            "backgroundCn": [
+                "高空间分辨率和长期气候数据对于准确调查气候变化及其对水文、植被覆盖和农作物生产的影响至关重要。尽管气象观测网络越来越多地整合来自更多气象站的数据，以及来自世界各地越来越多的政府和研究人员的贡献，但观测网络仍然面临站点密度和空间分辨率低的问题，尤其是在山区，安装和维护气象站的难度较大。多个气候研究机构发布了代理月度温度（TMP）和降水（PRE）数据产品，例如气候变化政府间专门委员会（IPCC）的全球气候模型（GCMs）、东英吉利大学气候研究单位（CRU）、全球降水气候中心（GPCC）以及Willmott & Matsuura（W&M）。尽管CRU产品具有反映长期气候效应的优势，但其低空间分辨率（30′，约55公里）限制了其反映复杂地形、地表特征和其他过程对气候系统影响的能力。中国地大物博，山区众多。因此，即使建立了更多的气象站，仍未能完全满足长期、高空间分辨率气候数据的需求，尤其是在更细的地理尺度和山区。此外，中国大多数气象站是在1950年后建立的，因此缺乏长期的观测气候数据。"
+            ],
+            "research objectiveCn": [
+                "本研究的目的是通过使用高空间分辨率的参考气候数据集对CRU时间序列数据进行下采样，从而生成中国的长期气候数据集，具有高空间分辨率。"
+            ],
+            "challengesCn": [
+                "尽管由于数据不可用，新数据集在1950年前没有进行评估，但1901年至2017年期间新数据集的质量依赖于原始CRU和WorldClim数据集的质量。"
+            ],
+            "methodsCn": [
+                "首先，通过观测评估了不同空间分辨率的气候数据与30′原始CRU时间序列数据。其次，使用增量下缩放框架将30′原始CRU时间序列数据空间下缩放到四个空间分辨率（10′、5′、2.5′和0.5′），对应于参考气候数据的空间分辨率。下缩放的数据通过观测进行了验证。最后，使用30′原始CRU、0.5′下缩放和观测数据调查了气候数据以及TMP和PRE的年度趋势，以展示0.5′下缩放数据的性能。"
+            ],
+            "datasetCn": [
+                "本文中呈现的数据集已在网络通用数据格式（NetCDF）中发布，降水数据请访问 https://doi.org/10.5281/zenodo.3114194，2米空气温度数据请访问 https://doi.org/10.5281/zenodo.3185722。该数据集包含156个压缩为zip格式的NetCDF文件和一个用户指南文本文件。1901年1月至2017年12月的月均、月最大和月最小2米空气温度（TMPs）以及降水量（PRE）数据来自CRU TS v4.02数据集，空间分辨率为30′。为了将CRU TMPs和PRE时间序列数据下分到更高的空间分辨率，我们从WorldClim v2.0获取了四个高分辨率参考数据集，空间分辨率分别为10′、5′、2.5′和0.5′。为了评估下分过程的性能，我们从中国国家气象信息中心获取了中国地区的长期观测月TMPs（即2米空气TMPs的均值、最大值、最小值）和降水量变量的数据集。该数据集包含了1951年至2016年间496个国家气象站的观测数据。"
+            ],
+            "findingsCn": [
+                "与30′原始CRU数据集的评估相比，新数据集（即通过双线性插值下采样的0.5′数据集）的平均绝对误差对于TMP减少了35.4%–48.7%，对于PRE减少了25.7%。均方根误差对于TMP减少了32.4%–44.9%，对于PRE减少了25.8%。纳什–沙普利效率系数对于TMP增加了9.6%–13.8%，对于PRE增加了31.6%；相关系数对于TMP增加了0.2%–0.4%，对于PRE增加了5.0%。总体而言，下采样数据集的准确性高于原始CRU数据集，特别是使用双线性插值方法下采样的0.5′数据集，因此这是本研究提出的新数据集。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Does the Delta downscaling method enhance the spatial resolution of climate datasets to a 1 km grid over China?",
+                "QuestionCn": "Delta降尺度方法是否将气候数据集的空间分辨率提高到中国的1公里网格？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Is the Hargreaves model suitable for calculating potential evapotranspiration in drier climates over long time periods?",
+                "QuestionCn": "Hargreaves模型是否适合在干旱气候下长期计算潜在蒸散发？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Can the delta framework accurately downscale and correct low-spatial-resolution monthly temperatures and precipitation from the Climatic Research Unit and general circulation models?",
+                "QuestionCn": "delta框架能否准确地对气候研究单位和一般环流模型的低空间分辨率月度温度和降水进行下调和修正？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What methods are used to downscale temperature data to create high-resolution climate datasets?",
+                "QuestionCn": "用于降尺度温度数据以创建高分辨率气候数据集的方法有哪些？",
+                "AnswerEn": "Delta downscaling method",
+                "AnswerCn": "Delta 缩减方法",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "Where can high-resolution climate datasets for China be accessed or obtained?",
+                "QuestionCn": "高分辨率气候数据集在中国可以在哪里访问或获取？",
+                "AnswerEn": "Climatic Research Unit TS v. 4.02, WorldClim v. 2.0",
+                "AnswerCn": "气候研究单位 TS v. 4.02，WorldClim v. 2.0",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with collecting high-spatial-resolution climate data in mountainous regions?",
+                "QuestionCn": "在山区收集高空间分辨率气候数据面临哪些挑战？",
+                "AnswerEn": "low station density and spatial resolution",
+                "AnswerCn": "低站点密度和空间分辨率",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection technique used to generate high-spatial-resolution climate datasets for China?",
+                "QuestionCn": "您能否提供一个用于生成中国高空间分辨率气候数据集的数据收集技术的例子？",
+                "AnswerEn": "The Delta downscaling method is employed to downscale low-spatial-resolution temperature and precipitation data, such as those from the Climatic Research Unit (CRU) and CMIP5, to generate a 1-km resolution climate dataset over China.",
+                "AnswerCn": "Delta降尺度方法用于将低空间分辨率的温度和降水数据（如气候研究单位（CRU）和CMIP5的数据）进行降尺度，以生成中国地区的1公里分辨率气候数据集。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge encountered in generating long-term climate datasets with high spatial resolution in China?",
+                "QuestionCn": "在中国生成高空间分辨率的长期气候数据集时遇到的一个挑战是什么？",
+                "AnswerEn": "A significant challenge is the low station density and spatial resolution of meteorological observation networks, especially in mountainous areas, which can impede the generation of long-term, high-spatial-resolution climate data.",
+                "AnswerCn": "一个显著的挑战是气象观测网络的站点密度低和空间分辨率差，特别是在山区，这可能妨碍长期、高空间分辨率气候数据的生成。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of the data collection method used to generate high-spatial-resolution climate datasets in this field?",
+                "QuestionCn": "用于生成高空间分辨率气候数据集的数据收集方法的特点是什么？",
+                "AnswerEn": "downscaling low-spatial-resolution datasets, Delta downscaling framework, 1-km resolution, high-resolution climate datasets, reference climatology dataset",
+                "AnswerCn": "低空间分辨率数据集降尺度，Delta降尺度框架，1公里分辨率，高分辨率气候数据集，参考气候学数据集",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "What is the spatial resolution utilized for downscaling climate data in this field?",
+                "QuestionCn": "在该领域中，用于下采样气候数据的空间分辨率是多少？",
+                "AnswerEn": "1 km",
+                "AnswerCn": "1公里",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many general circulation models (GCMs) were evaluated to assess future temperature data accuracy?",
+                "QuestionCn": "评估未来温度数据准确性时，共评估了多少个一般环流模型（GCMs）？",
+                "AnswerEn": "27",
+                "AnswerCn": "27",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the temporal coverage of the high-resolution climate dataset generated for China?",
+                "QuestionCn": "中国生成的高分辨率气候数据集的时间覆盖范围是什么？",
+                "AnswerEn": "1901-2100",
+                "AnswerCn": "1901-2100",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What is the Delta downscaling method used for in climate data research?",
+                "QuestionCn": "Delta降尺度方法在气候数据研究中用于什么？",
+                "AnswerEn": "The Delta downscaling method is used to generate high-spatial-resolution climate datasets from low-spatial-resolution datasets. It is employed to improve the spatial resolution of climate data, such as temperature and precipitation, allowing for more detailed analysis of climate patterns, particularly in areas with complex topographies like China.",
+                "AnswerCn": "Delta降尺度方法用于从低空间分辨率数据集生成高空间分辨率气候数据集。它被用来提高气候数据的空间分辨率，例如温度和降水量，从而允许对气候模式进行更详细的分析，特别是在像中国这样地形复杂的地区。",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How is the potential evapotranspiration (PET) calculated in long-term climate studies?",
+                "QuestionCn": "在长期气候研究中，潜在蒸散发（PET）的计算方法是什么？",
+                "AnswerEn": "In long-term climate studies, potential evapotranspiration (PET) is calculated using models like the Hargreaves model. This model uses monthly minimum, maximum, and mean temperatures to estimate PET, attributing long-term variations to changes in these temperature variables. Such calculations help understand water loss in a region and the impacts of climate change on hydrology.",
+                "AnswerCn": "在长期气候研究中，潜在蒸散发（PET）使用像Hargreaves模型这样的模型进行计算。该模型利用每月的最低、最高和平均温度来估算PET，将长期变化归因于这些温度变量的变化。这些计算有助于理解一个地区的水分损失以及气候变化对水文的影响。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with generating high-spatial-resolution climate datasets?",
+                "QuestionCn": "生成高空间分辨率气候数据集面临的挑战有哪些？",
+                "AnswerEn": "Challenges associated with generating high-spatial-resolution climate datasets include the limited density of weather stations and the low spatial resolution of climatic proxy data. These limitations impede the ability to accurately reflect detailed spatial patterns, especially in regions with complex topographies or insufficient historical observational data.",
+                "AnswerCn": "生成高空间分辨率气候数据集面临的挑战包括气象站的密度有限和气候代理数据的空间分辨率低。这些限制妨碍了准确反映详细空间模式的能力，尤其是在地形复杂或历史观测数据不足的地区。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "What are the similarities and differences between the Hargreaves model and other models like the FAO Penman–Monteith model in estimating potential evapotranspiration (PET) for long-term climate studies in China?",
+                "QuestionCn": "Hargreaves模型与FAO Penman–Monteith模型在中国长期气候研究中估算潜在蒸散发（PET）方面的相似性和差异是什么？",
+                "AnswerEn": "Both the Hargreaves and FAO Penman–Monteith models are used to estimate potential evapotranspiration (PET), but the Hargreaves model is considered more suitable for drier climates and longer time periods in China due to its reliance on monthly temperature data (minimum, maximum, and mean). In contrast, the FAO Penman–Monteith model is generally used for more humid conditions and requires additional input variables such as wind speed and humidity, making it less suitable for the specific context of long-term studies in China.",
+                "AnswerCn": "Hargreaves模型和FAO Penman–Monteith模型都用于估算潜在蒸散发（PET），但Hargreaves模型被认为更适合中国的干旱气候和较长时间段，因为它依赖于月度温度数据（最低、最高和平均温度）。相比之下，FAO Penman–Monteith模型通常用于更湿润的条件，并且需要额外的输入变量，如风速和湿度，这使得它在中国的长期研究特定背景下不太适用。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "In terms of addressing the challenges posed by low weather station density, how does the use of proxy climate data compare to the installation of additional weather stations for collecting long-term climate data in mountainous regions of China?",
+                "QuestionCn": "在应对气象站密度低所带来的挑战方面，使用代理气候数据与在中国山区安装额外气象站以收集长期气候数据相比，如何？",
+                "AnswerEn": "Proxy climate data, such as those from general circulation models (GCMs) and the Climatic Research Unit (CRU), provide an alternative to installing additional weather stations by offering long-term climate data with consistent coverage, but they often have lower spatial resolution and may not accurately capture the effects of complex topographies. On the other hand, increasing the number of weather stations could improve data accuracy and resolution in mountainous regions, though it is challenging due to the logistical difficulties of installation and maintenance in such areas.",
+                "AnswerCn": "代理气候数据，如来自一般环流模型（GCM）和气候研究单位（CRU）的数据，提供了一种替代方案，可以在不安装额外气象站的情况下，提供长期气候数据并保持一致的覆盖范围，但它们通常具有较低的空间分辨率，可能无法准确捕捉复杂地形的影响。另一方面，增加气象站的数量可以提高山区数据的准确性和分辨率，但由于在这些地区安装和维护的后勤困难，这一过程具有挑战性。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How does the use of the Hargreaves model for estimating potential evapotranspiration contribute to understanding the impacts of global warming on surface water loss in regions with varied climate conditions?",
+                "QuestionCn": "使用哈格里夫斯模型估算潜在蒸散发对理解全球变暖在不同气候条件下对地表水损失的影响有何贡献。",
+                "AnswerEn": "The use of the Hargreaves model for estimating potential evapotranspiration contributes to understanding the impacts of global warming on surface water loss by providing a method to attribute long-term PET variations to changes in temperature variables. This model is particularly suitable for drier climates and long-term analysis, as it uses monthly minimum, maximum, and mean temperatures to calculate PET. This enables researchers to understand how changes in these temperature variables, influenced by global warming, contribute to surface water loss, thus aiding in the development of strategies to cope with climate impacts.",
+                "AnswerCn": "使用哈格里夫斯模型估算潜在蒸散发有助于理解全球变暖对地表水损失的影响，因为该模型提供了一种将长期潜在蒸散发变化归因于温度变量变化的方法。该模型特别适用于干旱气候和长期分析，因为它使用每月的最低、最高和平均温度来计算潜在蒸散发。这使研究人员能够理解受全球变暖影响的这些温度变量的变化如何导致地表水损失，从而有助于制定应对气候影响的策略。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the challenges in generating high-spatial-resolution climate datasets for China, particularly in mountainous regions?",
+                "QuestionCn": "生成中国高空间分辨率气候数据集的挑战，特别是在山区，主要受以下因素影响：",
+                "AnswerEn": "The challenges in generating high-spatial-resolution climate datasets for China, especially in mountainous regions, are due to low station density and spatial resolution in meteorological observation networks. The complex topographies, land surface characteristics, and other processes also affect the climate systems, and the establishment of additional weather stations has not fully satisfied the requirements for long-term, high-spatial-resolution climate data.",
+                "AnswerCn": "在中国，尤其是在山区，生成高空间分辨率气候数据集面临的挑战主要是由于气象观测网络中站点密度低和空间分辨率不足。复杂的地形、地表特征以及其他过程也影响气候系统，而建立更多的气象站并未完全满足长期、高空间分辨率气候数据的需求。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is the Hargreaves model preferred over the FAO Penman–Monteith model for estimating potential evapotranspiration in drier climates and over longer time periods?",
+                "QuestionCn": "Hargreaves模型在干旱气候和较长时间段内估算潜在蒸散发时，通常优于FAO Penman–Monteith模型的原因是什么？",
+                "AnswerEn": "The Hargreaves model is preferred over the FAO Penman–Monteith model for estimating potential evapotranspiration (PET) in drier climates and over longer time periods because it adopts monthly minimum, maximum, and mean temperatures to calculate PET. This allows for a better attribution of long-term PET variations to changes in temperature variables, enhancing the understanding of how global warming induces surface water loss.",
+                "AnswerCn": "哈格里夫斯模型在干燥气候和较长时间段内估算潜在蒸散发（PET）时优于FAO潘曼-蒙特斯模型，因为它采用月度的最低、最高和平均温度来计算PET。这使得长期PET变化能够更好地归因于温度变量的变化，从而增强了对全球变暖如何导致地表水损失的理解。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What causes the lack of detailed spatial patterns in potential evapotranspiration data over China, and how does this affect climate adaptation strategies?",
+                "QuestionCn": "导致中国潜在蒸散发数据缺乏详细空间模式的原因是什么，这对气候适应策略有何影响？",
+                "AnswerEn": "The lack of detailed spatial patterns in potential evapotranspiration (PET) data over China is caused by poor weather station density and the low spatial resolution of climatic proxy data. This limitation impedes the development of sustainable strategies to adapt and mitigate the climatic warming in China, as it prevents a comprehensive understanding of regional variations in PET.",
+                "AnswerCn": "中国潜在蒸散发（PET）数据缺乏详细的空间模式，主要是由于气象站密度不足和气候代理数据的低空间分辨率。这一限制妨碍了可持续适应和减缓中国气候变暖的策略的发展，因为它阻碍了对潜在蒸散发区域变化的全面理解。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential effects on the accuracy of climate models when using a high-spatial-resolution climate dataset over China?",
+                "QuestionCn": "使用高空间分辨率气候数据集对中国进行气候模型的准确性可能产生的影响是什么？",
+                "AnswerEn": "The use of a high-spatial-resolution climate dataset over China can improve the accuracy of climate models by better reflecting the effects of complex topographies and land surface characteristics on climate systems. This leads to more precise observations of temperature and precipitation patterns, which are crucial for assessing climate variability and planning mitigation strategies.",
+                "AnswerCn": "使用高空间分辨率的气候数据集可以提高气候模型的准确性，因为它更好地反映了复杂地形和地表特征对气候系统的影响。这导致对温度和降水模式的更精确观察，这对于评估气候变异性和规划减缓策略至关重要。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the consequences of using proxy climate data with low spatial resolution for estimating potential evapotranspiration (PET) over China?",
+                "QuestionCn": "使用低空间分辨率的代理气候数据来估算中国的潜在蒸散发（PET）会产生哪些后果？",
+                "AnswerEn": "Using proxy climate data with low spatial resolution for estimating PET can result in an incomplete understanding of spatial patterns due to inadequate reflection of local climatic conditions. This limitation can affect the development of sustainable strategies to adapt and mitigate climate impacts because detailed spatial variability and attribution of PET changes are not fully captured.",
+                "AnswerCn": "使用低空间分辨率的代理气候数据来估算潜在蒸散发（PET）可能导致对空间模式的不完整理解，因为无法充分反映当地气候条件。这一局限性可能影响可持续策略的制定，以适应和减缓气候影响，因为PET变化的详细空间变异性和归因没有得到充分捕捉。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "Why is it important to address the challenge of low station density when creating high-spatial-resolution climate datasets in mountainous regions of China?",
+                "QuestionCn": "在中国山区创建高空间分辨率气候数据集时，解决低站点密度的挑战为何重要？",
+                "AnswerEn": "Addressing the challenge of low station density is crucial because it limits the ability to accurately reflect the effects of complex topographies and land surface characteristics on climate systems. This is especially important in mountainous regions where installing and maintaining weather stations is difficult, hence the need for high-spatial-resolution data to develop sustainable strategies for climate adaptation and mitigation.",
+                "AnswerCn": "解决低站点密度的问题至关重要，因为这限制了准确反映复杂地形和地表特征对气候系统影响的能力。这在山区尤为重要，因为在这些地区安装和维护气象站非常困难，因此需要高空间分辨率的数据来制定可持续的气候适应和减缓策略。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What is the objective of employing the Hargreaves model for calculating potential evapotranspiration in long-term climate studies over China?",
+                "QuestionCn": "在中国的长期气候研究中，采用Hargreaves模型计算潜在蒸散发的目的是为了评估和理解气候变化对水资源和生态系统的影响。",
+                "AnswerEn": "The objective of using the Hargreaves model is to calculate monthly potential evapotranspiration (PET) based on downscaled temperature data to investigate long-term PET changes and their attribution to a warmer climate. This approach allows for a better understanding of how global warming induces surface water loss and aids in the planning of coping strategies for climate change.",
+                "AnswerCn": "使用Hargreaves模型的目的是基于下调的温度数据计算每月潜在蒸散发（PET），以研究长期PET变化及其归因于气候变暖。这种方法有助于更好地理解全球变暖如何导致地表水损失，并有助于规划应对气候变化的策略。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What are the procedural steps involved in downscaling climate data to achieve a high spatial resolution for analyzing potential evapotranspiration (PET) in China?",
+                "QuestionCn": "将气候数据降尺度以实现高空间分辨率，以分析中国潜在蒸散发（PET）的程序步骤包括以下几个方面：",
+                "AnswerEn": "The procedural steps involve using the Delta downscaling method to downscale lower resolution climate data, such as CRU and CMIP5 datasets, to a 1-km resolution. This includes evaluating the downscaled temperatures using metrics like mean absolute error (MAE), Nash–Sutcliffe efficiency coefficient (NSE), and root mean square error (RMSE), and then applying the Hargreaves model to calculate monthly PET based on the downscaled data.",
+                "AnswerCn": "程序步骤包括使用Delta降尺度方法将低分辨率气候数据（如CRU和CMIP5数据集）降尺度到1公里分辨率。这包括使用平均绝对误差（MAE）、纳什–沙普利效率系数（NSE）和均方根误差（RMSE）等指标评估降尺度后的温度，然后应用Hargreaves模型根据降尺度数据计算每月的潜在蒸散发（PET）。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How can researchers effectively assess the contributions of water supply and demand to the variability of the Standardized Precipitation Evaporation Index (SPEI) in a long-term climate dataset?",
+                "QuestionCn": "研究人员如何有效评估水供应和需求对长期气候数据集中标准化降水蒸发指数（SPEI）变异性的贡献？",
+                "AnswerEn": "Researchers can assess the contributions by generating a 1 km resolution monthly climate dataset using the delta spatial downscaling method. This method allows for the evaluation of the variability of the SPEI by quantifying the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) based on the differentiating SPEI equation.",
+                "AnswerCn": "研究人员可以通过生成1公里分辨率的月度气候数据集来评估贡献，使用的是增量空间下采样方法。该方法允许通过量化水供应（降水）和需求（潜在蒸散发，PET）的贡献来评估SPEI的变异性，基于区分SPEI方程。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What data collection methods enable the generation of a high-spatial-resolution climate dataset over a long-term period in regions with low weather station density?",
+                "QuestionCn": "哪些数据收集方法能够在气象站密度低的地区生成长期的高空间分辨率气候数据集？",
+                "AnswerEn": "The Delta downscaling method is employed to downscale low-spatial-resolution datasets to high-resolution datasets, allowing for the generation of detailed climate data even in regions with low weather station density.",
+                "AnswerCn": "Delta降尺度方法用于将低空间分辨率的数据集降尺度到高分辨率的数据集，从而能够在气象站密度较低的地区生成详细的气候数据。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How does the use of the Hargreaves model enable the calculation of potential evapotranspiration (PET) in regions with limited temperature data?",
+                "QuestionCn": "Hargreaves模型的使用如何在温度数据有限的地区计算潜在蒸散发（PET）？",
+                "AnswerEn": "The Hargreaves model uses monthly minimum, maximum, and mean temperatures to calculate PET, which is suitable for drier climates and long-term periods, thus enabling PET calculation even with limited temperature data.",
+                "AnswerCn": "Hargreaves模型使用每月的最低、最高和平均温度来计算潜在蒸散发（PET），适用于干燥气候和长期时期，因此即使在温度数据有限的情况下也能进行PET计算。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What are the enabling conditions for assessing the variability of drought indices like the Standardized Precipitation Evaporation Index (SPEI) across diverse climatic zones in China?",
+                "QuestionCn": "评估中国不同气候区干旱指数（如标准化降水蒸发指数SPEI）变异性的促进条件是什么？",
+                "AnswerEn": "Generating a 1 km resolution monthly climate dataset using the delta spatial downscaling method allows for the assessment of SPEI variability across different climatic zones, providing detailed insights into spatial and temporal drought patterns.",
+                "AnswerCn": "使用增量空间下调方法生成1公里分辨率的月度气候数据集，可以评估不同气候区的SPEI变异性，提供对空间和时间干旱模式的详细洞察。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might high-spatial-resolution datasets be challenging to produce for regions with complex topographies?",
+                "QuestionCn": "高空间分辨率数据集在复杂地形区域的生产可能面临挑战的原因是什么？",
+                "AnswerEn": "High-spatial-resolution datasets are challenging to produce for regions with complex topographies because traditional meteorological observation networks often suffer from low station density and spatial resolution. This is particularly difficult in mountainous areas where the installation and maintenance of weather stations are challenging. Proxy data products, despite reflecting long-term climate effects, often have low spatial resolutions that limit their ability to capture the effects of complex topographies.",
+                "AnswerCn": "高空间分辨率的数据集在复杂地形区域的生产中面临挑战，因为传统的气象观测网络往往存在站点密度低和空间分辨率低的问题。这在山区尤其困难，因为安装和维护气象站非常具有挑战性。尽管代理数据产品反映了长期气候效应，但它们通常具有低空间分辨率，限制了其捕捉复杂地形影响的能力。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What challenges might arise when trying to validate newly downscaled high-resolution climate datasets?",
+                "QuestionCn": "在尝试验证新下调的高分辨率气候数据集时，可能会出现哪些挑战？",
+                "AnswerEn": "Challenges in validating newly downscaled high-resolution climate datasets include the dependency on the quality of the original datasets and reference climatology data. Moreover, the lack of long-term observational climate data before certain time periods, such as before 1950 in China, makes it difficult to evaluate the new dataset's accuracy over the entire intended period. Validation also requires comprehensive observational data, which might not be available everywhere.",
+                "AnswerCn": "验证新下调的高分辨率气候数据集面临的挑战包括对原始数据集和参考气候数据质量的依赖。此外，缺乏某些时间段之前的长期观测气候数据，例如在中国1950年之前的数据，使得评估新数据集在整个预期时期的准确性变得困难。验证还需要全面的观测数据，而这些数据在某些地方可能并不可用。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What are the challenges associated with using proxy climate data in generating detailed spatial patterns of potential evapotranspiration (PET) over large areas?",
+                "QuestionCn": "使用代理气候数据生成大面积潜在蒸散发（PET）详细空间模式时面临的挑战有哪些？",
+                "AnswerEn": "Proxy climate data often suffer from low spatial resolution, which can be greater than 50 km, limiting the ability to capture detailed spatial patterns of PET. Additionally, the density of weather stations is generally low, particularly in mountainous or remote areas, which further complicates the accurate estimation of PET across large areas. These factors impede the development of sustainable strategies for climate adaptation and mitigation due to limited knowledge of spatial variability.",
+                "AnswerCn": "代理气候数据通常存在空间分辨率低的问题，分辨率可能超过50公里，这限制了捕捉潜在蒸散发（PET）详细空间模式的能力。此外，气象站的密度通常较低，特别是在山区或偏远地区，这进一步 complicates 了在大范围内准确估计PET。这些因素妨碍了可持续气候适应和减缓策略的发展，因为对空间变异性的了解有限。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don't understand how detailed spatial patterns of potential evapotranspiration are obtained from data with low weather station density.",
+                "QuestionCn": "我不明白如何从低气象站密度的数据中获得潜在蒸散发的详细空间模式。",
+                "AnswerEn": "Detailed spatial patterns of potential evapotranspiration (PET) are obtained by employing methods like the Delta downscaling framework, which generates high-spatial-resolution climate datasets from low-resolution data. The Hargreaves model is used to calculate PET based on downscaled temperature data, allowing for detailed spatial analysis despite low station density.",
+                "AnswerCn": "潜在蒸散发（PET）的详细空间模式是通过采用像Delta降尺度框架的方法获得的，该框架从低分辨率数据生成高空间分辨率的气候数据集。Hargreaves模型用于根据降尺度的温度数据计算PET，从而允许尽管站点密度较低，仍能进行详细的空间分析。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I can't make sense of how the contributions of water supply and demand are quantified in drought variability studies.",
+                "QuestionCn": "我无法理解在干旱变异性研究中，水供应和需求的贡献是如何量化的。",
+                "AnswerEn": "In drought variability studies, the contributions of water supply (precipitation) and demand (potential evapotranspiration, PET) are quantified by using a simple approach based on the differentiating equation of the Standardized Precipitation Evaporation Index (SPEI). This involves assessing the variability and attributing changes to either water supply or demand factors.",
+                "AnswerCn": "在干旱变异性研究中，水供应（降水）和需求（潜在蒸散发，PET）的贡献通过一种基于标准化降水蒸发指数（SPEI）微分方程的简单方法进行量化。这涉及评估变异性并将变化归因于水供应或需求因素。",
+                "Level": "C2(Understanding)"
+            }
+        ]
+    }
+}

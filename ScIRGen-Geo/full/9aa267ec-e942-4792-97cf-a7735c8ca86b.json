@@ -1,0 +1,509 @@
+{
+    "id": "9aa267ec-e942-4792-97cf-a7735c8ca86b",
+    "relatedPaper": 1,
+    "context": {
+        "metadata": {
+            "titleEn": "Daily snow depth simulation prediction dataset for China",
+            "titleCn": "中国逐日雪深模拟预估数据集（2016-2065）",
+            "description": "China's daily snow depth simulation and prediction data set is the estimated daily snow depth data of China in the future based on the nex-gdpp model data set. The artificial neural network model of snow depth simulation takes the maximum temperature, minimum temperature, precipitation data and snow depth data of the day as the input layer of the model, The snow depth data of the next day is used as the target layer of the model to build the model, and then the snow depth simulation model is trained and verified by using the data of the national meteorological station. The model verification results show that the iterative space-time simulation ability of the model is good; The spatial correlations of the simulated and verified values of cumulative snow cover duration and cumulative snow depth are 0.97 and 0.87, and the temporal and spatial correlations of cumulative snow depth are 0.92 and 0.91, respectively. Based on the optimal model, this model is used to iteratively simulate the daily snow depth data in China in the future. The data set can provide data support for future snow disaster risk assessment, snow cover change research and climate change research in China. The basic information of the data is as follows: historical reference period (1986-2005) and future (2016-2065), as well as rcp4.5 and rcp8.5 scenarios and 20 climate models. Its spatial resolution is 0.25 ° * 0.25 °. The projection mode of the data is ease GR, and the data storage format is NC format.\nThe following is the data file information in NC\nTime: duration (unit: day)\nLon = 320 matrix, 320 columns in total\nLat = 160 matrix, 160 rows in total\nX Dimension: Xmin = 60.125; // Coordinates of the corner points of the lower left corner grid in the X direction of the matrix\nY Dimension: Ymin = 15.125; // Coordinates of the corner points of the grid at the lower left corner of the Y-axis of the matrix",
+            "descriptionCn": "中国逐日雪深模拟预估数据集是采用人工神经网络模型，以NEX-GDPP模式数据集作为依托，预估的中国未来逐日雪深数据，其中雪深模拟的人工神经网络模型是以当天的最高温度、最低温度、降水数据和当天雪深数据作为模型的输入层，次日的雪深数据作为模型目标层对模型搭建，然后运用国家气象站数据对搭建的雪深模拟模型进行训练和验证进行训练，模型验证结果显示：模型迭代时空模拟能力较好；累积雪盖持续时间、累积积雪深度的模拟值和验证值的空间相关性为0.97和0.87，累积雪深的时间和空间相关性分别为0.92和0.91。在模型最优基础上，用此模型迭代模拟未来中国区域内逐日雪深数据。该数据集可以为中国未来雪灾风险评估、积雪范围变化研究以及气候变化研究提供数据支持。该数据基本信息如下：历史基准时段(1986～2005年)、未来模拟（2016～2065年）两个时间段，以及RCP4.5和RCP8.5两种情景，20个气候模式。其空间分辨率为0.25°*0.25°。该数据的投影方式为EASE-Gr，数据保存格式为nc格式。\n下面是nc中数据文件信息\n     time：时长（单位：天）历史基准时段（起始时间：1986年1月1日，终止时期：2005年12月31日）\n                                                未来模拟（起始时间：2016年1月1日，终止时期：2065年12月31日）\n\n\tlongitude = 320矩阵共320列\n\tlatitude = 160矩阵共160行\n        depth：雪深（cm）\nX Dimension: Xmin = 60.125; //矩阵x方向左下角网格的角落点坐标 \nY Dimension: Ymin = 15.125; //矩阵y方向轴左下角网格的角落点坐标",
+            "instructions": "The future daily snow depth data is stored in NC. The file name is \"rcp45access1-0.nc\", in which rcp45 represents the climate situation and access1-0.nc represents the climate model. The data includes the snow cover in China every day from January 1, 2016 to December 31, 2065. The opening method is to open, browse and edit with metalinf or panoply software. The data is large. It is recommended to use MATLAB and python programming to open it.",
+            "instructionsCn": "未来逐日雪深数据以nc形成存储，文件名称为“RCP45ACCESS1-0.nc”,其中RCP45表示气候情景，ACCESS1-0表示气候模式，该数据包含了2016年1月1日到2065年12月31日每天我国的积雪覆盖状况。打开方式用meteolinf或者panoply软件打开，浏览和编辑。数据较大，打开建议用matlab、python编程方式处理。",
+            "east": 140.0,
+            "west": 60.0,
+            "south": 15.0,
+            "north": 55.0,
+            "startTime": null,
+            "endTime": null,
+            "fileSize": 9231790422.0,
+            "cstr": "18406.11.Snow.tpdc.271636",
+            "doi": "10.11888/Snow.tpdc.271636",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "陈虹举",
+                "nameEn": "CHEN Hongju",
+                "unitEn": "",
+                "unitCn": "中国科学院西北生态环境资源研究院"
+            },
+            {
+                "nameCn": "杨建平",
+                "nameEn": "YANG Jianping",
+                "unitEn": "",
+                "unitCn": "中国科学院西北生态环境资源研究院"
+            },
+            {
+                "nameCn": "丁永建",
+                "nameEn": "DING Yongjian",
+                "unitEn": "",
+                "unitCn": "中国科学院西北生态环境资源研究院"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Simulation of Daily Snow Depth Data in China Based on the NEX-GDDP",
+                "referenceCn": null,
+                "referenceEn": "Chen, H., Yang, J., Ding, Y., He, Q., & Ji, Q. (2021). Simulation of Daily Snow Depth Data in China Based on the NEX-GDDP. Water, 13(24), 3599. doi:10.3390/w13243599"
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "冰冻圈",
+                "nameEn": "Cryosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "积雪",
+                "nameEn": "Snow"
+            },
+            {
+                "nameCn": "积雪深度",
+                "nameEn": "Snow depth"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "未来，逐日雪深，模式模拟，中国",
+                "keywordEn": "Future, daily snow depth, model simulation, China"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "未来 ，逐日雪深",
+                "keywordEn": "Future, daily snow depth",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "全球变化人口与经济系统风险全球定量评估研究",
+                "titleEn": "National Key Research and Development Program of China"
+            },
+            {
+                "titleCn": "美丽中国生态文明建设科技工程专项",
+                "titleEn": "Strategic Priority Research Program (A) of the Chinese Academy of Sciences"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            },
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山地区冰川边界（2018）",
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleCn": "北半球湖冰物候数据集（1978-2018）",
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            },
+            {
+                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+            },
+            {
+                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+            },
+            {
+                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "Snow cover is an important component of the cryosphere and indicator of climate change as its properties change rapidly in response to changes in heat and water on the earth’s surface. Snowfall also has an important impact on socioeconomic factors of humanity; for example, insufficient snowfall in spring can lead to drought, and excessive snowfall can create disasters, such as snow-melt floods, and major property losses. At present, the primary methods of acquiring snow parameter data include on-site observations of meteorological stations; optical remote sensing methods for identifying the extent of snow cover, based on the high reflectivity of snow in the visible band, and low reflectivity in the NIR band to define a normalized difference snow index (NDSI); passive microwave remote sensing for global/regional snow depth and snow water equivalent observations; and fusion of optical and microwave remote sensing inversions. Thus, snow depth data acquisition mainly depends on two approaches: remote sensing observations and onsite observations. Under changing global climate conditions, snow cover can serve as an important indicator. Accordingly, scientists have carried numerous studies examining the change in snow cover over historical periods, the relationship between snow cover change and climate, and the impact of snow cover change on human productivity. Some analyses have also studied future changes in snow cover based on the experimental data of the Coupled Model Intercomparison Project (CMIP) organized by the World Climate Research Programme (WCRP); however, there are few studies on the future daily snow depth, as snow accumulation and melting is a complex process affected by many factors, such as temperature, precipitation, wind speed, solar radiation, underlying surface type, and altitude."
+            ],
+            "research objective": [
+                "In this study, a backpropagation artificial neural network snow simulation model (BPANNSIM) is built using data collected from the National Climate Reference Station to obtain simulation data of China’s future daily snow depth in terms of representative concentration pathways (RCP4.5 and RCP8.5)."
+            ],
+            "challenges": [
+                "However, there are few studies on the future daily snow depth, as snow accumulation and melting is a complex process affected by many factors, such as temperature, precipitation, wind speed, solar radiation, underlying surface type, and altitude."
+            ],
+            "methods": [
+                "The model is trained and validated based on data from the National Climate Reference Station over a baseline period of 1986–2005. Here, a backpropagation neural network snow simulation model (BPNNSIM) was built using MATLAB, and data on the current daily snow depth, daily minimum air temperature, daily maximum air temperature, and daily precipitation were used to predict the next day’s snow depth. A total of 155 sites were used to train the BP neural network, comprising 1,133,050 training and test samples. The input layer included data of daily maximum and minimum temperatures, daily precipitation, and daily snow depth from the National Climate Reference Stations to predict the next day snow depth data at the National Climate Reference Station. Based on the simulation model building and training, to determine the precision of the model iteration simulation, we used daily precipitation, daily minimum temperature, and daily maximum temperature data at 30 randomly selected National Climate Reference Stations. The simulated snow depths were used for comparison with the observations from the corresponding stations. Based on the spatiotemporal accuracy evaluation of the iterative simulation, the NEX-GDDP data were selected as the input values for the BPNNSIM to iteratively simulate the daily snow depth data from the corresponding model in NEX-GDDP."
+            ],
+            "dataset": [
+                "National Climate Reference Station data (1986–2005) were provided by the National Meteorological Science Data Center of China and contained information on the daily maximum and minimum temperatures, precipitation, and snow depth. The NEX-GDDP dataset was released by NASA in 2015, and includes historical data for 1986–2005, and those for two future climate projection scenarios (RCP4.5 and RCP8.5) from 2006–2100, with a spatial resolution of 0.25°×0.25°. The long-term snow depth dataset of China was derived from passive microwave remote sensing data, which provides the daily snow depth distribution in China from 24 October 1978 to 31 December 2012, at a spatial resolution of 0.25°×0.25°."
+            ],
+            "findings": [
+                "Validation results show that the temporal correlations of the observed and the model iterative simulated values are 0.94 for monthly cumulative snow cover duration and 0.88 for monthly cumulative snow depth. The multi-year average of cumulative snow depth from the observation stations was 178.06 cm·y−1, 266.25 cm·y−1 from remote sensing data, and 75.55 cm·y−1 from NEX-GDDP data."
+            ],
+            "backgroundCn": [
+                "雪覆盖是冰冻圈的重要组成部分，也是气候变化的一个指标，因为其特性会迅速响应地球表面热量和水分的变化。降雪对人类的社会经济因素也有重要影响；例如，春季降雪不足可能导致干旱，而降雪过多则可能造成灾害，如融雪洪水和重大财产损失。目前，获取雪参数数据的主要方法包括：气象站的现场观测；基于雪在可见光波段的高反射率和在近红外波段的低反射率来定义归一化差异雪指数（NDSI）的光学遥感方法，以识别雪覆盖的范围；用于全球/区域雪深和雪水当量观测的被动微波遥感；以及光学和微波遥感反演的融合。因此，雪深数据的获取主要依赖于两种方法：遥感观测和现场观测。在全球气候变化的背景下，雪覆盖可以作为一个重要的指标。因此，科学家们进行了大量研究，考察历史时期雪覆盖的变化、雪覆盖变化与气候之间的关系，以及雪覆盖变化对人类生产力的影响。一些分析还研究了基于世界气候研究计划（WCRP）组织的耦合模型比较项目（CMIP）实验数据的未来雪覆盖变化；然而，关于未来日雪深的研究较少，因为雪的积累和融化是一个受多种因素影响的复杂过程，这些因素包括温度、降水、风速、太阳辐射、底层表面类型和海拔高度。"
+            ],
+            "research objectiveCn": [
+                "在本研究中，建立了一个反向传播人工神经网络雪模拟模型（BPANNSIM），该模型使用从国家气候参考站收集的数据，以获取中国未来每日雪深的模拟数据，涉及代表性浓度路径（RCP4.5和RCP8.5）。"
+            ],
+            "challengesCn": [
+                "然而，关于未来每日雪深的研究很少，因为雪的积累和融化是一个复杂的过程，受到许多因素的影响，如温度、降水、风速、太阳辐射、底层表面类型和海拔高度。"
+            ],
+            "methodsCn": [
+                "该模型基于1986-2005年的国家气候参考站数据进行训练和验证。在此基础上，使用MATLAB构建了一个反向传播神经网络雪模拟模型（BPNNSIM），并利用当前的每日雪深、每日最低气温、每日最高气温和每日降水量数据来预测次日的雪深。共使用了155个站点来训练BP神经网络，包含1,133,050个训练和测试样本。输入层包括来自国家气候参考站的每日最高和最低气温、每日降水量和每日雪深数据，以预测国家气候参考站的次日雪深数据。基于模拟模型的构建和训练，为了确定模型迭代模拟的精度，我们使用了30个随机选择的国家气候参考站的每日降水量、每日最低气温和每日最高气温数据。模拟的雪深与相应站点的观测数据进行了比较。根据迭代模拟的时空精度评估，选择NEX-GDDP数据作为BPNNSIM的输入值，以迭代模拟NEX-GDDP中相应模型的每日雪深数据。"
+            ],
+            "datasetCn": [
+                "国家气候参考站数据（1986–2005）由中国国家气象科学数据中心提供，包含每日最高和最低气温、降水量和雪深的信息。NEX-GDDP数据集由NASA于2015年发布，包括1986–2005年的历史数据，以及2006–2100年两个未来气候预测情景（RCP4.5和RCP8.5）的数据，空间分辨率为0.25°×0.25°。中国的长期雪深数据集来源于被动微波遥感数据，提供了1978年10月24日至2012年12月31日期间中国的每日雪深分布，空间分辨率为0.25°×0.25°。"
+            ],
+            "findingsCn": [
+                "验证结果显示，观测值与模型迭代模拟值的时间相关性为：月累计雪盖持续时间为0.94，月累计雪深为0.88。观测站的累计雪深多年平均值为178.06 cm·y−1，遥感数据为266.25 cm·y−1，NEX-GDDP数据为75.55 cm·y−1。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Can the fusion of optical and microwave remote sensing inversions be considered a primary method for snow depth data acquisition?",
+                "QuestionCn": "光学和微波遥感反演的融合是否可以被视为雪深数据获取的主要方法？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "Is the NEX-GDDP dataset utilized for simulating future snow depth scenarios based on representative concentration pathways?",
+                "QuestionCn": "NEX-GDDP 数据集是否用于基于代表性浓度路径模拟未来雪深情景？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C3(Applying)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Is the primary challenge in snow depth modeling related to data availability, the complexity of snow accumulation and melting processes, or computational limitations?",
+                "QuestionCn": "雪深建模的主要挑战是与数据可用性、雪的积累和融化过程的复杂性，还是计算限制有关？",
+                "AnswerEn": "the complexity of snow accumulation and melting processes",
+                "AnswerCn": "积雪积累和融化过程的复杂性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the primary methods used for acquiring snow parameter data in the context of snow depth simulation?",
+                "QuestionCn": "在雪深模拟的背景下，获取雪参数数据的主要方法有哪些？",
+                "AnswerEn": "On-site observations, optical remote sensing, passive microwave remote sensing, fusion of optical and microwave remote sensing inversions",
+                "AnswerCn": "现场观测、光学遥感、被动微波遥感、光学与微波遥感反演融合",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Where do the data inputs for the backpropagation neural network snow simulation model originate?",
+                "QuestionCn": "反向传播神经网络雪模拟模型的数据输入来源于哪里？",
+                "AnswerEn": "National Climate Reference Station",
+                "AnswerCn": "国家气候基准站",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with predicting future daily snow depth?",
+                "QuestionCn": "预测未来每日雪深所面临的挑战有哪些？",
+                "AnswerEn": "Temperature, precipitation, wind speed, solar radiation, underlying surface type, altitude",
+                "AnswerCn": "温度、降水、风速、太阳辐射、下垫面类型、海拔",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data collection method used to simulate future daily snow depth in China?",
+                "QuestionCn": "您能否提供一个用于模拟中国未来每日雪深的数据收集方法的示例？",
+                "AnswerEn": "A backpropagation neural network snow simulation model (BPNNSIM) was used, which was trained and validated using data from the National Climate Reference Station over a baseline period of 1986–2005. The model predicted the next day's snow depth using daily maximum and minimum temperatures, daily precipitation, and daily snow depth data.",
+                "AnswerCn": "使用反向传播神经网络雪模拟模型（BPNNSIM），该模型使用1986年至2005年的国家气候参考站数据进行训练和验证。该模型利用每日最高和最低气温、每日降水量和每日雪深数据预测次日的雪深。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "What is an example of a challenge faced in modeling future daily snow depth?",
+                "QuestionCn": "建模未来每日雪深时面临的一个挑战是什么？",
+                "AnswerEn": "A challenge in modeling future daily snow depth is the complexity of snow accumulation and melting processes, which are influenced by various factors such as temperature, precipitation, wind speed, solar radiation, underlying surface type, and altitude.",
+                "AnswerCn": "建模未来每日雪深的一个挑战是雪的积累和融化过程的复杂性，这些过程受到温度、降水、风速、太阳辐射、底层表面类型和海拔等多种因素的影响。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Could you provide an example of a dataset that supports research on future climate scenarios related to snow depth in China?",
+                "QuestionCn": "您能否提供一个支持有关中国未来气候情景的雪深研究的数据集示例？",
+                "AnswerEn": "The NEX-GDDP dataset, released by NASA in 2015, provides historical data for 1986–2005 and future climate projection scenarios (RCP4.5 and RCP8.5) from 2006–2100, with a spatial resolution of 0.25°×0.25°, and was used to iteratively simulate daily snow depth data.",
+                "AnswerCn": "NEX-GDDP数据集由NASA于2015年发布，提供了1986年至2005年的历史数据以及2006年至2100年的未来气候预测情景（RCP4.5和RCP8.5），空间分辨率为0.25°×0.25°，并用于迭代模拟每日雪深数据。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the features of the artificial neural network model employed for snow depth simulation?",
+                "QuestionCn": "用于雪深模拟的人工神经网络模型的特征是什么？",
+                "AnswerEn": "daily maximum and minimum temperatures, daily precipitation, daily snow depth, predicts next day's snow depth, validated with data from National Climate Reference Stations, capable of iteratively simulating future daily snow depth",
+                "AnswerCn": "每日最高和最低气温、每日降水量、每日积雪深度，预测下一天的积雪深度，使用国家气候参考站的数据进行验证，能够迭代模拟未来每日积雪深度。",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What are the challenges in accurately simulating daily snow depth using remote sensing and on-site observations?",
+                "QuestionCn": "使用遥感和现场观测准确模拟每日雪深面临的挑战有哪些？",
+                "AnswerEn": "complexity of snow accumulation and melting processes, temperature, precipitation, wind speed, solar radiation, underlying surface type, altitude, precise and consistent data integration and validation",
+                "AnswerCn": "积雪积累和融化过程的复杂性、温度、降水、风速、太阳辐射、下垫面类型、海拔、精确和一致的数据整合与验证。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many training and test samples are used to train the backpropagation neural network snow simulation model?",
+                "QuestionCn": "用于训练反向传播神经网络雪模拟模型的训练样本和测试样本数量是多少？",
+                "AnswerEn": "1,133,050",
+                "AnswerCn": "1,133,050",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What is the spatial resolution of the snow depth dataset acquired from passive microwave remote sensing data?",
+                "QuestionCn": "被动微波遥感数据获取的雪深数据集的空间分辨率是多少？",
+                "AnswerEn": "0.25°×0.25°",
+                "AnswerCn": "0.25°×0.25°",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many National Climate Reference Stations were used to determine the precision of the model iteration simulation?",
+                "QuestionCn": "用于确定模型迭代模拟精度的国家气候参考站数量是多少？",
+                "AnswerEn": "30",
+                "AnswerCn": "30",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What are the primary methods for acquiring snow parameter data in climate studies?",
+                "QuestionCn": "在气候研究中获取雪参数数据的主要方法有哪些？",
+                "AnswerEn": "The primary methods for acquiring snow parameter data include on-site observations at meteorological stations, optical remote sensing methods using the normalized difference snow index (NDSI), passive microwave remote sensing for snow depth and snow water equivalent observations, and the fusion of optical and microwave remote sensing inversions. These methods help in understanding snow cover as an important indicator of climate change.",
+                "AnswerCn": "获取雪参数数据的主要方法包括在气象站进行现场观测、使用归一化差异雪指数（NDSI）的光学遥感方法、被动微波遥感用于雪深和雪水当量观测，以及光学和微波遥感反演的融合。这些方法有助于理解雪盖作为气候变化的重要指标。",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How does the data collection method using passive microwave remote sensing for snow depth compare to the on-site observations from meteorological stations?",
+                "QuestionCn": "被动微波遥感用于雪深的数据收集方法与气象站的现场观测相比如何？",
+                "AnswerEn": "Passive microwave remote sensing provides global and regional snow depth and snow water equivalent observations, whereas on-site meteorological station observations offer localized and potentially more precise data but are limited to specific locations. The remote sensing approach allows for broader spatial coverage, while on-site observations provide detailed data at specific points.",
+                "AnswerCn": "被动微波遥感提供全球和区域的雪深和雪水当量观测，而现场气象站观测则提供局部的、可能更精确的数据，但仅限于特定地点。遥感方法允许更广泛的空间覆盖，而现场观测则在特定点提供详细数据。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "How do the challenges of simulating future daily snow depth using a backpropagation neural network compare to those of traditional methods of snow depth prediction?",
+                "QuestionCn": "使用反向传播神经网络模拟未来每日雪深的挑战与传统雪深预测方法相比如何？",
+                "AnswerEn": "Simulating future daily snow depth using a backpropagation neural network involves challenges related to model training and validation, especially given the complex factors affecting snow accumulation and melting, such as temperature, precipitation, and solar radiation. Traditional methods may rely more on empirical data and statistical models, which might not capture the full complexity of these interactions but could be easier to implement and interpret.",
+                "AnswerCn": "使用反向传播神经网络模拟未来的每日雪深面临着与模型训练和验证相关的挑战，特别是考虑到影响雪积累和融化的复杂因素，如温度、降水和太阳辐射。传统方法可能更多依赖于经验数据和统计模型，这些模型可能无法全面捕捉这些相互作用的复杂性，但可能更容易实现和解释。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "How can the integration of remote sensing observations and on-site observations enhance the accuracy of snow depth data collection?",
+                "QuestionCn": "遥感观测与现场观测的结合如何提高雪深数据收集的准确性？",
+                "AnswerEn": "Snow depth data acquisition mainly depends on two approaches: remote sensing observations and on-site observations. Remote sensing provides a broad spatial coverage, while on-site observations offer precise local measurements. Combining these methods could improve the accuracy and reliability of the data by leveraging the strengths of both approaches.",
+                "AnswerCn": "雪深数据获取主要依赖两种方法：遥感观测和现场观测。遥感提供了广泛的空间覆盖，而现场观测则提供了精确的局部测量。结合这两种方法可以通过利用两者的优势来提高数据的准确性和可靠性。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What challenges might arise when using artificial neural networks to predict future daily snow depth, and how can these be mitigated?",
+                "QuestionCn": "使用人工神经网络预测未来每日雪深时可能会出现哪些挑战，以及如何减轻这些挑战？",
+                "AnswerEn": "Snow accumulation and melting is a complex process affected by many factors, such as temperature, precipitation, wind speed, solar radiation, underlying surface type, and altitude. These factors introduce variability and complexity, making it challenging to predict future daily snow depth accurately. Mitigating these challenges could involve refining the neural network model with more comprehensive datasets and incorporating additional environmental variables to enhance predictive accuracy.",
+                "AnswerCn": "雪的积累和融化是一个复杂的过程，受到许多因素的影响，如温度、降水、风速、太阳辐射、底层表面类型和海拔。这些因素引入了变异性和复杂性，使得准确预测未来的每日雪深变得具有挑战性。缓解这些挑战的方法可能包括通过更全面的数据集来优化神经网络模型，并纳入更多的环境变量以提高预测准确性。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What potential insights can be gained from analyzing the spatiotemporal accuracy of snow simulation models, and how might this influence future climate research?",
+                "QuestionCn": "分析雪模拟模型的时空准确性可以获得哪些潜在见解，这将如何影响未来的气候研究？",
+                "AnswerEn": "Analyzing the spatiotemporal accuracy of snow simulation models can provide insights into the model's capability to simulate snow cover duration and depth accurately over different periods and locations. High spatial and temporal correlations between simulated and observed data suggest robust model performance, which can strengthen confidence in using these models for future climate projections and risk assessments of snow-related disasters.",
+                "AnswerCn": "分析雪模拟模型的时空准确性可以提供对模型在不同时间和地点准确模拟雪盖持续时间和深度能力的洞察。模拟数据与观测数据之间的高空间和时间相关性表明模型性能稳健，这可以增强对使用这些模型进行未来气候预测和雪相关灾害风险评估的信心。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the complexity of predicting future daily snow depth as opposed to historical snow cover changes?",
+                "QuestionCn": "预测未来每日雪深的复杂性与历史雪盖变化相比，受哪些因素影响？",
+                "AnswerEn": "Predicting future daily snow depth is complex due to the intricate process of snow accumulation and melting, which is influenced by many factors such as temperature, precipitation, wind speed, solar radiation, underlying surface type, and altitude. These factors make it challenging to model future snow changes accurately.",
+                "AnswerCn": "预测未来的每日雪深是复杂的，因为雪的积累和融化过程受到许多因素的影响，例如温度、降水、风速、太阳辐射、底层表面类型和海拔。这些因素使得准确建模未来的雪变化变得具有挑战性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why is remote sensing data combined with onsite observations crucial for snow depth data acquisition?",
+                "QuestionCn": "遥感数据与现场观测相结合对于雪深数据获取至关重要的原因是什么？",
+                "AnswerEn": "Remote sensing data combined with onsite observations is crucial because remote sensing provides broad spatial coverage and consistent temporal observations, while onsite observations offer high precision and ground-truth data. Together, they enhance the accuracy and reliability of snow depth data acquisition.",
+                "AnswerCn": "遥感数据与现场观测相结合至关重要，因为遥感提供了广泛的空间覆盖和一致的时间观测，而现场观测则提供了高精度和实地验证数据。两者结合可以提高雪深数据获取的准确性和可靠性。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the potential outcomes on snow depth prediction accuracy when using artificial neural networks trained with meteorological station data versus remote sensing data?",
+                "QuestionCn": "使用气象站数据训练的人工神经网络与使用遥感数据训练的人工神经网络在雪深预测准确性上的潜在结果是什么？",
+                "AnswerEn": "Using artificial neural networks trained with meteorological station data can result in high prediction accuracy for snow depth simulation, as demonstrated by a temporal correlation of 0.94 for snow cover duration and 0.88 for snow depth. On the other hand, using remote sensing data might offer different spatial resolutions and coverage but could also lead to variations in predictive accuracy due to differences in data characteristics and resolution.",
+                "AnswerCn": "使用人工神经网络训练气象站数据可以实现高精度的雪深模拟预测，雪盖持续时间的时间相关性为0.94，雪深的时间相关性为0.88。另一方面，使用遥感数据可能提供不同的空间分辨率和覆盖范围，但由于数据特征和分辨率的差异，也可能导致预测精度的变化。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What is the purpose of utilizing a backpropagation artificial neural network snow simulation model for predicting future snow depth in China?",
+                "QuestionCn": "利用反向传播人工神经网络雪模拟模型预测中国未来雪深的目的是什么？",
+                "AnswerEn": "The goal is to obtain simulation data of China's future daily snow depth in terms of representative concentration pathways (RCP4.5 and RCP8.5) using data collected from the National Climate Reference Station.",
+                "AnswerCn": "目标是获取中国未来每日雪深的模拟数据，基于代表性浓度路径（RCP4.5和RCP8.5），使用国家气候参考站收集的数据。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "Why is it important to incorporate both remote sensing and onsite observations for snow depth data acquisition in climate research?",
+                "QuestionCn": "在气候研究中，结合遥感和现场观测进行雪深数据采集的重要性是什么？",
+                "AnswerEn": "Combining remote sensing and onsite observations is crucial because snow cover acts as an important indicator under changing climate conditions, and understanding its changes requires comprehensive data from both methods.",
+                "AnswerCn": "结合遥感和现场观察至关重要，因为雪盖在气候变化条件下是一个重要的指标，理解其变化需要来自这两种方法的综合数据。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What are the objectives behind creating a dataset based on the NEX-GDDP model for simulating future daily snow depth data?",
+                "QuestionCn": "创建基于NEX-GDDP模型的未来每日雪深数据集的目标是什么？",
+                "AnswerEn": "The objective is to iteratively simulate the future daily snow depth across China using the NEX-GDDP data, which can provide data support for assessing future snow disaster risks, studying changes in snow coverage, and researching climate change impacts.",
+                "AnswerCn": "目标是利用NEX-GDDP数据迭代模拟中国未来的每日雪深，以便为评估未来雪灾风险、研究雪覆盖变化和研究气候变化影响提供数据支持。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "What methodologies are employed to train and validate a neural network model for simulating future daily snow depth?",
+                "QuestionCn": "用于训练和验证神经网络模型以模拟未来每日雪深的方法论有哪些？",
+                "AnswerEn": "The neural network model is trained and validated using data from the National Climate Reference Station over a baseline period of 1986–2005. A backpropagation neural network snow simulation model (BPNNSIM) is built using MATLAB, incorporating daily maximum and minimum air temperatures, daily precipitation, and daily snow depth to predict the next day's snow depth. Data from 155 sites are used to train the network, resulting in 1,133,050 training and test samples. The model's precision is evaluated using data from 30 randomly selected National Climate Reference Stations, comparing simulated snow depths with observations.",
+                "AnswerCn": "神经网络模型使用国家气候参考站的数据进行训练和验证，基准期为1986年至2005年。构建了一个反向传播神经网络雪模拟模型（BPNNSIM），使用MATLAB，结合每日最高和最低气温、每日降水量和每日雪深来预测下一天的雪深。使用155个站点的数据训练网络，共生成1,133,050个训练和测试样本。模型的精度通过使用来自30个随机选择的国家气候参考站的数据进行评估，比较模拟的雪深与观测值。",
+                "Level": "C3(Applying)"
+            },
+            {
+                "QuestionEn": "How can data from different sources be integrated to improve the accuracy of future snow depth simulations?",
+                "QuestionCn": "如何将来自不同来源的数据集成，以提高未来雪深模拟的准确性？",
+                "AnswerEn": "Data integration involves using National Climate Reference Station data for model training and validation, and NEX-GDDP data for iteratively simulating daily snow depth. The simulation process includes evaluating the spatiotemporal accuracy using daily precipitation, daily minimum and maximum temperatures from selected stations, and comparing the simulated snow depths with corresponding station observations. This involves integrating historical and future climate projections, ensuring that both onsite observations and remote sensing data contribute to model accuracy.",
+                "AnswerCn": "数据集成涉及使用国家气候参考站的数据进行模型训练和验证，以及使用NEX-GDDP数据迭代模拟每日雪深。模拟过程包括使用选定站点的每日降水量、每日最低和最高气温来评估时空准确性，并将模拟的雪深与相应站点的观测数据进行比较。这涉及整合历史和未来气候预测，确保现场观测和遥感数据共同促进模型的准确性。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What steps are involved in selecting input values for a neural network model to simulate daily snow depth data?",
+                "QuestionCn": "选择输入值以模拟每日雪深数据的神经网络模型涉及以下步骤：\n\n1. **数据收集**：收集与雪深相关的历史数据，包括气温、降水量、风速、湿度等气象因素。\n\n2. **数据预处理**：对收集到的数据进行清洗和整理，处理缺失值、异常值，并进行标准化或归一化。\n\n3. **特征选择**：根据领域知识和数据分析，选择与雪深变化相关的特征，可能包括历史雪深、气象条件等。\n\n4. **时间序列处理**：如果数据是时间序列，考虑使用滞后变量或滑动窗口技术来捕捉时间依赖性。\n\n5. **数据划分**：将数据集划分为训练集、验证集和测试集，以便于模型的训练和评估。\n\n6. **输入格式化**：将选定的特征转换为适合神经网络输入的格式，通常是数值数组或张量。\n\n7. **特征工程**：可能需要进行特征转换或构造新特征，以提高模型的表现。\n\n8. **模型选择**：根据问题的性质选择合适的神经网络架构，如全连接网络、卷积神经网络等。\n\n9. **超参数调整**：设置和调整模型的超参数，如学习率、批量大小、层数等，以优化模型性能。\n\n10. **模型训练**：使用训练集对模型进行训练，并在验证集上监控性能以防止过拟合。\n\n11. **模型评估**：在测试集上评估模型的性能，使用适当的指标（如均方误差、R²等）来衡量预测效果。\n\n12. **结果分析**：分析模型的预测结果，检查模型的准确性和可靠性，并根据需要进行调整。",
+                "AnswerEn": "The process involves selecting input values such as daily maximum and minimum air temperatures, daily precipitation, and daily snow depth from the National Climate Reference Stations. These inputs are used in a backpropagation neural network model to predict next-day snow depth. For future simulations, the NEX-GDDP data, which include historical and future climate projections, are used as input values to iteratively simulate the daily snow depth data. This selection process ensures that the model considers relevant climatic variables for accurate simulation.",
+                "AnswerCn": "该过程涉及从国家气候参考站选择输入值，如每日最高和最低气温、每日降水量和每日雪深。这些输入用于反向传播神经网络模型，以预测次日雪深。对于未来的模拟，使用NEX-GDDP数据，其中包括历史和未来气候预测，作为输入值以迭代模拟每日雪深数据。此选择过程确保模型考虑相关气候变量，以实现准确的模拟。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What methodologies enable the accurate prediction of future daily snow depth in climate models?",
+                "QuestionCn": "哪些方法能够在气候模型中准确预测未来的每日雪深？",
+                "AnswerEn": "The use of a backpropagation artificial neural network snow simulation model (BPANNSIM) built using data from the National Climate Reference Station enables accurate prediction by incorporating daily maximum and minimum temperatures, daily precipitation, and daily snow depth to forecast the next day's snow depth.",
+                "AnswerCn": "使用基于国家气候参考站数据构建的反向传播人工神经网络雪模拟模型（BPANNSIM），通过结合每日最高和最低气温、每日降水量和每日雪深，能够准确预测次日的雪深。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What challenges are overcome by using artificial neural networks in simulating future snow depth data?",
+                "QuestionCn": "使用人工神经网络模拟未来雪深数据时克服了哪些挑战？",
+                "AnswerEn": "Artificial neural networks help overcome challenges related to the complexity of snow accumulation and melting processes, which are influenced by various factors such as temperature, precipitation, wind speed, solar radiation, surface type, and altitude, by enabling iterative simulations with high spatial and temporal correlations.",
+                "AnswerCn": "人工神经网络帮助克服与雪积累和融化过程相关的复杂性挑战，这些过程受到温度、降水、风速、太阳辐射、表面类型和海拔等多种因素的影响，通过实现具有高空间和时间相关性的迭代模拟。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might remote sensing observations be expected to provide different snow depth data compared to onsite observations?",
+                "QuestionCn": "远程遥感观测与现场观测提供的雪深数据可能会有所不同的原因是什么？",
+                "AnswerEn": "Remote sensing observations and onsite observations might differ because remote sensing can cover larger areas with spatially consistent data but may lack the precision of local ground measurements. Additionally, remote sensing relies on indirect measurements, which can be affected by factors such as satellite sensor accuracy, atmospheric conditions, and surface characteristics, leading to discrepancies compared to direct onsite observations.",
+                "AnswerCn": "遥感观测和现场观测可能会有所不同，因为遥感可以覆盖更大区域并提供空间一致的数据，但可能缺乏局部地面测量的精确性。此外，遥感依赖间接测量，这可能受到卫星传感器精度、大气条件和地表特征等因素的影响，从而导致与直接现场观测之间的差异。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might there be challenges in predicting future daily snow depth despite the use of advanced modeling techniques?",
+                "QuestionCn": "尽管使用了先进的建模技术，但预测未来每日雪深可能会面临挑战的原因是什么？",
+                "AnswerEn": "Predicting future daily snow depth is challenging despite advanced modeling techniques because snow accumulation and melting are influenced by multiple dynamic factors, including temperature, precipitation, wind speed, solar radiation, underlying surface type, and altitude. These factors interact in complex ways, and changes in climate patterns add further uncertainty to predictions.",
+                "AnswerCn": "预测未来的每日雪深是一个具有挑战性的任务，尽管有先进的建模技术，因为雪的积累和融化受到多个动态因素的影响，包括温度、降水、风速、太阳辐射、底层表面类型和海拔。这些因素以复杂的方式相互作用，气候模式的变化进一步增加了预测的不确定性。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What are the potential challenges in using remote sensing data for simulating future daily snow depth, considering the complexities involved in snow accumulation and melting processes?",
+                "QuestionCn": "使用遥感数据模拟未来每日雪深时，考虑到雪积累和融化过程中的复杂性，可能面临的挑战包括：",
+                "AnswerEn": "The challenges in using remote sensing data for simulating future daily snow depth include the complexity of snow accumulation and melting processes, which are influenced by multiple factors such as temperature, precipitation, wind speed, solar radiation, surface type, and altitude. These factors make it difficult to accurately simulate snow depth using remote sensing data alone.",
+                "AnswerCn": "使用遥感数据模拟未来每日雪深的挑战包括雪的积累和融化过程的复杂性，这些过程受到温度、降水、风速、太阳辐射、地表类型和海拔等多个因素的影响。这些因素使得仅使用遥感数据准确模拟雪深变得困难。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How might researchers evaluate the effectiveness of using artificial neural networks for predicting future snow depth in various climate scenarios?",
+                "QuestionCn": "研究人员如何评估在不同气候情景下使用人工神经网络预测未来雪深的有效性？",
+                "AnswerEn": "Researchers might evaluate the effectiveness of using artificial neural networks for predicting future snow depth by training and validating the model with historical data from reliable sources, such as the National Climate Reference Station, and comparing the simulation results with actual observations. The model's performance can be measured through temporal and spatial correlation analyses between observed and simulated data.",
+                "AnswerCn": "研究人员可能会通过使用来自可靠来源（如国家气候参考站）的历史数据来训练和验证模型，从而评估使用人工神经网络预测未来雪深的有效性，并将模拟结果与实际观测进行比较。模型的性能可以通过观察数据与模拟数据之间的时间和空间相关性分析来衡量。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What are the considerations for selecting input data for snow simulation models when aiming for high spatial and temporal accuracy?",
+                "QuestionCn": "在选择输入数据用于雪模拟模型时，为了实现高空间和时间精度，需要考虑以下因素：",
+                "AnswerEn": "Considerations for selecting input data for snow simulation models to achieve high spatial and temporal accuracy include ensuring that the data encompasses critical variables like daily maximum and minimum temperatures, precipitation, and snow depth. Additionally, selecting comprehensive datasets such as those from the National Climate Reference Station and validated remote sensing data can improve model accuracy, and utilizing data from multiple stations can help assess the model's precision across different regions.",
+                "AnswerCn": "选择输入数据以实现高空间和时间精度的雪模拟模型时，需要考虑确保数据涵盖关键变量，如每日最高和最低气温、降水量和雪深。此外，选择来自国家气候参考站的全面数据集和经过验证的遥感数据可以提高模型的准确性，利用来自多个站点的数据可以帮助评估模型在不同地区的精度。",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I don’t understand how remote sensing observations compare to onsite observations for acquiring snow depth data.",
+                "QuestionCn": "我不明白遥感观测与现场观测在获取雪深数据方面的比较。",
+                "AnswerEn": "Remote sensing observations use optical and microwave methods to measure snow depth and snow water equivalent, whereas onsite observations rely on data from meteorological stations. The former provides wider coverage and can be used for regional or global assessments, while the latter offers more precise local measurements.",
+                "AnswerCn": "遥感观测使用光学和微波方法来测量雪深和雪水当量，而现场观测则依赖气象站的数据。前者提供更广泛的覆盖范围，可以用于区域或全球评估，而后者则提供更精确的本地测量。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I’m unsure about the challenges involved in predicting future daily snow depth.",
+                "QuestionCn": "我对预测未来每日雪深所涉及的挑战感到不确定。",
+                "AnswerEn": "Predicting future daily snow depth is complex due to the various factors influencing snow accumulation and melting, such as temperature, precipitation, wind speed, solar radiation, surface type, and altitude. These complexities require sophisticated models like the backpropagation neural network used in the research.",
+                "AnswerCn": "预测未来的每日雪深是复杂的，因为影响雪积累和融化的各种因素，如温度、降水、风速、太阳辐射、地表类型和海拔。这些复杂性需要使用像反向传播神经网络这样的复杂模型。",
+                "Level": "C2(Understanding)"
+            },
+            {
+                "QuestionEn": "I can't make sense of how the spatial resolution of a dataset affects its utility in snow cover research.",
+                "QuestionCn": "我无法理解数据集的空间分辨率如何影响其在雪盖研究中的实用性。",
+                "AnswerEn": "The spatial resolution of a dataset, such as 0.25°×0.25° in the NEX-GDDP data, determines the detail and scale of snow cover information that can be analyzed. Higher resolutions provide more detailed spatial information, which is crucial for localized assessments, whereas lower resolutions might be more suitable for broader regional studies.",
+                "AnswerCn": "数据集的空间分辨率，例如NEX-GDDP数据中的0.25°×0.25°，决定了可以分析的雪盖信息的细节和尺度。更高的分辨率提供了更详细的空间信息，这对于局部评估至关重要，而较低的分辨率可能更适合更广泛的区域研究。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Request/Directive": [
+            {
+                "QuestionEn": "Please analyze the challenges associated with using remote sensing observations versus onsite observations for snow depth data collection.",
+                "QuestionCn": "分析使用遥感观测与现场观测收集雪深数据的挑战。",
+                "AnswerEn": "Remote sensing observations and onsite observations are the two main approaches for snow depth data collection. Remote sensing methods, including optical and passive microwave techniques, allow for broad spatial coverage but may face challenges in accuracy and temporal resolution. Onsite observations provide direct and potentially more accurate measurements but are limited to specific locations and can be resource-intensive. The complexity of snow accumulation and melting, influenced by factors like temperature, precipitation, wind speed, and solar radiation, further complicates data collection.",
+                "AnswerCn": "遥感观测和现场观测是雪深数据收集的两种主要方法。遥感方法，包括光学和被动微波技术，能够提供广泛的空间覆盖，但可能面临准确性和时间分辨率的挑战。现场观测提供直接且可能更准确的测量，但仅限于特定地点，并且可能资源密集。雪的积累和融化的复杂性受到温度、降水、风速和太阳辐射等因素的影响，进一步 complicates 数据收集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Please explore how a backpropagation artificial neural network snow simulation model can be optimized for predicting future snow depth under different climate scenarios.",
+                "QuestionCn": "请探讨如何优化一个反向传播人工神经网络雪模拟模型，以预测在不同气候情景下的未来雪深。",
+                "AnswerEn": "A backpropagation artificial neural network snow simulation model can be optimized by adjusting its parameters and training data. The model uses daily maximum and minimum temperatures, daily precipitation, and daily snow depth data to predict future snow depth. Optimization could involve enhancing the training dataset with more diverse climate scenarios, improving model architecture, or integrating additional environmental variables like wind speed and solar radiation. Validation with independent datasets and refinement based on iterative testing can also improve prediction accuracy, especially under varied climate scenarios such as RCP4.5 and RCP8.5.",
+                "AnswerCn": "反向传播人工神经网络雪模拟模型可以通过调整其参数和训练数据进行优化。该模型使用每日最高和最低气温、每日降水量和每日雪深数据来预测未来的雪深。优化可以涉及通过更多样化的气候情景增强训练数据集、改善模型架构，或整合额外的环境变量，如风速和太阳辐射。使用独立数据集进行验证以及基于迭代测试的改进也可以提高预测准确性，特别是在RCP4.5和RCP8.5等不同气候情景下。",
+                "Level": "C6(Creating)"
+            }
+        ]
+    }
+}

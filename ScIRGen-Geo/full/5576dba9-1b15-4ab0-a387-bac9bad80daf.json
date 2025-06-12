@@ -1,0 +1,490 @@
+{
+    "id": "5576dba9-1b15-4ab0-a387-bac9bad80daf",
+    "relatedPaper": 2,
+    "context": {
+        "metadata": {
+            "titleEn": "Long-term series of daily snow depth dataset over the Northern Hemisphere based on machine learning （1980-2019）",
+            "titleCn": "机器学习方法融合北半球长时间序列逐日雪深数据集（1980-2019）",
+            "description": "Supported by the Strategic Priority Research Program of the Chinese Academy of Science (XDA19070100). Tao Che, the director of this program, who comes from Key Laboratory of Remote Sensing of Gansu Province, Northwest Institute of Eco-Environment and Resources, CAS. They used machine learning methods combined with multi-source gridded snow depth product data to derive a long-time series over the Northern Hemisphere.\nFirstly, the applicability of artificial neural network (ANN), support vector machine (SVM) and random forest (RF) method in snow depth fusion are compared. It is found that random forest method shows strong advantages in snow depth data fusion. Secondly, using the random forest method, combined with remote sensing snow depth products such as AMSR-E, AMSR-2, NHSD and GlobSnow and reanalysis data such as ERA-Interim and MERRA-2. These gridded snow depth products and environmental factor variables are used as the input independent variables of the model. In situ observations of China Meteorological Station (945), Russia Meteorological Station (620), Russian snow survey data (514), and global historical meteorological network (41261) are used as reference truth to train and verify the model. The daily gridded snow depth dataset of the snow hydrological year from 1980 to 2019 (September 1 of the previous year to May 31 of the current year) is prepared on the cloud platform provided by the CASEarth. Since the passive microwave brightness temperature data from 1980 to 1987 is the data of every other day, there will be a small number of missing trips in the data during this period. Using the ESM-SnowMIP and independent ground observation data for verification, the quality of the fusion data set has been improved. According to the comparison between the ground observation data and the snow depth products before fusion, the determination coefficient (R2) of the fusion data is increased from 0.23 (GlobSnow snow depth product) to 0.81, and the corresponding root mean square error (RMSE) and mean absolute error (MAE) are also reduced to 7.7 cm and 2.7 cm.",
+            "descriptionCn": "在地球大数据科学工程专项时空三极环境项目第一课题“三极大数据共享与集成” (XDA19070100)资助下，中国科学院西北生态环境资源研究院车涛课题组利用机器学习方法结合多源雪深产品数据、环境因子变量及地面观测雪深数据等制备了北半球长时间序列逐日雪深数据集。\n首先将人工神经网络、支持向量机和随机森林方法在积雪深度融合的适用性进行对比研究，发现随机森林方法在雪深数据融合上表现出较强优势。其次，利用随机森林方法，结合AMSR-E，AMSR2，NHSD和GlobSnow等遥感雪深产品及ERA-Interim和MERRA2等再分析资料格网雪深产品和环境因子变量等作为模型的输入自变量，用中国气象台站数据（945）、俄罗斯气象台站（620）、俄罗斯积雪调查数据（514）和全球历史气象网络逐日数据（41261）等43340个地面观测站点的雪深数据作为参考真值对模型训练与验证，在专项“地球大数据科学工程”提供的云平台上制备1980~2019年积雪水文年（上一年9月1日至本年度5月31日）的逐日格网雪深数据集。由于1980~1987年微波亮温数据为隔日数据，所以这段时间的数据会出现少量条带缺失现象。利用全球积雪模型对比计划及独立的地面观测数据进行验证，融合数据集的质量在整体上有所提升。利用地面观测数据及融合前的雪深产品对比来看，融合数据的决定系数（R2）从6种融合前产品中最高的0.23（GlobSnow雪深产品）提升至0.81，而相应的均方根误差（RMSE）和平均绝对误差（MAE）也减小至7.7 cm 和2.7 cm。",
+            "instructions": "The daily snow depth data is a matrix with 1440 columns and 360 rows, and the spatial resolution of the data is 0.25 °, NoData_Value is represented by - 9999. The snow depth datasets are stored according to the natural year folder by folder, the folder of each year contains the daily fused gridded snow depth dataset of that year. The data format of fused snow depth dataset is stored in GeoTiff format, the unit of snow depth data is centimeter, and the projection is WGS84. Among these years, the daily fused snow depth dataset from September 1, 1980 to December 31 of that year were contained in folder of 1980, and the folder of 2019 contains the daily fused snow depth dataset from 1 January 1, 2019 to May 31 of that year. Except for these two years, al folders contain the fused snow depth dataset from January 1 to May 31 and September 1 to December 31. Because of the quality of the original gridded snow depth datasets, daily snow depth datasets from June 1 to August 31 were not considered in our study. The file name is \"ML_NHSD_YYYY-MM-DD.tif\", where ML stands for machine learning, NHSD stands for Northern Hemisphere Snow Depth, YYYY stands for the natural years from 1980 to 2019, MM stands for January to December (except June to August), and DD stands for the date. The file can be viewed with software such as ArcMAP or QGIS and processed accordingly. \nThe original gridded snow depth datasets of NHSD and GlobSnow were produced with the passive microwave brightness temperature from SMMR sensor in 1980 to 1987. The SMMR dataset was the other day dataset and with large missing bands. Snow depth dataset of NHSD and GlobSnow were also inevitably have a large number of missing data, and the fused snow depth dataset have a similar situation. The fused snow depth is as complete as possible for the land area of the Northern Hemisphere, there are minor missing data on some days, and the coastal areas such as Greenland and Iceland are not within the scope of the study.",
+            "instructionsCn": "逐日的雪深数据是一个1440列和360行的矩阵，数据的空间分辨率为0.25°，NODATA_value用-9999表示。数据按照自然年逐文件夹进行存储，每年文件夹中包含当年的逐日格网雪深数据集，逐日雪深数据集用GeoTiff格式存储，雪深数据的单位为cm，投影方式为WGS84。其中1980年包含1980年9月1日至当年12月31日的雪深数据集，2019年包含2019年1月1日至当年5月31日的数据集，除此之外，所有文件夹均包含了当年1月1日至5月31日及9月1日至12月31日的数据集，6月1日至8月31日没有制备雪深数据集。文件名称为“ML_NHSD_YYYY-MM-DD.tif”,其中ML表示机器学习，NHSD表示北半球雪深，YYYY代表的为1980~2019的自然年，MM代表1~12月（除6~8月），DD表示日期。该文件可以用ArcMAP或QGIS等软件查看并进行相应的数据处理。1980~1987年NHSD雪深数据集及GlobSnow雪深数据集利用SMMR微波亮温数据，该亮温数据为隔日数据且存在大量条带缺失现象，尽管两种产品都已填充为逐日数据，但不可避免的都出现大量数据缺失现象而融合数据也出现了类似的情况。1988年之后的逐日雪深数据集尽可能保证了北半球陆地区域的完整性但在部分天数还是出现了轻微的缺失现象，格陵兰和冰岛等海岸带区域不在研究范围之内。",
+            "east": 180.0,
+            "west": -180.0,
+            "south": 90.0,
+            "north": 0.0,
+            "startTime": "1980-09-01 00:00:00",
+            "endTime": "2019-05-31 00:00:00",
+            "fileSize": 3030971199.0,
+            "cstr": "18406.11.Snow.tpdc.271701",
+            "doi": "10.11888/Snow.tpdc.271701",
+            "dataFormat": null,
+            "license": "Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)"
+        },
+        "authorList": [
+            {
+                "nameCn": "车涛",
+                "nameEn": "CHE Tao",
+                "unitEn": "",
+                "unitCn": "中国科学院西北生态环境资源研究院"
+            },
+            {
+                "nameCn": "胡艳兴",
+                "nameEn": "HU Yanxing",
+                "unitEn": "",
+                "unitCn": "中国科学院西北生态环境资源研究院"
+            },
+            {
+                "nameCn": "戴礼云",
+                "nameEn": "DAI Liyun",
+                "unitEn": "",
+                "unitCn": "中国科学院西北生态环境资源研究院"
+            },
+            {
+                "nameCn": "肖林",
+                "nameEn": "XIAO Lin",
+                "unitEn": "",
+                "unitCn": "四川农业大学"
+            }
+        ],
+        "literatureList": [
+            {
+                "titleCn": null,
+                "titleEn": "Snow depth fusion based on machine learning methods for the Northern Hemisphere",
+                "referenceCn": null,
+                "referenceEn": "Hu,Y.X., Che, T., Dai, L.Y., & Xiao, L. (2021). Snow depth fusion based on machine learning methods for the Northern Hemisphere. Remote Sensing, 13,1250."
+            },
+            {
+                "titleCn": null,
+                "titleEn": " A long-term daily gridded snow depth dataset for the Northern Hemisphere from 1980 to 2019 based on machine learning",
+                "referenceCn": null,
+                "referenceEn": "Hu, Y., Che, T., Dai, L., Zhu, Y., Xiao, L., Deng, J., and Li, X. (2023). A long-term daily gridded snow depth dataset for the Northern Hemisphere from 1980 to 2019 based on machine learning. Big Earth Data, DOI: 10.1080/20964471.2023.2177435."
+            }
+        ],
+        "keywordStandList": [
+            {
+                "nameCn": "冰冻圈",
+                "nameEn": "Cryosphere"
+            }
+        ],
+        "themeList": [
+            {
+                "nameCn": "积雪",
+                "nameEn": "Snow"
+            },
+            {
+                "nameCn": "积雪深度",
+                "nameEn": "Snow depth"
+            }
+        ],
+        "placeKeywordList": [
+            {
+                "keywordCn": "北半球",
+                "keywordEn": "Northern Hemispheric"
+            }
+        ],
+        "temporalKeywordList": [
+            {
+                "keywordCn": "1980-2019",
+                "keywordEn": "1980-2019",
+                "type": "temporal"
+            }
+        ],
+        "fundVOList": [
+            {
+                "titleCn": "地球大数据科学工程专项时空三极环境项目",
+                "titleEn": "CASEarth:Big Earth Data for Three Poles"
+            }
+        ],
+        "projectList": [
+            {
+                "titleCn": "时空三极环境大数据平台",
+                "titleEn": "A Big Earth Data Platform for Three Poles"
+            },
+            {
+                "titleCn": "国家青藏高原科学数据中心",
+                "titleEn": "National Tibetan Plateau / Third Pole Environment Data Center"
+            }
+        ],
+        "relatedDataList": [
+            {
+                "titleCn": "祁连山地区日值0.05°×0.05°地表土壤水分数据（2017, SMHiRes, V1）",
+                "titleEn": "Daily 0.05°×0.05° land surface soil moisture dataset of Qilian Mountain area (2017, SMHiRes, V1)"
+            },
+            {
+                "titleCn": "祁连山地区冰川边界（2018）",
+                "titleEn": "The glacier inventory of Qilian Mountain Area (2018 )"
+            },
+            {
+                "titleCn": "青藏高原枪勇冰川近2500年融化强度变化数据",
+                "titleEn": "Long-term glacier melt fluctuations of Qiangyong Glacier on the Tibetan Plateau over the past 2500 yr"
+            },
+            {
+                "titleCn": "长江源和黄河源水资源时空分布数据集（1998-2017）",
+                "titleEn": "The dataset of spatio-temporal water resources distribution in the source regions of Yangtze River and Yellow River (1998-2017)"
+            },
+            {
+                "titleCn": "北半球湖冰物候数据集（1978-2018）",
+                "titleEn": "The lake ice phenology dataset of the Northern Hemisphere (1978-2018)"
+            },
+            {
+                "titleCn": "青藏高原黑河多年冻土区热融滑塌遥感产品（2009-2018）",
+                "titleEn": "Remote sensing products of thermal collapse in Heihe permafrost region of the Tibetan Plateau (2009-2018)"
+            },
+            {
+                "titleCn": "阿勒泰地区雪冰吸光性杂质数据（2016-2017）V1.0",
+                "titleEn": "Absorptive impurity data of snow and ice in Altay (2016-2017) v1.0"
+            },
+            {
+                "titleCn": "青藏高原黑河流域野牛沟冻土活动层厚度数据(2014-2018)",
+                "titleEn": "Thickness data of active layer in the Yeniugou of the Heihe River Basin over Tibetan Plateau (2014-2018)"
+            },
+            {
+                "titleCn": "基于MODIS的青藏高原逐日湖冰范围和覆盖比例数据集（2002-2018）",
+                "titleEn": "Daily lake ice extent and cover proportion dataset of the Tibetan Plateau based on MODIS (2002-2018)"
+            },
+            {
+                "titleCn": "全球长时间序列逐日雪深数据集（1980-2018）",
+                "titleEn": "Long-term series of daily global snow depth (1979-2017)"
+            }
+        ]
+    },
+    "extract_pdfs_data": [
+        {
+            "background": [
+                "The first three snow depth datasets are retrieved from passive microwave brightness temperature or assimilation with in situ observations, while the last two are snow depth datasets obtained from meteorological reanalysis data with a land surface model and data assimilation system."
+            ],
+            "research objective": [
+                "In this study, a machine learning algorithm was introduced to fuse gridded snow depth datasets."
+            ],
+            "challenges": [
+                "Although the fused snow depth dataset performs well in accuracy assessment via five independent in situ observations, there are still some limitations that warrant further improvements. First and foremost, these snow depth datasets were not comprehensively evaluated before data fusion. Secondly, the location of these stations was still sparse. The model should be modified before applying it to specific regions and the appropriate input variables should be selected according to the regional conditions. Thirdly, the fused snow depth was only validated by five independent in situ observations; more in situ stations should be introduced to more thoroughly assess this snow depth dataset."
+            ],
+            "methods": [
+                "A total of 29,565 in situ observations were used to train and optimize the machine learning algorithm."
+            ],
+            "dataset": [
+                "A total of five gridded snow depth datasets—Advanced Microwave Scanning Radiometer for the Earth Observing System (AMSR-E) snow depth, Global Snow Monitoring for Climate Research (GlobSnow) snow depth, Long time series of daily snow depth over the Northern Hemisphere (NHSD) snow depth, ERA-Interim snow depth and Modern-Era Retrospective Analysis for Research and Applications, version 2 (MERRA-2) snow depth—were used as input variables."
+            ],
+            "findings": [
+                "The fused snow depth dataset shows better R2, RMSE, and MAE than the five original snow-depth datasets."
+            ],
+            "backgroundCn": [
+                "前三个雪深数据集是通过被动微波亮温或与现场观测的同化获取的，而最后两个雪深数据集则是通过气象再分析数据与陆面模型和数据同化系统获得的。"
+            ],
+            "research objectiveCn": [
+                "在这项研究中，介绍了一种机器学习算法用于融合网格化的雪深数据集。"
+            ],
+            "challengesCn": [
+                "尽管融合的雪深数据集在五个独立的现场观测中表现出良好的准确性评估，但仍然存在一些限制，值得进一步改进。首先，这些雪深数据集在数据融合之前并没有进行全面评估。其次，这些站点的位置仍然稀疏。在将模型应用于特定区域之前，应对其进行修改，并根据区域条件选择适当的输入变量。第三，融合的雪深仅通过五个独立的现场观测进行了验证；应引入更多的现场站点，以更全面地评估该雪深数据集。"
+            ],
+            "methodsCn": [
+                "总共使用了29,565个原位观测数据来训练和优化机器学习算法。"
+            ],
+            "datasetCn": [
+                "总共使用了五个网格化的雪深数据集作为输入变量——地球观测系统的先进微波扫描辐射仪（AMSR-E）雪深、全球气候研究的雪监测（GlobSnow）雪深、北半球长期日雪深时间序列（NHSD）雪深、ERA-Interim雪深和现代时代回顾分析研究与应用第2版（MERRA-2）雪深。"
+            ],
+            "findingsCn": [
+                "融合的雪深数据集在R2、RMSE和MAE方面表现优于五个原始雪深数据集。"
+            ]
+        },
+        {
+            "background": [
+                "Seasonal snow is a fundamental component of the global energy and water cycles (Barnett et al., 2005; Bormann et al., 2018). Snowpack is highly vulnerable to climate change, but although snow extent is monitored routinely, the fundamental properties of snow depth is measured remarkably poorly (Pritchard., 2021). The IPCC Special Report on Oceans and Cryosphere in a Changing Climate (SROCC) highlighted key strengths and weaknesses in our understanding of the cryosphere and mass and spatial-temporal variability trends in snow depth over the Northern Hemisphere during the 20th century that have still not been accurately assessed (IPCC, 2019). In contrast to snow cover, reliable quantitative knowledge on snow depth and its trend is lacking (Bormann et al., 2018; Pulliainen et al., 2020). Snow depth is more challenging to monitor than snow cover extent at both global (Zhu et al., 2021) and regional scales because of limited surface observations along with inadequate measurements and methods for retrieval from space (Bormann et al., 2018). Hence, confidence in snow depth trends is much lower than that of snow cover extent. Currently, snow depth data can be obtained from manual observations, passive microwave brightness temperature, synthetic aperture radars (Lievens et al., 2019), and reanalysis datasets. In situ observations consist of meteorological station data, snow survey data and automatic snow depth observation equipment set up in the field. These datasets, while accurate, are based on single-point observation. Snow surveys are time-consuming and laborious. Some automatic measurement networks provide snow depth information, but are mostly located in nearly flat terrains and seldom cover the highest elevations (Dozier et al., 2016). Snow depth data retrieved based on passive microwave brightness can reveal the spatiotemporal pattern of large areas. Hereafter, these datasets are referred to as remote sensing snow depth products. At present, frequently used remote sensing snow depth products are from the Advanced Microwave Scanning Radiometer for the Earth Observing System (AMSR-E), the Advanced Microwave Scanning Radiometer-2 (AMSR-2), which succeeded AMSR-E, a long time series of the Northern Hemisphere snow depth (NHSD) and the Global Snow Monitoring for Climate Research (GlobSnow). The accuracy of AMSR-E and AMSR-2 is higher in North America than in Eurasia (Xiao et al., 2020). The accuracy of the NHSD snow depth product is high in China but low in Europe, America and Canada, where snow tends to be deep (Hu et al., 2021). GlobSnow incorporated some ground observations and has been recognized as the most accurate remote sensing."
+            ],
+            "research objective": [
+                "To overcome these problems, in our previous work we proposed a novel data fusion framework based on Random Forest Regression of snow products from Advanced Microwave Scanning Radiometer for the Earth Observing System (AMSR-E), Advanced Microwave Scanning Radiometer 2 (AMSR-2), Global Snow Monitoring for Climate Research (GlobSnow), the Northern Hemisphere Snow Depth (NHSD), ERA-Interim, and Modern-Era Retrospective Analysis for Research and Applications, version 2 (MERRA-2), incorporated geolocation (latitude and longitude), and topographic data (elevation), which were used as input independent variables."
+            ],
+            "challenges": [
+                "Remote sensing-derived snow depth products are temporally and spatially discontinuous and tend to underestimate snow depth, while reanalysis snow depth products have coarse spatial resolutions and great uncertainties."
+            ],
+            "methods": [
+                "More than 30,000 ground observation sites were used as the dependent variable to train and validate the model in different time periods."
+            ],
+            "dataset": [
+                "In situ snow depth datasets included meteorological station observations from China and Russia, snow survey data from Russia and Global Historical Climatology Network (GHCN)–daily snow depth. For this study, the snow water equivalent and snow density from ERA-Interim were downloaded at a six-hour time step, then processed as a daily snow depth dataset. The original spatial resolution of the MERRA-2 reanalysis dataset was 0.5° × 0.625°, which was subsequently resampled to 0.25° × 0.25° spatial resolution by nearest interpolation. This ensured that the original gridded snow depth products used in this study had the same spatial resolution of 0.25° × 0.25° and daily temporal resolution from 1980 to 2019. In this study, the time series of these in situ observations were obtained from 1980 to 2019."
+            ],
+            "findings": [
+                "This fusion framework resulted in a long time series of continuous daily snow depth product over the Northern Hemisphere with a spatial resolution of 0.25°. Here we compared the fused snow depth and the original gridded snow depth products with 13,272 observation sites, showing an improved precision of our product. The fused snow depth had a decreasing trend based on the spatiotemporal analysis and Mann-Kendall trend test method. This fused snow depth product provides the basis for understanding the temporal and spatial characteristics of snow cover and their relation to climate change, hydrological and water cycle, water resource management, ecological environment and snow disaster and hazard prevention."
+            ],
+            "backgroundCn": [
+                "季节性雪是全球能量和水循环的一个基本组成部分（Barnett et al., 2005; Bormann et al., 2018）。雪盖对气候变化高度脆弱，但尽管雪的覆盖范围被定期监测，雪深的基本特性却测量得相当不足（Pritchard., 2021）。气候变化中的海洋和冰冻圈特别报告（IPCC SROCC）强调了我们对冰冻圈的理解中的关键优势和劣势，以及20世纪北半球雪深的质量和时空变异趋势，这些仍未得到准确评估（IPCC, 2019）。与雪覆盖相比，关于雪深及其趋势的可靠定量知识仍然缺乏（Bormann et al., 2018; Pulliainen et al., 2020）。在全球（Zhu et al., 2021）和区域尺度上，监测雪深比监测雪覆盖范围更具挑战性，因为表面观测有限，且从太空获取的测量和方法不足（Bormann et al., 2018）。因此，雪深趋势的信心远低于雪覆盖范围。目前，雪深数据可以通过人工观测、被动微波亮温、合成孔径雷达（Lievens et al., 2019）和再分析数据集获得。现场观测包括气象站数据、雪调查数据和在现场设置的自动雪深观测设备。这些数据集虽然准确，但基于单点观测。雪调查耗时且劳动强度大。一些自动测量网络提供雪深信息，但大多位于几乎平坦的地形，且很少覆盖最高海拔地区（Dozier et al., 2016）。基于被动微波亮温获取的雪深数据可以揭示大面积的时空模式。此后，这些数据集被称为遥感雪深产品。目前，常用的遥感雪深产品来自地球观测系统的先进微波扫描辐射计（AMSR-E）、继承AMSR-E的先进微波扫描辐射计-2（AMSR-2）、北半球雪深的长期系列（NHSD）和全球气候研究的雪监测（GlobSnow）。AMSR-E和AMSR-2在北美的准确性高于欧亚大陆（Xiao et al., 2020）。NHSD雪深产品在中国的准确性高，但在欧洲、美国和加拿大的准确性较低，这些地区的雪往往较深（Hu et al., 2021）。GlobSnow结合了一些地面观测，被认为是最准确的遥感产品。"
+            ],
+            "research objectiveCn": [
+                "为了克服这些问题，在我们之前的工作中，我们提出了一种基于随机森林回归的新型数据融合框架，该框架利用了来自地球观测系统高级微波扫描辐射仪（AMSR-E）、高级微波扫描辐射仪2（AMSR-2）、全球气候研究的雪监测（GlobSnow）、北半球雪深（NHSD）、ERA-Interim和现代时代回顾分析研究与应用第2版（MERRA-2）的雪产品，并结合了地理位置（纬度和经度）和地形数据（海拔），这些数据被用作输入自变量。"
+            ],
+            "challengesCn": [
+                "遥感衍生的雪深产品在时间和空间上都是不连续的，并且往往低估雪深，而再分析雪深产品则具有较粗的空间分辨率和较大的不确定性。"
+            ],
+            "methodsCn": [
+                "超过30,000个地面观测站点被用作因变量，以在不同时间段内训练和验证模型。"
+            ],
+            "datasetCn": [
+                "本研究中包含了来自中国和俄罗斯的气象站观测的原位雪深数据集、俄罗斯的雪调查数据以及全球历史气候网络（GHCN）每日雪深数据。研究中下载了ERA-Interim的雪水当量和雪密度数据，时间步长为六小时，然后处理为每日雪深数据集。MERRA-2再分析数据集的原始空间分辨率为0.5° × 0.625°，随后通过最近邻插值法重采样至0.25° × 0.25°的空间分辨率。这确保了本研究中使用的原始网格雪深产品具有相同的0.25° × 0.25°空间分辨率和1980年至2019年的每日时间分辨率。本研究中，这些原位观测的时间序列数据从1980年到2019年获得。"
+            ],
+            "findingsCn": [
+                "该融合框架生成了一个覆盖北半球的连续日雪深产品，时间序列较长，空间分辨率为0.25°。我们使用13,272个观测站点比较了融合雪深和原始网格雪深产品，显示出我们的产品在精度上有所改善。融合雪深基于时空分析和Mann-Kendall趋势检验方法显示出下降趋势。该融合雪深产品为理解雪盖的时间和空间特征及其与气候变化、水文和水循环、水资源管理、生态环境以及雪灾和灾害预防的关系提供了基础。"
+            ]
+        }
+    ],
+    "query": {
+        "Verification": [
+            {
+                "QuestionEn": "Are there challenges with spatial and temporal discontinuity in remote sensing-derived snow depth products?",
+                "QuestionCn": "遥感衍生的雪深产品在空间和时间不连续性方面存在挑战吗？",
+                "AnswerEn": "Yes",
+                "AnswerCn": "是",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Disjunctive": [
+            {
+                "QuestionEn": "Does the data collection method for snow depth datasets rely more on ground observations, remote sensing products, or reanalysis datasets?",
+                "QuestionCn": "雪深数据集的数据收集方法更多依赖于地面观测、遥感产品还是再分析数据集？",
+                "AnswerEn": "ground observations, remote sensing products, reanalysis datasets",
+                "AnswerCn": "地面观测、遥感产品、再分析数据集",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Is the primary challenge in creating a snow depth dataset due to spatial resolution issues, data sparsity, or temporal discontinuities?",
+                "QuestionCn": "创建雪深数据集的主要挑战是由于空间分辨率问题、数据稀疏性还是时间不连续性？",
+                "AnswerEn": "spatial resolution issues, data sparsity, temporal discontinuities",
+                "AnswerCn": "空间分辨率问题、数据稀疏性、时间不连续性",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Are machine learning algorithms used mainly for data fusion, data validation, or data interpretation in snow depth datasets?",
+                "QuestionCn": "机器学习算法主要用于雪深数据集中的数据融合、数据验证还是数据解释？",
+                "AnswerEn": "data fusion",
+                "AnswerCn": "数据融合",
+                "Level": "C5(Evaluating)"
+            }
+        ],
+        "Concept Completion": [
+            {
+                "QuestionEn": "What are the different data collection methods used for obtaining snow depth datasets in the field of Northern Hemisphere snow depth research?",
+                "QuestionCn": "在北半球雪深研究领域，获取雪深数据集的不同数据收集方法包括：",
+                "AnswerEn": "in situ observations, snow survey data, automatic snow depth observation equipment, remote sensing snow depth products, reanalysis datasets",
+                "AnswerCn": "现场观测、积雪调查数据、自动积雪深度观测设备、遥感积雪深度产品、再分析数据集",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "Where are the ground observation sites located that are used for training and validating machine learning models in snow depth data fusion projects?",
+                "QuestionCn": "用于训练和验证机器学习模型的雪深数据融合项目的地面观测站点位于哪里？",
+                "AnswerEn": "China and Russia",
+                "AnswerCn": "中国和俄罗斯",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "What challenges are associated with remote sensing-derived snow depth products in the context of their accuracy and spatial resolution?",
+                "QuestionCn": "与遥感衍生的雪深产品相关的挑战包括其准确性和空间分辨率。",
+                "AnswerEn": "temporal and spatial discontinuities",
+                "AnswerCn": "时间和空间的不连续性",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Example": [
+            {
+                "QuestionEn": "Can you provide an example of a data fusion framework used to integrate multiple snow depth datasets over the Northern Hemisphere?",
+                "QuestionCn": "您能否提供一个数据融合框架的示例，用于整合北半球多个雪深数据集？",
+                "AnswerEn": "A novel data fusion framework based on Random Forest Regression was proposed to integrate snow products from various sources such as the Advanced Microwave Scanning Radiometer for the Earth Observing System (AMSR-E), Advanced Microwave Scanning Radiometer 2 (AMSR-2), Global Snow Monitoring for Climate Research (GlobSnow), Northern Hemisphere Snow Depth (NHSD), ERA-Interim, and MERRA-2, incorporating geolocation and topographic data as input variables.",
+                "AnswerCn": "提出了一种基于随机森林回归的新的数据融合框架，用于整合来自不同来源的雪产品，如地球观测系统的先进微波扫描辐射仪（AMSR-E）、先进微波扫描辐射仪2（AMSR-2）、全球气候研究的雪监测（GlobSnow）、北半球雪深（NHSD）、ERA-Interim和MERRA-2，同时将地理位置和地形数据作为输入变量。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Feature Specification": [
+            {
+                "QuestionEn": "What are the characteristics of the machine learning algorithms used for snow depth data fusion?",
+                "QuestionCn": "用于雪深数据融合的机器学习算法的特点是什么？",
+                "AnswerEn": "artificial neural networks, support vector machines, random forests, strong advantages in snow depth data fusion",
+                "AnswerCn": "人工神经网络、支持向量机、随机森林在雪深数据融合中具有显著优势。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Quantification": [
+            {
+                "QuestionEn": "How many ground observation stations' snow depth data were used as reference values for model training and validation?",
+                "QuestionCn": "用于模型训练和验证的地面观测站雪深数据作为参考值的数量是多少？",
+                "AnswerEn": "43340",
+                "AnswerCn": "43340",
+                "Level": "C1(Remembering)"
+            },
+            {
+                "QuestionEn": "How many in situ observations were utilized to train and optimize the machine learning algorithm?",
+                "QuestionCn": "用于训练和优化机器学习算法的原位观测数据有多少个？",
+                "AnswerEn": "29565",
+                "AnswerCn": "29565",
+                "Level": "C1(Remembering)"
+            }
+        ],
+        "Definition": [
+            {
+                "QuestionEn": "What are the challenges associated with collecting snow depth data using remote sensing and ground observations?",
+                "QuestionCn": "使用遥感和地面观测收集雪深数据所面临的挑战有哪些？",
+                "AnswerEn": "The challenges include the temporal and spatial discontinuities of remote sensing-derived snow depth products, their tendency to underestimate snow depth, the coarse spatial resolutions and uncertainties of reanalysis products, and the sparse distribution of in situ observation sites, which can limit the comprehensive evaluation and application of snow depth datasets.",
+                "AnswerCn": "挑战包括遥感衍生的雪深产品在时间和空间上的不连续性，它们往往低估雪深，重分析产品的空间分辨率较粗以及不确定性，以及现场观测点的稀疏分布，这些都可能限制雪深数据集的全面评估和应用。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Comparison": [
+            {
+                "QuestionEn": "How do the challenges of using remote sensing-derived snow depth products compare to those of reanalysis snow depth products in terms of temporal and spatial resolution?",
+                "QuestionCn": "使用遥感衍生的雪深产品与再分析雪深产品在时间和空间分辨率方面的挑战有何不同？",
+                "AnswerEn": "Remote sensing-derived snow depth products are temporally and spatially discontinuous and tend to underestimate snow depth, while reanalysis snow depth products have coarse spatial resolutions and great uncertainties.",
+                "AnswerCn": "遥感衍生的雪深产品在时间和空间上都是不连续的，且往往低估雪深，而再分析雪深产品的空间分辨率较粗，且存在较大的不确定性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What are the differences in the process of training a machine learning algorithm with in situ observations versus using gridded snow depth datasets as input variables?",
+                "QuestionCn": "使用原位观测数据与使用网格化雪深数据集作为输入变量训练机器学习算法的过程有什么不同？",
+                "AnswerEn": "Training a machine learning algorithm with in situ observations involves using them as dependent variables to validate and optimize the model, whereas using gridded snow depth datasets as input variables incorporates data from multiple sources like remote sensing and reanalysis, serving as independent variables within the model.",
+                "AnswerCn": "使用原位观测数据训练机器学习算法涉及将其作为因变量来验证和优化模型，而使用网格化雪深数据集作为自变量则将来自多个来源的数据（如遥感和再分析）纳入模型中。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Interpretation": [
+            {
+                "QuestionEn": "What can be inferred about the effectiveness of machine learning algorithms in data fusion when comparing multiple fusion methods for snow depth datasets?",
+                "QuestionCn": "在比较多个融合方法用于雪深数据集时，可以推断出机器学习算法在数据融合中的有效性。",
+                "AnswerEn": "Machine learning algorithms, particularly the random forest method, demonstrate a strong effectiveness in data fusion for snow depth datasets. This method outperforms others like artificial neural networks and support vector machines, resulting in improved accuracy metrics such as a higher R2 value and lower RMSE and MAE compared to the original snow depth datasets.",
+                "AnswerCn": "机器学习算法，特别是随机森林方法，在雪深数据集的数据融合中表现出强大的有效性。与人工神经网络和支持向量机等其他方法相比，该方法在准确性指标上表现更佳，如更高的R2值和更低的RMSE和MAE，相较于原始雪深数据集。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What challenges arise in using remote sensing and reanalysis data for snow depth measurement, and how might these challenges impact the interpretation of snow depth datasets?",
+                "QuestionCn": "在使用遥感和再分析数据进行雪深测量时，会出现哪些挑战，这些挑战可能如何影响雪深数据集的解释？",
+                "AnswerEn": "Challenges in using remote sensing and reanalysis data include temporal and spatial discontinuities and a tendency to underestimate snow depth, while reanalysis products often have coarse spatial resolutions and significant uncertainties. These issues can impact the accuracy and reliability of snow depth measurements, affecting the interpretation of trends and patterns in snow depth datasets.",
+                "AnswerCn": "使用遥感和再分析数据的挑战包括时间和空间的不连续性，以及对雪深的低估倾向，而再分析产品通常具有较粗的空间分辨率和显著的不确定性。这些问题可能影响雪深测量的准确性和可靠性，从而影响对雪深数据集趋势和模式的解读。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How does the integration of multiple data sources and observations affect the reliability and accuracy of snow depth datasets over large geographic areas?",
+                "QuestionCn": "多个数据源和观测结果的整合如何影响大范围地理区域内雪深数据集的可靠性和准确性？",
+                "AnswerEn": "Integrating multiple data sources, such as remote sensing products and ground observations, enhances the reliability and accuracy of snow depth datasets. This integration allows for a more comprehensive spatial and temporal coverage, improving the precision of snow depth measurements and making the datasets more robust for analyzing trends over large geographic areas.",
+                "AnswerCn": "整合多个数据源，如遥感产品和地面观测，增强了雪深数据集的可靠性和准确性。这种整合允许更全面的空间和时间覆盖，提高了雪深测量的精确性，使数据集在分析大范围地理区域的趋势时更加稳健。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Antecedent": [
+            {
+                "QuestionEn": "What factors contribute to the limitations in the accuracy of snow depth datasets before the data fusion process?",
+                "QuestionCn": "在数据融合过程之前，影响雪深数据集准确性的因素有哪些？",
+                "AnswerEn": "The factors include the sparse location of meteorological stations, inadequate evaluation of snow depth datasets before fusion, and the limited number of independent in situ observations used for validation.",
+                "AnswerCn": "这些因素包括气象站的稀疏分布、在融合之前对雪深数据集的评估不足，以及用于验证的独立地面观测数量有限。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why do remote sensing snow depth products tend to underestimate snow depth?",
+                "QuestionCn": "遥感雪深产品往往低估雪深的原因是什么？",
+                "AnswerEn": "Remote sensing-derived snow depth products are temporally and spatially discontinuous and have been observed to have lower accuracy in certain regions, which contributes to their tendency to underestimate snow depth.",
+                "AnswerCn": "遥感衍生的雪深产品在时间和空间上都是不连续的，并且在某些地区的准确性较低，这导致它们倾向于低估雪深。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Causal Consequence": [
+            {
+                "QuestionEn": "What are the consequences of using machine learning algorithms for fusing multiple snow depth datasets on the accuracy of the resulting dataset?",
+                "QuestionCn": "使用机器学习算法融合多个雪深数据集对最终数据集的准确性有什么影响？",
+                "AnswerEn": "The use of machine learning algorithms, particularly Random Forest, for fusing multiple snow depth datasets results in improved accuracy of the fused dataset. The dataset shows better R2, RMSE, and MAE than the original individual snow depth datasets, indicating a significant enhancement in data quality and reliability.",
+                "AnswerCn": "使用机器学习算法，特别是随机森林，融合多个雪深数据集可以提高融合数据集的准确性。该数据集显示出比原始单个雪深数据集更好的R2、RMSE和MAE，表明数据质量和可靠性有显著提升。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "How does the integration of ground observation data impact the validation and accuracy of snow depth datasets derived from remote sensing and reanalysis data?",
+                "QuestionCn": "地面观测数据的整合如何影响从遥感和再分析数据中获取的雪深数据集的验证和准确性？",
+                "AnswerEn": "The integration of ground observation data into the validation process of snow depth datasets significantly enhances the accuracy of the resulting data product. Ground observation data serve as reference values, allowing for more precise model training and validation, leading to a higher R2 and decreased RMSE and MAE when compared to datasets derived solely from remote sensing and reanalysis data.",
+                "AnswerCn": "将地面观测数据整合到雪深数据集的验证过程中，显著提高了最终数据产品的准确性。地面观测数据作为参考值，使得模型训练和验证更加精确，从而在与仅依赖遥感和再分析数据的结果相比时，获得更高的R²值以及降低的均方根误差（RMSE）和平均绝对误差（MAE）。",
+                "Level": "C4(Analyzing)"
+            }
+        ],
+        "Goal Orientation": [
+            {
+                "QuestionEn": "What are the goals of overcoming the challenges associated with remote sensing snow depth products and reanalysis data in snow depth monitoring?",
+                "QuestionCn": "克服与遥感雪深产品和再分析数据相关的挑战在雪深监测中的目标是什么？",
+                "AnswerEn": "The primary goal is to address the temporal and spatial discontinuities and underestimations associated with remote sensing snow depth products, as well as the coarse resolutions and uncertainties of reanalysis data. By refining these products and integrating them into a consistent snow depth dataset, researchers aim to achieve better assessments of snow cover, enhance climate change models, and improve water resource management.",
+                "AnswerCn": "主要目标是解决遥感雪深产品的时间和空间不连续性以及低估问题，以及再分析数据的粗分辨率和不确定性。通过改进这些产品并将其整合成一个一致的雪深数据集，研究人员旨在更好地评估雪盖，增强气候变化模型，并改善水资源管理。",
+                "Level": "C2(Understanding)"
+            }
+        ],
+        "Instrumental/Procedural": [
+            {
+                "QuestionEn": "How can machine learning algorithms be effectively utilized to merge multiple snow depth datasets into a cohesive dataset with improved accuracy?",
+                "QuestionCn": "如何有效利用机器学习算法将多个雪深数据集合并为一个具有更高准确度的统一数据集？",
+                "AnswerEn": "Machine learning algorithms such as random forest, artificial neural networks, and support vector machines can be applied to merge multiple snow depth datasets. Random forest, in particular, has shown strong advantages in snow depth data fusion. The process involves using these algorithms to combine data from remote sensing products (e.g., AMSR-E, AMSR2, NHSD, and GlobSnow) and meteorological reanalysis datasets (e.g., ERA-Interim and MERRA2). Ground observation data from various stations serve as reference values for training and validating the model, resulting in a daily gridded snow depth dataset with enhanced quality.",
+                "AnswerCn": "机器学习算法，如随机森林、人工神经网络和支持向量机，可以应用于合并多个雪深数据集。特别是随机森林在雪深数据融合中显示出强大的优势。该过程涉及使用这些算法结合遥感产品（如AMSR-E、AMSR2、NHSD和GlobSnow）和气象再分析数据集（如ERA-Interim和MERRA2）。来自各个站点的地面观测数据作为参考值，用于训练和验证模型，从而生成具有增强质量的每日网格化雪深数据集。",
+                "Level": "C6(Creating)"
+            },
+            {
+                "QuestionEn": "What procedural steps are involved in validating the accuracy of a fused snow depth dataset against independent in situ observations?",
+                "QuestionCn": "验证融合雪深数据集与独立现场观测数据准确性的程序步骤包括哪些？",
+                "AnswerEn": "The validation process involves comparing the fused snow depth dataset against independent in situ observations. This includes selecting a representative sample of observation sites, applying statistical measures such as R2, RMSE, and MAE to assess the goodness of fit, and potentially using additional ground data to ensure comprehensive evaluation. The comparison is made between the fused dataset and original datasets to quantify improvements in accuracy.",
+                "AnswerCn": "验证过程涉及将融合的雪深数据集与独立的现场观测进行比较。这包括选择代表性的观测站样本，应用统计指标如R²、RMSE和MAE来评估拟合优度，并可能使用额外的地面数据以确保全面评估。比较是在融合数据集和原始数据集之间进行，以量化准确性的改善。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "What methods can be employed to address the spatial and temporal discontinuities and uncertainties in remote sensing-derived snow depth products?",
+                "QuestionCn": "可以采用哪些方法来解决遥感衍生的雪深产品中的空间和时间不连续性及不确定性？",
+                "AnswerEn": "To address these challenges, a data fusion framework can be developed using random forest regression that incorporates remote sensing-derived snow depth products and reanalysis datasets. The framework should also consider geolocation, topographic data, and a comprehensive network of ground observation sites to improve the reliability of the dataset. The resulting fused dataset provides a continuous time series with consistent spatial resolution, allowing for better spatiotemporal analysis.",
+                "AnswerCn": "为了解决这些挑战，可以开发一个数据融合框架，使用随机森林回归，结合遥感衍生的雪深产品和再分析数据集。该框架还应考虑地理位置、地形数据以及全面的地面观测站网络，以提高数据集的可靠性。最终融合的数据集提供了一个连续的时间序列，具有一致的空间分辨率，从而允许更好的时空分析。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Enablement": [
+            {
+                "QuestionEn": "What techniques enable the integration of multiple snow depth datasets to enhance reliability and accuracy in snow depth measurements?",
+                "QuestionCn": "哪些技术能够整合多个雪深数据集，以提高雪深测量的可靠性和准确性？",
+                "AnswerEn": "The integration of multiple snow depth datasets is enabled by machine learning algorithms such as Random Forest Regression. This approach combines inputs from various remote sensing snow depth products and reanalysis data with in situ observations to improve the accuracy and reliability of the snow depth measurements.",
+                "AnswerCn": "多种雪深数据集的整合得益于机器学习算法，如随机森林回归。这种方法结合了来自不同遥感雪深产品和再分析数据的输入，以及现场观测数据，以提高雪深测量的准确性和可靠性。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Expectation": [
+            {
+                "QuestionEn": "Why might the spatial and temporal resolution of snow depth datasets from remote sensing and reanalysis sources differ, and what implications does this have for data fusion techniques?",
+                "QuestionCn": "雪深数据集来自遥感和再分析源的空间和时间分辨率可能不同的原因是什么，这对数据融合技术有什么影响？",
+                "AnswerEn": "Remote sensing-derived snow depth products are temporally and spatially discontinuous and tend to underestimate snow depth, while reanalysis snow depth products have coarse spatial resolutions and great uncertainties. These differences necessitate the use of data fusion techniques to integrate various datasets and improve overall accuracy.",
+                "AnswerCn": "遥感衍生的雪深产品在时间和空间上都是不连续的，且往往低估雪深，而再分析雪深产品则具有较粗的空间分辨率和较大的不确定性。这些差异使得需要使用数据融合技术来整合各种数据集，以提高整体准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "Why might the integration of geolocation and topographic data as input variables in machine learning models improve the accuracy of snow depth datasets, and what further refinements could be made?",
+                "QuestionCn": "将地理位置和地形数据作为输入变量集成到机器学习模型中，可能会提高雪深数据集的准确性，原因在于这些数据能够提供关于雪的分布和积累的更详细的背景信息。地理位置可以影响气候条件，如降雪量和温度，而地形特征（如坡度、朝向和海拔）也会影响雪的沉积和融化过程。通过结合这些因素，模型能够更好地捕捉雪深的空间变异性，从而提高预测的准确性。\n\n进一步的改进可以包括使用更高分辨率的地理和地形数据，整合实时气象数据，应用更复杂的模型架构（如深度学习），以及进行模型的持续训练和优化，以适应不断变化的环境条件。",
+                "AnswerEn": "Incorporating geolocation and topographic data as input variables can improve the accuracy of snow depth datasets by accounting for spatial variations in snow depth related to latitude, longitude, and elevation. Further refinements could involve modifying the model based on regional conditions and selecting appropriate input variables tailored to specific areas.",
+                "AnswerCn": "将地理位置和地形数据作为输入变量纳入，可以通过考虑与纬度、经度和海拔相关的雪深空间变化，来提高雪深数据集的准确性。进一步的改进可以包括根据区域条件调整模型，并选择适合特定区域的输入变量。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Judgmental": [
+            {
+                "QuestionEn": "What is the evaluation of using machine learning algorithms, like Random Forest, for fusing snow depth datasets over traditional methods?",
+                "QuestionCn": "使用机器学习算法，如随机森林，融合雪深数据集与传统方法的评估是什么？",
+                "AnswerEn": "The evaluation suggests that Random Forest shows a strong advantage in fusing snow depth datasets, as it improves the coefficient of determination (R2) from the highest pre-fusion product value of 0.23 to 0.81, while also reducing the root mean square error (RMSE) and mean absolute error (MAE) to 7.7 cm and 2.7 cm, respectively. This indicates a significant enhancement in the quality of the fused dataset compared to individual datasets.",
+                "AnswerCn": "评估表明，随机森林在融合雪深数据集方面具有显著优势，它将最高的融合前产品值的决定系数（R2）从0.23提高到0.81，同时将均方根误差（RMSE）和平均绝对误差（MAE）分别降低到7.7厘米和2.7厘米。这表明，与单个数据集相比，融合数据集的质量显著提高。",
+                "Level": "C5(Evaluating)"
+            },
+            {
+                "QuestionEn": "What are the challenges faced in ensuring the accuracy and completeness of snow depth datasets collected from remote sensing and reanalysis sources?",
+                "QuestionCn": "确保从遥感和再分析来源收集的雪深数据集的准确性和完整性面临哪些挑战？",
+                "AnswerEn": "Challenges include the temporal and spatial discontinuity of remote sensing-derived products, which tend to underestimate snow depth, and the coarse spatial resolutions and significant uncertainties in reanalysis products. Additionally, the sparse location of in situ stations and limited validation with independent observations pose further challenges to dataset accuracy.",
+                "AnswerCn": "挑战包括遥感衍生产品的时间和空间不连续性，这些产品往往低估雪深，以及再分析产品的空间分辨率粗糙和显著的不确定性。此外，现场观测站的稀疏分布和与独立观测的有限验证进一步影响了数据集的准确性。",
+                "Level": "C4(Analyzing)"
+            },
+            {
+                "QuestionEn": "How could the integration of more in situ stations improve the robustness and validation of snow depth datasets?",
+                "QuestionCn": "更多的原位站点的整合如何提高雪深数据集的稳健性和验证性？",
+                "AnswerEn": "Integrating more in situ stations could enhance the robustness and validation of snow depth datasets by providing a more comprehensive evaluation before data fusion and by enabling a more thorough assessment of the fused dataset. This would address the limitation of sparse station locations and improve confidence in the dataset's accuracy across different regions and conditions.",
+                "AnswerCn": "增加更多的原位站点可以增强雪深数据集的稳健性和验证性，通过在数据融合之前提供更全面的评估，并使对融合数据集的评估更加彻底。这将解决站点位置稀疏的限制，提高数据集在不同地区和条件下的准确性信心。",
+                "Level": "C6(Creating)"
+            }
+        ],
+        "Assertion": [
+            {
+                "QuestionEn": "I’m unsure why snow depth datasets face challenges in spatial and temporal continuity and resolution.",
+                "QuestionCn": "我不确定为什么雪深数据集在空间和时间连续性以及分辨率方面面临挑战。",
+                "AnswerEn": "Snow depth datasets derived from remote sensing are often temporally and spatially discontinuous and can underestimate snow depth, while reanalysis products have coarse spatial resolutions and significant uncertainties. These challenges arise due to limitations in sensor capabilities, data processing methods, and the sparse distribution of in situ observation networks, which affect the reliability and granularity of the datasets.",
+                "AnswerCn": "由遥感衍生的雪深数据集通常在时间和空间上是不连续的，并且可能低估雪深，而再分析产品则具有较粗的空间分辨率和显著的不确定性。这些挑战源于传感器能力、数据处理方法的限制，以及地面观测网络的稀疏分布，这些都影响了数据集的可靠性和细粒度。",
+                "Level": "C2(Understanding)"
+            }
+        ]
+    }
+}

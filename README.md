@@ -95,27 +95,6 @@ The repository is organized into four main directories:
 - **`dev/`**: The development (validation) split for hyperparameter tuning and model evaluation
 - **`test/`**: The test split for the final evaluation of models
 
-## How to Use
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/your_username/ScIRGen-Geo.git
-cd ScIRGen-Geo
-```
-
-### 2. Select the Appropriate Data Split
-
-Use the `train/`, `dev/`, and `test/` directories based on your experimental needs.
-
-### 3. Data Loading and Preprocessing
-
-Develop data loading scripts (e.g., in Python) to parse and preprocess the dataset according to the provided format.
-
-### 4. Experiment Reproduction
-
-For details on experimental settings and evaluation metrics, please refer to the paper. This will help ensure consistency when reproducing results.
-
 ## Citation
 
 If you use the ScIRGen-Geo dataset in your research, please cite our paper as follows:

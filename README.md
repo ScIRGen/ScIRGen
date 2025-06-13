@@ -54,7 +54,6 @@ The dataset follows a comprehensive JSON structure with the following components
       "methods": ["", "…"],
       "dataset": ["", "…"],
       "findings": ["", "…"],
-      // Chinese version
       "backgroundCn": ["", "…"],
       "research objectiveCn": ["", "…"],
       "challengesCn": ["", "…"],

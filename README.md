@@ -85,7 +85,7 @@ The dataset follows a comprehensive JSON structure with the following components
   }
 }
 ```
-## Data
+![image](https://github.com/user-attachments/assets/ceeaf01b-5748-43c3-b32a-09c40056aa02) ## Data
 We provide the ScIRGen-Geo as HuggingFace `datasets` configurations under [`usail-hkust/ScIRGen-Geo`](https://huggingface.co/usail-hkust/ScIRGen-Geo). 
 ```python
 from datasets import load_dataset

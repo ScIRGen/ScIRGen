@@ -85,7 +85,12 @@ The dataset follows a comprehensive JSON structure with the following components
   }
 }
 ```
-
+## Data
+We provide the ScIRGen-Geo as HuggingFace `datasets` configurations under [`usail-hkust/ScIRGen-Geo`](https://huggingface.co/usail-hkust/ScIRGen-Geo). 
+```python
+from datasets import load_dataset
+ds = load_dataset("usail-hkust/ScIRGen-Geo")
+```
 ## Repository Structure
 
 The repository is organized into four main directories:

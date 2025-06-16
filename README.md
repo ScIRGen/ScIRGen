@@ -4,7 +4,7 @@
 
 The **ScIRGen-Geo Dataset** is a large-scale, task-oriented dataset designed for retrieval-augmented generation (RAG) in scientific research, with a focus on the geoscience domain. The corpus is fully bilingual (English ↔ Chinese), offering parallel content in both languages. 
 
-This dataset is introduced in the paper **"[ScIRGen: Synthesize Realistic and Large-Scale RAG Dataset for Scientific Research]()"**, which has been accepted by the KDD conference. The dataset is crafted to reflect real-world research inquiries, incorporating realistic questions, detailed dataset metadata, and relevant paper excerpts.
+This dataset is introduced in the paper **"[ScIRGen: Synthesize Realistic and Large-Scale RAG Dataset for Scientific Research](https://arxiv.org/abs/2506.11117)"**, which has been accepted by the KDD conference. The dataset is crafted to reflect real-world research inquiries, incorporating realistic questions, detailed dataset metadata, and relevant paper excerpts.
 <img width="937" alt="image" src="https://github.com/user-attachments/assets/669fcc5e-df91-46c1-8a9a-19eb26c9ad50" />
 
 
